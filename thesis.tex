@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% CHOOSE PAGE LAYOUT
+\documentclass[a4paper,twoside]{ociamthesis}
+% This one will format for one-sided binding (ie left margin > right margin; no extra blank pages):
+%\documentclass[a4paper]{ociamthesis}
+% This one will format for PDF output (ie equal margins, no extra blank pages):
+%\documentclass[a4paper,nobind]{ociamthesis} 
+
+
+
+%%%%% SELECT YOUR DRAFT OPTIONS
+%\fancyfoot[C]{\emph{DRAFT Printed on \today}}  
+\correctionstrue
+
+
+%%%%% BIBLIOGRAPHY SETUP
+% The science-type option: numerical in-text citation with references in order of appearance.
+\usepackage[style=numeric-comp, sorting=none, backend=biber, doi=false, isbn=false]{biblatex}
+\newcommand*{\bibtitle}{References}
+
+% This makes the bibliography left-aligned (not 'justified') and slightly smaller font.
+\renewcommand*{\bibfont}{\raggedright\small}
+\addbibresource{references.bib}
+
+
+%%%%% THESIS / TITLE PAGE INFORMATION
+% Everybody needs to complete the following:
+\title{Towards Design and Control \\ of Soft Robots}
+\author{Brandon Jonathan Caasenbrood}
+\college{Department of Mechanical Engineering}
+\degree{Doctor of Philosophy}
+\degreedate{May 2022}
+
+
+\AtBeginDocument{\colorlet{chaptergrey}{pyblue!50}}
+
+
+%%%%% THE ACTUAL DOCUMENT STARTS HERE
+\begin{document}
+
+\includepdf[page=1]{./cover/cover-1.pdf}
+%\maketitle
+%%%%% CHOOSE YOUR LINE SPACING HERE
+% This is the official option.  Use it for your submission copy and library copy:
+%\setlength{\textbaselineskip}{22pt plus2pt}
+% This is closer spacing (about 1.5-spaced) that you might prefer for your personal copies:
+%\setlength{\textbaselineskip}{19pt plus1pt minus1pt}
+\setlength{\baselineskip}{\frontmatterbaselineskip}
+%\setlength{\textbaselineskip}{16pt plus2pt minus1pt}
+%\setlength{\frontmatterbaselineskip}{17pt plus1pt minus1pt}
+%\setlength{\baselineskip}{\textbaselineskip}
+
+
+%%%%% CHOOSE YOUR SECTION NUMBERING DEPTH HERE
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+
+%%%%% ABSTRACT SEPARATE
+% \begin{abstractseparate}
+% 	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
+% \end{abstractseparate}
+
+
+\begin{romanpages}
+
+% Title page is created here
+%\maketitle
+
+%%%%% DEDICATION -- If you'd like one, un-comment the following.
+% \begin{dedication}
+% This thesis is dedicated to\\
+% someone\\
+% for some special reason\\
+% \end{dedication}
+
+%%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
+% \begin{acknowledgements}
+%  	\input{text/acknowledgements}
+% \end{acknowledgements}
+
+%%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
+%\begin{abstract}
+	%\input{text/abstract}
+%\end{abstract}
+
+%%%%% MINI TABLES
+% This lays the groundwork for per-chapter, mini tables of contents.  Comment the following line
+% (and remove \minitoc from the chapter files) if you don't want this.  Un-comment either of the
+% next two lines if you want a per-chapter list of figures or tables.
+\dominitoc % include a mini table of contents
+%\dominilof  % include a mini list of figures
+%\dominilot  % include a mini list of tables
+
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% This is where the whole-document ToC appears:
+\tableofcontents
+
+%\listoffigures
+	%\mtcaddchapter
+% \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc
+
+% Uncomment to generate a list of tables:
+%\listoftables
+	%\mtcaddchapter
+
+%%%%% LIST OF ABBREVIATIONS
+%\include{text/abbreviations}
+
+\end{romanpages}
+
+
+%%%%% CHAPTERS
+\flushbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Dynamics of Soft Robots}
+\label{ch:2-dynamics} 
+	%\input{./text/2_chap/1_liegroup/text}
+	\input{./text/2_chap/2_config/text}
+	\input{./text/2_chap/2_curvekin/text}
+	\input{./text/2_chap/3_hamilton/text}
+	\input{./text/2_chap/4_projection/text}
+	%\input{./text/2_chap/5_porthamiltonian/text}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\clearpage
+%\chapter{Control of Soft Robots}
+	%\input{./text/3_chap/1_underact/text}
+	%\input{./text/3_chap/2_dis_shp/text}
+	%\input{./text/3_chap/3_part_fbk/text}
+	%\input{./text/3_chap/3_ke_control/text}
+
+%% APPENDICES %% 
+%\startappendices
+%\input{./text/appendix/1_mathematics/text}
+
+
+%%%%% REFERENCES
+\setlength{\baselineskip}{0pt} % JEM: Single-space References
+
+{\renewcommand*\MakeUppercase[1]{#1}%
+\printbibliography[heading=bibintoc,title={\bibtitle}]}
+
+
+\end{document}

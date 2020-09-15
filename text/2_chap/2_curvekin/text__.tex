@@ -1,0 +1,73 @@
+%!TEX root = C:\Users\s118759\Documents\GitHub\ThesisSoftRobotics\main.tex
+\section{Kinematics using Lie groups}
+In contrast to a rigid robot, whose mechanical structure consists of static links and joints, a soft robot lacks the physical notion of joints and therefore cannot be viewed as a single- or multi-body. From a mechanical perspective, a soft robotic system is more closely related to a continuous deformable medium with infinite degrees-of-freedom than a large multi-bodied system. Given this notion, the joint space of the soft robot is characterized in space and time. To characterized the spatial dimension along this curve, let us introduce a spatial parameter $\sigma \in \mathcal{X}$ with $\mathcal{X} \in [0,L] \subset \R$ (where $L \in \Rsp$ is the undeformed length of the soft robot). The spatial parameter $\sigma$ represents a material point inside the hyper-flexible body of soft robot, or more precisely, located at the center of a cross section of the continuous body at length $\sigma$. 
+
+Considering a time-invariant case, the configuration of a material point at $\sigma$ can be described by a position vector $\vec{p}(\sigma) \in \R^3$ and an orientation matrix $\mat{R}(\sigma) \in \SO{3}$ associated with a coordinate frame of orthonormal vectors. The configuration space of hyper-flexible soft robotic body can be denoted by a smooth curve $g:\mathcal{X} \mapsto \SE{3}$ such that
+\begin{equation}
+\vec{g}(\sigma) = \begin{pmatrix} \mat{R} & \vec{p} \\ \vec{0}_3^\tr & 1 \end{pmatrix} \in SE(3). 
+\end{equation}
+with $\mat{R}$ and $\vec{p}$ being the rotation and translation components of $g$ respectively. For the sake of brevity, we use the notations ``dot'' and ``prime'' to denote the temporal and spatial derivatives $\partial(\cdot)/\partial t$ and $\partial(\cdot)/\partial \sigma$, respectively. From continuum mechanics, the strain is defined by the spatial derivative of the configuration of material solid.
+
+\begin{lemma}
+\label{lemma:g_deriv}
+Given a smooth curve $g: \mathcal{X} \mapsto \SE{3}$ that is parameterized by a field $\mathcal{X} \subseteq \R$, analogous to the Lie algebra of $SE(3)$, it follows that the (Lie) derivative of $\vec{g}$ with respect to the field $\mathcal{X}$ can be written as a linear operation of its Lie algebra and $g$ itself, that is,
+\begin{align}
+\vec{g}' & = \vec{g}\hat{\xi} \quad \text{with} \quad \hat{\xi} = \begin{pmatrix} \mat{X} & \vec{Y} \\ \vec{0}_3^\tr & 0 \end{pmatrix} \in \se{3},  \label{eq:gprime}
+\end{align}
+where $\hat{\vec{\xi}}$ belongs to the Lie algebra $\se{3}$ with $\mat{X} \in \so{3}$ and $\vec{Y} \in \R^3$. 
+\end{lemma}
+
+\begin{proof}
+Let $\vec{g}: \mathcal{X} \mapsto \SE{3}$ such that the rigid body transformation is described by a orientation matrix $R(\sigma) \in \SO{3}$ and a position vector $p(\sigma) \in \R^3$. By definition, it inherently follows that spatial derivative of the position vector, that is $\vec{p}': \mathcal{X} \mapsto \R^3$, describes the tangent space of this parameterized curve. If we assume $\vec{Y} \in \R^3$ to be the tangent vector at the identity of the Lie group, $g(0) = \mathbb{I}_4$, we can express the translation vector $p$ as the integral over its tangent space as
+\begin{equation}
+\vec{p} = \int_\mathcal{X} \mat{R}(\eta) \vec{Y}(\eta) \; d\eta. \label{eq:pos_vector_p_sigma}
+\end{equation}
+From \eqref{eq:pos_vector_p_sigma}, it follows that the evolution of the tangent vector along $\mathcal{X}$ is characterized by $\vec{p}' = R Y$. Secondly, given the orthogonality properties of $R \in \SO{3}$, we can write
+\begin{align}
+\left( R^\tr R \right)' = \left( \mat{I} \right)' \quad \Longrightarrow \quad \left(\mat{R}^\tr \right)'\!\mat{R} + \mat{R}^\tr \mat{R}' = \mat{0}.
+\end{align}
+Let us denote ${\mat{X}} = \mat{R}^\tr \mat{R}'$. Then, it follows that 
+\begin{align}
+ \mat{X}^\tr & = \left(\mat{R}'\right)^\tr \mat{R} \notag \\ 
+& = \frac{d}{d\sigma}\left(\mat{R}^{-1} \right) \mat{R} \notag \\ 
+& = -\mat{R}^{-1} \mat{R}' \mat{R}^{-1} \mat{R} = -\mat{X},
+\end{align}
+where ${\mat{X}}$ belongs to the group of skew-symmetric matrices. Therefore, the variational nature of the orientation matrix along $\mathcal{X}$ can be characterized by $\vec{R}' = R \mat{X}$. Given the expressions for $\vec{p}'$ and $\mat{R}'$, we find $g' = (\mat{R}',\vec{p}') = (\mat{R}{\mat{X}},\mat{R}\vec{Y}) = g\hat{\vec{\xi}}$ with $\hat{\vec{\xi}} = (\vec{X},{\mat{Y}}) \in \se{3}$. Furthermore, we may observe that the tangent space at the identity of the group, i.e., $g(0) = \mathbb{I}_4$, indeed corresponds to the Lie algebra of the group $\SE{3}$.
+\end{proof}
+
+In continuation of our analysis, we will discuss the time-variant case of configuration space, which is described in spatial and temporal domain. Analogous to the spatial dimension $\mathcal{X}$, we introduce a temporal dimension $t \in \mathcal{T}$ over a fixed time interval $\mathcal{T} \in [t_1, t_2]$. Hence, the time-variant configuration space of the soft robot can be defined by 
+\begin{equation}
+g: \mathcal{X} \times \mathcal{T} \mapsto \SE{3}.
+\label{eq:g_time_pos}
+\end{equation}
+According to Lemma \ref{lemma:g_deriv}, the variations in space and time concerning the configuration space $g$ given in \eqref{eq:g_time_pos} can thus be described by two corresponding vector fields $\vec{\xi}$ and $\vec{\eta}$ from $\mathcal{X} \mapsto \se{3}$ that are expressed by
+\begin{equation}
+{\vec{\xi}} = \left( \vec{g}^{-1} \vec{g}'\right)^\vee,
+\end{equation}
+\begin{equation}
+{\vec{\eta}} = \left( \vec{g}^{-1} \dot{\vec{g}}\right)^\vee,
+\end{equation}
+where $\eta \in \R^6$ represents the vector field of the velocity twist, and $\xi  \in \R^6$ is the geometric counterpart of $\eta$ that may be regard as the vector field of the strain, and $(\,\cdot\,)^\vee: \se{3} \mapsto \R^6$ an isomorphism between the Lie algebra and its column vector representation. From the equality $\left(\dot{\vec{g}} \right)' = \dot{\left( \vec{g}' \right)}$, we can relate the strain and velocity field as follows
+\begin{align}
+\vec{g}' \hat{\vec{\eta}} + \vec{g} \hat{\vec{\eta}}' & =  \dot{\vec{g}} \hat{\vec{\xi}} + \vec{g} \dot{\hat{\vec{\xi}}} \quad \Longleftrightarrow \quad
+\hat{\vec{\eta}}' -  \dot{\hat{\xi}} = -\hat{\vec{\xi}}\hat{\vec{\eta}}\, - \hat{\vec{\eta}}\hat{\vec{\xi}}
+\end{align}
+From the equality above, one can express the compatibility equation between the strain field and velocity field as $\hat{\vec{\eta}}' - \dot{\hat{\vec{\xi}}} = - [\hat{\vec{\xi}},\hat{\vec{\eta}}]$, where $[\,\cdot,\,\cdot\,]$ corresponds to the Lie bracket. Due the isomorphism between the Lie algebra and its column vector representation in $\R^6$, the compatibility equation can be written alternatively as 
+\begin{equation}
+\vec{\eta}' - \dot{\vec{\xi}} = -\ad_{\xi} \eta. 
+\end{equation}
+
+\noindent where $\ad_{(\cdot)}$ represents the adjoint map. By taking the time derivative of the compatibility equation, we can express the complete kinematics for the continuous soft robot as
+\begin{align}
+\vec{g}' & = \vec{g} \hat{\vec{\xi}} & &  \text{(configuration)}\\
+\vec{\eta}' & = -\ad_\vec{\xi} \vec{\eta} + \dot{\vec{\xi}} & & \text{(velocity)}\\
+\dot{\vec{\eta}}' & = -\ad_{\dot{\vec{\xi}}} \vec{\eta} + \ad_\vec{\xi} \dot{\vec{\eta}} + \ddot{\vec{\xi}} & & \text{(acceleration)}
+\end{align}
+% The differential geometry in \eqref{eq:gprime} leads to a key observation. Note that the equality in \eqref{eq:gprime} forms an ordinary differential equation of unknown functions $\vec{g}$ and its derivate $\vec{g}'$ that is parameterized by the strain field $\xi \in \se{3}$ along its spatial domain $\mathcal{X}$. Therefore, given an initial condition $\vec{g}(0) = \vec{g}_0$ and the strain field $\xi: \mathcal{X} \mapsto \R^6$, one can completely reconstruct the configuration of the spatial curve $\vec{g}\in\SE{3}$ with little effort. Mathematically, the relation between the Lie group and its associated Lie algebra can be expressed by integration of strain field in the algebra into the group structure as follows:
+
+% \begin{equation}
+% \begin{cases}
+% g'(\sigma) = g(\sigma) \hat{\xi}(\sigma) \\
+% g(0) = g_0
+% \end{cases}
+% \end{equation}

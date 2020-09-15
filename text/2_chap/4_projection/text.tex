@@ -1,0 +1,88 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\clearpage 
+\section{Projection into Lagrangian model}
+Although the system of PDEs in \eqref{eq:sys_pde} is useful for solving the forward kinematics or dynamics, it is generally more difficult to apply control theory for PDEs. By definition, a PDE involves a differential equation with multiple continuous variables; often subjected to a set of boundary values. These distinctions make systematic controller design more challenging as Lyapunov theorems for stability are not suited. An important tool in control theory for PDEs is model reduction, where only a finite-dimensional subsystem is controlled \cite{Benner2014,Astrid2008}. In this approach, a infinite-dimensional dynamical system is projected onto a finite-dimensional subspace that contains the basis elements with attributes of the expected solution. A well-known example is the Galerkin projection method, commonly used in finite element methods. As a result, the PDE model can be replaced by a system of ordinary differential equations (ODEs) that does allow for traditional control theory. It is, however, important to show robustness for neglecting the remaining infinite dimensional dynamics absent in the reduced model.
+
+Similar to finite element methods, suppose the components of the strain field $\xi := (g\inv g')^\vee$ can be closely approximated by a finite number of orthogonal shape functions\footnote[1]{Orthogonality here implies that $\int_\Xs\varphi_i\,\varphi_j\; d\sigma = 0$ for any $i \neq j$ and non-zero otherwise.} $\varphi: \Xs \to \R$, namely 
+
+\begin{equation}
+\xi_i(\sigma,t) \cong \sum^N_{i=1} \varphi_i(\sigma) q_i(t) + \xi_{i,0}(\sigma), \quad \forall \sigma \in \mathbb{X}, t \in \mathbb{T}
+\end{equation}
+%
+where $\xi_0 = (g_0\inv g_0')^{\vee}$ is a vector field of zero strains (i.e., the space-twist field corresponding to the undeformed configuration of the elastic body), $\Xs$ a spatial set, and $\Ts \subseteq \R$ a time set. Furthermore, we refer $\left\{ \varphi_i \right \}_{i\in \N}$ as the set of basis functions and $q = (q_1,\,...,\,q_n)^\top$ as the modal coefficients regarding the basis $\left\{ \varphi_i \right \}_{i\in \N}$. From a robotics perspective, we interchangeability refer to $q$ as the joint variables or generalized coordinates of the finite-dimensional subset.
+
+For the sake of simplicity, lets assume $\xi_0 =  0_6$ for now. Accordingly, we can rewrite the $n$-th order expansion of the geometric strain twist as
+%
+\begin{align}
+\xi(\sigma,t) & \cong \left(B_a  \otimes \begin{bmatrix} \varphi_1 & \hdots & \varphi_N \end{bmatrix} \right) q(t), \notag \\
+& = \underbrace{\begin{pmatrix} 
+\varphi_1 & \hdots & \varphi_N & \hdots & 0 & \cdots&  0 \\ 
+\vdots & \ddots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 
+0 & \cdots&  0 & \hdots & \varphi_1 & \hdots & \varphi_N\end{pmatrix}}_{{\Phi(\sigma)}}  \begin{pmatrix} q_1 \\ \vdots \\ q_n\end{pmatrix}
+\end{align}
+%
+where $\Phi: \R \mapsto \R^{m \times n}$ is the shape function matrix whose columns are mutually-orthogonal, $B_a \subseteq \Span\left( \I_6 \right)$ a selection matrix of unconstrained strains, and $\otimes$ denotes the Kronecker product. Here, the selection matrix $B_a$ allows for some internal kinematic constraints by eliminating components from the strain field $\xi$. 
+
+Now, let us recall the PDE model related to the velocity twist $\hat{\eta} \in \se{3}$ 
+%
+\begin{equation}
+\eta' = - \ad_{\xi} \eta + \dot{\xi}, \label{eq:eta_pde_old}
+\end{equation}
+%
+where again $\ad_{\xi}: \R^6 \mapsto \R^6$ denotes the adjoint action of the algebra $\hat{\xi} \in \se{3}$. Using the differential property $d\Ad_g/ds = \Ad_g \ad_{\Upsilon}$ given a twist $\Upsilon = (g\inv dg/ds)^\vee$, it follows that $-\ad_{\xi} = (\Ad_{g^{-1}})' \Ad_{g}$. Substitution of this geometric relation into \eqref{eq:eta_pde_old}, we can rewrite the space-variation of the velocity twist as
+%
+\begin{equation}
+\eta' = \left(\Ad_{g^{-1}}\right) ' \Ad_{g} \eta + \dot{\xi}. \label{eq:eta_adg}
+\end{equation}
+%
+Since the open-chain soft robot is fixed at the ground-plane, the following boundary conditions can be imposed $\eta_0 = 0_6$ and $g_0 = e$. As such, the analytic solution to the velocity twist $\eta$ can be obtained by explicit integration of \eqref{eq:eta_adg}  over the domain $[0,\sigma]$
+%
+\begin{align}
+\eta(\sigma,t) & = \Ad_{g^{-1}} \int_0^\sigma Ad_{g} \Phi(\sigma) \; d\sigma\, \dot{q} := J\dot{q}. \label{eq:eta_analytic}
+\end{align}
+%
+which gives rise the geometric Jacobian $J(\sigma,q): \Xs \times \R^n  \mapsto \R^{6\times n}$ that linearly maps joint velocities to the velocity twist expressed in a moving inertial frame at point $\sigma$. It is worth mentioning that the space-time variant of the Jacobian matrix requires both the joint variables and the spatial coordinate on the continuous body. Given \eqref{eq:eta_analytic} and the boundary values $\dot{\eta}_0 = 0_6$, we can further detail the continuous kinematics at acceleration level, that is,
+%
+\begin{align}
+\dot{\eta}(\sigma,t) & = \Ad_{g^{-1}} \int_{0}^\sigma Ad_{g} \Phi(\sigma) \; d\sigma\, \ddot{q} + \Ad_{g^{-1}} \int_{0}^\sigma Ad_{g} \ad_{\eta} \Phi(\sigma) \; d\sigma\, \dot{q}, \notag \\ & = J\ddot{q} + \dot{J}\dot{q}.\label{eq:deta_analytic}
+\end{align}
+%
+Notice that on right-hand side in \eqref{eq:deta_analytic}, we now obtain the expression for the time-derivative of the geometric Jacobian, i.e., $\dot{J}$. Given the expressions for the velocity twist and acceleration twist respectively in \eqref{eq:deta_analytic} and \eqref{eq:eta_analytic}, it is now possible to express the continuous dynamics in the Lagrangian form. Recall the partial differential equation for the continuous dynamics 
+%
+\begin{equation}
+\Lambda' =  \ad_{\vec{\xi}}^\tr \! \Lambda + \M \dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! \M \vec{\eta}  +  \mathcal{F}, \label{eq:newton_euler_2}
+\end{equation}
+%
+which is nothing more than the continuum description of the Newton-Euler equation of motion for slender elastic objects undergoing free motion in $\R^3$. Before solving the original PDE, we introduce a slight modification to the PDE in \eqref{eq:newton_euler_2}. Since $\ad_{\eta} \eta = 0_6$ for any arbitrary $\eta \in \R^6$, then we can introduce a null vector $\mathcal{M}\ad_{\eta} \eta$ into \eqref{eq:newton_euler_2} without affecting the continuous dynamics \cite{Garofalo2013}. The importance of this null modification will be discussed later in this section. Using the previous knowledge, we can solve \eqref{eq:newton_euler_2} explicitly over the material domain $\Xs= [0,l]$,
+%
+\begin{equation}
+\Lambda = \int_\Xs J^\top \left[ \; {}\M \dot{\vec{\eta}} + \left(\mathcal{M} \ad_{\eta}  - \ad_{\vec{\eta}}^\tr \! \M\right) \vec{\eta}  +  \mathcal{F} \; \right] \; d\sigma
+\label{eq:lam_lag}
+\end{equation}
+%
+\noindent With slight abuse of formulation, we may substitute $\Lambda$ with the non-conservative external forces acting on the finite-dimensional system, formally denoted by the control input of the mechanical system $\tau(t)$. Furthermore, we may distinguish the conservative wrenches into a visco-elastic contribution $\mathcal{F}_e$ and a gravitational contribution $\mathcal{F}_g$. The internal wrenches due to gravitational potential field are defined by
+\begin{equation}
+\mathcal{F}_g = \mathcal{M} \Ad_{g\inv} a_z,
+\end{equation}
+where $a_z \in \R^6$ is a constant gravitational acceleration vector expressed as a wrench. As for the internal wrenches due to the visco-elastic contribution, we propose a hyper-elastic model with linear dissipation (Rayleigh damping). Therefore, it follows that
+%
+\begin{equation}
+\mathcal{F}_e = \mathcal{K}(\xi)\,\xi +  \Gamma \dot{\xi} 
+\end{equation}
+%
+where $\mathcal{K}: \se{3} \mapsto \se{3} \times \cose{3}$ is denoted as a hyper-elastic stiffness tensor, and $\Gamma \in \se{3} \times \cose{3}$ is a constant damping tensor. Since we assume that any deformation is reversible, it follows that $\argmin_{\xi}  \; \Vert \mathcal{K}(\xi) \Vert_2 = \xi_0$. By substituting the kinematic relations \eqref{eq:eta_adg} and \eqref{eq:deta_analytic} into \eqref{eq:lam_lag}, we can recognize the standard Lagrangian structure as a second-order ordinary differential equation of the form 
+\begin{equation}
+M(q) \ddot{q} + C(q,\dot{q}) \dot{q} + g(q) + k(q) + R\dot{q} = \tau(t)	
+\end{equation}
+ with 
+%
+\begin{align}
+M(q) & = \int_\Xs J^\top\! \mathcal{M} J \; d\sigma, \\[1.0em]
+C(q,\dot{q}) & = \int_\Xs J^\top\! \left( \mathcal{M} \ad_{\eta} - \ad_{\eta}^\top \mathcal{M} \right)J \; d\sigma, \label{eq:coriolis_lag}\\[1.0em]
+g(q) & = \int_\Xs J^\top\! \mathcal{M} \Ad_{g\inv}\,a_z \; d\sigma, \\[1.0em]
+k(q) & = \int_\Xs J^\top\! K(\xi) \xi\; d\sigma, \\[1.0em]
+R & = \int_\Xs J^\top\! \,\Gamma \,\Phi\; d\sigma, 
+\end{align}
+%
+Let it be clear that it is necessary to precompute the Jacobian matrices $J$ and $\dot{J}$ using the kinematic expressions \eqref{eq:eta_adg} and \eqref{eq:deta_analytic}, respectively. 
+

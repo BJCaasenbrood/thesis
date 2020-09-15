@@ -1,0 +1,632 @@
+This is LuaTeX, Version 1.0.4 (MiKTeX 2.9.6350 64-bit)  (format=lualatex 2017.12.18)  11 MAY 2020 17:53
+ restricted system commands enabled.
+**text.tex
+(./text.tex
+LaTeX2e <2017-04-15>
+Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
+Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
+llection.(using cache: C:/Users/s118759/AppData/Local/MiKTeX/2.9/luatex-cache/ge
+neric)
+luaotfload | conf : Root cache directory is C:/Users/s118759/AppData/Local/MiKTe
+X/2.9/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
+-resolved path “C:/Program Files/MiKTeX 2.9/tex/luatex/luaotfload/fontloader-2
+017-02-11.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.027”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 4
+luaotfload | conf : Root cache directory is C:/Users/s118759/AppData/Local/MiKTe
+X/2.9/luatex-cache/generic/names.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.584 seconds
+Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
+! Undefined control sequence.
+l.1 \section
+          *{Continuous kinematics for soft robots}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section*
+           {Continuous kinematics for soft robots}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+! Undefined control sequence.
+<argument> \p 
+   
+l.2 ...partials, we may invoke that $\frac{\p}{\p t}
+                                                   (g') = \frac{\p }{\p \sig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \p 
+   t
+l.2 ...partials, we may invoke that $\frac{\p}{\p t}
+                                                   (g') = \frac{\p }{\p \sig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \p 
+   
+l.2 ...$\frac{\p}{\p t} (g') = \frac{\p }{\p \sigma}
+                                                   (\dot{g})$ holds for any ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \p 
+   \sigma 
+l.2 ...$\frac{\p}{\p t} (g') = \frac{\p }{\p \sigma}
+                                                   (\dot{g})$ holds for any ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 ...Accordingly, substitution of relations \eqref
+                                                  {eq:eta} and \eqref{eq:xi}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 ...tution of relations \eqref{eq:eta} and \eqref
+                                                  {eq:xi} into this commutat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{align}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.4 \dot
+      {g}\xi + g\dot{\hat{\xi}}  = g'\hat{\eta} + g\hat{\eta}',
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \end{align}
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.5 \end{align}
+             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--7
+[]*Continuous
+ []
+
+
+Overfull \hbox (31.68817pt too wide) in paragraph at lines 1--7
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (20.19136pt too wide) in paragraph at lines 1--7
+[]\OT1/cmr/m/n/10 ([])$
+ []
+
+
+Overfull \hbox (17.74135pt too wide) in paragraph at lines 1--7
+[]\OML/cmm/m/it/10  \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (20.51906pt too wide) in paragraph at lines 1--7
+\OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (21.0359pt too wide) in paragraph at lines 1--7
+\OML/cmm/m/it/10 g[][] \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (16.03589pt too wide) in paragraph at lines 1--7
+\OML/cmm/m/it/10 g[];$
+ []
+
+luaotfload | db : Font names database loaded from C:/Users/s118759/AppData/Local
+/MiKTeX/2.9/luatex-cache/generic/names/luaotfload-names.luc(load luc: C:/Users/s
+118759/AppData/Local/MiKTeX/2.9/luatex-cache/generic/fonts/otl/lmroman10-regular
+.luc)
+Overfull \hbox (85.46352pt too wide) detected at line 9
+\OML/cmm/m/it/10 g[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 =
+ \OML/cmm/m/it/10 g[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 g[]:
+ []
+
+
+Overfull \hbox (15.86461pt too wide) in paragraph at lines 9--11
+\OML/cmm/m/it/10 g[]$
+ []
+
+
+Overfull \hbox (80.50526pt too wide) detected at line 13
+[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 ([][] \OMS/cmsy/m/n/10  
+ [][]\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 ;[]
+ []
+
+! Undefined control sequence.
+<recently read> \se 
+    
+l.14 ...ta}]$ is also an element of Lie algebra $\se
+                                                  {3}$, and thus it may be a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \R 
+   
+l.14 ...hus it may be alternatively expressed in $\R
+                                                  ^6$ as the adjoint action ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \ad 
+    
+l.14 ...ction between $\xi$ onto $\eta$, namely $\ad
+                                                  _{\xi} \eta: \R^6 \mapsto ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 ...\xi$ onto $\eta$, namely $\ad_{\xi} \eta: \R
+                                                  ^6 \mapsto \R^6$ (see \cit...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 ...ta$, namely $\ad_{\xi} \eta: \R^6 \mapsto \R
+                                                  ^6$ (see \cite{Spong2006} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Spong2006}
+(load luc: C:/Users/s118759/AppData/Local/MiKTeX/2.9/luatex-cache/generic/fonts/
+otl/lmroman10-bold.luc)
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.14 ...ta: \R^6 \mapsto \R^6$ (see \cite{Spong2006}
+                                                   and \cite{Traversaro2016}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Spong2006' on page  undefined on input line 14.
+
+\citation{Traversaro2016}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.14 ...e \cite{Spong2006} and \cite{Traversaro2016}
+                                                  ). Therefore, the velocity...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Traversaro2016' on page  undefined on input line 14.
+
+! Undefined control sequence.
+l.14 ...Therefore, the velocity kinematics in \eqref
+                                                  {eq:eta_prime} can be writ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.14 ...e, the velocity kinematics in \eqref{eq:eta_
+                                                  prime} can be written in v...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.14 ... velocity kinematics in \eqref{eq:eta_prime}
+                                                   can be written in vector ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+\endgroup 
+l.15 \begin{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+l.16 \eta' = -\ad
+               _\xi \eta + \dot{\xi}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\eqno' in math mode.
+\endequation ->\eqno 
+                     \hbox {\@eqnnum }$$\@ignoretrue 
+l.18 \end{equation}
+                 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \end{equation}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.18 \end{equation}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.18 \end{equation}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+          
+l.18 \end{equation}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+! Undefined control sequence.
+l.19 By taking the time derivative of \eqref
+                                          {eq:eta_prime_R6} and combining th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.19 By taking the time derivative of \eqref{eq:eta_
+                                                  prime_R6} and combining th...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.19 ...e time derivative of \eqref{eq:eta_prime_R6}
+                                                   and combining the previou...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+\endgroup 
+l.20 \begin{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+<argument> \p 
+   
+l.21 \frac{\p}{\p \sigma}
+                       \begin{pmatrix}\; g \;\\  \; \eta \; \\ \; \dot{\eta}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \p 
+   \sigma 
+l.21 \frac{\p}{\p \sigma}
+                       \begin{pmatrix}\; g \;\\  \; \eta \; \\ \; \dot{\eta}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ... = \begin{pmatrix} \; g \hat{\xi} \\ \; -\ad
+                                                  _\xi \eta + \dot{\xi} \\ \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ...} \\ \; -\ad_\xi \eta + \dot{\xi} \\ \; -\ad
+                                                  _{\dot{\xi}} \eta - \ad_{{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ... \dot{\xi} \\ \; -\ad_{\dot{\xi}} \eta - \ad
+                                                  _{{\xi}} \dot{\eta} + \ddo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\eqno' in math mode.
+\endequation ->\eqno 
+                     \hbox {\@eqnnum }$$\@ignoretrue 
+l.23 \end{equation}
+                 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{equation}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.23 \end{equation}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.23 \end{equation}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+          
+l.23 \end{equation}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+! Undefined control sequence.
+l.24 ...se, the boundary conditions of PDE in \eqref
+                                                  {eq:cont_kin_pde} should s...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.24 ...oundary conditions of PDE in \eqref{eq:cont_
+                                                  kin_pde} should satisfy $g...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.24 ...conditions of PDE in \eqref{eq:cont_kin_pde}
+                                                   should satisfy $g(0,t) = ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.24 ...eq:cont_kin_pde} should satisfy $g(0,t) = g_
+                                                  0$, $\eta(0,t) = \eta_0$ a...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.24 ... the partial differential equation in \eqref
+                                                  {eq:cont_kin_pde} simply b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.24 ...ial differential equation in \eqref{eq:cont_
+                                                  kin_pde} simply becomes an...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.24 ...erential equation in \eqref{eq:cont_kin_pde}
+                                                   simply becomes an first-o...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.24 ...o easily solve the kinematic model in \eqref
+                                                  {eq:cont_kin_pde} using an...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(load luc: C:/Users/s118759/AppData/Local/MiKTeX/2.9/luatex-cache/generic/fonts/
+otl/lmmono10-regular.luc))
+! Emergency stop.
+<*> text.tex
+         
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 37 strings out of 494481
+ 100000,89155 words of node,token memory allocated 14878 words of node memory still in use:
+   166 hlist, 39 vlist, 3 rule, 3 local_par, 2 dir, 61 math, 290 glue, 125 kern,
+ 38 penalty, 151 noad, 152 math_char, 1 sub_box, 2 sub_mlist, 1214 glyph, 144 at
+tribute, 35 glue_spec, 144 attribute_list, 2 temp, 3 write nodes
+   avail lists: 2:5,3:8,4:22,5:7,8:31,10:21
+ 4270 multiletter control sequences out of 65536+200000
+ 27 fonts using 1602879 bytes
+ 18i,11n,21p,676b,99s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

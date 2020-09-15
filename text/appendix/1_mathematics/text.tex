@@ -1,0 +1,53 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\chapter{Mathematical Background}
+In this chapter, we will discuss the fundamentals on Lie groups and their associated Lie algebras.
+
+\begin{define}{Group}
+A group $G$ is defined as a set $S$ together with a binary operator $\circ: {S} \times {S} \mapsto {S}$ and an identity element $e \in {S}$ such that for all $s_1,s_2,s_3 \in S$ it satisfies the axioms:
+%
+\begin{align}
+\text{Identity:} & \quad s_1 \op e = e \op s_1 = s_1, \label{eq_axiom_id}\\
+\text{Inversion:} &  \quad \exists s_1\inv \in S \;\text{such that}\; s_1 \op s_1\inv = s_1\inv \op s_1 = e \label{eq_axiom_inv} \\
+\text{Associativity:} &  \quad  (s_1 \op s_2 ) \op s_3 = s_1 \op (s_2 \op s_2) \label{eq_axiom_ass}.
+\end{align}
+%
+If also $s_1 \op s_2 = s_2 \op s_1$ (commutativity property), the group is called abelian.
+\end{define}
+%
+The easiest example to understand the mathematical concept behind a group is to consider the set of real integers commonly denoted by 
+%
+\begin{equation}
+\Z = \{...,-2,-1,0,1,2,... \},
+\end{equation}
+%
+\noindent where the group operation are additions $s_1\op s_2 = s_1 + s_2$ and the identity element is $0 \in \Z$. We can easily verify if $\Z$ together with its operation is indeed a group. The group operations between the identity $0$ and any element in $\Z$ returns that same element. Furthermore, additions are also associative, and the inverse is simply the negation of that element, i.e., $s\op s\inv = s + (-s) = 0 $. Besides, additions are also commutative and therefore the group is abelian. Given this basic notation of groups, lets introduce the notion of 'Lie groups'.
+\begin{define}{Lie group}
+A Lie group $\mathcal{G}$ encompasses both concepts of a manifold and a group, i.e., it has a binary operator $\circ: \mathcal{G} \times \mathcal{G}\mapsto \mathcal{G}$ and an identity element $e \in \mathcal{G}$ that satisfy
+the group axioms \ref{eq_axiom_id}, \ref{eq_axiom_inv}, \ref{eq_axiom_ass}.
+\end{define}
+%
+\noindent The smoothness of the Lie groups intuitively suggests the existence of useful differential geometries. The manifold representation of the Lie group looks the identical for any point (for instance, the surface of a sphere). Therefore, all the tangent spaces at any point on the manifold are also alike.  For any elements $g$ on the smooth manifold $\G$, there exists a linear tangent space denoted by $T_{g} \mathcal{G}$. The tangent space of the Lie group at the identity element $e$ is referred to as the associative Lie algebra $\g$ of the group. it allows us to perform algebra computation concerning the Lie group.
+
+% \begin{equation}
+% g = \begin{pmatrix} R & p \\ 0_3^\top & 1\end{pmatrix}; \quad \quad g\inv = \begin{pmatrix} R^\top & -R^\top p \\ 0_3^\top & 1\end{pmatrix}
+% \end{equation}
+
+\begin{define}{Rotations} The group of orientation matrices can be identified with the orthogonal group $O(n)$, which are the matrices that satisfy $\mat{R}\mat{R}^\tr = \mat{R}^\top\mat{R} = \mat{I}$. Due its orthogonality, the determinant of these matrices are either $-1$ or $+1$. Orthogonal matrices with a determinant equivalent to $+1$ form a subgroup of $O(n)$ called the \textit{special orthogonal group} defined by $SO(n)$. In general, the set of special group of orthogonal matrices is defined by
+\begin{equation}
+\SO{n}:= \left\{ \mat{R}\in \R^{n \times n} \; | \; {\mat{R}} \mat{R}^\top = {\mat{R}}^\top \mat{R} = \mat{I}, \, \det(\mat{R}) = +1 \right\} \subset \R^{n\times n}.
+\end{equation}
+For $n = 3$, the group $\SO{3}$ is commonly referred to as the rotation group on $\R^3$.
+\end{define}
+
+\begin{define}{Rigid body transformations}  The group of rigid body transformations on a $n$-dimensional Euclidean space is defined by the set of mapping $\vec{g}: \R^n \to \R^n$ given by the affine mapping $\vec{g} (\vec{x}) = \mat{R} \vec{x} + \vec{p}$ related by rotation $\mat{R} \in \SO{n}$ and translation $\vec{p} \in \R^n$. Alternatively, we can associate any rigid body transformation in $\R^n$ space by an element of the special euclidean group $\SE{n}$ such that $(\mat{R},\vec{p}) \in \SE{n}$. The group is defined as
+\begin{equation}
+\SE{n} := \left\{ \mat{g} \in \R^{4 \times 4} \;|\; \vec{g} = \begin{pmatrix} \mat{R} & \vec{p} \\ \vec{0}_3^\tr & 1 \end{pmatrix}, \, \mat{R} \in \SO{3},\, \vec{p} \in \R^3 \right\} \subset \R^{4\times 4}.
+\end{equation}\
+\end{define}
+
+\section{Adjoint action on $\SE{3}$}
+
+\begin{equation}
+\Ad_{g} = \begin{pmatrix} R & 0_{3\times3} \\ \tilde{p} R & R\end{pmatrix}; \quad \quad \Ad_{g}^* = \begin{pmatrix} R^\top & -R^\top\! \tilde{p}   \\ 0_{3\times3} & R^\top\end{pmatrix};
+\end{equation}
+

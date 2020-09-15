@@ -1,0 +1,22 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\section{Discontinuous shape functions}
+A possible technique to partition the controllable dynamics and the passive motion from to the redudant flexibility is to express the space-twist field through a discontinuous representation. This is of particular importance for soft robotics as their (theoretically) infinite number of degrees of freedom cannot be matched by the same number of actuators. To recall, each component of the geometric strain field $\xi_i(\sigma,t) \in \se{3}$ is approximated using a finite set of shape functions 
+%
+\begin{equation}
+\xi_i(\sigma,t) \cong \sum^N_{k=1} \varphi_k(\sigma)\, q_k(t) \quad \forall \sigma \in \Xs, \forall t\in \Ts.
+\end{equation}
+%
+where $\left\{\varphi_i \right\}_{i\in \N}$ is a basis of orthogonal shape function and the $N \ge 1$ the order of expansion. First, let us consider the original Chebyshev polynomials of the first kind $\varphi: [-1,1] \to [0,1]$ as described by
+%
+\begin{equation}
+\varphi(\sigma) =  \cos\left(n \arccos(\sigma) \right). 
+\end{equation}
+%
+Now, suppose there exists a locally uniform actuation field is applied to continuous body within the spatial domain $\Xs_a \in [\sigma_{-},\sigma_{+}]$ with $0\le\sigma_{-}<\sigma_{+}\le l$. With this subset $\Xs_a$ in mind, lets propose a modification to the Chebyshev polynomial such that the mapping $\varphi: \Xs \to [0,1]$ is described by
+%
+\begin{equation}
+\varphi(\sigma) =  w(\sigma) \cos\left(n \arccos\left(\dfrac{2\sigma - \sigma_{-} - \sigma_{+}}{\sigma_{+} - \sigma_{-}}\right) \right), \label{eq:dis_shp}
+\end{equation}
+%
+where the weighting function defined as $w(\sigma) = 1 \; \forall \sigma \in \Xs_a$ and zero otherwise. Using the discontinuous variant of the Chebyshev polynomial in \eqref{eq:dis_shp}, the strain field of the soft robot can be decomposed into active and passive components. This approach has the main benefit that the synergy matrix $S_a$, responsible for partitioning the system, is now completely invariant in terms of $q$. Accordingly, if $\rank(S_a) < \dim(q)$, the system is globally underactuated for every possible configuration $q$.
+

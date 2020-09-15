@@ -1,0 +1,68 @@
+%!TEX root = /home/brandon/Documents/phd/thesisSoftRobotics/main.tex
+\chapter{Mathematical Background}
+
+\begin{definition} The group of orientation matrices can be identified with the orthogonal group $O(n)$, which are the matrices that satisfy $\mat{R}\mat{R}^\tr = \mat{I}$. Due its orthogonality, the determinant of these matrices are either $-1$ or $+1$. Orthogonal matrices with a determinant equivalent to $+1$ form a subgroup of $O(n)$ called the \textit{special orthogonal group} defined by $SO(n)$. In general, the set of special group of orthogonal matrices is defined by
+\begin{equation}
+\SO{n}:= \left\{ \mat{R}\in \R^{n \times n} \; | \; {\mat{R}} \mat{R}^\top = {\mat{R}}^\top \mat{R} = \mat{I}, \, \det(\mat{R}) = +1 \right\} \subset \R^{n\times n}.
+\end{equation}
+For the case $n = 3$, the group $\SO{3}$ is often referred to as the rotation group on $\R^3$.
+\end{definition}
+
+\begin{definition} The group of rigid body transformations on $\R^3$ is defined by the set of mapping $\vec{g}: \R^3 \to \R^3$ of the form $\vec{g} (\vec{x}) = \mat{R} \vec{x} + \vec{p}$ given a rotation matrix $\mat{R} \in \SO{3}$ and position vector $\vec{p} \in \R^3$. Alternatively, we can associate any rigid body transformation in $\R^3$ space by an element of the special euclidean group $\SE{3}$ such that $(\mat{R},\vec{p}) \in \SE{3}$. The set of special euclidean group $\SE{3}$ is defined by
+\begin{equation}
+\SE{3} := \left\{ \mat{g} \in \R^{4 \times 4} \;|\; \vec{g} = \begin{pmatrix} \mat{R} & \vec{p} \\ \vec{0}_3^\tr & 1 \end{pmatrix}, \, \mat{R} \in \SO{3},\, \vec{p} \in \R^3 \right\} \subset \R^{4\times 4}.
+\end{equation}\
+\end{definition}
+
+\begin{definition}[The Lie algebra] A Lie algebra is vector space $\mathfrak{g}$ endowed with an operation $[\,\cdot,\,\cdot\,]:\, \mathfrak{g} \times \mathfrak{g} \mapsto \mathfrak{g}$ called the Lie bracket or commuter, where the Lie bracket satisfies the following three axioms: 
+\begin{enumerate}
+\itemsep0.5em 
+\item Bilinearity: $[ax + by,z] = a[x,z] + b[y,z] \; \forall x,y\in \mathfrak{g}$ and $\forall a,b \in \R$
+\item Alternativity: $[x,x] =  0 \; \forall x\in \mathfrak{g}$
+\item The Jacobi identity: $$ [x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0 \;\; \forall x,y,z\in \mathfrak{g}$$
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+The Lie algebra of the group of three-dimensional rotations $\SO{3}$, denoted by $\so{3}$, can be identified with a $3 \times 3$ skew-symmetric matrix of the form:
+\begin{equation}
+\tilde{\vec{\omega}} = 
+\begin{pmatrix} 0 & -\omega_3 & \omega_2 \\ \omega_3 & 0 & -\omega_1 \\ -\omega_2 & \omega_1 & 0 \end{pmatrix} \quad \text{with} \quad \omega \in \R^3
+\end{equation}
+endowed with the bracket operations $[\tilde{\omega}_1,\tilde{\omega}_2] = \tilde{\omega}_1\tilde{\omega}_2 - \tilde{\omega}_2 \tilde{\omega}_1$, where the mapping $\tilde{(\,\cdot\,)}: \R^3 \mapsto \so{3}$ denotes the isomorphism between vector representation and the Lie algebra.
+\end{definition}
+
+\begin{definition}
+The Lie algebra of the group of rigid body transformations $\SE{3}$, denoted by $\se{3}$, can be identified with a $4 \times 4$ matrix of the form:
+\begin{equation}
+\hat{\mat{\xi}} = 
+\begin{pmatrix} \tilde{\mat{X}} & \vec{Y} \\ 0 & 0 \end{pmatrix} \quad \text{with} \quad X,Y \in \R^3
+\end{equation}
+endowed with the bracket operations $[\hat{\xi}_1,\hat{\xi}_2] = \hat{\xi}_1\hat{\xi}_2 - \hat{\xi}_2 \hat{\xi}_1$, where the mapping $\hat{(\,\cdot\,)}: \R^6 \mapsto \se{3}$ denotes the isomorphism between vector representation and the Lie algebra.
+
+\end{definition}
+
+\section{adjoint action on $\SE{3}$}
+% \chapter{}
+% \section{Velocity of constant-curvature model}
+
+% \begin{equation}
+% 	^\sigma v_x = \left( \frac{1 - \cos(\kappa \sigma)}{\kappa^2} \right) \left[ \dot{\kappa}_x - \dot{l}\kappa_x  \right]
+% \end{equation}
+% \begin{equation}
+% 	^\sigma v_y = \left( \frac{1 - \cos(\kappa \sigma)}{\kappa^2} \right) \left[ \dot{\kappa}_y - \dot{l}\kappa_y  \right]
+% \end{equation}
+% \begin{equation}
+% 	^\sigma v_z =  \frac{ \dot{l} \sin(\kappa \sigma)}{\kappa}  + \left( \frac{\sigma \kappa - \sin(\kappa \sigma)}{\kappa^3} \right) \left[\dot{\kappa}_x \kappa_x + \dot{\kappa}_y \kappa_y \right]
+% \end{equation}
+% \begin{equation}
+% 	^\sigma \omega_x = \left( \frac{\kappa_y^2}{\kappa^2} \sigma + \frac{\kappa_x^2 }{\kappa^2} \frac{\sin(\kappa \sigma)}{\kappa} \right)  \dot{\kappa}_y + \left( \frac{\sigma \kappa - \sin(\kappa \sigma)}{\kappa^3} \right) \left[ \dot{\kappa}_x \kappa_x \kappa_y \right]
+% \end{equation}
+
+% \begin{equation}
+% 	^\sigma \omega_y = \left( \frac{\kappa_x^2}{\kappa^2} \sigma + \frac{\kappa_y^2 }{\kappa^2} \frac{\sin(\kappa \sigma)}{\kappa} \right)  \dot{\kappa}_x + \left( \frac{\sigma \kappa - \sin(\kappa \sigma)}{\kappa^3} \right) \left[ \dot{\kappa}_y \kappa_x \kappa_y \right]
+% \end{equation}
+
+% \begin{equation}
+% 	^\sigma \omega_z = \left( \frac{1 - \cos(\kappa \sigma)}{\kappa^2} \right) \left[ \dot{\kappa}_x \kappa_y + \dot{\kappa}_y \kappa_x \right]
+% \end{equation}

@@ -1,0 +1,83 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\clearpage
+\section{Port-Hamiltonian model}
+Before deriving the dynamics into the port-Hamiltonian form, let us briefly recall the Euler-Lagrange equations of motion 
+\begin{equation}
+\frac{d}{dt} \left( \frac{\p \La}{ \p \dot{q}} \right) - \frac{\p \La}{\p q} = Q^{nc}
+\end{equation}
+in which $\La(q,\dot{q}) := \mathcal{T}(q,\dot{q}) - \mathcal{V}(q)$ is the Lagrangian, and $Q^{nc}$ the vector of non-conservative forces acting on the system. Note that the Euler-Lagrange equation of motion is second-order differential equation expressed in terms of the generalized coordinates $q = (q_1,\,...,\,q_k)^\top$ and the generalized velocities $\dot{q} = (\dot{q}_1,\,...,\,\dot{q}_k)^\top$. Now, let us define a vector of generalized momenta $p = (p_1,\,...,\,p_n)^\top$ such that the momenta can be expressed by $p = \frac{\p \La}{\p \dot{q}}$ given any Lagrangian function $\mathcal{L}(q,\dot{q})$. Recalling the expression for the kinetic energy, that is, $\mathcal{T} = \frac{1}{2}\dot{q}^\top M(q) \dot{q}$, the generalized momenta can be described analogously as
+%
+\begin{equation},
+p = M(q) \dot{q}. \label{eq:momenta}
+\end{equation}
+%
+Exploiting the positive definite and symmetric properties of the inertia matrix $M(q) = M^\top(q) \succ 0$, the total energy stored in the dynamical system $\Hm(q,\dot{q})  := \T(q,\dot{q}) + \V(q)$ can be rewritten as
+\begin{equation}
+\Hm (q,p) = p^\top \!\dot{q} - \La \quad \iff  \quad \Hm (q,p) = \frac{1}{2}p^\top \! M\inv(q)p + \V(q). \label{eq:ham_total_energy}
+\end{equation}
+In literature \cite{Schaft2004,Spong1996,Ortega2002}, the total energy of the system described by $\Hm (q,p)$ is called the Hamiltonian. From \eqref{eq:ham_total_energy}, it can be easily shown that generalized velocities can be written in terms of partial derivatives of the Hamiltonian function
+%
+\begin{equation}
+\dot{q} = \frac{\p \Hm}{\p p} = M\inv p.
+\end{equation}
+%
+Similarly, we aim to find a differential equation that relates the time evolution of ${p}$ and the Hamiltonian. By applying the chain rule of differentiation to the momenta in \eqref{eq:momenta}, we find
+%
+\begin{align}
+\dot{p} & = \dot{M}\dot{q} + M\ddot{q}\notag \\
+& = \left(\dot{M} - C \right) M\inv p - \frac{\p \La}{ \p q} - R\dot{q} + \tau(t)
+\label{eq:momenta_diff1},
+\end{align}
+%
+where the dissipative forces are modeled after Rayleigh damping $\mathcal{F}_d = R\dot{q}$ with a constant matrix $R \succeq 0$. Whereas, taking the partial derivate of the Hamiltonian in \eqref{eq:ham_total_energy} with respect to the generalized coordinates $q$, we obtain 
+%
+\begin{align}
+\frac{\p \Hm}{\p q} & = \frac{1}{2} \frac{\p}{\p q} \left( \dot{q}^\top M(q) \dot{q} \right) + \frac{\p \La}{ \p q}.
+\label{eq:ham_momenta_diff}
+\end{align}
+%
+To express \eqref{eq:momenta_diff1} in terms of \eqref{eq:ham_momenta_diff}, we exploit some useful structural properties in the Lagrangian model, which directly follows from the formulation of the Coriolis matrix \eqref{eq:coriolis_lag} in the previous section. Let us consider a defined by $N(q,\dot{q}) = \dot{M} - 2C$. According to the Spong et. al (2006, \cite{Spong2006}), if the Coriolis matrix is expressed in terms of the Christoffel symbols corresponding to the inertia matrix $M(q)$, it can be proven that post-multiplication of $N$ with $\dot{q}$ leads to the following equality
+%
+\begin{equation}
+N \dot{q} =  -\frac{\p}{\p q} \left( \dot{q}^\top M(q) \dot{q} \right) -  \dot{M}\dot{q}. \label{eq:skew_mat_equal}
+\end{equation}
+%
+By combining \eqref{eq:ham_momenta_diff}, \eqref{eq:momenta_diff1} and \eqref{eq:skew_mat_equal}, and introducing the state vector $({q}^\top\! ,p^\top )^\top = (q_1,\,...,\,q_n,\,p_1,\,...,\,p_n)^\top$, we can transform the Euler-Lagrange equation of motion as a system of first-order equations of the form
+%
+\begin{equation}
+\Sigma:=
+\begin{cases}
+\dot{q} = \dfrac{\p \Hm}{\p p}, \\[0.75em]
+\dot{p} = -\dfrac{\p \Hm}{\p q} - R\dfrac{\p \Hm}{\p p} + \tau, 
+\end{cases}
+\label{eq:ham_eq_motion}
+\end{equation}
+%
+where the Hamiltonian is defined by $\Hm(q,p) = \frac{1}{2}p^\top \! M\inv(q)p + \V(q)$. Due to its formulation with the We refer to the system of equations above as the Hamiltonian equations of motion. The energy balance of the dynamical system follows directly from the time evolution of Hamiltonian as
+\begin{align}
+\dot{\Hm} & = \left(\frac{\p \Hm}{\p q}\right)^\top \!\! \dot{q} + \left(\frac{\p \Hm}{\p p}\right)^\top \!\!\dot{p} = -\dot{q}^\top R + \dot{q}^\top \tau \le \dot{q}^\top \tau,
+\end{align}
+which states that the total energy increase of the system will always be equal or lower to the supplied energy from the environment. This also implies that the system cannot store more energy than is supplied from the environment.
+% \begin{equation}
+% \begin{pmatrix}
+% \dot{q} \\[0.5em]
+% \dot{p}
+% \end{pmatrix} 
+% =\begin{pmatrix}
+% 0 & I_n  \\[0.5em] -I_n & -R 
+% \end{pmatrix}  
+% \begin{pmatrix}
+% \frac{\p \Hm}{\p q} \\[0.5em]
+% \frac{\p \Hm}{\p p}
+% \end{pmatrix} + \begin{pmatrix}
+% 0\\[0.5em]
+% \tau
+% \end{pmatrix} ,
+% \end{equation}
+\begin{prop}{Passivity}
+If the Hamiltonian $\Hm(q,p)$ is the sum of the kinetic energy and the potential energy which is lower bounded, that is, 
+\begin{equation}
+\Hm = \frac{1}{2} p^\top M\inv(q) p + \V(q),
+\end{equation}
+with $M(q) = M^\top(q) \succ 0$ and $\exists \beta > -\infty$ such that $\V(q) \ge \beta$; then it follows that \eqref{eq:ham_eq_motion} with the input $u = \tau$ and the output $y = \dot{q}$ is a passive system together with the storage function $\Hm(q,p) - \beta \ge 0$. 
+\end{prop}

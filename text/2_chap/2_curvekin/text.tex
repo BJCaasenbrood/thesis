@@ -1,0 +1,25 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\section{Continuous kinematics for soft robots}
+By using the equality of mixed partials, we may invoke that $\frac{\p}{\p t} (g') = \frac{\p }{\p \sigma} (\dot{g})$ holds for any instance in space and time. Accordingly, substitution of relations \eqref{eq:eta} and \eqref{eq:xi} into this commutative relation leads to
+\begin{align}
+\dot{g}\xi + g\dot{\hat{\xi}}  = g'\hat{\eta} + g\hat{\eta}',
+\end{align}
+which implies
+\begin{equation}
+g\hat{\eta} \hat{\xi} + g\dot{\hat{\xi}}  = g\hat{\xi}\hat{\eta} + g\hat{\eta}'.
+\end{equation}
+Multiplying both sides with $g^{-1}$ and rearranging the equality, we find
+\begin{equation}
+\hat{\eta}' = -(\hat{\xi}\hat{\eta} - \hat{\eta} \hat{\xi}) + \dot{\hat{\xi}},\label{eq:eta_prime}
+\end{equation}
+where we can recognize, in the parenthesis, the Lie bracket of $\xi$ and $\eta$. The Lie bracket $[\hat{\xi},\hat{\eta}]$ is also an element of Lie algebra $\se{3}$, and thus it may be alternatively expressed in $\R^6$ as the adjoint action between $\xi$ onto $\eta$, namely $\ad_{\xi} \eta: \R^6 \mapsto \R^6$ (see \cite{Spong2006} and \cite{Traversaro2016}). Therefore, the velocity kinematics in \eqref{eq:eta_prime} can be written in vector representation as
+\begin{equation}
+\eta' = -\ad_\xi \eta + \dot{\xi}.
+\label{eq:eta_prime_R6}
+\end{equation}
+By taking the time derivative of \eqref{eq:eta_prime_R6} and combining the previous results, the continuous kinematic model for the configuration, velocity, and acceleration can be written as system of first-order partial differential equation (PDE) of the form
+\begin{equation}
+\frac{\p}{\p \sigma}\begin{pmatrix}\; g \;\\  \; \eta \; \\ \; \dot{\eta} \; \end{pmatrix} = \begin{pmatrix} \; g \hat{\xi} \\ \; -\ad_\xi \eta + \dot{\xi} \\ \; -\ad_{\dot{\xi}} \eta - \ad_{{\xi}} \dot{\eta} + \ddot{\xi} \;\end{pmatrix}.
+\label{eq:cont_kin_pde}
+\end{equation}
+For a general case, the boundary conditions of PDE in \eqref{eq:cont_kin_pde} should satisfy $g(0,t) = g_0$, $\eta(0,t) = \eta_0$ and $\dot{\eta}(0,t) = \dot{\eta}_0$. However, in case of a manipulator whose base is spatially fixed, the boundary conditions should satisfy $g(0,t) = g_0$, and $\eta(0,t) = \dot{\eta}(0,t) = 0_6$. Notice that if the strain fields $\xi$, $\dot{\xi}$, and $\ddot{\xi}$ are known, the partial differential equation in \eqref{eq:cont_kin_pde} simply becomes a first-order ordinary differential equation (ODE), which can be easily solved using numerical methods.
