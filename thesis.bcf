@@ -2194,6 +2194,10 @@
     <bcf:citekey order="7">Benner2014</bcf:citekey>
     <bcf:citekey order="7">Astrid2008</bcf:citekey>
     <bcf:citekey order="8">Garofalo2013</bcf:citekey>
+    <bcf:citekey order="9">Schaft2004</bcf:citekey>
+    <bcf:citekey order="9">Spong1996</bcf:citekey>
+    <bcf:citekey order="9">Ortega2002</bcf:citekey>
+    <bcf:citekey order="10">Spong2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

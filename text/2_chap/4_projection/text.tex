@@ -78,7 +78,7 @@ M(q) \ddot{q} + C(q,\dot{q}) \dot{q} + g(q) + k(q) + R\dot{q} = \tau(t)
 %
 \begin{align}
 M(q) & = \int_\Xs J^\top\! \mathcal{M} J \; d\sigma, \\[1.0em]
-C(q,\dot{q}) & = \int_\Xs J^\top\! \left( \mathcal{M} \ad_{\eta} - \ad_{\eta}^\top \mathcal{M} \right)J \; d\sigma, \label{eq:coriolis_lag}\\[1.0em]
+C(q,\dot{q}) & = \int_\Xs J^\top\! \mathcal{M}\dot{J} + J^\top\! \left( \mathcal{M} \ad_{\eta} - \ad_{\eta}^\top \mathcal{M} \right)J \; d\sigma, \label{eq:coriolis_lag}\\[1.0em]
 g(q) & = \int_\Xs J^\top\! \mathcal{M} \Ad_{g\inv}\,a_z \; d\sigma, \\[1.0em]
 k(q) & = \int_\Xs J^\top\! K(\xi) \xi\; d\sigma, \\[1.0em]
 R & = \int_\Xs J^\top\! \,\Gamma \,\Phi\; d\sigma, 

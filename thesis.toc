@@ -10,4 +10,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Projection into Lagrangian model}{6}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{9}{chapter*.2}%
+\contentsline {section}{\numberline {1.5}Port-Hamiltonian model}{9}{section.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{11}{chapter*.2}%

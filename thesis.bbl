@@ -325,6 +325,114 @@
       \verb 10.1109/IROS.2013.6696688
       \endverb
     \endentry
+    \entry{Schaft2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=81ed65ae77da084f854f7c8849c93f91}{%
+           family={Schaft},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{fullhash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{bibnamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authorbibnamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authornamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authorfullhash}{81ed65ae77da084f854f7c8849c93f91}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Dynamics and Control of Structures and Machines}
+      \field{title}{{Port-Hamiltonian Systems: Network Modeling and Control of Nonlinear Physical Systems}}
+      \field{year}{2004}
+      \field{pages}{127\bibrangedash 167}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1007/978-3-7091-2774-2_9
+      \endverb
+      \verb{file}
+      \verb :home/brandon/Downloads/CISMpaper.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Spong1996}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{fullhash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{bibnamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authorbibnamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authornamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authorfullhash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1474-6670}
+      \field{journaltitle}{IFAC Proceedings Volumes}
+      \field{number}{1}
+      \field{title}{Energy Based Control of a Class of Underactuated Mechanical Systems}
+      \field{volume}{29}
+      \field{year}{1996}
+      \field{pages}{2828\bibrangedash 2832}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S1474-6670(17)58105-7
+      \endverb
+    \endentry
+    \entry{Ortega2002}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6c5baa3d7ebd3c494dfd6052641231b7}{%
+           family={Ortega},
+           familyi={O\bibinitperiod},
+           given={Romeo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=02cd30a5b81d391aeacefdfe67df097a}{%
+           family={G{ó}mez-Estern},
+           familyi={G\bibinithyphendelim E\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=113866fdea753779e485259cd2bd13c6}{%
+           family={Blankenstein},
+           familyi={B\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{fullhash}{8b3c3e3ad10e30b4cbcfa69eb6abea99}
+      \strng{bibnamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authorbibnamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authornamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authorfullhash}{8b3c3e3ad10e30b4cbcfa69eb6abea99}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{8}
+      \field{title}{{Stabilization of a Class of Underactuated MechanicalSystems Via Interconnection and DampingAssignment}}
+      \field{volume}{47}
+      \field{year}{2002}
+      \field{pages}{1218\bibrangedash 1233}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/TAC.2002.800770
+      \endverb
+      \verb{file}
+      \verb :home/brandon/Downloads/Rodr{\'{i}}guez, Ortega - 2002 - Stabilization of electromechanical systems via interconnection and damping assignment.pdf:pdf
+      \endverb
+      \keyw{Lumped-parameter systems,Lyapunov function,Nonlinear systems,Stability analysis,Stabilizing controllers}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
