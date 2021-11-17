@@ -1,0 +1,439 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Simo1986}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fd47b6f82aff936c58485efcca443bbd}{%
+           family={Simo},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f11d41d2dd683f49b1e6c2bbb9b290bb}{%
+           family={Vu-Quoc},
+           familyi={V\bibinithyphendelim Q\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \strng{fullhash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \strng{bibnamehash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \strng{authorbibnamehash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \strng{authornamehash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \strng{authorfullhash}{8ad7dfedd03a925fe8a1b77efe24df06}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00457825}
+      \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+      \field{number}{1}
+      \field{title}{{A three-dimensional finite-strain rod model. part II: Computational aspects}}
+      \field{volume}{58}
+      \field{year}{1986}
+      \field{pages}{79\bibrangedash 116}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1016/0045-7825(86)90079-4
+      \endverb
+    \endentry
+    \entry{Murray1994}{book}{}
+      \name{author}{3}{}{%
+        {{hash=22ec7dc3434ec7866e28d570204999f8}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6add39ad0b25b0f40aff64937f444b3a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zexiang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=5c157a074e2c2a026714694e735d6b6a}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={Shankar},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \strng{fullhash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \strng{bibnamehash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \strng{authorbibnamehash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \strng{authornamehash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \strng{authorfullhash}{bb4164cb4bb17b27fb81ff75ec1986fb}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781315136370 9781351469791}
+      \field{title}{A mathematical introduction to robotic manipulation}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{year}{1994}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{Spong2006}{book}{}
+      \name{author}{3}{}{%
+        {{hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=8346db44e6189448a4dff197f5bc47bb}{%
+           family={Hutchinson},
+           familyi={H\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7175c3321a0269f1e715675f8629352e}{%
+           family={Vidyasagar},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{fullhash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{bibnamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authorbibnamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authornamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authorfullhash}{d6482215384c9e79f8244e09185e7fc5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471649908}
+      \field{title}{Robot modeling and control}
+      \field{year}{2006}
+      \keyw{Robots,Control systems,Robots,Dynamics,Robotics}
+    \endentry
+    \entry{Boyer2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2ba78f15905027e0f16d22dc0df3a658}{%
+           family={Boyer},
+           familyi={B\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod}}}%
+        {{hash=13a84e3998a533b87d1b9659cd231309}{%
+           family={Porez},
+           familyi={P\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c191157f8d8deda601a3e380034ccbf3}{%
+           family={Leroyer},
+           familyi={L\bibinitperiod},
+           given={Alban},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{531a4501597edb65f5355e6995aa3804}
+      \strng{fullhash}{531a4501597edb65f5355e6995aa3804}
+      \strng{bibnamehash}{531a4501597edb65f5355e6995aa3804}
+      \strng{authorbibnamehash}{531a4501597edb65f5355e6995aa3804}
+      \strng{authornamehash}{531a4501597edb65f5355e6995aa3804}
+      \strng{authorfullhash}{531a4501597edb65f5355e6995aa3804}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Journal of Nonlinear Science}
+      \field{isbn}{0033200990505}
+      \field{issn}{09388974}
+      \field{number}{1}
+      \field{title}{{Poincar{é}-cosserat equations for the lighthill three-dimensional large amplitude elongated body theory: Application to robotics}}
+      \field{volume}{20}
+      \field{year}{2010}
+      \field{pages}{47\bibrangedash 79}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1007/s00332-009-9050-5
+      \endverb
+      \keyw{Eel-like robots,Hyper-redundant locomotion,Lagrangian reduction,Lie groups,Poincar{é}-Cosserat equations,Swimming dynamics}
+    \endentry
+    \entry{Traversaro2016}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4d6d0ea9e32342362ed1be88a548e1ef}{%
+           family={Traversaro},
+           familyi={T\bibinitperiod},
+           given={Silvio},
+           giveni={S\bibinitperiod}}}%
+        {{hash=82cb5e41fe391581b5ab25d30f754098}{%
+           family={Saccon},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{121216d41fb3ff67363a2704695fa303}
+      \strng{fullhash}{121216d41fb3ff67363a2704695fa303}
+      \strng{bibnamehash}{121216d41fb3ff67363a2704695fa303}
+      \strng{authorbibnamehash}{121216d41fb3ff67363a2704695fa303}
+      \strng{authornamehash}{121216d41fb3ff67363a2704695fa303}
+      \strng{authorfullhash}{121216d41fb3ff67363a2704695fa303}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Multibody Dynamics Notation}}
+      \field{year}{2016}
+    \endentry
+    \entry{Benner2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8a4cdf8b13f7500bf3d444308098cf91}{%
+           family={Benner},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=947ed525e8c0a19e545dfbc13e0a1d32}{%
+           family={Sachs},
+           familyi={S\bibinitperiod},
+           given={Ekkehard},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb2497395c7008857f3fd932f98dd83b}{%
+           family={Volkwein},
+           familyi={V\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{70f23a707526ee924e914c9ad8ff9e34}
+      \strng{fullhash}{70f23a707526ee924e914c9ad8ff9e34}
+      \strng{bibnamehash}{70f23a707526ee924e914c9ad8ff9e34}
+      \strng{authorbibnamehash}{70f23a707526ee924e914c9ad8ff9e34}
+      \strng{authornamehash}{70f23a707526ee924e914c9ad8ff9e34}
+      \strng{authorfullhash}{70f23a707526ee924e914c9ad8ff9e34}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{22966072}
+      \field{journaltitle}{International Series of Numerical Mathematics}
+      \field{title}{{Model order reduction for PDE constrained optimization}}
+      \field{volume}{165}
+      \field{year}{2014}
+      \field{pages}{303\bibrangedash 326}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/978-3-319-05083-6_19
+      \endverb
+      \keyw{Adaptive methods,Model order reduction,Optimal control,PDE constrained optimization,Proper orthogonal decomposition}
+    \endentry
+    \entry{Astrid2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=821d93d7c23a6536793009066431be46}{%
+           family={Astrid},
+           familyi={A\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f16b3169a655b08f3b201b89f80e00fa}{%
+           family={Weiland},
+           familyi={W\bibinitperiod},
+           given={Siep},
+           giveni={S\bibinitperiod}}}%
+        {{hash=540b98b0f45aa1fed9a28bd57312dfd6}{%
+           family={Willcox},
+           familyi={W\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8c0b21473948cc639a5bd81fdd7ea246}{%
+           family={Backx},
+           familyi={B\bibinitperiod},
+           given={Ton},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b5164ec38476ad953ff7450533253f9}
+      \strng{fullhash}{b7a0017579ad9a4199fc51bd2a6ba3ca}
+      \strng{bibnamehash}{8b5164ec38476ad953ff7450533253f9}
+      \strng{authorbibnamehash}{8b5164ec38476ad953ff7450533253f9}
+      \strng{authornamehash}{8b5164ec38476ad953ff7450533253f9}
+      \strng{authorfullhash}{b7a0017579ad9a4199fc51bd2a6ba3ca}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00189286}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{10}
+      \field{title}{{Missing point estimation in models described by proper orthogonal decomposition}}
+      \field{volume}{53}
+      \field{year}{2008}
+      \field{pages}{2237\bibrangedash 2251}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TAC.2008.2006102
+      \endverb
+      \keyw{Model reduction,Parameter-varying systems,Proper orthogonal decomposition,Time-varying systems}
+    \endentry
+    \entry{Garofalo2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b2a9bd7ed8a4681f1d5108617fb5bac5}{%
+           family={Garofalo},
+           familyi={G\bibinitperiod},
+           given={Gianluca},
+           giveni={G\bibinitperiod}}}%
+        {{hash=072f37ba92f403643041990a77bf51cd}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3ed8c0d5cad73eaafbf47ee60342ed08}{%
+           family={Albu-Schaffer},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Alin},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a71936e4c762f585b35c05c497373a7}
+      \strng{fullhash}{0a71936e4c762f585b35c05c497373a7}
+      \strng{bibnamehash}{0a71936e4c762f585b35c05c497373a7}
+      \strng{authorbibnamehash}{0a71936e4c762f585b35c05c497373a7}
+      \strng{authornamehash}{0a71936e4c762f585b35c05c497373a7}
+      \strng{authorfullhash}{0a71936e4c762f585b35c05c497373a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781467363587}
+      \field{issn}{21530858}
+      \field{journaltitle}{IEEE International Conference on Intelligent Robots and Systems}
+      \field{title}{{On the closed form computation of the dynamic matrices and their differentiations}}
+      \field{year}{2013}
+      \field{pages}{2364\bibrangedash 2369}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/IROS.2013.6696688
+      \endverb
+    \endentry
+    \entry{Schaft2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=81ed65ae77da084f854f7c8849c93f91}{%
+           family={Schaft},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{fullhash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{bibnamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authorbibnamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authornamehash}{81ed65ae77da084f854f7c8849c93f91}
+      \strng{authorfullhash}{81ed65ae77da084f854f7c8849c93f91}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Dynamics and Control of Structures and Machines}
+      \field{title}{{Port-Hamiltonian Systems: Network Modeling and Control of Nonlinear Physical Systems}}
+      \field{year}{2004}
+      \field{pages}{127\bibrangedash 167}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1007/978-3-7091-2774-2_9
+      \endverb
+      \verb{file}
+      \verb :home/brandon/Downloads/CISMpaper.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Spong1996}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{fullhash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{bibnamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authorbibnamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authornamehash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \strng{authorfullhash}{1e0c4c9e500fcb5128a2bb73fbbe891a}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1474-6670}
+      \field{journaltitle}{IFAC Proceedings Volumes}
+      \field{number}{1}
+      \field{title}{Energy Based Control of a Class of Underactuated Mechanical Systems}
+      \field{volume}{29}
+      \field{year}{1996}
+      \field{pages}{2828\bibrangedash 2832}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S1474-6670(17)58105-7
+      \endverb
+    \endentry
+    \entry{Ortega2002}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6c5baa3d7ebd3c494dfd6052641231b7}{%
+           family={Ortega},
+           familyi={O\bibinitperiod},
+           given={Romeo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=02cd30a5b81d391aeacefdfe67df097a}{%
+           family={G{ó}mez-Estern},
+           familyi={G\bibinithyphendelim E\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=113866fdea753779e485259cd2bd13c6}{%
+           family={Blankenstein},
+           familyi={B\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{fullhash}{8b3c3e3ad10e30b4cbcfa69eb6abea99}
+      \strng{bibnamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authorbibnamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authornamehash}{865ff055fd1dfaa66be98a0cb07afda9}
+      \strng{authorfullhash}{8b3c3e3ad10e30b4cbcfa69eb6abea99}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{8}
+      \field{title}{{Stabilization of a Class of Underactuated MechanicalSystems Via Interconnection and DampingAssignment}}
+      \field{volume}{47}
+      \field{year}{2002}
+      \field{pages}{1218\bibrangedash 1233}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/TAC.2002.800770
+      \endverb
+      \verb{file}
+      \verb :home/brandon/Downloads/Rodr{\'{i}}guez, Ortega - 2002 - Stabilization of electromechanical systems via interconnection and damping assignment.pdf:pdf
+      \endverb
+      \keyw{Lumped-parameter systems,Lyapunov function,Nonlinear systems,Stability analysis,Stabilizing controllers}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

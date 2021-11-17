@@ -1,0 +1,68 @@
+%!TEX root = C:\Users\s118759\Documents\GitHub\ThesisSoftRobotics
+\chapter{Soft Materials}
+\label{ch:3-sensing} 
+\section{Continuum mechanics}
+Continuum mechanics is a powerful tool to explain the physical phenomena of a continuum structures at macroscopic scale without the need of prior knowledge of the governing physics at microscopic scale. As an example, lets consider a specimen of silicone elastomers. At microscopic scale, silicone elastomers are composed from a large and complex network of molecular chains. The topological layout and molecular interactions, such as cross-links and covalent bounds, of the molecular network plays a paramount role in the physical properties of the specimen. Yet, viewing the specimen at a macroscopic scale, the collective behavior of these complex molecular interactions may be considered as a single continuous medium - a so-called `continuum'. By virtue of this definition, a fundamental principle in continuum mechanics is the notation of a body. A body $\mathcal{B}$ may be viewed as a smooth entity of space and time. 
+
+\section{Kinematics}
+
+\subsection{Motion}
+\begin{definition}[Motion]
+Suppose there exists a smooth invertible mapping $\boldsymbol{\kappa}(\cdot)$ such that $\boldsymbol{X} = \boldsymbol{\kappa}(\boldsymbol{p},t_0)$ gives a position vector $\boldsymbol{X} \in {\Omega}_0$ for a particle $\boldsymbol{p}$ that occupies $\mathcal{B}$ at time $t_0 = 0$. Furthermore, suppose the same mapping acts on the body $\mathcal{B}$  at another time $t$ such that $\boldsymbol{x} = \boldsymbol{\kappa}(\boldsymbol{p},t)$ gives the position vector $\boldsymbol{x} \in \Omega$. 
+Since $\boldsymbol{\kappa}$ is invertible, then we can express any continuum particle $\boldsymbol{p}$ as 
+\begin{equation}
+\boldsymbol{p} = \boldsymbol{\kappa}^{-1}(\boldsymbol{X},t).
+\end{equation}
+Then, the motion for an arbitrary point $\boldsymbol{p} \in \mathcal{B}$ is defined by the mapping 
+\begin{equation}
+\boldsymbol{x} = \boldsymbol{\kappa}\left[ \boldsymbol{\kappa}^{-1}(\boldsymbol{X},t_0),t \right] := \boldsymbol{\Phi}(\boldsymbol{X},t).
+\end{equation}
+By this definition, the mapping $\boldsymbol{\Phi}(\cdot)$ relates the position vectors of the continuum particles $\boldsymbol{p} \in \mathcal{B}$ in the undeformed configuration to the deformed configuration at time $t$. Due to the smoothness of $\boldsymbol{\kappa}$, the motion mapping $\boldsymbol{\Phi}(\cdot)$ is differential in space and time.
+\end{definition}
+
+\noindent 
+\subsection{Deformation gradient and strain}
+ Consider a mechanical solid that is subjected to external loads such that it changes from an initial undeformed state to a deformed state. Furthermore, lets consider a material point inside the undeformed solid $\boldsymbol{x}(t) \in \R^n$ and the same material point in deformed state $\boldsymbol{X} \in \R^n$. For clarification, we like to stress that the material points $\boldsymbol{X}$ and $\boldsymbol{x}$ are identical for the instance $t = 0$. Given an instance in time $t$, suppose we can described the deformation from point $\boldsymbol{X}$ to $\boldsymbol{x}$ by a continuously differential mapping $\boldsymbol{\Phi} : \R^n \times \Rp \mapsto \R^n$. Then, the initial state can be related to the current state of the solid, that is, $\boldsymbol{x} = \boldsymbol{\Phi}(\boldsymbol{X},t)$. This notation implies that given a point $X$ in the undeformed geometry, there exists an unique point $x$ in the deformed geometry. Alternatively, the mapping relation can be written as
+ \begin{equation}
+ 	\boldsymbol{x} = \boldsymbol{\Phi}(\boldsymbol{X},t) = \boldsymbol{X} +\boldsymbol{u}(\boldsymbol{X},t), \label{eq:dxdX_1}
+ \end{equation}
+ where $\boldsymbol{u}(\boldsymbol{X},t)$ is the displacement of the material point. Consider the neighboring material points $\boldsymbol{X}'$ and $\boldsymbol{x}'$ that are infinitesimally close to the material points $\boldsymbol{X}$ and $\boldsymbol{x}$, respectively. Then, the relative position vector from $\boldsymbol{X}$ to $\boldsymbol{X}'$ and $\boldsymbol{x}$ and $\boldsymbol{x}'$ are denoted by $d \boldsymbol{X} = \boldsymbol{X}' - \boldsymbol{X}$ and $d \boldsymbol{x} = \boldsymbol{x}' - \boldsymbol{x}$, respectively. Since the mapping $\boldsymbol{\Phi}$ is differentiable, the relationship between the position vectors $d \boldsymbol{x}$ and $d \boldsymbol{X}$ can obtained by differentiation of \eqref{eq:dxdX_1} with respect to the undeformed state 
+ \begin{align} 
+\boldsymbol{x}' - \boldsymbol{x} & = \boldsymbol{\Phi}(\boldsymbol{X}',t) - \boldsymbol{\Phi}(\boldsymbol{X},t) \notag\\ 
+ & = \boldsymbol{\Phi}(\boldsymbol{X}' - \boldsymbol{X},t) \notag \\
+ & = \boldsymbol{\Phi}(d\boldsymbol{X}) = \frac{\partial \boldsymbol{\Phi}}{\partial \boldsymbol{X}} d\boldsymbol{X} 
+ \end{align}
+ Here, from the equality above, we introduce the deformation gradient $\boldsymbol{F}$ given by
+ \begin{equation}
+ 	\boldsymbol{F} := \frac{\partial \boldsymbol{\Phi}}{\partial \boldsymbol{X}}\;\; \Rightarrow \;\; \boldsymbol{F}  := \boldsymbol{I}^3 + \frac{\partial \boldsymbol{u} }{ \partial \boldsymbol{X} }.
+ \end{equation}
+ The deformation gradient holds useful information about the deformation at a local level, i.e., it describes the deformation of an infinitesimal sub-volume of the mechanical solid. For instance, if the geometry at near some region remains unchanged after deformation, it holds that the deformation gradient $\boldsymbol{F} = \boldsymbol{I}_3$. The change of volume of this infinitesimal volume of the undeformed geometry is denoted by $J := \det(\boldsymbol{F})$. Since, the infinitesimal volume cannot collapse to a singular point from a physical point of view, it holds that $J > 0$, which is an important property for large deformation analysis. 
+
+ Given the expression of the deformation gradient, we can detail the description of strain. In continuum mechanics, the definition of strain is dependent on the coordinates of the reference frame. The Lagrangian strain is the material strain viewed from the undeformed geometry; whereas the Eulerain strain is material strain viewed from the deformed geometry. Given the paramount importance of the Lagrangian strain for hyper-elastic materials, we focus on the description of the Lagrangian strain. As such, let us again consider two vector elements $d \boldsymbol{X}$ and $\boldsymbol{x}$ in deformed and undeformed state, respectively. The change in magnitude square between the two vectors is given by
+ \begin{align}
+ 	||d \boldsymbol{x} ||^2 - ||d \boldsymbol{X} ||^2 & = d\boldsymbol{x}^\top  \! d\boldsymbol{x} - d\boldsymbol{X}^\top \! d\boldsymbol{X}  \notag \\
+ 	& = d\boldsymbol{X}^\top  \! \left( \boldsymbol{F}^\top \! \boldsymbol{F} - \boldsymbol{I}^3 \right)  d\boldsymbol{X}
+ \end{align}
+The first term inside the parentheses is an important tensor called the right symmetric Cauchy-Green deformation tensor, that is, $\boldsymbol{C} = \boldsymbol{F}^\top \! \boldsymbol{F}$. The right Cauchy-Green deformation tensor denotes the square of local change in distances due to deformation. Given the right Cauchy-Green tensor, we obtain the symmetric Lagrangian strain tensor as
+\begin{equation}
+	\boldsymbol{E} = \frac{1}{2}\left(\boldsymbol{C} - \boldsymbol{I}^3 \right)
+\end{equation}
+
+\section{General formulation for hyperelasticity}
+In contrasts to linear elasticity, the mechanical response of hyperelastic materials are derived from a (nonlinear) strain-energy function ${\Psi} \in \Rp$. Generally, the strain-energy function ${\Psi}$ is a smooth function describes the energy stored inside the (nonlinear) elastic material due to imposed deformation. Therefor, the strain-energy function is a function of the deformation gradient $\boldsymbol{F}$, that is, ${\Psi} = {\Psi}(\boldsymbol{F})$. Alternatively, for isotropic materials, the strain-energy function can be described by the stain invariants $I_1,I_2,I_3 \in \R $ of the right Cauchy-Green strain tensor, $\boldsymbol{C} =\boldsymbol{F}^\top\! \boldsymbol{F}$. As such, the general form of the strain-energy function is
+\begin{equation}
+	{\Psi} = {\Psi}(I_1,I_2,I_3),
+\end{equation}
+with the strain invariants defined as
+\begin{itemize}
+\item First invariant: $I_1 = \text{tr}(\boldsymbol{C})$
+\item Second invariant: $I_2 = \frac{1}{2}\left[ \text{tr}(\boldsymbol{C})^2 - \text{tr}(\boldsymbol{C}^2) \right]$
+\item Third invariant: $I_3 = \det(\boldsymbol{C})$.
+\end{itemize}
+From the strain-energy function, we can derive the second Piola-Kirchoff stress tensor $\boldsymbol{S}$ as
+\begin{equation}
+	\boldsymbol{S} = 2 \frac{\partial \Psi}{\partial \boldsymbol{C}} = \left( \frac{\partial \Psi}{\partial I_1} \frac{d I_2}{d \boldsymbol{C} } + \frac{\partial \Psi}{\partial I_2} \frac{d I_2}{\partial d{C} } +  \frac{\partial \Psi}{\partial I_3} \frac{d I_3}{d \boldsymbol{C} }\right)
+\end{equation}
+It is worth mentioning that the second Piola stress tensor $\boldsymbol{S}$ is a symmetric pseudo-stress tensor as the tensor describes the stress inside the material along the direction of the material. To obtain the true engineering stress, that is, the Cauchy stress tensor, we compute $
+\boldsymbol{\sigma}	=  J^{-1} \boldsymbol{F} \boldsymbol{S} \boldsymbol{F}^\top$
+

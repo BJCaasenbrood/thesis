@@ -1,0 +1,52 @@
+%!TEX root = ../../thesis.tex
+\section{Continuum dynamic model}
+\noindent As mentioned previously, soft robots are composed of soft bodies that may be regarded as a continuum body with (theoretically) infinitely many degrees-of-freedom (DOF). In this section, we aim to derive a compact and computationally efficient model that envelops the continuous dynamics of a soft robot through a small set of generalized coordinates $\vec{q}\in\mathcal{Q}$ and their respective generalized velocities $\dot{\vec{q}}(t)\in\mathbb{R}^n$ with $n$ the number of active joint variables. We base {the modeling framework on the work of Mochiyama et al.\cite{Mochiyama2003} who outlined a theoretical foundation for continuum manipulators. Their work is extended upon by including extensibility, serial-chaining of multiple soft-links, \add{pneumatic actuation}, and the introduction of nonlinear and time-dependent material behavior. Earlier modeling strategies addressing similar issues can be found in from Godage et al. \cite{Godage2015,Godage2016}, Della Santina et al. \cite{Santina2020,Santina2020b,Santina2020Pcc}, Renda et al. \cite{Renda2018}, and Boyer et al. \cite{Boyer2021}. Leveraging from the aforementioned works, the continuous dynamics of a soft robot manipulator can be written in the familiar Lagrangian form:
+%
+\begin{equation}
+\mat{M}(\vec{q}) \ddot{\vec{q}} + \vec{h}(\vec{q},\dot{\vec{q}}) = \vec{Q}^{\text{nc}},
+\end{equation}
+%
+where $\mat{M}(\vec{q}) \in \R^{n\times n}$ denotes the generalized inertia matrix, $\vec{h}(\vec{q},\dot{\vec{q}}) \in \R^{n}$ a vector of nonlinear state-dependent force contributions. In this work, a similar modeling framework is adopted; however, we propose an extension to incorporate FEM-driven data to more accurately reflect the underlying continuum mechanics -- in particular hyper-elasticity; and we propose a numerical scheme that allows for fast computation of the continuous dynamics. For completeness, we will recapitulate on the modeling approach here.
+%
+\begin{figure}[!t]
+\hspace{4mm}
+\centering
+%\includegraphics[width = 0.35\textwidth]{CaasenbroodFig2}
+%\caption{Bishop frame representation for the soft robot manipulator expressed in the generalized coordinate vector $q(t)$ and the mapping $p$ describing the backbone curve of the manipulator in $\R^3$. For sake of geometric insight, some additional geometric variables (i.e. $\kappa$, $\phi$ and $\beta$) are also illustrated. \label{fig:configuration}}
+\end{figure}
+%
+\subsection*{Kinematics of elastic continuum bodies}
+\noindent To represent the hyper-flexible configuration of the soft robot, let us consider a smooth spatial curve that passes through the geometric center of the continuously deformable body, as shown in Figure \ref{fig:configuration}. {In literature, this curve is called} the '\textit{backbone curve}' as it simplifies the three-dimensional deformation imposed by distributed forces acting on the elastic body. The arc-length of the backbone corresponds to the extensible length of the soft robot denoted by the variable $l(t) \in [l_{-},l_{+}]$ which we assume bounded $l_{+} \ge l \ge l_{-}$, and let $L$ be a constant denoting the {total unstressed} length of the soft robot. Next, let us introduce a spatial variable
+$\sigma \in \Xs$ that belongs to the one-dimensional material domain of the backbone curve, i.e., $\Xs = [0,\, L]$. {Let it be clear that the spatial variable $\sigma$ represents the arc-length of a material coordinate along the undeformed material domain of the soft robot manipulator.}
+
+\rewritten{Given each material coordinate}, we wish to find a suitable \add{low-dimensional joint representation} $q(t)$ such that the position vector $^0p$ anywhere on the continuous backbone can be written as a mapping from generalized coordinates and space into $\mathbb{R}^3$:
+%
+\begin{equation}
+^0\vec{p}:  \Xs \times \mathcal{Q}(t) \mapsto \mathbb{R}^3;
+\end{equation}
+%
+and similarly the rotation matrix $^0\mat{\Phi}(\sigma,\vec{q})$ by a mapping from the generalized coordinates and space into $\SO{3}$:
+%
+\begin{equation}
+^0\mat{\Phi}: \Xs \times \mathcal{Q}(t) \mapsto \SO{3}, \label{eq:phi_map}
+\end{equation}
+%
+where {$\SO{3}$ denotes the special orthogonal group for rotations about the origin of $\R^3$}, and $n = \dim(\vec{q})$ the state dimension. Under this notion, the position vectors $^0p(q,0)$ and {$^0p(q,L)$} relate to the base and the end-effector of the soft robot, respectively. {Please note that left-sided superscript are used to indicate the frame of reference.} The set of all points on the backbone $\mathcal{P} = \left\{^0p \in \mathbb{R}^3\, |\, \sigma \in \Xs \right\}$ draws a possible {spatial} configuration of the soft robot given {a time instance $t \in \mathbb{T}$ on a finite horizon $\mathbb{T} = [0,T]$}.
+%
+\begin{intermezzo}
+Despite the inherent flexibility in soft robotics, it is sometimes sufficient to express the kinematics according to the Piecewise Constant Curvature (PCC) condition. Mathematically, it implies that the curvature of the continuous body satisfies $\kappa(q,\sigma_1) = \kappa(q,\sigma_2)$ for a neighboring region of points \add{$\sigma_1,\sigma_2 \subseteq \Xs$}. As a result, this condition allows us to describe the full forward kinematics with a significantly reduced set of generalized coordinates, mitigating kinematic complexity in the model. Numerous works employ PCC models \cite{Falkenhahn2015,Katzschmann2019,Tatlicioglu2007,Marchese2016,Godage2016,Santina2020Pcc}, and depending on the degrees of elasticity, the PCC condition has been proven to be consistent for various soft robotic systems.
+\end{intermezzo}
+%
+{Following this Piecewise Constant Curvature (PCC) description, let us assign a coordinate frame that twists minimally along the backbone -- a Bishop frame \cite{Bishop1975}-- parametrized by the following generalized coordinate vector:}
+%
+\begin{equation}
+q = \begin{pmatrix}
+\,\varepsilon} & \kappa_x & \kappa_y\,
+\end{pmatrix}^\top \in \mathcal{Q},
+\label{eq:coordinate}
+\end{equation}
+%
+\noindent where {$\varepsilon \in \R$ is the elongation strain}, and $\kappa_x,\,\kappa_y\in\mathbb{R}$ are the curvatures or angular strains in $x$-$z$ and $y$-$z$ plane, respectively; and $\mathcal{Q} \subset \R^3$ is an admissible space on which $q$ evolves. \add{It is worth mentioning that the joint description above is somewhat related to Renda. et al. \cite{Renda2018} who proposed a Piece-wise Constant Strain (PCS) parametrization with the exception of including the twist along the tangent.}
+
+By exploring the differential geometry of the smooth backbone curve \add{similar to Mochiyama et al.\cite{Mochiyama2003}}, we can express the spatial change of the position vector $^0 p(q,\sigma)$ and the orientation matrix $^0{\Phi}(q,\sigma)$ for each material point $\sigma$ along the smooth backbone by
+%

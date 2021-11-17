@@ -1,0 +1,278 @@
+% Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dutch,english]{babel}
+\usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{amsthm}                     % Theorem etc. Load before cleveref
+\usepackage{psfrag}                     % \psfrag{tag}[position][psposition][scale][rotation]{text} to overlay
+\usepackage{subcaption}                 % \begin{subfigure}, more options than subfig-package
+\usepackage{wrapfig}
+\usepackage[breaklinks=true,bookmarksnumbered=true,bookmarksdepth=2,bookmarksopen=true,bookmarksopenlevel=0,hidelinks,hypertexnames=false]{hyperref}
+\urlstyle{same}                         % use same font type and size for url's
+%\usepackage{bookmark}
+%\usepackage{hyperref}
+\usepackage{appendix}                   % subappendices environment
+\usepackage[nottoc]{tocbibind}          % Bibliography in table of contents
+\usepackage{graphicx}
+%\usepackage[dvips]{epsfig}
+\usepackage[dvipsnames]{xcolor}         % loads a set of 68 cmyk color names
+\usepackage{sectsty}                    % controls for section headers
+%\usepackage[normalem]{ulem}             % underlining options
+\usepackage{bm}                         % used to get bold greek symbols
+\usepackage{algorithm}                  % enables algorithm environment
+%\usepackage{algorithmic}               % algorithm formatting package
+\usepackage{algpseudocode}              % algorithm formatting package
+\usepackage{enumerate}                  % more options for enumerate environment
+\usepackage{cite}                      % for better formatting of citations
+\usepackage{mathtools}                  % more math operator and relational symbols (\coloneqq) and building blocks (multlined). requires amsmath
+\usepackage[perpage]{footmisc}          % resets footnote numbering on each page
+\usepackage{rotating}                   % enables rotated text
+\usepackage[textwidth = 2cm,textsize = tiny]{todonotes}                  % enables the use of \todo{} \missingfigure{}, and \listoftodos
+
+% Environment for theorems etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[chapter]
+% \newtheorem{assum}[thm]{Assumption}
+% \newtheorem{corollary}[thm]{Corollary}
+% \newtheorem{defn}[thm]{Definition}
+% \newtheorem{exm}[thm]{Example}
+% \newtheorem{lem}[thm]{Lemma}
+% \newtheorem{rem}[thm]{Remark}
+% \newtheorem{problem}[thm]{Problem}
+% \newtheorem{fact}[thm]{Fact}
+% \newtheorem{claim}[thm]{Claim}
+% \newtheorem{mydescription}[thm]{Description}
+% \newtheorem{property}[thm]{Property}
+% \newtheorem{pf}[thm]{Proof}
+
+% References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Heading and captions
+\newcommand{\chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\twofigref}[2]{Figures \ref{#1} and \ref{#2}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+
+% Text
+\newcommand{\itref}[1]{\textit{\ref{#1}}}
+\newcommand{\remref}[1]{\textit{Remark~\ref{#1}}}
+\newcommand{\assref}[1]{\textit{Assumption~\ref{#1}}}
+\newcommand{\defref}[1]{\textit{Definition~\ref{#1}}}
+\newcommand{\lemref}[1]{\textit{Lemma~\ref{#1}}}
+\newcommand{\thmref}[1]{\textit{Theorem~\ref{#1}}}
+\newcommand{\exmref}[1]{\textit{Example~\ref{#1}}}
+\newcommand{\algoref}[1]{\textit{Algorithm~\ref{#1}}}
+\newcommand{\corref}[1]{\textit{Corollary~\ref{#1}}}
+
+% Mark sections of captions for referring to divisions of figures
+\newcommand{\figleft}{{\em (Left)}}
+\newcommand{\figcenter}{{\em (Center)}}
+\newcommand{\figright}{{\em (Right)}}
+\newcommand{\figtop}{{\em (Top)}}
+\newcommand{\figbottom}{{\em (Bottom)}}
+\newcommand{\captiona}{{\em (a)}}
+\newcommand{\captionb}{{\em (b)}}
+\newcommand{\captionc}{{\em (c)}}
+\newcommand{\captiond}{{\em (d)}}
+
+% Math %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Number sets
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Nset}{\mathbb{N}}
+\newcommand{\Zset}{\mathbb{Z}}
+\newcommand{\Uset}{\mathbb{U}}
+
+% Space sets
+% \newcommand{\As}{\mathcal{A}}
+% \newcommand{\Bs}{\mathcal{B}}
+% \newcommand{\Cs}{\mathcal{C}}
+% \newcommand{\Ds}{\mathcal{D}}
+% \newcommand{\Es}{\mathcal{E}}
+% \newcommand{\Fs}{\mathcal{F}}
+% \newcommand{\Is}{\mathcal{I}}
+% \newcommand{\Js}{\mathcal{J}}
+% \newcommand{\Ks}{\mathcal{K}}
+% \newcommand{\Ls}{\mathcal{L}}
+% \newcommand{\Ns}{\mathcal{N}}
+% \newcommand{\Ps}{\mathcal{P}}
+% \newcommand{\Qs}{\mathcal{Q}}
+% \newcommand{\Rs}{\mathcal{R}}
+% \newcommand{\Ss}{\mathcal{S}}
+% \newcommand{\Ts}{\mathcal{T}}
+% \newcommand{\Us}{\mathcal{U}}
+% \newcommand{\Vs}{\mathcal{V}}
+% \newcommand{\Ws}{\mathcal{W}}
+% \newcommand{\Xs}{\mathcal{X}}
+% \newcommand{\Zs}{\mathcal{Z}}
+
+% Math operators
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\post}{\operatorname{post}}
+\newcommand{\Post}{\operatorname{Post}}
+
+% Better matrices with vertical lines for MIP chapter
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+% If toggles %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TU/e font family
+\newif\iftuefont
+\tuefonttrue
+%\tuefontfalse
+
+% Thesis vs paper version
+\newif\ifthesis
+\thesistrue
+%\thesisfalse
+
+% Chapter image page on left-hand side of chapter title page
+\newif\ifchapterpage
+\chapterpagetrue
+%\chapterpagefalse
+
+
+% Font and style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load TU/e font family
+\RequirePackage[T1]{fontenc}
+\newcommand{\tuefontmeta}{\fontfamily{zmb}\selectfont}
+\newcommand{\tuefontscala}{\fontfamily{zsc}\selectfont}
+
+% MAKE new part style
+\iftuefont
+\newcommand*\partownfont{\tuefontscala\mdseries\bfseries\huge}
+\else
+\newcommand*\partownfont{\sffamily\mdseries\bfseries\huge}
+\fi
+\partfont{\partownfont}
+
+% MAKE new chapter style
+\iftuefont
+\newcommand*\chapfont{\tuefontscala\mdseries\bfseries\LARGE}
+\else
+\newcommand*\chapfont{\sffamily\mdseries\bfseries\LARGE}
+\fi
+\chapterfont{\raggedleft\chapfont\sectionrule{3ex}{2pt}{-2ex}{1pt}}
+\chapternumberfont{\raggedleft\scshape\chapfont}
+
+% MAKE new section style
+\iftuefont
+\newcommand*\sectfont{\tuefontscala\mdseries\bfseries\large}
+\else
+\newcommand*\sectfont{\sffamily\mdseries\bfseries\large}
+\fi
+\sectionfont{\sectfont}
+
+% MAKE new subsection style
+\iftuefont
+\newcommand*\subsectfont{\tuefontscala\mdseries\bfseries}
+\else
+\newcommand*\subsectfont{\sffamily\mdseries\bfseries}
+\fi
+\subsectionfont{\subsectfont}
+
+% MAKE new subsubsection style
+\iftuefont
+\newcommand*\subsubsectfont{\tuefontscala\mdseries\bfseries}
+\else
+\newcommand*\subsubsectfont{\sffamily\mdseries\bfseries}
+\fi
+\subsubsectionfont{\subsubsectfont}
+
+% Chapter abstract style
+\newenvironment{chapter-abstract}% environment name
+{% begin code
+  \par%\vspace{\baselineskip}
+  \noindent
+  \begin{itshape}%
+  \small
+  \noindent\ignorespaces
+}%
+{% end code
+  \end{itshape}\ignorespacesafterend
+}
+
+% Change header font
+\iftuefont
+\fancyhead[LO]{\tuefontscala\itshape\nouppercase\rightmark}
+\fancyhead[RE]{\tuefontscala\itshape\nouppercase\leftmark}
+\fi
+
+% other
+\allowdisplaybreaks
+\newcommand*{\QED}{\hfill\ensuremath{\square}}%
+\newcommand\xput[2][0.5]{%
+    \rule{#1\linewidth}{0pt}\makebox[0pt][c]{#2}\hfill}
+
+%Set tolerance for paragraph stretching. Range 0 to 9999. High means sloppy, much stretching (gives underfull hboxes), low means rigid, no stretching (gives overfull hboxes)
+\tolerance=3000
+%\sloppy	% sets tolerance to 9999
+
+% Enable referencing description label %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+  \let\orglabel\label
+  \let\label\@gobble
+  \phantomsection
+  \edef\@currentlabel{#1}%
+  %\edef\@currentlabelname{#1}%
+  \let\label\orglabel
+  \orgdescriptionlabel{#1}%
+}
+\makeatother
+
+% Enable chapter thumb index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{totcount}
+\usetikzlibrary{calc}
+
+\newif\ifMaterial
+
+\newlength\LabelSize
+\setlength\LabelSize{1.5cm}
+\newlength\LabelSpace
+\setlength\LabelSpace{1.4cm}
+
+\AtBeginDocument{%
+\regtotcounter{chapter}
+\setlength\LabelSize{\dimexpr\textheight/\totvalue{chapter}\relax}
+\ifdim\LabelSize>1.5cm\relax
+  \global\setlength\LabelSize{1.5cm}
+\fi
+}
+
+\newcommand\AddLabels{%
+\Materialtrue%
+\AddEverypageHook{%
+\ifMaterial%
+\ifodd\value{page} %
+ \backgroundsetup{
+  angle=0,
+  position={139.08mm,0},
+  vshift=25.5mm-2mm-40mm-0.5*\LabelSize-(\thechapter-1)*\LabelSize-(\thechapter-1)*\LabelSpace,
+  hshift=0,
+  contents={
+  \tikz\node[fill=black,minimum height=\LabelSize,minimum width=1.2cm,font=\LARGE\tuefontscala] {\color{white}\textbf{\thechapter}\,\,};
+  }%
+ }
+ \else
+ \backgroundsetup{
+  angle=0,
+  position={-21.75mm,0},
+  vshift=25.5mm-2mm-40mm-0.5*\LabelSize-(\thechapter-1)*\LabelSize-(\thechapter-1)*\LabelSpace,
+  hshift=0,
+  contents={
+  \tikz\node[fill=black,minimum height=\LabelSize,minimum width=1.2cm,font=\LARGE\tuefontscala] {\,\,\color{white}\textbf{\thechapter}};
+  }%
+ }
+ \fi
+ \BgMaterial%
+\else\relax\fi}%
+}
+
+\newcommand\RemoveLabels{\Materialfalse}

@@ -1,0 +1,34 @@
+%!TEX root = ../thesis.tex
+\graphicspath{{2_Chapter/}}
+\chapter{Dynamic Modeling of Hyper-elastic Soft Robots through Differential Geometry of Curves}
+%{\let\thefootnote\relax\footnote{{\color{black}This chapter is based on ...}}}
+\label{chap:2}
+\chaptermark{Chapter title for header}
+
+\begin{chapter-abstract}
+The motion complexity and use of exotic materials in soft robotics call for accurate and computationally efficient models intended for control. To reduce the gap between material and control-oriented research,we build upon the existing Piecewise-Constant Curvature framework by incorporating hyper-elastic and visco-elastic material behavior. In this work, the continuum dynamics of the soft robot are derived through the differential geometry of spatial curves, which are then related to Finite-Element data to capture the intrinsic geometric and material nonlinearities. To enable fast simulations, a reduced-order integration scheme is introduced to compute the dynamic Lagrangian matrices efficiently, which in turn allows for real-time (multi-link) models with sufficient numerical precision. By exploring the passivity and using the parametrization of the hyper-elastic model, we propose a passivity-based adaptive controller that enhances robustness towards material uncertainty and unmodeled dynamics -- slowly improving their estimates online. As a study case, a fully 3D-printed soft robot manipulator is developed, which shows good correspondence with the dynamic model under various conditions, e.g., natural oscillations, forced inputs, and under tip-loads. The solidity of the approach is demonstrated through extensive simulations, numerical benchmarks, and experimental validations.
+
+\end{chapter-abstract}
+
+\vspace{30mm}
+\Small{
+\textrm{
+B. Caasenbrood, A. Pogromsky, and H. Nijmeijer. \textbf{Dynamic Modeling of Hyper-elastic Soft Robots through Differential Geometry of Curves} Soft Robotics, 2021. (under review).
+}
+}
+
+\clearpage
+\Materialtrue % enable chapter thumbs if disabled on chapter title page
+%
+%\section{Introduction}\label{chaptertitle:sec:introduction}
+\sectionmark{Introduction}
+\input{2_Chapter/3_Model/text.tex}
+%\blindtext
+%
+%
+%\clearpage
+%
+%\section{Section title}\label{chaptertitle:sec:sectiontitle}
+%\sectionmark{Section title for header}
+%
+%\blindtext

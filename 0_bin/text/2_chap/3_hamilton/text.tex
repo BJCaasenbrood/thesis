@@ -1,0 +1,113 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+\section{Continuous dynamics for soft robots}
+In this section, we derive the dynamical model of the soft robot through Hamilton's variational principle. Given an interval $[t_0,t_1]$, the variational principle states that the evolution of a state $q(t)$ between $q(t_0)$ and $q(t_1)$ is a stationary point regarding an action functional, $\mathcal{S} = \int_{t_0}^{t_1} \mathcal{L}(\vec{q},\dot{q},t) \; dt$ in which $\mathcal{L}(\vec{q},\dot{\vec{q}}) := \mathcal{T}(\vec{q},\dot{\vec{q}}) - \mathcal{V}(\vec{q})$ is the Lagrangian. The generalization of Hamilton's principle \cite{Boyer2010} includes an external potential contributions, and it can be formally written as
+\begin{equation} 
+\delta\mathcal{S} = \int_{t_0}^{t_1} \left[\delta\mathcal{T} - \delta\mathcal{V} + \delta\mathcal{W}_{ex} \right]\; dt = 0,
+\label{eq:varprinc}
+\end{equation}
+
+\noindent where the operator $\delta$ denotes the variation of functional that are fixed at the boundaries $[t_0,t_1]$, and $\mathcal{W}_{ex}$ is the external virtual work produced by nonconservative external forces acting on the system. 
+
+First, let us regard the functional variation of kinetic energy. The kinetic energy of the soft robot is defined by  
+\begin{equation}
+\mathcal{T} := \frac{1}{2}\int_{\Xs} \vec{\eta}^\tr \mathcal{M} \vec{\eta}\;d\sigma, \label{eq:c2_Tfunc} 
+\end{equation}
+
+\noindent where $\mathcal{M} \in \se{3} \times \se{3}^* $ is the inertia tensor whose components denote the inertial properties of an infinitesimal slice of the continuous mechanical body. More specifically, the inertia tensor is $\mathcal{M} = \blkdiag{mI_3,\mathcal{J}}$ with $m \in \Rsp$ the line-density and $\mathcal{J} \in \sog{3} \times \sog{3}^* $ the moment of inertia tensor. From the isomorphism $\se{3} \cong \R^6$, the inertia tensor $\mathcal{M}$ may be equivalently represented as a symmetric matrix of $\R^{6\times6}$. Given \eqref{eq:c2_Tfunc}, the variation of the kinetic energy function is given by 
+\begin{align}
+\delta\mathcal{T} & = \left. \frac{\p }{\p a} \mathcal{T}(\vec{\eta} + a \delta\vec{\eta}) \right|_{a = 0}, \notag \\
+& = \frac{1}{2} \int_{\Xs} \delta\vec{\eta}^\tr \mathcal{M}  \vec{\eta} + \vec{\eta}^\tr \mathcal{M} \delta\vec{\eta} \; d\sigma, \notag \\
+& = \int_{\Xs} \delta\vec{\eta}^\tr \mathcal{M}  \vec{\eta} \; d\sigma. \label{eq:c2_varham_T}
+\end{align}
+
+\noindent By applying variational calculus on the Lie group, we can express the variation of the velocity field as $\delta\vec{\eta} = \delta \dot{\vec{\epsilon}} + \ad_{\vec{\eta}} \delta \vec{\epsilon}$ in which $\delta \vec{\epsilon} = g^{-1} \delta g \in \se{3}$ with $\delta \vec{\epsilon}(t_0) = \delta \vec{\epsilon}(t_1) = \vec{0}$. Therefore, substitution of the variation into \eqref{eq:c2_varham_T} and followed by integration by parts leads to derivation
+\begin{align}
+\int_{t_1}^{t_2} \delta\mathcal{T} \; dt& = 
+\left[ \int_\Xs \delta \vec{\epsilon}^\tr \mat{M} \vec{\eta} \right]_{t_0}^{t_1} +  \int_{t_1}^{t_2} \!\! \int_\Xs  \delta \vec{\epsilon}^\tr \! \left( M\dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! M \vec{\eta}\right)\; d\sigma dt \notag \\ 
+& = \int_{t_1}^{t_2} \!\! \int_\Xs \delta \vec{\epsilon}^\tr \left( M\dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! M \vec{\eta}\right)\; d\sigma dt\label{eq:c2_varham_T2}.
+\end{align}
+Note that since the variations are fixed at the boundaries of $[t_0,t_1]$, the first right hand part in \eqref{eq:c2_varham_T2} vanished. Since the variations are fixed at the boundaries of $[t_0,t_1]$, the first right hand part in \eqref{eq:c2_varham_T2} vanishes. The expression in \eqref{eq:c2_varham_T2} will be recalled later, but first, let us describe the functional variation of potential energy. 
+
+The internal potential energy of the soft robot is defined as
+\begin{equation}
+\mathcal{V} := \int_\Xs \vec{\xi}^\tr\! \vec{\Lambda} \;d\sigma.
+\end{equation}
+%
+where $\vec{\Lambda} \in \se{3}^*$ is the field of internal wrenches along the continuum elastic body. Notice that vector field of internal wrenches is an element of the dual space of $\se{3}$. This field and the strains vector field are related through a material constitutive law. In general concerning soft robotic applications, the use of linear constitutive relations for an isotropic elastic material are not sufficient, since large deformations introduce nonlinear material behavior. However, for the sake of simplicity, we consider the simplest viscoelastic constitutive model - the Kelvin-Voigt model. The Kelvin-Voigt model is a linear elasticity model with a linear viscous contribution that is proportional to the rate of strain $\vec{\xi}$,
+% 
+\begin{equation}
+\vec{\Lambda} = \mat{K}\vec{\xi} + \mat{\Gamma} \dot{\vec{\xi}}
+\end{equation}
+%
+where $\mat{K}$ and $\mat{\Gamma}$ are the elasticity and viscosity material tensor, respectively. Similar to the kinetic energy, the variation of the potential energy function $V$ is given by
+%
+\begin{align}
+\delta\mathcal{V} & = \left. \frac{\p }{\p a} \mathcal{V}(\vec{\xi} + a (\delta\vec{\xi})) \right|_{a = 0} = \int_{\Xs} \delta\vec{\xi}^\tr \Lambda  \; d\sigma,
+ \label{eq:c2_varham_K}
+\end{align}
+%
+\noindent Recalling the commutativity of the Lie algebra, we can express the variation as $\delta\vec{\xi} = {\vec{\epsilon}}' + \ad_{\vec{\xi}} \vec{\epsilon}$. Therefore, substitution into \eqref{eq:c2_varham_K} and using integration by parts leads to 
+%
+\begin{align}
+\int_{t_1}^{t_2} \delta\mathcal{V} \; dt& = 
+\left[ \int_\Xs\delta \vec{\epsilon}^\tr \Lambda  \right]_{t_0}^{t_1} +  \int_{t_1}^{t_2} \!\! \int_\Xs  \vec{\epsilon}^\tr \! \left( \Lambda' - \ad_{\vec{\xi}}^\tr \! \Lambda\right)\; d\sigma dt \notag \\ 
+& = \int_{t_1}^{t_2} \!\! \int_\Xs \delta \vec{\epsilon}^\tr \!\left( \Lambda' - \ad_{\vec{\xi}}^\tr \! \Lambda \right)\;d\sigma dt\label{eq:c2_varham_K2}.
+\end{align}
+%
+\noindent Now, assuming that $\delta \mathcal{W}_{ex} = \int \delta \vec{\epsilon}^\tr \mathcal{F} \, d \sigma $ with $\mathcal{F}: \Xs \mapsto \R^6$ an external wrench acting on the continuous body, we can substitute the kinetic and potential energy variations \eqref{eq:c2_varham_T2} and \eqref{eq:c2_varham_K2} into the Hamilton's variational principle \eqref{eq:varprinc} which leads to the weak formulation of the continuous dynamics
+%
+\begin{equation}
+\delta\mathcal{S} = \int_{t_1}^{t_2} \!\! \int_\Xs\delta \vec{\epsilon}^\tr \!\left(  \M\dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! \M \vec{\eta} - \Lambda' + \ad_{\vec{\xi}}^\tr \! \Lambda + \mathcal{F}\right)\;d\sigma dt = 0, \label{eq:weakform_dyn}
+\end{equation}
+%
+which holds for all variations $\delta \vec{\epsilon} \in \se{3}$. Given the weak formulation in \eqref{eq:weakform_dyn}, the strong form of the continuous dynamics is represented by a first-order partial differential equation of the following form
+%
+\begin{equation}
+\Lambda' =  \ad_{\vec{\xi}}^\tr \! \Lambda + \M \dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! \M \vec{\eta}  +  \mathcal{F} \label{eq:cont_dyn_pde}
+\end{equation}
+%
+subjected to the boundary conditions $\Lambda(0,t) = -(\mathcal{F}_{-})$ and $\Lambda(l,t) = \mathcal{F}_{+}$, i.e., the external reaction forces acting on the boundaries of the material domain $\Xs \in [0,l]$. In case of a manipulator whose base is spatially fixed with a free end-effector, the boundary conditions should satisfy $\Lambda(0,t) = -(\mathcal{F}_{-})$. Consequently, the infinite dimensional kinematics and dynamics for a slender soft body can be compactly represented as a system of partial differential equations of the form
+
+\begin{equation}
+\Sigma := 
+\begin{cases}
+ g' & = g \hat{\xi} \\ \eta' & =  -\ad_\xi \eta + \dot{\xi} \\ \dot{\eta}' & = -\ad_{\dot{\xi}} \eta - \ad_{{\xi}} \dot{\eta} + \ddot{\xi} \\
+\Lambda' & =  \ad_{\vec{\xi}}^\tr \! \Lambda + \M \dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! \M \vec{\eta}  +  \mathcal{F} 
+\end{cases}
+\label{eq:sys_pde}
+\end{equation}
+
+% \newpage
+% \section{Dynamics through Hamilton's variational principle}
+% In this section, we derive the dynamical model of the soft robot through Hamilton's variational principle. Given an interval $[t_0,t_1]$, the variational principle states that the evolution of a state $q(t)$ between $q(t_0)$ and $q(t_1)$ is a stationary point regarding an action functional, $\mathcal{S} = \int_{t_0}^{t_1} \mathcal{L}(\vec{q},\dot{q},t) \; dt$ in which $\mathcal{L}(\vec{q},\dot{\vec{q}}) := \mathcal{T}(\vec{q},\dot{\vec{q}}) - \mathcal{V}(\vec{q})$ is the Lagrangian. The generalization of Hamilton's principle \cite{Boyer2010} includes an external potential contributions, and it can be formally written as
+% \begin{equation} 
+% \delta\mathcal{S} = \int_{t_0}^{t_1} \left[\delta\mathcal{T} - \delta\mathcal{V} + \delta\mathcal{W}_{ex} \right]\; dt = 0,
+% \end{equation}
+
+% \noindent where the operator $\delta$ denotes the variation of functional that are fixed at the boundaries $[t_0,t_1]$, and $\mathcal{W}_{ex}$ is the external virtual work produced by nonconservative external forces acting on the system. First, let us regard the functional variation of kinetic energy. The kinetic energy of the soft robot is defined by  
+% \begin{equation}
+% \mathcal{T} := \frac{1}{2}\int_{\mathcal{X}} \vec{\eta}^\tr \mathcal{M} \vec{\eta}\;d\sigma, \label{eq:c2_Tfunc} 
+% \end{equation}
+
+% \noindent where $\mathcal{M} \in \se{3} \times \se{3}^* $ is the inertia tensor whose components denote the inertial properties of an infinitesimal slice of the continuous elastic body. More specifically, the inertia tensor is $\mathcal{M} = \blkdiag{mI_3,\mathcal{J}}$ with $m \in \Rsp$ the mass and $\mathcal{J} \in \so{3} \times \so{3}^* $ the moment of inertia matrix. From the isomorphism $\se{3} \cong \R^6$, the inertia tensor $\mathcal{M}$ may be equivalently represented by a symmetric matrix of $\R^{6\times6}$. Given \eqref{eq:c2_Tfunc}, the variation of the kinetic energy function is given by
+% \begin{align}
+% \delta\mathcal{T} & = \left. \frac{\p }{\p a} \mathcal{T}(\vec{\eta} + a \delta\vec{\eta}) \right|_{a = 0}, \notag \\
+% & = \frac{1}{2} \int_{\mathcal{X}} \delta\vec{\eta}^\tr \mathcal{M} \vec{\eta} + \vec{\eta}^\tr \mathcal{M} \delta \vec{\eta} \; d\sigma, \notag \\
+% & = \int_{\mathcal{X}} \delta \vec{\eta}^\tr \mathcal{M} \vec{\eta} \; d\sigma, \label{eq:c2_varham_T}
+% \end{align}
+
+% \noindent By applying variational calculus on the Lie group, we can express the variation of the velocity field as $\delta\vec{\eta} = \delta \dot{\vec{\epsilon}} + \ad_{\vec{\eta}} \delta \vec{\epsilon}$ in which $\delta \vec{\epsilon} = g^{-1} \delta g \in \se{3}$ with $\delta \vec{\epsilon}(t_0) = \delta \vec{\epsilon}(t_1) = \vec{0}$. Therefore, substitution of the variation into \eqref{eq:c2_varham_T} and followed by integration by parts leads to 
+% \begin{align}
+% \int_{t_1}^{t_2} \delta\mathcal{T} \; dt& = 
+% \left[ \int_\mathcal{X} \delta \vec{\epsilon}^\tr \mathcal{M} \vec{\eta} \right]_{t_0}^{t_1} +  \int_{t_1}^{t_2} \!\! \int_\mathcal{X}  \delta \vec{\epsilon}^\tr \! \left( \mathcal{M} \dot{\vec{\eta}} - \ad_{\vec{\eta}}^\tr \! \mathcal{M} \vec{\eta}\right)\; d\sigma dt\label{eq:c2_varham_T2}.
+% \end{align}
+% Since the variations are fixed at the boundaries of $[t_0,t_1]$, the first right hand part in \eqref{eq:c2_varham_T2} vanishes. The expression in \eqref{eq:c2_varham_T2} will be recalled later, but first, let us describe the functional variation of potential energy. The internal potential energy of the soft robot is defined as
+% \begin{equation}
+% \mathcal{V} := \int_\mathcal{X} \vec{\Lambda}\vec{\xi} \;d\sigma.
+% \end{equation}
+
+% where $\vec{\Lambda} \in \se{3}^*$ is the field of internal wrenches along the continuum elastic body. Notice that vector field of internal wrenches is an element of the dual space of $\se{3}$. This field and the strains vector field are related through a material constitutive law. In general concerning soft robotic applications, the use of linear constitutive relations for an isotropic elastic material are not sufficient, since large deformations introduce nonlinear material behavior. However, for the sake of simplicity, we consider the simplest viscoelastic constitutive model - the Kelvin-Voigt model. The Kelvin-Voigt model is a linear elasticity model with a linear viscous contribution that is proportional to the rate of strain $\vec{\xi}$, 
+% \begin{equation}
+% \vec{\Lambda} = \mat{K}\vec{\xi} + \mat{\Gamma} \dot{\vec{\xi}}
+% \end{equation}
+% where $\mat{K}$ and $\mat{\Gamma}$ are the elasticity and viscosity material tensor, respectively.

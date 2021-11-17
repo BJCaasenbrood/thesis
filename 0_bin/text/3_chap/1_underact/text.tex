@@ -1,0 +1,78 @@
+%!TEX root = /home/brandon/Documents/phd/thesis/thesis.tex
+
+% \section{Definitions}
+% The general class of the second-order dynamical system can be written as a system of differential equations of the form
+% \begin{equation}
+% \ddot{q} = f(q,\dot{q},u,t),
+% \end{equation}
+% where $x = [q,\,\dot{q}]^\tr$ is a state vector composed of the generalized coordinate vector $q \in \R^n$ and their velocities $\dot{q} \in R^n$, and $u \in \R^n$ the control vector. Although for most robotic systems the dynamics are nonlinear in nature, particularly for robots with large degrees-of-freedom, most dynamical models can be written in the control-affine form
+% \begin{equation}
+% \dot{ \vec{x}} = \vec{f}(\vec{x},t) +  \sum_{i=1}^n \vec{g}_i(\vec{x}) \vec{u}_i(t),
+% \label{eq:set_dyn_control}
+% \end{equation}
+% where $g_i: \R^n \to \R^n$ is a vector-valued function describing the direction of the $i$-th control input, whereas $u_i(t) \in \R$ ,i.e., the amplitude of the control input.
+
+% \begin{definition} [Under-actuated system] A dynamical system described by \eqref{eq:set_dyn_control} is considered under-actuated iff there exists a configuration ${\vec{x}} = [q,\,\dot{q}]^\tr$, such that a set of instantaneous accelerations $\dot{x}$ cannot be realized by the input $u$. Mathematically, it can inferred that a dynamical system is (locally) under-actuated if 
+% \begin{equation}
+% \exists x \;\; \rank \left( \sum_{i=1}^n \vec{g}_i(\vec{x},t) \right) < \dim(\vec{x}).
+% \end{equation}
+% \end{definition}
+
+%\newpage
+\section{Underactuated systems}
+Before addressing the controller synthesis, we briefly introduce the notion of under-actuated dynamical systems \cite{Santina2019,Spong1996,Spong1998,Tedrake2009}. 
+
+\begin{define}{Under-actuated system}
+A second-order dynamical system described by the ordinary differential equation
+%
+\begin{equation}
+\ddot{q} = f(q,\dot{q},u,t)
+\end{equation}
+%
+is considered fully-actuated in a state $(q,\dot{q})$ at time $t$ if and only if the map $f$ is surjective, i.e, for every $\ddot{q}(t)$ there exists a control input $u(t)$ such that the instantaneous acceleration is realizable. Otherwise, the dynamical system is said to be under-actuated. Regarding the control-affine form of underactuated systems, that is,
+%
+\begin{equation}
+\ddot{q} = f_1(q,\dot{q},t) + f_2(q,\dot{q},t)u(t),
+\end{equation}
+%
+a sufficient condition is $\rank \left(f_2(q,\dot{q},t)\right) < \dim(q)$.
+\end{define}
+
+\noindent In other words, an underactuated dynamical system cannot steer its states in any arbitrary direction. As a consequence, under actuated systems are generally more difficult to control. By definition, a soft robotic system is an under-actuated system since they theoretically posses infinitely many degrees-of-freedom. Including the distributed control inputs to the Lagrangian model, we write the dynamics for a soft robotic system as follows
+%
+\begin{equation}
+M(q)\ddot{q} + c(q,\dot{q}) + g(q)= S_a^\top(q) \tau,
+\label{eq:under_actuated_ode}
+\end{equation}
+%
+\noindent where $M(q)$ is the positive definite mass matrix, $c(q,\dot{q})\in \R^{n}$ is a vector of Coriolis forces, $g(q)\in \R^{n}$ a vector of conservative potential forces, $S_a(q) \in \R^{n\times m}$ is a (nonlinear) mapping that projects the active control inputs onto the acceleration space of ${q}$, and $u(t) \in \R^{m}$ is the lower-dimensional control input. Since the system is under-actuated, it shall be clear that $\dim(u) < \dim(q)$. In some studies \cite{Santina2019}, the matrix $S$ is referred to as the synergy matrix whose columns describe actuation patterns of the soft robot's input space. Without loss of generality, let the synergy matrix $S$ be defined by a set of linearly independent column vectors of actuation patterns $s_i: \R^n \to \R^n$,
+%
+\begin{align}
+S_a(q) := \left[\,s_1(q),\,s_2(q),\,...,\,s_m(q)\,\right], 
+\end{align}
+%
+which implies that the matrix has $\rank(S) = n_a$.
+
+% \section{Operational space formulation}
+% The task of a robotic system is commonly formulated in terms of the end-effector position, velocity, or environmental force. As such, regardless of the dimensionality of the joint space, the control synthesis is typically specified by subpart of the robotic system. Let us introduce a state vector $x \in \R^k$ denoting the task or operational space of the soft robotic system with $\dim(x) < \dim(q)$. Mathematically, the operational space can be described using a continuously differentiable output map $h: \R^n \mapsto \R^k$ such that $x = h(q)$. Differentiation with respect to time gives rise to
+% \begin{align}
+% \dot{x} & = J(q) \dot{q}, \label{eq:xJq}\\
+% \ddot{x} & = \dot{J}(q)\dot{q} + J(q) \ddot{q} \label{eq:dxJdq}, 
+% \end{align}
+% where $J(q):= \frac{\p h}{\p {q}}(q)$ is defined as the analytical Jacobian matrix. Following the work of Khatib (1987), we can use the kinematic equalities \eqref{eq:xJq} and \eqref{eq:dxJdq} to derive the dynamics of the under actuated system expressed in the operational space formulation as follows
+% \begin{equation}
+% \Lambda_x(q)\ddot{x} + \mu_x(q,\dot{q}) + p_x(q) = F,
+% \end{equation}
+% where the reduced components $\Lambda_x$, $\mu_x$, and $p_x$ take the form 
+% \begin{align}
+% \Lambda_x(q) & = \left(J^\tr M^{-1} J \right)^{-1}, \\
+% \mu_x(q,\dot{q}) & = \left(J^\ginv\right)^\tr c(q,\dot{q}) - \Lambda_x(q) \dot{J} \dot{q}, \\
+% p_x(q) & = \left(J^\ginv\right)^\tr g(q), \\
+% F & = \left(J^\ginv\right)^\tr S(q) u,
+% \end{align}
+% with the matrix $J^\ginv$ denoting the generalized inverse of $J$ that satisfies $J = J J^\ginv J$. If $J^\ginv$ satisfies the four Moore–Penrose conditions, then the generalized inverse is equivalent to Moore-Penrose's inverse of $J$, also known as the pseudo-inverse. Another widely used generalized inverse is a dynamically consistent generalized inverse first proposed by Khatib (1987). This dynamically consistent generalized inverse is given by
+% \begin{equation}
+% J^\ginv(q) = M^{-1}\! \, J^\tr\!\, \Lambda_x,
+% \end{equation}
+% which gives the lowest instantaneous kinetic energy $\frac{1}{2} \langle \dot{q}, M\dot{q} \rangle$ while minimizing the least squares $\norms{J \dot{q} - \dot{x}}$. To clarify, given a predefined trajectory in $\dot{x}$, there is exists multiple solutions to $(q,\dot{q})$ that satisfy the task-velocity $\dot{x} = J(q)\dot{q}$, as illustrated by $\dot{q} = J^\ginv \dot{x} + (I - J^\ginv J)b$ with $b$ arbitrary configuration velocity in $\R^n$. This generalized inverse satisfies the first three Moore–Penrose conditions with an additional condition $M J^\ginv J = \bk{M J^\ginv J}^\tr$
+
