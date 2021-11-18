@@ -29,12 +29,12 @@
 \thispagestyle{empty}\cleardoublepage                       % added for draft version, summary on right side
 \pagenumbering{roman}                                       % start with roman page numbering
 \include{0_FrontMatter/Summary}
-\clearpage\thispagestyle{empty}\cleardoublepage
+%\clearpage\thispagestyle{empty}\cleardoublepage
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents
-\clearpage\thispagestyle{empty}\cleardoublepage
+%\clearpage\thispagestyle{empty}\cleardoublepage
 
-\listoftodos
+%\listoftodos
 
 %%% CHAPTERS %%%
 \cleardoublepage\pagenumbering{arabic} % start with normal page numbering
@@ -42,57 +42,54 @@
 %\part{Introduction}
 \AddLabels % enable possibility for chapter thumbs
 
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{1_Introduction/Introduction}
-
-%\part{Offline Methods}
-
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{2_Chapter/Chapter}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{1_Introduction/Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{2_Chapter/Chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchapterpage
 \clearpage\Materialfalse\thispagestyle{empty}\hbox{}
 \fi
 \include{3_Chapter/Chapter}
-
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{4_Chapter/Chapter}
-
-%\part{Online Methods}
-
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{5_Chapter/Chapter}
-
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{6_Chapter/Chapter}
-
-%\part{Closing}
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
-\include{7_Conclusion/Conclusion}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{4_Chapter/Chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{5_Chapter/Chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{6_Chapter/Chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
+%\include{7_Conclusion/Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\appendix
 %\include{8_Appendix/Appendix}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RemoveLabels % disable possibility for chapter thumbs
 
 \bibliographystyle{IEEEtran}
-\bibliography{C:/Users/s107842/Documents/Sources/BibTex/Publications-Thesis} %Indicate ABSOLUTE path. (relative path gives errors for some reason)
+\bibliography{/home/brandon/Documents/phd/thesis/reference.bib} %Indicate ABSOLUTE path. (relative path gives errors for some reason)
 %
 %%% BACKMATTER %%%
-\include{9_BackMatter/Publications}
-\include{9_BackMatter/Dankwoord}
-\include{9_BackMatter/CV}
+
+%\include{9_BackMatter/Publications}
+%\include{9_BackMatter/Dankwoord}
+%\include{9_BackMatter/CV}
 
 \end{document}
