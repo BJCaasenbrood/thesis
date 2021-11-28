@@ -8,26 +8,47 @@
 \newcommand{\ten}[1]{\boldsymbol{\mathcal{#1}}}
 
 %%%%%%% MATH OPERATORS %%%%%%%
-\newcommand{\M}{\mathcal{M}}
-\newcommand{\Hm}{\mathcal{H}}
-\newcommand{\La}{\mathcal{L}}
-\newcommand{\F}{\mathcal{F}}
-\newcommand{\G}{\mathcal{G}}
-\newcommand{\g}{\mathfrak{g}}
-\newcommand{\V}{\mathcal{V}}
-\newcommand{\T}{\mathcal{T}}
-\newcommand{\Ts}{\mathbb{T}}
-\newcommand{\Xs}{\mathbb{X}}
+% sets
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathcal{C}}
+\newcommand{\E}{\mathbb{E}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
-\newcommand{\C}{\mathcal{C}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\E}{\mathbb{E}}
+% compact sets
+\newcommand{\Rp}{\mathbb{R}_{\ge0}}
+\newcommand{\Rn}{\mathbb{R}_{\le0}}
+\newcommand{\Rsp}{\mathbb{R}_{>0}}
+\newcommand{\Rsn}{\mathbb{R}_{<0}}
+% domains
+\newcommand{\Ts}{\mathbb{T}}
+\newcommand{\Xs}{\mathbb{X}}
+\newcommand{\Bs}{\mathbb{B}}
+\newcommand{\Vs}{\mathbb{V}}
+\newcommand{\Ss}{\mathbb{S}}
+% functional
+\newcommand{\Hm}{\mathcal{H}}
+\newcommand{\La}{\mathcal{L}}
+% tensors
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Uf}{\mathcal{U}}
+\newcommand{\Wf}{\mathcal{W}}
+%\newcommand{\G}{\mathcal{G}}
+\newcommand{\g}{\mathfrak{g}}
+%\newcommand{\Uf}{\mathfrak{U}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\T}{\mathcal{T}}
+
+%matrix operators
+\newcommand{\pinv}{+}
+\newcommand{\ginv}{{g} }
+\newcommand{\pinvt}{{+\top} }
+
 \newcommand{\I}{\mathbb{I}}
 \newcommand{\op}{\,{\circ}\,}
 \newcommand{\q}{\boldsymbol{q}}
 \newcommand{\Ph}{\mathbb{E}}
-\newcommand{\tr}{\top}
+
 \newcommand{\ad}{\text{ad}}
 \newcommand{\Ad}{\text{Ad}}
 \newcommand{\p}{\partial}
@@ -35,9 +56,7 @@
 \newcommand{\col}{\textnormal{col}}
 \newcommand{\row}{\textnormal{row}}
 \newcommand{\nc}{\textnormal{nc}}
-\newcommand{\pinv}{+}
-\newcommand{\ginv}{{g} }
-\newcommand{\pinvt}{{+\top} }
+
 \newcommand{\Span}{\textnormal{span}}
 \newcommand{\argmin}{\textnormal{argmin}}
 \newcommand{\atan}{\textnormal{atan}}
@@ -47,11 +66,12 @@
 
 \DeclareMathOperator{\sech}{sech}
 \DeclareMathOperator{\csch}{csch}
-\DeclareMathOperator{\Rp}{\R_{\ge 0}}
-\DeclareMathOperator{\Rsp}{\R_{>0}}
+%\DeclareMathOperator{\Rp}{\R_{\ge 0}}
+%\DeclareMathOperator{\Rsp}{\R_{>0}}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\Rot}[1]{^{#1}\boldsymbol{\Phi}}
+\newcommand{\lab}[2]{\,^{#2}#1}
 
 \newcommand{\se}[1]{{\mathfrak{se}(#1)}}
 \newcommand{\cose}[1]{{\mathfrak{se}^*(#1)}}
@@ -65,7 +85,9 @@
 %\newcommand{\Rotlin}[1]{^{#1}\hat{\boldsymbol{\Phi}}
 \newcommand{\base}[2]{^{#1}{#2}}
 \newcommand{\blkdiag}[1]{\textnormal{blkdiag}\left\{ {#1} \right\}}
-
+\newcommand{\trace}[1]{\textnormal{blkdiag}\left\{ {#1} \right\}}
+\newcommand{\subto}{\;\text{s.t.}\;}
+\newcommand{\config}[1]{{#1}_0}
 %%%%%%% MATH OPERATORS %%%%%%%
 % \theoremstyle{definition}
 % \newtheorem{theorem}{Theorem}[section]

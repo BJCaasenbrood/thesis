@@ -1,3 +1,4 @@
+%!TEX root = thesis.tex
 % Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[english]{babel}
 \usepackage{amsmath}
@@ -9,14 +10,14 @@
 \usepackage{wrapfig}
 \usepackage[breaklinks=true,bookmarksnumbered=true,bookmarksdepth=2,bookmarksopen=true,bookmarksopenlevel=0,hidelinks,hypertexnames=false]{hyperref}
 \urlstyle{same}                         % use same font type and size for url's
-%\usepackage{bookmark}
-%\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{hyperref}
 \usepackage{appendix}                   % subappendices environment
 \usepackage[nottoc]{tocbibind}          % Bibliography in table of contents
 \usepackage{graphicx}
 %\usepackage[dvips]{epsfig}
 \usepackage[dvipsnames]{xcolor}         % loads a set of 68 cmyk color names
-\usepackage{sectsty}                    % controls for section headers
+%\usepackage{sectsty}                    % controls for section headers
 %\usepackage[normalem]{ulem}             % underlining options
 \usepackage{bm}                         % used to get bold greek symbols
 \usepackage{algorithm}                  % enables algorithm environment
@@ -28,6 +29,8 @@
 \usepackage[perpage]{footmisc}          % resets footnote numbering on each page
 \usepackage{rotating}                   % enables rotated text
 \usepackage[textwidth = 2cm,textsize = tiny]{todonotes}                  % enables the use of \todo{} \missingfigure{}, and \listoftodos
+
+\usepackage{svg}
 
 % Environment for theorems etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{thm}{Theorem}[chapter]
@@ -106,9 +109,9 @@
 % \newcommand{\Zs}{\mathcal{Z}}
 
 % Math operators
-\newcommand{\diag}{\operatorname{diag}}
-\newcommand{\post}{\operatorname{post}}
-\newcommand{\Post}{\operatorname{Post}}
+%\newcommand{\diag}{\operatorname{diag}}
+%\newcommand{\post}{\operatorname{post}}
+%\newcommand{\Post}{\operatorname{Post}}
 
 % Better matrices with vertical lines for MIP chapter
 \makeatletter
@@ -121,8 +124,8 @@
 % If toggles %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TU/e font family
 \newif\iftuefont
-\tuefonttrue
-%\tuefontfalse
+%\tuefonttrue
+\tuefontfalse
 
 % Thesis vs paper version
 \newif\ifthesis

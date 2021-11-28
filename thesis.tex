@@ -36,11 +36,11 @@
 
 %\listoftodos
 
-%%% CHAPTERS %%%
+%%% CHAPTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \cleardoublepage\pagenumbering{arabic} % start with normal page numbering
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\part{Introduction}
-\AddLabels % enable possibility for chapter thumbs
+%\AddLabels % enable possibility for chapter thumbs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\ifchapterpage
@@ -51,11 +51,11 @@
 %\ifchapterpage
 %\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
 %\fi
-%\include{2_Chapter/Chapter}
+\include{2_Chapter/Chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifchapterpage
-\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
-\fi
+%\ifchapterpage
+%\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
+%\fi
 \include{3_Chapter/Chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\ifchapterpage
@@ -83,7 +83,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RemoveLabels % disable possibility for chapter thumbs
 
-\bibliographystyle{IEEEtran}
+\bibliographystyle{apalike}
 \bibliography{/home/brandon/Documents/phd/thesis/reference.bib} %Indicate ABSOLUTE path. (relative path gives errors for some reason)
 %
 %%% BACKMATTER %%%

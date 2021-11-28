@@ -1,4 +1,4 @@
-%
+%!TEX root = thesis.tex
 % CLASS FOR PHD THESIS
 %
 % This file uses the standard report class
@@ -9,7 +9,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{phdthesis}[2018/06/22 PhD thesis class]
+\ProvidesClass{phdthesis}[2021/10/22 PhD thesis class]
 
 
 %%% LOAD REPORT CLASS %%%
@@ -73,7 +73,6 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-
 %%% DEFINE CHAPTERNOTE WITHOUT NUMBER %%%
 \newcommand{\chapternote}[1]{{\let\thempfn\relax\footnotetext[0]{#1}}}
 
@@ -87,24 +86,29 @@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}
 
-
 %\RequirePackage[raggedright,toctitles]{titlesec} % Long section titles + optional argument section only used in header (not in toc) (does not work for chapters --> use \chaptermark{})
 \RequirePackage[raggedright]{titlesec} % use optional argument also in toc
 
-
 %\titleformat
 
-% Bold math in section headers: add \boldmath to default definitions \RequirePackage{sectsty}\allsectionsfont{\boldmath} not compatible with titlesec package
+% Bold math in section headers: add \boldmath to default definitions
+\RequirePackage{sectsty}\allsectionsfont{\boldmath}
+%not compatible with titlesec package
 \titleformat{\chapter}[display]
-{\normalfont\huge\bfseries\boldmath\raggedright}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+{\normalfont\huge\bfseries\raggedright}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
 \titleformat{\section}
-{\normalfont\Large\bfseries\boldmath\raggedright}{\thesection}{1em}{}
-\titleformat{\subsection}
-{\normalfont\large\bfseries\boldmath\raggedright}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}[runin]
-{\normalfont\normalsize\bfseries\boldmath\raggedright}{\thesubsubsection}{1em}{}[:] %add semicolon after head
+{\normalfont\Large\bfseries\raggedright}{\thesection}{1em}{}
+
+%\titleformat{\subsection}
+%\normalfont\large\bfseries\boldmath\raggedright}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries\boldmath\raggedright}{\thesubsubsection}{1em}{}%[:] %add semicolon after head
+
 \titleformat{\paragraph}[runin]
 {\normalfont\normalsize\bfseries\boldmath\raggedright}{\theparagraph}{1em}{}
+
 \titleformat{\subparagraph}[runin]
 {\normalfont\normalsize\bfseries\boldmath\raggedright}{\thesubparagraph}{1em}{}
 
@@ -118,14 +122,14 @@
         \LARGE\bfseries\raggedleft \@chapapp\space\thechapter
         \par\nobreak
         \vskip 10\p@
-        \rule{\textwidth}{6pt}
+        \rule{\textwidth}{3pt}
         \vskip 10\p@
     \fi
     \interlinepenalty\@M
     \huge\bfseries\raggedleft #1
     \par\nobreak
     \vskip 0\p@
-    \rule{\textwidth}{0.6pt}
+    \rule{\textwidth}{2pt}
     \vskip 20\p@
   }%
 }
