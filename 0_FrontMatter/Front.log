@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.9.21)  17 NOV 2021 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.12.19)  7 FEB 2022 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -135,7 +135,7 @@ or  <return>  to continue without it.
 
 ./Front.tex:14: Undefined control sequence.
 l.14 \Large
-           {\tuefontscala\selectfont Brandon Jonathan Caasenbrood}
+           {\tuefontscala\selectfont \@author}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -144,12 +144,39 @@ and I'll forget about whatever was undefined.
 
 ./Front.tex:14: Undefined control sequence.
 l.14 \Large{\tuefontscala
-                         \selectfont Brandon Jonathan Caasenbrood}
+                         \selectfont \@author}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+./Front.tex:14: You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m {}
+l.14 \Large{\tuefontscala\selectfont \@
+                                       author}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./Front.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 \Large{\tuefontscala\selectfont \@
+                                       author}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Front.tex:14: Extra }, or forgotten $.
+l.14 \Large{\tuefontscala\selectfont \@author}
+                                              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ./Front.tex:15: Extra \else.
 l.15 \else
@@ -165,6 +192,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+./Front.tex:16: LaTeX Error: Command \sffamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \huge{\sffamily
+                    \bfseries\selectfont\maintitle}\\[15mm]%[30mm]%[3mm]
+Please use the math alphabet \mathsf instead of the \sffamily command. 
+
+
+./Front.tex:16: LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \huge{\sffamily\bfseries
+                             \selectfont\maintitle}\\[15mm]%[30mm]%[3mm]
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
 ./Front.tex:16: Undefined control sequence.
 l.16 \huge{\sffamily\bfseries\selectfont\maintitle
                                                   }\\[15mm]%[30mm]%[3mm]
@@ -175,33 +224,78 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (37.66678pt too wide) in paragraph at lines 14--16
- \OT1/cmr/m/n/10 Brandon 
- []
+./Front.tex:16: LaTeX Error: There's no line here to end.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...\sffamily\bfseries\selectfont\maintitle}\\
+                                                  [15mm]%[30mm]%[3mm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-Overfull \hbox (40.69456pt too wide) in paragraph at lines 14--16
- \OT1/cmr/m/n/10 Jonathan 
- []
+./Front.tex:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16 ...\sffamily\bfseries\selectfont\maintitle}\\
+                                                  [15mm]%[30mm]%[3mm]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+./Front.tex:16: Missing } inserted.
+<inserted text> 
+                }
+l.16 ...\sffamily\bfseries\selectfont\maintitle}\\
+                                                  [15mm]%[30mm]%[3mm]
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Overfull \hbox (34.50005pt too wide) in paragraph at lines 14--16
- \OT1/cmr/m/n/10 Caasen- 
- []
+Missing character: There is no è in font cmex10!
 
-
-Overfull \hbox (25.58342pt too wide) in paragraph at lines 14--16
- \OT1/cmr/m/n/10 brood 
+Overfull \hbox (30.01976pt too wide) in paragraph at lines 14--16
+ []\OML/cmm/m/it/10 author[][]$ 
  []
 
 ./Front.tex:18: Undefined control sequence.
 l.18 \Large
-           {\sffamily\selectfont Camiel Beckers}
+           {\sffamily\selectfont \@author }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+./Front.tex:18: You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m {}
+l.18 \Large{\sffamily\selectfont \@
+                                   author }
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./Front.tex:18: Missing $ inserted.
+<inserted text> 
+                $
+l.18 \Large{\sffamily\selectfont \@
+                                   author }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Front.tex:18: Extra }, or forgotten $.
+l.18 \Large{\sffamily\selectfont \@author }
+                                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ./Front.tex:19: Extra \fi.
 l.19 \fi
@@ -209,18 +303,67 @@ l.19 \fi
 I'm ignoring this; it doesn't match any \if.
 
 
-Overfull \hbox (28.36115pt too wide) in paragraph at lines 18--20
- []\OT1/cmss/m/n/10 Camiel 
- []
+./Front.tex:20: LaTeX Error: Command \end{center} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{center}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (23.77782pt too wide) in paragraph at lines 18--20
- \OT1/cmss/m/n/10 Beck- 
- []
+./Front.tex:20: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{center}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (11.69446pt too wide) in paragraph at lines 18--20
- \OT1/cmss/m/n/10 ers 
+./Front.tex:20: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{center}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Front.tex:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 \end{center}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no è in font cmex10!
+./Front.tex:20: Missing } inserted.
+<inserted text> 
+                }
+l.20 \end{center}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (30.01976pt too wide) in paragraph at lines 18--21
+[]$[]\OML/cmm/m/it/10 author$ 
  []
 
 
@@ -967,23 +1110,24 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -994,8 +1138,11 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -1005,8 +1152,14 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no ? in font nullfont!
-Missing character: There is no ? in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
 
 ./Front.tex:95: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
@@ -1335,7 +1488,7 @@ Missing character: There is no h in font nullfont!
  
 Here is how much of TeX's memory you used:
  32 strings out of 479304
- 559 string characters out of 5869779
+ 559 string characters out of 5869778
  273123 words of memory out of 5000000
  17318 multiletter control sequences out of 15000+600000
  404672 words of font info for 31 fonts, out of 8000000 for 9000

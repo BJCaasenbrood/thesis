@@ -2,23 +2,26 @@
 \documentclass{phdthesis}
 
 % Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\author{Brandon Caasenbrood}
+\author{Brandon Jonathan Caasenbrood}
 \newcommand{\maintitle}{Towards Design and Control \\ of Soft Robotic Systems}
 \newcommand{\subtitle}{}
 
 % Packages and custom definitions:
 \input{config}
 \input{math}
+
+% makeatletter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter																								% ensures \@author exists
+
 % PDF Hyperref setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
-	pdfauthor=Brandon Caasenbrood,
+	pdfauthor=\@author
 	pdftitle=\maintitle,%: \subtitle,
 	pdfsubject=PhD thesis,
 	%pdfstartview=FitV, %Initial view (FitV: fits the height of the page to the window)
 	pdfview=Fit, % view of the hyperrefs (Fit: fit page to the window
 	pdfpagelayout=TwoPageRight,%SinglePage,
 }
-
 % Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -26,6 +29,7 @@
 \pagenumbering{alph}                                        %start with letters as page numbering (otherwise duplicate arabic page numbers 1-4)
 \thispagestyle{empty}\cleardoublepage
 \include{0_FrontMatter/Front}
+
 \thispagestyle{empty}\cleardoublepage                       % added for draft version, summary on right side
 \pagenumbering{roman}                                       % start with roman page numbering
 \include{0_FrontMatter/Summary}
@@ -56,7 +60,7 @@
 %\ifchapterpage
 %\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
 %\fi
-\include{3_Chapter/Chapter}
+%\include{3_Chapter/Chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\ifchapterpage
 %\clearpage\Materialfalse\thispagestyle{empty}\hbox{}
