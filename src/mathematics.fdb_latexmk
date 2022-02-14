@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1644401154 "mathematics.tex" "mathematics.pdf" "mathematics" 1644401154
+  "/etc/texmf/web2c/texmf.cnf" 1625471253 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1613593815 38841 799d1dd9682a55ce442e10c99777ecc1 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1613593815 38841 799d1dd9682a55ce442e10c99777ecc1 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1640105682 2569040 37e53dff5b50a124f4f2fc6fb4362e16 ""
+  "mathematics.aux" 1644401146 1463 93da4d9e0b65151caf89d21198e6bc9e ""
+  "mathematics.tex" 1644401154 1894 5ee1f4fbb6424b3a5f808de05485b736 ""
+  (generated)
+  "mathematics.log"
+  "mathematics.pdf"

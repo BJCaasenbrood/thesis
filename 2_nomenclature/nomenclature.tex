@@ -1,0 +1,96 @@
+%!TEX root = ../thesis.tex
+%%%% ***************************************************************************
+\newenvironment{Nomen}
+    {\vspace*{-3mm}\begin{center}
+    \begin{longtable}{p{.1\textwidth} p{.93\textwidth}}
+    }
+    {
+    \end{longtable}
+    \end{center}\vspace*{-1.2cm}
+    }
+
+\newcommand{\AddSymbol}[2]{#1 & #2 \\}
+%%%% ***************************************************************************
+%%%% NOMENCLATURE **************************************************************
+\chapter*{Nomenclature}
+\addcontentsline{toc}{chapter}{Nomenclature}
+\markboth{Nomenclature}{Nomenclature}
+
+%%%% GREEK *********************************************************************
+\section*{Vector and matrix notation}
+\begin{Nomen}
+\AddSymbol{$x$}{Scalar notation}
+\AddSymbol{$\vec{x}$}{Vector notation}
+\AddSymbol{$\mat{X}$}{Matrix notation}
+\AddSymbol{$\ten{X}$}{Tensor notation}
+\AddSymbol{$\ten{Q}$}{Manifold}
+\end{Nomen}
+
+%%%% ROMAN *********************************************************************
+% \section*{Roman symbols}
+% \begin{Nomen}
+% \AddSymbol{$a$}{Description of $a$}
+% \AddSymbol{$b$}{Description of $b$}
+% \AddSymbol{$C$}{Description of $C$}
+% \AddSymbol{$D_a$}{Description of $D_a$}
+% \end{Nomen}
+
+%%%% SPACES *******************************************************************
+\section*{Compact sets}
+\begin{Nomen}
+\AddSymbol{$\emptyset$}{Empty set}
+\AddSymbol{$\R$}{Set of real numbers}
+\AddSymbol{$\R^n$}{$n$-dimensional Euclidean space}
+\AddSymbol{$\Rsp$}{Strictly positive reals}
+\AddSymbol{$\Rp$}{Positive reals}
+\AddSymbol{$\N$}{Set of natural numbers}
+\AddSymbol{$\Ts$}{Finite time horizon}
+\AddSymbol{$\Xs$}{1-dimensional spatial set or domain (\ie, line)}
+\AddSymbol{$\Vs$}{3-dimensional spatial set or domain (\ie, volume)}
+\end{Nomen}
+
+\section*{Groups}
+\begin{Nomen}
+\AddSymbol{$\Id$}{Identity}
+\AddSymbol{$\SO{n}$}{Lie group of rotations on $\R^n$  (\ie, special orthonormal matrices)}
+\AddSymbol{$\SE{n}$}{Lie group of homogeneous transformations on $\R^n$}
+\AddSymbol{$\So{n}$}{Lie algebra of $\SO{n}$}
+\AddSymbol{$\Se{n}$}{Lie algebra of $\SE{n}$}
+\end{Nomen}
+
+%%%% SUB-SUPERSCRIPT ***********************************************************
+\section*{Vector- and matrix operations}
+\begin{Nomen}
+\AddSymbol{$\dot{(\blank)}$}{First time derivative}
+\AddSymbol{$\ddot{(\blank)}$}{Second time derivative}
+\AddSymbol{$\hat{(\blank)},(\blank)^{\wedge}$}{Isomorphism from $\R^{6} \to \Se{3}$}
+\AddSymbol{$\check{(\blank)},(\blank)^{\vee}$}{Isomorphism from $\Se{3} \to \R^{6}$}
+\AddSymbol{$(\blank)_0$}{Reference configuration}
+\AddSymbol{$(\blank)\T$}{Transpose}
+\AddSymbol{$(\blank)\inv$}{Square matrix inverse}
+\AddSymbol{$(\blank)\pinv$}{Moore-Penrose pseudo inverse}
+\AddSymbol{$(\blank)\ginv$}{Generalized matrix inverse}
+\AddSymbol{$(\blank)\d$}{Generalized matrix inverse}
+\end{Nomen}
+
+\section*{Operators and letter-like symbols}
+\begin{Nomen}
+\AddSymbol{$\delta$}{Variation of a field}
+\AddSymbol{$\p$}{Boundary of a set}
+\AddSymbol{$\interior$}{Interior of a set}
+\AddSymbol{$\sup_t$}{Supremum over continuous time $t$}
+\AddSymbol{$\dim$}{Dimension of vector}
+\AddSymbol{$\trace$}{Trace of matrix}
+\AddSymbol{$\|\cdot\|_\maT$}{Mean absolute norm}
+\AddSymbol{$\|\cdot\|_\rmsT$}{Root-mean-square norm}
+\end{Nomen}
+
+
+%%%% ACRONYMS ******************************************************************
+\section*{Acronyms}
+\begin{Nomen}
+\AddSymbol{CoM}{Center of mass}
+\AddSymbol{CoR}{Coefficient of restitution}
+\end{Nomen}
+
+%\thispagestyle{empty}

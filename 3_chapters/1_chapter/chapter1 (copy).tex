@@ -1,0 +1,64 @@
+%!TEX root = ../thesis.tex
+%%%% CHAPTER ******************************************************************
+\chapter[Title of your chapter here]{Title of your chapter here}
+\label{chap: chapter 1}
+
+\blankfootnote{This chapter is based on:\\ write down the citation of the paper you are referring to in full.\disclaimer}
+
+\chapterabstract{\lipsum[1]}
+
+\section{Introduction}
+\label{sec: chap2 intro}
+
+\lipsum[5-7] \cite{Goebel2012}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section header}
+\label{sec: chap2 section header}
+
+Here's an equation:
+\be
+\label{eq: chap2 vector field} \dot{\xBF} = \fB(\xBF,\uB,t)
+\ee
+with $\uB\in\RBB^m$ the input, $t_0$ the initial time, and $t_f$ the final time.
+And below another beautiful image.
+
+\renewcommand{\SF}{0.8}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=\SF]
+        % Fixed world
+        \shade[right color=brown!2!gray!50,left color=white] (-1.2,2.7) -- (-0.6,2.7) -- (-0.6,-1) -- (-1.2,-1.6) -- cycle;
+        \shade[top color=brown!2!gray!50,bottom color=white] (-0.6,-1) -- (7.2,-1) -- (7.2,-1.6) -- (-1.2,-1.6) -- cycle;
+        \draw[line width=\lw] (-0.6,2.7) -- (-0.6,-1) -- (7.2,-1);
+
+        % Stop
+        \filldraw[draw=black,fill=brown!3!black!80,line width=\lw] (-0.6,0.2) rectangle (-0.2,1.2);
+        \draw[color=black!90,line width=\lw] (-0.6cm+\lw,1.2cm-0.5*\lw) -- (-0.6cm+\lw,0.2cm+\lw) -- (-0.2cm-0.5*\lw,0.2cm+\lw);
+        \draw[color=black!60,line width=\lw] (-0.6cm+0.5*\lw,1.2cm-\lw) -- (-0.2cm-\lw,1.2cm-\lw) -- (-0.2cm-\lw,0.2cm+0.5*\lw);
+
+        % Cart
+        \begin{scope}[xshift=0.3cm]
+            \filldraw[draw=black,fill=orange!60!brown!85,line width=\lw] (0.5cm-0.5*\lw,-0.6cm-0.5*\lw) rectangle (5.5cm+0.5*\lw,1.6cm+0.5*\lw);
+            \draw[color=orange!60!black!80,line width=\lw] (0.5cm+0.75*\lw,1.6cm-0.5*\lw) -- (0.5cm+0.75*\lw,-0.6cm+0.75*\lw) -- (5.5cm-0.5*\lw,-0.6cm+0.75*\lw);
+            \draw[color=orange!60,line width=\lw] (0.5cm+0.5*\lw,1.6cm-\lw) -- (5.5cm-\lw,1.6cm-\lw) -- (5.5cm-\lw,-0.6cm+0.5*\lw);
+            \wheel{1.5cm}{-0.4cm}{0.6cm}
+            \wheel{4.5cm}{-0.4cm}{0.6cm}
+        \end{scope}
+
+        % Annotations
+        \draw[dashed,line width=\lw] (0.8,1.8) -- (0.8,2.5);
+        \draw[|->,>=stealth,line width=1.25*\lw] (-0.2,2.15) -- node[black,pos=0.5,above,inner sep=2mm]{\TS $\qR$} (0.8,2.15);
+        \draw[->,>=stealth,line width=1.75*\lw,MRred] (5.8,0.5) -- node[black,pos=0.5,above,inner sep=2mm]{\TS $F$} (6.8,0.5);
+        \draw (3.3,0.5) node[black]{\TS $\mathrm{M}$};
+    \end{tikzpicture}
+    \caption{Schematic representation of a controlled bouncing mass.}
+    \label{fig: chap2 cntrld mass}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions and discussion}
+\label{sec: chap2 conclusion}
+
+\lipsum[10-13]
