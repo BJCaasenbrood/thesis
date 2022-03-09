@@ -20,7 +20,7 @@
 \renewcommand{\year}{2022}
 \newcommand{\defensedate}{maandag 30 december 2022}
 \newcommand{\defensetime}{16:00}
-\newcommand{\maintitle}{A Systematic Approach for Design, Modeling,\\[0.4em]  and Control of Soft Robotic Systems}
+\newcommand{\maintitle}{A Control-oriented Approach on the Design \\[0.4em] and Modeling of Soft Robotic Systems}
 \newcommand{\subtitle}{}
 \newcommand{\isbn}{123-45-678-9012-3}     % 123-45-678-9012-3
 \newcommand{\printer}{Name of printer || www.printerswebsite.nl}
@@ -35,37 +35,37 @@
 \thispagestyle{empty}
 
 %%%% FRONT MATTERS *************************************************************
-\cover{thesis_front.pdf}    % Adds your thesis' front cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
+%\cover{thesis_front.pdf}    % Adds your thesis' front cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
 
 % Front matter
-\include{0_preface/preface}
+%\include{0_preface/preface}
 \include{1_summary/abstract}
-\include{1_summary/samenvatting}
-\include{1_summary/societal_summary}
+%\include{1_summary/samenvatting}
+%\include{1_summary/societal_summary}
 
 %%%% NOMENCLATURE **************************************************************
-\cleardoublepage
-\pdfbookmark{\contentsname}{Contents}
-\tableofcontents
+%\cleardoublepage
+%\pdfbookmark{\contentsname}{Contents}
+%\tableofcontents
 
-\newpage
-\include{2_nomenclature/nomenclature}
+%\newpage
+%\include{2_nomenclature/nomenclature}
 
 %%%% MAIN MATTERS *************************************************************
 % This state variable is used for creating the thumb index by indicating that
 % the following chapter is numbered (i.e. not \chapter*{})
 \isstarredchapterfalse
-\include{3_chapters/0_introduction/introduction}
+%\include{3_chapters/0_introduction/introduction}
 
 %%%% Design
-\cleardoublepage
-\part{Design Optimization}\label{part: design}
+%\cleardoublepage
+%\part{Design Optimization}\label{part: design}
 
-\cleardoublepage
-\part{Modeling of Soft Robots}\label{part: model}
+%\cleardoublepage
+%\part{Modeling of Soft Robots}\label{part: model}
 %\include{3_chapters/1_chapter/chapter1}
 
-\part{Control and Sensing Strategies}\label{part: control}
+%\part{Control and Sensing Strategies}\label{part: control}
 % \cleardoublepage
 % \part{Name of second part}\label{part: part2}
 % \include{3_chapters/1_introduction/}
@@ -77,19 +77,19 @@
 %%%% APPENDIX ******************************************************************
 \appendix
 \cleardoublepage
-\part{Appendices}
+%\part{Appendices}
 \definecolor{thumbcolor}{gray}{0.4}     % Change the color of the thumb index tags to gray
-\include{4_appendices/appendix}
+%\include{4_appendices/appendix}
 
 
 %%%% BACK MATTER ***************************************************************
 \isstarredchaptertrue           % This state variable is used for creating the thumb index by indicating that the following chapter is not numbered (i.e. \chapter*{})
 \bookmarksetup{startatroot}
 \addtocontents{toc}{\bigskip}%
-\include{5_bibliography/bibliography}
-\include{6_acknowledgement/acknowledgement}
+%\include{5_bibliography/bibliography}
+%\include{6_acknowledgement/acknowledgement}
 \include{7_publications/publications}
-\include{8_cv/cv}
+%\include{8_cv/cv}
 
 \newpage {~}
 \thispagestyle{empty}
