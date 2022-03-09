@@ -7,7 +7,8 @@
 \include{src/commands}
 \include{src/mathematics}
 \include{src/review}
-\graphicspath{{img/}{../img/}{../../img/}}
+\include{src/tikz}
+\graphicspath{{img/}{../img/}{../../img/}{../../../img/}}
 
 %%%% DOCUMENT COLORS  **********************************************************
 \definecolor{titlecolor}{RGB}{60,90,124}    % color of titles
@@ -51,7 +52,9 @@
 \include{2_nomenclature/nomenclature}
 
 %%%% MAIN MATTERS *************************************************************
-\isstarredchapterfalse          % This state variable is used for creating the thumb index by indicating that the following chapter is numbered (i.e. not \chapter*{})
+% This state variable is used for creating the thumb index by indicating that
+% the following chapter is numbered (i.e. not \chapter*{})
+\isstarredchapterfalse
 \include{3_chapters/0_introduction/introduction}
 
 %%%% Design
@@ -60,7 +63,7 @@
 
 \cleardoublepage
 \part{Modeling of Soft Robots}\label{part: model}
-\include{3_chapters/1_chapter/chapter1}
+%\include{3_chapters/1_chapter/chapter1}
 
 \part{Control and Sensing Strategies}\label{part: control}
 % \cleardoublepage
