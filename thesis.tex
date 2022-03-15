@@ -1,6 +1,6 @@
 %%%% DOCUMENT CLASS ************************************************************
-\documentclass[print,thumbmain,final]{src/thesis}  % uncomment for writing
-%\documentclass[final]{src/thesis} % uncomment for rendering/final version
+%\documentclass[print,thumbmain]{src/thesis}  % uncomment for writing
+\documentclass[final]{src/thesis} % uncomment for rendering/final version
 
 %%%% PREAMBLE ******************************************************************
 \include{src/packages}
@@ -20,7 +20,7 @@
 \renewcommand{\year}{2022}
 \newcommand{\defensedate}{maandag 30 december 2022}
 \newcommand{\defensetime}{16:00}
-\newcommand{\maintitle}{A Control-oriented Approach on the Design \\[0.4em] and Modeling of Soft Robotic Systems}
+\newcommand{\maintitle}{Design and Control Strategies \\ for Soft Robotic Systems}
 \newcommand{\subtitle}{}
 \newcommand{\isbn}{123-45-678-9012-3}     % 123-45-678-9012-3
 \newcommand{\printer}{Name of printer || www.printerswebsite.nl}
@@ -38,15 +38,15 @@
 %\cover{thesis_front.pdf}    % Adds your thesis' front cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
 
 % Front matter
-%\include{0_preface/preface}
+\include{0_preface/preface}
 \include{1_summary/abstract}
-%\include{1_summary/samenvatting}
-%\include{1_summary/societal_summary}
+\include{1_summary/samenvatting}
+\include{1_summary/societal_summary}
 
 %%%% NOMENCLATURE **************************************************************
-%\cleardoublepage
-%\pdfbookmark{\contentsname}{Contents}
-%\tableofcontents
+\cleardoublepage
+\pdfbookmark{\contentsname}{Contents}
+\tableofcontents
 
 %\newpage
 %\include{2_nomenclature/nomenclature}
@@ -54,8 +54,9 @@
 %%%% MAIN MATTERS *************************************************************
 % This state variable is used for creating the thumb index by indicating that
 % the following chapter is numbered (i.e. not \chapter*{})
-\isstarredchapterfalse
-%\include{3_chapters/0_introduction/introduction}
+%\isstarredchapterfalse
+\cleardoublepage
+\include{3_chapters/0_introduction/introduction}
 
 %%%% Design
 %\cleardoublepage
@@ -91,7 +92,7 @@
 \include{7_publications/publications}
 %\include{8_cv/cv}
 
-\newpage {~}
+%\newpage {~}
 \thispagestyle{empty}
 
 \ifprint{}
@@ -101,7 +102,7 @@
 \fi
 
 %%%% BACK **********************************************************************
-\cover{thesis_back.pdf}    % Adds your thesis' back cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
+%\cover{thesis_back.pdf}    % Adds your thesis' back cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
 
 \end{document}
 %%%% THAT's ALL FOLKS **********************************************************

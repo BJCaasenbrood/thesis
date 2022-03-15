@@ -1,10 +1,9 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Summary}{v}{chapter*.1}%
-\contentsline {part}{I\hspace {1em}Appendices}{ix}{part.1}%
-\contentsline {chapter}{\numberline {A}Appendix name}{xi}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Section header}{xi}{section.A.1}%
-\contentsline {chapter}{Bibliography}{xiii}{section*.3}%
-\contentsline {chapter}{Acknowledgements}{xiii}{appendix*.4}%
+\contentsline {chapter}{Abstract}{v}{chapter*.1}%
+\contentsline {chapter}{Samenvatting}{vii}{chapter*.2}%
+\contentsline {chapter}{Societal summary}{ix}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The Origin of Soft Robotics}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Modern Soft Robotics}{4}{section.1.2}%
+\contentsline {chapter}{List of publications}{5}{appendix*.6}%
 \vspace \bigskipamount 
-\contentsline {chapter}{List of publications}{xv}{appendix*.5}%
-\contentsline {chapter}{Curriculum Vitae}{xvii}{appendix*.6}%
