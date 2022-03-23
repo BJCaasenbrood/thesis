@@ -1,0 +1,33 @@
+% \subsection{Strain theory in continuum mechanics}
+% Here, we state the variational principle of continuum mechanics in a nonlinear geometrical setting. First, we introduce a description of the undeformed material domain described by $\mathcal{B}_0 \subset \R^3$. As external forces induce motion in $\mathcal{B}_0$, a representation of the deformed domain can be described by $\mathcal{B} \subset \R^3$. Suppose there exists an arbitrary material point inside the undeformed configuration represented by a position vector $\boldsymbol{X} \in \mathcal{B}_0$. Due to the motion of $\mathcal{B}_0$, a continuous path can be drawn between the position vectors $\boldsymbol{X}$ and $\boldsymbol{X}'$, that is, a particular material point in undeformed and deformed configuration, respectively. Therefore, let the deformation mapping for every material point in $\mathcal{B}_0$ be described by $\boldsymbol{\varphi}:\; \mathcal{B}_0 \to \mathcal{B}$ such that $\boldsymbol{X} \mapsto \boldsymbol{\varphi}(\boldsymbol{X}) = \boldsymbol{X}'$.
+% Alternatively, we can write $\boldsymbol{X}' = \boldsymbol{\varphi}(\boldsymbol{X}) = \boldsymbol{X} + \boldsymbol{x}(\boldsymbol{X})$, where $\boldsymbol{x} \in \R^3$ is the displacement vector the material point Since the mapping $\boldsymbol{\varphi}$ is assumed to be sufficiently smooth, the second-order deformation gradient tensor is defined by
+% \begin{equation}
+% \boldsymbol{F} := \frac{\p \boldsymbol{\varphi} }{\p \boldsymbol{X}} \label{eq:F} = \boldsymbol{I} + \frac{\p \boldsymbol{x} }{\p \boldsymbol{X}}.
+% \end{equation}
+% The second-order deformation gradient tensor holds useful information about the deformation locally, i.e., it describes the deformation of an infinitesimal sub-volume of the material domain $\mathcal{B}_0$ around $\boldsymbol{X}$. From the deformation gradient, the Green-Lagrange strain tensor can be derived by $\boldsymbol{E} = \frac{1}{2}(\boldsymbol{C} - \boldsymbol{I})$, where $\boldsymbol{C} = \boldsymbol{F}^\tr \boldsymbol{F}$ is the right Cauchy-Green strain tensor. Expressed in terms of displacement gradient, the general expression for the second-order Green-Lagrange strain tensor becomes
+% \begin{equation}
+% \boldsymbol{E} = \frac{1}{2}\left( \frac{\p \boldsymbol{x}}{\p \boldsymbol{X}} + \frac{\p\boldsymbol{x}^\tr}{\p \boldsymbol{X}} + \frac{\p\boldsymbol{x}^\tr}{\p \boldsymbol{X}}\frac{\p\boldsymbol{x}}{\p \boldsymbol{X}} \right). \label{eq:E_tens}
+% \end{equation}
+% Since the numerical implementation generally involves matrix-vector notation instead of tensor notation; we briefly introduce the following notation. A Cartesian tensor can be formally represented by an component array in terms of a basis $\boldsymbol{e}_i$. For example, a second-order tensor can be denoted by $\boldsymbol{T} = \sum_{ij}\boldsymbol{T}_{ij}\, \boldsymbol{e}_i \kron \boldsymbol{e}_j$ with $\kron$ the dyadic product and bases $\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3 \in \R^3$. As such, the column vector representation of a second-order tensor $\boldsymbol{T}$ can be denoted by $\{ \boldsymbol{T}\} := \text{vec}(\boldsymbol{T}_{ij})$. Hence, the variational form of Lagrangian strain can be written in vector notation as
+% \begin{equation}
+% \{d \boldsymbol{E} \}= \boldsymbol{B}(\boldsymbol{x}) \, \{d \boldsymbol{x}\},
+% \end{equation}
+% where $\boldsymbol{B}(\boldsymbol{x})$ is a nonlinear strain-displacement matrix that relates displacements to Lagrangian strain \cite{Kim2018}. In this work, we primarily focus on two-dimensional mechanical problems. We would like to stress that the variational principle for three-dimensional continuum solids discussed earlier are similar to those in two-dimensional situations \cite{Kim2018,Gain2013}.
+%
+% \subsection{Isotropic hyperelasticity}
+% In soft robotics, the use of elastomer materials is widespread due to their relatively low Young's moduli, large reversible strains, and mechanical robustness. These elastic materials are distinguished in material mechanics as hyperelastic materials. The presence of large deformations and rubber-like materials inherently leads to a state-dependent mechanical compliance. In contrast to Hookean materials, whose elasticity is linear, the constitutive behavior of hyperelastic materials is described by a (nonlinear) strain energy function ${\Psi}: \R^{3\times3} \mapsto \Rp$, i.e., a mapping from the Lagrangian strain tensor to potential energy. Popular constitutive models for hyperelastic behavior include Neo-Hookean, Mooney, Ogden, or Yeoh. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models are commonly expressed in terms of the strain invariants (${J}_1$, ${J}_2$, ${J}_3$).
+%
+% In this work, the Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. The Yeoh model is a popular constitutive model due to its unique dependency on the first invariant $J_1 = \text{tr}(\boldsymbol{C})$. The strain energy function of the Yeoh model \cite{Kim2018} is given by
+% \begin{equation}
+% {\Psi} = \sum_{i = 1}^{3} c_i (J_1 - 3)^i,
+% \end{equation}
+% where $c_1 > 0$ and $c_2$, $c_3$ are material constants (J/m$^3$). The second Piola-Kirchoff stress of a constitutive material can be calculated by differentiating the strain energy function with respect to the Lagrangian strain tensor \cite{Renaud2011,Kim2018}
+% \begin{equation}
+% \boldsymbol{S} = \frac{\p {\Psi}}{\p \boldsymbol{E}} = 2\frac{\p {\Psi}}{\p \boldsymbol{C}},
+% \label{eq:piola}
+% \end{equation}
+% which is a symmetric second-order tensor that is the energy conjugate to the Lagrangian strain. Suppose that the external forces acting on the boundary of the material domain $\mathcal{B}_0$ can be represented by the vector $\boldsymbol{f}$. Then, in case of a (quasi)-static equilibrium, the residual between the internal force of the continuum solids and the external forces can be written as
+% \begin{equation}
+% \boldsymbol{R(\boldsymbol{x})} = \int_{\mathcal{B}_0} \boldsymbol{B}(\boldsymbol{x})^\tr \{\boldsymbol{S}\}  \; dV -\boldsymbol{f} = 0, \label{eq:residual}
+% \end{equation}
+% where the first right-hand term represents a volume integral over the undeformed domain $\mathcal{B}_0$. Given the context of finite elements, this represents a set of nonlinear equalities with unknown nodal displacements $\boldsymbol{x}$. The solutions to these (highly) nonlinear equations can be found through numerical methods, like the Newton-Raphson method.
