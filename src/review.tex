@@ -1,5 +1,5 @@
+%!TEX root = ../thesis.tex
 \newif\ifistoreview
-
 \istoreviewtrue
 
 \newcommand{\setreviewson}{\istoreviewtrue}
@@ -9,7 +9,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{todonotes}
 
-\definecolor{aoenglish}{rgb}{0.0,0.5,0.0}
+\definecolor{aoenglish}{rgb}{0.95,0.9,1}
 
 \newcommand{\alertColor}{\textcolor{red}}
 \newcommand{\removeColor}{\textcolor{red}}
@@ -25,3 +25,4 @@
 \newcommand{\highlight}[1]{\hl{#1}}
 
 \newcommand{\commentary}[2]{\highlight{#1}\todo[inline]{#2}}
+\sethlcolor{aoenglish}

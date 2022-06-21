@@ -1,5 +1,6 @@
 %!TEX root = ../thesis.tex
 %\usepackage{amsmath}
+\usepackage{adjustbox}
 \usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -21,8 +22,11 @@
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage[numbers,sort&compress]{natbib}
+%\usepackage[sort&compress]{natbib}
 \usepackage[final]{pdfpages}
+\usepackage{lscape}
 \usepackage{relsize}
+\usepackage{rotating}
 \usepackage{subfig}
 \usepackage{siunitx}
 
@@ -31,18 +35,19 @@
 \usepackage{todonotes}
 %\usepackage{tikz}      % The tikz package is added in mrthesis.cls for producing thumbindex
 \usepackage{url}
-\usepackage{xcolor}
 \usepackage{textcomp}
 
 \usepackage[bookmarks=true,bookmarksopen=false,colorlinks=true,pdfpagelayout=TwoColumnRight]{hyperref}
 \hypersetup{
     colorlinks,%
-    citecolor=black,%
+    citecolor=deepcolor,%
     colorlinks=true,%
     filecolor=black,%
-    linkcolor=black,%
-    urlcolor=gray,
+    linkcolor=deepcolor,%
+    urlcolor=thumbcolor,
     }
 \usepackage{bookmark}
 
-\setlength{\mathindent}{1.75cm}
+%\setlength{\mathindent}{1.75cm}
+\setlength{\mathindent}{1.25cm}
+\renewcommand{\baselinestretch}{1.05}

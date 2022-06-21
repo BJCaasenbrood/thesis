@@ -1,18 +1,20 @@
 %%%% DOCUMENT CLASS ************************************************************
-%\documentclass[print,thumbmain]{src/thesis}  % uncomment for writing
-\documentclass[final]{src/thesis} % uncomment for rendering/final version
+\documentclass[print,thumbmain]{thesis}  % uncomment for writing
+%\documentclass[final]{src/thesis} % uncomment for rendering/final version
 
 %%%% PREAMBLE ******************************************************************
+\include{src/colors}
 \include{src/packages}
 \include{src/commands}
 \include{src/mathematics}
+\include{src/vectors}
+\include{src/lemma}
 \include{src/review}
 \include{src/tikz}
-\graphicspath{{img/}{../img/}{../../img/}{../../../img/}}
+\graphicspath{{img/}{3_chapters/2_chapter/img/}{../../img/}{../../../img/}}
 
-%%%% DOCUMENT COLORS  **********************************************************
-\definecolor{titlecolor}{RGB}{60,90,124}    % color of titles
-\definecolor{thumbcolor}{RGB}{60,90,124}    % color of thumb index tags
+%\usepackage{showframe}
+\setreviewsoff
 
 %%%% DOCUMENT DETAILS **********************************************************
 \author{Brandon Jonathan Caasenbrood}
@@ -20,9 +22,9 @@
 \renewcommand{\year}{2022}
 \newcommand{\defensedate}{maandag 30 december 2022}
 \newcommand{\defensetime}{16:00}
-\newcommand{\maintitle}{Design and Control Strategies \\ for Soft Robotic Systems}
+\newcommand{\maintitle}{Design, Modeling, and Control \\[0.35em] Strategies for Soft Robots}
 \newcommand{\subtitle}{}
-\newcommand{\isbn}{123-45-678-9012-3}     % 123-45-678-9012-3
+\newcommand{\isbn}{123-45-678-9012-3}     % 123boldmath-45-678-9012-3
 \newcommand{\printer}{Name of printer || www.printerswebsite.nl}
 \newcommand{\rector}{prof.dr.ir. F.P.T. Baaijens}
 % other relevant meta data about the thesis can be found in preface.tex
@@ -38,64 +40,76 @@
 %\cover{thesis_front.pdf}    % Adds your thesis' front cover if the option 'print' is NOT used. Printing companies require the thesis cover to be supplied separately and in a different format. Definition of \cover{} is given in commands.tex.
 
 % Front matter
-\include{0_preface/preface}
+%\include{0_preface/preface}
 \include{1_summary/abstract}
-\include{1_summary/samenvatting}
-\include{1_summary/societal_summary}
+%\include{1_summary/samenvatting}
+%\include{1_summary/societal_summary}
 
 %%%% NOMENCLATURE **************************************************************
 \cleardoublepage
 \pdfbookmark{\contentsname}{Contents}
 \tableofcontents
-
 \newpage
 \include{2_nomenclature/nomenclature}
 
 %%%% MAIN MATTERS *************************************************************
 % This state variable is used for creating the thumb index by indicating that
 % the following chapter is numbered (i.e. not \chapter*{})
-%\isstarredchapterfalse
+\isstarredchapterfalse
 \cleardoublepage
-\include{3_chapters/0_introduction/introduction}
-
+\thispagestyle{empty}
+\label{chap: intro}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+% *************************************************************
+%%%% Introduction
+%\part{Introduction}\label{part: intro}
+%\include{3_chapters/0_introduction/chapter}
+% *************************************************************
 %%%% Design
 \cleardoublepage
-\part{Design Optimization}\label{part: design}
-\include{3_chapters/1_chapter/chapter}
+%\part{Designing Soft Robots}\label{part: design}
+%\include{3_chapters/1_chapter/chapter}
 
-\cleardoublepage
+% *************************************************************
+%\cleardoublepage
 \part{Modeling of Soft Robots}\label{part: model}
+% PCC-modeling frame
 \include{3_chapters/2_chapter/chapter}
 
-%\part{Control and Sensing Strategies}\label{part: control}
-% \cleardoublepage
-% \part{Name of second part}\label{part: part2}
-% \include{3_chapters/1_introduction/}
-% %
-% \cleardoublepage
+% Cosserat-beam frame work
+%\include{3_chapters/3_chapter/chapter}
+
+% *************************************************************
+%\part{Sensing Strategies and Control}\label{part: control}
+
+% FEM-based geometric decomposition
+%\include{3_chapters/4_chapter/chapter}
+
+%\part{Conclusions and recommendations}\label{part: closing}
+% \include{chapters/Conclusions}
+% *************************************************************
+%\part{Closing}\label{part: closing}
 % \part{Conclusions and recommendations}\label{part: closing}
 % \include{chapters/Conclusions}
-
 %%%% APPENDIX ******************************************************************
-\appendix
-\cleardoublepage
+%\appendix
+%\cleardoublepage
 %\part{Appendices}
-\definecolor{thumbcolor}{gray}{0.4}     % Change the color of the thumb index tags to gray
+%\definecolor{thumbcolor}{gray}{0.4}     % Change the color of the thumb index tags to gray
 %\include{4_appendices/appendix}
-
-
 %%%% BACK MATTER ***************************************************************
 \isstarredchaptertrue           % This state variable is used for creating the thumb index by indicating that the following chapter is not numbered (i.e. \chapter*{})
 \bookmarksetup{startatroot}
 \addtocontents{toc}{\bigskip}%
-%\include{5_bibliography/bibliography}
+\include{5_bibliography/bibliography}
+%%%% BACK MATTER ***************************************************************
+%\newpage
 %\include{6_acknowledgement/acknowledgement}
-\include{7_publications/publications}
+%\include{7_publications/publications}
 %\include{8_cv/cv}
-
 %\newpage {~}
 \thispagestyle{empty}
-
 \ifprint{}
 \else
 \newpage {~}

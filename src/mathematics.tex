@@ -4,26 +4,28 @@
 \usepackage{mathtools}
 
 %%%%%%% ENTITIES %%%%%%%
-\renewcommand{\vec}[1]{\boldsymbol{#1}}
-\newcommand{\mat}[1]{\boldsymbol{#1}}
-\newcommand{\ten}[1]{\boldsymbol{\mathcal{#1}}}
-
+\newcommand{\defas}[1]{\triangleq}
+\newcommand{\grad}[1]{\nabla_{\!#1}\,}
 \newcommand{\nn}{{n\times n}}
 
 \newcommand{\ie}{\textit{i.e.}}
 \newcommand{\eg}{\textit{e.g.}}
 \newcommand{\blank}{\,\cdot\,}
+
 % sets
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Se}[1]{{\text{se}(#1)}}
-\newcommand{\coSe}[1]{{\text{se}^*(#1)}}
-\newcommand{\So}[1]{{\text{so}(#1)}}
-\newcommand{\coSo}[1]{{\text{so}^*(#1)}}
-\newcommand{\SO}[1]{{\text{SO}(#1)}}
-\newcommand{\SE}[1]{{\text{SE}(#1)}}
+\newcommand{\seg}[1]{\textup{\textrm{se}}(#1)}
+\newcommand{\cose}[1]{\textup{\textrm{se}}^*(#1)}
+\newcommand{\sog}[1]{\textup{\textrm{so}}(#1)}
+\newcommand{\coso}[1]{\textup{\textrm{so}}^*(#1)}
+\newcommand{\SO}[1]{\textup{\textrm{SO}}(#1)}
+\newcommand{\SE}[1]{\textup{\textrm{SE}}(#1)}
+\newcommand{\Sim}[1]{\textup{\textrm{Sim}(#1)}}
+\newcommand{\atantwo}{\textup{\textrm{atan2}}}
+\newcommand{\erf}{\textup{\textrm{erf}}}
 \newcommand{\Id}{\text{id}}
 
 % compact sets
@@ -49,8 +51,11 @@
 \newcommand{\g}{\mathfrak{g}}
 \newcommand{\Vf}{\mathcal{V}}
 \newcommand{\Tf}{\mathcal{T}}
+\newcommand{\Kf}{\mathcal{K}}
+\newcommand{\Lf}{\mathcal{L}}
 
 \newcommand{\p}{\partial}
+\newcommand{\dt}{\Delta t}
 
 \renewcommand{\d}{^{\raisebox{.2ex}{$\scriptscriptstyle d$}}}
 \newcommand{\T}{^{\raisebox{.2ex}{$\scriptscriptstyle\top$}}}
@@ -58,31 +63,66 @@
 \newcommand{\pinv}{^{\raisebox{.2ex}{$\scriptscriptstyle\dagger$}}}
 \newcommand{\ginv}{^{\raisebox{.2ex}{$\scriptscriptstyle+$}}}
 \newcommand{\pinvt}{^{\raisebox{.2ex}{$\scriptscriptstyle+\top$}}}
+%\newcommand{\grav}{^{\raisebox{.1ex}{$\scriptstyle\textrm{g}$}}}
+%\newcommand{\elastic}{^{\raisebox{.1ex}{$\scriptstyle\textrm{e}$}}}
+\newcommand{\grav}{_{\scriptstyle\textrm{g}}}
+\newcommand{\elastic}{_{\scriptstyle\textrm{e}}}
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \renewcommand{\dim}{\text{dim}}
 \newcommand{\trace}{\text{trace}}
+\newcommand{\diag}[1]{\textnormal{diag}\left\{ {#1} \right\}}
+\newcommand{\blkdiag}[1]{\textnormal{blkdiag}\left\{ {#1} \right\}}
 
 \newcommand{\Q}{\mathcal{Q}}
-\newcommand{\Qnc}{\boldsymbol{Q}^{\text{nc}}}
-\newcommand{\q}{{\boldsymbol{q}}}
-\newcommand{\dq}{{\dot{\boldsymbol{q}}}}
-\newcommand{\ddq}{{\ddot{\boldsymbol{q}}}}
-\newcommand{\pB}{{\boldsymbol{\gamma}}}
+\newcommand{\Qnc}{\vec{Q}^{\textrm{nc}}}
+\newcommand{\q}{{\vec{q}}}
+\newcommand{\dq}{{\dot{\vec{q}}}}
+\newcommand{\ddq}{{\ddot{\vec{q}}}}
+%\newcommand{\pB}{{\boldsymbol{\gamma}}}
 \newcommand{\dpB}{{\dot{\boldsymbol{\gamma}}}}
 \newcommand{\ddpB}{{\ddot{\boldsymbol{\gamma}}}}
-\newcommand{\PhiB}{{\boldsymbol{\Phi}}}
-\newcommand{\ThetaB}{{\boldsymbol{\theta}}}
-\newcommand{\MB}{\boldsymbol{M}}
-\newcommand{\CB}{\boldsymbol{C}}
-\newcommand{\NB}{\boldsymbol{N}}
-\newcommand{\GB}{\boldsymbol{G}}
 
-\newcommand{\ad}{\text{ad}}
-\newcommand{\Ad}{\text{Ad}}
+%\newcommand{\MB}{\boldsymbol{M}}
+%\newcommand{\CB}{\boldsymbol{C}}
+%\newcommand{\NB}{\boldsymbol{N}}
+%\newcommand{\GB}{\boldsymbol{G}}
+%\renewcommand{\fB}{\boldsymbol{f}}
+%\newcommand{\JB}{\boldsymbol{J}}
+\newcommand{\dJB}{\dot{\boldsymbol{J}}}
+
+\newcommand{\ad}{\textbf{ad}}
+\newcommand{\Ad}{\textbf{Ad}}
 \newcommand{\rank}{\textnormal{rank}}
 \newcommand{\col}{\textnormal{col}}
 \newcommand{\row}{\textnormal{row}}
 \newcommand{\nc}{\textnormal{nc}}
+
+%\newcommand{\gB}{\boldsymbol{g}}
+%\newcommand{\UB}{\boldsymbol{U}}
+%\newcommand{\LambdaB}{\boldsymbol{\Lambda}}
+%\newcommand{\GammaB}{\boldsymbol{\Gamma}}
+%\newcommand{\gammaB}{\boldsymbol{\gamma}}
+%\newcommand{\KappaB}{\boldsymbol{\Kappa}}
+%\newcommand{\phiB}{\boldsymbol{\phi}}
+%\newcommand{\sB}{\boldsymbol{\sigma}}
+%\renewcommand{\pB}{\boldsymbol{p}}
+%\newcommand{\dB}{\boldsymbol{d}}
+\newcommand{\ddB}{\dot{\boldsymbol{d}}}
+%\newcommand{\FB}{\boldsymbol{F}}
+\newcommand{\dFB}{\dot{\boldsymbol{F}}}
+%\newcommand{\xB}{\boldsymbol{x}}
+\newcommand{\dxB}{\dot{\boldsymbol{x}}}
+\newcommand{\ddxB}{\ddot{\boldsymbol{x}}}
+%\newcommand{\nuB}{\boldsymbol{\nu}}
+%\newcommand{\JB}{\boldsymbol{J}}
+%\newcommand{\dJB}{\dot{\boldsymbol{J}}}
+%\newcommand{\VB}{\boldsymbol{V}}
+
+%\newcommand{\trace}[1]{\textnormal{trace}\left( {#1} \right)}
+\renewcommand{\det}[1]{\textnormal{det}\left( {#1} \right)}
+\newcommand{\inner}[2]{ \langle {#1}, {#2} \rangle}
+\newcommand{\subto}{\;\textrm{s.t.}\;}
+\newcommand{\config}[1]{{#1}^\circ}

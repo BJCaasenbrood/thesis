@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: 1_summary/abstract.aux
+A level-1 auxiliary file: 2_nomenclature/nomenclature.aux
+A level-1 auxiliary file: 3_chapters/2_chapter/chapter.aux
+A level-1 auxiliary file: 5_bibliography/bibliography.aux
+The style file: ieeetr.bst
+Database file #1: 5_bibliography/MyBib.bib
+Warning--I'm ignoring Duriez2013's extra "publisher" field
+--line 232 of file 5_bibliography/MyBib.bib
+Warning--I didn't find a database entry for "Santina2021"
+Warning--empty booktitle in Duriez2013
+Warning--empty booktitle in SorotokiCode
+Warning--empty journal in DellaSantina2021
+Warning--empty publisher in Murray1994
+Warning--empty school in Chirikjian1992
+You've used 52 entries,
+            1876 wiz_defined-function locations,
+            834 strings with 15009 characters,
+and the built_in function-call counts, 16972 in all, are:
+= -- 1737
+> -- 684
+< -- 0
++ -- 247
+- -- 195
+* -- 1269
+:= -- 2337
+add.period$ -- 58
+call.type$ -- 52
+change.case$ -- 46
+chr.to.int$ -- 0
+cite$ -- 57
+duplicate$ -- 826
+empty$ -- 1489
+format.name$ -- 195
+if$ -- 4117
+int.to.chr$ -- 0
+int.to.str$ -- 52
+missing$ -- 56
+newline$ -- 165
+num.names$ -- 52
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 646
+stack$ -- 0
+substring$ -- 1401
+swap$ -- 399
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 176
+width$ -- 54
+write$ -- 526
+(There were 7 warnings)

@@ -10,7 +10,7 @@ Args:
 
 Author:
     Jonas Gröger <jonas.groeger@gmail.com> | Thanks Jonas :)
-    
+
 Edits: 10 March - Added .fls/.synctex.gz/.fdb_latexmk
 """
 
@@ -24,7 +24,7 @@ import os
 
 def delete_recursive(path, extensions, quiet=False):
     """
-    Recusively (in subdirectories also) removes files in path whose extension matches one of 
+    Recusively (in subdirectories also) removes files in path whose extension matches one of
     those in the parameter extensions.
 
     Args:
@@ -71,7 +71,7 @@ if __name__ == '__main__':
         '.brf',
         '.idx',
         '.ilg',
-        '.fdb_latexmk',        
+        '.fdb_latexmk',
         '.fls',
         '.lof',
         '.log',
