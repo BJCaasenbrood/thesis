@@ -32,14 +32,14 @@ where $E_0$ is the Young's modulus or elasticity modulus and $\nu_0$ is a dimens
 
 In order to invoke the constitutive material law \eqref{eq:C2:mat_model} for three-dimensional solids, we explore the finite element method. We generated a finite element mesh of the soft robot manipulator in Figure \ref{fig:C2:soft_robot}. The finite element analysis has been carried out in \texttt{Abaqus/CEA} with variable time increments. Given preliminary uni-axial tension tests, the 3D-printed elastomer material is estimated to be linear isotropic described by the following Lam\'{e} parameters: $E_0  = 80 \; \si{\mega \pascal}$, $\nu_0 = 0.4 \; (\text{-})$. The Lam\'{e} parameters can be computed according to \eqref{eq:C2:lame_coeff}. Furthermore, tangential (frictionless) contact interaction is included in the numerical simulation to prevent self-intersection of the elastic body.
 
-Two finite element simulations are performed to {independently characterize the elongation and bending stiffness of the soft robot. Due to simplicity, we start with the elongation stiffness}. Each embedded bellow is actuated simultaneously up to a quasi-static differential pressure $-20$ kPa $\le u_1(t) = u_2(t) = u_3(t) \le 30$ kPa. Due to the symmetry of soft actuators, the resulting deformation will be exclusively in axial-direction. The corresponding elongation strain of the soft robot can then be found by recovering the maximum vertical displacement of the nodal mesh, i.e., $\varepsilon = L\inv\max \left( {U}_z \right)$. Secondly, the analysis of the bending stiffness is conducted by actuating a single bellow up to a quasi-static differential pressure $-30$ kPa $\le u_1(t) \le  80$ kPa, while $u_2(t) = u_3(t) = 0$ kPa. To recover the bending angle of the elastic body, certain spatial coordinates of nodes close to the end effector are tracked. Given their global coordinates, a constraint nonlinear optimization \texttt{fmincon.m} is used to recover optimal Bishop parameters $\kappa$ and $\varepsilon
+Two finite element simulations are performed to {independently characterize the elongation and bending stiffness of the soft robot. Due to simplicity, we start with the elongation stiffness}. Each embedded bellow is actuated simultaneously up to a quasi-static differential pressure $-20$ kPa $\le u_1(t) = u_2(t) = u_3(t) \le 30$ kPa. Due to the symmetry of soft actuators, the resulting deformation will be exclusively in axial-direction. The corresponding elongation strain of the soft robot can then be found by recovering the maximum vertical displacement of the nodal mesh, \ie, $\varepsilon = L\inv\max \left( {U}_z \right)$. Secondly, the analysis of the bending stiffness is conducted by actuating a single bellow up to a quasi-static differential pressure $-30$ kPa $\le u_1(t) \le  80$ kPa, while $u_2(t) = u_3(t) = 0$ kPa. To recover the bending angle of the elastic body, certain spatial coordinates of nodes close to the end effector are tracked. Given their global coordinates, a constraint nonlinear optimization \texttt{fmincon.m} is used to recover optimal Bishop parameters $\kappa$ and $\varepsilon
 $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2:pos_exact}.
 %
 \begin{figure}[!t]
- %\vspace{-3mm}
+ %\vspace{-3mm} 
   \centering
   \input{./3_chapters/2_chapter/img/fig_C2_fembend.tex} \\[1em]
-  \input{./3_chapters/2_chapter/img/fig_C2_fembend2.tex}
+  %\input{./3_chapters/2_chapter/img/fig_C2_fembend.tex}
   \vspace{-0.2cm}
   \caption{Highly-resolution finite element simulations of the soft robot manipulator \data{lightgreen} subjected to various input pressures $-20 \,\si{\kilo \pascal} \le \uB_i(t) \le 80 \,\si{\kilo \pascal}$. To validate the PCC condition, an optimal backbone curve $\gammaB(\q^\star)$ is shown \data{magenta} whose joint coordinates are recovered by solving the optimization problem \eqref{eq:C2:optimization_problem}.}
   \vspace{-0.1cm}
@@ -59,11 +59,14 @@ $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2
 \end{figure}
 %
 \begin{align}
-\q^\star & = \underset{\q}{\textrm{argmin}}\;  \left \lVert \log_{\SE{3}}\left[ \gB\inv(L,\q)\,\gB_L^{\textrm{FEM}}(\vec{u}) \right] \right \rVert_2,
+\begin{array}{ll}
+\q^\star = & \!\!\underset{\q}{\textrm{argmin}}\; \left \lVert \log_{\SE{3}}\left[ \gB\inv(L,\q)\,\gB_L^{\textrm{FEM}}(\vec{u}) \right] \right \rVert_2,\\
+& \!\!\textrm{s.t.} \quad \q \in \mathcal{Q} 
+\end{array}
 \label{eq:C2:optimization_problem}
 \end{align}
 %
-where $\gB_L^{\textrm{FEM}}$ is simply the corresponding end-effector configuration derived from the high-resolution finite element simulation given the input $\uB$. To some extent, \eqref{eq:C2:optimization_problem} can be viewed as an inverse kinematics optimization problem.
+where $\gB_L^{\textrm{FEM}}$ is simply the corresponding end-effector configuration derived from the high-resolution finite element simulation given the quasi-static input $\uB$. To some extent, the problem \eqref{eq:C2:optimization_problem} can be viewed as an inverse kinematics optimization problem subject to the desired end-effector configuration.
 \vfill
 
 \begin{rmk} Although straightforward for constant curvature soft-links, the approach could be easily extended to non-constant curvature and multi-link cases. However, an additional term $\Uf^\star = \tfrac{1}{2} \q^\top\mat{K}\q$ with some positive definite matrix $\mat{K} \succ 0 $ is required to ensure the nonlinear regression inhibits over-fitting.
@@ -123,11 +126,11 @@ where $m$ is the number of bellows, and $\phi = \text{atan2}(\kappa_y,\kappa_x)$
 \end{asm}
 
 \begin{figure}[!t]
- \vspace{-3mm}
+ \vspace{-5mm}
   \centering
   \input{./3_chapters/2_chapter/img/fig_C2_stiffness.tex}
   \vspace{-0.25cm}
-  \caption{Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right), for an radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in (-\pi,\pi]$. Note that the bending stiffness }
+  \caption{Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right) for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity $\phi = k\tfrac{2\pi}{3}$.}
   \vspace{-0.1cm}
   \label{fig:C2:stiffness_model}
 \end{figure}
@@ -151,7 +154,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 \vec{\delta}_c({\vec{\lambda}}) = \mat{K}_{\lambda}^\top \vec{\lambda},
 \end{equation}
 %
-\noindent where $\mat{K}_\lambda$ denotes the creep compliance matrix, which is a linear mapping from creep strains to creep forces. Since creeping strain are difficult, if not impossible, to distinguish from the elastic strains, the creeping parameters $\vec{\alpha}_\lambda$ and the creep compliance $\mat{K}_\lambda$ are empirically identified from experimental data (e.g., unforced oscillations) by using least-squares regressions. The estimated visco-elastic parameters are also found in Table \ref{tab:C2:elastic_parameters}. The linear damping parameters from the Rayleigh dampings matrix $\mat{R}$ and the initial conditions for $\vec{\lambda}(t_0)$ are identified similarly.
+\noindent where $\mat{K}_\lambda \succ 0$ denotes the creep compliance matrix, which is a linear mapping from creep strains to creep forces. Since creeping strain are difficult, if not impossible, to distinguish from the elastic strains, the creeping parameters $\vec{\alpha}_\lambda$ and the creep compliance $\mat{K}_\lambda$ are empirically identified from experimental data (\eg, unforced oscillations) by using least-squares regressions. The estimated visco-elastic parameters are also found in Table \ref{tab:C2:elastic_parameters}. The linear damping parameters from the Rayleigh dampings matrix $\mat{R}$ and the initial conditions for $\vec{\lambda}(t_0)$ are identified similarly.
 
 \begin{example}[Kelvin-Voigt creep dynamics] To highlight the dynamics of elastomer materials exhibiting creep, let us consider an rudimentary illustrative example of a 1-DOF mass-spring-damper system with a Kelvin-Voigt creep element. Let $\xB = (x_1,\,x_2,\,x_3)^\top = (\varepsilon,\, \dot{\varepsilon},\, \lambda)^\top$ be the state vector composed of the elongation strain, elongation rate, and the creep strain, respectively. Then, the dynamics can be written in the familiar state space form as follows:
 %
@@ -162,16 +165,16 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 \end{align}
 %
 where $m,k,c>0$  the mass, spring, damper coefficients; respectively, $k_{\lambda}>0$ the creep stiffness, $\alpha_{\lambda}>0$ the creep parameters, and $u: \Ts \to \R$ an auxiliary input (\ie, prescribed force). The following parameters are consider for this illustrative example: $m = 0.1$ \si{\kilo \gram}, $k = 10$ Nm$\inv$, $c = 0.1$ Nsm$\inv$,
-$k_{\lambda} = \alpha_{\lambda,1} = 2$, and $\alpha_{\lambda,2} = 5$. By choosing a smooth block signal as input $u(t)$, we obtained the simulation results as shown in Figure \ref{fig:C2:creep}. Note that the simulation result presents an unmodified Hookean model \data{Matlab1}, \ie, $k_\lambda = 0$, and the Kelvin-Voight variant \data{Matlab2}.
+$k_{\lambda} = \alpha_{\lambda,1} = 2$, and $\alpha_{\lambda,2} = 5$. By choosing a smooth block signal as input $u(t)$, we obtained the simulation results as shown in Figure \ref{fig:C2:creep}. Note that the simulation result presents an unmodified Hookean model \data{Matlab1} in which $k_\lambda = 0$, and the Kelvin-Voigt variant \data{Matlab2}.
 
-Clearly, we see a difference between the two trajectories. The original Hookean model oscillates around the quasi-static equilibrium, whereas the Kelvin-Voight variant slowly converges to the setpoint. Note that this is clearly different than over-damped response, as the Kelvin-Voight model does allow for oscillations. %Intuitively, visco-elastic creep can be seen as a mechanical memory that resists changes in deformation.
+Clearly, we see a difference between the two trajectories. The original Hookean model oscillates around the quasi-static equilibrium, whereas the Kelvin-Voigt variant slowly converges to the setpoint. Note that this is clearly different than the traditional overdamped response, as the Kelvin-Voight model does allow for oscillations during the smooth transient. %Intuitively, visco-elastic creep can be seen as a mechanical memory that resists changes in deformation.
 %
 \begin{figure}[!h]
- \vspace{-1mm}
+ \vspace{-0mm}
   %\centering
   \input{./3_chapters/2_chapter/img/fig_C2_creep.tex}
   \vspace{-0.2cm}
-  \caption{Simulation study of introducing visco-elastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t)$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and visco-elastic Hookean model \data{Matlab2}. Also, the evolution of the visco-elastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
+  \caption{Simulation study of introducing visco-elastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t)$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and visco-elastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the visco-elastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
   \vspace{-0.1cm}
   \label{fig:C2:creep}
 \end{figure}

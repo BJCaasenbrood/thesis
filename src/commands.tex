@@ -1,6 +1,9 @@
 %!TEX root = ../thesis.tex
 
 % Texts or
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\blank}{\,\cdot\,}
 \renewcommand{\emph}[1]{'\textit{#1}'}
 \newcommand{\sorotoki}{\textup{\texttt{SOROTOKI}} }
 \newcommand{\matlab}{\textup{\texttt{MATLAB}} }
@@ -92,3 +95,10 @@
 \newcommand{\objective}[1]{\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] {\em #1} \end{tcolorbox}}
 \newcommand{\terminology}[2]{\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] {\textbf{Terminology: } \textbf{#1} \em #2} \end{tcolorbox}}
 \newcommand{\cover}[1]{\ifprint{}\else\includepdf[pages=-]{#1}\cleardoublepage\fi}
+
+\newcommand\tcircle[1]{%
+  \raisebox{-0.25pt}{%
+    \textcircled{\fontsize{8pt}{0}\selectfont #1}%
+  }%
+}
+

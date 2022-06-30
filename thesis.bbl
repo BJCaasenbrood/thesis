@@ -230,6 +230,10 @@ C.~{Della Santina}, C.~Duriez, and D.~Rus, ``{Model Based Control of Soft
   Robots: A Survey of the State of the Art and Open Challenges},'' pp.~1--69,
   2021.
 
+\bibitem{Russ2022}
+R.~Tedrake, ``Underactuated robotics --algorithms for walking, running,
+  swimming, flying, and manipulation.'' Course Notes for MIT 6.832, 2022.
+
 \bibitem{Bishop1975}
 R.~L. Bishop, ``{There is More than One Way to Frame a Curve},'' {\em Am. Math.
   Mon.}, vol.~82, pp.~246--251, Mar. 1975.

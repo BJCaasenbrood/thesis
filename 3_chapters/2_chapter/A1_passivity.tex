@@ -1,0 +1,93 @@
+%!TEX root = ../../thesis.tex
+\noindent Given the position vector $\gammaB \in \R^3$ and the homogeneous rotation matrix $\PhiB \in \SO{3}$, the adjoint action of the homogeneous transformation $\mat{g} = (\gammaB,\,\PhiB) \in \SE{3}$ is then defined as
+%
+\begin{equation}
+\renewcommand*{\arraystretch}{2}{}
+\Ad_{\vec{g}(\sigma,\q)} := \begin{pmatrix}
+\; {\PhiB}(\sigma,\q) & \vec{0}_{3\times3} \; \\
+[\hspace{0.5mm} \gammaB^{\times}(\sigma,{\q})\,{\PhiB}({\q},\sigma) & {\PhiB}(\sigma,{\q})
+\end{pmatrix}. 
+\label{eq:C2:adjoint_matrix}
+\end{equation}
+%
+Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \SO{3}$ see Murray et al. (1994, \cite{Murray1994}). In continuation, given the velocity twist $\etaB(\sigma,\q,\dq) = (\vec{\omega}^\top,\,\vec{v}^\top)^\top \in \R^6 \cong \seg{3}$, being the aggregate of $\vec{\omega}$ and $\vec{v}$, the angular and linear velocities, respectively. Then, the adjoint action on the algebra $\seg{3}$ is defined as
+%
+\begin{equation}
+\renewcommand*{\arraystretch}{2}{}
+\ad_{\etaB(\sigma,\q,\dq)} := \begin{pmatrix}
+\; \vB^{\times}(\sigma,\q,\dq) & \vec{0}_{3\times3} \; \\
+ \vec{\omega}^{\times}(\sigma,\q,\dq) & \vB^{\times} (\sigma,\q,\dq)
+\end{pmatrix}. 
+\label{eq:C2:adjoint_matrix_algebra}
+\end{equation}
+%
+
+\noindent These adjoint representation on the group $\SE{3}$ and its algebra $\seg{3}$ are analogous to the conventional notations in modern robotics mathematics, such as the work of Murray et al. (1994, \cite{Murray1994}).
+
+%Please note that the superscript $^\sigma (\cdot)$ implies the vector is viewed from an inertial frame at the material coordinate $\sigma$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Passivity condition}
+% \noindent To show $\dot{\vec{M}} - 2\mat{C}$ is skew-symmetric in the chosen coordinates, we start by computing the time-derivative of the inertia matrix. For sake of clarity, lets abbreviate $\JB(\sigma,\q) = \JB$ and $\dJB(\sigma,\q,\dq) = \dJB$. Through chain differentiation of the inertia matrix, we find
+% %
+% \begin{equation}
+% \dot{\vec{M}} = \int_\Xs \dot{\JB}^\top \ten{M} \JB + J^\top \ten{M} \dJB \; d \sigma,
+% \end{equation}
+% %
+% Then, calculating $\dot{M} - 2C$ leads to
+% %
+% \begin{align}
+% \dot{\mat{M}} - 2\vec{C} & = \int_\Xs \dJB^\top \ten{M} \JB - \JB^\top \ten{M}\dJB - 2\JB^\top \!\ten{C}_{\etaB} \, \JB \; d\sigma.
+% \end{align}
+% %
+% Since $\JB^\top \ten{C} \JB$ is skew-symmetric, the remainder of the proof consists of showing that the matrix $S = \dot{J}^\top \ten{M} J - J^\top \ten{M} \dot{J}$ also satisfies skew-symmetry. Since $\ten{M} = \ten{M}^\top$, we can easily show this holds true:
+% %
+% \begin{align}
+% \SB & = \dJB^\top \ten{M}^\top \JB - \JB^\top \ten{M}^\top \dJB, \notag \\
+%  & = -\left(\dJB^\top \ten{M}^\top \JB - \JB^\top \ten{M} \dJB \right)^\top = -\SB^\top.
+% \end{align}
+% %
+% Therefore, the matrix $\dot{\vec{M}} - 2\vec{C}$ is skew-symmetric.
+
+
+\subsection{Implicit trapezoidal scheme for the time integration using an approximate Hessian}
+\label{app:C2:timeint}
+\noindent Here, we detail an numerical approach to efficiently find the solutions to the approximated dynamic model $\MB(\q)\ddq + \CB(\q,\dq)\dq + \fB\elastic(\q,\dq) +  \fB\grav(\q,\dq) = \tauB$. We would like to emphasize that the control input $\tauB(\cdot,t)$ could be state-dependent if closed-loop controllers are considered; for instance, the proposed passivity-based controller in \eqref{eq:C2:tau}. First, let us consider a new state vector defined as $\vec{z} := ( \q^\top,\dq^\top )^\top$ such that we can rewrite the Lagrangian model in state-space form:
+%
+\begin{equation}
+\dot{\zB} = \vec{f}(\zB,t),
+\end{equation}
+%
+where $\vec{f}(\cdot,\cdot)$ is a nonlinear vector-valued function given by
+%
+\begin{equation}
+\vec{f}(\zB,t) = \begin{pmatrix} \dq \\ \mat{M}\inv [\tauB - \CB\dq - \fB\elastic- \fB\grav] \end{pmatrix}.
+\end{equation}
+%
+The objective here is to compute the solutions to the system above over the finite horizon $\mathbb{T} = [0,T]$ efficiently such that real-time control applications are possible. To do so, we consider an implicit trapezoidal scheme which is given by
+%
+\begin{equation}
+\zB_{i+1} = \zB_{i} + \frac{\Delta t}{2} \left( \fB(\zB_{i},t_{i}) + \fB(\zB_{i+1},t_{i+1}),  \right)
+\end{equation}
+%
+where $\zB_{i}$ is the state solution at time instance $t_{i}$, and $\Delta t = t_{i+1} - t_{i}$ the timestep. The advantage of implicit schemes over explicit ones is the improved numerical stability for coarser temporal discretization at the mere cost of numerical precision. Let is be clear that evaluating nonlinear vector function $\fB(\cdot,\cdot)$ is numerically expensive, as it requires the computation of $\tmat{M}$, $\tmat{C}$ and $\tvec{\fB}\grav$. Therefore, it is advantageous to minimize its calls by using coarser timesteps while retaining stability using an implicit scheme. By fixing $\zB_{i}$ and aiming to seek the intermediate state solutions $\vec{w}:=\vec{z}_{i+1}$, we can define the residual dynamics on the time interval $[t_{i}, t_{i+1}]$ as
+%
+\begin{align}
+\eB(\wB) :=  \wB - \zB_{i} - \frac{\Delta t}{2} \left( \fB_i + \fB_{i+1}(\wB)  \right).
+\end{align}
+%
+By aiming to find the root of the residual dynamics $e(w) = 0$ and choosing $\wB_{0} = \zB_{i}$ as initial guess, we can employ an iterative Newton-Raphson procedure:
+%
+\begin{align}
+\wB_{j+1} & = \zB_i  - \alpha^+ \left[\grad{\wB}\eB(\wB_j)\right]\inv \eB(\wB_{j}),
+\end{align}
+%
+where $j$ is the iteration index for finding the intermediate state solution $\wB=\zB_{i+1}$, and $0 < \alpha^+ \le 1$ a constant for controlling the update step. Once the residual dynamics converges on the sub-interval, i.e., $||\eB(\wB)||_2 \ll 1$, we repeat the procedure above until the solutions to $\zB(t)$ are recovered for the finite time horizon $\mathbb{T}$. Now the key here is that the Hessian $\HB(\wB) = \grad{\wB} \eB$ does not necessarily have to exact -- an approximation can suffice for numerical convergence, albeit requiring more iterations. Therefore, let us consider the first Taylor approximation of the Hessian:
+%
+\begin{align}
+    \HB(\wB) & \cong \tmat{H}(\wB) \\ & := \mat{I}_{2n } - \frac{\Delta t}{2} \begin{pmatrix} 0 & \mat{I}_{n}  \\
+ -\mat{M} \inv \tmat{K} & -\MB\inv \tmat{D}
+  \end{pmatrix}
+\end{align}
+%\fB\elastic- \fB\grav
+where the matrices $\tmat{K} = \grad{\q}\fB\elastic + \grad{\q}\fB\grav + \grad{\q}\tauB$ and $\tmat{D} = \CB + \grad{\dq}\fB\elastic + \grad{\dq}\tauB$ are a-priori approximations of the Hessians w.r.t. $\q$ and $\dq$, respectively. Please note that the Jacobians $\grad{\q}\tauB$ and $\grad{\dq}\tauB$ can be nonzero, especially in a closed-loop control setting. To approximate these partial derivatives of the control input, we employ a finite-difference scheme. Again, the Hessian does not need to be exact, as such an a-priori computation of the controller Jacobians can be preformed before the start of the implicit solver.

@@ -3,7 +3,8 @@
 
 %% DEEP PURPLE
 %\definecolor{thumbcolor}{RGB}{200,200,200}
-\definecolor{thumbcolor}{RGB}{185,175,230}
+%\definecolor{thumbcolor}{RGB}{185,175,230}
+\definecolor{thumbcolor}{RGB}{148,140,235}
 \definecolor{deepcolor}{RGB}{70,25,200}
 \definecolor{titlecolor}{RGB}{120,80,235}
 
@@ -26,6 +27,20 @@
 \definecolor{Matlab2}{RGB}{202,30,4}
 \definecolor{Matlab3}{RGB}{52,167,63}
 \definecolor{Matlab4}{RGB}{238,112,35}
+\definecolor{Matlab5}{RGB}{126,37,131}
+\definecolor{Matlab6}{RGB}{249,171,21}
+\definecolor{Matlab7}{RGB}{62,46,134}
+\definecolor{Matlab8}{RGB}{182,209,36}
+\definecolor{Matlab9}{RGB}{95,42,132}
+
+
+
+
+
+ 
+% 230    73    40
+% 255   241     0
+%   0   157   126
 
 % \definecolor{Matlab1}{RGB}{0,114,189}
 % \definecolor{Matlab2}{RGB}{217,83,25}
@@ -42,3 +57,11 @@
 \definecolor{magenta}{RGB}{255,20,120}
 \definecolor{lightgreen}{RGB}{120,194,22}
 \definecolor{lightgrey}{RGB}{180,180,180}
+
+
+\usepackage{xcolor}
+
+\newcommand*{\cbox}[1]{%
+    \fboxsep=3pt%
+    \fcolorbox{thumbcolor!15}{thumbcolor!15}{#1}%
+}

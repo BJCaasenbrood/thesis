@@ -1,9 +1,9 @@
 %!TEX root = ../../thesis.tex
 %%%% CHAPTER 1 *****************************************************************
-\chapter[Dynamic modeling of Soft Robots -- PCC case]{Dynamic modeling -- The  Constant Strain Approach}
+\chapter[Dynamic modeling of Soft Robots -- PCC case]{Dynamic Modeling -- The  Constant Strain Approach}
 \label{chap: chapter 1}
 
-\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Control-oriented Models for Hyper-elastic Soft Robots through Differential Geometry of Curves.} Soft Robotics, 2022}. \disclaimer}
+\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Control-oriented Models for Hyper-elastic Soft Robots through Differential Geometry of Curves.} Soft Robotics, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. \disclaimer}
 
 %%%% ABSTRACT ******************************************************************
 \input{3_chapters/2_chapter/0_abstract.tex}
@@ -23,7 +23,7 @@
 \input{3_chapters/2_chapter/4_multilink.tex}
 
 \clearpage
-\section{Accelerated computation of PDE-like systems using Lagrangian formulism}
+\section[Accelerated computation of PDE-like systems]{Accelerated computation of PDE-like systems using Maxtrix Differentials solvers}
 \label{sec: chap2 section header}
 \input{3_chapters/2_chapter/5_solver.tex}
 
@@ -42,8 +42,14 @@
 \label{sec: chap2 section header}
 \input{3_chapters/2_chapter/8_results.tex}
 
-\section{Summary}
+\section{Concluding remarks}
 \input{3_chapters/2_chapter/9_conclusion.tex}
-
+% 
+\begin{subappendices}
+\section{Supplementary material}
+\subsection{Adjoint actions on $\SE{3}$ and $\seg{3}$} 
+\label{app:C2:adjoint}   
+\input{3_chapters/2_chapter/A1_passivity.tex}
+\end{subappendices}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

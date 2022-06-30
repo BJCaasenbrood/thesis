@@ -4,8 +4,128 @@
 
 \begin{axis}[%
 width=0.712\textwidth,
-height=0.169\textwidth,
-at={(0.11\textwidth,0\textwidth)},
+height=0.174\textwidth,
+at={(0.11\textwidth,0.002\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xlabel style={font=\color{white!15!black}},
+xlabel={time (s)},
+ymin=0,
+ymax=1,
+ylabel style={font=\color{white!15!black}},
+ylabel={-},
+axis line style={draw=none},
+ticks=none,
+xmajorgrids,
+ymajorgrids,
+ylabel style={yshift=-7.5pt}
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.158\textwidth,
+height=0.191\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.5,1},
+xticklabels={\empty},
+ymin=0,
+ymax=1,
+ytick={0,0.5,1},
+yticklabels={\empty},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+ylabel style={yshift=-7.5pt}
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.158\textwidth,
+height=0.191\textwidth,
+at={(0.186\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.5,1},
+xticklabels={\empty},
+ymin=0,
+ymax=1,
+ytick={0,0.5,1},
+yticklabels={\empty},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+ylabel style={yshift=-7.5pt}
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.158\textwidth,
+height=0.191\textwidth,
+at={(0.371\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.5,1},
+xticklabels={\empty},
+ymin=0,
+ymax=1,
+ytick={0,0.5,1},
+yticklabels={\empty},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+ylabel style={yshift=-7.5pt}
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.158\textwidth,
+height=0.191\textwidth,
+at={(0.557\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.5,1},
+xticklabels={\empty},
+ymin=0,
+ymax=1,
+ytick={0,0.5,1},
+yticklabels={\empty},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+ylabel style={yshift=-7.5pt}
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.158\textwidth,
+height=0.174\textwidth,
+at={(0.742\textwidth,0.008\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=396.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=366.5,
+axis line style={draw=none},
+ticks=none,
+ylabel style={yshift=-7.5pt}
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=366.5] {fig_C2_fembend2-1.png};
+\end{axis}
+
+\begin{axis}[%
+width=0.918\textwidth,
+height=0.214\textwidth,
+at={(-0.009\textwidth,-0.021\textwidth)},
 scale only axis,
 xmin=0,
 xmax=1,
@@ -15,102 +135,7 @@ axis line style={draw=none},
 ticks=none,
 axis x line*=bottom,
 axis y line*=left,
-colorbar style={width=6,xshift=-7.5pt}
+ylabel style={yshift=-7.5pt}
 ]
-\end{axis}
-
-\begin{axis}[%
-width=0.158\textwidth,
-height=0.142\textwidth,
-at={(0\textwidth,0.016\textwidth)},
-scale only axis,
-axis on top,
-xmin=0.5,
-xmax=396.5,
-tick align=outside,
-y dir=reverse,
-ymin=0.5,
-ymax=366.5,
-axis line style={draw=none},
-ticks=none,
-colorbar style={width=6,xshift=-7.5pt}
-]
-\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=366.5] {fig_C2_fembend2-1.png};
-\end{axis}
-
-\begin{axis}[%
-width=0.158\textwidth,
-height=0.142\textwidth,
-at={(0.186\textwidth,0.016\textwidth)},
-scale only axis,
-axis on top,
-xmin=0.5,
-xmax=396.5,
-tick align=outside,
-y dir=reverse,
-ymin=0.5,
-ymax=366.5,
-axis line style={draw=none},
-ticks=none,
-colorbar style={width=6,xshift=-7.5pt}
-]
-\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=366.5] {fig_C2_fembend2-2.png};
-\end{axis}
-
-\begin{axis}[%
-width=0.158\textwidth,
-height=0.142\textwidth,
-at={(0.371\textwidth,0.016\textwidth)},
-scale only axis,
-axis on top,
-xmin=0.5,
-xmax=396.5,
-tick align=outside,
-y dir=reverse,
-ymin=0.5,
-ymax=366.5,
-axis line style={draw=none},
-ticks=none,
-colorbar style={width=6,xshift=-7.5pt}
-]
-\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=366.5] {fig_C2_fembend2-3.png};
-\end{axis}
-
-\begin{axis}[%
-width=0.158\textwidth,
-height=0.142\textwidth,
-at={(0.557\textwidth,0.016\textwidth)},
-scale only axis,
-axis on top,
-xmin=0.5,
-xmax=396.5,
-tick align=outside,
-y dir=reverse,
-ymin=0.5,
-ymax=366.5,
-axis line style={draw=none},
-ticks=none,
-colorbar style={width=6,xshift=-7.5pt}
-]
-\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=366.5] {fig_C2_fembend2-4.png};
-\end{axis}
-
-\begin{axis}[%
-width=0.158\textwidth,
-height=0.15\textwidth,
-at={(0.742\textwidth,0.012\textwidth)},
-scale only axis,
-axis on top,
-xmin=0.5,
-xmax=396.5,
-tick align=outside,
-y dir=reverse,
-ymin=0.5,
-ymax=388.5,
-axis line style={draw=none},
-ticks=none,
-colorbar style={width=6,xshift=-7.5pt}
-]
-\addplot [forget plot] graphics [xmin=0.5, xmax=396.5, ymin=0.5, ymax=388.5] {fig_C2_fembend2-5.png};
 \end{axis}
 \end{tikzpicture}%

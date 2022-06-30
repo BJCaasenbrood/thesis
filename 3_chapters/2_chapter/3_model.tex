@@ -1,5 +1,5 @@
 %!TEX root = ../../thesis.tex
-As mentioned previously, soft robots are composed of soft bodies that may be regarded as a continuum body with (theoretically) infinitely many degrees-of-freedom (DOF). In this section, we aim to derive a compact and computationally efficient model that envelops the continuous dynamics of a soft robot through a small set of generalized coordinates $\q\in\Q$ and their respective generalized velocities $\dq\in T_{\q}\Q$ with $n$ the number of active joint variables. We base {the modeling framework on the work of Mochiyama et al. (2003, \cite{Mochiyama2003}) who outlined a theoretical foundation for continuum manipulators. Their work is extended upon by including extensibility, serial-chaining of multiple soft-links, pneumatic actuation, and the introduction of nonlinear and time-dependent material behavior. Earlier modeling strategies addressing similar issues can be found in from Godage et al. (2016, \cite{Godage2015,Godage2016}), Della Santina et al.  (2020, \cite{DellaSantina2020,DellaSantina2020a,DellaSantina2021}), Renda et al.
+As mentioned previously, soft robots are composed of soft bodies that may be regarded as a continuum body with (theoretically) infinitely many degrees of freedom (DOF). In this section, we aim to derive a compact and computationally efficient model that envelops the continuous dynamics of a soft robot through a small set of generalized coordinates $\q\in\Q$ and their respective generalized velocities $\dq\in T_{\q}\Q$ with $n$ the number of active joint variables. We base the modeling framework on the work of Mochiyama et al. (2003, \cite{Mochiyama2003}), who outlined a theoretical foundation for continuum manipulators. Their work is extended upon by including extensibility, serial-chaining of multiple soft links, pneumatic actuation, and the introduction of nonlinear and time-dependent material behavior. Earlier modeling strategies addressing similar issues can be found in from Godage et al. (2016, \cite{Godage2015,Godage2016}), Della Santina et al. (2020, \cite{DellaSantina2020,DellaSantina2020a,DellaSantina2021}), Renda et al.
 (2018, \cite{Renda2018}), and Boyer et al. (2021, \cite{Boyer2021}). Leveraging from the aforementioned works, the continuous dynamics of a soft robot manipulator can be written in the familiar Lagrangian form:
 %
 \begin{align}
@@ -8,9 +8,7 @@ As mentioned previously, soft robots are composed of soft bodies that may be reg
 \label{eq:C2:input_model0}
 \end{align}
 %
-where $\MB(\q)  \in \R^\nn$ denotes the generalized inertia matrix, $\vec{h}(\q,\dq) \in \R^n$ a vector of nonlinear state-dependent force contributions. The nonlinear state-dependent contributions possess a structures as follows
-$\vec{h}(\q,\dq) = \vec{C}(\q,\dq)\dq + \vec{f}^{\textrm{e}}(\q) + \vec{f}^{\textrm{g}} (\q)$.
-%
+where $\MB(\q) \in \R^\nn$ denotes the generalized inertia matrix, $\vec{h}(\q,\dq) \in \R^n$ a vector of nonlinear state-dependent force contributions. The nonlinear state-dependent contributions possess a structures as follows: $\vec{h}(\q,\dq) = \vec{C}(\q,\dq)\dq + \vec{f}(\q,\dq)$ of Coriolis forces and visco-elastic terms, respectively.
 
 \begin{asm}[Finiteness generalized inertia]
 The inertia matrix is a positive definite symmetric matrix that is bounded from both sides $\lambda^{-} \preceq \mat{M}(\q) \preceq \lambda^{+}$ for all configurations $\q$.
@@ -27,17 +25,15 @@ E^{\textrm{u}} := \int_0^T \dq^\top(\tau) \uB(\tau) \;d\tau > -\beta \quad \fora
 \end{asm}
 
 \begin{asm}[Under-actuation]
-In many cases, a soft robot that falls under the category hyper-redundant is also intrinsically under-actuated. Mathematically, under-actuation is defined as follows. A second-order system $\ddot{\q} = \vec{f}(\q,\dot{\q},\vec{u},t)$ is fully-actuated if, for any time $t$ and state $(\q,\dot{\q})$, the flow map $\vec{f}$ is surjective. In laymen's terms, for any acceleration $\ddot{\q}$ there is exists a unique input $\vec{u}$ that produces such response. Otherwise, the system is under-actuated. Given the control affine structure in \eqref{eq:C2:input_model0}, the system is under-actuated if exist configurations $\q \in \Q$
+In many cases, a soft robot that falls under the category hyper-redundant is also intrinsically under-actuated. Mathematically, under-actuation is defined as follows \cite{Russ2022}. A second-order system $\ddot{\q} = \fB(\q,\dq,\uB,t)$ is fully-actuated if, for any time $t$ and state $(\q,\dq)$, the flow map $\fB$ is surjective. In laymen's terms, for any acceleration $\ddot{\q}$ there is exists a unique input $\vec{u}$ that produces such response. Otherwise, the system is under-actuated. Given the control affine structure in \eqref{eq:C2:input_model0}, the system is under-actuated if exist configurations $\q \in \Q$
 such that $\rank \left( \vec{G}(\q) \right) < \dim(\q)$.
-Let it be clear that fully-actuated systems are dramatically easier to control than underactuated systems. However, for sake of simplicity at this stage, we assume the actuation matrix to be full rank and time-invariant, \ie, $\vec{G}(\q) \equiv \vec{G}$. Under-actuation will be treated in Chapter \ref{chap: chapter 3}.
+Let it be clear that fully-actuated systems are dramatically easier to control than underactuated systems. However, for the sake of simplicity at this stage, we assume the actuation matrix to be full rank and time-invariant, \ie, $\vec{G}(\q) \equiv \vec{G}$. Under-actuation will be treated further in Chapter 4 and will not be considered in Chapter 3.
 \end{asm}
 
-%
-In this chapter, a similar modeling framework is adopted to \cite{Mochiyama2003}; however, we propose an extension to incorporate FEM-driven data to more accurately reflect the underlying continuum mechanics -- in particular hyper-elasticity. We also propose a numerical scheme that significantly accelerates the computation of the continuous dynamics.
+In this chapter, a similar modeling framework is adopted to \cite{Mochiyama2003}; however, we propose an extension to incorporate FEM-driven data to more accurately reflect the underlying continuum mechanics -- in particular, hyper-elasticity and visco-elastic creep. We also propose a numerical scheme that significantly accelerates the computation of the continuous dynamics.
 
 \subsection{Curve kinematics}
-\noindent To represent the hyper-flexible configuration of the soft robot, let us consider a smooth spatial curve that passes through the geometric center of the continuously deformable body, as shown in Figure \ref{fig:C2:configuration}. {In literature, this curve is called} the '\textit{backbone curve}' as it simplifies the three-dimensional deformation imposed by distributed forces acting on the elastic body. The arc-length of the backbone corresponds to the extensible length of the soft robot denoted by the variable $l(t)$ which we assume bounded ${l}_{-}\le l \le {l}_{+}$, and let $L$ be a constant denoting the {total unstressed} length of the soft robot. Next, let us introduce a spatial variable $\sigma \in \Xs$ that belongs to the one-dimensional material domain of the backbone curve, i.e., $\Xs = [0,\, L]$. Let it be clear that the spatial variable $\sigma$
-represents the arc-length of a material coordinate along with the undeformed material domain of the soft robot manipulator.
+\noindent To represent the hyper-flexible configuration of the soft robot, let us consider a smooth spatial curve that passes through the geometric center of the continuously deformable body, as shown in Figure \ref{fig:C2:configuration}. {In literature, this curve is called} the '\textit{backbone curve}' as it simplifies the three-dimensional deformation imposed by distributed forces acting on the elastic body. The arc-length of the backbone corresponds to the extensible length of the soft robot denoted by the variable $l(t)$ which we assume bounded ${l}_{-}\le l \le {l}_{+}$, and let $L$ be a constant denoting the {total unstressed} length of the soft robot. Next, let us introduce a spatial variable $\sigma \in \Xs$ that belongs to the one-dimensional material domain of the backbone curve, i.e., $\Xs = [0,\, L]$. Let it be clear that the spatial variable $\sigma$ represents the arc-length of a material coordinate along with the undeformed material domain of the soft robot manipulator.
 
 Given each material coordinate, we wish to find a suitable low-dimensional joint representation $\q(t)$ such that the position vector $^0\gammaB$ anywhere on the continuous backbone can be written as a mapping from generalized coordinates and space into Euclidean space $\R^3$:
 %
@@ -51,7 +47,7 @@ and similarly the rotation matrix $^0\mat{\Phi}(\sigma,\vec{q})$ by a mapping fr
 ^0\PhiB: \Xs \times \Q(\Ts) \to \SO{3}, \label{eq:phi_map}
 \end{equation}
 %
-where {$\SO{3}$ denotes the special orthogonal group for rotations about the origin of $\R^3$}, $n = \dim(\vec{q})$ the state dimension, and the manifold $\Q$ is an embedding of temporal coordinates. We provided a more detail description on the rotation group $\SO{3}$ in \highlight{Appendix ??}. For sake of brevity, we drop the superscript that indicates the frame of reference, \ie, $^0\PhiB = \PhiB$ and $^0\gammaB = \gammaB$. Under this notion, the position vectors $^0\gammaB(0,\q)$ and
+where {$\SO{3}$ denotes the special orthogonal group for rotations about the origin of $\R^3$}, $n = \dim(\vec{q})$ the state dimension, and the manifold $\Q$ is an embedding of temporal coordinates $t \in [0,T]$. We provided a more detail description on the rotation group $\SO{3}$ in Appendix \ref{app:C2:adjoint}. For sake of brevity, we drop the superscript that indicates the frame of reference, \ie, $^0\PhiB = \PhiB$ and $^0\gammaB = \gammaB$. Under this notion, the position vectors $^0\gammaB(0,\q)$ and
 $^0\gammaB(L,\q)$ relate to the base and the end-effector of the soft robot, respectively. {Please note that left-sided superscript are used to indicate the frame of reference.} The set of all points on the backbone
 $\vec{\mathcal{C}} = \left\{\gammaB \in \R^3\, |\, \sigma \in \Xs \right\}$ draws a possible {spatial} configuration of the soft robot given {a time instance $t \in \mathbb{T}$ on a finite horizon $\mathbb{T} = [0,T]$}.
 %
@@ -59,12 +55,12 @@ $\vec{\mathcal{C}} = \left\{\gammaB \in \R^3\, |\, \sigma \in \Xs \right\}$ draw
   \vspace{-0.6mm}
   \centering
    \includegraphics[width = 0.99\textwidth]{fig_C2_schematic.pdf}
-  \caption{Schematic representation of the Piece-wise Constant Curvature model (PCC) for general soft robotic system, given by a parameterized curve $^0 \gammaB: \Xs \times \Ts \to \R^3$ and orientation matrix $^0 \PhiB: \Xs \times \Ts \to \SO{3}$. The frame $\{\sigma\}$ is rigidly attached to $^0 \gammaB$ such that variation of $\sigma$ give insight into the differential geoemetry of the curve.}
+  \caption{Schematic representation of the Piece-wise Constant Curvature model (PCC) for general soft robotic system, given by a parameterized curve $^0 \gammaB: \Xs \times \Ts \to \R^3$ and orientation matrix $^0 \PhiB: \Xs \times \Ts \to \SO{3}$. The frame $\{\sigma\}$ is rigidly attached to $^0 \gammaB$ such that variation of $\sigma$ give insight into the differential geometry of the curve.}
   \label{fig:C2:configuration}
 \end{figure}
 %
 \begin{dfn}[Piece-wise Constant Curvature]
-Despite the inherent flexibility in soft robotics, it is sometimes sufficient to express the kinematics according to the Piecewise Constant Curvature (PCC or CC) condition. Mathematically, it implies that the curvature of the continuous body satisfies $\kappa(\sigma_1,\q) = \kappa(\sigma_2,\q)$ for a neighboring region of points $\sigma_1,\sigma_2 \subseteq \Xs$. As a result, this condition allows us to describe the full forward kinematics with a significantly reduced set of generalized coordinates, mitigating kinematic complexity in the model. Numerous works employ PCC models \cite{Falkenhahn2015,Katzschmann2019,Tatlicioglu2007,Marchese2016,Godage2016,DellaSantina2020a}, and depending on the elasticity, the PCC condition has been proven to be consistent for various soft robotic systems.
+Despite the inherent flexibility in soft robotics, it is sometimes sufficient to express the kinematics according to the \emph{Piecewise Constant Curvature} (PCC) condition. Mathematically, it implies that the curvature of the continuous body satisfies $\kappa(\sigma_1,\q) = \kappa(\sigma_2,\q)$ for a neighboring region of points $\sigma_1,\sigma_2 \subseteq \Xs$. As a result, this condition allows us to describe the full forward kinematics with a significantly reduced set of generalized coordinates, mitigating kinematic complexity in the model. Numerous works employ PCC models \cite{Falkenhahn2015,Katzschmann2019,Tatlicioglu2007,Marchese2016,Godage2016,DellaSantina2020a}, and depending on the elasticity, the PCC condition has been proven to be consistent for various soft robotic systems.
 \end{dfn}
 %
 {Following this Constant Curvature (CC) description, let us assign a coordinate frame that twists minimally along the backbone -- formally called the \emph{Bishop frame} (see, \cite{Bishop1975}) -- parametrized by the following generalized coordinate vector:}
@@ -76,8 +72,8 @@ Despite the inherent flexibility in soft robotics, it is sometimes sufficient to
 \label{eq:C2:coordinate}
 \end{equation}
 %
-\noindent where $\varepsilon_{-} \le \varepsilon \le \varepsilon_{+}$ is the elongation strain}, and $\kappa_x,\,\kappa_y\in\mathbb{R}$ are the curvatures or angular strains in $x$-$z$ and $y$-$z$ plane, respectively; and
-$\mathcal{Q} \subset \R^3$ is an admissible space on which $\q$ evolves. Also, we denote the total curvature by $\kappa = \inner{\kappa_x}{\kappa_y}$ together with the curvature angle $\phi = \atantwo(\kappa_y,\kappa_x)$. It is worth mentioning that the joint description above is somewhat related to Renda. et al. (2018, \cite{Renda2018}) who proposed a Piece-wise Constant Strain (PCS) parametrization with the exception of including the twist along the tangent.
+\noindent where $\varepsilon_{-} \le \varepsilon \le \varepsilon_{+}$ is the elongation strain, and $\kappa_x,\,\kappa_y\in\mathbb{R}$ are the curvatures or angular strains in $x$-$z$ and $y$-$z$ plane, respectively; and
+$\mathcal{Q} \subset \R^3$ is an admissible space on which $\q$ evolves. Also, we denote the total curvature by $\kappa = \inner{\kappa_x}{\kappa_y}$ together with the curvature angle $\phi = \atantwo(\kappa_y,\kappa_x)$. It is worth mentioning that the joint description above is somewhat related to Renda. et al. (2018, \cite{Renda2018}) who proposed a \emph{Piece-wise Constant Strain} (PCS) parametrization with the exception of including the twist along the tangent.
 
 By exploring the differential geometry of the smooth backbone curve similar to Mochiyama et al. (2003, \cite{Mochiyama2003}), we can write the position vector $\gammaB(\sigma,\q)$ and the orientation matrix $\PhiB(\sigma,\q)$ for each material point $\sigma$ along the smooth backbone as a differential equality of the form:
 %
@@ -88,7 +84,7 @@ By exploring the differential geometry of the smooth backbone curve similar to M
 \frac{\partial \, \gammaB}{\partial \sigma}(\sigma,\q) & = \, \mat{\Phi}(\sigma,\vec{q}) \, \vec{U}(\sigma,\q), \label{eq:C2:change_p}
 \end{align}
 %
-where $\vec{\Gamma}^\times \in \SO{3}$ is a skew-symmetric matrix composed of the entries of the vector $\vec{\Gamma} \in \R^3$, and $\vec{U}\in \R^3$ a vector representing the tangent along the extensible backbone. For readers familiar with the Lie group theory, the operator $[\cdot]^\times$ represents the isomorphism between the Lie algebra $\sog{3}$ and $\R^3$. The vectors $\vec{\Gamma}$ and $\vec{U}$ are vectors that define the differential geometry of the backbone
+where $\vec{\Gamma}^\times \in \SO{3}$ is a skew-symmetric matrix composed of the entries of the vector $\vec{\Gamma} \in \R^3$, and $\vec{U}\in \R^3$ a vector representing the tangent along the extensible backbone. For readers familiar with Lie Groups, the operator $(\,\cdot\,)^\times$ denotes the isomorphism between the Lie algebra $\sog{3}$ and $\R^3$. The vectors $\vec{\Gamma}$ and $\vec{U}$ are vectors that define the differential geometry of the backbone
 \cite{Mochiyama2003} which are unique entries that live in the tangent space of the rigid-body transformation group, \ie, $T_{\SE{3}}$. Given the Bishop parametrization as described by \eqref{eq:C2:coordinate} and assuming the Constant-Strain (CC) condition, these geometric entities yield
 %
 \begin{align}
@@ -98,8 +94,7 @@ where $\vec{\Gamma}^\times \in \SO{3}$ is a skew-symmetric matrix composed of th
 \end{align}
 %
 %with $\vec{U}^\circ$ the unit-tangent pointing, and $\vec{\Gamma}^\circ$ the intrinsic curvature/torsion of the curve. For simplicity, lets assume $\vec{U}^\circ = (0,0,1)^\top$ and $\vec{\Gamma}^\circ = \vec{0}_3$.
-Now, given an initial configuration of backbone's base, i.e.,
-$\mat{\Phi}(0,\vec{q}) = \vec{\Phi}_0$ and $ \gammaB(0,\q) = \vec{0}_3$, we can now solve for the position and orientation for each material coordinate $\sigma$ along the backbone:
+Now, given an initial configuration of backbone's base, \ie,$\mat{\Phi}(0,\vec{q}) = \vec{\Phi}_0$ and $ \gammaB(0,\q) = \vec{0}_3$, we can now solve for the position and orientation for each material coordinate $\sigma$ along the backbone:
 %
 \begin{align}
 \mat{\Phi}(\sigma,\vec{q}) & = \vec{\Phi}_0\exp_{\SO{3}}(\sigma \vec{\Gamma}^\times(\vec{q})), \label{eq:C2:phi_exact} \\[0.35em]
@@ -107,7 +102,7 @@ $\mat{\Phi}(0,\vec{q}) = \vec{\Phi}_0$ and $ \gammaB(0,\q) = \vec{0}_3$, we can 
 \label{eq:C2:pos_exact}
 \end{align}
 %
-where $\exp_{\SO{3}}: \sog{3} \to \SO{3}$ is the exponential map. Luckily, there exist a compact expression for the exponential mapping related to the orthogonal group of rotation matrices $\SO{3}$ called the \emph{Rodriguez formulas}. Given the rotation angle $\theta(\sigma,\q) := \kappa(\q) \sigma$, we can compactly rewrite the rotation matrix \eqref{eq:C2:phi_exact} in terms of $\cos(\theta)$ and $\sin(\theta)$ using the Rodriguez formulas as follows (see \cite{Lynch2017}):
+where $\exp_{\SO{3}}: \sog{3} \to \SO{3}$ is the exponential map. Luckily, there exist a compact expression for the exponential mapping related to the orthogonal group of rotation matrices $\SO{3}$ called the \emph{Rodriguez formulas}. Given the rotation angle $\theta(\sigma,\q) := \int_0^\sigma \kappa(s,\q) \; ds = \kappa(\q) \sigma$, we can compactly rewrite the rotation matrix \eqref{eq:C2:phi_exact} in terms of $\cos(\theta)$ and $\sin(\theta)$ using these formulas as follows \cite{Lynch2017}:
 %
 \begin{equation}
 \PhiB(\theta) = \PhiB_0 \left( \mat{I}_3 + \left[ \frac{\sin(\theta)}{\theta} \right]  \GammaB^{\times} + \left[ \frac{1-\cos(\theta)}{\theta^2} \right]  \GammaB^{\times} \GammaB^{\times} \right).
@@ -123,7 +118,7 @@ $\etaB(\sigma,\q,\dq) = \left( \vec{\omega}^\top, \vec{v}^\top \right)^\top \in 
  \,=:\, \JB(\q,\sigma) \dq, \label{eq:C2:vel_cont}
 \end{align}
 %
-where $\Ad_g: \SE{3} \to \mathbb{R}^{6\times 6}$ denotes the adjoint transformation matrix regarding the rigid body transformation $\gB \in \SE{3}$ that maps local velocities (i.e., twist) to a frame located at $\sigma$, and $\JB^\star:\Q \to T_{\q}\Q$ the joint-axis matrix that relates the DOFs to the geometric deformations. Let it be clear that the joint-axis matrix is naturally constant for a soft segment modeled with the Constant-Strain (CS) assumption. We will later relax this assumption in \highlight{Chapter ??}. Nevertheless here, the joint-axis matrix for an extensible and bendable CS segment parametrized by the Bishop parameters is given by
+where $\Ad_g: \SE{3} \to \mathbb{R}^{6\times 6}$ denotes the adjoint transformation matrix regarding the rigid body transformation $\gB \in \SE{3}$ that maps local velocities (i.e., twist) to a frame located at $\sigma$, and $\JB^\star:\Q \to T_{\q}\Q$ the joint-axis matrix that relates the DOFs to the geometric deformations. Let it be clear that the joint-axis matrix is naturally constant for a soft segment modeled with the Constant-Strain (CS) assumption. We will later relax this assumption in Chapter 4. Nevertheless here, the joint-axis matrix for an extensible and bendable CS segment parametrized by the Bishop parameters is given by
 %
 \begin{align}
 \renewcommand*{\arraystretch}{1}{}
@@ -146,7 +141,7 @@ In continuation, let us also introduce the acceleration twist \cite{Boyer2021,Mo
 \label{eq:C2:acceleration}
 \end{align}
 %
-where $\ad_{\etaB}: \R^{6} \to \R^{6\times 6}$ denotes the adjoint transformation regarding the velocity twist $\vec{\etaB}^\wedge \in \seg{3}$. The reader is referred to \highlight{Appendix ??} for more detailed expressions on the adjoint transformations.
+where $\ad_{\etaB}: \R^{6} \to \R^{6\times 6}$ denotes the adjoint transformation regarding the velocity twist $\vec{\etaB}^\wedge \in \seg{3}$. The reader is referred to Appendix \ref{app:C2:adjoint} for more detailed expressions on the adjoint transformations.
 %
 \begin{rmk}[Numerical instability near zero-curvature] In many of the PCC modeling literate there are mentions of a singularity point when the soft robot $\kappa \to 0$, stating that the linear velocities $\vec{v} := \floor{\etaB}_3$ are not well-defined and thus may be unbounded. However, this is perhaps a common misconception in literate is mainly caused by numerical instability. To illustrate, consider the inextensible planar case: $\varepsilon = \kappa_y = 0$ and $\kappa = \kappa_x$. Hence, by solving the forward kinematics for the position vector $\gammaB(\sigma,\kappa)$, and taking the approaching zero from the positive domain $\kappa^{+} \to 0$, we see that
 %
@@ -177,10 +172,9 @@ $\mathcal{Q}$, \ie, the numerical instability point for near-zero curvature..
 Then, by inject the reference into the kinematic relations described by the expressions \eqref{eq:C2:change_phi}, \eqref{eq:C2:change_p}, \eqref{eq:C2:vel_cont}, and \eqref{eq:C2:acceleration}, we obtain a (close) approximation of forward kinematics as shown in Figure
 \ref{fig:C2:EX1:strain_ref_FK}. Furthermore, we provided a 3D-rendering of the soft robot subjected to the reference $\q_d$ in Figure \ref{fig:C2:EX1:strain_ref_3D}. Now, two key observations can be made. First, although a simple harmonic trajectory is used, the resulting trajectory of the end-effector as shown in Figure \ref{fig:C2:EX1:strain_ref_FK} is rather complex. This perhaps stresses the importance of inverse kinematic solver that can be used for task-space control. Second, although we pass the point of numerical instability for
 $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at these instances. This result shows our approach does not suffer from the near-zero curvature instabilities that are notoriously mentioned in \cite{Falkenhahn2015,DellaSantina2020}, yet at the cost of providing an analytical expression.
-\end{example}
 
-\begin{figure}[!t]
-  \vspace{-5mm}
+\begin{figure}[!b]
+  %\vspace{-0mm}
   %\centering
   \input{./3_chapters/2_chapter/img/fig_C2_2.tex}
   \vspace{-3mm}
@@ -188,14 +182,15 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
   \label{fig:C2:EX1:strain_ref}
 \end{figure}
 
-\vfill
+\end{example}
 
+\afterpage{
 \begin{figure}[!t]
   \vspace{-3mm}
   %\centering
   \input{./3_chapters/2_chapter/img/fig_C2_3.tex}
   \vspace{-3mm}
-  \caption{The forward kinematics related to the prescribed reference $\q_d(t)$, where we show the planar displacements \data{deepcolor} and the linear velocities $\vec{v} = \floor{\etaB}_3 = (v_1,\,v_2,\,v_3)^\top$, shown as \data{Matlab1},\data{Matlab2},\data{Matlab3}, respectively.  A key observation here, is that our numerical approach prevents the common numerical instability for near-zero curvatures, \ie, $\kappa \to 0$, since the linear velocities are bounded and continuous even for $\kappa(\q) = 0$. }
+  \caption{The forward kinematics related to the prescribed reference $\q_d(t)$, where we show the planar displacements \data{deepcolor} and the linear velocities $\vec{v} = \floor{\etaB}_3 = (v_1,\,v_2,\,v_3)^\top$, shown as (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}),  respectively.  A key observation here, is that our numerical approach prevents the common numerical instability for near-zero curvatures, \ie, $\kappa \to 0$, since the linear velocities are bounded and continuous even for $\kappa(\q) = 0$. }
   \label{fig:C2:EX1:strain_ref_FK}
 \end{figure}
 %
@@ -204,14 +199,14 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
  \vspace{-3mm}
   \centering
   \input{./3_chapters/2_chapter/img/fig_plotrobot.tex}
-  %\includegraphics[width = 0.99\textwidth]{fig_1024x256.pdf}
-  \caption{Three-dimensional deformation of the three-bellow soft robot manipulator using the PCC model subjected to the prescribed reference $\q_d(t)$.}
+  \vspace{2mm}
+  \caption{Three-dimensional deformation of the three-bellow soft robot manipulator using the PCC model. Based on the prescribed reference $\q_d(t)$ (and its time-derivative), the forward kinematic relations for each point $\sigma$ along the backbone is computed and the volumetric mesh is deformed accordingly to its closest material-point on $\gammaB(\sigma)$.}
   \vspace{-0.1cm}
   \label{fig:C2:EX1:strain_ref_3D}
 \end{figure}
 %
-\vfill
 \clearpage
+}
 
 \subsection{Curve dynamics using Euler-Lagrange}
 \noindent Given the forward kinematics in \eqref{eq:C2:phi_exact}, \eqref{eq:C2:pos_exact}, \eqref{eq:C2:vel_cont} and \eqref{eq:C2:acceleration}, we can shift our attention to formulating the finite-dimensional dynamics of the soft robot. Our goal here is to write the spatio-temporal dynamics of the hyper-elastic soft robot as a second-order ODE into the Lagrangian form:
@@ -224,9 +219,9 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
 \frac{d}{d t}\left(\grad{\dq} \Lf \right) - \grad{\q} \Lf = \vec{Q}^{\nc}, \label{eq:C2:euler_largrange}
 \end{equation}
 %
-\noindent where the mathematical operator $\grad{\vec{x}} (\cdot) := \p(\cdot)^\top/\p \vec{x}$ denotes the gradient w.r.t. to a vector field $\xB$, $\La(\q,\dq)^\top := \Kf(\q,\dq) - \mathcal{U}(\q)$ the Lagrangian function, $\Kf \in \Rp$ and $\mathcal{U}\in \R$ the kinetic and potential energy, respectively; and
+\noindent where the mathematical operator $\grad{\vec{x}} (\cdot) := \p(\cdot)^\top/\p \vec{x}$ denotes the gradient w.r.t. to a vector field $\xB$, $\La(\q,\dq) := \Kf(\q,\dq) - \mathcal{U}(\q)$ the Lagrangian function, $\Kf \in \Rp$ and $\mathcal{U}\in \R$ the kinetic and potential energy, respectively; and
 $\vec{Q}^{\nc} \in \R^n$ a vector of generalized non-conservative forces. To apply the Lagrangian formalism to a continuum dynamical system, regard an infinitesimal slice of the continuum body for each material coordinate $\sigma$ along the backbone curve. Given this notion, we embody this infinitesimal slice with an inertia tensor $
-\ten{M} = \text{blkdiag}(\rho_0 \mat{I},\ten{J}_{\!0})$ with $\rho_0 = m/L$ the line-density and $\ten{J}_{\!0} \in \coso{3} \times \sog{3}$ a symmetric tensor related to the second moment of inertia of infinitesimal slice at $\sigma$.
+\ten{M} = \text{blkdiag}(\rho_0 \mat{I},\ten{J}_{\!0})$ with $\rho_0 = m_0/L$ the line-density and $\ten{J}_{\!0} \in \coso{3} \times \sog{3}$ a symmetric tensor related to the second moment of inertia of infinitesimal slice at $\sigma$.
 
 The kinetic energy can be obtained through spatial integration of its respective kinetic energy densities \cite{Boyer2010,Mochiyama2003,Tatlicioglu2007}, \ie,
 $\mathfrak{T} = \frac{1}{2}\etaB^\top \ten{M} \etaB
@@ -290,7 +285,7 @@ Given the context of manipulators, a possible disturbance $\vec{\delta}(t)$ coul
 %
 \begin{equation}
 \vec{\delta}_m = m_\delta \floor{\JB(\cdot,L)}_3^\top\left({\normalfont \Ad}_{\gB(\cdot,L)}\inv\gammaB_g + \floor{\dot{\etaB}(\cdot,L)}_3 \right),
-\label{eq:delta_payload}
+\label{eq:C2:delta_payload}
 \end{equation}
 %
 where $\floor{\cdot}_3$ extracts the last three rows of a matrix or vector, and $m_\delta > 0$ the applied mass to the end-effector. It is worth recalling that the acceleration twist can be computed through the geometric Jacobian and its time derivative, i.e., $\dot{\etaB} = \JB\ddq + \JB\dq$. Indeed, the PCC condition for a soft body can only accurately describe the true dynamics if external forces produced by mass $m_\delta$ do not excessively exceed the intrinsic elastic balancing forces $\vec{f}\!\elastic(\q)$. Alternatively, a soft body can be modeled using multiple PCC curves of smaller size, similar to standard Finite Element discretization.
