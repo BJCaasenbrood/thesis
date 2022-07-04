@@ -34,11 +34,14 @@ where $P_0 = 5$ \si{\kilo \pascal}, $P_a = 15$ \si{\kilo \pascal}, $\delta = \fr
 \begin{figure}[!h]
  \vspace{-3mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_srm_example.tex}
    \vspace{2mm}
-    \input{./3_chapters/2_chapter/img/fig_C2_srm_example_2.tex}
-     \vspace{-3mm}
-    \input{./3_chapters/2_chapter/img/fig_C2_srm_example_u.tex}
+  \input{./3_chapters/2_chapter/img/fig_C2_srm_example_2.tex}
+  \vspace{-3mm}
+  \input{./3_chapters/2_chapter/img/fig_C2_srm_example_u.tex}
+  \fi
   \caption{(top) Soft robot manipulator with three parallel embedded pneumatic bellows. This manipulator changes its pose by inflation or deflation of the parallel pneumatic channels (<0.1 \si{\mega \pascal}). (bottom) Differential pressure signals applied on the internal bellows structures given by the input vector $\uB = (u_1\,u_2,\,u_3)^\top$, shown by the trajectories (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}), respectively.}
   \vspace{-0.1cm}
   \label{fig:C2:soft_robot}

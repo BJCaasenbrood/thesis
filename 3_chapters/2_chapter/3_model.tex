@@ -32,7 +32,7 @@ Let it be clear that fully-actuated systems are dramatically easier to control t
 
 In this chapter, a similar modeling framework is adopted to \cite{Mochiyama2003}; however, we propose an extension to incorporate FEM-driven data to more accurately reflect the underlying continuum mechanics -- in particular, hyper-elasticity and visco-elastic creep. We also propose a numerical scheme that significantly accelerates the computation of the continuous dynamics.
 
-\subsection{Curve kinematics}
+\subsection{Piecewise curve kinematics}
 \noindent To represent the hyper-flexible configuration of the soft robot, let us consider a smooth spatial curve that passes through the geometric center of the continuously deformable body, as shown in Figure \ref{fig:C2:configuration}. {In literature, this curve is called} the '\textit{backbone curve}' as it simplifies the three-dimensional deformation imposed by distributed forces acting on the elastic body. The arc-length of the backbone corresponds to the extensible length of the soft robot denoted by the variable $l(t)$ which we assume bounded ${l}_{-}\le l \le {l}_{+}$, and let $L$ be a constant denoting the {total unstressed} length of the soft robot. Next, let us introduce a spatial variable $\sigma \in \Xs$ that belongs to the one-dimensional material domain of the backbone curve, i.e., $\Xs = [0,\, L]$. Let it be clear that the spatial variable $\sigma$ represents the arc-length of a material coordinate along with the undeformed material domain of the soft robot manipulator.
 
 Given each material coordinate, we wish to find a suitable low-dimensional joint representation $\q(t)$ such that the position vector $^0\gammaB$ anywhere on the continuous backbone can be written as a mapping from generalized coordinates and space into Euclidean space $\R^3$:
@@ -54,7 +54,10 @@ $\vec{\mathcal{C}} = \left\{\gammaB \in \R^3\, |\, \sigma \in \Xs \right\}$ draw
 \begin{figure}[!t]
   \vspace{-0.6mm}
   \centering
-   \includegraphics[width = 0.99\textwidth]{fig_C2_schematic.pdf}
+  \ifx\printFigures\undefined
+  \else
+  \includegraphics[width = 0.99\textwidth]{fig_C2_schematic.pdf}
+  \fi
   \caption{Schematic representation of the Piece-wise Constant Curvature model (PCC) for general soft robotic system, given by a parameterized curve $^0 \gammaB: \Xs \times \Ts \to \R^3$ and orientation matrix $^0 \PhiB: \Xs \times \Ts \to \SO{3}$. The frame $\{\sigma\}$ is rigidly attached to $^0 \gammaB$ such that variation of $\sigma$ give insight into the differential geometry of the curve.}
   \label{fig:C2:configuration}
 \end{figure}
@@ -176,7 +179,10 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
 \begin{figure}[!b]
   %\vspace{-0mm}
   %\centering
+  \ifx\printFigures1\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_2.tex}
+  \fi
   \vspace{-3mm}
   \caption{The time evolution of the predefined geometric strain parameters of the Piece-wise Constant curvature model $\q_d \to  (\varepsilon, \, \kappa_x,\,\kappa_y)^\top$ and their corresponding time-derivatives $\dq_d$ and $\ddq_d$, given by the (constant) elongation $\varepsilon$ \data{Matlab1}, and the (constant) curvatures $\kappa_x$ \data{Matlab2} and $\kappa_y$ \data{Matlab3}.}
   \label{fig:C2:EX1:strain_ref}
@@ -188,7 +194,10 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
 \begin{figure}[!t]
   \vspace{-3mm}
   %\centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_3.tex}
+  \fi
   \vspace{-3mm}
   \caption{The forward kinematics related to the prescribed reference $\q_d(t)$, where we show the planar displacements \data{deepcolor} and the linear velocities $\vec{v} = \floor{\etaB}_3 = (v_1,\,v_2,\,v_3)^\top$, shown as (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}),  respectively.  A key observation here, is that our numerical approach prevents the common numerical instability for near-zero curvatures, \ie, $\kappa \to 0$, since the linear velocities are bounded and continuous even for $\kappa(\q) = 0$. }
   \label{fig:C2:EX1:strain_ref_FK}
@@ -198,7 +207,10 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
 \begin{figure}[!t]
  \vspace{-3mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_plotrobot.tex}
+  \fi
   \vspace{2mm}
   \caption{Three-dimensional deformation of the three-bellow soft robot manipulator using the PCC model. Based on the prescribed reference $\q_d(t)$ (and its time-derivative), the forward kinematic relations for each point $\sigma$ along the backbone is computed and the volumetric mesh is deformed accordingly to its closest material-point on $\gammaB(\sigma)$.}
   \vspace{-0.1cm}
@@ -208,7 +220,7 @@ $\kappa \to 0$, we see that the velocity solutions are smooth and bounded at the
 \clearpage
 }
 
-\subsection{Curve dynamics using Euler-Lagrange}
+\subsection{Piecewise curve dynamics using Euler-Lagrange}
 \noindent Given the forward kinematics in \eqref{eq:C2:phi_exact}, \eqref{eq:C2:pos_exact}, \eqref{eq:C2:vel_cont} and \eqref{eq:C2:acceleration}, we can shift our attention to formulating the finite-dimensional dynamics of the soft robot. Our goal here is to write the spatio-temporal dynamics of the hyper-elastic soft robot as a second-order ODE into the Lagrangian form:
 %
 % \begin{equation}

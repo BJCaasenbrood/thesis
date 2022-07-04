@@ -1,62 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: 1_summary/abstract.aux
-A level-1 auxiliary file: 2_nomenclature/nomenclature.aux
-A level-1 auxiliary file: 3_chapters/0_introduction/chapter.aux
-A level-1 auxiliary file: 3_chapters/1_chapter/chapter.aux
-A level-1 auxiliary file: 3_chapters/2_chapter/chapter.aux
-A level-1 auxiliary file: 3_chapters/3_chapter/chapter.aux
-A level-1 auxiliary file: 5_bibliography/bibliography.aux
 The style file: ieeetr.bst
 Database file #1: 5_bibliography/MyBib.bib
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 244 of file 5_bibliography/MyBib.bib
-Warning--I didn't find a database entry for ""
+--line 265 of file 5_bibliography/MyBib.bib
 Warning--empty booktitle in Duriez2013
-Warning--empty booktitle in SorotokiCode
-Warning--empty journal in DellaSantina2021
 Warning--empty publisher in Murray1994
-Warning--empty school in Chirikjian1992
-You've used 53 entries,
+Warning--empty journal in DellaSantina2021
+Warning--empty booktitle in SorotokiCode
+You've used 30 entries,
             1876 wiz_defined-function locations,
-            841 strings with 15239 characters,
-and the built_in function-call counts, 17097 in all, are:
-= -- 1748
-> -- 688
+            684 strings with 9754 characters,
+and the built_in function-call counts, 9376 in all, are:
+= -- 954
+> -- 366
 < -- 0
-+ -- 249
-- -- 196
-* -- 1274
-:= -- 2355
-add.period$ -- 59
-call.type$ -- 53
-change.case$ -- 47
++ -- 133
+- -- 103
+* -- 691
+:= -- 1293
+add.period$ -- 33
+call.type$ -- 30
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 58
-duplicate$ -- 830
-empty$ -- 1507
-format.name$ -- 196
-if$ -- 4149
+cite$ -- 34
+duplicate$ -- 469
+empty$ -- 845
+format.name$ -- 103
+if$ -- 2281
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 56
-newline$ -- 168
-num.names$ -- 53
-pop$ -- 136
+int.to.str$ -- 30
+missing$ -- 33
+newline$ -- 96
+num.names$ -- 30
+pop$ -- 85
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 650
+skip$ -- 343
 stack$ -- 0
-substring$ -- 1401
-swap$ -- 399
+substring$ -- 750
+swap$ -- 215
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 177
-width$ -- 55
-write$ -- 534
-(There were 7 warnings)
+warning$ -- 4
+while$ -- 94
+width$ -- 32
+write$ -- 301
+(There were 5 warnings)

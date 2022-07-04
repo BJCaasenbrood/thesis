@@ -3,12 +3,14 @@
 \chapter[Dynamic modeling of Soft Robots -- PCC case]{Dynamic Modeling -- The  Constant Strain Approach}
 \label{chap: chapter 1}
 
-\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Control-oriented Models for Hyper-elastic Soft Robots through Differential Geometry of Curves.} Soft Robotics, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. \disclaimer}
+\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Control-oriented Models for Hyper-elastic Soft Robots through Differential Geometry of Curves.} Soft Robotics, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. \disclaimer  \;Original work is found at \cite{Caasenbrood2022}}
 
 %%%% ABSTRACT ******************************************************************
 \input{3_chapters/2_chapter/0_abstract.tex}
-
 %%%% MAIN **********************************************************************
+\ifx\printChapterOne\undefined
+\else
+
 \section{Introduction}
 \label{sec: chap1 1_introduction}
 \input{3_chapters/2_chapter/1_introduction.tex}
@@ -51,5 +53,6 @@
 \label{app:C2:adjoint}   
 \input{3_chapters/2_chapter/A1_passivity.tex}
 \end{subappendices}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

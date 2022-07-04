@@ -1,43 +1,15 @@
 \begin{thebibliography}{10}
 
-\bibitem{Falkenhahn2015}
-V.~Falkenhahn, T.~Mahl, A.~Hildebrandt, R.~Neumann, and O.~Sawodny, ``{Dynamic
-  Modeling of Bellows-Actuated Continuum Robots Using the Euler-Lagrange
-  Formalism},'' {\em IEEE Transactions on Robotics}, vol.~31, no.~6,
-  pp.~1483--1496, 2015.
+\bibitem{Caasenbrood2022}
+B.~Caasenbrood, A.~Pogromsky, and H.~Nijmeijer, ``{Control-Oriented Models for
+  Hyperelastic Soft Robots Through Differential Geometry of Curves},'' {\em
+  Soft Robotics}, vol.~0, no.~0, 2022.
 
-\bibitem{Suzumori1991}
-K.~Suzumori, S.~Iikura, and H.~Tanaka, ``{Development of flexible microactuator
-  and its applications to robotic mechanisms},'' in {\em {Proceedings. 1991
-  IEEE International Conference on Robotics and Automation}}, vol.~2,
-  pp.~1622--1627, 1991.
-
-\bibitem{Godage2015}
-I.~S. Godage and I.~D. Walker, ``{Dual Quaternion based modal kinematics for
-  multisection continuum arms},'' {\em Proceedings - IEEE International
-  Conference on Robotics and Automation}, vol.~2015-June, no.~June,
-  pp.~1416--1422, 2015.
-
-\bibitem{Godage2016}
-I.~S. Godage, G.~A. Medrano-Cerda, D.~T. Branson, E.~Guglielmino, and D.~G.
-  Caldwell, ``{Dynamics for variable length multisection continuum arms},''
-  {\em Int. J. Rob. Res.}, vol.~35, pp.~695--722, May 2016.
-
-\bibitem{Marchese2014}
-A.~D. Marchese, C.~D. Onal, and D.~Rus, ``{Autonomous Soft Robotic Fish Capable
-  of Escape Maneuvers Using Fluidic Elastomer Actuators},'' {\em Soft
-  Robotics}, vol.~1, no.~1, pp.~75--87, 2014.
-
-\bibitem{Kriegman2019}
-S.~Kriegman, D.~Blackiston, M.~Levin, and J.~Bongard, ``A scalable pipeline for
-  designing reconfigurable organisms,'' {\em Proceedings of the National
-  Academy of Sciences}, vol.~117, no.~4, pp.~1853--1859, 2020.
-
-\bibitem{Galloway2016}
-K.~C. Galloway, K.~P. Becker, B.~Phillips, J.~Kirby, S.~Licht, D.~Tchernov,
-  R.~J. Wood, and D.~F. Gruber, ``{Soft Robotic Grippers for Biological
-  Sampling on Deep Reefs},'' {\em Soft Robotics}, vol.~3, no.~1, pp.~23--33,
-  2016.
+\bibitem{Caasenbrood2021}
+B.~Caasenbrood, A.~Y. Pogromsky, and H.~Nijmeijer, ``Energy-based control for
+  soft manipulators using cosserat-beam models,'' in {\em International
+  Conference on Informatics in Control, Automation and Robotics - ICINCO},
+  pp.~311--319, 2021.
 
 \bibitem{Choi2011}
 W.~Choi, G.~M. Whitesides, M.~Wang, X.~Chen, R.~F. Shepherd, A.~D. Mazzeo,
@@ -45,56 +17,57 @@ W.~Choi, G.~M. Whitesides, M.~Wang, X.~Chen, R.~F. Shepherd, A.~D. Mazzeo,
   Proceedings of the National Academy of Sciences}, vol.~108, no.~51,
   pp.~20400--20403, 2011.
 
-\bibitem{Pilz2020}
-M.~{Pilz da Cunha}, S.~Ambergen, M.~G. Debije, E.~F. Homburg, J.~M. den
-  Toonder, and A.~P. Schenning, ``{A Soft Transporter Robot Fueled by Light},''
-  {\em Advanced Science}, vol.~7, no.~5, pp.~1--7, 2020.
+\bibitem{Falkenhahn2015}
+V.~Falkenhahn, T.~Mahl, A.~Hildebrandt, R.~Neumann, and O.~Sawodny, ``{Dynamic
+  Modeling of Bellows-Actuated Continuum Robots Using the Euler-Lagrange
+  Formalism},'' {\em IEEE Transactions on Robotics}, vol.~31, no.~6,
+  pp.~1483--1496, 2015.
 
-\bibitem{Polygerinos2015}
-P.~Polygerinos, Z.~Wang, K.~C. Galloway, R.~J. Wood, and C.~J. Walsh, ``{Soft
-  robotic glove for combined assistance and at-home rehabilitation},'' {\em
-  Robotics and Autonomous Systems}, vol.~73, pp.~135--143, 2015.
+\bibitem{Marchese2014}
+A.~D. Marchese, C.~D. Onal, and D.~Rus, ``{Autonomous Soft Robotic Fish Capable
+  of Escape Maneuvers Using Fluidic Elastomer Actuators},'' {\em Soft
+  Robotics}, vol.~1, no.~1, pp.~75--87, 2014.
 
-\bibitem{Li2017a}
-Z.~Li, L.~Wu, H.~Ren, and H.~Yu, ``{Kinematic comparison of surgical
-  tendon-driven manipulators and concentric tube manipulators},'' {\em
-  Mechanism and Machine Theory}, vol.~107, no.~September 2016, pp.~148--165,
-  2017.
+\bibitem{Duriez2013}
+C.~Duriez, ``{Control of elastic soft robots based on real-time finite element
+  method},'' pp.~3982--3987, Proceedings - IEEE International Conference on
+  Robotics and Automation, 2013.
 
-\bibitem{Cianchetti2014}
-M.~Cianchetti, T.~Ranzani, G.~Gerboni, T.~Nanayakkara, K.~Althoefer,
-  P.~Dasgupta, and A.~Menciassi, ``{Soft Robotics Technologies to Address
-  Shortcomings in Today's Minimally Invasive Surgery: The STIFF-FLOP
-  Approach},'' {\em Soft Robotics}, vol.~1, no.~2, pp.~122--131, 2014.
+\bibitem{Largilliere2015}
+F.~Largilliere, V.~Verona, E.~Coevoet, M.~Sanz-Lopez, J.~Dequidt, and
+  C.~Duriez, ``{Real-time control of soft-robots using asynchronous finite
+  element modeling},'' {\em Proceedings - IEEE International Conference on
+  Robotics and Automation}, vol.~2015-June, no.~June, pp.~2550--2555, 2015.
 
-\bibitem{Jones2006}
-B.~A. Jones and I.~D. Walker, ``{Kinematics for multisection continuum
-  robots},'' {\em IEEE Transaction on Robotics}, vol.~22, pp.~43--55, Feb.
-  2006.
+\bibitem{Wu2021}
+K.~Wu and G.~Zheng, ``{FEM-Based Gain-Scheduling Control of a Soft},'' {\em
+  Robotics and Automation Letters}, vol.~6, no.~2, pp.~3081--3088, 2021.
 
-\bibitem{Mochiyama1999}
-H.~Mochiyama, E.~Shimemura, and H.~Kobayashi, ``{Shape Control of Manipulators
-  with Hyper Degrees of Freedom},'' {\em The International Journal of Robotics
-  Research}, vol.~18, no.~6, pp.~584--600, 1999.
+\bibitem{Spong2006}
+M.~W. Spong, S.~Hutchinson, and M.~Vidyasagar, {\em Robot modeling and
+  control}.
+\newblock New York: John Wiley \& Sons, 2006.
 
-\bibitem{Mochiyama2003}
-H.~Mochiyama and T.~Suzuki, ``{Kinematics and dynamics of a cable-like
-  hyper-flexible manipulator},'' {\em IEEE International Conference on Robotics
-  and Automation}, pp.~3672--3677, 2003.
+\bibitem{Murray1994}
+R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
+  Robotic Manipulation}}, vol.~29.
+\newblock 1994.
 
-\bibitem{Chirikjian1994}
-G.~S. Chirikjian and J.~W. Burdick, ``A hyper-redundant manipulator,'' {\em
-  IEEE Robotics Automation Magazine}, vol.~1, pp.~22--29, 1994.
+\bibitem{Till2019}
+J.~Till, V.~Aloi, and C.~Rucker, ``{Real-time dynamics of soft and continuum
+  robots based on Cosserat rod models},'' {\em International Journal of
+  Robotics Research}, vol.~38, no.~6, pp.~723--746, 2019.
 
-\bibitem{Marchese2016}
-A.~D. Marchese and D.~Rus, ``{Design, kinematics, and control of a soft spatial
-  fluidic elastomer manipulator},'' {\em The International Journal of Robotics
-  Research}, vol.~35, no.~7, pp.~840--869, 2016.
+\bibitem{DellaSantina2021}
+C.~{Della Santina}, C.~Duriez, and D.~Rus, ``{Model Based Control of Soft
+  Robots: A Survey of the State of the Art and Open Challenges},'' pp.~1--69,
+  2021.
 
-\bibitem{DellaSantina2020}
-C.~Della~Santina and D.~Rus, ``{Control oriented modeling of soft robots: The
-  polynomial curvature case},'' {\em IEEE Robotics and Automation Letters},
-  vol.~5, no.~2, pp.~290--298, 2020.
+\bibitem{Zhang2017}
+Z.~Zhang, T.~M. Bieze, J.~Dequidt, A.~Kruszewski, and C.~Duriez, ``Visual
+  servoing control of soft robots based on finite element model,'' in {\em 2017
+  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pp.~2895--2901, 2017.
 
 \bibitem{Katzschmann2019}
 R.~K. Katzschmann, C.~D. Santina, Y.~Toshimitsu, A.~Bicchi, and D.~Rus,
@@ -103,49 +76,66 @@ R.~K. Katzschmann, C.~D. Santina, Y.~Toshimitsu, A.~Bicchi, and D.~Rus,
   RoboSoft 2019 - 2019 IEEE International Conference on Soft Robotics},
   no.~February, pp.~454--461, 2019.
 
-\bibitem{Renda2018}
-F.~Renda, F.~Boyer, J.~Dias, and L.~Seneviratne, ``{Discrete Cosserat Approach
-  for Multisection Soft Manipulator Dynamics},'' {\em IEEE Transactions on
-  Robotics}, vol.~34, no.~6, pp.~1518--1533, 2018.
+\bibitem{DellaSantina2020}
+C.~Della~Santina and D.~Rus, ``{Control oriented modeling of soft robots: The
+  polynomial curvature case},'' {\em IEEE Robotics and Automation Letters},
+  vol.~5, no.~2, pp.~290--298, 2020.
 
-\bibitem{Tatlicioglu2007}
-E.~Tatlicioglu, I.~D. Walker, and D.~M. Dawson, ``{New dynamic models for
-  planar extensible continuum robot manipulators},'' in {\em {2007 IEEE/RSJ
-  International Conference on Intelligent Robots and Systems}}, pp.~1485--1490,
-  IEEE, Oct. 2007.
+\bibitem{Renda2020}
+F.~Renda, C.~Armanini, V.~Lebastard, F.~Candelier, and F.~Boyer, ``{A Geometric
+  Variable-Strain Approach for Static Modeling of Soft Manipulators with Tendon
+  and Fluidic Actuation},'' {\em IEEE Robotics and Automation Letters}, vol.~5,
+  no.~3, pp.~4006--4013, 2020.
 
-\bibitem{Tatlicioglu2007a}
-E.~Tatlicioglu, I.~D. Walker, and D.~M. Dawson, ``{Dynamic Modelling for Planar
-  Extensible Continuum Robot Manipulators},'' in {\em {Proceedings 2007 IEEE
-  International Conference on Robotics and Automation}}, pp.~1357--1362, IEEE,
-  Apr. 2007.
+\bibitem{Boyer2021}
+F.~Boyer, V.~Lebastard, F.~Candelier, and F.~Renda, ``{Dynamics of Continuum
+  and Soft Robots: A Strain Parameterization Based Approach},'' {\em IEEE
+  Transactions on Robotics}, vol.~37, no.~3, pp.~847--863, 2021.
 
-\bibitem{Duriez2013}
-C.~Duriez, ``{Control of elastic soft robots based on real-time finite element
-  method},'' pp.~3982--3987, Proceedings - IEEE International Conference on
-  Robotics and Automation, 2013.
-
-\bibitem{Coevoet2017}
-E.~Coevoet, T.~Morales-Bieze, F.~Largilliere, Z.~Zhang, M.~Thieffry,
-  M.~Sanz-Lopez, B.~Carrez, D.~Marchal, O.~Goury, J.~Dequidt, and C.~Duriez,
-  ``{Software toolkit for modeling, simulation, and control of soft robots},''
-  {\em Advanced Robotics}, vol.~31, no.~22, pp.~1208--1224, 2017.
-
-\bibitem{Largilliere2015}
-F.~Largilliere, V.~Verona, E.~Coevoet, M.~Sanz-Lopez, J.~Dequidt, and
-  C.~Duriez, ``{Real-time control of soft-robots using asynchronous finite
-  element modeling},'' {\em Proceedings - IEEE International Conference on
-  Robotics and Automation}, vol.~2015-June, no.~June, pp.~2550--2555, 2015.
-
-\bibitem{Goury2018}
-O.~Goury and C.~Duriez, ``{Fast, Generic, and Reliable Control and Simulation
-  of Soft Robots Using Model Order Reduction},'' {\em IEEE Transactions on
-  Robotics}, vol.~34, no.~6, pp.~1565--1576, 2018.
+\bibitem{Bruder2019}
+D.~Bruder, X.~Fu, R.~B. Gillespie, C.~D. Remy, and R.~Vasudevan, ``Data-driven
+  control of soft robots using koopman operator theory,'' {\em IEEE
+  Transactions on Robotics}, vol.~37, no.~3, pp.~948--961, 2021.
 
 \bibitem{Simo1986}
 J.~C. Simo and L.~Vu-Quoc, ``{A three-dimensional finite-strain rod model. part
   II: Computational aspects},'' {\em Computer Methods in Applied Mechanics and
   Engineering}, vol.~58, no.~1, pp.~79--116, 1986.
+
+\bibitem{Renda2018}
+F.~Renda, F.~Boyer, J.~Dias, and L.~Seneviratne, ``{Discrete Cosserat Approach
+  for Multisection Soft Manipulator Dynamics},'' {\em IEEE Transactions on
+  Robotics}, vol.~34, no.~6, pp.~1518--1533, 2018.
+
+\bibitem{Franco2020}
+E.~Franco and A.~Garriga-Casanovas, ``{Energy-shaping control of soft continuum
+  manipulators with in-plane disturbances},'' {\em International Journal of
+  Robotics Research}, 2020.
+
+\bibitem{Schaft2004}
+A.~J. Schaft, ``{Port-Hamiltonian Systems: Network Modeling and Control of
+  Nonlinear Physical Systems},'' {\em Advanced Dynamics and Control of
+  Structures and Machines}, vol.~444, no.~1, pp.~127--167, 2004.
+
+\bibitem{Ortega2002}
+R.~Ortega, M.~W. Spong, F.~G{\'{o}}mez-Estern, and G.~Blankenstein,
+  ``{Stabilization of a Class of Underactuated MechanicalSystems Via
+  Interconnection and Damping Assignment},'' {\em IEEE Transactions on
+  Automatic Control}, vol.~47, no.~8, pp.~1218--1233, 2002.
+
+\bibitem{Ortega1998}
+R.~Ortega, J.~A.~L. Perez, P.~J. Nicklasson, and H.~Sira-Ramirez, {\em
+  {Passivity-based Control of Euler-Lagrange Systems: Mechanical, Electrical
+  and Electromechanical Applications}}.
+\newblock London, England, UK: Springer, Sept. 1998.
+
+\bibitem{SorotokiCode}
+B.~Caasenbrood, ``\textup{SOROTOKI} - an open-source soft robotics toolkit for
+  matlab,'' GitHub, 2020.
+
+\bibitem{Bullo1995}
+F.~Bullo and R.~M. Murray, ``{Proportional Derivative (PD) Control on the
+  Euclidean Group},'' {\em California Institute of Technology}, Jan. 1995.
 
 \bibitem{Boyer2010}
 F.~Boyer, M.~Porez, and A.~Leroyer,
@@ -154,134 +144,20 @@ F.~Boyer, M.~Porez, and A.~Leroyer,
   Application to Robotics},'' {\em Journal of Nonlinear Science}, vol.~20,
   pp.~47--79, Feb. 2010.
 
-\bibitem{Boyer2021}
-F.~Boyer, V.~Lebastard, F.~Candelier, and F.~Renda, ``{Dynamics of Continuum
-  and Soft Robots: A Strain Parameterization Based Approach},'' {\em IEEE
-  Transactions on Robotics}, vol.~37, no.~3, pp.~847--863, 2021.
+\bibitem{Astrid2008}
+P.~Astrid, S.~Weiland, K.~Willcox, and T.~Backx, ``{Missing point estimation in
+  models described by proper orthogonal decomposition},'' {\em IEEE
+  Transactions on Automatic Control}, vol.~53, no.~10, pp.~2237--2251, 2008.
 
-\bibitem{Renda2020}
-F.~Renda, C.~Armanini, V.~Lebastard, F.~Candelier, and F.~Boyer, ``{A Geometric
-  Variable-Strain Approach for Static Modeling of Soft Manipulators with Tendon
-  and Fluidic Actuation},'' {\em IEEE Robotics and Automation Letters}, vol.~5,
-  no.~3, pp.~4006--4013, 2020.
-
-\bibitem{Till2019}
-J.~Till, V.~Aloi, and C.~Rucker, ``{Real-time dynamics of soft and continuum
-  robots based on Cosserat rod models},'' {\em International Journal of
-  Robotics Research}, vol.~38, no.~6, pp.~723--746, 2019.
-
-\bibitem{Grazioso2019}
-S.~Grazioso, G.~{Di Gironimo}, and B.~Siciliano, ``{A Geometrically Exact Model
-  for Soft Continuum Robots: The Finite Element Deformation Space
-  Formulation},'' {\em Soft Robotics}, vol.~6, no.~6, pp.~790--811, 2019.
-
-\bibitem{Mustaza2019}
-S.~M. Mustaza, Y.~Elsayed, C.~Lekakou, C.~Saaj, and J.~Fras, ``{Dynamic
-  Modeling of Fiber-Reinforced Soft Manipulator: A Visco-Hyperelastic
-  Material-Based Continuum Mechanics Approach},'' {\em Soft Robotics}, vol.~6,
-  pp.~305--317, June 2019.
-
-\bibitem{Sadati2020}
-S.~M.~H. Sadati, S.~E. Naghibi, A.~Shiva, B.~Michael, L.~Renson, M.~Howard,
-  C.~D. Rucker, K.~Althoefer, T.~Nanayakkara, S.~Zschaler, C.~Bergeles,
-  H.~Hauser, and I.~D. Walker, ``{TMTDyn: A Matlab package for modeling and
-  control of hybrid rigid{\textendash}continuum robots based on discretized
-  lumped systems and reduced-order models},'' {\em International Journal on
-  Robotics Research}, vol.~40, pp.~296--347, Jan. 2020.
-
-\bibitem{Slotine1988}
-J.~J.~E. Slotine and L.~Weiping, ``{Adaptive manipulator control: A case
-  study},'' {\em IEEE Transactions on Automatic Control}, vol.~33, no.~11,
-  pp.~995--1003, 1988.
-
-\bibitem{Morgan1977}
-A.~P. Morgan and K.~S. Narendra, ``{On the Uniform Asymptotic Stability of
-  Certain Linear Nonautonomous Differential Equations},'' {\em SIAM Journal on
-  Control and Optimization}, July 1977.
-
-\bibitem{Ortega1998}
-R.~Ortega, J.~A.~L. Perez, P.~J. Nicklasson, and H.~Sira-Ramirez, {\em
-  {Passivity-based Control of Euler-Lagrange Systems: Mechanical, Electrical
-  and Electromechanical Applications}}.
-\newblock London, England, UK: Springer, Sept. 1998.
-
-\bibitem{Franco2020}
-E.~Franco and A.~Garriga-Casanovas, ``{Energy-shaping control of soft continuum
-  manipulators with in-plane disturbances},'' {\em International Journal of
-  Robotics Research}, 2020.
+\bibitem{Sonneville2014}
+V.~Sonneville, A.~Cardona, and O.~Br{\"{u}}ls, ``{Geometrically exact beam
+  finite element formulated on the special Euclidean group SE(3)},'' {\em
+  Computer Methods in Applied Mechanics and Engineering}, vol.~268,
+  pp.~451--474, 2014.
 
 \bibitem{Caasenbrood2020}
 B.~Caasenbrood, A.~Pogromsky, and H.~Nijmeijer, ``{Dynamic modeling of
   hyper-elastic soft robots using spatial curves},'' {\em IFAC Proceedings
   Volumes (IFAC-PapersOnline)}, 2020.
-
-\bibitem{SorotokiCode}
-B.~Caasenbrood, ``\textup{SOROTOKI} - an open-source soft robotics toolkit for
-  matlab,'' GitHub, 2020.
-
-\bibitem{DellaSantina2020a}
-C.~{Della Santina}, R.~K. Katzschmann, A.~Bicchi, and D.~Rus, ``{Model-based
-  dynamic feedback control of a planar soft robot: trajectory tracking and
-  interaction with the environment},'' {\em International Journal of Robotics
-  Research}, vol.~39, no.~4, pp.~490--513, 2020.
-
-\bibitem{DellaSantina2021}
-C.~{Della Santina}, C.~Duriez, and D.~Rus, ``{Model Based Control of Soft
-  Robots: A Survey of the State of the Art and Open Challenges},'' pp.~1--69,
-  2021.
-
-\bibitem{Russ2022}
-R.~Tedrake, ``Underactuated robotics --algorithms for walking, running,
-  swimming, flying, and manipulation.'' Course Notes for MIT 6.832, 2022.
-
-\bibitem{Bishop1975}
-R.~L. Bishop, ``{There is More than One Way to Frame a Curve},'' {\em Am. Math.
-  Mon.}, vol.~82, pp.~246--251, Mar. 1975.
-
-\bibitem{Lynch2017}
-K.~M. Lynch and F.~C. Park, {\em {Modern Robotics: Mechanics, Planning, and
-  Control}}.
-\newblock Cambridge, England, UK: Cambridge University Press, 2017.
-
-\bibitem{Murray1994}
-R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
-  Robotic Manipulation}}, vol.~29.
-\newblock 1994.
-
-\bibitem{Garofalo2013}
-G.~Garofalo, C.~Ott, and A.~Albu-Schaffer, ``{On the closed form computation of
-  the dynamic matrices and their differentiations},'' {\em IEEE International
-  Conference on Intelligent Robots and Systems}, pp.~2364--2369, 2013.
-
-\bibitem{Chirikjian1992}
-G.~S. Chirikjian, {\em {Theory and applications of hyper-redundant robotic
-  manipulators}}.
-\newblock PhD thesis, 1992.
-
-\bibitem{Berthet2021}
-P.~Berthet-Rayne, S.~M.~H. Sadati, G.~Petrou, N.~Patel, S.~Giannarou, D.~R.
-  Leff, and C.~Bergeles, ``{MAMMOBOT: A Miniature Steerable Soft Growing Robot
-  for Early Breast Cancer Detection},'' {\em IEEE Rob. Autom. Lett.}, vol.~6,
-  pp.~5056--5063, Mar. 2021.
-
-\bibitem{Meyer2009}
-M.~A. Meyers and K.~K. Chawla, {\em {Mechanical Behavior of Materials}}.
-\newblock Cambridge, England, UK: Cambridge University Press, Dec. 2009.
-
-\bibitem{Renaud2011}
-C.~Renaud, J.~M. Cros, Z.~Q. Feng, and B.~Yang, ``{The Yeoh model applied to
-  the modeling of large deformation contact/impact problems},'' {\em
-  International Journal of Impact Engineering}, vol.~36, no.~5, pp.~659--666,
-  2009.
-
-\bibitem{Kim2018}
-N.-h. Kim, {\em Introduction Analysis Finite Element to Nonlinear}.
-\newblock Springer, 2018.
-
-\bibitem{Caasenbrood2021}
-B.~Caasenbrood, A.~Y. Pogromsky, and H.~Nijmeijer, ``Energy-based control for
-  soft manipulators using cosserat-beam models,'' in {\em International
-  Conference on Informatics in Control, Automation and Robotics - ICINCO},
-  pp.~311--319, 2021.
 
 \end{thebibliography}

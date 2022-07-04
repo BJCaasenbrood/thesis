@@ -38,7 +38,10 @@ $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2
 \begin{figure}[!t]
  %\vspace{-3mm} 
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_fembend.tex} \\[1em]
+  \fi
   %\input{./3_chapters/2_chapter/img/fig_C2_fembend.tex}
   \vspace{-0.2cm}
   \caption{Highly-resolution finite element simulations of the soft robot manipulator \data{lightgreen} subjected to various input pressures $-20 \,\si{\kilo \pascal} \le \uB_i(t) \le 80 \,\si{\kilo \pascal}$. To validate the PCC condition, an optimal backbone curve $\gammaB(\q^\star)$ is shown \data{magenta} whose joint coordinates are recovered by solving the optimization problem \eqref{eq:C2:optimization_problem}.}
@@ -50,7 +53,10 @@ $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2
  \vspace{-1mm}
   %\centering
   \hspace{-2mm}
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_fem.tex}
+  \fi
   %\includegraphics[width = 0.99\textwidth]{fig_1024x256.pdf}
   \vspace{-0.5cm}
   \caption{Comparison of the (nonlinear) mechanical compliance between the proposed hyper-elastic model \data{Matlab2} and the finite element simulations \data{Matlab1}. Notice the proposed stiffness model \eqref{eq:C2:stiffness_tanh_beta} does not capture the self-collision. }
@@ -126,10 +132,13 @@ where $m$ is the number of bellows, and $\phi = \text{atan2}(\kappa_y,\kappa_x)$
 \end{asm}
 
 \begin{figure}[!t]
- \vspace{-5mm}
+  \ifx\printFigures\undefined
+  \else
+  \vspace{-5mm}
   \centering
   \input{./3_chapters/2_chapter/img/fig_C2_stiffness.tex}
   \vspace{-0.25cm}
+  \fi
   \caption{Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right) for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity $\phi = k\tfrac{2\pi}{3}$.}
   \vspace{-0.1cm}
   \label{fig:C2:stiffness_model}
@@ -172,7 +181,10 @@ Clearly, we see a difference between the two trajectories. The original Hookean 
 \begin{figure}[!h]
  \vspace{-0mm}
   %\centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_creep.tex}
+  \fi
   \vspace{-0.2cm}
   \caption{Simulation study of introducing visco-elastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t)$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and visco-elastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the visco-elastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
   \vspace{-0.1cm}

@@ -36,7 +36,10 @@ where $\varepsilon_\star$ and $\kappa_\star$ are nonzero constants. Notice that 
 \begin{figure}[!t]
   \vspace{-1mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_natural_states.tex}
+  \fi
   \vspace{-3mm}
   \caption{Three-dimensional volumetric evolution of the one-link soft robot model with initial conditions $\q_0 = (0 , -15, 15)^\top$ and $\dq_0 = (0, 2500, 0)^\top$. Notice that the states of the one-link soft robot quickly converge to the the set of stable equilibria $\Omega_{\textrm{stab}}$. }
   \label{fig:C2:natural_states}
@@ -47,7 +50,10 @@ where $\varepsilon_\star$ and $\kappa_\star$ are nonzero constants. Notice that 
 \begin{figure}[!t]
   %\vspace{-3mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_natural_3D.tex}
+  \fi
   \vspace{-3mm}
   \caption{State trajectories of one-link soft robot model with initial conditions $\q_0 = (0 , -15, 15)^\top$ and $\dq_0 = (0, 2500, 0)^\top$. The figure shows the elongation strain $\varepsilon$ and the curvatures $\kappa_x$, $\kappa_y$ in the $xz$-plane and $yz$-plane, respectively. Clearly the one-link soft robot oscillates about the set $\Omega_{\textrm{stab}}$. }
   \label{fig:C2:natural_3D}
@@ -75,13 +81,19 @@ During each experimental trail, it was made sure the soft robotic body does not 
 \afterpage{%
 \begin{figure}[!t]
   \centering
+  \ifx\printFigures\undefined
+  \else
   \includegraphics[width=0.99\textwidth]{fig_C2_setup.pdf} 
+  \fi
   \caption{General overview of the experimental platform for the testing and development of the 3-DOF soft manipulator. \tcircle{1} Close-up of the {RealSense D435} stereo-vision depth camera. \tcircle{2} Soft continuum manipulator with pressure inputs $\uB = (u_1,\,u_2,\,u_3)^\top$, a MPU-6050 Inertial Measurement Unit (IMU) to measure the end-effector angle $\beta$, and a color-coded optical marker to recover $\gammaB_L$, and four Aruco markers to recover $\Phi_0$ and $\gammaB_0$. \tcircle{3} Overview of full setup with the array of three VEAB-B-D16 pressure regulators. \label{fig:C2:setup}}
 \end{figure}
 %
 \begin{figure}[!t]
   \centering
+  \ifx\printFigures\undefined
+  \else
   \includegraphics[width=0.99\textwidth]{fig_C2_setup_measure.pdf} 
+  \fi
   \caption{General overview of the optical vision system. \tcircle{1} Circular Hough transformation from the RBG camera data filtering for circles with a radius 32 \texttt{pix}, it has a global maxima at the optical marker. \tcircle{2} Sample of the stereo-vision depth camera. \tcircle{3} Final result of the sensor fusion algorithm of depth and RGB camera, resulting in an accurate estimate of soft manipulator's end-effector $\tvec{\gammaB}(L,\tvec{q})$. \label{fig:C2:setupmeasure}}
 \end{figure}
 \clearpage
@@ -100,7 +112,10 @@ We start with the unforced scenario, \ie, no input is considered $u_i(t) \equiv 
 \begin{figure}[!t]
   %\vspace{-2mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_compare_states.tex}
+  \fi
   \vspace{-1mm}
   \caption{Validation results of the
   dynamic model in unforced conditions, where the dashed lines represent the experimental measurements and the solid lines are the simulated trajectories. The dataset \data{Matlab1} are within the linear elastic regime whereas datasets (\ldata{Matlab2},\ldata{Matlab3}) are in the nonlinear regime. }
@@ -122,9 +137,12 @@ As can be seen, the state trajectories of the end-effector closely match the gro
   %\vspace{-1mm}
    \centering
    %\hspace{-5mm}
+   \ifx\printFigures\undefined
+   \else
    \input{./3_chapters/2_chapter/img/fig_C2_openloop_2D.tex}
    \input{./3_chapters/2_chapter/img/fig_C2_openloop_U.tex}
-   \vspace{-0.25cm}s
+   \fi
+   \vspace{-0.25cm}
    \caption{Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right) for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity of $\tfrac{2\pi}{3}$.}
    \vspace{-0.1cm}
    \label{fig:C2:openloop_2D}
@@ -147,7 +165,10 @@ For the last validation case, we subject the soft robot to an external payload o
 \begin{figure}[!t]
   %\vspace{-2mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_compare_deflect.tex}
+  \fi
   \vspace{-5mm}
   \caption{Experimental validation of the one-link soft robot subjected to various end-effector payloads of different mass $m_\delta = \{0,50,100,150\}$ \si{\gram}. The deformed 3D-model in \data{thumbcolor} corresponds to the estimated joint configuration based on the measurements from the IMU and depth camera, where the optimal marker location is shown in \data{lightgreen}.}
   \label{fig:C2:compare_deflect}
@@ -189,7 +210,10 @@ After a short transient time (i.e., $t < 5$), the solutions of the multi-link so
 \begin{figure}[!t]
   %\vspace{-3mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_multilink_states.tex}
+  \fi
   \vspace{-4mm}
   \caption{State trajectories of six-link soft robot model under dynamic excitation. The figure shows the extensible elongation strains and the total curvature $\kappa$ (\ie, planar dynamics). The link indexing follows (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3},\ldata{Matlab4},\ldata{Matlab5},\ldata{Matlab6}). \label{fig:C2:multilink_states}}
 \end{figure}
@@ -197,9 +221,12 @@ After a short transient time (i.e., $t < 5$), the solutions of the multi-link so
 \begin{figure}[!t]
   \vspace{-3mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_multilink_3D.tex}
+  \fi
   \vspace{-6mm}
-  \caption{The deformed 3D-model of the six-link soft robot according to the input excitation $\uB$. Notice that the dynamics of the six-link robot converge to a periodic solution which is shown in curve \data{thumbcolor}. Interestingly, the periodic orbit is slightly asymmetric with respect the sagittal plane at the origin, which is caused by the \textit{hanging-down} initialization of the soft arm at the the left side. }
+  \caption{The deformed 3D-model of the six-link soft robot according to the input excitation $\uB$. Notice that the dynamics of the six-link robot converge to a periodic solution which is shown in curve \data{thumbcolor}. Interestingly, the periodic orbit is slightly asymmetric with respect the sagittal plane at the origin, which is caused by the \textit{hanging-down} initialization of the soft arm at the left side. }
   \label{fig:C2:multilink_3d}
 \end{figure}
 \clearpage
@@ -286,7 +313,10 @@ Since the reference trajectory above satisfies persistence of excitation (see Re
 \begin{figure}[!b]
   \vspace{-1mm}
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_PBA_states.tex}
+  \fi
   \vspace{-3mm}
   \caption{State trajectories of soft robot with the passivity-based adaptive controller in \eqref{eq:C2:tau}. The figure shows the elongation strain $\varepsilon(t)$ and the curvatures $\kappa_x(t),\,\kappa_y(t)$ in the $xz$-plane and $yz$-plane, respectively; where \data{lightgrey} shows the reference trajectory of the joint configuration $\q_d$.}
   \label{fig:C2:PBA_states}
@@ -295,7 +325,10 @@ Since the reference trajectory above satisfies persistence of excitation (see Re
 %
 \begin{figure}[!t]
   \centering
+  \ifx\printFigures\undefined
+  \else
   \input{./3_chapters/2_chapter/img/fig_C2_PBA_parameters.tex}
+  \fi
   \vspace{-3mm}
   \caption{The evolution of the elongation stiffness estimate and bending stiffness estimate, ${k}_e(\q,\tvec{\pi})$ and ${k}_b(\q,\tvec{\pi})$ respectively; and the estimate of the payload $\tilde{m}_\delta$. For illustration, the estimates are normalized with their true value, where we can see they slowly approach one after sufficient time passes. This implies the adaptive algorithms converges to the true hyper-elastic stiffness values independent of parameter uncertainties. \label{fig:C2:PBA_parameters}}
   \end{figure}

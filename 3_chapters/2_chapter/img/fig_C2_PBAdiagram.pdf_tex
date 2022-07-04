@@ -65,7 +65,7 @@
     \put(0.56877632,0.21319753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textrm{PBA hyper-variables}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{fig_C2_PBAdiagram.pdf}}%
     \put(0.29716066,0.34574943){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{softrobot}$}\end{tabular}}}}%
-    \put(0.16548734,0.34841989){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mat{H}^{+}$\end{tabular}}}}%
+    \put(0.16548734,0.34841989){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mat{G}^{+}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{fig_C2_PBAdiagram.pdf}}%
     \put(0.58539571,0.34574943){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{sensors}$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{fig_C2_PBAdiagram.pdf}}%
