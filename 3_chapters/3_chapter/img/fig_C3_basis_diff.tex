@@ -1,0 +1,140 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.34510,0.65882}%
+\definecolor{mycolor2}{rgb}{0.79216,0.11765,0.17255}%
+\definecolor{mycolor3}{rgb}{0.20392,0.65490,0.24706}%
+\definecolor{mycolor4}{rgb}{0.93333,0.43922,0.13725}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.37\textwidth,
+height=0.175\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.25,0.5,0.75,1},
+xticklabels={{0},{},{},{},{$L$}},
+ytick={-1,0,1},
+yticklabels={{$-\infty$},0,{$+\infty$}},
+xlabel style={font=\color{white!15!black}},
+xlabel={space $\sigma$},
+ymin=-1.2,
+ymax=1.2,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\p \theta_n/\p \sigma (\sigma)$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+ylabel style={yshift=-2.5pt}
+]
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0\\
+0.249249249249249	0\\
+0.25025025025025	-1\\
+0.251251251251251	0\\
+1	0\\
+};
+\addplot [color=mycolor2, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0\\
+0.249249249249249	0\\
+0.25025025025025	1\\
+0.251251251251251	0\\
+0.499499499499499	0\\
+0.500500500500501	-1\\
+0.501501501501502	0\\
+1	0\\
+};
+\addplot [color=mycolor3, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0\\
+0.499499499499499	0\\
+0.500500500500501	1\\
+0.501501501501502	0\\
+0.74974974974975	0\\
+0.750750750750751	-1\\
+0.751751751751752	0\\
+1	0\\
+};
+\addplot [color=mycolor4, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0\\
+0.74974974974975	0\\
+0.750750750750751	1\\
+0.751751751751752	0\\
+1	0\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.37\textwidth,
+height=0.164\textwidth,
+at={(0.486\textwidth,0.011\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.25,0.5,0.75,1},
+xticklabels={{0},{},{},{},{$L$}},
+xlabel style={font=\color{white!15!black}},
+xlabel={space $\sigma$},
+ymin=-0.01,
+ymax=0.015,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\p \theta_n/\p \sigma(\sigma)$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+ylabel style={yshift=-2.5pt}
+]
+\addplot [color=mycolor1, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0\\
+1	0\\
+};
+\addplot [color=mycolor2, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0.00200200200200196\\
+1	0.00200200200200196\\
+};
+\addplot [color=mycolor3, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	-0.00599999398798179\\
+1	0.00599999398798179\\
+};
+\addplot [color=mycolor4, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+0.00100100100100109	0.0119819719820118\\
+0.037037037037037	0.00989780573368138\\
+0.0730730730730731	0.00796962698002934\\
+0.109109109109109	0.00619743572105302\\
+0.145145145145145	0.00458123195675597\\
+0.181181181181181	0.00312101568713552\\
+0.217217217217217	0.00181678691219256\\
+0.253253253253253	0.000668545631927309\\
+0.289289289289289	-0.000323708153660229\\
+0.325325325325325	-0.00115997444457028\\
+0.361361361361361	-0.00184025324080306\\
+0.397397397397397	-0.0023645445423579\\
+0.433433433433434	-0.00273284834923548\\
+0.469469469469469	-0.00294516466143557\\
+0.505505505505506	-0.00300149347895817\\
+0.541541541541542	-0.00290183480180284\\
+0.577577577577578	-0.00264618862997024\\
+0.613613613613614	-0.00223455496346037\\
+0.64964964964965	-0.00166693380227234\\
+0.685685685685686	-0.000943325146407048\\
+0.721721721721722	-6.37289958642651e-05\\
+0.757757757757758	0.000971854649356008\\
+0.793793793793794	0.00216342578925377\\
+0.82982982982983	0.00351098442382924\\
+0.865865865865866	0.00501453055308221\\
+0.901901901901902	0.00667406417701244\\
+0.937937937937938	0.00848958529562016\\
+0.973973973973974	0.0104610939089056\\
+1	0.0119819719820118\\
+};
+\end{axis}
+\end{tikzpicture}%
