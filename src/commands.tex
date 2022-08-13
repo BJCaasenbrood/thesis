@@ -7,8 +7,14 @@
 \renewcommand{\emph}[1]{'\textit{#1}'}
 \newcommand{\sorotoki}{\textup{\texttt{SOROTOKI}} }
 \newcommand{\matlab}{\textup{\texttt{MATLAB}} }
-\newcommand{\data}[1]{(\raisebox{-2.7pt}{\textcolor{#1}{\,\Huge{\textbf{-}}}})}
-\newcommand{\ldata}[1]{\raisebox{-2.7pt}{\textcolor{#1}{\,\Huge{\textbf{-}}}}}
+\newcommand{\data}[1]{(\raisebox{-1.0pt}{\textcolor{#1}{\,\Large{\textbf{-}\!\textbf{-}}}})}
+\newcommand{\dashdata}[1]{(\raisebox{-1.02pt}{\textcolor{#1}{\hspace{0.1em}\Large{\textbf{-\vspace{-0.1em}-}}}})}
+\newcommand{\dotdata}[1]{(\raisebox{-1.0pt}{\textcolor{#1}{\,\Large{\textbf{-\vspace{0.1em}$\cdot$}}}})}
+\newcommand{\ldata}[1]{\raisebox{-1.02pt}{\textcolor{#1}{\,\Large{\textbf{-}\!\textbf{-}}}}}
+\newcommand{\ldatanum}[2]{\raisebox{-1.02pt}{\textcolor{#1}{\,\Large{\textbf{-}\!\!\textbf{-}}}}\textcolor{#1}{#2}}
+
+\newcommand{\trot}[1]{\begin{turn}{90} #1 \end{turn}}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 % Equations/math
 \newcommand{\be}{\begin{equation}}
@@ -72,8 +78,10 @@
 \usetikzlibrary{shapes}
 
 % Counters
+\newcounter{TermNum}        % Counter for the terminology
 \newcounter{ContNum}        % Counter for the contributions
 \renewcommand{\theContNum}{\Roman{ContNum}}
+\renewcommand{\theTermNum}{\Roman{TermNum}}
 
 % Other
 \newcommand\blankfootnote[1]{%
@@ -93,7 +101,7 @@
 \newcommand{\itemheaderNewpage}[1]{\newpage \noindent\textbf{#1.}\ \ }
 \newcommand{\contribution}[2]{\refstepcounter{ContNum}#2 \vspace*{2.1mm}\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] \textbf{Contribution \Roman{ContNum}.} {\em #1} \end{tcolorbox}\vspace*{2.1mm}}
 \newcommand{\objective}[1]{\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] {\em #1} \end{tcolorbox}}
-\newcommand{\terminology}[2]{\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] {\textbf{Terminology: } \textbf{#1} \em #2} \end{tcolorbox}}
+\newcommand{\terminology}[2]{\refstepcounter{TermNum}#2 \vspace*{2.1mm}\begin{tcolorbox}[colback=black!2!white,colframe=black!20!white] \textbf{Terminology \theTermNum.} {\em #1} \end{tcolorbox}\vspace*{2.1mm}}
 \newcommand{\cover}[1]{\ifprint{}\else\includepdf[pages=-]{#1}\cleardoublepage\fi}
 
 \newcommand\tcircle[1]{%

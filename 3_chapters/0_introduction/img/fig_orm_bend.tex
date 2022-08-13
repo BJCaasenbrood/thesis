@@ -1,0 +1,106 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06275,0.35686,0.84706}%
+\definecolor{mycolor2}{rgb}{1.0000,0.6157,0.1176}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.583\textwidth,
+height=0.186\textwidth,
+at={(0\textwidth,0.005\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=2037.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=650.5,
+axis line style={draw=none},
+ticks=none
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=2037.5, ymin=0.5, ymax=650.5] {fig_orm_bend-1.png};
+\end{axis}
+
+\begin{axis}[%
+width=0.308\textwidth,
+height=0.195\textwidth,
+at={(0.642\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=30,
+xlabel style={font=\color{white!15!black}},
+xlabel={pressure (kPa)},
+ymin=0,
+ymax=110,
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.03,0.97)}, anchor=north west, legend columns=2, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=1.5pt]
+  table[row sep=crcr]{%
+0	0\\
+1.60008	2.43048322137711\\
+4.0002	6.19782561266756\\
+4.80024	7.46829805994749\\
+5.60028	8.34214292028537\\
+17.60088	25.9279210387424\\
+18.40092	27.0804871808147\\
+19.20096	27.8807159907824\\
+20.001	29.291815814346\\
+20.80104	30.1255987953186\\
+21.60108	31.5485305130109\\
+22.40112	32.3659198775631\\
+24.0012	34.5026095847334\\
+28.80144	41.0337024135815\\
+30.40152	43.1793137664006\\
+};
+\addlegendentry{$\delta V$}
+
+\addplot [color=mycolor2, line width=1.5pt]
+  table[row sep=crcr]{%
+0	0\\
+3.20016	8.88556718870406\\
+6.40032000000001	17.5260854409956\\
+8.80043999999999	23.7584681055126\\
+11.20056	29.7734109354827\\
+13.60068	35.566935673684\\
+16.0008	41.1374336291155\\
+17.60088	44.7277626743178\\
+20.001	50.0250200383298\\
+20.80104	51.6388516477443\\
+21.60108	53.3837573512613\\
+22.40112	54.9453731417261\\
+23.20116	56.644891426995\\
+24.80124	59.8364150546849\\
+26.40132	62.9180842306127\\
+28.0014	65.909936141282\\
+29.60148	68.8150689926074\\
+30.40152	70.2358435840924\\
+};
+\addlegendentry{$\theta$}
+
+\end{axis}
+
+\begin{axis}[%
+width=1.08\textwidth,
+height=0.244\textwidth,
+at={(-0.022\textwidth,-0.024\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

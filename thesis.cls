@@ -203,3 +203,5 @@
 
 %%% MACROS AND NEW COMMANDS %%%
 \newcommand{\chapterabstract}[1]{\noindent{\bf Abstract -}\ {\small{#1}} \normalsize \vfill}
+
+\newcommand{\introabstract}[1]{\noindent{\bf Abstract -}\ {\small{#1}} \normalsize}

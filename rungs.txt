@@ -1,0 +1,9 @@
+gs -sDEVICE=pdfwrite 
+	-dCompatibilityLevel=1.4 
+	-dPDFSETTINGS=/printer 
+	-dBATCH 
+	-dNOPAUSE 
+	-dQUIET 
+	-dOverrideICC 
+	-sOutputFile=output.pdf
+	 timeline.pdf

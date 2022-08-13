@@ -1,0 +1,39 @@
+%!TEX root = ../thesis.tex
+%% PURPLE
+\ifx\themePurple\undefined
+\else
+\colorlet{highlightcolor}{PurpleLightest}
+\colorlet{thumbcolor}{PurpleLighter}
+\colorlet{deepcolor}{Purple}
+\colorlet{titlecolor}{PurpleLight}
+\colorlet{refcolor}{PurpleLight}
+\fi
+
+%% ORANGE
+\ifx\themeOrange\undefined
+\else
+\colorlet{highlightcolor}{OrangeLightest}
+\colorlet{thumbcolor}{Orange}
+\colorlet{deepcolor}{black}
+\colorlet{titlecolor}{OrangeLight}
+\colorlet{refcolor}{black}
+\fi
+
+%% BLUE ALT
+\ifx\themeBlueAlt\undefined
+\else
+\colorlet{highlightcolor}{BlueAltLightest}
+\colorlet{thumbcolor}{BlueAltDark}
+\colorlet{deepcolor}{BlueAltDark}
+\colorlet{titlecolor}{BlueAltDark}
+\fi
+
+%% HYPERREFS
+\hypersetup{
+    colorlinks,%
+    citecolor=refcolor,%
+    colorlinks=true,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=refcolor,
+}

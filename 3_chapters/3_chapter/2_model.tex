@@ -15,10 +15,10 @@ Throughout this work, we will explore Lie group theory. We introduce the followi
 % \end{figure}
 % %
 \begin{figure}[!t]
-  \vspace{-0.6mm}
+  \vspace{-2mm}
   \centering
  \includegraphics[width = 0.99\textwidth]{3_chapters/3_chapter/img/fig_C3_schematic.pdf}
-  \caption{Schematic representation of the continuously variable Cosserat beam model for a general class of soft manipulators, given by a backbone $^0 \gammaB: \Xs \times \Ts \to \R^3$ and orientation matrix $^0 \PhiB: \Xs \times \Ts \to \SO{3}$. This forms a parameterized curve $\gB = (^0 \PhiB,\,^0\gammaB) \in \SE{3}$. The representation of the soft robot is inspired by the octopus' tentacle whose the muscle forces are modelled as a distributed input $\FT_u: \Xs \times \Ts \to \cose{3}$ (\ie, a co-vector belonging to the dual space of $\seg{3}$). \label{fig:C3:example1}}
+  \caption{Schematic representation of the continuously variable Cosserat beam model for a general class of soft manipulators, given by a backbone $^0 \gammaB$ and orientation matrix $^0 \PhiB$. This forms a parameterized curve $\gB = (^0 \PhiB,\,^0\gammaB) \in \SE{3}$. The representation of the soft robot is inspired by the octopus' tentacle whose the muscle forces are modelled as a distributed input $\FT_u: \Xs \times \Ts \to \cose{3}$ (\ie, a co-vector belonging to the dual space of $\seg{3}$). \label{fig:C3:example1}}
   \vspace{-0.4cm}
 \end{figure}
 %
@@ -39,7 +39,6 @@ Now, an expression for the strain field $\vec{\xi}$ and velocity field $\vec{\et
 All control inputs acting on the continuum time-variant system, \ie, a distributed control wrench $\FT_{u}(\sigma,t)$ acting on the backbone curve \eqref{eq:C3:backbone}, are considered to be sufficiently smooth for any instance $t \in \Ts$ and $\sigma \in \Xs$ such that parametrized backbone $\mat{g}(\sigma,t) \in \SE{3}$ is everywhere differentiable on $\Xs$ and $\Ts$.
 \end{asm}
 
-\newpage
 \subsection{Local strain and velocity}
 Following the works of Boyer et al. (2021, \cite{Boyer2021}) and Renda et al. (2020, \cite{Renda2018,Renda2020}), let $\vec{\Gamma} = (\kappa_1,\, \kappa_2, \kappa_3)^\top$ and $\vec{U} = (\nu_1,\, \nu_2,\, \nu_3)^\top$ be the torsion-curvature and elongation-shear strain vector, respectively. Then, an expression for strain field $\vec{\xi}(\sigma,t)$ is obtained through spatial differentiation of $\mat{g}$:
 %
@@ -55,7 +54,7 @@ Similarly, let $\vec{\Omega} = (\omega_1, \omega_2, \omega_3)^\top$ and $\vec{V}
 \label{eq:C3:eta}
 \end{equation}
 %
-Let it be clear to the reader that $\xiB(\sigma,t)$ and $\etaB(\sigma,t)$ are yet unknown vector fields, which simply follow from the differential geometry of $\SE{3}$, and thus they live in its tangent space $\seg{3}$ -- called its Lie algebra. Now given this geometric structure, we can start detailing the forward kinematics of the soft robot by exploring the smoothness in both space and time of the parameterized curve $\gB(\sigma,t)$. 
+Let it be clear to the reader that $\xiB(\sigma,t)$ and $\etaB(\sigma,t)$ are yet unknown {vector fields}, which simply follow from the differential geometry of $\SE{3}$, and thus they live in its tangent space $\seg{3}$ -- called its Lie algebra. Now given this geometric structure, we can start detailing the forward kinematics of the soft robot by exploring the smoothness in both space and time of the parameterized curve $\gB(\sigma,t)$. 
 
 Recalling Assumption \ref{assum:1}, which assumes the configuration space $\mat{g}$ to be everywhere differentiable, we can introduce the equality of mixed partials, \ie, $\frac{\p }{\p t}(\frac{\p \mat{g}}{\p \sigma}) = \frac{\p }{\p \sigma} (\frac{\p \mat{g}}{\p t})$. Then, by substitution of $\frac{\p \mat{g}}{\p t} = \vec{g}\hat{\vec{\eta}}$ and $\frac{\p \mat{g}}{\p \sigma} = \mat{g}\hat{\vec{\xi}}$, we obtain the so-called \emph{compatibility equation}:
 %
@@ -171,11 +170,13 @@ where $\mat{\Theta} \in \R^{6 \times 6k}$ is a sparse matrix-valued function who
 \label{eq:C3:chebyshev}
 \end{equation}
 %
-\noindent with $n \in \Z/\{0\}$ the polynomial degree. A comparison between the proposed basis and previous method in Chapter 3 is shown in Figure \ref{fig:C4:basis_example}. Please note now that the inner product between elements of the set of modified Legendre functionals $\{\theta_n\}_{n = 1}^k$ satisfies $\inner{\theta_i}{\theta_j}_{\Xs} := \int_\Xs{\theta_i}{\theta_j} d\sigma = 0$ for $i \neq j$, and $1$ otherwise. An alternative option could be constructing the set of basis functions through the so-called '\textit{snapshot decomposition method}' using FEM-driven data \cite{Astrid2008,Duriez2013,Largilliere2015}.
+\noindent with $n \in \mathbb{Z} \{0\}$ the polynomial degree. A comparison between the proposed basis and previous method in Chapter 3 is shown in Figure \ref{fig:C4:basis_example}. 
 
-\begin{rmk}
-The idea of joint parameterization by investigating the relation between material and structural topology of the soft robot is explored in Chapter 5.
-\end{rmk}
+Please note now that the inner product between elements of the set of modified Legendre functionals $\{\theta_n\}_{n = 1}^k$ satisfies $\inner{\theta_i}{\theta_j}_{\Xs} := \int_\Xs{\theta_i}{\theta_j} d\sigma = 0$ for $i \neq j$, and $1$ otherwise. An alternative option could be constructing the set of basis functions through the so-called '\textit{snapshot decomposition method}' \cite{Astrid2008,Duriez2013,Largilliere2015}.
+
+% \begin{rmk}
+% The idea of joint parameterization by investigating the relation between material and structural topology of the soft robot is explored in Chapter 5.
+% \end{rmk}
 
 \subsection{Reduced-order curve kinematics}
 Given the finite-dimensional truncation in \eqref{eq:trunc_2}, we can now find an expression for the finite-dimensional forward kinematics in terms of the generalized coordinates $\vec{q}$ and its velocities components $\dot{\vec{q}}$.
@@ -360,4 +361,4 @@ Finally, by combining \eqref{eq:C3:state_diff}, \eqref{eq:C3:momenta_diff1}, \eq
 \label{eq:C3:model_ph}
 \end{align}
 %
-The advantage of the port-Hamiltonian system $\Sigma_\textrm{beam}$ over the standard EL structure in \eqref{eq:C3:dyn_model_lag}, and as also seen in Chapter 3, is the general applicability to different physical domains and the common formalism with energy-based control, which we will explore further in the next section. By collocating the state variable into a state vector $\x = (\q^\top, \pB^\top)^\top$, we may write the system into an equivalent form: $\dx = \left(\JT - \RT \right)\grad{\x}\!\Hm(\x) + \BT(\x)\uB$, where $\JT = -\JT^\top$ a skew-symmetric matrix, $\RT \succeq 0$ a positive semi-definite dissipation matrix. 
+The advantage of the port-Hamiltonian system $\Sigma_\textrm{beam}$ over the standard EL structure in \eqref{eq:C3:dyn_model_lag}, and as also seen in Chapter 3, is the general applicability to different physical domains and the common formalism with energy-based control, which we will explore further in the next section. %By collocating the state variable into a state vector $\x = (\q^\top, \pB^\top)^\top$, we may write the system into an equivalent form: $\dx = \left(\JT - \RT \right)\grad{\x}\!\Hm(\x) + \BT(\x)\uB$, where $\JT = -\JT^\top$ a skew-symmetric matrix, $\RT \succeq 0$ a positive semi-definite dissipation matrix. 

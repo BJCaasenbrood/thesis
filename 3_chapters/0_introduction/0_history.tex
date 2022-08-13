@@ -1,32 +1,96 @@
 %!TEX root = ../../thesis.tex
+\section{History of soft robotics: what are they?} 
+\label{sec:intro:history}
 % https://cyberneticzoo.com/bionics/1957-artificial-muscle-joseph-laws-mckibben-american/
-The term \emph{soft robotics} is the abbreviated form of \emph{soft material robotics}. Although the words \emph{soft} and \emph{robotics} have a clear definitions independently, the collocation of the two has sparked vivid discussions in the robotics community for many years -- even touching the territories of the philosophical. Consequently, the exponential scientific interest in soft robotics around 2011 may be seen as a historical cornerstone that has revolutionized our perspective on the branching field of robotics and rekindled its original ambition even before the term \emph{robot} was introduced. Although the debate on the exact terminology is still ongoing, and perhaps may never be closed; we propose a definition for \emph{soft robotics} applicable to this thesis based on an ensemble of prior literature:
-
-\terminology{Soft robotics}{is a robotics subclass with purposefully designed compliant elements embedded into their mechanical structure whose goal is to endow the robot with natural (or biological) motion or compliance.}
-
-The definition above is mostly adopted from Della Santina et al. \cite{}, yet modified to purposefully highlight the importance of soft materials to mimic biological motion -- also referred to as \emph{bio-mimicry}. The ambition of closely mimicking biological creatures is perhaps not often associated with the field of robotics in general, yet the inception of robotics can originally be found in bio-mimicry when regarding its rich history. We would like to implore the reader to embark with us this brief section into the history of (soft) robotics, as to show that the current trends of bio-mimicry in robotics finds roots in a period before classic robotics.
+The term \emph{soft robotics} is the abbreviated form of \emph{soft material robotics}. Although the words \emph{soft} and \emph{robotics} have a clear definitions independently, the collocation of the two has sparked vivid discussions and new idealogies within the robotics community for the past decades. %resulting in a dig touching the territories of the philosophical. 
+Consequently, the exponentially increasing scientific interest in soft robotics that boomed in the early 2010s, which may be seen as a historical cornerstone that has revolutionized our perspective on the branching field of robotics as a whole. %and rekindled its original ambition even before the term \emph{robot} was introduced. 
+Although the debate on its exact terminology is still ongoing, and perhaps may never be closed; we will discuss its rich history and propose a terminologies for \emph{soft robotics} and related topics in the field based an ensemble of prior literature. Naturally, the terms used in this thesis might deviate from literature, but are perhaps necessary to avoid disambiguity with this multidisciplinary topic. Let us introduce the following:
+%
+\terminology{\textbf{Soft robotics} is a robotics subclass with purposefully designed compliant elements embedded into their mechanical structure whose goal is to endow the robot with natural (or biological) motion or compliance.}{}
+%
+The definition above is adopted from the work of Della Santina et al. \cite{}, yet modified to highlight the importance of soft materials to mimic biological motion -- also referred to as \emph{bio-mimicry}. The ambition of closely mimicking biological creatures is perhaps not commonly associated with the field of robotics, given its importance in automation industry, yet the inception of robotics can originally be found in bio-mimicry when regarding its rich history. We would like to invite the reader to embark with us a brief section into a short history of (soft) robotics. Hereby showing that the current trends of bio-mimicry and soft robotics find roots in a periods way before its academic boom in the early 2010's.
+\vspace{0.085em}
 %
 \afterpage{
 \begin{figure}
 \hspace{-7mm}
-\includegraphics[width=1.11\textwidth]{./3_chapters/0_introduction/img/timeline.pdf}
-\caption{A brief timeline of the state-of-the-art of robotics throughout human history. \textit{(420 BC)} One of the earliest examples of bio-mimicry -- the flying mechanical bird. \textit{(1495)} The Mechanical Knight by Leonardo Da Vinci. \textit{(1738)} Digesting duck patent of Jacques de Vaucanson.  \textit{(1920)} The science-fiction play by Karel \v{C}apek on robots, who introduced the word \emph{robot} into the Oxford English Dictionary originally from his brother Josef \v{C}apek. \textit{(1965)} The first soft robot called Orm designed by V. Scheinman and L. Leifer. \textit{(1968)} The first redundant snake-like robot called Scripps tensor arm patented by V.C Anderson. }
+\includegraphics[width=1.11\textwidth]{./3_chapters/0_introduction/img/timeline_printer.pdf}
+\caption{A brief timeline of the state-of-the-art of bio-inspired robotics throughout human history. {(420 BC)} One of the earliest examples of bio-mimicry -- the flying mechanical bird. {(1495)} The Mechanical Knight by Leonardo Da Vinci. {(1954)} Unimate, the first industrial robot. {(1957)} McKibben actuator, an early soft actuator inspired by the human muscle used for rehabilitation purposes. {(1965)} Orm, the first soft robotic system designed by V. Scheinman and L. Leifer. {(1981)} Canadarm-1, early flexibile robotics employed on the International Space Station (ISS). {(1989)} The soft robotic gripper developed by Suzumori et al. (1989, \cite{Suzumori1991}), seen as one of the earliest \textit{academic} soft robot, developed before the word \emph{soft robot} existed. {(2010)} Festo's Bionic arm inspired by the elephant's trunk. (2012) Multi-gait soft robot capable of terrestial locomotion \cite{Choi2011}. (2016) Octo-bot, the first full autonomous 3D-printed soft robot that explores a stabilizing oscillator chemical network that produces preprogrammed repetitive motion \cite{Wehner2016}
+}
 \end{figure}
 \clearpage
 }
 
-One of the earliest examples of bio-mimicry is a mechanical wooden dove developed by mathematician Archytas of Tarentum in 350 BC. According to historians, the system was driven by compressed air or an internal steam-driven engine to achieve forward propulsion, capable of traveling distances of ~200 \si{\meter} (see note\footnote{It was unclear if the devices was attached to a rope, or autonomous flight was achieved.}). Archytas's invention could be considered as one of the earliest robotic systems -- a machine or device that operates automatically or by remote control -- whose main principles are somewhat analogous to nowadays \emph{drone} technology.  A millennium later, in the period of the High Renaissance, Leonardo da Vinci designed and constructed a mechanical knight around the 1490's. Such mechanical constructions were perhaps closer to conventional rigid robotics given our current robotics perspective. It is well-known that his work was built upon extensive anatomical research, which may have facilitated a deep understanding of the human body into the mechanical knight's robotic design.
+\textbf{(Biomimicry in early automata)} One of the earliest examples of bio-mimicry is a mechanical wooden dove developed by mathematician Archytas of Tarentum in 350 BC. According to historians, the system was driven by compressed air or an internal steam-driven engine to achieve forward propulsion. It was believed to achieve traveling distances of ~200 \si{\meter} (see note\footnote{It was unclear if the devices was attached to a rope, or autonomous flight was achieved.}). Although might argue its lacks to sophistication to be considered a \emph{robot}, Archytas's invention could be considered as one of the earliest robotic aviation, as its mechanical principles of achieving motion are undoubtedly similar to nowadays \emph{drone} technology. A millennium later, in the period of the High Renaissance, Leonardo da Vinci designed and constructed a mechanical knight around the 1490's -- and is thought to be the earliest robotic system. The mechanical constructions are perhaps closer to classical robots given our current perspective, and it was capable of various complex motions using preprogrammed sequences. It is well-known that his work was built upon extensive anatomical research, which may have facilitated a deep understanding of the human body into the mechanical knight's robotic design. Given the work of Archytas and Da Vinci, biomimicry played a paramount role in the development of robot technologies before the term \emph{robot} was even introduced.
 
-\par In the 1920's, shortly after the second industrial revolution (1870 - 1914) and the first world war (1914), the first usage of the work \emph{robot} appeared -- originally meaning 'forced labor by serfs' (\ie, peasants) derived from the Czech word \emph{robota}. An common misconception is that robot implies slave, nonetheless, its origin is somewhat related. The word was popularized by Karel \v{C}apek in his play R.U.R. (Rossum’s Universal Robots) that involves an inventor named Rossum who discovers the secret of creating human-like machines. In his play, Rossom's robots assisted or fully alleviated mankind from any labor. Through human's ambition to assimilate man and machine, the robots ultimately gained the capacity for emotions. Shortly after, the robots, who were created to serve humans, have come to dominate mankind completely. The word \emph{robotics} was later solidified by Isaac Asimov, adapting the term from \v{C}apek. These works of science fiction are perhaps the fundamental groundwork of modern robotics which have led to the base practices of robotics and its corresponding academic field.
+%\par In the 1920's, shortly after the second industrial revolution (1870 - 1914) and the first world war (1914), the first usage of the work \emph{robot} appeared -- originally meaning 'forced labor by serfs' (\ie, peasants) derived from the Czech word \emph{robota}. An common misconception is that robot implies slave, nonetheless, its origin is somewhat related. The word was popularized by Karel \v{C}apek in his play R.U.R. (Rossum’s Universal Robots) that involves an inventor named Rossum who discovers the secret of creating human-like machines. In his play, Rossom's robots assisted or fully alleviated mankind from any labor. Through human's ambition to assimilate man and machine, the robots ultimately gained the capacity for emotions. Shortly after, the robots, who were created to serve humans, have come to dominate mankind completely. The word \emph{robotics} was later solidified by Isaac Asimov, adapting the term from \v{C}apek. These works of science fiction are perhaps the fundamental groundwork of modern robotics which have led to the base practices of robotics and its corresponding academic field.
 
-Only three decades later, in the 1950's, the first robotic arm called the 'Unimate' was employed in industry. The robot was used for manipulating metal die-casts and welding these to welding these to the main body of automobiles. Interestingly, the robot explored both electric as hydraulic-mechanical actuation, similar to nowadays popular Atlas robot (2013) by the company Boston Dynamics. Note that these robots were still controlled remotely, and rudimentary levels of closed-loop control were applied then. The 1950's also brought forth the McKibben actuators developed by Joseph Laws McKibben -- a well-known work in the field of soft robotics. These McKibben actuator consists of an inflatable inner bladder enveloped with a double-helical weave. When pressurized, the fluidic actuator converted radial expansion into uni-axial contraction since weave inhibited extensive \emph{ballooning} -- a term for undesired radial expansion. The McKibben actuators are perhaps seen as one of the first fundamental technologies that enabled soft robotics and to this day it remains a framework for many soft artificial muscle. Nevertheless, besides fluidics, there exist many other technologies employed in soft robotic motion that predate the invention of the McKibben actuator: such as thermal or chemical expansion/contraction, re-alignment of crystals, di-electric elastomers, magnetism, and naturally electro-mechanical actuation. For instance, the earliest system resambling Dielectric Elastomer Actuators (DEA) were developed W. C. R\"{o}ntgen in 1880. Although these mechanisms do not fall under the class soft robot, they are; however, categorized as soft actuators. We like to emphasize here the difference between soft actuators and soft robots in view of a terminology corresponding with the thesis:
+Three decades later, in 1954, George Devol filed a patent describing an autonomous robotic machine that could be preprogrammed to execute step-by-step motions \cite{Mickle2008}. The machine was designed to reduce the workload on the manufacturing work floor, with a major focus on mimicking repetive human tasks. A robot was prototyped in 1958 under the name \emph{Unimate}. By 1961, the Unimate series became the first mass produced robotic arm for factory automation. The Unimate was used for manipulating metal die-casts and welding these to welding these to the main body of automobiles. In doing so revolutionizing the car industry shortly after. After its production, Devol and his partner Joseph Engelberger started a company called \emph{Unimation} in 1962. 
+%Although revolutionary for its time, and shaped the perspective on benefits of robotics, the word \emph{robot} was already introduced 30 years earlier by Karel \v{C}apek, before the word \emph{robotics} was coined by Isaac Asimov in his book \textit{I, Robot} (1951). 
+Interestingly, the Unimate explored both electric as hydraulic-mechanical actuation, a practice we see in nowadays very similar Atlas robot humanoid (2013) from company Boston Dynamics. Note that the robot were still controlled remotely, and rudimentary low-level controllers were applied then. Much later (1969), Victor Scheinman (student at the time) created the Stanford Arm, recognized as the first electronic computer-controlled robotic arm because the Unimate's instructions were stored on a magnetic drum. He ultimately developed the PUMA robot in 1972 -- the successor of the Unimate -- during his employment at Unimation. Please keep Scheinman in mind. \vspace{0.085em}
+
+(\textbf{Early robotics with flexibility}) The early 1950's also brought forth the McKibben actuators developed by Joseph Laws McKibben (1957) -- a well-known work in the field of soft robotics. Surisingly, these actuators were developed three years after the release of the Unimate series. The McKibben actuator consisted of an inflatable inner bladder enveloped with a double-helical weave. When pressurized, the fluidic actuator converted radial expansion into uni-axial contraction since weave inhibited extensive \emph{ballooning} -- a term for undesired rapidly-accelerated volumetric expansion. A schematic representation of the McKibben actuator and the effect of ballooning are shown in Figure \ref{fig:C0:mckibben}. In modern soft robotics, ballooning is an (often undesired)nonlinear effect where the hyper-elastic pressure vessel exhibits strain-softening after a critical point is reached. As a result, further increase of the pressure leads to an exponential growth in volume, which ultimately leads to actuator tearing. At the stage of ballooning, mechanical performance significantly drops and even produces adverse effects, like actuator reversal. McKibben solve this problem using a combination of soft and inextensible materials.
+
+The McKibben actuators are perhaps one of the first fundamental technologies that enabled soft robotics and to this day it remains a framework for many soft artificial muscle. Nevertheless, besides fluidics, there exist many other technologies employed in soft robotic motion that predate the invention of the McKibben actuator: such as thermal or chemical expansion/contraction, crystal re-alignment, di-electric elastomers, magnetism, and naturally electro-mechanical actuation. An early example of popular actuation techniques in soft robotics is the Dielectric Elastomer Actuators (DEA) developed by Wilhelm R\"{o}ntgen in 1880. Although such system are not categorized as soft robots, they are; however, categorized as soft actuators. We like to emphasize here the difference between soft actuators and soft robots in view of a terminology relevant to the thesis:
+
+\terminology{\textbf{Soft actuators} are controllable flexible actuation units of the constitutive soft robotic system that through external stimuli allow for motion, or change in compliance and/or texture.}{}
 %
-\terminology{Soft actuators}{ are controllable flexible components of the constitutive soft robotic system that through external stimuli allow for motion or adaptability of compliance and/or texture.}
 %
-\noindent The terminology above attempts to address a common ambiguity in the field of soft robotics, that being interchangeably usage the term soft actuator and soft robot.
+\noindent The terminology above attempts to address a common ambiguity in soft robotics, that being interchangeably use of the word soft actuator and soft robot. Let us also introduce the dual of soft actuators -- namely the \emph{soft sensor} that relate measurements to the motion of soft actuators:
+%
+\begin{figure}[!t]
+  %\hspace*{-1mm}
+  \ifx\printFigures\undefined
+  \else
+  \centering
+  \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_1_1.tex}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_bellow.tex}
+  \fi
+  \vspace{-3mm}
+  \caption{Working principle of the pneumatic McKibben actuator with the internal volume \data{Matlab1} in \si{\milli \liter}, and the end-effector displacement \data{Matlab2} in \si{\milli \meter} and \dashdata{Matlab2} is the point at which ballooning occurs.
+  %\dotdata{Matlab2}
+  \label{fig:C0:mckibben}}
+\end{figure}
+%
+\terminology{\textbf{(Proprioceptive) soft sensors} are (highly)-flexible measurements units embedded into soft robotic system that through external stimuli measure the (local) changes of the system. Softness here implies that the sensor minimally alters the mechanical behavior of the full system. }{}
 
-In 1965, the work of V. Scheinman and L. Leifer proposed a novel pneumatic robot arm named Orm -- the Norwegian word for snake. To the author's knowledge, this pneumatic robot is one of the first soft robots -- and suprisingly the system predates the first rigid redundant snake-like robots (1968). Similar to the anatomy of the snakes, the system featured 28 rubber pneumatic artificial muscle (\ie, bellows) distrubuted along the backbone (\ie, skeletal support) of the robot. The network of artificial muscles were sandwiched between steel plates to prevent disalignment. The soft robotic system could undergo three-dimensional movement by inflation or deflation of embedded pneumatic network, leading to a rich set of movements unseen in earlier robotics. The soft robot can achieve bending in any preferred direction by differential pressurization of each channel, and elongation through synchronized actuation. However, according to \cite{}, the positional accuracy of the system was poor, yet the concept of pneumatically-driven soft arms has continued. Two years later, In 1968, V.C. Anderson developed and patented one of the earliest hyper-redundant robotic manipulators.
+Nearly a decade after the invention of the McKibben actuator, Victor Scheinman and Larry Leifer proposed an {novel} pneumatic robotic arm named the \emph{Orm} -- Norwegian for snake. To the author's knowledge, this robot was the first soft robot, and surprisingly the system predates any rigid redundant snake-like robots, like the Scripps tensor arm by Anderson (1968). Similar to the anatomy of the snakes, the system featured 28 rubber pneumatic artificial muscle (\ie, bellows) distributed along the backbone (\ie, skeletal support) of the robot. The network of artificial muscles were sandwiched between steel plates to prevent misalignment. Note that this technology is analogous the pneumatic muscles of McKibben, where a fiber weave was used to prevent ballooning. Yet, contrary to a single McKibben actuator, the soft robotic system could undergo three-dimensional movement by inflation or deflation of embedded pneumatic network. This led to a rich set of movements unseen in earlier rigid robotics. As an illustrative example, we provided the mechanics of the Orm soft robot in Figure \ref{fig:C0:ormrobot}. The soft robot could achieve bending in any preferred direction by differential pressurization of each channel, and elongation through synchronized actuation. Most notably, comparing the volume vs. strain response of the Orm w.r.t the McKibben actuator, \ie. Figure \ref{fig:C0:mckibben} against \ref{fig:C0:ormrobot}, the actuation response is noticeably more linear in nature. Although not documented at the time, the comparison highlight the importance of structural geometry of the pneumatic network.
 
+
+Nevertheless, according to \cite{}, the positional accuracy of the system was poor, yet the concept of pneumatically-driven soft arms has continued. Three years later, in 1968, an improved hyper-redundant robot manipulator was proposed and patented by Anderson. Instead of pneumatics, which was deemed slow and had limited positional accuracy, Anderson proposed an array of tendons that were connected to rigid discs distributed along the flexible backbone of the robot. 
+
+\afterpage{
+\begin{figure}[!t]
+  %\hspace*{-1mm}
+  \ifx\printFigures\undefined
+  \else
+  \centering
+  \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_orm_elong.tex}
+  \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_orm_bend.tex}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_bellow.tex}
+  \fi
+  \vspace{-6mm}
+  \caption{Working principle of the Orm robotic manipulator with the internal volume \data{Matlab1} in \si{\milli \liter}, and the end-effector displacement \data{Matlab2} and bending-angle \data{Matlab4} in \si{\milli \meter} and \si{\degree}, respectively. Observe that the response is significantly more linear than McKibben actuators in Figure \ref{fig:C0:mckibben}, emphasizing the importance of geometry.
+  %\dotdata{Matlab2}
+  \label{fig:C0:ormrobot}}
+\end{figure}
+%
+\begin{figure}[!t]
+  %\hspace*{-1mm}
+  \ifx\printFigures\undefined
+  \else
+  \centering
+  \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_mckibbenvsorm.tex}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_bellow.tex}
+  \fi
+  %\vspace{-6mm}
+  \caption{}
+\end{figure}
+%
+\clearpage
+}
+
+\newpage
 % \begin{figure}[t]
 % \centering
 % \includegraphics[width=0.98\textwidth]{./3_chapters/0_introduction/img/modern_softrobots.png}
@@ -49,8 +113,11 @@ The first robotic manipulator arm used in the orbital environment was the Space 
 
 First soft robot: Victor Scheinman and Larry Leifer developed an air-powered robot arm called Orm, which is the Norwegian word for snake.
 
-\begin{itemize}
-  \item . F. Shulte, "The Characteristics of the Mckibben Artificial Muscle", The Application of External Power in Prosthetics and Orthetics, pp. 94-115, 1960.
-  \item A. Chen, R. Yin, L. Cao, C. Yuan, H. K. Ding and W. J. Zhang, "Soft robotics: Definition and research issues," 2017 24th International Conference on Mechatronics and Machine Vision in Practice (M2VIP), 2017, pp. 366-370, doi: 10.1109/M2VIP.2017.8267170.
-  \item  W. C. R\"{o}ntgen, “Ueber die durch Electricität bewirkten Form—und Volumenänderungen von dielectrischen Körpern,” Ann Phys Chem, no. 11, pp. 771-786, 1880.
-\end{itemize}
+% \begin{itemize}
+%   \item . F. Shulte, "The Characteristics of the Mckibben Artificial Muscle", The Application of External Power in Prosthetics and Orthetics, pp. 94-115, 1960.
+%   \item A. Chen, R. Yin, L. Cao, C. Yuan, H. K. Ding and W. J. Zhang, "Soft robotics: Definition and research issues," 2017 24th International Conference on Mechatronics and Machine Vision in Practice (M2VIP), 2017, pp. 366-370, doi: 10.1109/M2VIP.2017.8267170.
+%   \item  W. C. R\"{o}ntgen, “Ueber die durch Electricität bewirkten Form—und Volumenänderungen von dielectrischen Körpern,” Ann Phys Chem, no. 11, pp. 771-786, 1880.
+% \end{itemize}
+
+
+(\textbf{Soft robotics in academia})

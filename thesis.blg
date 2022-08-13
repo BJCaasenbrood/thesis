@@ -2,52 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: ieeetr.bst
+I found no \citation commands---while reading file thesis.aux
 Database file #1: 5_bibliography/MyBib.bib
-Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 265 of file 5_bibliography/MyBib.bib
-Warning--empty booktitle in Duriez2013
-Warning--empty publisher in Murray1994
-Warning--empty journal in DellaSantina2021
-Warning--empty booktitle in SorotokiCode
-You've used 30 entries,
+You've used 0 entries,
             1876 wiz_defined-function locations,
-            684 strings with 9754 characters,
-and the built_in function-call counts, 9376 in all, are:
-= -- 954
-> -- 366
+            477 strings with 3482 characters,
+and the built_in function-call counts, 20 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 133
-- -- 103
-* -- 691
-:= -- 1293
-add.period$ -- 33
-call.type$ -- 30
-change.case$ -- 27
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 469
-empty$ -- 845
-format.name$ -- 103
-if$ -- 2281
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 33
-newline$ -- 96
-num.names$ -- 30
-pop$ -- 85
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 343
+skip$ -- 1
 stack$ -- 0
-substring$ -- 750
-swap$ -- 215
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 94
-width$ -- 32
-write$ -- 301
-(There were 5 warnings)
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)
