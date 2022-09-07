@@ -1,0 +1,38 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.967\textwidth,
+height=0.226\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+axis on top,
+xmin=0,
+xmax=3000,
+tick align=outside,
+y dir=reverse,
+ymin=0,
+ymax=700,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=2849.5, ymin=0.5, ymax=650.5] {fig_actuation_types-1.png};
+\node[right, align=left, font=\color{white}]
+at (axis cs:10,60) {\textbf a};
+\node[right, align=left, font=\color{white}]
+at (axis cs:805,60) {\textbf b};
+\node[right, align=left, font=\color{white}]
+at (axis cs:1305,60) {\textbf c};
+\node[right, align=left]
+at (axis cs:1787,60) {\textbf d};
+\node[right, align=left, font=\color{white}]
+at (axis cs:2312,60) {\textbf e};
+\end{axis}
+\end{tikzpicture}%

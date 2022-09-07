@@ -189,7 +189,7 @@
 {\filleft\bfseries}
 {\filleft\vspace*{-5mm}\@chapnumfont\textcolor{titlecolor}{\thechapter}} % Add negative vspace to move header higher on the page
 {-24pt}
-{\Huge\textcolor{titlecolor}}
+{\huge\textcolor{titlecolor}}
 
 \titleformat{\part}[display]
 {\centering\bfseries}

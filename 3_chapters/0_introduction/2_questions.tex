@@ -1,18 +1,29 @@
-\section{Academic trends in soft robotics}
-%
+\clearpage
+\section{Modern trends and challenges in soft robotics}
+Given the history of soft robots detailed earlier, let us dive into some dominant research topic in soft robotics. To ease our review here, we limit ourselves to topics related to $i)$ design and fabrication, and $ii)$ modelling and control.
+
+\subsection{Tailoring soft actuator design}
+As the name soft robots arises from its use of soft materials, it follows that design and fabrication using soft materials play a huge role in their technological development. Contrary to rigid robots, many soft robots explore whole body movement rather than localized regions of the robot undergoing motion -- called \textit{joints}. In classic robotics, robots are composed of a countable number of rigid links and joints \cite{Spong2006,Murray1994,Corke2011}, either arranged in series or parallel. Together they span a workable range of motion called the \textit{workspace} \cite{Spong2006}. Focussing on robot manipulators, whose base is often structurally fixated, the workspace for rigid robots can be obtained through a system of kinematics, often derived through a set of geometrical equalities. Rigid manipulators often have a bounded workspace (assuming actuation limits). In robotic locomotion, similar kinematic descriptions can be obtained for the legs and feet, with the exception of an additional free-floating base. However, in these systems, the bounds of the workspace are of less interest, rather the different \textit{gait cycles} that are possible due the configuration of joints and link determine the system's locomotion. 
+
+%However, contrary to manipulators, an additional global free-floating frame is introduced (\eg, a coordinate frame at the center of mass) that describe the global coordinates of the full robotic body. As such, for robotic locomotion, the workspaces are often unbounded and thus carry less importance. Nonetheless, their structural layout of joints and links play a crucial role in energy consumption. High efficiency in the cyclic exchange in potential and kinetic energy is hugely beneficial to the duration of locomotion. In any case, either manipulators and locomotion machines, the topological layout of the links and joints are of paramount importance.
+Returning to soft robots, such classic descriptions \textit{joints}, \textit{workspace} and \textit{gait cycles} also apply here. However, for many soft robots, their description is less exact. The high flexibility allows for many non-restricted joint displacements which make deriving an exact kinematic description challenging. The shape of workspace and locomotion patterns are majorly influenced by geometry of the soft actuator, its flexibility modes, and how forces are transferred with the continuum soft body. Controlling the motion within soft actuation -- so to speak reducing parasitic mobility -- is an active topic in soft robotics research for decades. 
+
+(\textbf{Engineering principles for soft actuators}) In the past decade, researcher have developed various techniques of exploiting the high-elasticity of soft materials for \textit{controllable} actuation. One key development, similar working principles to the pneumatic muscle groups (see \cite{Mckibben,Morin1953} or Figure \ref{fig:C0:mckibben}), are Soft Pneumatic Actuators (SPAs). They are also referred to as Fluidic Elastomeric Actuators (FEAs). SPAs undergo similar mechanics akin to McKibben actuators \cite{Mckibben} or Morin actuators \cite{Morin1953}, yet they envelop a diverse collection of motion besides uniaxial. Examples include: contraction and elongation \cite{Yang2016}, axial growth \cite{Hawkes2017}, bending \cite{bionic}, helical and twisting, and a hybridization of all the aforementioned motions.
+An example of soft actuators capable of contraction is the Vacuum-Actuated Muscle-inspired Pneumatic (VAMP) structures by Yang et al. (2016, \cite{Yang2016}). Their work proposes an tailored geometrical structure embedded into an soft elastomer medium that is highly sensitive towards buckling. When subjected to a sufficiently large negative differential pressure, the internal structure undergoes a (reversible) mechanically instable leading to uniaxial contraction we see in Figure \ref{fig:C0:actuationtypes}. Their work is inspired by a similar buckling behavior of patterned elastomer \cite{Bertoldi2008,Mullin2007,Shim2013Aug} when subjected to axial loads. These muscle-inspired vacuum soft actuators are fast, produce stable, repeatable motion; and more importantly, explore structural geometry to reduce parasitic motion. An example of soft bending actuators is the FLIP-FLOP system.  Akin the ORM system, it has three pressure chambers embedded into a soft cylindrical-shaped elastomer. To prevent ballooning, inextensible rings are placed orthogonal to the principle axis of the backbone.
+
 \begin{figure}[!t]
-    %\hspace*{-1mm}
     \ifx\printFigures\undefined
     \else
     \centering
-    \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_1_3.tex}
+    \hspace{2mm}
+    \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_actuation_types.tex}
     \fi
-    %\vspace{-3mm}
-    \caption{Cumulative number of (scientific) publications on the topic of \emph{soft robots} or related topics. Data acquired from the Web of Sciences data repository.}
-    \label{fig:C0:publicationhistory}
+    \vspace{-3mm}
+    \caption{Various examples of continuum-bodied joint mobilities in soft actuation. (a) Soft actuator undergoing contraction by Yang et al. (2016, \cite{Yang2016}). (b) Set of serial-chain of bending soft actuator (c) Soft tentacle composed of twisting soft actuators. (d) Vine-inspired soft actuators capable of growth. (e) Soft manipulator composed of hybrid bending and twist actuators. }
+    \label{fig:C0:actuationtypes}
   \end{figure}
   %
 
-\subsection{Design with soft materials}
+(\textbf{Exploring optimization and evolutionary algorithms})
 
-\subsection{Soft robots: closing the loop}
+\subsection{Gaining performance through modelling and control}
