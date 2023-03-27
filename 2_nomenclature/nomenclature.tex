@@ -5,6 +5,7 @@
 \chapter*{Nomenclature}
 \addcontentsline{toc}{chapter}{Nomenclature}
 \markboth{Nomenclature}{Nomenclature}
+\vspace{-5mm}
 
 %%%% GREEK *********************************************************************
 \section*{Vector and matrix notations}
@@ -14,7 +15,7 @@
 \AddSymbol{$\mat{X}$}{Matrix notation}
 \AddSymbol{$\ten{X}$}{Tensor notation}
 \AddSymbol{$\mathcal{Q}$}{Manifold}
-\AddSymbol{$T_{\mathcal{Q}}$}{Tangent space}
+\AddSymbol{$T_{\mathcal{Q}}$}{Tangent space of $\mathcal{Q}$}
 \end{Nomen}
 
 %%%% ROMAN *********************************************************************
@@ -35,16 +36,16 @@
 \AddSymbol{$\Rsp$}{Strictly positive reals}
 \AddSymbol{$\Rp$}{Positive reals}
 \AddSymbol{$\N$}{Set of natural numbers}
-\AddSymbol{$\Ts$}{Finite time horizon}
-\AddSymbol{$\Xs$}{1-dimensional spatial set or domain (\ie, line)}
-\AddSymbol{$\Vs$}{3-dimensional spatial set or domain (\ie, volume)}
+\AddSymbol{$\Ts$}{Compact time domain}
+\AddSymbol{$\Xs$}{Compact set in $\R$ (\ie, line segment)}
+\AddSymbol{$\Vs$}{Compact set in $\R^2$ or $\R^3$ (\ie, volume)}
 \end{Nomen}
 
 \section*{Groups}
 \begin{Nomen}
-\AddSymbol{$\Id$}{Identity}
+\AddSymbol{$\Id$}{Identity group}
 \AddSymbol{$\SO{3}$}{Lie group of rotations on $\R^3$  (\ie, special orthonormal matrices)}
-\AddSymbol{$\SE{3}$}{Lie group of homogeneous transformations on $\R^n$}
+\AddSymbol{$\SE{3}$}{Lie group of homogeneous transformations on $\R^3$}
 \AddSymbol{$\seg{3}$}{Lie algebra of $\SO{3}$}
 \AddSymbol{$\sog{3}$}{Lie algebra of $\SE{3}$}
 \end{Nomen}
@@ -74,8 +75,14 @@
 \AddSymbol{$\dim$}{Dimension of vector}
 \AddSymbol{$\trace$}{Trace of matrix}
 \AddSymbol{$\textrm{diag}$}{Diagonal of matrix}
-\AddSymbol{$\|\cdot\|_\maT$}{Mean absolute norm}
+\AddSymbol{$\textrm{blkdiag}$}{Block diagonal of matrices}
+\AddSymbol{$\textrm{Ad}_{(\cdot)}$}{Adjoint action on Lie group}
+\AddSymbol{$\textrm{ad}_{(\cdot)}$}{Adjoint action on Lie algebra}
+\AddSymbol{$\|\cdot\|$}{Euclidean norm}
+\AddSymbol{$\|\cdot\|_X$}{Matrix norm}
 \AddSymbol{$\|\cdot\|_\rmsT$}{Root-mean-square norm}
+\AddSymbol{$\lfloor \,\cdot\, \rfloor_n$}{Floor operator}
+\AddSymbol{$\lceil \,\cdot\, \rceil_n$}{Ceiling operator}
 \end{Nomen}
 
 
@@ -83,10 +90,11 @@
 \section*{Acronyms}
 \begin{Nomen}
 \AddSymbol{CoM}{Center of mass}
-\AddSymbol{CoR}{Coefficient of restitution}
 \AddSymbol{FEM}{Finite element method (or model)}
+\AddSymbol{MDE}{Matrix differential equation}
 \AddSymbol{ODE}{Ordinary differential equation}
 \AddSymbol{PDE}{Partial differential equation}
+\AddSymbol{PMDE}{Partial matrix differential equation}
 \AddSymbol{PneuNet}{Pneumatic network}
 \AddSymbol{SRM}{Soft robotic manipulator}
 \AddSymbol{TopoOpt}{Topology Optimization}

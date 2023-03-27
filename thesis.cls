@@ -15,7 +15,6 @@
 % Based on class by Bart Besselink (BART), Benjamin Biemond (BB)
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-%\ProvidesClass{mrthesis}[2018/11/26 PhD thesis class - Mark Rijnen]
 \ProvidesClass{thesis}[2021/02/09 PhD thesis class - Brandon Caasenbrood (adopted from Mark Rijnen)]
 
 %%% COLOR/STYLE OF THESIS %%%
@@ -39,7 +38,7 @@
 \ProcessOptions\relax
 
 %%% LOAD REPORT CLASS %%%
-\LoadClass[10pt,openright,twoside]{report}
+\LoadClass[30pt,openright,twoside]{report}
 
 %%% USE GEOMETRY PACKAGE TO SET PAPER SIZE %%%
 % set options for geometry package
@@ -89,13 +88,13 @@
 \newlength{\thumbtopmargin}         % margin between top of page and first thumb index tag
 \newlength{\thumbsep}               % separation between edge of page and start of semi-circle
 \ifprint
-\setlength{\thumbsep}{7mm}          % add 3 mm for bleed
-\setlength{\thumbheight}{1.467cm}
-\setlength{\thumbtopmargin}{1.3cm}
+\setlength{\thumbsep}{4mm}          % add 3 mm for bleed
+\setlength{\thumbheight}{1.75cm}
+\setlength{\thumbtopmargin}{4.3cm}
 \else
 \setlength{\thumbsep}{4mm}
-\setlength{\thumbheight}{1.586cm}
-\setlength{\thumbtopmargin}{0.9cm}
+\setlength{\thumbheight}{1.75cm}
+\setlength{\thumbtopmargin}{4.3cm}
 \fi
 \newcommand{\thumbeven}[1]{
     \begin{tikzpicture}[remember picture, overlay]
@@ -203,5 +202,4 @@
 
 %%% MACROS AND NEW COMMANDS %%%
 \newcommand{\chapterabstract}[1]{\noindent{\bf Abstract -}\ {\small{#1}} \normalsize \vfill}
-
 \newcommand{\introabstract}[1]{\noindent{\bf Abstract -}\ {\small{#1}} \normalsize}

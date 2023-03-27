@@ -1,28 +1,49 @@
 %!TEX root = ../../thesis.tex
+\section{Experimental platform}
+\noindent Before invest, we detail the experimental setup and control platform of the soft robotic system. Since sensing is a challenging issue in soft robotics, due to large distributed deformations, a combination of sensors were used to recover an estimate of the states $\q \in \mathcal{Q}$. A full overview of the setup is given in Figure \ref{fig:C2:setup}. First of all, we employed a 6-DOF inertial measurement unit (MPU-6050, \texttt{InveSense}) that measures the angular displacement of the soft robot's end-effector (\ie, $\sigma = L$). Through on-board sensor fusion, the bending angle of the soft robot can be recovered, \ie, $\beta = \kappa l$. Since the bending angle alone is not sufficient to decouple the curvature and elongation, additional sensing is required. Consequently, we use a stereo-vision depth camera (RealSense D435, \texttt{Intel}) with an infrared dot projector and RGB camera module. A spherical optical marker is attached to the end-effector of the soft robot, whose relative position can be recovered using a combination of depth-sensing and image post-processing with a Hough-space circle transformation. To retrieve a global reference frame of the vision system, four $30\!\times \!30$ \si{\milli \metre} Aruco marker are uniformly distributed whose location and orientation can be found using the \texttt{opencv-python.py} library. We show the implementation of the optical vision system and its post-processing in Figure \ref{fig:C2:setupmeasure}. Through trigonometry and the measured bending angle $\beta$, an filter measurement of the position vector $y = \tvec{\gamma}_L$ can be recovered. Given the analytic expressions for the orientation and position in \eqref{eq:C2:phi_exact} and \eqref{eq:C2:pos_exact}, an inverse Jacobian kinematic solver is employed to recover an estimate of the state vector, \ie, $\tvec{q}_{\textrm{dyn}} = \textrm{argmin}_{\q} \lVert \, \tvec{\gamma}_L - \gammaB(L,\q) \rVert_2$. During each experimental trail, it was made sure the soft robotic body does not occlude the optical marker.
+
+As for the pneumatic actuation, an array of proportional-pressure regulators (VEAB-B-D16, \texttt{Festo}) was used with an active pressure range of $-0.1 \;\text{MPa}\, < \uB(t) \le 0.1 \; \textrm{MPa}$, which simultaneously allow for pressure measurements. These measurements are fed into the (quasi-static) model to also recover a quasi-static estimate of the states $\tvec{q}_{\textrm{qs}}$. Then, the dynamic estimates $\tvec{q}_{\textrm{dyn}}$ and the quasi-static pressure-based estimates $\tvec{q}_{\textrm{qs}}$ are fused using an ordinary complementary filter. The control and data acquisition are done using a {Raspberry Pi 4} (2GB). 
+
+%
+\afterpage{%
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=0.99\textwidth]{fig_C2_setup.pdf} 
+  \caption{General overview of the experimental platform for the testing and development of the 3-DOF soft manipulator. \tcircle{1} Close-up of the {RealSense D435} stereo-vision depth camera. \tcircle{2} Soft continuum manipulator with pressure inputs $\uB = (u_1,\,u_2,\,u_3)^\top$, a MPU-6050 Inertial Measurement Unit (IMU) to measure the end-effector angle $\beta$, and a color-coded optical marker to recover $\gammaB_L$, and four Aruco markers to recover $\Phi_0$ and $\gammaB_0$. \tcircle{3} Overview of full setup with the array of three VEAB-B-D16 pressure regulators. \label{fig:C2:setup}}
+\end{figure}
+\clearpage
+}
+%
+\afterpage{
+\begin{figure}[!t]
+  \centering
+  \input{./3_chapters/2_chapter/img/fig_C2_setup_measure_V2.pdf_tex}
+  %\includegraphics[width=0.99\textwidth]{fig_C2_setup_measure_V2.pdf} 
+  \caption{General overview of the optical vision system used to estimate the state variables $\q$. \tcircle{1} First, an RBG image is processed using a Circular Hough transformation filtering for circles with a radius 32 \texttt{pix}, it has a global maxima at the optical marker. \tcircle{2} Then, a sample of the depth camera is generated. \tcircle{3} Finally, all sensor data is combined using a sensor fusion algorithm of depth, RGB camera, input pressures and IMU data, resulting in an accurate estimate of soft manipulator's end-effector $\tvec{\gammaB}(L,\tvec{q})$. \label{fig:C2:setupmeasure}}
+\end{figure}
+\clearpage
+}
+
+\section{Numerical and experimental implementation}
 \noindent In this section, we will discuss the simulation results of the dynamic model \eqref{eq:C2:dynamic_model}, the passivity-based controller \eqref{eq:C2:tau}, and the adaptive law \eqref{eq:C2:update}. To illustrate effectiveness and performance of the approach, we segregate our analysis into several study-cases of various complexity. First, focusing on the physical one-link soft robot in Figure \ref{fig:C2:soft_robot} ($N = 1$), we investigate the unforced system's equilibria and their corresponding stability. In continuation, we compare the simulated trajectories of the dynamical model with experimental data for natural oscillations, forced pneumatic inputs, and external loading conditions; where we also highlight contribution of the hyper-elastic FEM-driven material model. Second, to illustrate the flexibility and computational efficiency of the numerical framework, we extend the one-link model to a multi-link model with $N = 6$ soft-bodied links.
 
-The numerical solutions to the ordinary differential equations in \eqref{eq:C2:dynamic_model} together with \eqref{eq:C2:tau} and \eqref{eq:C2:update} are computed using the aforementioned MDE integration scheme which is developed in \matlab, and the underlying code can be found at Caasenbrood et al. (2020, \cite{Caasenbrood2021}). The software architecture is compactly written as Object-Oriented class labeled under \texttt{./src/Model.m} that enables a minimal programming interface to set-up various soft robotic simulation models easily. 
+The numerical solutions to the ordinary differential equations in \eqref{eq:C2:dynamic_model} together with \eqref{eq:C2:tau} and \eqref{eq:C2:update} are computed using the aforementioned MDE integration scheme which is developed in \matlab, and the underlying code can be found at Caasenbrood et al. \cite{Caasenbrood2021}. The software architecture is compactly written as Object-Oriented class labeled under \texttt{./src/Model.m} that enables a minimal programming interface to set-up various soft robotic simulation models easily. 
 The simulation results provided in this section can be reproduced using the open-source \sorotoki package found at \cite{SorotokiCode}
 %
-%\subsection*{Example 1: Natural dynamics -- One-link soft robot}
-\begin{example}[Natural dynamics -- One-link soft robot]
-\end{example}
-The following physical parameters are chosen for the soft robot: the mass $m_0 = 17.3$ g, the relaxation length $L = 64.4$ mm. The material parameters for hyper-elasticity and visco-elasticity models are chosen identical to Table \ref{tab:C2:elastic_parameters}. For the additional viscous material behavior, the Rayleigh damping matrix and the creep compliance matrix are chosen a follow:
+
+\textbf{Natural dynamics -- One-link soft robot:} The following physical parameters are chosen for the soft robot: the mass $m_0 = 17.3$ g, the relaxation length $L = 64.4$ mm. The material parameters for hyper-elasticity and visco-elasticity models are chosen identical to Table \ref{tab:C2:elastic_parameters}. For the additional viscous material behavior, the Rayleigh damping matrix and the creep compliance matrix are chosen a follow:
 %
 \begin{align}
 \mat{R} & = \begin{pmatrix} 0.01 & 0 & 0 \\ 0 &  1.05\pwr{-5} & 0 \\ 0 & 0 & 1.05\pwr{-5} \end{pmatrix}; \notag \\[0.45em]
 \mat{K}_{\lambda} & = \begin{pmatrix} 502.3 & 0 & 0 \\ 0 &  1.53\pwr{-2} & 0 \\ 0 & 0 & 1.53\pwr{-2} \end{pmatrix}. \notag
 \end{align}
 %
-\noindent We stress that the values for the Rayleigh damping and creep compliance shown above are identified empirically {through} open-loop measurements, similar to the creep coefficient provided in Table \ref{tab:C2:elastic_parameters}.
+\noindent \editl We stress that the values for the Rayleigh damping and creep compliance shown above are identified empirically {through} open-loop measurements, similar to the creep coefficient provided in Table \ref{tab:C2:elastic_parameters}.  We will explain how these coefficients are derived later in this chapter. \editr
 
 %The code for the one-link simulation model can be found under \texttt{./mdl\_1\_natural.m}.
 %
 
-\newpage
-First, we investigate the existence and the stability of the equilibria of the unforced system. If the system is at rest (i.e., $\dq = 0$, $\ddq = 0$), then by definition there are no conservative forces acting on the system. Thus, for any equilibrium point ${\q}_0$ it holds that $\nabla \mathcal{U}({\q}^\star) \equiv \vec{0}$. If $ \mathcal{U}({\q}^\star) \equiv E_0$ is a local minimum, then the equilibrium is deemed stable. Any small disturbance will result in a new energy-state $E_1$ and will consequently bring the system in motion. However, regarding $E_0$ is a local minimum, the system will remain in a neighborhood of ${\q}^\star$ and eventually converge towards its nearest low-state energy $E_0$. If $\mathcal{U}({\q}^\star) \equiv E_0$ is a local maximum, the equilibrium is deemed to be unstable, since there exist a configuration close to ${\q}^\star$ with a lower energy-state, \ie, $\mathcal{U}({\q}^\star + {\delta}\q) < E_1$.
-
-By analysis of the gradient of the potential energy function $\nabla \mathcal{U}({\q})$, two unique equilibria can be found numerically. The potential function has a local maximum for $\q^\star_{\textrm{unstab}}=(-\tfrac{m_0 g}{L (\alpha_1 - \alpha_2)},\,0,\,0)^\top$ which is unstable. To some extent, it is analogous to the unstable equilibrium position of the inverted pendulum system. 
+First, we investigate the existence and the stability of the equilibria of the unforced system. If the system is at rest (i.e., $\dq = 0$, $\ddq = 0$), then by definition there are no conservative forces acting on the system. Thus, for any equilibrium point ${\q}_0$ it holds that $\nabla \mathcal{U}({\q}^\star) \equiv \vec{0}$. If $ \mathcal{U}({\q}^\star) \equiv E_0$ is a local minimum, then the equilibrium is deemed stable. Any small disturbance will result in a new energy-state $E_1$ and will consequently bring the system in motion. However, regarding $E_0$ is a local minimum, the system will remain in a neighborhood of ${\q}^\star$ and eventually converge towards its nearest low-state energy $E_0$. If $\mathcal{U}({\q}^\star) \equiv E_0$ is a local maximum, the equilibrium is deemed to be unstable, since there exist a configuration close to ${\q}^\star$ with a lower energy-state, \ie, $\mathcal{U}({\q}^\star + {\delta}\q) < E_1$. By analysis of the gradient of the potential energy function $\nabla \mathcal{U}({\q})$, two unique equilibria can be found numerically. The potential function has a local maximum for $\q^\star_{\textrm{unstab}}=\left(-\tfrac{m_0 g}{L (\alpha_1 - \alpha_2)},\,0,\,0\right)^\top$ which is unstable. To some extent, it is analogous to the unstable equilibrium position of the inverted pendulum system. 
 
 For the stable equilibria, the bisection method was used to find the zero-crossing of $\nabla \mathcal{U}({\q})$, where it was found that all stable solutions of the unforced system will tend to the following set:
 %
@@ -30,16 +51,13 @@ For the stable equilibria, the bisection method was used to find the zero-crossi
 \Omega_{\textrm{stab}} = \left\{\q\in \mathcal{Q}\;:\;\varepsilon=-\varepsilon_\star,\, \kappa(\q) = \frac{\kappa_\star}{\alpha_\phi(\q)} \right\}, \notag
 \end{equation*}
 %
-where $\varepsilon_\star$ and $\kappa_\star$ are nonzero constants. Notice that the set $\Omega_{\textrm{stab}}$ is topologically equivalent to a ring. This set corresponds to the hanging position of the soft robot. Given the physical parameters of the robot in Figure \ref{fig:C2:soft_robot}, the following constants are found: $\varepsilon_\star = 0.0021$ and $\kappa_\star = 0.0174$.  It should be worth mentioning that the stable set of equilibria stems from the force balance between the internal elastic potential forces and the external gravitational potential forces, and thus any stiffness will lead to a stable set with a similar topology. By changing the base orientation of the soft manipulator (\ie, by modifying $\PhiB_0$), both equilibria vanish and all state trajectories will tend to a global stable equilibrium. For fully reversing the orientation, this trivially leads to the stable equilibrium $\q^\star_{\textrm{stab}} = (+\tfrac{m_0 g}{L (\alpha_1 - \alpha_2)},\, 0,\, 0)$. This phenomenon is referred to as local bifurcation, in which the change of parameter values alters the existence and stability of equilibria. This property might be interesting for soft robot manipulators with multiple soft-bodied links, as they are likely to be subjected to different gravitational loads.
+where $\varepsilon_\star$ and $\kappa_\star$ are nonzero constants. Notice that the set $\Omega_{\textrm{stab}}$ is topologically equivalent to a ring. This set corresponds to the hanging position of the soft robot. Given the physical parameters of the robot in Figure \ref{fig:C2:soft_robot}, the following constants are found: $\varepsilon_\star = 0.0021$ and $\kappa_\star = 0.0174$. \editl It is important to note that \editr the stable set of equilibria stems from the force balance between the internal elastic potential forces and the external gravitational potential forces, and thus any stiffness will lead to a stable set with a similar topology. By changing the base orientation of the soft manipulator (\ie, by modifying $\PhiB_0$), both equilibria vanish and all state trajectories will tend to a global stable equilibrium. For fully reversing the orientation, this trivially leads to the stable equilibrium $\q^\star_{\textrm{stab}} = (+\tfrac{m_0 g}{L (\alpha_1 - \alpha_2)},\, 0,\, 0)$. This phenomenon is referred to as local bifurcation, in which the change of parameter values alters the existence and stability of equilibria. This property might be interesting for soft robot manipulators with multiple soft-bodied links, as they are likely to be subjected to different gravitational loads.
 %
 \afterpage{
 \begin{figure}[!t]
   \vspace{-1mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_natural_states.tex}
-  \fi
   \vspace{-3mm}
   \caption{Three-dimensional volumetric evolution of the one-link soft robot model with initial conditions $\q_0 = (0 , -15, 15)^\top$ and $\dq_0 = (0, 2500, 0)^\top$. Notice that the states of the one-link soft robot quickly converge to the the set of stable equilibria $\Omega_{\textrm{stab}}$. }
   \label{fig:C2:natural_states}
@@ -50,10 +68,7 @@ where $\varepsilon_\star$ and $\kappa_\star$ are nonzero constants. Notice that 
 \begin{figure}[!t]
   %\vspace{-3mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_natural_3D.tex}
-  \fi
   \vspace{-3mm}
   \caption{State trajectories of one-link soft robot model with initial conditions $\q_0 = (0 , -15, 15)^\top$ and $\dq_0 = (0, 2500, 0)^\top$. The figure shows the elongation strain $\varepsilon$ and the curvatures $\kappa_x$, $\kappa_y$ in the $xz$-plane and $yz$-plane, respectively. Clearly the one-link soft robot oscillates about the set $\Omega_{\textrm{stab}}$. }
   \label{fig:C2:natural_3D}
@@ -72,39 +87,10 @@ Figure \ref{fig:C2:natural_states} shows the state trajectories of the soft robo
 
 Besides the existence of stable solutions, the numerical simulations perfectly illustrate the coupled dynamics between the elongation and bending of the soft robot. Due to the difference in mechanical stiffness for elongation and bending, we observe high-frequency and low-frequency oscillation for the elongation strain $\varepsilon(t)$, and we observe low-frequent oscillations for the curvatures $\kappa_x(t)$ and $\kappa_y(t)$. Interestingly, the low-frequency oscillations are passed from the curvature dynamics to elongation dynamics; conversely, the dynamics of the elongation barely affect the curvatures. After sufficient time passes, the trajectories indeed tend to the set of stable equilibria $\Omega_{\textrm{stab}}$.
 
-\subsection{Experimental platform}
-\noindent Before validating the one-link dynamic model, we detail the experimental setup and control platform of the soft robotic system. Since sensing is a challenging issue in soft robotics, due to large distributed deformations, a combination of sensors were used to recover an estimate of the states $\q \in \mathcal{Q}$. A full overview of the setup is given in Figure \ref{fig:C2:setup}. First of all, we employed a 6-DOF inertial measurement unit (MPU-6050, \texttt{InveSense}) that measures the angular displacement of the soft robot's end-effector (\ie, $\sigma = L$). Through on-board sensor fusion, the bending angle of the soft robot can be recovered, \ie, $\beta = \kappa l$. Since the bending angle alone is not sufficient to decouple the curvature and elongation, additional sensing is required. Consequently, we use a stereo-vision depth camera (RealSense D435, \texttt{Intel}) with an infrared dot projector and RGB camera module. A spherical optical marker is attached to the end-effector of the soft robot, whose relative position can be recovered using a combination of depth-sensing and image post-processing with a Hough-space circle transformation. To retrieve a global reference frame of the vision system, four $30\!\times \!30$ \si{\milli \metre} Aruco marker are uniformly distributed whose location and orientation can be found using the \texttt{opencv-python.py} library. We show the implementation of the optical vision system and its post-processing in Figure \ref{fig:C2:setupmeasure}.
-Through trigonometry and the measured bending angle $\beta$, an filter measurement of the position vector $y = \tvec{\gamma}_L$ can be recovered. Given the analytic expressions for the orientation and position in \eqref{eq:C2:phi_exact} and \eqref{eq:C2:pos_exact}, an inverse Jacobian kinematic solver is employed to recover an estimate of the state vector, \ie, $\tvec{q}_{\textrm{dyn}} = \textrm{argmin}_{\q} \lVert \, \tvec{\gamma}_L - \gammaB(L,\q) \rVert_2$.
-During each experimental trail, it was made sure the soft robotic body does not occlude the optical marker.
-
-%
-\afterpage{%
-\begin{figure}[!t]
-  \centering
-  \ifx\printFigures\undefined
-  \else
-  \includegraphics[width=0.99\textwidth]{fig_C2_setup.pdf} 
-  \fi
-  \caption{General overview of the experimental platform for the testing and development of the 3-DOF soft manipulator. \tcircle{1} Close-up of the {RealSense D435} stereo-vision depth camera. \tcircle{2} Soft continuum manipulator with pressure inputs $\uB = (u_1,\,u_2,\,u_3)^\top$, a MPU-6050 Inertial Measurement Unit (IMU) to measure the end-effector angle $\beta$, and a color-coded optical marker to recover $\gammaB_L$, and four Aruco markers to recover $\Phi_0$ and $\gammaB_0$. \tcircle{3} Overview of full setup with the array of three VEAB-B-D16 pressure regulators. \label{fig:C2:setup}}
-\end{figure}
-%
-\begin{figure}[!t]
-  \centering
-  \ifx\printFigures\undefined
-  \else
-  \includegraphics[width=0.99\textwidth]{fig_C2_setup_measure.pdf} 
-  \fi
-  \caption{General overview of the optical vision system. \tcircle{1} Circular Hough transformation from the RBG camera data filtering for circles with a radius 32 \texttt{pix}, it has a global maxima at the optical marker. \tcircle{2} Sample of the stereo-vision depth camera. \tcircle{3} Final result of the sensor fusion algorithm of depth and RGB camera, resulting in an accurate estimate of soft manipulator's end-effector $\tvec{\gammaB}(L,\tvec{q})$. \label{fig:C2:setupmeasure}}
-\end{figure}
-\clearpage
-}
-
-As for the pneumatic actuation, an array of proportional-pressure regulators (VEAB-B-D16, \texttt{Festo}) was used with an active pressure range of $-0.1 \;\text{MPa}\, < \uB(t) \le 0.1 \; \textrm{MPa}$, which simultaneously allow for pressure measurements. These measurements are fed into the (quasi-static) model to also recover a quasi-static estimate of the states $\tvec{q}_{\textrm{qs}}$. Then, the dynamic estimates $\tvec{q}_{\textrm{dyn}}$ and the quasi-static pressure-based estimates $\tvec{q}_{\textrm{qs}}$ are fused using an ordinary complementary filter. The control and data acquisition are done using a {Raspberry Pi 4} (2GB). 
-
-\begin{example}[Model validation -- unforced, forced, and external loads] \end{example}
+\textbf{\editl Experimental comparison\editr-- unforced, forced, and external loads}:
 \noindent To validate the dynamic model, the solutions of the model are compared with measurements of the physical system in unforced,  forced, and tip-load conditions. As such, the model validation is separated into three parts: \textit{i)} unforced, \textit{ii)} forced conditions, and \textit{iii)} external tip-loads applied on the end-effector.
 
-We start with the unforced scenario, \ie, no input is considered $u_i(t) \equiv 0$. For the unforced analysis, two experimental trails are performed for the unforced validation. First, the soft robot is deformed slightly and then released from rest, which corresponds to the initial conditions $\q_0 = \left(0.015,\,4.75,\,0 \right)^\top$ and $\dq_0 = \vec{0}_3$. Since the mechanical deformations are relatively small here, the presence of hyper-elastic and visco-elastic material behavior are less dominant. Secondly, the soft robot is moderately deformed such that the initial configuration (or shortly after) lies within the hyper-elastic and visco-elastic regime. In this scenario, the nonlinear and time-dependent material effects may not be neglected. These initial conditions correspond to $\q_0 = \left(0.046,\,11.25,\,0 \right)^\top$ and $\dq_0 = \vec{0}_3$. It is worth mentioning that the creep strains $\lambdaB$ are difficult to distinguish from the true strain, and thus the initial conditions for $\lambdaB(t_0)$ are determined empirically. The validation results for both unforced scenario are shown in Figure \ref{fig:C2:compare_states}.
+We start with the unforced scenario, \ie, no input is considered $u_i(t) \equiv 0$. For the unforced analysis, two experimental trails are performed for the unforced validation. First, the soft robot is deformed slightly and then released from rest, which corresponds to the initial conditions $\q_0 = \left(0.015,\,4.75,\,0 \right)^\top$ and $\dq_0 = \vec{0}_3$. Since the mechanical deformations are relatively small here, the presence of hyper-elastic and visco-elastic material behavior are less dominant. Secondly, the soft robot is moderately deformed such that the initial configuration (or shortly after) lies within the hyper-elastic and visco-elastic regime. In this scenario, the nonlinear and time-dependent material effects may not be neglected. These initial conditions correspond to $\q_0 = \left(0.046,\,11.25,\,0 \right)^\top$ and $\dq_0 = \vec{0}_3$. It is worth mentioning that the creep strains $\lambdaB$ are difficult to distinguish from the true strain, and thus the initial conditions for $\lambdaB(t_0)$ are determined empirically \editl using a set of dynamic measurements with different initial condition. The comparison between our model and the unforced dynamic measurements are shown in Figure \ref{fig:C2:compare_states}. \editr
 % The associated code for the unforced validation simulations can be found under \texttt{./valid\_one\_link\_open.m}.
 
 
@@ -112,13 +98,10 @@ We start with the unforced scenario, \ie, no input is considered $u_i(t) \equiv 
 \begin{figure}[!t]
   %\vspace{-2mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_compare_states.tex}
-  \fi
   \vspace{-1mm}
-  \caption{Validation results of the
-  dynamic model in unforced conditions, where the dashed lines represent the experimental measurements and the solid lines are the simulated trajectories. The dataset \data{Matlab1} are within the linear elastic regime whereas datasets (\ldata{Matlab2},\ldata{Matlab3}) are in the nonlinear regime. }
+  \caption{Experimental comparison results of the
+  dynamic model in unforced conditions. (top) Bending angles of the soft robot in unforced conditions,  where the dashed lines represent the experimental measurements and the solid lines are the simulated trajectories. The dataset \data{Matlab1} are within the linear elastic regime whereas datasets (\ldata{Matlab2},\ldata{Matlab3}) are in the nonlinear regime. (bottom) The error between experiments and the optimized numerical model. As can be seen, all trajectories remain within an error bound of $\pm2^\circ$ degree. }
   \label{fig:C2:compare_states}
 \end{figure}
 %
@@ -131,19 +114,16 @@ We start with the unforced scenario, \ie, no input is considered $u_i(t) \equiv 
 % dynamic model in unforced conditions, where the dashed lines represent the experimental measurements and the solid lines are the simulated trajectories. \textbf{(b)} Validation results of the dynamic model in forced conditions, where the dashed lines represent the experimental data from the inertial sensor and the solid lines simulated. In addition, the figure also illustrates the model for Hookean elasticity and applied pressure inputs $u(t)$ to the dynamical system. It is evident from these comparison results that FEM-driven elasticity models can significantly improve accuracy. \textbf{(c)} Experimental validation of the one-link soft robot subjected to various end-effector payloads of different mass $m_\delta = \{0.05,\,0.1,\,0.15\}$ kg. \textbf{(d)} The quasi-static deformation produced by the hyper-elastic model under various end-effector loads. In both figures, the solid lines represent the dynamic model and the dashed lines are the experimental measurements. \label{fig:6}}
 % \end{figure}
 % %
-As can be seen, the state trajectories of the end-effector closely match the ground truth trajectories, even for significant nonlinear deformation. For the first validation run (inside linear elastic regime), the RMS error and the maximum error are $\pm0.19$ and $\pm 0.50$ degrees, respectively. For the second case (outside the linear elastic regime), the RMS error and the maximum error is $\pm0.78$ and $\pm 2.33$ degrees, respectively.
+As can be seen, the state trajectories of the end-effector closely match the ground truth trajectories, even for significant nonlinear deformation. For the first \editl test \editr run (inside linear elastic regime), the RMS error and the maximum error are $\pm0.19$ and $\pm 0.50$ degrees, respectively. For the second case (outside the linear elastic regime), the RMS error and the maximum error is $\pm0.78$ and $\pm 2.33$ degrees, respectively.
 
 \begin{figure}[!t]
   %\vspace{-1mm}
    \centering
    %\hspace{-5mm}
-   \ifx\printFigures\undefined
-   \else
    \input{./3_chapters/2_chapter/img/fig_C2_openloop_2D.tex}
    \input{./3_chapters/2_chapter/img/fig_C2_openloop_U.tex}
-   \fi
    \vspace{-0.25cm}
-   \caption{Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right) for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity of $\tfrac{2\pi}{3}$.}
+   \caption{\editl Spatial representation of the nonlinear stiffness, \ie,  elongation stiffness (left) and bending stiffness (right) for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$. The experimental data is shown in (\ldata{lightgray}). Again, note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity of $\tfrac{2\pi}{3}$.\editr}
    \vspace{-0.1cm}
    \label{fig:C2:openloop_2D}
  \end{figure}
@@ -154,9 +134,9 @@ Second, we consider a forced scenario in which a regulated pressure input is app
 u_i(t) = P_0 + P_A \left[\frac{1}{2} + \frac{1}{2}\sin(t + \phi_i) \right]\cdot \max(0.05t,1),
 \end{equation}
 %
-with a static offset $P_0 = 10$ kPa, an amplitude $P_A = 25$ kPa, and a phase offset $\phi_i = (i-1)\frac{2\pi}{m}$ rad. To highlight the significance of the proposed hyper-elastic modeling approach, we also compare the results using an optimized Hookean material material model with $k_e = 50.6$ N/m and $k_b = 5.8\cdot 10^{-4}$ Nm/rad. The initial conditions are set to zero. The validations results for both the FEM-driven hyper-elasticity model and linear model in the forced setting are shown in Figure \ref{fig:C2:openloop_2D}. The figure also shows the measured outputs from the pneumatic VEAB regulators $u_i(t)$, which are directly fed into both linear and hyper-elastic models. %The associated code for the forced validation can be found under \texttt{./valid\_one\_link\_closed.m}.
+with a static offset $P_0 = 10$ kPa, an amplitude $P_A = 25$ kPa, and a phase offset $\phi_i = (i-1)\frac{2\pi}{m}$ rad. To highlight the significance of the proposed hyper-elastic modeling approach, we also compare the results using an optimized Hookean material material model with $k_e = 50.6$ N/m and $k_b = 5.8\cdot 10^{-4}$ Nm/rad. The initial conditions are set to zero. The validations results for both the FEM-driven hyper-elasticity model and linear model in the forced setting are shown in Figure \ref{fig:C2:openloop_2D}. The figure also shows the measured outputs from the pneumatic VEAB regulators $u_i(t)$, which are directly fed into both linear and hyper-elastic models. 
 
-Given these results, two key observations can be made. First, both the linear Hookean and hyper-elastic models provide reasonable accuracy for small deformations $0 \le \kappa(t) \le 3$ with a RMS error of $\pm0.13$ and $\pm0.16$ in curvature, respectively. However, as deformations exceed the linear regime, the hyper-elastic model significantly outperforms the Hookean model. Focusing on the hyper-elastic model, both the asymmetric stiffness in radial direction and the strain-hardening are captured well, where the the linear models is not sufficiently rich to capture the material effects. The overall RMS errors for the linear and hyper-elastic model are $\pm1.79$ and $\pm0.21$ in curvature, respectively. Regarding the end-effector accuracy, the overall RMS errors for the linear and hyper-elastic model are $\pm2.58$ and $\pm0.65$ mm, respectively; which translates to an arc-length normalized error of $\pm4.09\%$ and $\pm1.03\%$. These validations results show that introducing nonlinear elastic effects driven by FEM-data can further improve the accuracy for a larger region of the soft robot's workspace.
+Given these results, two key observations can be made. First, both the linear Hookean and hyper-elastic models provide reasonable accuracy for small deformations $0 \le \kappa(t) \le 3$ with a RMS error of $\pm0.13$ and $\pm0.16$ in curvature, respectively. However, as deformations exceed the linear regime, the hyper-elastic model significantly outperforms the Hookean model. Focusing on the hyper-elastic model, both the asymmetric stiffness in radial direction and the strain-hardening are captured well, where the the linear models is not sufficiently rich to capture the material effects. The overall RMS errors for the linear and hyper-elastic model are $\pm1.79$ and $\pm0.21$ in curvature, respectively. Regarding the end-effector accuracy, the overall RMS errors for the linear and hyper-elastic model are $\pm2.58$ and $\pm0.65$ mm, respectively; which translates to an arc-length normalized error of $\pm4.09\%$ and $\pm1.03\%$. These \editl numerical comparison \editr results show that introducing nonlinear elastic effects driven by FEM-data can further improve the accuracy for a larger region of the soft robot's workspace.
 
 For the last validation case, we subject the soft robot to an external payload of mass $\delta_m$ located at the end-effector. To model the disturbance, we use the expression for the external payload disturbance model $\delta_m$ in \eqref{eq:C2:delta_payload}. The goal here is \textit{a)} to demonstrate the accuracy of the proposed payload model and quasi-static behavior of the dynamic model, and \textit{b)} to highlight the limitations of the PCC assumptions under certain conditions. In this analysis, we consider three different payloads $m_\delta = \{0, 50,\,100,\,150\}$ \si{\gram}. The experimental results of the payloads deformations and the resulting quasi-static deformations of the dynamic model are shown in Figure \ref{fig:C2:compare_deflect}. 
 %The associated code for the external payload simulations can be found under \texttt{./valid\_one\_link\_tipload.m}.
@@ -165,10 +145,7 @@ For the last validation case, we subject the soft robot to an external payload o
 \begin{figure}[!t]
   %\vspace{-2mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_compare_deflect.tex}
-  \fi
   \vspace{-5mm}
   \caption{Experimental validation of the one-link soft robot subjected to various end-effector payloads of different mass $m_\delta = \{0,50,100,150\}$ \si{\gram}. The deformed 3D-model in \data{thumbcolor} corresponds to the estimated joint configuration based on the measurements from the IMU and depth camera, where the optimal marker location is shown in \data{lightgreen}.}
   \label{fig:C2:compare_deflect}
@@ -177,7 +154,7 @@ For the last validation case, we subject the soft robot to an external payload o
 
 As can be seen, the quasi-static behavior of the dynamic model matches the experimental results relatively well for smaller payloads. For the mass $m_\delta = 0.05$ kg, the Euclidean error between the model and the measurement are $\pm1.31$ mm. Increasing the payload to $m_\delta = 0.1$ kg leads to an error of $\pm2.15$ mm. We can also clearly observe that the estimate of the backbone curve subject to the PCC condition is beginning to deviate from the ground truth yet the overall shape still matches the experimental data. Lastly, by further increase the payload $m_\delta = 0.15$ kg, we clearly observe the limitations of the PCC condition under external loads -- with an end-effector error of $3.98$ mm. Also, there is a clear discrepancy in the backbone curve of the model and the ground truth, which might imply the PCC condition is no longer valid here as the payload could induce non-constant curvatures along the backbone. A possible solution might be to introduce a different shape parametrization, similar to the works \cite{Chirikjian1994,Boyer2021,Renda2020,DellaSantina2020}.
 
-\begin{example}[Model benchmark -- Multi-link soft manipulator case]\end{example}
+\textbf{Model benchmark -- Multi-link soft manipulator case}:
 \noindent In this section, we benchmark the proposed numerical integration scheme for a dynamic model of a six-link soft robot manipulator ($N = 6$). Here, we want to highlight that sufficient numerical speed can be obtained while preserving sufficient numerical precision. This is an important criteria for model-based control, as slow numerical models lack transferability from theory to application. As mentioned earlier, the numerical integration of the Lagrangian entities is the computational bottleneck. Although the MDE solver does aid with numerical performance; ultimately, using a balanced spatial and temporal discretization impacts real-time performance the most. Trivially, using larger stepsize -- both in space and time -- lead to a decrease in numerical precision; and in some cases numerical instability. In this benchmark, we investigate these effects by varying two solver parameters: the spatial stepsize of the explicit MDE solver denoted by $\Delta \sigma$ and the temporal stepsize of the implicit trapezoidal solver denoted by $\Delta t$. For convenience, we represent these stepsizes as standardized parameters: the number of finite elements $N_s = L/\Delta \sigma$ and the implicit solver frequency $f_s = \Delta t\inv$. For the benchmark, we choose a total length of $L = 0.15$ m and simulation time of $T = 10$ s.
 
 %
@@ -206,26 +183,20 @@ After a short transient time (i.e., $t < 5$), the solutions of the multi-link so
 \end{rmk}
 
 %
-\afterpage{
 \begin{figure}[!t]
   %\vspace{-3mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_multilink_states.tex}
-  \fi
-  \vspace{-4mm}
+  \vspace{-2mm}
   \caption{State trajectories of six-link soft robot model under dynamic excitation. The figure shows the extensible elongation strains and the total curvature $\kappa$ (\ie, planar dynamics). The link indexing follows (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3},\ldata{Matlab4},\ldata{Matlab5},\ldata{Matlab6}). \label{fig:C2:multilink_states}}
 \end{figure}
 
+\afterpage{
 \begin{figure}[!t]
   \vspace{-3mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_multilink_3D.tex}
-  \fi
-  \vspace{-6mm}
+  \vspace{-2mm}
   \caption{The deformed 3D-model of the six-link soft robot according to the input excitation $\uB$. Notice that the dynamics of the six-link robot converge to a periodic solution which is shown in curve \data{thumbcolor}. Interestingly, the periodic orbit is slightly asymmetric with respect the sagittal plane at the origin, which is caused by the \textit{hanging-down} initialization of the soft arm at the left side. }
   \label{fig:C2:multilink_3d}
 \end{figure}
@@ -271,8 +242,7 @@ $f_s = 250$ Hz & {\small{14.61 / 11.98s}} & \small{5.32 / 16.71s} & \small{4.14 
 \end{sidewaystable}
 }
 
-\begin{example}[Closed-loop -- Passivity-based controller under material certainty and mass disturbance]\end{example}
-
+\textbf{Closed-loop -- Passivity-based controller under material certainty and mass disturbance:}
 In the last numerical analysis, we demonstrate the results of the proposed passivity-based adaptive scheme. Due to its compactness and computational speed, we again consider the model of the one-link soft robot as seen in previous simulations. To illustrate the robustness of the controller, we purposely introduce some uncertainties. First, we introduce uncertainties in the hyper-elastic material parameters that deviate moderately from their true values in Table 1. Second, we introduce a payload to the end-effector of mass $m_\delta = 0.1$ kg. We again model this external disturbance using the relation in \eqref{eq:C2:delta_payload}. Following the linear parametrizability of the uncertainties, the parameter estimation vector yields:
 %
 \begin{equation}
@@ -286,7 +256,9 @@ with initial conditions $\tvec{\pi}(t_0) = \tvec{\pi}_0 = \left(0.75 {\alpha}_1,
   5 & 0 & 0\\
   0 & 5\pwr{-5}& 0 \\ 
   0 & 0 & 5\pwr{-5}
-\end{pmatrix}, \\[0.75em]
+\end{pmatrix},
+\end{align*}
+\begin{align*}
 \mat{K}_d & = \begin{pmatrix} 
   1 & 0 & 0\\
   0 & 1\pwr{-5}& 0 \\ 
@@ -299,7 +271,7 @@ with initial conditions $\tvec{\pi}(t_0) = \tvec{\pi}_0 = \left(0.75 {\alpha}_1,
 \end{pmatrix};
 \end{align*}
 %
-and $\LambdaB = \mat{I}$. These values were found to yield the best performance while avoiding noticeable oscillations in the closed-loop dynamics. Lastly, the following reference trajectory is considered:
+and $\LambdaB = \mat{I}$. These values were found to yield the best performance while avoiding noticeable oscillations in the closed-loop dynamics. \editl In this controller gain tuning process, we first find suitable values for $\mat{K}_p$ and $\mat{K}_d$ such that controller stabilizes the closed-loop and the error transients are within acceptable time windows (e.g., converge within $<5$ s). During this process, the adaption gain is chosen zero. Once $\mat{K}_p$ and $\mat{K}_d$ are found, we slowly increase the adaptation gain. Again, we observe the transients of the parameter estimates. During the tuning of the adaptive controller, it was observed that a high-gain $\mat{K}_{\piB}$ diminishes performance. Better convergence was found for low adaption gains -- resulting in slowly-varying parameter estimates. \editr Lastly, the following reference trajectory is considered:
 %
 \begin{equation}
 \q_d(t) = \left(0.01 + 0.01\,\sin(t),\, 30 \,\sin(t),\, 30 \,\cos(t)\right)^\top,
@@ -312,10 +284,7 @@ Since the reference trajectory above satisfies persistence of excitation (see Re
 \begin{figure}[!b]
   \vspace{-1mm}
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_PBA_states.tex}
-  \fi
   \vspace{-3mm}
   \caption{State trajectories of soft robot with the passivity-based adaptive controller in \eqref{eq:C2:tau}. The figure shows the elongation strain $\varepsilon(t)$ and the curvatures $\kappa_x(t),\,\kappa_y(t)$ in the $xz$-plane and $yz$-plane, respectively; where \data{lightgrey} shows the reference trajectory of the joint configuration $\q_d$.}
   \label{fig:C2:PBA_states}
@@ -324,10 +293,7 @@ Since the reference trajectory above satisfies persistence of excitation (see Re
 %
 \begin{figure}[!t]
   \centering
-  \ifx\printFigures\undefined
-  \else
   \input{./3_chapters/2_chapter/img/fig_C2_PBA_parameters.tex}
-  \fi
   \vspace{-3mm}
   \caption{The evolution of the elongation stiffness estimate and bending stiffness estimate, ${k}_e(\q,\tvec{\pi})$ and ${k}_b(\q,\tvec{\pi})$ respectively; and the estimate of the payload $\tilde{m}_\delta$. For illustration, the estimates are normalized with their true value, where we can see they slowly approach one after sufficient time passes. This implies the adaptive algorithms converges to the true hyper-elastic stiffness values independent of parameter uncertainties. \label{fig:C2:PBA_parameters}}
   \end{figure}
@@ -342,6 +308,5 @@ Since the reference trajectory above satisfies persistence of excitation (see Re
 % \caption{\textbf{(a)} State trajectories of soft robot with the passivity-based adaptive controller in \eqref{eq:tau}. The figure shows the elongation strains and the curvatures in the $xz$-plane and $yz$-plane, respectively. \textbf{(b)} The three-dimensional representation of the trajectory of the one-link soft robot and its end-effector. The proposed
 % adaptive controller achieves almost perfect tracking, despite the uncertainties the material model and the presence of a payload $m_\delta$.\label{fig:8}}
 % \end{figure}
-
 
 As can be seen in Figure \ref{fig:C2:PBA_states} and Fig. \ref{fig:C2:PBA_parameters}, the passivity-based controller offers good performance in the face of material uncertainties and external disturbances. The RMS tracking error in steady-state (\ie, $t \ge 30$s) between the desired end-effector trajectory and true trajectory is $\pm0.77$ mm; which translates to an arc-length normalized error of $\pm1.22\%$. Despite the presence of uncertainties, the passivity-based controller also ensures the states converges to the desired trajectory with a smooth transient. Regarding the results of Figure 9, the (nonlinear) stiffness estimates ${k}_e(\q,\tvec{\pi})$ and $k_b(\q,\tvec{\pi})$, and the unknown payload mass $\hat{m}_\delta$ slowly converge to the their true values. It should be mentioned that increasing the adaption rate leads to undesired (but bounded) oscillations of the estimates rather than faster convergences, therefore negatively affects the controller's performance.

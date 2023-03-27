@@ -91,11 +91,11 @@ for ii = 1:size(X,1)
     drawnow;
 end
 
-annotation('arrow',[0.50,0.15],[0.2,0.2],'Color','k');
-annotation('arrow',[0.55,0.90],[0.2,0.2],'Color','k');
+annotation('arrow',[0.59,0.15],[0.2,0.2],'Color','k');
+annotation('arrow',[0.61,0.90],[0.2,0.2],'Color','k');
 
-text(3e7,0.1,'\scriptsize soft');
-text(3e8,0.1,'\scriptsize rigid');
+text(2e8,0.1,'\scriptsize soft');
+text(9e8,0.1,'\scriptsize rigid');
 
 % 
 % legend({'','Engineering','','Organic'},'Location','northoutside',...

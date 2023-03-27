@@ -1,16 +1,68 @@
 %!TEX root = ../../thesis.tex
-Soft robotics -- an acronym for soft material robotics -- is an established scientific field of designing, modeling and controlling a class of elastic continuum robots. Through the use of elasticity and softness embedded in the robot's structure, intrinsic motion and adaptability can be achieved in ways previously unseen in rigid robotics. Naturally, this leads to robotic systems with beneficial hyper-redundant and compliant properties, yet it imposes significant challenge on its modeling and control. The field has sparked the interest of many scientific disciples in the past decade, most particularly the robotics control community. The introduction of soft robotics has lead to a paradigm shift in control theory for robotics; namely, the control of elastic robots with theoretically infinite-dimensional Degrees-of-Freedom (DOF).
+Soft robotics is an established scientific field that explores continuum elastic robots. Through its high-elasticity, intrinsic motion and adaptability can be achieved in ways previously unseen in rigid robotics. Although this leads to robots with beneficial properties,it homogeneous structural elasticity imposes challenge on modeling and control. The introduction of elastic structures has lead to a new paradigm shift regarding robotics control theory \cite{DellaSantina2021}; namely, feedback regularization of (underactuated) deformable robots with theoretically infinite-dimensional Degrees-of-Freedoms (DOFs). Although this problem has an inception earlier than origin of soft robotics (\eg, \cite{Chirikjian1991,DeLuca2016Jul}), it remains challenging ever since.
 
-As of today, two popular modeling strategies for continuum dynamics of soft robots dominate the field: \textit{i}) Finite-Element-Method (FEM) models and \textit{ii}) and beam models. The FEM formulation is a well-known techniques of employing spatial discretization to PDE problems such that its approximate can be solved numerically \cite{Kim2018,Coevoet2017}. With roots in continuum mechanics, FEM has the merit benefit of easily in-cooperating constitutive material laws, nonlinear geometric deformations, and distributed loads, expressed in terms of its tesselation. In practice, however, these models demand considerable computational effort, rendering online predictions and model-based control often infeasible. To enable fast simulation, researchers \cite{Coevoet2017,Duriez2013,Goury2018} typically explore model-reduction techniques in which the full state representation (i.e., all nodal displacements) is projected onto a reduced-order representation with minimal lost in accuracy. Although it is shown that such projection methods are suitable for model-based soft robot control, they often loose desirable properties, e.g., passivity and the physical interpretation of the states.
+As of today, two dynamic modeling strategies lead control community in soft robotics with clear direction for model-based control: \textit{(i)} Finite-Element-Method (FEM) models and \textit{(ii)} soft beam models. FEM is a well-known technique which employs spatial discretization to Partial Differential Equations (PDEs) such that their approximates can be solved numerically \cite{Bonet2016,Holzapfel2002,Kim2018}. Deeply rooted in continuum mechanics, FEM is a matured field that, through mesh discretization and its local deformation, easily incooperates constitutive material laws, nonlinear geometric deformations, and multi-physics interactions. However, high-accuracy FEM requires fine mesh discretization that severely impacts computational cost, \ie, $\mathcal{O}(n^3)$ for increasing mesh sizes. This renders online state estimation and feedback control often infeasible for the original system. To enable feedback strategies, several model reduction strategies have been proposed, \eg, Proper-Orthogonal-Decomposition \cite{Coevoet2017,Duriez2013,Goury2018,Thieffry2017} or iterative Krylov reduction, in which the configuration space (\ie, nodal displacements) is projected onto an optimal subspace. Yet, to be enable these subspace projection, soft robot models are often linearized to produce a linear time-invariant systems (LTI), which leads to controllers with local stability guarantees \cite{Thieffry2017,Goury2018,Katzschmann2019}. In some recent works, however, researchers have extended to nonlinear projections \cite{Chenevier2018}, or linear-parameter varying systems (LPV) \cite{Thieffry2020}. Although promising, perhaps even leading the field on experimental basis, it is challenging to preserve desirable system properties, \eg, passivity or physical state interpretation useful for sensor placement.
 
-In contrast, virtual beam models, e.g., Constant Curvature \cite{Katzschmann2019}, Non-Constant Curvature \cite{Santina2020}, and Cosserat beams \cite{Boyer2019}, have roots in Lagrangian-based modeling principles, leading to reduced-order ODE systems similar to the dynamic models of (serial-elastic) rigid robot. Here the continuum dynamics of the soft robot is modeled as spatial curve that passes through the geometric center of its body; whose differential geometry is then discretized through functional basis of shapes.
+Contrary, soft beam models, like the (non)-constant curvature \cite{Katzschmann2019,DellaSantina2020,Caasenbrood2022} and Cosserat beams \cite{Boyer2021,Renda2020}, have roots in Lagrangian-based modeling principles. By predefining a minimal joint representation, reduced-order ODE systems are formulated akin to the traditional models for (serial-elastic) rigid robots. Consequently, it enables a rich collection of pre-existing control theory adopted from rigid robotics: computed-torque control \cite{Katzschmann2019}, back-stepping \cite{Stolzle2021}, passivity-based (adaptive) control \cite{Caasenbrood2022,Franco2020}, and swing-up controllers \cite{Weerakoon2021Dec}. Here the continuum dynamics of the soft robot are modeled as spatial elastic strings; whose time-varying deformation is either described through discrete links along the arc-length, or functional parameterization. These models trade the description for volumetric deformations for low-dimensionality (and thus computation speed). In doing so, the method loses many geometric features of the soft robot's morphology and its coupling to actuation (\eg, tendons, pneumatics). Consequently, many of the physical properties such as the stiffness, damping, and actuation mapping are lost in favor of minimal model complexity. The modeling technique demands empirical matching between model and \emph{a-priori} experimental data, which is often time-consuming and tedious compared to standard FEM.
 
-Given a brief overview of the aforementioned modeling strategies,
-we propose a hybrid modeling strategy that benefits from the high-accuracy deformation adapted from FEM-models and the ease of controller implementation similar to beam models. To highlight the effectiveness of our approach, a control architecture is proposed in which model-based controllers arisen from the hybrid method are employed on the full-order FEM model.
+\begin{figure}[!t]
+  \ifx\printFigures\undefined
+  \else
+  \centering
+  \input{./3_chapters/4_chapter/img/fig_pneunet.tex}
+  \vspace{1mm}
+  \fi
+  \caption{(a) PneuNet bending actuator composed of DragonSkin 10 silicone rubber wrapping around an aluminum rod of radius $r = 10 \,\si{\milli \meter}$. The actuator is subjected to an input of $u = 30 \si{\kilo \pascal}$. (b) FEM model of bending PneuNet simulated using the \sorotoki toolkit. }
+  \label{fig:C4:pneunet}
+  \vspace{-5mm}
+\end{figure}
 
-Our main contributions include:
+\textbf{Problem description}: Let us discuss the problem into more detail. To help clarify the problem, consider a silicone \textit{PneuNet} actuator as shown in Figure \ref{fig:C4:pneunet} inspired by Mosadegh et al. (2014, \cite{Mosadegh2014}). When pressurized, the volumetric expansion of the soft actuator causes a uniform bending motion, allowing thest soft actuators for \textit{adaptive grasping} (see Figure \ref{fig:C4:pneunet}). Yet, in part due to hyper-elasticity, structural complexity, and distributed actuation, these systems are rarely considered in control-oriented research. This motivates our work here to develop a compact soft beam model, capable of describing such behavior with sufficient accuracy and speed suited for real-time control. In many cases, FEM is preferred over beam models since it is unclear \textit{a-priori} how structural geometry will affect displacement. To highlight its precision, Figure \ref{fig:C4:pneunet} shows a FEM simulation of the bending PneuNet grasping a cylinder of radius $r = 10 \, \si{\milli \meter}$ produces using the \sorotoki  toolkit. Although accurate, such dynamic simulations are often time-consuming. In this case, the dynamic simulation of the grasping PneuNet took about $T_\textrm{sim} \approx 5 \,\si{\minute}$ for a $T = 2 \,\si{\second}$ horizon time given about 6k Degrees-of-Freedom.
+% %
+% \begin{figure}[!t]
+%   \ifx\printFigures\undefined
+%   \else
+%   \centering
+%   \vspace{-5mm}
+%   \input{./3_chapters/4_chapter/img/fig_pneunet_modes.tex} 
+%   %\input{./3_chapters/4_chapter/img/fig_pneunet_curves.tex}
+%   \vspace{1mm}
+%   \fi
+%   \caption{}
+%   \label{fig:C4:curves}
+%   \vspace{-5mm}
+% \end{figure}
+% %
+To transition of beam models, let us consider the Cosserat beam approach discussed in \cite{Boyer2021,Caasenbrood2021} and previously in Chapter \ref{chap: chapter 3}. In geometric Cosserat theory, elastic continuum rods are described by a spatial curve $\gB: [0,L] \times [0,T] \to \SE{3}$, where $L$ is the intrinsic length of soft manipulator and $T$ a finite time horizon. Given the spatio-temporal variables $\sigma \in [0,L]$ and $t \in [0,T]$, geometric configuration of the soft manipulator is thus described by
+%
+\begin{equation}
+\gB(\sigma,t) :=  \begin{pmatrix}
+\PhiB(\sigma,t) & \gammaB(\sigma,t) \\
+\vec{0}_3^\top & 1
+\end{pmatrix},
+\label{eq:C4:g}
+\end{equation}
+%
+where $\PhiB(\sigma,t) \in \SO{3}$ and $\gammaB(\sigma,t) \in \R^3$ are the orientation matrix and position vector associated with a material point $\sigma$ on the interval $[0,L]$, respectively. By considering the partial derivative of $\gB$ w.r.t. to space and pre-multiplication of $\gB\inv$, we obtain the geometric strain as $\hat{\xiB}:=\gB\inv\frac{\p \gB}{\p \sigma}$ where $\hat{(\cdot)}:\R^6 \to \seg{3}$. Similar to FEM, this geometric strain field is then approximated using a set of orthogonal basis function. Here, the 6-dimensional strain vector is approximated as follows
+%
+\begin{equation}
+  \xiB \simeq \underbrace{\blkdiag{\thetaB_1,...,\thetaB_6}}_{\ThetaB(\sigma)} \q + \xiB^{\circ}
+\end{equation}
+%
+where $\ThetaB$ a block diagonal matrix composed of vector-values basis functions $\thetaB_i = \textrm{row}\left(\theta_{i,1}, ...,\,\theta_{i,k_i} \right)$ build from small functions $\theta_{i,j}$, and $\xiB^{\circ}$ a time-invariant strain field. The importance of this chapter lies on \textit{how to choose the spatial basis function $\ThetaB$?}. Ultimately, any choice of a spatial reduction $\ThetaB$, leads to a reduced-order soft beam model which can be written in a standard (port-Hamiltonian) form ideally suited for control \cite{Caasenbrood2021,Franco2020}: 
+%
+\begin{equation}
+  \Sigma_{\textrm{BEAM}}: \; \begin{pmatrix} \dot{\q} \\[0.5em] \dot{\pB} \end{pmatrix} = \begin{pmatrix} \mat{0} & \mat{I} \\[0.5em] - \mat{I} & -\RB \end{pmatrix} \begin{pmatrix} \nabla_{\q} \Hm \\[0.6em] \nabla_{\pB}\Hm \end{pmatrix} + \begin{pmatrix} \mat{0} \\[0.5em] \mat{G}\end{pmatrix}  \vec{u},
+  \label{eq:C3:modelBEAM}
+\end{equation}
+%
+where $\pB:=\MB \dq$ are the generalized momenta with the $\MB(\q)$ the generalized inertia matrix, $\RB \succ 0$ a damping matrix, $\GB(\q)$ an input matrix, and $\Hm(\q,\pB) = \frac{1}{2}\pB \MB\inv \pB + \Uf(\q)$ the Hamiltonian with $\Uf(\q)$ the potential energy. Naturally, by considering the structural complexity in the original soft robotic system, see for instance the pneumatic network of the PneuNet in Fig \ref{fig:C4:CosseratCurve}, the soft beam modeling approach raises a number of questions that are perhaps less apparent when choosing for the FEM modeling approach:
+%
 \begin{itemize}
-\item A POD-projection method for the functional strain basis of soft robotic beam models through FEM-driven data,
-\item Preservation of nonlinear geometric deformation, and hyper-elastic material behavior for beam models,
-\item Numerical and experimental validation of proposed reduced-order model-based controller.
+  \item How to choose a suitable bases $\{\theta_{ij}\}$ and $\{q_{ij}\}$ that appropriately respects the soft robot's geometry?
+  \item How to preserve volumetric, hyper-elastic material behavior given an \textit{a-priori} unknown energy potential $\Uf(\q)$?
+  %\item Deriving the input mapping $\GB$, and accordingly a segregation between passive $\q_p$ and active $\q_a$ states.
 \end{itemize}
+%
+
+\textbf{On notations}. To avoid confusion between the soft beam model $\Sigma_{\textrm{BEAM}}$ given by \eqref{eq:C3:modelBEAM} and the FEM model denoted by $\Sigma_{\textrm{FEM}}$, we will use the superscript ${(\cdot)}^\textrm{f}$, to highlight the element belongs to the finite element model $\Sigma_{\textrm{FEM}}$.

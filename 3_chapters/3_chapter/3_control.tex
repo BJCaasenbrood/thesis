@@ -1,8 +1,9 @@
 %!TEX root = ../../thesis.tex
-Given the previous reduced-order dynamic model, our objective here is to find a controller $\vec{u}$ that ensures $\lim_{t\to\infty} \mat{g}(L,t) = \mat{g}_d$ in which $\mat{g}_d \in \SE{3}$ denotes the desired configuration of the end-effector. To achieve the control objective, the main idea is to reshape the potential energy function of the reduced-order finite-dimensional system using a standard energy-shaping techniques, common to standard port-controlled Hamiltonian models \cite{Schaft2004,Ortega2002}.
+\section{Energy-based controller for tasks on SE(3)} \label{sec:chap3_control}
+Given the reduced port-Hamiltonian model in \eqref{eq:C3:model_ph}, our objective here is to find a controller $\vec{u}$ that ensures $\lim_{t\to\infty} \mat{g}(L,t) = \mat{g}_d$ in which $\mat{g}_d \in \SE{3}$ denotes the desired configuration of the end-effector. To achieve the control objective, the main idea is to reshape the potential energy function of the reduced-order finite-dimensional system using a standard energy-shaping techniques, common to standard port-controlled Hamiltonian models \cite{Schaft2004,Ortega2002}.
 
 %\subsection{Setpoint regulation on $\SE{3}$}
-We adopted an energy-based control strategy akin to the works of Franco et al. (2020, \cite{Franco2020}), Ortega et al. (1988, \cite{Ortega1998,Ortega2002}) and Schaft (2004, \cite{Schaft2004}). Following the energy-shaping strategy, the model-based nonlinear controller becomes
+We adopted an energy-based control strategy akin to the works of Franco et al. \cite{Franco2020}, Ortega et al. \cite{Ortega1998,Ortega2002} and Schaft \cite{Schaft2004}. Following the energy-shaping strategy, the model-based nonlinear controller becomes
 %
 \begin{equation}
 \vec{u} = \vec{G}\ginv \left( \nabla_{\vec{q}}\Hm - \nabla_{\vec{q}}\Hm_d \right),

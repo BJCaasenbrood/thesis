@@ -26,11 +26,13 @@ I = cell(0);
 W = 255*uint8(ones(650,30,3));
 
 
-I{end+1} = imresize(imread('softarm.jpg'),[650,nan]); I{end+1} = W;
+%I{end+1} = imresize(imread('softarm.jpg'),[650,nan]); I{end+1} = W;
+
 I{end+1} = imresize(imread('pneugrip.jpg'),[650,nan]); I{end+1} = W;
 I{end+1} = imresize(imread('softarm2.jpeg'),[650,nan]); I{end+1} = W;
-I{end+1} = imresize(imread('softarm3.png'),[650,nan]); I{end+1} = W;
-I{end+1} = imresize(imread('softhand.jpg'),[650,nan]); I{end+1} = W;
+I{end+1} = imresize(imread('softarm4.png'),[650,nan]); I{end+1} = W;
+I{end+1} = imresize(imread('softbiped.jpg'),[650,nan]); I{end+1} = W;
+I{end+1} = imresize(imread('softsuzu.png'),[650,nan]); %I{end+1} = W;
 
 % I{end+1} = imresize(imread('img22.png'),[650,nan]); I{end+1} = W;
 % I{end+1} = imresize(imread('img77.png'),[650,nan]); %I{end+1} = W;
@@ -40,6 +42,7 @@ f = fig(101,[11,10]);
 %montage(I,'BackgroundColor','w','Size', [1 5]);
 IMG = cat(2,I{:});
 imshow(IMG);
+axis tight;
 
 W = -120;
 H = 780;
@@ -63,7 +66,7 @@ text(W+ size(I{9},2)/2,H,'\small (e)','Color','k');
 pause(0.1);
 thesispath = @(x) ['~/Documents/phd/thesis/3_chapters/',x];
 
-W0 = 0.975;
+W0 = 0.95;
 X = num2str(W0,4);
 Y = num2str((f.InnerPosition(4)/f.InnerPosition(3))*W0,4);
 

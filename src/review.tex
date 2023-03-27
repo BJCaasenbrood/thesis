@@ -9,7 +9,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{todonotes}
 
-\definecolor{aoenglish}{rgb}{0.95,0.9,1}
+\definecolor{aoenglish}{rgb}{0.8,0.38,.38}
 
 \newcommand{\alertColor}{\textcolor{red}}
 \newcommand{\removeColor}{\textcolor{red}}
@@ -26,3 +26,13 @@
 
 \newcommand{\commentary}[2]{\highlight{#1}\todo[inline]{#2}}
 \sethlcolor{highlightcolor}
+
+\newcommand{\vdashl}{%
+  \blacktriangleright 
+}
+\newcommand{\vdashr}{%
+  \blacktriangleleft
+}
+
+\newcommand{\editl}{\textcolor{red}{$\boldsymbol{\vdashl}$}}
+\newcommand{\editr}{\textcolor{red}{$\boldsymbol{\vdashr}$}}

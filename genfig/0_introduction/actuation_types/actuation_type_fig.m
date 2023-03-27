@@ -39,20 +39,36 @@ f = fig(101,[11,10]);
 IMG = cat(2,I{:});
 imshow(IMG);
 
+% W = -120;
+% H = 780;
+% W = 10;
+% H = 60;
+% % text(W+ size(I{1},2)/2,H,'\small (a)','Color','k'); W = W + size(I{1},2) + 30;
+% % text(W+ size(I{3},2)/2,H,'\small (b)','Color','k'); W = W + size(I{3},2) + 30;
+% % text(W+ size(I{5},2)/2,H,'\small (c)','Color','k'); W = W + size(I{5},2) + 30;
+% % text(W+ size(I{7},2)/2,H,'\small (d)','Color','k'); W = W + size(I{7},2) + 30;
+% % text(W+ size(I{9},2)/2,H,'\small (e)','Color','k');
+% text(W,H,'\textbf a','Color','w'); W = W + size(I{1},2) + 30;
+% text(W,H,'\textbf b','Color','w'); W = W + size(I{3},2) + 30;
+% text(W,H,'\textbf c','Color','w'); W = W + size(I{5},2) + 30;
+% text(W,H,'\textbf d','Color','k'); W = W + size(I{7},2) + 30;
+% text(W,H,'\textbf e','Color','w');
 W = -120;
 H = 780;
-W = 10;
-H = 60;
-% text(W+ size(I{1},2)/2,H,'\small (a)','Color','k'); W = W + size(I{1},2) + 30;
-% text(W+ size(I{3},2)/2,H,'\small (b)','Color','k'); W = W + size(I{3},2) + 30;
-% text(W+ size(I{5},2)/2,H,'\small (c)','Color','k'); W = W + size(I{5},2) + 30;
-% text(W+ size(I{7},2)/2,H,'\small (d)','Color','k'); W = W + size(I{7},2) + 30;
-% text(W+ size(I{9},2)/2,H,'\small (e)','Color','k');
-text(W,H,'\textbf a','Color','w'); W = W + size(I{1},2) + 30;
-text(W,H,'\textbf b','Color','w'); W = W + size(I{3},2) + 30;
-text(W,H,'\textbf c','Color','w'); W = W + size(I{5},2) + 30;
-text(W,H,'\textbf d','Color','k'); W = W + size(I{7},2) + 30;
-text(W,H,'\textbf e','Color','w');
+% W = 10;
+% H = 60+500;
+
+% text(W,H,'\textbf a','Color','k'); W = W + size(I{1},2) + 30;
+% text(W,H,'\textbf b','Color','w'); W = W + size(I{3},2) + 30;
+% text(W,H,'\textbf c','Color','w'); W = W + size(I{5},2) + 30;
+% text(W,H,'\textbf d','Color','w'); W = W + size(I{7},2) + 30;
+% text(W,H,'\textbf e','Color','w');
+text(W+ size(I{1},2)/2,H,'\small (a)','Color','k'); W = W + size(I{1},2) + 30;
+text(W+ size(I{3},2)/2,H,'\small (b)','Color','k'); W = W + size(I{3},2) + 30;
+text(W+ size(I{5},2)/2,H,'\small (c)','Color','k'); W = W + size(I{5},2) + 30;
+text(W+ size(I{7},2)/2,H,'\small (d)','Color','k'); W = W + size(I{7},2) + 30;
+text(W+ size(I{9},2)/2,H,'\small (e)','Color','k');
+
 
 
 

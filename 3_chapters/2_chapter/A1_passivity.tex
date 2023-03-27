@@ -1,19 +1,22 @@
 %!TEX root = ../../thesis.tex
+\section{Supplementary material}
+\subsection{Adjoint actions on $\SE{3}$ and $\seg{3}$} 
+\label{app:C2:adjoint}  
 \noindent Given the position vector $\gammaB \in \R^3$ and the homogeneous rotation matrix $\PhiB \in \SO{3}$, the adjoint action of the homogeneous transformation $\mat{g} = (\gammaB,\,\PhiB) \in \SE{3}$ is then defined as
 %
 \begin{equation}
-\renewcommand*{\arraystretch}{2}{}
+\renewcommand*{\arraystretch}{1.25}{}
 \Ad_{\vec{g}(\sigma,\q)} := \begin{pmatrix}
 \; {\PhiB}(\sigma,\q) & \vec{0}_{3\times3} \; \\
-[\hspace{0.5mm} \gammaB^{\times}(\sigma,{\q})\,{\PhiB}({\q},\sigma) & {\PhiB}(\sigma,{\q})
+\hspace{0.5mm} \gammaB^{\times}(\sigma,{\q})\,{\PhiB}({\q},\sigma) & {\PhiB}(\sigma,{\q})
 \end{pmatrix}. 
 \label{eq:C2:adjoint_matrix}
 \end{equation}
 %
-Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \SO{3}$ see Murray et al. (1994, \cite{Murray1994}). In continuation, given the velocity twist $\etaB(\sigma,\q,\dq) = (\vec{\omega}^\top,\,\vec{v}^\top)^\top \in \R^6 \cong \seg{3}$, being the aggregate of $\vec{\omega}$ and $\vec{v}$, the angular and linear velocities, respectively. Then, the adjoint action on the algebra $\seg{3}$ is defined as
+Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \SO{3}$ see Murray et al. \cite{Murray1994}. In continuation, given the velocity twist $\etaB(\sigma,\q,\dq) = (\vec{\omega}^\top,\,\vec{v}^\top)^\top \in \R^6 \cong \seg{3}$, being the aggregate of $\vec{\omega}$ and $\vec{v}$, the angular and linear velocities, respectively. Then, the adjoint action on the algebra $\seg{3}$ is defined as
 %
 \begin{equation}
-\renewcommand*{\arraystretch}{2}{}
+\renewcommand*{\arraystretch}{1.25}{}
 \ad_{\etaB(\sigma,\q,\dq)} := \begin{pmatrix}
 \; \vB^{\times}(\sigma,\q,\dq) & \vec{0}_{3\times3} \; \\
  \vec{\omega}^{\times}(\sigma,\q,\dq) & \vB^{\times} (\sigma,\q,\dq)
@@ -22,7 +25,7 @@ Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \
 \end{equation}
 %
 
-\noindent These adjoint representation on the group $\SE{3}$ and its algebra $\seg{3}$ are analogous to the conventional notations in modern robotics mathematics, such as the work of Murray et al. (1994, \cite{Murray1994}).
+\noindent These adjoint representation on the group $\SE{3}$ and its algebra $\seg{3}$ are analogous to the conventional notations in modern robotics mathematics, such as the work of Murray et al. \cite{Murray1994}).
 
 %Please note that the superscript $^\sigma (\cdot)$ implies the vector is viewed from an inertial frame at the material coordinate $\sigma$.
 
@@ -52,7 +55,7 @@ Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \
 
 \subsection{Implicit trapezoidal scheme for the time integration using an approximate Hessian}
 \label{app:C2:timeint}
-\noindent Here, we detail an numerical approach to efficiently find the solutions to the approximated dynamic model $\MB(\q)\ddq + \CB(\q,\dq)\dq + \fB\elastic(\q,\dq) +  \fB\grav(\q) = \tauB$. We would like to emphasize that the control input $\tauB(\cdot,t)$ could be state-dependent if closed-loop controllers are considered; for instance, the proposed passivity-based controller in \eqref{eq:C2:tau}. First, let us consider a new state vector defined as $\vec{z} := ( \q^\top,\dq^\top )^\top$ such that we can rewrite the Lagrangian model in state-space form:
+\noindent Here, we detail an numerical approach to efficiently find the solutions to the approximated dynamic model $\MB(\q)\ddq + \CB(\q,\dq)\dq + \fB\elastic(\q,\dq) +  \fB\grav(\q) = \tauB$. We emphasize that the control input $\tauB(\cdot,t)$ could be state-dependent if closed-loop controllers are considered; for instance, the proposed passivity-based controller in \eqref{eq:C2:tau}. First, consider a new state vector defined as $\vec{z} := ( \q^\top,\dq^\top )^\top$ such that we can rewrite the Lagrangian model in state-space form:
 %
 \begin{equation}
 \dot{\zB} = \vec{f}(\zB,t),
@@ -82,12 +85,12 @@ By aiming to find the root of the residual dynamics $e(w) = 0$ and choosing $\wB
 \wB_{j+1} & = \zB_i  - \alpha^+ \left[\grad{\wB}\eB(\wB_j)\right]\inv \eB(\wB_{j}),
 \end{align}
 %
-where $j$ is the iteration index for finding the intermediate state solution $\wB=\zB_{i+1}$, and $0 < \alpha^+ \le 1$ a constant for controlling the update step. Once the residual dynamics converges on the sub-interval, i.e., $||\eB(\wB)||_2 \ll 1$, we repeat the procedure above until the solutions to $\zB(t)$ are recovered for the finite time horizon $\mathbb{T}$. Now the key here is that the Hessian $\HB(\wB) = \grad{\wB} \eB$ does not necessarily have to exact -- an approximation can suffice for numerical convergence, albeit requiring more iterations. Therefore, let us consider the first Taylor approximation of the Hessian:
+where $j$ is the iteration index for finding the intermediate state solution $\wB=\zB_{i+1}$, and $0 < \alpha^+ \le 1$ a constant for controlling the update step. Once the residual dynamics converges on the sub-interval, i.e., $||\eB(\wB)||_2 \ll 1$, we repeat the procedure above until the solutions to $\zB(t)$ are recovered for the finite time horizon $\mathbb{T}$. \editl Now the key here is that a rough approximation of the hessian $\HB(\wB) = \grad{\wB} \eB$ can suffice for numerical convergence. This implies we do not need a close approximation of hessian -- which can significantly speed-up simulation speed. This process, however, might require more iterations for the solutions to converge, but it outweighs computing the Hessian directly\editr. Therefore, let us consider the first Taylor approximation of the Hessian:
 %
 \begin{align}
-    \HB(\wB) & \cong \tmat{H}(\wB) \\ & := \mat{I}_{2n } - \frac{\Delta t}{2} \begin{pmatrix} 0 & \mat{I}_{n}  \\
+    \HB(\wB) & \simeq \tmat{H}(\wB) \notag \\ & := \mat{I}_{2n } - \frac{\Delta t}{2} \begin{pmatrix} 0 & \mat{I}_{n}  \\
  -\mat{M} \inv \tmat{K} & -\MB\inv \tmat{D}
   \end{pmatrix}
 \end{align}
 %\fB\elastic- \fB\grav
-where the matrices $\tmat{K} = \grad{\q}\fB\elastic + \grad{\q}\fB\grav + \grad{\q}\tauB$ and $\tmat{D} = \CB + \grad{\dq}\fB\elastic + \grad{\dq}\tauB$ are a-priori approximations of the Hessians w.r.t. $\q$ and $\dq$, respectively. Please note that the Jacobians $\grad{\q}\tauB$ and $\grad{\dq}\tauB$ can be nonzero, especially in a closed-loop control setting. To approximate these partial derivatives of the control input, we employ a finite-difference scheme. Again, the Hessian does not need to be exact, as such an a-priori computation of the controller Jacobians can be preformed before the start of the implicit solver.
+where the matrices $\tmat{K} = \grad{\q}\fB\elastic + \grad{\q}\fB\grav + \grad{\q}\tauB$ and $\tmat{D} = \CB + \grad{\dq}\fB\elastic + \grad{\dq}\tauB$ are a-priori approximations of the Hessians w.r.t. $\q$ and $\dq$, respectively. Note that the Jacobians $\grad{\q}\tauB$ and $\grad{\dq}\tauB$ can be nonzero, especially in a closed-loop control setting. To approximate these partial derivatives of the control input, we employ a finite-difference scheme. Again, the Hessian does not need to be exact, as such an a-priori computation of the controller Jacobians can be performed before the start of the implicit solver.

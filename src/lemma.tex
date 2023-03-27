@@ -1,10 +1,29 @@
 %!TEX root = ../thesis.tex
+% Theorem styles
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={(}{)},
+    bodyfont=\normalfont,
+    headpunct={},
+    spacebelow=\parsep\parsep,
+    spaceabove=\parsep\parsep,
+]{remark}
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={(}{)},
+    bodyfont=\normalfont,
+    headpunct={},
+    spacebelow=\parsep\parsep,
+    spaceabove=\parsep\parsep,
+]{assumption}
+
 % Theorems, remarks, propositions, etc.
-\declaretheorem[name={Remark},style=plain,numberwithin=chapter]{rmk}
+\declaretheorem[name={Remark},style=remark,numberwithin=chapter]{rmk}
 \declaretheorem[name={Definition},style=definition,numberwithin=chapter]{dfn}
 \declaretheorem[name={Theorem},qed=$\blacktriangle$,style=plain,numberwithin=chapter]{thm}
 \declaretheorem[name={Lemma},qed=$\blacktriangle$,style=plain,numberwithin=chapter]{lem}
-\declaretheorem[name={Assumption},style=definition,numberwithin=chapter]{asm}
+\declaretheorem[name={Assumption},style=assumption,numberwithin=chapter]{asm}
 \declaretheorem[name={Property},style=plain,numberwithin=chapter]{prop}
 \declaretheorem[name={Example},style=definition,numberwithin=chapter]{example}
 \declaretheorem[name={Corollary},qed=$\blacktriangle$,style=plain,numberwithin=chapter]{cor}
