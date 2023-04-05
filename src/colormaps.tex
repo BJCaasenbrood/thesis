@@ -1,0 +1,131 @@
+\usepgfplotslibrary{colormaps}%
+
+% #1: left offset in [0,1]
+% #2: width
+\newcommand\colormapcaption[2]{%
+    % convert colormap -> \result
+    \pgfplotscolormaptoshadingspec{\pgfkeysvalueof{/pgfplots/colormap name}}{#2}\result
+    % define and use a shading in pgf:
+    \def\tempb{\pgfdeclarehorizontalshading{tempshading}{1cm}}%
+    % where `\result' is inserted as last argument:
+    \expandafter\tempb\expandafter{\result}%
+    \begin{tikzpicture}[
+        % compensate for the clip by scaling the image:
+        xscale={1/(1-#1)}
+    ]
+        % clip away #1 percent of the width:
+        \clip ({(#1)*#2},1mm) rectangle (1cm,.25cm);
+        \pgftext[bottom,left]{\pgfuseshading{tempshading}}%
+    \end{tikzpicture}%
+}%
+
+\pgfplotsset{
+    % this *defines* a custom colormap ...
+    colormap={slategraywhite}{
+        rgb255=(112,128,144)
+        rgb255=(255,159,151)
+    },
+%    % ... but this command does not *activate* a custom colormap ...
+%    colormap/slategraywhite,        % <-- activate colormap
+%    % this could either be done here (globally), which makes it the default
+%    % used colormap, by specifying ...
+%    colormap name=slategraywhite,
+}
+
+\pgfplotsset{
+    colormap={viridis}{
+         rgb255=(68,1,84)
+         rgb255=(72,21,103)
+         rgb255=(72,38,119)
+         rgb255=(69,55,129)
+         rgb255=(64,71,136)
+         rgb255=(57,86,140)
+         rgb255=(51,99,141)
+         rgb255=(45,112,142)
+         rgb255=(40,125,142)
+         rgb255=(35,138,141)
+         rgb255=(31,150,139)
+         rgb255=(32,163,135)
+         rgb255=(42,175,127)
+         rgb255=(61,187,117)
+         rgb255=(85,198,103)
+         rgb255=(115,208,85)
+         rgb255=(149,216,64)
+         rgb255=(184,222,42)
+         rgb255=(220,227,26)
+         rgb255=(253,231,37)
+    }
+}
+
+\pgfplotsset{
+	 colormap={barneyinv}{
+	 	 rgb255=(114,83,237)
+	 	 rgb255=(120,91,237)
+	 	 rgb255=(126,98,236)
+	 	 rgb255=(132,106,236)
+	 	 rgb255=(138,113,235)
+	 	 rgb255=(144,121,235)
+	 	 rgb255=(150,129,234)
+	 	 rgb255=(156,136,234)
+	 	 rgb255=(162,144,233)
+	 	 rgb255=(168,152,233)
+	 	 rgb255=(174,159,232)
+	 	 rgb255=(180,167,232)
+	 	 rgb255=(186,174,231)
+	 	 rgb255=(192,182,231)
+	 	 rgb255=(198,190,230)
+	 	 rgb255=(204,197,230)
+	 	 rgb255=(210,205,229)
+	 	 rgb255=(216,212,229)
+	 	 rgb255=(222,220,228)
+	 	 rgb255=(228,228,228)
+}
+}
+
+\pgfplotsset{
+	 colormap={barney}{
+	 	 rgb255=(228,228,228)
+	 	 rgb255=(222,220,228)
+	 	 rgb255=(216,212,229)
+	 	 rgb255=(210,205,229)
+	 	 rgb255=(204,197,230)
+	 	 rgb255=(198,190,230)
+	 	 rgb255=(192,182,231)
+	 	 rgb255=(186,174,231)
+	 	 rgb255=(180,167,232)
+	 	 rgb255=(174,159,232)
+	 	 rgb255=(168,152,233)
+	 	 rgb255=(162,144,233)
+	 	 rgb255=(156,136,234)
+	 	 rgb255=(150,129,234)
+	 	 rgb255=(144,121,235)
+	 	 rgb255=(138,113,235)
+	 	 rgb255=(132,106,236)
+	 	 rgb255=(126,98,236)
+	 	 rgb255=(120,91,237)
+	 	 rgb255=(114,83,237)
+}}
+
+\pgfplotsset{
+	 colormap={turbo}{
+	 	 rgb255=(51,27,62)
+	 	 rgb255=(63,76,157)
+	 	 rgb255=(74,102,208)
+	 	 rgb255=(73,135,226)
+	 	 rgb255=(67,165,230)
+	 	 rgb255=(63,190,227)
+	 	 rgb255=(68,213,198)
+	 	 rgb255=(72,234,162)
+	 	 rgb255=(118,241,134)
+	 	 rgb255=(152,247,100)
+	 	 rgb255=(184,241,76)
+	 	 rgb255=(214,223,75)
+	 	 rgb255=(238,202,74)
+	 	 rgb255=(243,174,66)
+	 	 rgb255=(249,139,56)
+	 	 rgb255=(238,112,48)
+	 	 rgb255=(219,83,39)
+	 	 rgb255=(196,53,31)
+	 	 rgb255=(163,41,24)
+	 	 rgb255=(117,23,14)
+}}

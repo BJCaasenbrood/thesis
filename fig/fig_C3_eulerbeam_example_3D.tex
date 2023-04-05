@@ -1,0 +1,130 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.89290,0.89290,0.89290}%
+\definecolor{mycolor2}{rgb}{0.68536,0.75889,0.88144}%
+\definecolor{mycolor3}{rgb}{0.47782,0.62488,0.86998}%
+\definecolor{mycolor4}{rgb}{0.27028,0.49087,0.85852}%
+\definecolor{mycolor5}{rgb}{0.06275,0.35686,0.84706}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.393\textwidth,
+height=0.273\textwidth,
+at={(0.507\textwidth,0\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=391.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=271.5,
+axis line style={draw=none},
+ticks=none
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=391.5, ymin=0.5, ymax=271.5] {fig_C3_eulerbeam_example_3D-1.png};
+\end{axis}
+
+\begin{axis}[%
+width=0.405\textwidth,
+height=0.273\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=100,
+xtick={0,100},
+xticklabels={{0},{$L$}},
+xlabel style={font=\color{white!15!black}, yshift=5pt},
+xlabel={space $\sigma$},
+ymin=-5,
+ymax=70,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\kappa(\sigma,t)$ (mm$^{-1}$)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids
+]
+\addplot [color=mycolor1, line width=1.8pt, forget plot]
+  table[row sep=crcr]{%
+0	0\\
+100	0\\
+};
+\addplot [color=mycolor2, line width=1.8pt, forget plot]
+  table[row sep=crcr]{%
+0	0\\
+15.7157157157157	2.83047089028886\\
+31.4314314314314	4.97995465872708\\
+47.5475475475476	6.50447153711326\\
+64.7647647647648	7.45064492701712\\
+85.0850850850851	7.86839675692123\\
+100	7.90564399432552\\
+};
+\addplot [color=mycolor3, line width=1.8pt, forget plot]
+  table[row sep=crcr]{%
+0	0\\
+10.6106106106106	4.69465476161083\\
+21.1211211211211	8.61760388347477\\
+31.6316316316316	11.8253274486491\\
+42.2422422422422	14.3601010441867\\
+53.1531531531532	16.2721577996008\\
+64.7647647647648	17.6106152820405\\
+77.6776776776777	18.3988481509257\\
+94.1941941941942	18.680703252255\\
+100	18.6860676229512\\
+};
+\addplot [color=mycolor4, line width=1.8pt, forget plot]
+  table[row sep=crcr]{%
+0	0\\
+8.60860860860861	7.08667090503489\\
+17.017017017017	13.1479474019476\\
+25.2252252252252	18.2497496684672\\
+33.3333333333333	22.5108261318712\\
+41.4414414414414	26.019913948194\\
+49.7497497497498	28.8708542481266\\
+58.2582582582583	31.0625154195058\\
+67.1671671671672	32.6476393619519\\
+76.8768768768769	33.6742369735057\\
+88.3883883883884	34.1807175171737\\
+100	34.2577906420773\\
+};
+\addplot [color=mycolor5, line width=1.8pt, forget plot]
+  table[row sep=crcr]{%
+0	0\\
+7.6076076076076	10.8145509556227\\
+14.9149149149149	20.0780076622414\\
+22.022022022022	28.0354588986514\\
+28.9289289289289	34.784744453201\\
+35.7357357357357	40.5046017902398\\
+42.4424424424424	45.2614189259049\\
+49.049049049049	49.1286496814225\\
+55.7557557557558	52.2693569213937\\
+62.6626626626627	54.738748175621\\
+69.8698698698699	56.5722071820405\\
+77.5775775775776	57.8130937401701\\
+86.3863863863864	58.5162426796125\\
+98.4984984984985	58.7273450503463\\
+100	58.7276411007039\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.963\textwidth,
+height=0.341\textwidth,
+at={(-0.048\textwidth,-0.034\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

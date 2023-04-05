@@ -1,0 +1,34 @@
+\section{Open-source soft robots of Sorotoki}
+Before discussing the software, we present a selection of open-source soft robotic systems, as illustrated in Figure \ref{fig:C5:examplebots}, which are part of the \textit{Sorotoki} toolkit. These systems all feature fluidic actuation and can be fabricated using conventional additive manufacturing techniques such as selective laser sintering (SLS), stereolithography (SLA), or direct light projection (DLP). Formlabs Elastic 80A resin or a flexible TPU with a shore hardness of $\le 80$A are suggested for the elastically deformable bodies in SLA/DLP and SLS printing, respectively. Moreover, these soft robots can also be realized using multi-material Fused Deposition Modeling (FDM) with both flexible filaments (e.g., NinjaFlex) and water-soluble filaments. Nevertheless, FDM-fabricated systems may suffer from inferior quality, air-tightness, and anisotropy when compared to those produced by SLS or SLA/DLP. For that reason, we recommend SLS/SLA/DLP over FDM for its simplicity and reliability. For further details concerning the SLS/DLP manufacturing process, consult Proper et al. \cite{Proper2023}. The 3D models (in \texttt{.stl} format) are publicly available through Git:
+%
+\begin{lstlisting}[style=terminal]
+> git clone https://github.com/BJCaasenbrood/SorotokiBots
+\end{lstlisting}
+%
+A brief description of these soft robotic systems and their functionality is provided below.
+
+\afterpage{
+\begin{figure}[!t]
+    \centering
+    %\input{./fig/fig_examplebots.tex}
+    \includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-1.pdf}
+    \caption{Open-source soft robots and soft actuators that are included within the \textit{Sorotoki} toolkit. All systems are fully 3D-printed using either Selective Laser Sintering (SLS) or Stereolithography (SLA) and their 3D files can be found on the repository. All systems are driven by pneumatics. (a) A two-bellow soft robot suitable for planar motion. (b) An optimized PneuNet bending actuator. (c) A soft robotic hand composed of five soft bending actuators, whose fingers are easily replaceable. (d) A three-bellow soft robot manipulator with a mounted soft gripper at the end-effector. The center axis is hollow, allowing for electronic cables when compact sensors (e.g., IMUs) are mounted on the soft gripper.}
+    \vspace{-3mm}
+    \label{fig:C5:examplebots}
+\end{figure}
+\clearpage
+}
+%  
+
+\textbf{A: Soft bending actuator.} The first system is a soft bending actuator (Figure \ref{fig:C5:examplebots}a), an alternative to the PneuNet actuator proposed by Mosadegh et al. \cite{Mosadegh2014}. Like the PneuNet actuator, our soft actuator consists of an array of bellows placed on a relatively inextensible elastic medium. The stiffness gradient in the actuator allows for pure bending to occur when the network of bellows is pressurized. The geometry of the PneuNet-based soft robot was optimized using Sorotoki's topology optimizer, which was specifically tailored for use with Formlabs Elastic 80A resin. The soft actuator is fully 3D-printed using SLA and can accept pressures in the range of $-10 \le u \le 100$ kPa at its central pressure input.
+
+\textbf{B: Planar soft actuator.} The second system is a planar soft actuator that comprises two pneumatic bellow networks that are connected in parallel (Figure \ref{fig:C5:examplebots}b). Similar to the previous soft actuator, bending occurs due to a pressure differential between the two pneumatic networks. However, the system is also capable of pure elongation and contraction if the pressure in both networks is equal. This enhances the motion capabilities of the soft robot, enabling it to move within a planar workspace of approximately 100 $\times$ 100 mm. The system has two pressure range of $-10 \le u \le 50$ kPa.
+
+\textbf{C: Composable soft robotic hand.} The third system provided by \textit{Sorotoki} is a soft robotic hand with a higher level of complexity compared to the previous soft robots (Figure \ref{fig:C5:examplebots}c). This design was inspired by the work of Laake et al. \cite{vanLaake2022Sep} and Fras et al. \cite{Fras2018Oct}. The soft robotic hand consists of five independently controlled soft fingers that can be actuated using pneumatics or fluidics. Each finger is fabricated using SLS with Elastic 80A, while the base is fabricated using FDM with PLA. The dimensions and scale of the soft robotic hand are similar to those of a human hand, with approximate dimensions of 190 $\times$ 100 $\times$ 40 mm. All fingers have a length of 90 mm except for the thumb, which is slightly shorter at 80 mm. The soft robotic hand has five independent inputs that accept pressures in the range of $-10 \le u \le 60$ kPa. 
+
+\textbf{D: Full soft manipulator with soft gripper.}
+The final soft robot provided by \textit{Sorotoki} is a soft robotic manipulator that features three independent bellow networks and a three-fingered soft robotic gripper attached to the end effector (Figure \ref{fig:C5:examplebots}d). With independent actuation of each bellow network, the manipulator has a full 3D workspace of approximately 150 $\times$ 150 $\times$ 150 \si{\milli \meter}. The soft elements of the manipulator are fabricated using Elastic 80A resin, while the rigid connector pieces are made using Rigid 10K resin. The gripper has demonstrated the ability to successfully grip objects with a diameter of 40 \si{\milli \meter}, with a maximum payload of 100 \si{\gram} without significant parasitic deformation. The central axis of the manipulator is designed to be hollow, enabling the pneumatic tubing of the gripper and the cables for state estimation sensors (e.g., IMUs) to be embedded. The manipulator has three inputs that accept pressure values in the range of $-10 \le u \le 30$ kPa, and the gripper has one input that accepts values in the range of $-30 \le u \le 60$ kPa. \\
+
+\begin{rmk}
+High-resolution 3D models are available on the following repository at \url{https://github.com/BJCaasenbrood/SorotokiBots}. These models can be sliced for 3D printing using popular slicing software such as Cura, PrusaSlicer, or PreForm. Detailed assembly instructions can be found in the documentation on the repository. Additionally, low-resolution 3D models are provided on the repository under \textit{./assets/stl/redux} for real-time visualization of the soft body's deformations.
+\end{rmk}

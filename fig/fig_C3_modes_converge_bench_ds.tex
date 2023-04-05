@@ -1,0 +1,88 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06275,0.35686,0.84706}%
+\definecolor{mycolor2}{rgb}{0.86667,0.21176,0.10980}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.359\textwidth,
+height=0.25\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=-0.73,
+xmax=1.57,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\Delta \sigma $ (mm,log)},
+ymin=0,
+ymax=20,
+ylabel style={font=\color{white!15!black}},
+ylabel={error tip (mm)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=none}
+]
+\addplot [color=mycolor1, line width=1.0pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1.56861591791385	0\\
+0.8754687373539	0\\
+0.470003629245736	0\\
+0.182321556793954	0\\
+-0.0408219945202553	0\\
+-0.22314355131421	0\\
+-0.377294231141468	0\\
+-0.510825623765991	0\\
+-0.628608659422374	0\\
+-0.733969175080201	3.64466754455996\\
+};
+\addlegendentry{RMS}
+
+\addplot [color=mycolor2, line width=1.0pt, mark=square, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1.56861591791385	0\\
+0.875468737353899	0\\
+0.470003629245735	0\\
+0.182321556793955	0\\
+-0.0408219945202539	0\\
+-0.223143551314209	0\\
+-0.37729423114147	0\\
+-0.510825623765992	0\\
+-0.628608659422373	0\\
+-0.733969175080201	17.1737830871518\\
+};
+\addlegendentry{Absolute}
+
+\end{axis}
+
+\begin{axis}[%
+width=0.359\textwidth,
+height=0.25\textwidth,
+at={(0.491\textwidth,0\textwidth)},
+scale only axis,
+xmin=-0.73,
+xmax=1.57,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\Delta \sigma $ (mm,log)},
+ymin=-0,
+ymax=2,
+ylabel style={font=\color{white!15!black}},
+ylabel={ratio sim-time vs. T},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=none}
+]
+\addplot [color=black, dashed, line width=1.0pt]
+  table[row sep=crcr]{%
+1.56861591791385	1\\
+-0.7339691750802	1\\
+};
+\addlegendentry{real-time}
+
+\end{axis}
+\end{tikzpicture}%

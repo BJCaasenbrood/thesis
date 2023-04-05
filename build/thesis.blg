@@ -1,0 +1,95 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: 0_preface/preface.aux
+A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
+The style file: apalike.bst
+A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
+A level-1 auxiliary file: 7_publications/publications.aux
+A level-1 auxiliary file: 8_cv/cv.aux
+Database file #1: MyBib.bib
+Warning--entry type for "Andorf1974" isn't style-file defined
+--line 89 of file MyBib.bib
+Warning--entry type for "Anderson1968" isn't style-file defined
+--line 106 of file MyBib.bib
+Warning--entry type for "Immega1986" isn't style-file defined
+--line 126 of file MyBib.bib
+Warning--I'm ignoring Duriez2013's extra "publisher" field
+--line 849 of file MyBib.bib
+Warning--entry type for "Paynter1974" isn't style-file defined
+--line 1449 of file MyBib.bib
+Warning--entry type for "Paynter1988" isn't style-file defined
+--line 1456 of file MyBib.bib
+Warning--entry type for "Kukolj1988" isn't style-file defined
+--line 2097 of file MyBib.bib
+Warning--entry type for "Markiewicz1973" isn't style-file defined
+--line 2413 of file MyBib.bib
+Warning--entry type for "Morin1953" isn't style-file defined
+--line 2525 of file MyBib.bib
+Warning--entry type for "Takagi1983" isn't style-file defined
+--line 2860 of file MyBib.bib
+Warning--entry type for "Yarlott1972" isn't style-file defined
+--line 3386 of file MyBib.bib
+Warning--I didn't find a database entry for "Milana2021Apr"
+Warning--to sort, need author or key in BibEntryStanford2022Sep
+Warning--to sort, need author or key in BibEntryPuma2022Sep
+Warning--empty year in BibEntryPuma2022Sep
+Warning--empty year in BibEntryStanford2022Sep
+Warning--can't use both volume and number fields in Bendsoe2003
+Warning--empty publisher in Bendsoe2003
+Warning--empty booktitle in SorotokiCode
+Warning--empty school in Chirikjian1992
+Warning--empty school in Daerden1999
+Warning--empty journal in DellaSantina2021
+Warning--empty booktitle in Duriez2013
+Warning--can't use both volume and number fields in Holzapfel2002
+Warning--there's a number but no volume in Katzschmann2019
+Warning--empty school in Mochiyama1992
+Warning--empty publisher in Murray1994
+Warning--there's a number but no volume in Runge2017
+Warning--empty school in Sanan2013
+Warning--empty publisher in Tedrake2022
+Warning--empty journal in Thieffry2020
+Warning--empty journal in Thieffry2017
+You've used 164 entries,
+            1935 wiz_defined-function locations,
+            1507 strings with 38742 characters,
+and the built_in function-call counts, 71657 in all, are:
+= -- 7067
+> -- 3273
+< -- 105
++ -- 1148
+- -- 1130
+* -- 6208
+:= -- 12288
+add.period$ -- 507
+call.type$ -- 164
+change.case$ -- 1370
+chr.to.int$ -- 154
+cite$ -- 186
+duplicate$ -- 2586
+empty$ -- 4750
+format.name$ -- 1352
+if$ -- 14050
+int.to.chr$ -- 11
+int.to.str$ -- 0
+missing$ -- 151
+newline$ -- 817
+num.names$ -- 486
+pop$ -- 1219
+preamble$ -- 1
+purify$ -- 1385
+quote$ -- 0
+skip$ -- 2015
+stack$ -- 0
+substring$ -- 5102
+swap$ -- 440
+text.length$ -- 37
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 962
+warning$ -- 20
+while$ -- 565
+width$ -- 0
+write$ -- 2108
+(There were 32 warnings)

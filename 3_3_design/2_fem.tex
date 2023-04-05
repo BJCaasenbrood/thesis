@@ -1,0 +1,60 @@
+\section{Nonlinear Finite Elements} \label{chap:fem}
+
+\subsection{Strain theory in continuum mechanics}
+Here, we state the variational principle of continuum mechanics in a nonlinear geometrical setting. First, we introduce a description of the undeformed material domain described by $\mathcal{B}_0 \subset \R^3$. As external forces induce motion in $\mathcal{B}_0$, a representation of the deformed domain can be described by $\mathcal{B} \subset \R^3$. Suppose there exists an arbitrary material point inside the undeformed configuration represented by a position vector $\boldsymbol{X} \in \mathcal{B}_0$. Due to the motion of $\mathcal{B}_0$, a continuous path can be drawn between the position vectors $\boldsymbol{X}$ and $\boldsymbol{X}'$, that is, a particular material point in undeformed and deformed configuration, respectively. Therefore, let the deformation mapping for every material point in $\mathcal{B}_0$ be described by $\boldsymbol{\varphi}:\; \mathcal{B}_0 \to \mathcal{B}$ such that $\boldsymbol{X} \mapsto \boldsymbol{\varphi}(\boldsymbol{X}) = \boldsymbol{X}'$. 
+Alternatively, we can write $\boldsymbol{X}' = \boldsymbol{\varphi}(\boldsymbol{X}) = \boldsymbol{X} + \boldsymbol{x}(\boldsymbol{X})$, where $\boldsymbol{x} \in \R^3$ is the displacement vector the material point Since the mapping $\boldsymbol{\varphi}$ is assumed to be sufficiently smooth, the second-order deformation gradient tensor is defined by
+\begin{equation}
+\boldsymbol{F} := \frac{\p \boldsymbol{\varphi} }{\p \boldsymbol{X}} \label{eq:F} = \boldsymbol{I} + \frac{\p \boldsymbol{x} }{\p \boldsymbol{X}}.
+\end{equation}
+The second-order deformation gradient tensor holds useful information about the deformation locally, i.e., it describes the deformation of an infinitesimal sub-volume of the material domain $\mathcal{B}_0$ around $\XB$. From the deformation gradient, the Green-Lagrange strain tensor can be derived by $\ET : = \frac{1}{2}(\CT - \boldsymbol{I})$, where $\CT = \FB^\top \FB$ is the right Cauchy-Green strain tensor. Expressed in terms of displacement gradient, the general expression for the second-order Green-Lagrange strain tensor becomes
+%
+\begin{equation}
+\EB = \frac{1}{2}\left( \frac{\p \x}{\p \XB} + \frac{\p\x^\top}{\p \XB} + \frac{\p\x^\top}{\p \XB}\frac{\p\x}{\p \XB} \right). \label{eq:E_tens}
+\end{equation}
+%
+Since the numerical implementation generally involves matrix-vector notation instead of tensor notation; we briefly introduce the following notation. A Cartesian tensor can be formally represented by an component array in terms of a basis $\eB_i$. For example, a second-order tensor can be denoted by $\TT = \sum_{ij}\TT_{ij}\, \eB_i \otimes \eB_j$ with $\otimes$ the dyadic product and bases $\eB_1,\eB_2,\eB_3 \in \R^3$. As such, the column vector representation of a second-order tensor $\TT$ can be denoted by $\{ \TT \} := \text{vec}({\TT}_{ij})$. Hence, the variational form of Lagrangian strain can be written in vector notation as
+\begin{align}
+\{\delta \boldsymbol{E} \} & = \left[\frac{\p \boldsymbol{E}(\x + \varepsilon \cdot \delta \x)}{\p \x} \right]_{\varepsilon = 0} \\ & := \boldsymbol{B}(\boldsymbol{x}) \, \{\delta  \boldsymbol{x}\},
+\end{align}
+where $\boldsymbol{B}(\boldsymbol{x})$ is a nonlinear strain-displacement matrix that relates displacements to Lagrangian strain \cite{Kim2018}. \\ 
+
+\begin{rmk}{Two-dimensional problems}
+In this work, we primarily focus on two-dimensional mechanical problems. We would like to stress that the variational principle for three-dimensional continuum solids discussed earlier are similar to those in two-dimensional situations \cite{Kim2018,Gain2013}. 
+\end{rmk}
+
+\subsection{Isotropic hyperelasticity}
+In soft robotics, the use of elastomer materials is widespread due to their relatively low Young's moduli, large reversible strains, and mechanical robustness. These elastic materials are distinguished in material mechanics as hyperelastic materials. The presence of large deformations and rubber-like materials inherently leads to a state-dependent mechanical compliance. In contrast to Hookean materials, whose elasticity is linear, the constitutive behavior of hyperelastic materials is described by a (nonlinear) strain energy function ${\Psi}: \R^{3\times3} \mapsto \Rp$, i.e., a mapping from the Lagrangian strain tensor to potential energy. Popular constitutive models for hyperelastic behavior include Neo-Hookean, Mooney, Ogden, or Yeoh. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models are commonly expressed in terms of the strain invariants (${J}_1$, ${J}_2$, ${J}_3$).
+
+In this work, the Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. The Yeoh model is a popular constitutive model due to its unique dependency on the first invariant $J_1 = \text{tr}(\boldsymbol{C})$. The strain energy function of the Yeoh model \cite{Kim2018} is given by
+%
+\begin{equation}
+{\Psi} = \sum_{i = 1}^{3} c_i (J_1 - 3)^i, 
+\end{equation}
+%
+where $c_1 > 0$ and $c_2$, $c_3$ are material constants (J/m$^3$). The second Piola-Kirchoff stress of a constitutive material can be calculated by differentiating the strain energy function with respect to the Lagrangian strain tensor \cite{Renaud2011,Kim2018}
+%
+\begin{equation}
+\ST = \frac{\p {\Psi}}{\p \boldsymbol{E}} = 2\frac{\p {\Psi}}{\p \boldsymbol{C}}, 
+\label{eq:piola}
+\end{equation}
+%
+which is a symmetric second-order tensor that is the energy conjugate to the Lagrangian strain. Suppose that the external forces acting on the boundary of the material domain $\mathcal{B}_0$ can be represented by the vector $\boldsymbol{f}_{\textrm{ext}}$. Then, in case of a (quasi)-static equilibrium, the residual between the internal force of the continuum solids and the external forces can be written as
+%
+\begin{equation}
+\RB(\x) = \underbrace{\int_{\mathcal{B}_0} \BB(\x)^\top \{\ST(\x)\}  \; dV}_{\fB_\textrm{int}} -\fB_{\textrm{ext}} = 0, \label{eq:residual}
+\end{equation} 
+%
+where the first right-hand term represents a volume integral over the undeformed domain $\mathcal{B}_0$. Given the context of finite elements, this represents a set of nonlinear equalities with unknown nodal displacements $\boldsymbol{x}$. The solutions to these (highly) nonlinear equations can be found through numerical methods, like the Newton-Raphson method. 
+
+\subsection{Polygonal mesh elements}
+For two-dimensional finite element problems, the three-node triangular and bilinear four-node quadrilateral elements are widely used, while the use of higher-order polygonal elements is still relatively scarce. Polygonal elements have some attractive features such as facial connectivity, regularity, and adaptability that suit complex material domains. This makes polygonal elements ideal for topology optimization since numerical issues such as checkerboard patterns and single-node connections are inherently alleviated \cite{Talischi2012, Gain2013}. 
+
+An efficient method of generating polygonal meshes is constructing a Voronoi tessellation from a set of seeding points, where each point can be associated with its respective Voronoi cell. For two-dimensional tessellations, consider a set of $n$ number of unique seeding points $\mathcal{P} = \{ \boldsymbol{p}_i \}^n_{i = 1}$ that are uniformly distributed inside $\mathcal{B}_0 \subset \R^2$. Then, the corresponding (restricted) Voronoi tessellation is defined as the set of Voronoi cells that intersect $\mathcal{B}_0$, that is, 
+\begin{equation}
+	\mathcal{T}(\mathcal{P}) = \big\{\, \mathcal{V}(\boldsymbol{p},\mathcal{P}) \,\cap \mathcal{B}_0 \;:\; \forall \boldsymbol{p} \in \mathcal{P} \,\big\},
+\end{equation}
+where $\mathcal{V}$ is the Voronoi cell from the point $\boldsymbol{p}_i$. Mathematically, the definition of a Voronoi cell for a point $\boldsymbol{p}_i \in \mathcal{P}$ is given by
+\begin{equation}
+\mathcal{V} = \left\{\, \boldsymbol{x}\in \R^2 \;:\; \Delta(\boldsymbol{x},\boldsymbol{p}_i) \le \Delta(\boldsymbol{x},\boldsymbol{y}), \forall \boldsymbol{y} \in \mathcal{P}\!\setminus\!\{\boldsymbol{p}_i\}  \,\right\}, \label{eq:vorcell}
+\end{equation}
+where $\Delta(\boldsymbol{x},\boldsymbol{y}) = ||\boldsymbol{x} -  \boldsymbol{y}||$ denotes the euclidean distance between two points $\boldsymbol{x},\boldsymbol{y}\in \R^2$. Due to the convexity of euclidean distance function, the Voronoi cells $\mathcal{V}$ are intrinsically convex polygons. Clearly, the choice of the point set $\mathcal{P}$ is of paramount importance in generating the Voronoi tessellation. To obtain a uniformly distributed set, Lloyd's algorithm can be used to iteratively update a set of points that are initially chosen randomly. For more detail on the generation of polygonal meshes, we refer the reader to the work of Talischi et al. \cite{Talischi2012}.

@@ -1,0 +1,92 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'diagram_softrobot.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{297.74982122bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.40831585)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{diagram_softrobot.pdf}}%
+    \put(0.95878372,0.02863435){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{env}\end{tabular}}}}}%
+    \put(0.29395899,0.04989615){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small \textbf{soft deformable body}\end{tabular}}}}%
+    \put(0.12078794,0.28204032){\color[rgb]{0.55294118,0.50588235,0.90980392}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize {soft actuator(s)}\end{tabular}}}}%
+    \put(0.53917374,0.28115484){\color[rgb]{0.55294118,0.50588235,0.90980392}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize {soft sensor(s)}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{diagram_softrobot.pdf}}%
+    \put(0.07534735,0.20122918){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $g_1$}\end{tabular}}}}%
+    \put(0.05610191,0.14241813){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $\tau_1$}\end{tabular}}}}%
+    \put(0.36243266,0.14236088){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $\tau_n$}\end{tabular}}}}%
+    \put(0.461272,0.142238){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_1$}\end{tabular}}}}%
+    \put(0.77142484,0.14217136){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_n$}\end{tabular}}}}%
+    \put(0.32197822,0.20027076){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $g_n$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{diagram_softrobot.pdf}}%
+    \put(0.48634074,0.20122919){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $h_1$}\end{tabular}}}}%
+    \put(0.73297164,0.20027076){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $h_m$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{diagram_softrobot.pdf}}%
+    \put(0.51726339,0.3344094){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $y_1$}\end{tabular}}}}%
+    \put(0.76604758,0.33203661){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $y_m$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{diagram_softrobot.pdf}}%
+    \put(0.1057793,0.3344094){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $u_1$}\end{tabular}}}}%
+    \put(0.35456334,0.33203661){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $u_n$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{diagram_softrobot.pdf}}%
+    \put(0.41477591,0.28719781){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\small $q$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{diagram_softrobot.pdf}}%
+    \put(0.27113157,0.37872697){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_1$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{diagram_softrobot.pdf}}%
+    \put(0.32052113,0.37872697){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_2$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{diagram_softrobot.pdf}}%
+    \put(0.37089899,0.37872697){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_3$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{diagram_softrobot.pdf}}%
+    \put(0.47264302,0.4794827){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_1$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{diagram_softrobot.pdf}}%
+    \put(0.52203259,0.4794827){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_2$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{diagram_softrobot.pdf}}%
+    \put(0.57241045,0.4794827){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{\scriptsize $q_3$}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

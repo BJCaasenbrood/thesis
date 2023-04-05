@@ -1,0 +1,126 @@
+
+\subsection{Model composer (\texttt{Model})}
+\label{sec:C5:model}
+In many instances, soft robots comprise multiple dynamic components that are interconnected to form the overall system. For instance, the soft robotic hand depicted in Figure \ref{fig:C5:examplebots}c comprises five actively controlled soft fingers connected to a rigid palm base, each of which exhibits its own fluid-structure interaction. While each soft finger can be modeled through the \class{Shape} class, the class itself lacks a composer or solver that addresses the interconnections between a network of dynamic systems.
+
+To address the issue, we propose the \class{Model.m} class, which concatenates dynamic systems to systematically increase complexity. The class is equipped with an implicit solver that facilitates communication of state information between subsystems. The goal of the \class{Model.m} class is two-fold: $(i)$ to facilitate the composition of multiple dynamic components that form a soft robotic system, and $(ii)$ to leverage the dynamic network structure to design controllers through interconnection of subsystems.
+For example, a soft robot, the fluidic actuation, and the model-based controller can be modelled as three seperate entities and be composed into one global closed-loop system. This approach also enables the development of adaptive controllers that require additional state dynamics for online estimation of parameters.
+
+\textbf{A. Interconnected network of dynamical systems.} The class \class{Model.m} allows users to compose an arbitrarily large network of dynamical systems that are presented in the state-space structure $\Sigma_i:\; \dot{\zB_i} = \fB_{i}(\zB_i, \uB_i, t)$. Then, the network of dynamical systems can written as
+%
+\begin{equation}
+    \Sigma_{\textrm{net}}: \dot{\zB} = \FB_{\textrm{net}}(\zB, \uB, t)
+    \label{eq:C5:dynamicnetwork}
+\end{equation}
+%
+The network system matrices are assembled as: $\FB_{\textrm{net}}(\zB) := \textrm{blkdiag}(\fB_{1},\fB_{2},...,\fB_{n})$. The implementation in \textit{Sorotoki} is relatively straightforward. Let \code{f0 = @(z,u,t) ode(z,u,t)} be an anonymous function that defines a state space model, where \code{z}, \code{u}, \code{t} are the state vector, the input vector, and a time variable, respectively. In contrast to standard ODE solvers in \textit{MATLAB} (\eg, \texttt{ode45.m}), the input \code{u} is treated as an additional input to the ODE. This simplifies the design of controllers as it enables the definition of control laws outside of the ODE function caller, as opposed to the standard ODE packages in \textit{MATLAB}.
+
+To proceed, we first convert the function to a \class{sys0 = StateSpace(@f0)} class, which stores information on the state dimension, input dimension, and numerically computes the Hessian. Then, the model class is constructed using \code{mdl = Model(@f0)}. Other dynamic systems, represented by the \code{StateSpace} class \code{sys1}, \code{sys2}, and \code{sys3}, are added to the network by \code{mdl.addSystem(sys1,sys2,sys3)}. The \class{Model} class is also compatible with other classes, such as the \class{Fem} and \class{Shapes} class, allowing for the interconnection between a FEM model and a soft beam model, for example.
+To solve the dynamics, we call \code{mdl.simulate([0,T])} which solves the state trajectories on the finite horizon domain $[0,T]$ using an implicit Trapezoidal solver (\ie, similar to \texttt{ode23t} in \texttt{MATLAB}). \\
+
+\textbf{B: Assigning the controller.} Once a network of dynamic systems has been composed in the \class{Model} class, assigning a control is straightforward. Controllers can be defined as auxiliary anonymous functions \code{@(mdl) Controller(mdl)} and added using \code{mdl.addController(@Controller)}. At each time instance of the implicit solver, this controller function is called and prompted with the current instance of the \class{Model}. Once prompted, the solver retrieves the global input vector $\uB$ as in \eqref{eq:C5:dynamicnetwork}. All system information of the network can be retrieved within the function by \code{mdl.getState[I,J]}, where \code{I} is the system index and \code{J} the indices of the states of subsystem \code{J}. Such implementation presents a highly dexterous and efficient controller design platform previously not standard included in \textit{MATLAB}. \\
+%
+
+\textbf{C. Fluidic reservior with volume-variance}
+The majority of soft robots are actuated through fluidics. In recognition of this, \textit{Sorotoki} offers a variant of the \class{StateSpace} class, called \class{Fluidic}, which incorporates fluid dynamics of an enclosed pressure reservoir. The dynamics of such fluidic reservoir is determined by the compressibility of the fluid and the capacitance of the reservoir that is related to its volume $V > 0$. As a soft robot deforms, so does its internal volume. As such, consider a scalar variable $J: \mathcal{Q} \to (0,+\infty]$ such that we can describe the volume by $V(J) = J V_0$ where $V_0$ is the intrinsic volume. From a physical point of view, the scalar $J$ can be seen as the relative volumetric change of the reservoir. Assuming constant temperature $T$ and polytropic coefficient $n_k$, the pressure dynamics can be described by
+%
+\begin{equation}
+    \dot{p} = \frac{n_k}{V(J)} \left( R T \dot{m} - \frac{d V}{d J}(J) \dot{J} p \right) - \mu_{\textrm{leak}} p
+    \label{eq:C5:pressure0}
+\end{equation}
+%
+where the input is $\dot{m}$ the mass flux into the reservoir, $R$ the ideal gas constant, and $\mu_{\textrm{leak}}$ a pressure leakage coefficient. For a perfectly enclosed system, the parameter $\mu_{\textrm{leak}} = 0$. Note however, that the volumetric change $\dot{J}$ might not always be available or it is difficult to derive. As an alternative, we substitute $\dot{J}$ with an "dirty derivative" approximation $\dot{\tilde{J}}$ following the work of Loria et al. \cite{Loria2015Jun}:
+%
+\begin{align}
+    \dot{z}         & = \alpha_1 [z + \alpha_2 J ], \label{eq:C5:pressure1}\\
+    \dot{\tilde{J}} & = z + \alpha_1 J, \label{eq:C5:pressure2}
+\end{align}
+%
+where $\alpha_1,\alpha_2> 1$ are filter gains. Hence, the system of equations \eqref{eq:C5:pressure0}, \eqref{eq:C5:pressure1}, and \eqref{eq:C5:pressure2} leads to the full pressure dynamics. In case of an isochoric compression (\ie, no volume change $\dot{V} = 0$) with $J = 1 \Rightarrow \dot{J} = 0$, we can revert to a single-input-single-output (SISO) system with $u = \dot{m}$.
+
+For many control applications for soft robotics, fluidic reservoirs are internally pressure regulated. Hence, the mass flow $\dot{m}(p,p_d)$ depends on the internal pressure $p$ and a (possibly time-varying) pressure trajectory $p_d$. The mass flow controller of a proportional pressure-regulated reservoir is modelled here as PI-type controller:
+%
+\begin{align}
+    \dot{m} & = \Psi_\textrm{v}(\nu,p),                            \\
+    \nu     & = k_p(p - p_d) + k_i \int p(\tau) - p_d(\tau) d\tau,
+\end{align}
+%
+where $\Psi_{\textrm{v}}(\nu,p)$ i a valve flow function related to mass flow saturation of the pressure valves, and $k_p,\,k_i >0$ the proportional and integral control gains, respectively. In \textit{Sorotoki}, such fluidic system is provided as \class{Fluidic} class. The volume of the reservoir can be set using \code{Fluidic.setVolume(@V)} where $\code{V = @(x)...}$ is an auxiliary anonymous function. The mass flow function can be modified by the user using a similar command \code{Fluidic.setMassFlow(@M)}. By default, the flow function is chosen as $\Psi_{\textrm{v}}(\nu,p) = \nu$, and the internal regulation is \code{Fluidic.isRegulated = true}. \\
+
+% \begin{figure}
+% %\includegraphics[width=0.485\textwidth]{./fig/Pipelinehand.pdf}
+% \caption{Overview of the software pipeline showing the interconnected classes required to model the five-fingered soft robotic hand.}    
+% \vspace{-5mm}
+% \end{figure}
+
+
+\begin{example}{Simulation soft hand with fluidic soft fingers}
+To demonstrate the versatility of the \class{Model} class and the \class{Fluidic} class, consider the example of modeling the soft robotic hand previously shown in Figure \ref{fig:C5:examplebots}. We conducted an experiment where a predefined harmonic pressure signal was introduced to each of the soft fingers, with each harmonic having a $+\frac{\pi}{6}$ offset relative to its neighboring soft finger. The pressure signal is sinusoidal whose upper and lower bounds are $-5$ and $80$ (kPa), respectively. As depicted in Figure \ref{fig:C5:soft_hand_simulation}, an oscillatory motion arises, where the fingers sequentially undergo bending.
+
+The objective is to recreate the experimental oscillatory behavior of the soft hand, incorporating the fluid dynamics and continuum dynamics of the soft fingers. Each soft finger can be modeled separately using the \class{Shapes} class and its internal fluidic network using the \class{Fluidic} class. We start by sculpting the model for the soft fingers, assuming a fifth-order Chebyshev polynomial basis and considering planar bending curvature only. We assume that only the first mode can be actively controlled by the fluidic network, thus the input map is manually assigned using \code{Shapes.setInputMap(@(q) ... )}. The \class{Shapes} class is duplicated five times using a for-loop routine, with the base frame assigned accordingly at each iteration using \code{Shapes.setBase}.
+
+For each soft finger, it is assumed that it has its own fluidic network that is equipped with internal pressure regulation. However, as each soft finger deforms, the internal volume of the pressure reservoir also changes. This volumetric change is modeled as $V(\alpha) = V_0 (1 + \tanh(\alpha))$, where it is assumed that $\alpha = 0.06 q_1$ (i.e., the first joint of the soft beam) and $V_0$ the initial volume. Then, a for-loop is used to include the both \class{Shapes} and \class{Fluidic} systems to the global network of dynamical systems. 
+
+Finally, \code{mdl.addController(@Control) } is used to add the control law. In this auxilary function, we specifiy the pressure reference for the fluidic network, and we return the state deformations of the soft fingers to the fluidic network; required for the computation of the volumetric change. The dynamic simulation is solved implicity using the \code{mdl.simulate} command. The code for the dynamic simulation of the soft robotic hand is shown in Figure \ref{fig:C5:soft_hand_simulation}.
+
+%\afterpage{
+\begin{figure*}[!t]
+\centering
+%\vfill
+\includegraphics*[width=0.99\textwidth]{./pdf/thesis-figure-6-14-1.pdf}
+%\includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-14-2.pdf}
+%\input{./fig/fig_model_softhand_true.tex} \\[-0.01em]
+%\input{./fig/fig_model_softhand_simu.tex} \vspace{-3mm}
+\caption{(top) Experimental snapshots of the open-source soft robotic hand provided by the \textit{Sorotoki} toolkit. The five-fingered robot is subjected to a harmonic oscillator that commands oscillatory pressure to the individual fingers. Since each oscillator has a preset phase difference ($\phi = \pi/6$), the fingers of the soft robot hand undergo a periodic swinging motion. (bottom) Reconstructed soft robotic hand using \textit{Sorotoki}, where each finger is modelled using the \textit{Shapes.m} class and then composed using the \textit{Model.m} class. Following, each oscillator is added using \textit{mdl.addSystem} and then they ouputs are connected to the inputs of each \textit{Shapes.m} class. As can be seen, the dynamics between the numerical model and the experiments are in close agreement. }
+\label{fig:C5:soft_hand_simulation}
+\end{figure*}
+%\clearpage
+%}
+\end{example}
+\clearpage
+\begin{lstlisting}[style=matlab]   
+%% EXAMPLE: Model class
+shp = Shapes(pod,dof,'Length',90);
+
+shp.setInputMap( @(x) [5; 0; 0; 0; 0]) ;
+shp.Material = NeoHookeanMaterial(1.5,0.3);
+
+for ii = 1:5
+    SHP{ii} = shp.setBase( G{ii} );
+end
+ 
+%% building fluidics model 
+V0 = (4*pi/3) * 35^3;
+V = @(x) V0 * (1 + tanh(x/0.06));
+
+fld = Fluidic('NInput',3);
+fld = fld.setVolume(V);
+
+%% building model 
+mdl = Model([]);
+
+for ii = 1:10
+    if ii < 5    % add soft finger
+        mdl = mdl.addSystem( SHP{ii} );
+    else         % add fluidic network
+        mdl = mdl.addSystem(fld); 
+    end
+end
+
+%% assign control and simulate
+mdl.addController( @(x) Control(x) );
+mdl = mdl.simulate([0, 5.0]);
+
+% -- controller function block
+function u = Control(mdl)
+    phi = @(k) (k-1) * pi/6;
+    Pd  = 80 * sign(sin(7.0 * mdl.t + phi(1:5)));
+
+    u = zeros(20,1);
+    u(6:3:end) = Pd;
+    u(7:3:end) = mdl.getState(1:5,[1]);
+    u(1:5)     = mdl.getState(6:10,[1]);
+end
+\end{lstlisting}
+
+As depicted in Figure \ref{fig:C5:soft_hand_simulation}, the dynamics between the numerical model and the experiments are in close agreement. This serves as a testament to the efficacy of the dynamic model composer \class{Model} in building dynamic complexity through its modular functionalities. Additionally, the ability to represent the controller as an auxiliary function that can retrieve state information at any given time confers \textit{Sorotoki} with a high degree of flexibility in offline controller design.

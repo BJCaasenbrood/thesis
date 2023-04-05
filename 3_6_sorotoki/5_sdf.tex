@@ -1,0 +1,70 @@
+\subsection{Signed Distance Function (\texttt{Sdf})}
+\label{sec:C5:sdf}
+Signed Distance Fields (SDFs) have been widely applied in various areas of computer graphics, including the representation of implicit surfaces \cite{Reiner2011Jun, Chen2018Dec}, collision detection in robotics \cite{Ortiz2022Apr, Liu2022Mar}. In particular, SDFs have gained attention for their use in implicit modeling \cite{Smith2023Feb}, a technique for representing 3D shapes as continuous functions, rather than discrete mesh descriptions. 
+
+In \textit{Sorotoki}, SDFs are implemented in the class \class{Sdf.m} and can be used to construct general 2D and 3D geometries. They can also be utilized to model static or dynamic contact environments, generate 3D models of soft actuators that are suitable for 3D printing, and compute inertia tensors for continuum bodies in $\mathbb{R}^2$ and $\mathbb{R}^3$. \\
+
+\textbf{A: Implicit modeling using SDFs.} In this section, we briefly outline the mathematical foundations underpinning the \class{Sdf} class. As the name suggests, signed distance functions are a type of function that encodes distance information relative to an object defined implicitly. Adopting the notation used in \cite{Reiner2011Jun}, given a domain $\Omega \subset \mathbb{R}^n$ and its boundary $\partial \Omega$, these functions can be written in the following general form:
+%
+\begin{equation}
+    \texttt{sdf}(\pB) = \begin{cases}
+        -d(\pB,\Omega) & \textrm{if } \; \pB \in \Omega,                           \\
+        +d(\pB,\Omega)  & \textrm{if } \; \pB \in \mathbb{R}^n\!\setminus\! \Omega,
+    \end{cases}
+    \label{eq:C5:sdf}
+\end{equation}
+%
+where $d(\pB,\Omega):= \inf_{\yB \in \Omega} ||\pB - \yB||_2$ is a scalar function that returns the smallest Euclidean distance from a sample point $\pB \in \mathbb{R}^n$ to the boundary $\partial \Omega$. 
+% It follows that,
+% %
+% \begin{align*}
+%     \text{sign}[\texttt{sdf}(\pB)] & = 0  \quad\;\;\; \text{for}\; \pB \in \partial \Omega, \\[0.1em]
+%     \text{sign}[\texttt{sdf}(\pB)] & = -1  \quad \text{for}\; \pB \in \Omega,               \\[0.1em]
+%     \text{sign}[\texttt{sdf}(\pB)] & = 1  \quad\;\;\; \text{otherwise}.
+% \end{align*}
+%
+SDFs provide a simple and efficient way of determining the location of a set of points relative to a domain $\Omega$ defined implicitly. The SDF is a scalar function that encodes the Euclidean distance of a sample point $\pB \in \mathbb{R}^n$ to the boundary $\partial \Omega$ of the domain. By evaluating the sign of the SDF, it is possible to classify the set of points as being within or outside the boundary of the domain. This enables set operations such as union, difference, and intersection to be performed. 
+
+In the \textit{Sorotoki} software package, these operations are implemented using Matlab's arithmetic operators between two or more instances of the \textit{Sdf} class, including '\texttt{+}' (union), '\texttt{-}' (difference), '\texttt{/}' (intersection), \texttt{*} (scaling), and '\texttt{.*}' (repeating). By utilizing these set operations and a library of basic SDF primitives, it is possible to construct a wide range of complex geometries with relative ease. Subsequently, the SDFs can be transformed into a \file{.stl} file using the Marching Cube algorithm \cite{Lorensen1987Aug}, enabling 3D printing. This functionality is implemented in the command \code{sdf.export}. \\
+
+\begin{example}[Implicit CAD using SDFs]
+To demonstrate the use of signed distance functions in \textit{Sorotoki}, we present an example of 2D and 3D implicit modeling scheme as shown in Figure \ref{fig:C5:sdfexample}. This example illustrates the utilization of various SDF primitives, which are combined through standard set operations, such as union, difference, and intersection, to generate complex geometries. The accompanying code is provided below:
+%
+\begin{figure}[!t]
+\centering
+\includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-3-1.pdf}
+\includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-3-2.pdf}
+%\input{./fig/fig_sdf.tex}
+%\input{./fig/fig_sdf_3d.tex} \\[0.25em]
+\caption{Examplary functionality of the Signed Distance Function (Sdf) operators in \textit{Sorotoki}. The top figures are two-dimensional Sdfs, whereas below are three-dimenional Sdfs. \textit{Sorotoki} allows the user to combine Sdf using Matlab's arithmetics, like '\texttt{+}', '\texttt{-}', and '\texttt{/}', to perform unions, differences, and intersections, respectively. These set operations like union, difference, and intersect lead to new (differentiable) SDFs.\label{fig:C5:sdfexample}}
+\vspace{-3mm}
+\end{figure}
+
+\begin{lstlisting}[style=matlab] 
+ %% EXAMPLE: Sdf class 
+ Y = 1; % design parameter 
+
+ % generate 2D sdf 
+ c   = sCircle(Y);
+ r   = sRectangle(Y);
+ sdf = r.rotate(pi/4)-c;
+
+ % generate 3D sdf
+ S1  = sSphere(Y/2,[0,0,Y]);
+ S2  = sSphere(Y,[0,0,Y/2]);
+ C   = sCube([0,0,0],[Y,Y,Y]);
+ sdf = (C - S1)/S2;
+\end{lstlisting}
+%
+\end{example}
+
+\textbf{B: SDF differentiablility}
+Contrary to mesh-based geometries, signed distance functions (SDFs) possess closed-form differentials. Specifically, if $\Omega$ is a subset of $\mathbb{R}^n$ with piecewise smooth boundaries, the SDF is ($i$) differentiable almost everywhere, and ($ii$) its gradient satisfies $|\nabla \texttt{sdf}| = 1$. As a result, the unit-normal vector $\nB(\pB)$ pointing away from the boundary $\partial \Omega$ can be expressed as $\nB(\pB):= \nabla \texttt{sdf}(\pB)$. The gradient can be estimated using a finite-difference scheme:
+%
+\begin{align}
+    \nB_{i}(\pB) \approx \frac{1}{\varepsilon} \Big[\texttt{sdf}(\pB + \varepsilon \vec{\delta}_{i}) - \texttt{sdf}(\pB) \Big],
+\end{align}
+%
+where $\vec{\delta}_{i}$ is a vectorized Kronecker delta and $\varepsilon$ a sufficiently small incremental displacement. 
+
+In \textit{Sorotoki}, this finite difference routine is efficiently implemented such that the normal, tangent, and bi-normal vector computations can be called using \code{[N,T,B] = Sdf.gradient(p)}. These gradient vector computations are crucial for contact dynamics with the environment whose topology may be arbitrarily complex. The normal vector can also be useful in finding the closest-point projection onto the surface $\partial \Omega$, namely $\textrm{proj}_{\partial \Omega}(\mathbf{p}):= \mathbf{p} - \texttt{sdf}(\mathbf{p}) \cdot \nabla \texttt{sdf}(\mathbf{p})$. The projection operator is implemented as \code{[P,d] = Sdf.project(p)}, which takes a point cloud \code{p} and returns a point cloud \code{P} that is mapped onto the boundary of the SDF. It also returns the Euclidean distance $d(\mathbf{p},\partial \Omega)$ from the surface. This can be extremely useful in simulations of soft robotic grippers for grasping, or obstacle avoidance for soft manipulators.

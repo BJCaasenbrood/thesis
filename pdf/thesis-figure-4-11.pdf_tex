@@ -1,0 +1,78 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig_C2_PBAdiagram.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{293.20866142bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.43504532)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.55943063,0.07754705){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\int$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.07506215,0.07762855){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tmat{M}\,\ddq_r + \tmat{C}\, \dq_r + \tvec{f}\!\grav +  \tvec{f}\!\elastic - \tvec{\delta}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.19016788,0.21319753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mat{K}_p \vec{e} + \mat{K}_d \vec{e}_r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.69407525,0.07762855){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$ - \mat{K}_{\vec{\pi}}\,\vec{Y}^\top\vec{e}_r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.56877632,0.21319753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textrm{PBA hyper-variables}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.29716066,0.34574943){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{softrobot}$}\end{tabular}}}}%
+    \put(0.16548734,0.34841989){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mat{G}^{+}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.58539571,0.34574943){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{sensors}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.96195931,0.28619737){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\q_d, \dq_d, \ddq_d$}\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{./fig/fig_C2_PBAdiagram.pdf}}%
+    \put(0.87374371,0.37389932){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$\end{tabular}}}}%
+    \put(0.09531158,0.24020891){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{./fig/fig_C2_PBAdiagram.pdf}}%
+  \end{picture}%
+\endgroup%

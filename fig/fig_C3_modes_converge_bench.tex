@@ -1,0 +1,101 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06275,0.35686,0.84706}%
+\definecolor{mycolor2}{rgb}{0.86667,0.21176,0.10980}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.359\textwidth,
+height=0.25\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=1,
+xmax=10,
+xlabel style={font=\color{white!15!black}},
+xlabel={mode number $k$},
+ymin=0,
+ymax=111.696273768534,
+ylabel style={font=\color{white!15!black}},
+ylabel={error tip (mm)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=none}
+]
+\addplot [color=mycolor1, line width=1.0pt, mark=square, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	51.8835913680113\\
+2	36.716376998632\\
+3	7.09768995463864\\
+4	7.4468656014925\\
+5	4.73611875774346\\
+6	3.24570191666416\\
+7	2.25205701458076\\
+8	3.44519374750976\\
+9	1.45285500840613\\
+10	2.57094900354925\\
+};
+\addlegendentry{RMS}
+
+\addplot [color=mycolor2, line width=1.0pt, mark=square, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1	111.696273768534\\
+2	55.9315300451543\\
+3	11.0399416681407\\
+4	13.9183853058214\\
+5	8.29890085334986\\
+6	16.0490846650911\\
+7	5.87384916377914\\
+8	14.9842167697155\\
+9	4.76901584170251\\
+10	11.3462560434657\\
+};
+\addlegendentry{Absolute}
+
+\end{axis}
+
+\begin{axis}[%
+width=0.359\textwidth,
+height=0.25\textwidth,
+at={(0.491\textwidth,0\textwidth)},
+scale only axis,
+xmin=1,
+xmax=10,
+xlabel style={font=\color{white!15!black}},
+xlabel={mode number $k$},
+ymin=0.5,
+ymax=2.5,
+ylabel style={font=\color{white!15!black}},
+ylabel={ratio sim-time vs. T},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=none}
+]
+\addplot [color=mycolor1, line width=1.0pt, mark=square, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+1	2.25337640286765\\
+2	1.96991933180336\\
+3	2.03336549439757\\
+4	1.6891078723406\\
+5	1.61360983075653\\
+6	1.25800563334923\\
+7	1.15685709691339\\
+8	1.14922384294707\\
+9	1.00516301985147\\
+10	0.996875294389735\\
+};
+\addplot [color=black, dashed, line width=1.0pt]
+  table[row sep=crcr]{%
+1	1\\
+10	1\\
+};
+\addlegendentry{real-time}
+
+\end{axis}
+\end{tikzpicture}%

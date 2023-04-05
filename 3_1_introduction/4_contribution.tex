@@ -1,0 +1,78 @@
+%!TEX root = ../../thesis.tex
+\newpage
+\section{Thesis objective and contributions}
+In this section, the research objectives and contributions are specified. The research is divided into three unique branches each related to a specific subproblem within the field of soft robotics: ($i$) design synthesis of soft actuators, ($ii$) modeling for control of soft robot manipulators, and ($iii$) the development of software aimed to support the soft robotics community. For each research objective, a number of contributions of the thesis are presented. 
+\vspace{1mm}
+
+\par \textbf{A: Design synthesis of soft actuators}. As presented by abundance of literature on soft robotic design, either rooted in engineering principles or through optimization, achieving an optimal structural geometry that fully accounts for hyper-redundancies in soft materials is no easy feat. Unlike their rigid counterparts and many biological systems for that matter, the kinematics are inherently encoded in the topological structure of the soft materials and where actuation is presented in the system. This implies the workspace cannot be characterized analytically in closed from through joint motions stemming from one point (unlike joints in rigid robotics), see Figure \ref{fig:C0:contribOne}a. Futhermore, any external inputs will result in parasitic motion, which are mainly induced by distributed continuum deformations that are antagonistic to the input. These parasitic motions -- or better phrased \textit{"passive joint displacements"} -- arise from the redundant flexibility of the system that are often unaccounted for during design. As such, they should be kept at as minimum as they lead to imprecisions in the mechanical operation and lost of mechanical efficiency (\eg, the balloon effect \cite{Daerden1999}). Futhermore, there exist many elasticity moduli for various options of soft material, ranging from soft gels to hard rubber \cite{Rus2015}. It is therefore of paramount importance that the nonlinear behaviors of soft materials, both in hyper-elasticity and nonlinear geometrical deformation, is understood and accounted for during the design process. This deepens the research problem by imposing questions on optimality regarding material choice.
+
+\par \textit{(Optimality in soft material design)}. Our first research objective therefore focusses on the design. The main design principles for any compliant mechanical device can be described rigorously through continuum mechanics. In the thesis we focus on harmonizing the underlying continuum theory with the automated design of efficient soft actuators with user-defined objectives in mind (Figure \ref{fig:C0:contribOne}b). Rooted in continuum mechanics \cite{Holzapfel2002,Kim2018} (and its subsequent discretization through finite elements), optimization algorithms are employed that aim to seek an optimal layout of soft materials such that user-specified objective functions are minimized (Figure \ref{fig:C0:contribOne}c). Such problems are often referred to an \textit{inverse design problem} -- solving shape by knowing deformation, rather than solving for deformation based on the shape. The study of combining continuum mechanics and free-form optimization in compliant structures is well-established field called \textit{topology optimization} \cite{Bendsoe2003}. Yet, such practices are not easily transferred to soft actuation, since soft materials introduce hyper-elasticity and nonlinear geometric deformations. Besides, fluidic or pneumatic actuation complicates the optimization, as these loads become both design and state-dependent. This brings us to the first contribution:
+%
+\begin{figure}[!t]
+  %\centering
+  %\hspace{5mm}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_invdesign.tex}
+  %\vspace{-7mm}
+  \caption{Schematic illustration of the inverse design problem in soft robotics. (a) Bending behavior of PneuNet actuator under linearly increasing pressure. (b) Desired end-effector position $(\textcolor{deepcolor}{\star})$ outside the robot's workspace, changing the input is not sufficient will not improve objective -- the workspace is \textit{a-priori} encoded into the soft topology. (c) Solution to inverse design problem by finding a soft topology that contains $(\textcolor{deepcolor}{\star})$ in its workspace.}
+  \vspace{-6mm}
+  \label{fig:C0:contribOne}
+\end{figure}
+%
+\contribution{Development of efficient algorithms, applicable to the general design of fluidic soft actuators, solving the inverse design problem: Given a desired motion and input, what is accordingly the optimal soft material distribution within a design domain to realize such joint motion?}{}
+
+\textit{(Fabrication through Additive Manufacturing)}. Following these automated algorithms, many variations of soft actuation system with various joint mobility can be developed with relative ease. Yet, being of simulation origin, this raises the questions on the transferability of the numerical studies to practice. Hence, our second research objective therefore focusses on the transferring simulation design to feasible, functional soft actuators. Through the recent advances in Additive Manufacturing, many complex three-dimensional geometries can be fabricated with relative ease and effort. 
+
+\contribution{Fabrication of an array of computer-optimized pneumatic soft actuators through Additive Manufacturing methods, whose collective assembly can be explored for soft robotic manipulation.}{}
+
+\begin{figure}[!t]
+  \centering
+  \hspace{-2mm}
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-1-model.pdf}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_workspace.tex}
+  \vspace{-4mm}
+  \caption{Stages of kinematic complexity in (soft) manipulators. (a) Standard 1-DOF rigid manipulator with analytic workspace. (b) Ideal soft manipulator deformed under uniform curvature (\ie, PCC model). Workspace can be analytically expressed for non-complexity cases, \eg, stiffness dominates gravity or homogenous deformation. (c) Truly under-actuated soft manipulator starting from initial (gravity-balanced) condition. Workspace can often not be derived analytically and depends highly on the initial conditions and actuation constraints.}
+  \label{fig:C0:contribTwo}
+  \vspace{-4mm}
+\end{figure}
+
+\noindent \textbf{B: Modeling for control of soft manipulators}. Besides design, modeling for control is another important topic in soft robotics. In particular with the aim of achieving biological performance in modern soft robotic systems, models must be both accurate and fast. However, the infinite-dimensionality that are inherent to these soft continuum robots present some challenges. Augmented rigid-body models, like \cite{Katzschmann2019,Milana2021Apr,Franco2020}, offer exceptional computation speeds but do not respect the fundamental continuum mechanics, therefore invoking strict operation constraints on any soft system, \ie, small deformation as to limit hyper-elastic nonlinearities; or slow actuation to prevent inertial mismatching. 
+
+\textit{(Accurate control-oriented models through PCC condition)}. Our second research objective therefore focusses on the reduced-order modeling, aiming to balance precision and speed for control. By building upon the original works of Chirikjian et al. \cite{Chirikjian1992} and Mochiyama et al. \cite{Mochiyama1992} in the 90's, the thesis presents a dynamic modeling formulation for soft manipulators that respects its continuum nature. To address the issue of infinite-dimensionality, a reduced-order modeling strategy for soft robot manipulators is proposed, whose mathematical framework is based on the differential geometric theory of spatial curves. Such framework allows for easy transferability to classical ROM models in soft robotics, like the PCC strain \cite{DellaSantina2020,Katzschmann2019,Falkenhahn2015} (see Figure \ref{fig:C0:contribTwo}b). However, the thesis proposes two improvements that are essential development of model-based controllers. Inspired by the success of FEM-based models in soft robotics \cite{Duriez2013,Goury2018}, we bridge the gap between the PCC model and the underlying continuum mechanics by matching the quasi-static behavior to a Finite Element Model (FEM). The numerical FEM approaches used are analogous to Contribution I. Second, to enhance computational efficiency, we propose a reduced-order integration scheme using Matrix Differential Equations (MDEs) to compute the spatio-temporal dynamics in real-time. The proposed reduced-order soft beam model is tested rigorously in simulation; however, for practical control tests demand experimental rigorousness. As such, a 3-DOF soft robot manipulator is developed \textit{ad-hoc} through Additive Manufacturing. The system is loosely inspired by the \textit{Orm} soft manipulator from the early 60's \cite{BibEntryOrm2019Sep}. The proposed dynamic model is tested under various experimental conditions. For example, natural oscillations, forced inputs, and under tip-disturbances of various inertial mass. Various performance measures are introduced to compare the proposed model objectively with respect to linear elastic alternatives. This brings us to our third contribution: 
+
+\contribution{Development of fast, efficient, and accurate dynamic models for soft manipulators composed of hyper-elastic soft materials that are directly applicable to classical control theory akin to rigid robotics.}{}
+
+\textit{(Models beyond the PCC)}. As mentioned in Section \ref{sec:C0:modelcontrol}, the piecewise continuity inhibits many kinematic redundancies -- and therefore the hyper-redundant nature of these soft robotic systems cannot be explored to its full potential. For example, any large nonlinear deflection due to gravity (see Figure \ref{fig:C0:contribTwo}c) cannot be captured using these constant descriptions. Also, the study of (true) under-actuation through such kinematically lumped models is (nearly) impossible as the modeling framework infers homogenous strain and actuation. Herein lies the third research objective that focusses majorly on relaxing the PCC condition, to closely pursue its true infinite-dimensionality. Adopting the prior modeling strategies of differential curves, spatially-varying strain fields are considered and approximated (closely) through sets of orthogonal shape functions rather than prior piecewise representations. Building upon prior models presented in the thesis, the underactuated and hyper-redundant soft system can be casted into a port-Hamiltonian framework \cite{Schaft2004,Ortega2002}. This allows for classic controller design through energy-shaping by modifying the closed-loop potential energy of the system --  a well-known practice in classic robotics \cite{Schaft2004,Ortega1998,Ortega2002}. Exploring the hyper-redundancy in soft robotics, more advanced control objectives can be realized such as shape regulation and full-body grasping of rigid objects. However, spatial discretization in these model-based controller play a crucial part in their dexterity to achieve various control tasks. Within this context, the fourth contribution reads:
+
+\contribution{Investigation of spatial discretization in low-order energy-shaping controllers applied to high-order soft robotic models with a focus on closed-loop performance in shape and full-body grasping control.}{}
+
+\textit{(Exploiting geometry for reduction)}. Contribution IV provides a stable modeling platform for a variety of possible shape functions tailored to unique joint mobilities in soft robotic systems. Yet, many works in modeling literature choose such functions in \textit{ad-hoc} fashion, \eg, polynomial bases \cite{DellaSantina2020,Boyer2021,Chirikjian1991}. Within this context, the thesis explores a (geometric) modal decomposition approach. Similar to the eigenmode analysis in continuum mechanical systems, geometric strain modes are extracted from higher-order (volumetric) FEM models and used to construct optimal soft beam models. The approach leads to fast, accurate, and generic low-dimensional models that encode the geometric features and elasticity of the true soft body into a new strain parameterization - we call a Geometry-Informed Variable Strain (GIVS) basis. A merit benefit of the approach can be naturally expanded to identify the hyper-elastic material parameters and the actuation map of the reduced beam model. Robustness of the technique is investigated experimentally for several soft robotic systems, including PneuNets, soft grippers, and soft manipulators. In context of robustness, the nonlinearities with increasing actuation frequency, under environmental contact modeled by signed distance functions, and multi-input pneumatic actuation are also considered. The thesis continues with a qualitative comparison between existing strategies, demonstrating that our approach can improve accuracy and speed compared traditional techniques. Our fifth contribution therefore reads:
+ 
+\contribution{A novel method for finite-dimensional model reduction in soft manipulators that explores the mechanical interconnection between structural geometry and flexibility modes of the soft manipulator body.}{}
+
+% Abstract—The infinite-dimensional nature of soft robots has
+% emphasized the difficulty in modeling and control, leading to
+% the classic trade-off between precision and speed. In the last
+% decade, two modeling strategies have dominated the field: (i)
+% Finite-Element-Method (FEM) models and (ii) soft beam models
+% (e.g., affine curvature or Cosserat models). While FEM enables
+% highly accurate deformations, Lagrangian-based beam models
+% allow for faster computation and ease of controllers design akin
+% to rigid robotics. In this letter, we propose a mixture between
+% the two modeling approaches by extracting geometric modal
+% information of FEM simulation data. Our approach leads to
+% fast, accurate, and generic low-dimensional models that encode
+% the geometric features and the elasticity of the original soft
+% body into a new strain functional basis – we call a Geometry-
+% Informed Variable Strain basis. Robustness of the technique is
+% investigated for several systems. Also the nonlinearities with
+% increasing actuation frequency, under environmental contact
+% modeled by signed distance functions, and multi-input pneumatic
+% actuation. Furthermore, we also provide a qualitative comparison
+% between existing strategies, demonstrating that our approach can
+% improve accuracy and speed compared traditional techniques.
+% Also, experiments are performed to highlight the model’s trans-
+% ferability to reality.
+
+\textbf{C: Software development}. Finally, the thesis collects all theoretical material into one unifying soft robotics software package called \texttt{Sorotoki} -- short for SOft RObotics TOolKIt. The software aims to bridge the gaps between different disciplines of soft robotics, applicable to design, modeling and control. Using a minimal programming framework, complex problems can be coded using minimal lines of code. The toolkit is heavily interwoven with Contributions I to V of the thesis, and is publicly available at \url{https://github.com/BJCaasenbrood/SorotokiCode} \cite{SorotokiCode}. The last contribution therefore reads: 
+
+\contribution{Developement of a versatile, user-friendly, open-source software called \textnormal{\texttt{Sorotoki}} that envelops the presented theory on design, modeling and control of the thesis into one coherent Matlab toolkit.}{}

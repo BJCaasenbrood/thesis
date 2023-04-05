@@ -1,0 +1,168 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.79216,0.11765,0.17255}%
+\definecolor{mycolor2}{rgb}{0.00000,0.34510,0.65882}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.37\textwidth,
+height=0.235\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=-20,
+xmax=20,
+xlabel style={font=\color{white!15!black}},
+xlabel={$(1 + \varepsilon) L$ (mm)},
+ymin=-20,
+ymax=20,
+ylabel style={font=\color{white!15!black}},
+ylabel={force $F$ (N)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+ylabel style={yshift=-2.5pt}
+]
+\addplot [color=mycolor1, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+-20	-17.1146\\
+-18.4	-14.9354\\
+-16.8	-12.9051\\
+-15.2	-11.0292\\
+-13.6	-9.3104\\
+-12.2	-7.9353\\
+-10.2	-6.174\\
+-9.7	-5.8494\\
+-8.3	-4.7812\\
+-6.7	-3.6805\\
+-5.1	-2.6907\\
+-3.3	-1.6819\\
+3.5	1.7895\\
+5.5	2.9289\\
+7.1	3.9445\\
+8.7	5.0759\\
+11	6.8505\\
+12.4	8.1245\\
+13.8	9.5167\\
+15.2	11.0292\\
+16.8	12.9051\\
+18.4	14.9354\\
+20	17.1146\\
+};
+\addplot [color=mycolor2, dotted, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+-20	-17.1146\\
+-18.4	-14.9354\\
+-16.8	-12.9051\\
+-15.2	-11.0292\\
+-13.6	-9.3104\\
+-12.2	-7.9353\\
+-10.2	-6.174\\
+-9.7	-5.8494\\
+-8.3	-4.7812\\
+-6.7	-3.6805\\
+-5.1	-2.6907\\
+-3.3	-1.6819\\
+3.5	1.7895\\
+5.5	2.9289\\
+7.1	3.9445\\
+8.7	5.0759\\
+11	6.8505\\
+12.4	8.1245\\
+13.8	9.5167\\
+15.2	11.0292\\
+16.8	12.9051\\
+18.4	14.9354\\
+20	17.1146\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.37\textwidth,
+height=0.235\textwidth,
+at={(0.487\textwidth,0\textwidth)},
+scale only axis,
+xmin=-0.81,
+xmax=1.2,
+xlabel style={font=\color{white!15!black}},
+xlabel={$\beta$ (rad)},
+ymin=-0.04,
+ymax=0.075,
+ylabel style={font=\color{white!15!black}},
+ylabel={moment $M$ (Nm)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+ylabel style={yshift=-2.5pt}
+]
+\addplot [color=mycolor1, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+-0.8192	-0.0384\\
+-0.7606	-0.0341\\
+-0.697	-0.0298\\
+-0.6275	-0.0256000000000001\\
+-0.551	-0.0213000000000001\\
+-0.4661	-0.0169999999999999\\
+-0.3709	-0.0127999999999999\\
+-0.2634	-0.00849999999999995\\
+-0.0864	-0.00249999999999995\\
+0	0\\
+0.1836	0.00570000000000004\\
+0.2634	0.00849999999999995\\
+0.3709	0.0127999999999999\\
+0.4661	0.0169999999999999\\
+0.551	0.0213000000000001\\
+0.697	0.0298\\
+0.7606	0.0341\\
+0.8735	0.0426\\
+0.948	0.0489999999999999\\
+1.0157	0.0553999999999999\\
+1.0776	0.0618000000000001\\
+1.1875	0.0746\\
+1.2357	0.0808\\
+};
+\addplot [color=mycolor2, dotted, line width=1.5pt, forget plot]
+  table[row sep=crcr]{%
+-0.8592	-0.04\\
+-0.8038	-0.0296000000000001\\
+-0.7753	-0.0227999999999999\\
+-0.7617	-0.0202\\
+-0.7565	-0.0198\\
+-0.5862	-0.0152000000000001\\
+0	0\\
+0.1836	0.00570000000000004\\
+0.2634	0.00849999999999995\\
+0.3709	0.0127999999999999\\
+0.4661	0.0169999999999999\\
+0.551	0.0213000000000001\\
+0.697	0.0298\\
+0.7606	0.0341\\
+0.8735	0.0426\\
+0.948	0.0489999999999999\\
+1.0157	0.0553999999999999\\
+1.0776	0.0618000000000001\\
+1.1875	0.0746\\
+1.2357	0.0808\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=1.106\textwidth,
+height=0.289\textwidth,
+at={(-0.144\textwidth,-0.032\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left,
+ylabel style={yshift=-2.5pt}
+]
+\draw[-{Stealth}, color=black, line width=1.0pt] (axis cs:0.638,0.528) -- (axis cs:0.624,0.38);
+\node[below right, align=left, draw=white]
+at (rel axis cs:0.585,0.673) {self-collision};
+\end{axis}
+\end{tikzpicture}%

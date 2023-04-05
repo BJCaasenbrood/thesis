@@ -1,0 +1,132 @@
+\afterpage{
+\begin{figure}
+\hspace{-7mm}
+\includegraphics[width=1.11\textwidth]{./pdf/thesis-figure-2-1.pdf}
+\caption{A brief timeline of the state-of-the-art of bio-inspired robotics throughout human history. {(1954):} Unimate, the first industrial robot . 
+{(1957):} McKibben actuator, an early soft actuator inspired by the human muscle used for rehabilitation purposes \cite{Mckibben}. 
+{(1965):} The Orm, believed to be the first soft robotic system designed by  Scheinman and Leifer \cite{BibEntryOrm2019Sep}. 
+(1968): Tensor Scripps arm developed by Anderson \cite{Anderson1968}.
+{(1981):} Canadarm-1, early flexible robotics employed on the International Space Station. 
+{(1983):} Robot Arm with Pneumatic Gripper by Teleshev \cite{Teleshev1981}.
+{(1984):} Bellows robotic arm by Wilson et al. \cite{Wilson2007}.
+{(1989):} The soft robotic gripper developed by Suzumori et al. \cite{Suzumori1991,Suzumori1992}, seen as one of the earliest \textit{academic} soft robot, developed before the word \emph{soft robot} existed. 
+{(2010):} Festo's Bionic arm inspired by the elephant's trunk \cite{Grzesiak2011}. 
+{(2011):} Soft inflatable robot arm by Sanan and Atkeson \cite{Sanan2013,BibEntryBH62022Sep}.
+(2012) Multi-gait soft robot capable of terrestial locomotion \cite{Choi2011}. 
+(2016): Octobot, the first autonomous 3D-printed soft robot that explores a stabilizing oscillator chemical network that produces preprogrammed repetitive motion \cite{Wehner2016}.
+(2018): Autonomous robotic fish made by Katzschmann \cite{Katzschmann2018}.
+(2020): Xenobot, an organic soft robot composed of skin and muscle cells made by Blackiston and Kriegman \cite{Kriegman2019}.
+}
+\label{fig:C0:timeline}
+\end{figure}
+\clearpage
+}
+
+\section{Early soft robots}
+
+The ambition of closely mimicking biological creatures is perhaps not commonly associated with the field of robotics, given its important role in the automation industry, yet the inception of robotics can originally be found in bio-mimicry when regarding its rich history. In this section, we will present a short historical overview of soft robotics. Hereby showing that the current trends of bio-mimicry and elasticity in robotics find roots in a periods way before the soft robotic boom in the early 2010's. To guide the reader, in Figure \ref{fig:C0:timeline}, we provide a graphical, historic overview of soft robotic systems from 1960 to 2022. We will discuss the inception of soft actuation, early soft robotic designs, and modeling and control strategies for these continuum robotics.
+
+To relate the historical progress of soft robots to rigid robots, let us begin with early rigid robots. In 1954, George Devol filed a patent describing an autonomous robotic machine that could be preprogrammed to execute step-by-step motions \cite{Mickle2008}. The machine was designed to reduce the workload on the manufacturing work floor, with a major focus on mimicking repetitive (exhausting) human labor. In 1958, those prototypes led to a robotic system under the name \emph{Unimate}. An illustration of this early rigid robot is shown in Figure \ref{fig:C0:timeline}. The Unimate was used for manipulating metal die-casts and welding these to the main body of automobiles. In doing so revolutionizing the car industry shortly after. Much later (1969), Victor Scheinman created the Stanford Arm \cite{BibEntryStanford2022Sep,BibEntryOrm2019Sep}, recognized as the first electronic computer-controlled robotic arm because the Unimate's instructions (\ie, predefined setpoints in joint space) were prerecorded on a magnetic drum. He later developed the well-known PUMA robot in 1972 (video available at \cite{BibEntryPuma2022Sep}) -- the successor to the Unimate. Keep Scheinman in mind, as he ultimately ties to early soft robots. \vspace{0.085em}
+
+\afterpage{
+\begin{figure}[!t]
+  \vspace{-0.6mm}
+  %\input{chapter1/chapter1}
+  \input{./fig/PAM.pdf_tex}
+  \caption{Patent diagrams of pneumatic artificial muscle from 1953 till 1988. (a) Morin Muscle \cite{Morin1953}; (b) ROMAN muscle \cite{Immega1986}; (c) Yarlott muscle \cite{Yarlott1972}; (d) Kukolj muscle \cite{Kukolj1988}; (e) Paynter Hyperboloid \cite{Paynter1974}.
+  \label{fig:C0:several_PAM}}
+  \vspace{-1mm}
+\end{figure}
+
+\begin{figure}[!t]
+%\input{./fig/fig_1_1.tex}
+\includegraphics*[width=\textwidth]{./pdf/thesis-figure-2-2.pdf}
+\vspace{-3mm}
+\caption{Working principle of a basic pneumatic artificial muscle (\ie, Morin muscle \cite{Morin1953}) with the internal volume \data{Matlab1} in \si{\milli \liter}, and the end-effector displacement \data{Matlab2} in \si{\milli \meter} and \dashdata{Matlab2} is the point at which the undesirable ballooning occurs.
+\label{fig:C0:mckibben}}
+\end{figure}
+\vspace{-10mm}
+}
+
+Nearly four years after the Unimate was developed, Joseph McKibben developed a pneumatic muscle-inspired actuator capable of linear contraction -- called the McKibben actuator. The McKibben muscle is a type of Pneumatic Artificial Muscle (PAM) which is to this date the most frequently used and published artificial muscle in literature. According to \cite{Mckibben}, he developed the McKibben actuators to bring motion to his little daughter's polio-paralyzed hand. His aim was that eventually such pneumatic actuators may help patients with paralyzed fingers to move, grasp, and even write. Inspired by the human muscle, the McKibben actuator consists of an inflatable inner bladder enveloped with a double-helical weave. When pressurized, the fluidic actuator converts radial expansion into uni-axial contraction \cite{Daerden1999,Daerden2000,Schulte1961} since weave inhibits extensive \emph{ballooning} -- a term for undesired rapidly-accelerated volumetric expansion. Its material composition is often silicone rubber with a nylon-fiber exterior. A schematic representation of a general pneumatic muscle and the effect of ballooning are shown in Figure \ref{fig:C0:mckibben}. Ballooning is an (often undesired) nonlinear effect, where the hyper-elastic pressure vessel exhibits strain-softening after a critical point is reached. As a result, further increase of the pressure leads to an exponential growth in volume, which ultimately leads to actuator tearing. At stages of ballooning, mechanical performance significantly drops and even produces adverse effects, like actuation reversal. McKibben solved this problem through a combination of soft and inextensible fiber weaves. These inextensible were placed at the exterior wall of the soft muscle, thereby limiting the radial expansion before ballooning could occur. According to Daerden (1999, \cite{Daerden1999}), there exist many variations of pneumatic muscle besides braided muscles, such as the \emph{netted muscles} (e.g, Yarlott \cite{Yarlott1972}, ROMAC \cite{Immega1986}, and Kukolj \cite{Kukolj1988}) and \emph{embedded muscles} (\eg, Morin \cite{Morin1953}, Paynter Hyperboloid \cite{Paynter1988}). Illustration of their patent schematics are shown in Figure \ref{fig:C0:several_PAM}.
+
+Pneumatic muscles are perhaps one of the first fundamental technologies that enabled soft robotics, and to this day, it remains a framework for many soft robotic systems. Nevertheless, besides the many examples of fluidics \cite{Marchese2014,Marchese2016,Katzschmann2018,Suzumori1991,Mosadegh2014}, there exist many other technologies employed in soft robotic motion: such as thermal \cite{Wu2021Dec} or chemical expansion/contraction \cite{Tolley2014,Bartlett2015,Wehner2016}, crystal re-alignment \cite{Pilz2020,Lopez2018,Vantomme2021,Polygerinos2013}, di-electric elastomers \cite{Keplinger2011}, magnetism \cite{Roh2019Apr,KimYoonho2018,McDonald2020,Boyvat2017Jul}, and naturally the use of tendons paired with electro-mechanical actuation \cite{Renda2018,Bern2019,Kim2020Jun,Coevoet2017Feb,Wang2016Sep}. Some predate the invention of the McKibben actuator. For example, a popular soft actuation principle still applied in soft robotics today are Dielectric Elastomer Actuators (DEA) developed by R\"{o}ntgen in 1880 \cite{Rontgen1880}. Therefore, given the abundance of soft robotic actuation, it is difficult to pinpoint the exact date of origin of soft actuation technology. Note, however, that these systems are not categorized as soft robots, they are categorized as soft actuators. Here, we emphasize the difference between soft actuators and soft robots in view of the modeling and control terminology relevant to the thesis:
+
+\terminology{\textbf{Soft actuators} are controllable flexible actuation units of the constitute soft robot that through external stimuli are responsible for natural motion within the system or a change in its compliance. %By definition, a soft actuator is a single-input-multi-output (SIMO) system.
+}{}
+%
+\begin{rmk} The terminology above attempts to address an ambiguity common to soft robotics, namely the interchangeable use of soft actuator and soft robot. The thesis invokes that soft robots must be comprised of multiple soft actuators that connect to a passive deformable body. Here, the soft body functions as a mechanical conduit between actuators, sensors, and the environment.
+\end{rmk}
+
+\section{Recognition of soft robotics' potential} Returning to 1965, nearly a decade after the invention of the McKibben actuator and the Unimate robot, Scheinman and Leifer proposed a novel pneumatic robotic arm named the \emph{Orm} -- Norwegian for snake (recall that he also developed the popular PUMA robot \cite{BibEntryPuma2022Sep}). The name was also an abbreviation for Object-Relational Mapping tool \cite{Corke2020}. To the author's knowledge, this is believed to be the first instance of a soft robotic system. Surprisingly the system predates any rigid snake-like robot, like the Scripps tensor arm by Anderson (1968, \cite{Anderson1968}). Inspired by the anatomy of snakes, the system featured 28 rubber pneumatic artificial muscle (\ie, bellows) distributed along a flexible backbone (\ie, skeletal support). The network of artificial muscles were sandwiched between steel plates to prevent misalignment. It is worth mentioning that the technology is analogous to the pneumatic McKibben muscle, where fiber weaves are used to prevent ballooning. Yet, contrary to a single McKibben actuator, the soft robotic system could undergo three-dimensional movement by inflation or deflation of an embedded pneumatic network. This led to a rich set of movements previously unseen in rigid robotics. As an illustrative example, we provided the mechanics of the Orm soft robot in Figure \ref{fig:C0:ormrobot}. The soft robot could achieve bending in any preferred direction by differential pressurization of each channel, and elongation through synchronized actuation. Most notably, comparing the volume-strain response of the Orm with respect to the McKibben actuator, \ie, comparing Figure \ref{fig:C0:mckibben} against \ref{fig:C0:ormrobot}, it is noticeably more linear in nature. Although not documented at the time, the comparison highlights the importance of structural geometry in pneumatic muscle networks.
+
+\begin{figure}[!t]
+  \centering
+  \input{./fig/fig_orm_elong.tex}
+  \input{./fig/fig_orm_bend.tex}
+  \vspace{-6mm}
+  
+  \caption{Working principle of the Orm robotic manipulator \cite{BibEntryOrm2019Sep} with the internal volume \data{Matlab1} in \si{\milli \liter}, and the end-effector displacement \data{Matlab2} in \si{\milli \meter} and bending-angle \data{Matlab4} in deg. By actuation of the pneumatic network, both elongation and bending can be achieved. Observe that the response is significantly more linear than McKibben actuators in Fig. \ref{fig:C0:mckibben}, emphasizing the importance of geometry.
+  %\dotdata{Matlab2}
+  \vspace{-6mm}
+  \label{fig:C0:ormrobot}}
+\end{figure}
+
+According to an interview with Scheinman led by Asaro et al. \cite{ETHW2020Dec} in 2010, the positional accuracy of the system was poor, yet the concepts of pneumatically-driven soft arms continued for many years. The positional inaccuracy of pneumatic soft actuators at the time may have caused its lost of academic interest in the 60's. Three years later, in 1968, an improved hyper-redundant robot manipulator was proposed and patented by Anderson and Horn \cite{Anderson1968} (see Figure \ref{fig:C0:timeline}). Improving upon the Orm, which was deemed slow and had limited positional accuracy, Anderson proposed an array of nylon tendons that were connected to rigid discs distributed along the redundant backbone of the robot. The configurable backbone was comprised of universal spherical joints that allow for pivoting motion with respect to other discs -- totalling 16 Degrees-of-Freedom (DOFs). The entire arm was actuated hydraulically, yet the (soft) actuators were placed outside the robot's body rather than placed at each joint, like the Orm. To improve positional accuracy further, Anderson placed sensor tendons parallel the actuator tendons which allowed for operator-based positional feedback. Although Anderson's robot does not categorize as a soft robot since it relies mostly on rigid materials, its flexibility arose from thin nylon tendons that were used for both actuation and sensing. Anderson showed that a network of distributed sensors are necessary to control the complex morphological shapes in  hyper-redundant robotic systems, while also mitigating the sensor's effect on mobility. Within this context, let us introduce the notion of soft sensors -- the dual of soft actuators:
+
+\terminology{\textbf{(Proprioceptive) soft sensors} are flexible measurements units embedded into the soft robotic body that through external stimuli measure the (local) changes of the system. Softness here implies that the sensor minimally alters the global mechanical behavior of the robot.
+}{}
+%
+\begin{rmk}
+\vspace{-1mm}
+As the emphasize lies on "minimally alters the global mechanical behavior", soft sensors may be composed of stiff (perhaps even rigid) components. Our definition infers that these sensors must be placed into or onto the soft body, minimally affecting the operational workspace of the soft actuator network in static or dynamic condition.
+\end{rmk}
+
+\textbf{Soft robotics in the 80's}. Following the fundamental works of McKibben, Scheinman and Anderson, the field of soft Pneumatic Artificial Muscles (PAMs) in robotics evolved rapidly in the early 80's. A few soft robotic systems are shown in Figure \ref{fig:C0:earlyPAMrobots}. Teleshev (1981, \cite{Teleshev1981}) developed a soft gripper reminiscent of modern PneuNet actuators \cite{Galloway2016,Mosadegh2014,Choi2011} -- a rectangular bellow-shaped soft actuator. Unlike uniaxial PAMs, which are radially symmetric, these soft grippers explored an asymmetrical design of bellows. The geometry led to a stiffness differential around the circumference, resulting in their icon bending motion. Still popular today, these pneumatic bending actuators find their origin back in early 1974, see Andorf et al. (1974, \cite{Andorf1974}). A decade later, Takagi et al. (\cite{Takagi1983}, 1983) developed a soft multi-joint robot manipulator that resembles the human arm with its movements and antagonistic muscle pairs. Although, their PAMs -- called \textit{Rubbertuator} -- had a function and design identical to McKibben's PAMs, their system showed the merits of combining soft and rigid. They observed not only a high-degree of positional control of the robot arm, force control was easily regulated by the pressure control. This naturally had safety benefits. The soft robot arm could perform delicate low-force tasks while simultaneously blocking motion when encountering a human. These (soft) properties were lacking in rigid robotic manipulators at the time but reminiscent in its biological counterpart -- the human arm. Note that, at that time, force and impedance control for rigid robotics had been topics of academic research for years \cite{Anderson1988,Khatib1987,Hogan1984,Hogan1984Jan}, dating back to the early 1970's. (\eg, see also \cite{Markiewicz1973}). Yet achieving similar properties without control were rarely explored at the time.
+%
+\begin{figure}[!t]
+  % \vspace{-2mm}
+  % \ifx\printFigures\undefined
+  % \else
+  % \hspace{1mm}
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-2-5.pdf}
+  % \input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_earlyPAMrobots.tex}
+  %\fi
+  \vspace{-2mm}
+  \caption{Early robotic systems that explored soft PAMs for various tasks. (a) Soft robotic grippers by Teleshev \cite{Teleshev1981}. (b) The soft arm using \textit{Rubbertuator} actuators by Takagi and Sakaguchi \cite{Takagi1983}. (c) Three-link soft robotic manipulator with gripper reminiscent of the elephant's trunk, developed by Wilson at Duke University \cite{Wilson2007,Weisburd1988}. (d) Shadow bipedal walker by Buckley et al. \cite{Buckley2012} using McKibben muscle in antagonistic pairs to produce locomotion.
+  \label{fig:C0:earlyPAMrobots}}
+  \vspace{-2mm}
+\end{figure}
+%
+\par Shortly after, Wilson (1984, \cite{Wilson2007}) developed a soft robot manipulator based on the elephant's trunk at Duke University, Durham. His design effectively combined the works of Teleshev \cite{Teleshev1981} and Takagi et al. \cite{Takagi1983} into a robot with similar dexterity but minimal use of rigid components. According to \cite{Weisburd1988}, his idea stemmed from the work of Kier and Smith (1985, \cite{Kier1985}) who studied the biomechanics of muscular-hydrostats in animals, like cephalopods (\eg, squids). The work of Kier et al. \cite{Kier1985} studied how complex motions are produces in muscular organs, like elongation, shortening, bending and torsion. Inspired by the muscular hydrostat in the elephant's trunk, Wilson developed a soft arm composed of polyurethane tubes that work as half-bellows, which enabled expansion and bending under positive pressurization \cite{Weisburd1988}. To accommodate for three-dimensional movement, each soft pneumatic link was placed at a $ \phi = \frac{\pi}{2}$ twist offset w.r.t. to the previous link. To illustrate the motion of the soft arm, a few snapshots are provided in Figure \ref{fig:C0:fist_srm_robot}. Wilson hypothesized that these highly-complaint robots will be more mechanically robust and be sufficiently dexterous for tight workspaces, contrary to its rigid counterparts. Although the dexterity was novel, the positional accuracy was poor. The main problem stemmed from the soft arm being controlled in open-loop (\ie, remote tele-operation) without proprioceptive sensing nor any positional feedback control. An issue akin to the Orm (1965). 
+
+A few years later, Buckley et al. (1988, \cite{Buckley2012}) developed the Shadow walker -- a bipedal rigid robot comprised of antagonistic McKibben muscle pairs. Although not fully soft, their system did explore proprioceptive sensing. The hip, knee, and ankle joints were equipped with resistance-variable potentiometers for position feedback, whereas all the muscles had tension sensors for force feedback. Later on, these resistive sensors were replaced by analog optical sensors to improve robustness \cite{Buckley2012}. Although the system was top-heavy, due to the pneumatic control hardware (\eg, valves and piping), rudimentary locomotion was possible. Interestingly, a similar artificial muscle system is still explored in nowadays humanoid robotics, like the Atlas from Boston Dynamics. The success of pairing soft muscles with proprioceptive sensing eventually led to the development of the McKibben Shadow hand \cite{Buckley2012,Gong2022Feb}, comprised of 40 uniquely addressable soft muscles. 
+
+\begin{figure}[!t]
+  \vspace{-2mm}
+  \centering
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-2-6.pdf}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_first_srm.tex}
+  %\vspace{-2mm}
+  \caption{Three-link soft robotic manipulator with two-fingered soft gripper by James Wilson from Stanford university (1984, \cite{Wilson2007}). Unlike classic manipulators, where links and joints are separated, Wilson's robot consisted of three pneumatic bending actuators -- being link and joint simultaneously. 
+  %\vspace{-4mm}
+  \label{fig:C0:fist_srm_robot}}
+\end{figure}
+
+\begin{figure}[!t]
+  %\vspace{-3mm}
+  %\ifx\printFigures\undefined
+  %\else
+  %\centering
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-2-7.pdf}
+  %\input{/home/brandon/Documents/phd/thesis/3_chapters/0_introduction/img/fig_first_gripper.tex}
+  %\fi
+  %\vspace{-2mm}
+  \caption{Four-fingered soft robotic gripper by Suzumori and Saiko (1989, \cite{Suzumori1991,Suzumori1992}). Each finger possess three pneumatic chambers that allow for directional bending -- analogous the Orm. Through proper coordination of the set of soft fingers various gripping complexity can be achieved, such as the clock-wise turning a mechanical hex bolt (as shown above). Suzumori et al. showed these intricate finger motions can be easily achieved by careful modeling of the fingertip dynamics, and exploring the adaptability of soft materials.
+  \label{fig:C0:fist_grip_robot}}
+  \vspace{-3mm}
+\end{figure}
+
+Following, Suzumori and Saiko \cite{Suzumori1991,Suzumori1992} developed a micro flexible soft actuator driven by an electro-hydraulic system (intrinsic length $L \approx12$ \si{\milli \meter}). Each end-effector enables three DOFs including pitch, yaw, and stretch -- making it ideal for fingers, arms and legs. Figure \ref{fig:C0:fist_grip_robot} shows the level of dexterity in their system. By placing the four PAMs parallel on a gripper mount, and assigning a pre-defined trajectory, they showed their soft robotic system has sufficient dexterity to mount an hex-bolt at an incredible speed and precision. To achieve such dexterity and precision, Suzumori et al. \cite{Suzumori1991} employed various modeling and control strategies to account for the dynamical characteristics under high-frequency, fluid compressibility, and the closing mechanics of pressure valves. Futhermore, the kinematics of each finger was derived using generalized homogenous transformation, not unlike traditional robotics. Knowing both the compliance characteristics (pressure-deformation relations) and the forward kinematics, a Jacobian-based positional controller was employed to regulate the Cartesian coordinates of the finger-tips (successfully one might add).
+%
+\par \textbf{Early controllers for hyper-redundant (soft) robots}. Following the increasing interest in highly-flexible robots around the late 80's, academic research into controlling these \textit{hyper-redundant} robots boomed shortly after. At the time, the term hyper-redundancy -- being an extension to redundancy in robotics \cite{MerriamWebster1983} -- was defined as the relative degree of kinematic and/or actuator redundancy which is large or even infinite \cite{Chirikjian1992,Chirikjian1994}. The term was first introduced by Chirikjian and Burdick (1989, \cite{Chirikjian1989}). Others referred to these robots as \textit{highly redundant} \cite{Wilson1988Dec,Naccarato1989Dec} or \textit{High Degree-of-Freedom} (HDOF) manipulator \cite{Salerno1989Jan,Mochiyama1999}. Around that time, Chirikjian and Burdick provided a plenary of mathematical foundation \cite{Chirikjian1994,Chirikjian1994Jun,Chirikjian1991,Chirikjian1992,Chirikjian1992Dec} focussed on the kinematics and motion planning of hyper-redundant manipulators. Their work presented a modal discretization approach to describe the shape of the deformable backbone \cite{Chirikjian1994Jun}, and from this geometric approaches were introduced to solve obstacle avoiding trajectories using generalized \textit{follow-the-leader} strategies \cite{Chirikjian1992Dec}. Especially the latter showed the limitation in rigid redundant manipulators. Although Chirikjian laid the foundation for the control of hyper-redundant robot, basic principles of motion planning in pneumatic hyper-redundant robots were already presented by Wilson et al. (1988, \cite{Wilson1988Dec,Wilson1989Jun}) -- yet were not called hyper-redundant robots nor soft robots yet. Recall also that the work of Wilson et al. has been sown earlier in Figure \ref{fig:C0:timeline} and Figure \ref{fig:C0:fist_srm_robot}. In Brock et al. (1991, \cite{Brock1991}), a similar analysis was used for optimal shape design of thin elastic rods to realize desired robotic compliance. Besides, there exist an abundance of literature prior to \cite{Chirikjian1992} on Variable Geometry Truss Manipulators (VGTMs) -- a variant of hyper-redundant tensegrity robotics -- that dealt with motion planning for such systems \cite{Naccarato1989Dec,Naccarato1991Apr,Salerno1989Jan}. Later, Mochiyama et al. \cite{Mochiyama1998,Mochiyama1999}, built upon Chirikjian's work by extending it to a dynamic formulation for elastic rods such that classic controller design is possible. They proposed shape-regulation controllers for HDOF manipulator by projecting them onto time-invariant curves, thereby showing that the estimation the desired curve parameters is the crucial key to solving the problem by Lyapunov design \cite{Mochiyama1998}. Although there existed a variety of modeling and control strategies, computational power in relation to modeling complexity was the limiting factor for the simulation-to-reality transfer at the time.

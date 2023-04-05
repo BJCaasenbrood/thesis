@@ -1,0 +1,75 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig_C2_setup_measure_V2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{340.89898682bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.27896927)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.57724511,1.00605844){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hough space transform\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.31511761,0.36786798){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\scriptsize Inverse kinematic \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.0786905,0.36252699){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}IMU\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.33001405,0.09211466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\scriptsize Deformation solver\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.08359686,0.08815864){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\uB(t)$\end{tabular}}}}%
+    \put(0.73310155,1.07447435){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize pre-processing\end{tabular}}}}%
+    \put(0.27680101,0.94685002){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize depth image\end{tabular}}}}%
+    \put(0.49297579,1.01042748){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize RGB image\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.28037806,0.27531002){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{./fig/fig_C2_setup_measure_V2.pdf}}%
+    \put(0.28000509,0.19781089){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{./fig/fig_C2_setup_measure_V2.pdf}}%
+  \end{picture}%
+\endgroup%

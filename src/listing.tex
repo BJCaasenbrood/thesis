@@ -1,0 +1,44 @@
+\lstloadlanguages{Matlab}
+\lstdefinestyle{terminal}{
+    basicstyle=\fontsize{8.5pt}{10pt}\selectfont\ttfamily,
+    xleftmargin=.15in,
+    xrightmargin=.25in
+}
+
+\lstdefinestyle{Matlabterminal}{
+    language=Matlab,
+    backgroundcolor = \color{highlightcolor!10},
+    basicstyle=\fontsize{9pt}{10pt}\selectfont\ttfamily,
+    commentstyle=\color{thumbcolor!80},
+    xleftmargin=.3in,
+    xrightmargin=.3in,
+    frame = single
+}
+
+\lstdefinestyle{matlab}{
+    language=Matlab,                        % Use MATLAB
+    backgroundcolor = \color{highlightcolor!10},
+    basicstyle=\fontsize{9pt}{10pt}\selectfont\ttfamily,        % Use small true type font
+    keywordstyle=[1]\color{black},          % MATLAB functions bold and blue
+    keywordstyle=[2]\color{purple},         % MATLAB function arguments purple
+    keywordstyle=[3]\color{black},  % User functions underlined and blue
+    keywordstyle=[4]\color{blue},          % User functions underlined and blue
+    identifierstyle=,                       % Nothing special about identifiers
+    commentstyle=\color{thumbcolor!80},
+    stringstyle=\color{purple},             % Strings are purple
+    showstringspaces=false,                 % Don't put marks in string spaces
+    tabsize=1,                              % 5 spaces per tab
+    morekeywords={},
+    morekeywords=[2]{on, off, interp},
+    morekeywords=[3]{pi,rotate},
+    morekeywords=[4]{},
+    morecomment=[l][\color{blue}]{...},     % Line continuation (...) like blue 
+    numbers=left,                           % Line numbers on left
+    firstnumber=1,                          % Line numbers start with line 1
+    numberstyle=\tiny\bfseries\ttfamily\color{darkgrey},          % Line numbers are blue
+    stepnumber=1,
+    xleftmargin=.3in,
+    keepspaces,
+    frame = single,
+    xrightmargin=.3in                           % Line numbers go in steps of 5
+}

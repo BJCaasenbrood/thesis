@@ -1,0 +1,35 @@
+\subsection{Mesh generation (\texttt{Mesh})}
+\label{sec:C5:mesh}
+In finite elements and computer graphics, mesh tessellation is a common language used to describe the structural geometry through a finite collection of vertices and edges. In \textit{Sorotoki}, meshes and mesh generation features are packaged into the class \texttt{Mesh.m}. In general, a mesh defines a discrete representation of a continuum body that is subdivided into smaller convex sub-volumes, referred to as "\textit{elements}". The nodal and elemental information are stored in data structures that can be accessed using \texttt{msh.Node} and \texttt{msh.Element}, respectively. For two-dimensional FEM problems, it is common to use linear elements such as $\texttt{Tri3}$ and $\texttt{Quad4}$ or quadratic elements like $\texttt{Tri6}$ and $\texttt{Quad8}$. For three-dimensional FEM problems, the common practice is to use hexahedron elements (\textit{i.e.}, \texttt{Hex8}) or tetrahedral elements (\textit{i.e.}, \texttt{Tet4} and \texttt{Tet12}). There are also polygonal tessellations, often denotes as \texttt{PolyN} finite elements \cite{Talischi2012Mar}. The \textit{Sorotoki} toolkit supports all of the above element types.
+%
+\begin{figure}[!b]
+    \centering
+    \includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-4.pdf}
+    \includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-4.pdf}
+    %\input{./fig/fig_mesh.tex} \\[0.35em]
+    \caption{Example of mesh generation in \textit{Sorotoki}. The figure shows the evolution of an unstructured polygonal mesh based on Lloyd's algorithm. The colors relate to the relative element size with respect to the mean element size, given by \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\milli \meter \squared}. Notice that only after a few iterations, the centers of the Voronoi cells become homogeneously distributed within the meshing domain $\Omega$.}
+    \label{fig:sorotoki:meshexample}
+    \vspace{-3mm}
+\end{figure}
+
+\textbf{A: Mesh generation from SDFs.} The \textit{Sorotoki} toolkit explores several routines for mesh generation, which are all contained in the class \texttt{Mesh.m}. Our primary focus is on using a modified version of the \textit{PolyMesher} software developed by Talischi et al. \cite{Talischi2012Mar}. Their work provided a stable foundation for generating unstructured meshes of \texttt{PolyN} elements. The approach starts by defining a material domain implicitly using SDFs (as discussed in Section \ref{sec:C5:sdf}). The number of elements is chosen a priori, and then repeated random sampling of Equation \eqref{eq:C5:sdf} is performed until the number of samples that fall within the specified domain matches the number of elements. A bounded Voronoi diagram is generated using the samples and the centers of the Voronoi cells are updated using Lloyd's algorithm \cite{Lloyd1982Mar}. To generate a mesh from an \texttt{Sdf} class, one can call \texttt{msh = Mesh(Sdf)} followed by \texttt{msh = msh.generate()}.  \\
+
+\begin{example}[Meshing of SDFs]
+We provided a mesh generation example in Figure \ref{fig:sorotoki:meshexample} where we used the SDF function from the previous example to generate our tessellation. The code is given below
+%
+\begin{lstlisting}[style=matlab] 
+ %% EXAMPLE: Mesh class 
+ %  generate sdf mesh domain 
+ c   = sCircle(1);    
+ r   = sRectangle(1);  
+ sdf = r.rotate(pi/4)-c; 
+    
+ % sdf conversion to mesh 
+ msh = Mesh(sdf,'NElem',150);
+ msh = msh.generate();
+\end{lstlisting}
+%
+In Figure \ref{fig:sorotoki:meshexample}, we see the evolution of the Voronoi cells that produce the \texttt{PolyN}-type mesh. Observe that after a few iterations of Lloyd's algorithm, the centroids are distributed homogeneously over the compact domain $\Omega$ (as shown by the color distribution).
+\end{example}
+%
+\textbf{B: Mesh from common file formats} An alternative option is to use the mesh generation tools provided by the \textit{Partial Differential Toolbox} in Matlab. Such function is also included in the \code{Mesh.generate()} routine. SDFs can also be used in this process, although an intermediate step is required. For two-dimensional domains, SDFs are first converted into binary images and then the image boundary detection is used to convert them to either a linear mesh (\texttt{Tri3}) or a quadratic mesh (\texttt{Tri6}). Direct input of black-and-white \file{.jpg} or \file{.png} images is also supported. For three-dimensional domains, SDF functions are converted to an \file{.stl} file using the Marching Cube algorithm \cite{Lorensen1987Aug} and then provided to the Matlab PDE toolbox to generate the tessellation. Importing \file{.stl} or \file{.obj} files directly is also possible. Meshes can also be export

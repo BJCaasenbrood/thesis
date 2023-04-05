@@ -1,0 +1,43 @@
+%!TEX root = ../../thesis.tex
+\section{Adaptive control}
+\noindent As briefly discussed in the introduction, the dynamics model will be used as a control-oriented framework for model-based controllers applicable to soft robotics. In retrospect to previous model-based controllers, Della Santina et al.  \cite{DellaSantina2020} proposed a combination of feedforward and model-based feedback; yet, satisfying the passivity condition, more robustness approach could be acquired through energy-based controller (especially in the face of material uncertainties). Franco et al. \cite{Franco2020} proposed an adaptive energy-based controller but the underlying model (multi-link pendulum) is not rooted in a continuum description. Here, we wish to provide a mix of the control methodologies -- an energy-based control approach for the continuous PCC model with an adaptive material law.
+%
+\subsection{Passivity-based adaptive control}
+\noindent The continuous dynamics of the soft robotic manipulator are described by \eqref{eq:C2:dynamic_model}, where the Lagrangian system matrices depend on physical parameters, e.g., mass, moments of inertia, stiffness, and viscosity. Within the context of robust control, these parameters often deviate from their true value. So merely an estimate of the system matrices $\tmat{M}(\q)$, $\tmat{C}(\q,\q)$, $\tvec{f}\!\grav(\q)$ and $\tvec{f}\!\elastic(\q,\dq)$ can be acquired, where we denote $
+\Delta (\cdot) = \tilde{(\cdot)} - (\cdot)$ as the difference between the true value and its estimate. The difference (or uncertainty) between true and estimated values is of particular relevance in soft robotics, where material properties play a significant role on both the statics and dynamics. Poor estimates of the material parameters could lead to instability in some model-based controllers if not considered carefully. Exploiting the passivity in Lagrangian models, we can derive a passivity-based adaptive controller similar to the works of Slotine et al. \cite{Slotine1988} and Ortega et al. \cite{Ortega1998}. The benefit of passivity-based control techniques is its robustness regarding parameter uncertainties and unmodelled dynamics. Passivity-based control is rooted in energy-shaping and damping injection techniques, leading to simple implementation yet effective means of stabilization.
+%
+
+Let $\q_d \in \mathcal{Q}$ be the desired trajectory of the soft robot together with its time-derivative $\dq_d,\ddq_d \in {\R^n}$. Next, let $\piB \in \mathbb{R}^p$ be a vector containing all unknown values from a set of physical parameters, and the parametrization error $\vec{e}_{p} := \vec{\tilde{\piB}} - \piB$ in which the the vector $\vec{\tilde{\pi}} \in \R^p$ denotes the parameter estimates.  An important note is that the model must be linear in $\piB$, which holds true for the line-density $\rho_0$, the linear elasticity parameters in \eqref{eq:C2:stiffness_tanh_beta} and \eqref{eq:C2:stiffness_tanh_eps}, damping, creep coefficients in \eqref{eq:C2:creepmodel} and \eqref{eq:C2:creepcompliance}, and also for an unknown mass applied at the tip of the soft robot \eqref{eq:C2:delta_payload}. Unfortunately, we cannot included the material parameters $\alpha_3$  and $\alpha_6$ due to their nonlinear dependence. The control objective is given by finding an appropriate control input and update law such that $\lim_{t\to \infty} \q(t) = \q_d(t)$ is achieved with good transient behavior. Assuming linearity in the parameters
+% Linearity in parameters holds true for the line-density $\rho(q,\sigma)$ and all linear visco-elastic stiffness constants. As such, the nonlinear parameters $\alpha_3$ and $\alpha_6$ cannot be included into the estimation law.},
+the linear parametrizability matrix of the soft robot's dynamics is given as follows
+%
+\begin{equation}
+\vec{Y}(\cdot,\piB)\,{\vec{e}_p} = \Delta \mat{M}\,\ddq_r + \Delta \mat{C}\,\dq_r + \Delta \vec{f}\grav +  \Delta\vec{f}\elastic +  \Delta \vec{\delta},\label{eq:regress}
+\end{equation}
+%
+
+\begin{figure}[!t]
+    \vspace{-0.6mm}
+    \centering
+    %\input{chapter1/chapter1}
+    \input{./pdf/thesis-figure-4-11.pdf_tex}
+     %\includegraphics[width = 0.99\textwidth]{fig_C2_PBAdiagram.tex}
+    \caption{Schematic diagram of the passivity-based adaptive controller (PBAC), where $\Sigma_{\textrm{softrobot}}$ denotes the dynamical system \eqref{eq:C2:dynamic_model} and $\Sigma_{\textrm{sensor}}$ a system of sensors suitable of measuring $\q$ and $\dq$. }
+    \label{fig:C2:PBA_diagram}
+  \end{figure}
+
+
+\noindent where $\dq_r = \dq_d - \LambdaB \eB $ is called the reference velocity vector, $\LambdaB \in \R^{n \times n}$ a positive diagonal matrix, and $\vec{Y}(\q,\dq,\dq_r,\dq_r,\piB) \in \R^{m\times n}$ is called the regressor matrix. Following the work of Slotine and Li \cite{Slotine1988}, the control law and adaptation law are given by
+%
+\begin{align}
+\tauB = &\, \tmat{M}\,\ddq_r + \tmat{C}\, \dq_r + \tvec{f}\!\grav +  \tvec{f}\!\elastic - \tvec{\delta} - \mat{K}_p \, \vec{e} - \mat{K}_d\, \vec{e}_r,  \label{eq:C2:tau} \\
+\dot{\tvec{\pi}} =& - \mat{K}_{\vec{\pi}}\,\vec{Y}^\top\vec{e}_r,  \label{eq:C2:update}
+\end{align}
+%
+where $\vec{e}_r := \dq - \dq_r = \dot{\vec{e}} + \LambdaB\,\vec{e}$, $\mat{K}_p, \mat{K}_d \in \mathbb{R}^{n\times n}$ are controller gains, and $\mat{K}_{\vec{\pi}} \in \R^{p\times p}$ is a positive definite matrix called the adaptation rate. Since $\tauB$ define the desired generalized forces acting on the system \eqref{eq:C2:dynamic_model}, the desired pressures are computed as $\uB = \mat{G}^{+} \tauB$ with $\mat{G}^{+}$ the generalized inverse of $\mat{G}$. A schematic diagram of the passivity-based controller is provided in Figure \ref{fig:C2:PBA_diagram}. It should be mentioned that the magnitude of adaptation rate does not affect the global stability of the system (if unmodelled dynamics are not excited); however, it sets the rate of adaptation, and accordingly the performance of the system.
+
+\begin{rmk}[Persistence of excitation]
+\label{rmk:C2:poe}
+ It is important to note that the convergence of the tracking error $\eB \to 0$ does not imply convergence of the estimated parameter to their true values. According to \cite{Slotine1988,Slotine1989Jul,SlotineJ1987}, asymptotic convergence can be shown if the matrix $\vec{Y}(\q,\dq,\dq_r,\dq_r,\piB)$ is persistently excited and it is uniformly continuous. To elaborate, under the condition of persistent excitation, that is, for any instances $t_1,t_2$ with  $t_1\le t_2$  there exists a positive constant $\alpha$ such that $\int_{t_1}^{t_2} \mat{Y}^\top\,\mat{Y} \;dt \preceq \alpha\,\mat{I}$, it can be proven that the parameter estimates converge asymptotically to their true values. The authors in \cite{Slotine1988} state that the proof for convergence here applied to nonlinear robot dynamics is similar to those of linear dynamics \cite{Morgan1977} although the proof is fairly involved. 
+\end{rmk}
+%
