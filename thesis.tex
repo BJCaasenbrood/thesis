@@ -1,6 +1,6 @@
 %%%% DOCUMENT CLASS ************************************************************
 %\documentclass[print,thumbmain]{thesis}  % uncomment for writing
-\documentclass[print,thumbmain]{thesis} % uncomment for rendering/final version
+\documentclass[final,thumbmain]{thesis}  % uncomment for rendering/final version
 %\geometry{showframe}                    % uncomment to check geometry setting
 %%%% ENABLES *******************************************************************
 %\def\themeOrange{1}
@@ -19,25 +19,26 @@
 \input{src/colormaps}
 \input{src/specialsymbols}
 \input{src/listing}
+\graphicspath{{./pdf/}{./img/}}
 %\graphicspath{./fig/}{../../fig/}{../../../fig/}
 %\graphicspath{{img/}{3_chapters/0_introduction/img/}{3_chapters/2_chapter/img/}{3_chapters/4_chapter/img/}{../../img/}{../../../img/}}
 %%%% TIKZ Externalize **********************************************************
 %\tikzexternalize
-%%%% DARK MODE *****************************************************************
-\setreviewson
-\ifx\darkMode\undefined
-\else
-   \pagecolor[rgb]{0.1,0.1,0.1}
-   \color[rgb]{0.95,0.95,0.95}
+% %%%% DARK MODE *****************************************************************
+% \setreviewson
+% \ifx\darkMode\undefined
+% \else
+%    \pagecolor[rgb]{0.1,0.1,0.1}
+%    \color[rgb]{0.95,0.95,0.95}
 
-   \hypersetup{
-      colorlinks=true,
-      linkcolor = magenta,
-      filecolor = magenta,
-      citecolor = magenta,
-      urlcolor  = magenta
-   }
-\fi
+%    \hypersetup{
+%       colorlinks=true,
+%       linkcolor = magenta,
+%       filecolor = magenta,
+%       citecolor = magenta,
+%       urlcolor  = magenta
+%    }
+% \fi
 %%%% REVIEW *****************************************************************
 %\usepackage{showframe}
 \setreviewsoff
@@ -105,7 +106,7 @@
 % \input{3_chapters/0_introduction/2_questions.tex}
 % \input{3_chapters/0_introduction/3_contributions.tex}
 % \input{3_chapters/0_introduction/4_outline.tex}
-%\input{3_chapters/0_introduction/chapter}
+% \input{3_chapters/0_introduction/chapter}
 
 % *************************************************************
 %%%% History into soft robotics
@@ -114,23 +115,24 @@
 %\vspace*{-12mm}
 \input{3_2_history/abstract.tex}
 \input{3_2_history/early_soft_robots.tex}
+\input{3_2_history/state-of-the-art.tex}
 
 % *************************************************************
 %%%% Design
 \cleardoublepage
-\part{Design Optimization for Soft Robots}\label{part: design}
+\part[Design Optimization for Soft Robots]{Design Optimization \\ for Soft Robots}\label{part: design}
 
 \chapter[Gradient-based Optimization for soft robots]{Optimal Design of Soft Robots \\ -- a Gradient-based Approach}
 \label{chap: chapter 2}
 
 \blankfootnote{This chapter is based on: B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmeijer. \textit{A Computational Design Framework for Pressure-drivenSoft Robots through Nonlinear Topology Optimization.}  IEEE International Conference on Soft Robotics (RoboSoft), 2020. \texttt{doi:} \url{10.1109/RoboSoft48309.2020.9116010}}
 
-\input{3_3_design/0_abstract.tex}
-\input{3_3_design/1_introduction.tex}
-\input{3_3_design/2_fem.tex}
-\input{3_3_design/3_opt.tex}
-\input{3_3_design/4_example.tex}
-\input{3_3_design/5_conclusion.tex}
+% \input{3_3_design/0_abstract.tex}
+% \input{3_3_design/1_introduction.tex}
+% \input{3_3_design/2_fem.tex}
+% \input{3_3_design/3_opt.tex}
+% \input{3_3_design/4_example.tex}
+% \input{3_3_design/5_conclusion.tex}
 % *************************************************************
 % *************************************************************
 % *************************************************************
@@ -140,54 +142,51 @@
 \label{chap:PCC}
 \blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmeijer. \textit{Control-oriented Models for Hyper-elastic Soft Robots through Differential Geometry of Curves.} Soft Robotics, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}.}
 
-\input{3_4_pccmodel/0_abstract.tex}
-\input{3_4_pccmodel/1_introduction.tex}
-\input{3_4_pccmodel/3_model.tex}
-\input{3_4_pccmodel/4_multilink.tex}
-\input{3_4_pccmodel/5_solver.tex}
-\input{3_4_pccmodel/6_material.tex}
-\input{3_4_pccmodel/7_control.tex}
-\input{3_4_pccmodel/8_results.tex}
-\input{3_4_pccmodel/9_conclusion.tex}
-% \input{3_4_pccmodel/A1_passivity.tex}
+% \input{3_4_pccmodel/0_abstract.tex}
+% \input{3_4_pccmodel/1_introduction.tex}
+% \input{3_4_pccmodel/3_model.tex}
+% \input{3_4_pccmodel/4_multilink.tex}
+% \input{3_4_pccmodel/5_solver.tex}
+% \input{3_4_pccmodel/6_material.tex}
+% \input{3_4_pccmodel/7_control.tex}
+% \input{3_4_pccmodel/8_results.tex}
+% \input{3_4_pccmodel/9_conclusion.tex}
 % *************************************************************
 %\newpage
 \cleardoublepage
-\chapter[Dynamic modeling of soft robots -- Beyond the PCC]{Dynamic Modeling -- Beyond \\ the Constant Strain Approach}
+\chapter[Model-based control for soft robots -- Beyond the PCC]{Model-based control for \\ soft robots -- Beyond the\\ Constant Strain Approach}
 \label{chap:BeyondPCC}
 
 \blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Energy-shaping Controllers for Soft Robot Manipulators through Port-Hamiltonian Cosserat Models.} SN Computer Science, Springer, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. }
 
 \input{3_5_cosseratmodel/0_abstract.tex}
-\input{3_5_cosseratmodel/1_introduction.tex}
-\input{3_5_cosseratmodel/2_model.tex}
-\input{3_5_cosseratmodel/3_control.tex}
-\input{3_5_cosseratmodel/4_results.tex}
-\input{3_5_cosseratmodel/5_conclusion.tex}
-% \input{3_5_cosseratmodel/A1_lietheory.tex}
-% \input{3_5_cosseratmodel/A2_jacobian.tex}
+% \input{3_5_cosseratmodel/1_introduction.tex}
+% \input{3_5_cosseratmodel/2_model.tex}
+% \input{3_5_cosseratmodel/3_control.tex}
+% \input{3_5_cosseratmodel/4_results.tex}
+% \input{3_5_cosseratmodel/5_conclusion.tex}
 
 % *************************************************************
-\part{Open-access Software for Soft Robots}\label{part: software}
+\part[Open-access Software for Soft Robots]{Open-access Software \\ for Soft Robots}\label{part: software}
 
 \cleardoublepage
-\chapter[Sorotoki: A Matlab Toolkit for Soft Robots]{Sorotoki: A Matlab Toolkit for the Design and Control of Soft Robots}
+\chapter[Sorotoki: A Matlab Toolkit for Soft Robots]{Sorotoki: A Matlab Toolkit \\ for Design, Modelling, and \\ Control of Soft Robots}
 %\label{chap:BeyondPCC}
 \blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Energy-shaping Controllers for Soft Robot Manipulators through Port-Hamiltonian Cosserat Models.} SN Computer Science, Springer, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. }
 
-\input{3_6_sorotoki/0_abstract.tex}
-\input{3_6_sorotoki/1_introduction.tex}
-\input{3_6_sorotoki/2_relatedworks.tex}
-\input{3_6_sorotoki/3_openrobots.tex}
-\input{3_6_sorotoki/4_software.tex}
-\input{3_6_sorotoki/5_sdf.tex}
-\input{3_6_sorotoki/6_mesh.tex}
-\input{3_6_sorotoki/7_fem.tex}
-\input{3_6_sorotoki/8_beam.tex}
-\input{3_6_sorotoki/9_model.tex}
-\input{3_6_sorotoki/10_control.tex}
-\input{3_6_sorotoki/11_studycases.tex}
-\input{3_6_sorotoki/12_conclusion.tex}
+% \input{3_6_sorotoki/0_abstract.tex}
+% \input{3_6_sorotoki/1_introduction.tex}
+% \input{3_6_sorotoki/2_relatedworks.tex}
+% \input{3_6_sorotoki/3_openrobots.tex}
+% \input{3_6_sorotoki/4_software.tex}
+% \input{3_6_sorotoki/5_sdf.tex}
+% \input{3_6_sorotoki/6_mesh.tex}
+% \input{3_6_sorotoki/7_fem.tex}
+% \input{3_6_sorotoki/8_beam.tex}
+% \input{3_6_sorotoki/9_model.tex}
+% \input{3_6_sorotoki/10_control.tex}
+% \input{3_6_sorotoki/11_studycases.tex}
+% \input{3_6_sorotoki/12_conclusion.tex}
 
 % *************************************************************
 \part{Closing}
@@ -198,10 +197,11 @@
 \cleardoublepage
 \part{Appendices}
 \definecolor{thumbcolor}{gray}{0.75}     % Change the color of the thumb index tags to gray
-\input{3_4_pccmodel/A1_passivity.tex}
-\input{3_5_cosseratmodel/A1_lietheory.tex}
-\input{3_5_cosseratmodel/A2_jacobian.tex}
-\input{3_6_sorotoki/A1_newmark.tex}
+\input{3_1_introduction/A_list_of_definitions.tex}
+% \input{3_4_pccmodel/A1_passivity.tex}
+% \input{3_5_cosseratmodel/A1_lietheory.tex}
+% \input{3_5_cosseratmodel/A2_jacobian.tex}
+% \input{3_6_sorotoki/A1_newmark.tex}
 %%%% BACK MATTER ***************************************************************
 \cleardoublepage
 \isstarredchaptertrue           % This state variable is used for creating the thumb index by indicating that the following chapter is not numbered (i.e. \chapter*{})

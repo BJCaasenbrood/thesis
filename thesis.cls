@@ -53,8 +53,8 @@
 \geometry{
     paperwidth  = 176mm,
     paperheight = 246mm,
-    top         =  35mm,
-    bottom      =  28mm,
+    top         =  30mm, %35
+    bottom      =  23mm, %28
     inner       =  28mm,
     outer       =  23mm,
     headsep     =   7mm,
@@ -64,8 +64,8 @@
 \geometry{
     paperwidth  = 170mm,
     paperheight = 240mm,
-    top         =  32mm,
-    bottom      =  25mm,
+    top         =  27mm, %32
+    bottom      =  20mm, %25
     inner       =  22.5mm,
     outer       =  22.5mm,
     headsep     =   7mm,
