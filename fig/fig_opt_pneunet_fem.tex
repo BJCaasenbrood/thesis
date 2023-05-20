@@ -1,0 +1,79 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06270,0.35690,0.84710}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.436\textwidth,
+height=0.266\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+xticklabels={{}},
+ymin=0,
+ymax=1,
+ytick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+yticklabels={{}},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.436\textwidth,
+height=0.266\textwidth,
+at={(0.464\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=14,
+xlabel style={font=\color{white!15!black}},
+xlabel={pressure $u$ (kPa)},
+ymin=0,
+ymax=35,
+ylabel style={font=\color{white!15!black}},
+ylabel={curvature $\kappa $ (m$^{-1}$)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids
+]
+\addplot [color=mycolor1, line width=2.0pt, mark size=0.8pt, mark=*, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+0	0.000999999000001139\\
+1.26050420168067	3.8489141452998\\
+2.52100840336135	7.16365624987361\\
+3.78151260504202	10.2081513652522\\
+5.04201680672269	13.0546563138026\\
+6.30252100840336	15.7566111360888\\
+7.56302521008404	18.3427705893479\\
+8.82352941176471	20.8380216311803\\
+10.0840336134454	23.2815777446647\\
+11.3445378151261	25.704081448553\\
+12.6050420168067	28.1914676245067\\
+13.8655462184874	30.8123117602643\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.918\textwidth,
+height=0.299\textwidth,
+at={(-0.009\textwidth,-0.03\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

@@ -1,0 +1,41 @@
+\makeatletter
+
+\renewcommand\@makefntext[1]{%
+\setlength\parindent{1em}%
+\noindent
+\mbox{\@thefnmark~}{#1}}
+
+\makeatother
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\newcommand{\thumbimageeven}[2]{
+    \begin{tikzpicture}[remember picture, overlay]
+            \node[text=black,font=\bfseries] at ($%
+                (current page.south west)-%
+                (-0.15*\thumbheight-2*\thumbsep,-\thumbheight/2-\thumbsep)%
+                $) {#1};
+            \node[text=black,font=\bfseries] at ($%
+                (current page.south west)-%
+                (-0.15*\thumbheight-\thumbheight/2,-\thumbheight/2-\thumbsep)%
+                $) {#2};    
+    \end{tikzpicture}}
+
+\newcommand{\thumbimageodd}[2]{
+      \begin{tikzpicture}[remember picture, overlay]
+              \node[text=black,font=\bfseries] at ($%
+                  (current page.south east)-%
+                  (0.15*\thumbheight+\thumbheight/2,-\thumbheight*0.5-\thumbsep)%
+                  $) {#1};
+              \node[text=black,font=\scriptsize] at ($%
+                  (current page.south east)-%
+                  (0.15*\thumbheight+\thumbheight/2,-\thumbheight*0.5+12pt)%
+                  $) {#2};    
+      \end{tikzpicture}}
+      
+  

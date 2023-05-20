@@ -3,8 +3,17 @@
 \section{Generalized models for soft manipulators} \label{sec:chap3_model}
 In this chapter, we will explore Lie group theory applied to deformable robots. We have introduced some of notations earlier in Chapter \ref{chap:PCC}, but for convenience, we briefly recapulate.The Lie group of rigid-body transformation on $\R^3$ is denoted by $\SE{3}$. The group of homogeneous rotation is denoted by $\SO{3}$. The tangent space at the identity of the group is called the \textit{Lie algebra}, and it can be used to describe the evolution of the Lie group. The Lie algebra of $\SE{3}$ and $\SO{3}$ are denoted by $\seg{3}$ and $\sog{3}$, respectively. Lastly, the cross operator (\ie, "$\times$") and hat operator (\ie, "$\wedge$") are used to transform a column vector of $\R^3$ or $\R^6$ into an element of the Lie algebra $\sog{3}$ or $\seg{3}$, respectively. A comprehensive introduction is given in Appendix \ref{app:C3:liegroup} based on the work of Murray et al. \cite{Murray1994}. 
 
+\begin{figure}[!t]
+  \vspace{-2mm}
+  \centering
+ %\includegraphics[width = 0.99\textwidth]{3_chapters/3_chapter/img/fig_C3_schematic.pdf}
+  \includegraphics[width = \textwidth]{./pdf/thesis-figure-5-1.pdf}
+  \caption{Schematic representation of the continuously variable Cosserat beam model for a general class of soft manipulators, given by a backbone curve $\gammaB$ and orientation matrix $\PhiB$ relative to a base frame at $\{0\}$ Together they form a parameterized curve $\gB(\sigma,t) = (\PhiB(\sigma,t),\, \gammaB(\sigma,t)) \in \SE{3}$. The representation of the soft robot is inspired by the octopus' tentacle whose the muscle forces are modeled as a distributed input $\FT_u$. \label{fig:C3:example1}}
+  %\vspace{-0.4cm}
+\end{figure}
+
 \subsection{Preliminary on geometric Cosserat theory}
-In Cosserat theory, slender deformable solids are modeled as elastic strings subjected to geometric finite-strain theory. Drawing the analogy to soft robotics, we model the soft robot as a one-dimensional spatial curve passing through the geometric center of the soft robot (see Figure 1). Given its spatial-temporal nature, we introduce a temporal variable $t \in [0,\,T]$ with finite horizon time $T$, and a spatial variable $\sigma \in [0,\,L]$ with $L$ the undeformed length of the soft robot. For each point on the backbone, we introduce a (mobile) coordinate frame. The homogeneous rotation related to these coordinate frames is given by the rotation matrix $\mat{\Phi}: [0,L] \times [0,T] \to  \SO{3}$, and their origin by the position vector $\vec{\gamma}: [0,L] \times [0,T] \to \R^3$. For convenience and readability, we will denote the temporal and spatial domains as $\Ts = [0,\,T]$ and $\Xs = [0,\,L]$, respectively.
+In Cosserat theory, slender deformable solids are modeled as elastic strings subjected to geometric finite-strain theory. Drawing the analogy to soft robotics, we model the soft robot as a one-dimensional spatial curve passing through the geometric center of the soft robot (see Figure 1). Given its spatial-temporal nature, we introduce a temporal variable $t \in [0,+\infty)$, and a spatial variable $\sigma \in [0,\,L]$ with $L$ the undeformed length of the soft robot. For each point on the backbone, we introduce a (mobile) coordinate frame. The homogeneous rotation related to these coordinate frames is given by the rotation matrix $\mat{\Phi}: [0,L] \times [0,+\infty) \to  \SO{3}$, and their origin by the position vector $\vec{\gamma}: [0,L] \times [0,+\infty) \to \R^3$. For convenience and readability, we will denote the temporal and spatial domains as $\Ts = [0,+\infty)$ and $\Xs = [0,\,L]$, respectively.
 
 Following the geometric approach \cite{Simo1986,Boyer2010,Boyer2021,Renda2018,Renda2020}, we may equivalently represent each coordinate frames that are rigidly attached to the continuous backbone of the soft robot by a parameterized space curve in $\SE{3}$:
 %
@@ -25,15 +34,6 @@ Contrary to Chapter \ref{chap:PCC} where the (pneumatic) inputs are lumped, we p
 \label{assum:1}
 Any external distributed force acting on the continuum time-variant backbone curve \eqref{eq:C3:backbone} is considered to be sufficiently smooth for any instance $t \in \Ts$ and $\sigma \in \Xs$ such that parametrized backbone $\mat{g}(\sigma,t) \in \SE{3}$ is differentiable everywhere on $\Xs$ and $\Ts$.
 \end{asm}
-
-\begin{figure}[!t]
-  \vspace{-2mm}
-  \centering
- %\includegraphics[width = 0.99\textwidth]{3_chapters/3_chapter/img/fig_C3_schematic.pdf}
-  \includegraphics[width = \textwidth]{./pdf/thesis-figure-5-1.pdf}
-  \caption{Schematic representation of the continuously variable Cosserat beam model for a general class of soft manipulators, given by a backbone curve $\gammaB$ and orientation matrix $\PhiB$ relative to a base frame at $\{0\}$ Together they form a parameterized curve $\gB(\sigma,t) = (\PhiB(\sigma,t),\, \gammaB(\sigma,t)) \in \SE{3}$. The representation of the soft robot is inspired by the octopus' tentacle whose the muscle forces are modelled as a distributed input $\FT_u$. \label{fig:C3:example1}}
-  %\vspace{-0.4cm}
-\end{figure}
 %
 
 \subsection{Local strain and velocity}

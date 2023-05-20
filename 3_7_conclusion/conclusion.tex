@@ -4,36 +4,69 @@
 
 \section{Conclusions}
 
-\noindent \textbf{Design synthesis of soft actuators. } In Chapter \ref{chap:topo}, the thesis proposes a new framework for the synthesis of soft robot topologies from hyperelastic materials. Generally speaking, the design process of soft robots is complicated by material nonlinearities and numerical implementation issues. To address these challenges, we introduced a nonlinear finite element method for polygonal elements. Our approach provides a more accurate representation of the physical nature of soft robotics, including hyperelasticity and pneumatic actuation, compared to previous research. Numerical analysis indicates that our framework can produce meaningful and insightful material layouts for developing pressure-driven soft robots from soft materials. Additionally, the proposed framework can be adapted to express other actuation principles in soft robotics, such as dielectric polymers or thermal expansion with minor modifications.
+\begin{itemize}
+  \setlength\itemsep{-.1em}
+  \item {How do we design fluidic-interacting mechanical structures made from soft materials that deform according to a user-defined morphological pattern?}
+\end{itemize}
 
-\noindent \textbf{Modeling for control of soft manipulators.}
+\noindent \textbf{Automated design synthesis of soft actuators. } In Chapter \ref{chap:design_opt}, the thesis proposes a new framework for the synthesis of soft robot topologies from hyperelastic materials. Generally speaking, the design process of soft robots is complicated by material nonlinearities and numerical implementation issues. To address these challenges, we introduced a nonlinear finite element method for polygonal elements. Our approach provides a more accurate representation of the physical nature of soft robotics, including hyperelasticity and pneumatic actuation, compared to previous research. Numerical analysis indicates that our framework can produce meaningful and insightful material layouts for developing pressure-driven soft robots from soft materials. Additionally, the proposed framework of volume-based actuation can be adapted to express other actuation principles in soft robotics, such as dielectric polymers or thermal expansion with minor modifications.
 
-\noindent \textbf{Software developement.} This thesis has introduced \textit{Sorotoki}, an open-source toolkit in MATLAB that provides a comprehensive and modular programming environment for the design, modeling and control of soft robots. The toolkit consists of a libary of Object-Oriented classes designed to solve a wide range of problems in the field of soft robotics, including inverse design of soft actuators, passive and active soft locomotion, object manipulation with soft grippers, model reduction, model-based control of soft robots, and shape estimation. Most notably is its ability to succinctly represent complex soft robotics systems with minimal code, making it accessible to individuals with limited programming knowledge. In combinations with software, the toolkit also presents four open-hardware soft robotic systems that can be easily fabricated using commercially available 3D printers, futher enabling soft robotic technology for the community. Overall, \textit{Sorotoki} is a versatile and flexible resource that can benefit many researchers and practitioners in the field of soft robotics.
+\begin{itemize}
+  \setlength\itemsep{-.1em}
+  \item {How do we derive dynamic models that offer a reasonable trade-off between the accuracy and its applicability for control?}
+  \item {Can we adopt certain control philosophy from rigid robotics to soft robotics?} 
+\end{itemize}
 
-\section{Recommendations}
+\noindent \textbf{Modeling for control of soft manipulators.} Chapter \ref{chap:PCC} discusses the need to bridge the gap between modeling and control-oriented research in soft robotics. To achieve this, accurate dynamic models that can retain real-time performance are required. The chapter builds upon existing PCC models and use a minimal set of coordinates related to differential geometry of spatial curves to express continuum deformation. To better reflect the soft material nature,  FEM-based data is explored to model hyper-elasticity and also propose simple models that can describe viscoelastic behavior like creep. To enhance computational speed, a reduced-order integration scheme for efficient real-time simulation is proposed. The resulting continuum dynamical model shows good correspondence with physical soft robots and enables real-time simulations with various degrees of motion. An adaptive controller is proposed that provides good tracking performance even in the face of parameter uncertainties. 
+
+\begin{itemize}
+  \setlength\itemsep{-.1em}
+  \item {How do we derive dynamic models that offer a reasonable trade-off between the accuracy and its applicability for control?}
+  \item {Can we effectively explore the intrinsic morphologies properties of the soft material robots, similar to biology, by the means of control?}.
+\end{itemize}
+
+\noindent \textbf{Port-Hamiltonian models for soft robots and energy-based control.}  In Chapter \ref{chap:BeyondPCC}, the focus is on soft robots and their ability to mimic complex morphological motions found in nature. A modeling framework for Cosserat beams is presented, which leads to a finite-dimensional system in a port-Hamiltonian structure. An energy-shaping controller is proposed that ensures the closed-loop Hamiltonian is minimal at the desired set-point. The numerical model is developed for several bio-inspired soft robots, such as an octopus' tentacle and an elephant's trunk, with distributed control inputs. The key challenges are capturing hyper-flexibility, dealing with inherent under-actuation, and exploiting hyper-redundancy to achieve control tasks. The model-based controller yields smooth convergence of the soft robot's end-effector while accounting for under-actuation. It was shown that by tuning the controller gains, the intrinsic stiffness of the soft body can be adapted, resulting in significantly different quasi-static joint solutions of the set-point problem. However, there are limitations to this approach, such as the strain parametrization of functional basis not accounting for the geometry of the soft robot, making it difficult to accurately represent true continuum dynamics. Additionally, measuring spatial modes in an experimental setting is challenging, and future research is required to find a suitable 'soft sensing' technique. The proposed controller is only suited for set-point regulation or slow-varying references, and exploring fast-dynamic control objectives will require more research. Overall, the mobility of the Cosserat model paired with energy-based control has a close resemblance to biological motion, but further research is needed to overcome the limitations and explore new possibilities for locomotion or soft manipulators.
+
+% \begin{itemize}
+%   \setlength\itemsep{-.1em}
+%   \item {How do we derive dynamic models that offer a reasonable trade-off between the accuracy and its applicability for control?}
+%   \item {Can we adopt certain control philosophy from rigid robotics to soft robotics?} 
+%   \item {Can we effectively explore the intrinsic morphologies properties of the soft material robots, similar to biology, by the means of control?}.
+% \end{itemize}
+
+\begin{itemize}
+  \item{To enable better designs and controllers for soft robots, how can we bridge the interdisciplinary aspects intrinsic to this field?}
+\end{itemize}
+
+\noindent \textbf{Software development.} This thesis has introduced \textit{Sorotoki}, an open-source toolkit in MATLAB that provides a comprehensive and modular programming environment for the design, modeling and control of soft robots. The toolkit consists of a library of Object-Oriented classes designed to solve a wide range of problems in the field of soft robotics, including inverse design of soft actuators, passive and active soft locomotion, object manipulation with soft grippers, model reduction, model-based control of soft robots, and shape estimation. Most notably is its ability to succinctly represent complex soft robotics systems with minimal code, making it accessible to individuals with limited programming knowledge. In combinations with software, the toolkit also presents four open-hardware soft robotic systems that can be easily fabricated using commercially available 3D printers, further enabling soft robotic technology for the community. Overall, \textit{Sorotoki} is a versatile and flexible resource that can benefit many researchers and practitioners in the field of soft robotics.
+
+\section{Recommendations and future horizons for soft robotics research}
 In the present thesis, several research challenges have been addressed. However, as research is an ongoing endeavor, unexplored areas of research persistently emerge. In this section, we propose recommendations based on the chapters within this thesis. The author's recommendations for future research are summarized in Table \ref{}, categorized as short-term, medium-term, and long-term work.
 
 \textit{(Inverse design)} In Chapter \ref{chap:topo}, the possibility of gradient-based design for soft robots through topology optimization has been discussed. It has been demonstrated that relatively simple techniques can be utilized to identify "optimal" structures based on desired motion. However, due to computational limitations, only optimizations of planar mechanical structures have been considered. Therefore, further steps are necessary to convert the topology into an actual structure. Additionally, it should be noted that fabrication constraints have not been taken into account during optimization. However, these limitations create many possible opportunities for future research regarding generative design. 
-\par Firsy, the optimization techniques presented in this thesis can be readily applied to the three-dimensional domain. It is highly recommended to extend these techniques to the aforementioned domain, as it simplifies the post-processing of the derived topological structure. It should be noted, however, that the computational complexity of finite element models increases with $\mathcal{O}(n^3)$ with $n$ the global DOF of the mesh. Given this computational increase, exploring GPU parrallel computation or cluster computation are highly encouraged for future research. Alternatively, one potential option is to consider adopting the Material Point Method (MPM). The MPM offers several advantages over FEM, including the ability to handle larger mesh distortions, and better conservation of mass and momentum. Additionally, complex geometries can be handled more eclasily without requiring remeshing. Although MPM is computationally more intensive than FEM, there exist software packages that offer massively parallel simulation on multi-GPU (Graphics Processing Unit) architectures, which have already been applied to the co-design optimization of soft robots for locomotion. 
+\par First, the optimization techniques presented in this thesis can be readily applied to the three-dimensional domain. It is highly recommended to extend these techniques to the aforementioned domain, as it simplifies the post-processing of the derived topological structure. It should be noted, however, that the computational complexity of finite element models increases with $\mathcal{O}(n^3)$ with $n$ the global DOF of the mesh. Given this computational increase, exploring GPU parallel computation or cluster computation are highly encouraged for future research. Alternatively, one potential option is to consider adopting the Material Point Method (MPM). The MPM offers several advantages over FEM, including the ability to handle larger mesh distortions, and better conservation of mass and momentum. Additionally, complex geometries can be handled more eclasily without requiring remeshing. Although MPM is computationally more intensive than FEM, there exist software packages that offer massively parallel simulation on multi-GPU (Graphics Processing Unit) architectures, which have already been applied to the co-design optimization of soft robots for locomotion. 
 \par Secondly, one intriguing area of research can be found in multi-material topology optimization. Soft robots often face the issue of limited force transmissibility without significant deformations in their supporting structures. Multi-material investigation offers a promising solution, where material diversity, inspired by nature, can result in a wider range of mechanical compliance, ultimately benefiting potential applications. Moreover, recent progress in multi-material printing technology has facilitated the consolidation of soft, rigid, and flexible conductive materials. This provides a prospect to incorporate skeletal function along with proprioceptive sensing capabilities that can be directly integrated into the optimization loop. Generally speaking, 
 
 \textit{(Modeling for control)} 
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-\begin{table}
-    \centering
-\begin{tabular}{|C{4cm}|l|}
-    \hline
-    \multirow{3}{*}{Short term (<1 year)}   & \tabitem Bananis baidg ndgidog idngd kdnfd \\ 
-                                            & \tabitem Bananis baidg ndgidog idngd kdnfd \\ 
-                                            & \tabitem Bananis baidg ndgidog idngd kdnfd \\ 
-    \hline
-  \end{tabular}
-\end{table}
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+% \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+% \begin{table}
+%     \centering
+% \begin{tabular}{|C{4cm}|l|}
+%     \hline
+%     \multirow{3}{*}{Short term ($\sim$ 1 year)}   & \tabitem Extension towards 3D topology optimization\newline  \\ 
+%                                             & \hspace{4mm} and multi/active material optimization. \\ 
+%                                             & \tabitem Bananis baidg ndgidog idngd kdnfd \\ 
+%     \hline
+%   \end{tabular}
+% \end{table}
 
-\section{Future outlook}
-\textit{(Chicken-and-egg problem in model-based control of soft robots)} 
+% %\section{Future horizons of soft robotics}
+% \textbf{Chicken-and-egg problem in conventional modeling} 
+% \lipsum[1-2]
 
-\textit{(Synergy between design and control)} 
+% \textbf{Synergy between design and control}
+% \lipsum[1-2]
 
-\textit{(Importance of sensing and its relation towards learning)} 
+% \textbf{Importance of sensing and its relation towards learning in control}
+% \lipsum[1-2]

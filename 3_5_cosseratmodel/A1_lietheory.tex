@@ -1,5 +1,6 @@
 \chapter{Appendices to Chapter 5}
-\section{Introduction to Lie group and Lie algebra} 
+\vspace{-5mm}
+\section{Preliminaries on Lie group theory} 
 \label{app:C3:liegroup}
 Here we briefly discuss some notation and basic operations on the Lie groups $\SO{3}$ and $\SE{3}$, and their respective Lie algebras $\sog{3}$ and $\seg{3}$. This appendix serves a compact comprehensive introduction in the context of robotics, and the appendix is based on the comprehensive work of Bullo and Murray (1995, \cite{Bullo1995}).
 
@@ -48,7 +49,7 @@ where the operator $(\cdot)^{\times}:\R^3 \to \sog{3}$ is defined such that $\x^
     \vec{\Omega}^{\times} & \VB^{\times} 
     \end{pmatrix}.
 \end{align}
-The notation above are analogous to the notations used in Chapter 3. \\ \vspace{-3mm}
+The notation above are analogous to the notations used in Chapter \ref{chap:PCC}. \\ \vspace{-3mm}
 
 \subsection{Exponential and logarithmic map}
 An important operation in Lie group theory, is the exponential and logarithmic maps that serve as transformations between the groups and their respective algebras. Lets start with the exponential map. Given $\OmegaB^\times\in \sog{3}$ and $\etaB = (\OmegaB,\VB) \in \seg{3}$, the exponential maps for the orientation group $\exp_{\SO{3}}: \sog{3} \to \SO{3}$ and the rigid-body transformation group $\exp_{\SO{3}}: \seg{3} \to \SE{3}$ are given respectively by

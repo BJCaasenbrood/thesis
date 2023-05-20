@@ -1,0 +1,68 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.282\textwidth,
+height=0.282\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=800.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=800.5,
+axis line style={draw=none},
+ticks=none
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=800.5, ymin=0.5, ymax=800.5] {fig_pneunet_grasp-1.png};
+\node[right, align=left, inner sep=0, font=\color{white}]
+at (axis cs:90,730) {\small $t = 0$ (s)};
+\end{axis}
+
+\begin{axis}[%
+width=0.282\textwidth,
+height=0.282\textwidth,
+at={(0.309\textwidth,0\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=800.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=800.5,
+axis line style={draw=none},
+ticks=none
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=800.5, ymin=0.5, ymax=800.5] {fig_pneunet_grasp-2.png};
+\node[right, align=left, inner sep=0, font=\color{white}]
+at (axis cs:90,730) {\small $t = 1$ (s)};
+\end{axis}
+
+\begin{axis}[%
+width=0.282\textwidth,
+height=0.282\textwidth,
+at={(0.618\textwidth,0\textwidth)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=800.5,
+tick align=outside,
+y dir=reverse,
+ymin=0.5,
+ymax=800.5,
+axis line style={draw=none},
+ticks=none
+]
+\addplot [forget plot] graphics [xmin=0.5, xmax=800.5, ymin=0.5, ymax=800.5] {fig_pneunet_grasp-3.png};
+\node[right, align=left, inner sep=0, font=\color{white}]
+at (axis cs:90,730) {\small $t = 2$ (s)};
+\end{axis}
+\end{tikzpicture}%

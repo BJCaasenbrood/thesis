@@ -54,7 +54,7 @@
     paperwidth  = 176mm,
     paperheight = 246mm,
     top         =  30mm, %35
-    bottom      =  23mm, %28
+    bottom      =  19mm, %28
     inner       =  28mm,
     outer       =  23mm,
     headsep     =   7mm,
@@ -65,7 +65,7 @@
     paperwidth  = 170mm,
     paperheight = 240mm,
     top         =  27mm, %32
-    bottom      =  20mm, %25
+    bottom      =  16mm, %25
     inner       =  22.5mm,
     outer       =  22.5mm,
     headsep     =   7mm,
@@ -89,11 +89,11 @@
 \newlength{\thumbsep}               % separation between edge of page and start of semi-circle
 \ifprint
 \setlength{\thumbsep}{4mm}          % add 3 mm for bleed
-\setlength{\thumbheight}{1.75cm}
+\setlength{\thumbheight}{1.25cm}
 \setlength{\thumbtopmargin}{4.3cm}
 \else
 \setlength{\thumbsep}{4mm}
-\setlength{\thumbheight}{1.75cm}
+\setlength{\thumbheight}{1.25cm}
 \setlength{\thumbtopmargin}{4.3cm}
 \fi
 \newcommand{\thumbeven}[1]{

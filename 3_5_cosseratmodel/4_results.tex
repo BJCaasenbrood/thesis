@@ -3,17 +3,17 @@
 In this section, we detail the numerical simulations of the port-Hamiltonian model in \eqref{eq:C3:model_ph} together with the energy-shaping controller in \eqref{eq:C3:control}. 
 
 Due to the partial differential nature, we have to employ a nested ODE routine to recover the trajectories for $\vec{q}$ and $\vec{p}$. First, we employ an implicit trapezoidal solver with a fixed stepsize of $dt = 30 $ ms to solve \eqref{eq:C3:model_ph}. At each time increment, we have to evaluate the dynamic matrices \eqref{eq:C3:lag_M}-\eqref{eq:C3:lag_tau}. To efficiently compute these dynamic entities, we solve the spatial integration problem over the material domain $\Xs$ by using a second-order Runge-Kutta solver.  The stepsize for the spatial solver is chosen sufficiently small $\Delta \sigma = 1$ mm. The spatial stepsize is related to the length of the manipulator $L$, but also the degree of geometric deformations along the backbone. In some cases, high-gain feedback control can excite high-order modes thus requiring a smaller stepsize to capture these phenomena accurately. However, by keeping the control gains small paired with the fact that structural damping is dominant in soft elastomers often lead to slow transients (order of seconds). As such, the spatial discretization has been shown to relatively nonrestrictive. %Generally speaking, choosing $\Delta \sigma = 1\cdot10{-2} L$ is a good rule of thumb. 
-. All simulation examples and underlying source code are provided publicly on the \sorotoki toolkit \cite{Caasenbrood2020}. Here, the numerical integrations of the system matrices \eqref{eq:C3:lag_M}, \eqref{eq:C3:lag_C}, \eqref{eq:C3:lag_G} and \eqref{eq:C3:lag_tau} are performed using a so-called Matrix-Differential solver (see \cite{Caasenbrood2022}). The simulations are performed on a modern machine (Ryzen 7-5800H, 3.2GHz).
+All simulation examples and underlying source code are provided publicly on the \sorotoki toolkit \cite{Caasenbrood2020}. Here, the numerical integrations of the system matrices \eqref{eq:C3:lag_M}, \eqref{eq:C3:lag_C}, \eqref{eq:C3:lag_G} and \eqref{eq:C3:lag_tau} are performed using a so-called Matrix-Differential solver (see \cite{Caasenbrood2022}). The simulations are performed on a modern machine (Ryzen 7-5800H, 3.2GHz).
 
 For the soft robotic simulations, we have chosen a linear isotropic Hookean material with shear constraints. %Although hyper-elastic material models are possible, e.g, Neo-Hookean or Yeoh, it is considered out of the scope of this work (see \cite{Kim2018,Renaud2011}). 
 Given these material properties, the inertia tensor and the stiffness tensor become diagonal matrices:
 %
 \begin{align*}
-\mat{\mathcal{M}} & = \blkdiag{ \rho_0 \mat{\mathcal{J}},\, \rho_0 A \mat{I}_3}; \\[0.45em]
+\mat{\mathcal{M}} & = \blkdiag{ \rho_0 \mat{\mathcal{J}},\, \rho_0 A \mat{I}_3}; \quad 
 \mat{\mathcal{K}} & = \blkdiag{\mu_1 \mat{\mathcal{J}},\, E A_0,\, \mu_2  A_0,\,\mu_2  A_0},
 \end{align*}
 %
- where $A_0$ is the (average) cross-sectional area, and $\mat{\mathcal{J}}$ the second moment of area. Note that $A_0$ and $\mat{\mathcal{J}}$ depend on the cross-sectional geometry of the soft robot and is therefor unique for each system.  The damping tensor chosen as $\mat{\mathcal{D}} = \zeta \mat{\mathcal{K}}$ with damping coefficient $\zeta$. The visco-elastic matrices are precomputed using \eqref{eq:C3:stiff_mat} and \eqref{eq:C3:damp_mat}.
+ where $A_0$ is the (average) cross-sectional area, and $\mat{\mathcal{J}}$ the second moment of area. Note that $A_0$ and $\mat{\mathcal{J}}$ depend on the cross-sectional geometry of the soft robot and is therefor unique for each system.  The damping tensor chosen as $\mat{\mathcal{D}} = \zeta \mat{\mathcal{K}}$ with damping coefficient $\zeta$. %The visco-elastic matrices are precomputed using \eqref{eq:C3:stiff_mat} and \eqref{eq:C3:damp_mat}.
 
 \subsection{Soft robot manipulator inspired by octopus' tentacle}
 In the first study-case, we consider a soft robotic arm that is loosely inspired by the tentacles of an octopus. To introduce the under-actuation typically present in soft robotics, we have chosen an actuation matrix $\mat{G} = \blkdiag{\mat{I}_5, \mat{O}_3}$ such that only the first five modes are actively controllable.  We assume that the soft manipulator has a circular cross-section, thus the cross-sectional area is given by $A_0 = \pi r^2$ with radius $r$. The system properties are shown in Table \ref{tab:C3:parameters1}.
@@ -24,7 +24,6 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \begin{tabular}{l|c|c|l}
     Parameter description & Symbol & Value & Unit \\
     \midrule
-    Finite horizon time & $T $ & $10$ & s \\
     Intrinsic length & $L $ & $ 120$ & mm \\
     Cross-section radius & $r $ & $ 8.25$ & $\text{mm}$ \\
     Uniform density & $\rho_0 $ & $ 1250$ & $\text{kg}\text{m}^{-3}$ \\
@@ -39,36 +38,39 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \end{table}
 %
 \begin{example}[Solution convergence for increasing modal order]
- Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext} = [J]_k^\top \left(\mB(t),0,0,0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we inclemently increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the error does not seem to improve significantly. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
+ Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext}(t) = [J]_k^\top \left(\mB(t),0,0,0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we inclemently increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. 
+ 
+ \afterpage{
+ \begin{figure}[!t]
+  \centering
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-4.pdf}
+  \caption{Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $|\vec{m}_u| = 75$ \si{\newton \milli \meter} acting on its end-effector. }
+  \vspace{-0.2cm}
+  \label{fig:C3:EX2:mode_convergence_3d}
+  \end{figure}
+  %
+  \begin{figure}[!t]
+  \centering
+  %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge.tex} 
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-5.pdf}
+  \caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the trajectories of the end-effector $\gammaB_L$ converge after $k > 3$. }
+  %\vspace{-0.2cm}
+  \label{fig:C3:EX2:mode_convergence}
+  \end{figure}
+  %
+  \begin{figure}[!t]
+  \centering
+  %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge_bench.tex} 
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-6.pdf}
+  \caption{The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between simulation time and finite horizon time. All simulations achieve real-time computation. }
+  %\vspace{-0.2cm}
+  \label{fig:C3:EX2:mode_convergence_bench}
+  \end{figure}
+ }
+ 
+ Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the error does not seem to improve significantly. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
 \end{example}
 
-\begin{figure}[!t]
-\centering
-%\input{./3_chapters/3_chapter/img/fig_C3_modes_converge_3D.tex} 
-\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-4.pdf}
-\caption{Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $|\vec{m}_u| = 75$ \si{\newton \milli \meter} acting on its end-effector. }
-\vspace{-0.2cm}
-\label{fig:C3:EX2:mode_convergence_3d}
-\end{figure}
-
-\begin{figure}[!t]
-\centering
-%\input{./3_chapters/3_chapter/img/fig_C3_modes_converge.tex} 
-\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-5.pdf}
-\caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the trajectories of the end-effector $\gammaB_L$ converge after $k > 3$. }
-\vspace{-0.2cm}
-\label{fig:C3:EX2:mode_convergence}
-\end{figure}
-    
-\begin{figure}[!t]
-\centering
-%\input{./3_chapters/3_chapter/img/fig_C3_modes_converge_bench.tex} 
-\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-6.pdf}
-\caption{The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between simulation time and finite horizon time. All simulations achieve real-time computation. }
-\vspace{-0.2cm}
-\label{fig:C3:EX2:mode_convergence_bench}
-\end{figure}
-%
 \begin{example}[Energy-based controller]
 Following, we now subjected the soft robot to the proposed energy-based controller in \eqref{eq:C3:control}, where the control gains are tuned to produce a smooth transient: $\lambda_1 = 0.01$ and $\lambda_2 = 0.001$. The artificial spring stiffness is chosen as $\mat{k}_p = \blkdiag{0.01\cdot \mat{I}_3, \mat{I}_3}$. Lastly, the desired configuration of the end-effector is chosen as follows:
 %
@@ -80,7 +82,7 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:oct
 
 Figure \ref{fig:octarm1} shows the evolution of the continuous deformation along the soft robotic body, whereas Figure \ref{fig:octarm1_states} shows the modal coefficients $\vec{q}(t)$ and generalized momenta $\vec{p}(t)$. As can be seen, the end-effector of the soft robot manipulator converges to the desired set-point $\mat{g}_d \in \SE{3}$. Although the control gains could be increased to promote a faster transient, it was observed that high gains lead to undesired (propagating) oscillations of the flexible structure. A possible solution might be to introduce negative damping to the controller Hamiltonian $\Hm_d$, to overcome the soft robot's structural damping.
 
-For the second simulation run, we modified the control gains to highlight an interesting property of the proposed controller. To be more specific, we increase the controller gains to $\lambda_1 = \lambda_2 = 0.1$. The numerical results for the increased controller gains are shown in Figure \ref{fig:octarm2} and Figure \ref{fig:octarm2_states}. Although the control goal and the initial conditions are chosen identical, the soft robot converges to a different configuration -- albeit, a shape with less '\textit{complexity}'. The cause of less complicated bending patterns has two origins. First, increasing the control gains also artificially impacts the structural stiffness of the soft robot, resulting in soft robot with a higher perceived stiffness. Second, by increasing the stabilizing term $\lambda_2$ in the damped Jacobian inverse \eqref{eq:C3:jacob_damped}, more weight is given towards finding a solution that also minimizes the joint angles $\lVert \vec{q} \rVert_2 $.  This is to be expected, as intrinsically, it requires more energy to achieve higher-order modes deformations $\{\theta_n\}_{n=1}^k$ of the Legendre basis. Hence, the energy-based controller will thus find a minimizer that accounts for the ordering of the shape basis, penalizing higher-order modes. To some extent, the high intrinsic damping in soft robots acts as a spatial low filter which is beneficial for both modeling as control. This effect is not observed in classical semi-rigid robots since structural damping is often not dominant in metal composites.  This result indicates that the proposed controller can be effectively tuned alter the structural compliance of the soft robot; and thus could be implemented carefully to preserve '\textit{softness}'. 
+For the second simulation run, we modified the control gains to highlight an interesting property of the proposed controller. To be more specific, we increase the controller gains to $\lambda_1 = \lambda_2 = 0.1$. The numerical results for the increased controller gains are shown in Figure \ref{fig:octarm2} and Figure \ref{fig:octarm2_states}. Although the control goal and the initial conditions are chosen identical, the soft robot converges to a different configuration -- albeit, a shape with less '\textit{complexity}'. The cause of less complicated bending patterns has two origins. First, increasing the control gains also artificially impacts the structural stiffness of the soft robot, resulting in soft robot with a higher perceived stiffness. Second, by increasing the stabilizing term $\lambda_2$ in the damped Jacobian inverse \eqref{eq:C3:jacob_damped}, more weight is given towards finding a solution that also minimizes the joint angles $\lVert \vec{q} \rVert_2 $.  This is to be expected, as intrinsically, it requires more energy to achieve higher-order modes deformations $\{\theta_n\}_{n=1}^k$ of the Legendre basis. Hence, the energy-based controller will thus find a minimizer that accounts for the ordering of the shape basis, penalizing higher-order modes. To some extent, the high intrinsic damping in soft robots acts as a spatial low filter which is beneficial for both modeling as control. This effect is not observed in classical semi-rigid robots.  This result indicates that the proposed controller can be effectively tuned alter the structural compliance of the soft robot; and thus could be implemented carefully to preserve '\textit{softness}'. 
 
 \end{example}
 
@@ -172,8 +174,7 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
 \caption{Parameters setting for the numerical solver, the soft manipulator  by the elephant's trunk, and the energy-based controller.}\label{tab:C3:parameters2} \centering
 \begin{tabular}{l|c|c|l}
   Parameter description & Symbol    & Value    & Unit                     \\
-  \midrule
-  Finite horizon time   & $T $      & $20$     & s                        \\
+  \midrule      
   Intrinsic length      & $L $      & $ 360$   & mm                       \\
   Cross-section radius  & $r $      & $ 25$    & $\text{mm}$              \\
   Uniform density       & $\rho_0 $ & $ 250$   & $\text{kg}\text{m}^{-3}$ \\

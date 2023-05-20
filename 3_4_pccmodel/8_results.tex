@@ -153,7 +153,7 @@ For the last validation case, we subject the soft robot to an external payload o
   \includegraphics*{./pdf/thesis-figure-4-18.pdf}
   %\input{./3_chapters/2_chapter/img/fig_C2_compare_deflect.tex}
   \vspace{-5mm}
-  \caption{Experimental validation of the one-link soft robot subjected to various end-effector payloads of different mass $m_\delta = \{0,50,100,150\}$ \si{\gram}. The deformed 3D-model in \data{thumbcolor} corresponds to the estimated joint configuration based on the measurements from the IMU and depth camera, where the optimal marker location is shown in \data{lightgreen}.}
+  \caption{Experimental validation of the one-link soft robot subjected to various end-effector payloads of different mass $m_\delta = \{0,50,100,150\}$ \si{\gram}. The deformed 3D-model in (\textcolor{PurpleLight}{$\bullet$}) corresponds to the estimated joint configuration based on the measurements from the IMU and depth camera, where the optimal marker location is shown in (\textcolor{lightgreen}{$\bullet$}) .}
   \label{fig:C2:compare_deflect}
 \end{figure}
 %
@@ -223,7 +223,7 @@ Now, we can exploit these periodic solutions for benchmarking the numerical solv
 e & = \int^{T_c}_0 \Big\lVert \,\tvec{\gamma}(L,\,\tvec{q}(t)) - \,\vec{\gamma}(L,\,\q(t)) \Big \rVert_2 \; dt, \notag \\ & \approx \frac{1}{W}\sum_{i = 1}^{W} \Big\lVert \,\tvec{\gamma}(L,\,\tvec{q}(t_i)) - \,\vec{\gamma}(L,\,\q(t_i)) \Big\rVert_2,
 \end{align}
 %
-where $W$ is the number of time samples of the benchmark model inside the time interval of the periodic solution, and $\tvec{\gamma}(\cdot,L)$ and $\vec{\gamma}(\cdot,L)$ the tip position of the benchmark and the ground truth, respectively. The index $W$ naturally depends on the sampling frequency of the implicit solver. Table 2 shows the normalized errors (i.e., the tracking error $e$ normalized with the manipulator length $L$) together with the effective computation times of the numerical solver.
+where $W$ is the number of time samples of the benchmark model inside the time interval of the periodic solution, and $\tvec{\gamma}(\cdot,L)$ and $\vec{\gamma}(\cdot,L)$ the tip position of the benchmark and the ground truth, respectively. The index $W$ naturally depends on the sampling frequency of the implicit solver. Table \ref{tab:benchmark_table} shows the normalized errors (i.e., the tracking error $e$ normalized with the manipulator length $L$) together with the effective computation times of the numerical solver.
 
 The benchmark table above gives some useful insight into which settings benefit numerical precision and speed the most. First, regarding the coarser models $N = 24$ (\ie, 4 elements per link), we observe large numerical errors of $>\!10\%$ independent of solver frequency. Although one could argue these settings grantee real-time performance (2s of simulation time for 1s computation at $N_s = 24$, $f_s = 75$ Hz) and might suffice for model-based control in slow settings (\ie, set-point stabilization), they are most likely unsuited for dynamic tracking objectives. Moving towards $N_s = 60$ (\ie, 10 elements per link), we observe a significant improvement in numerical precision $\pm4\%$ and while still retaining real-time performance (1.6s of simulation time for 1s computation time at $f_s = 50$ Hz). As such, these settings show that both numerical precision and real-time computation can be achieved for more complicated multi-links soft robots. However, regarding the high-accuracy models $N_s > 100$, we see only a slight increase in numerical precision $\pm3\%$ yet lose real-time capabilities. Consequently, these models might be suited for offline simulations, but lack transferability to online model-based control. However, a possible solution here might be to convert the \texttt{MATLAB} model into a \texttt{C} or \texttt{C++} equivalent model to further increase numerical speed \cite{Grazioso2019,Sadati2020}.
 
@@ -239,7 +239,7 @@ The benchmark table above gives some useful insight into which settings benefit 
 $T = 10$ s  & $N_s = 24$ & $N_s =36$ &  $N_s =60$ &  $N_s = 90$ & $N_s = 120$ & $N_s =180$ \\[0.15em]
 \midrule
 %\hrule
-$f_s = 25$ Hz &  \underline{\small{19.0 / 1.77s }} &  \cbox{\small{9.37 / 2.54s }} & \cbox{\small{5.36 / 4.06s }} &  \cbox{\small{4.63 / 5.98s }} &  \cbox{\small{4.62 / 7.93s}} & \small{4.43 / 11.75s } \\ [0.5em]
+$f_s = 25$ Hz &  \cbox{\small{19.0 / 1.77s }} &  \cbox{\small{9.37 / 2.54s }} & \cbox{\small{5.36 / 4.06s }} &  \cbox{\small{4.63 / 5.98s }} &  \cbox{\small{4.62 / 7.93s}} & \small{4.43 / 11.75s } \\ [0.5em]
 $f_s = 50$ Hz &  \cbox{\small{17.5 / 3.50s }} &  \cbox{\small{7.04 / 5.04s }} &  \cbox{\small{4.33 / 6.73s}} & \small{3.69 / 11.60s } & \small{3.60 / 15.3s} & \small{3.69 / 22.71s } \\ [0.5em]
 $f_s = 75$ Hz &  \cbox{\small{13.77 / 5.31s}} &  \cbox{\small{5.80 / 7.56s}} & \small{4.51 / 12.41s} & \small{4.22 / 17.49s} & \small{3.68 / 22.35s} & \small{3.72 / 33.33s} \\ [0.5em]
 $f_s = 100$ Hz & \cbox{\small{14.73 / 6.48s}} & \cbox{\small{6.12 / 9.10s}} & \small{4.42 / 14.54s} & \small{3.71 / 21.46s} & \small{3.53 / 28.35s} & \small{2.89 / 42.03s} \\ [0.5em]

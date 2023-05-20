@@ -1,0 +1,85 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06275,0.35686,0.84706}%
+\definecolor{mycolor2}{rgb}{0.86667,0.21176,0.10980}%
+\definecolor{mycolor3}{rgb}{0.18039,0.52157,0.25098}%
+%
+\begin{tikzpicture}
+  \hspace{0.mm}
+\begin{axis}[%
+width=0.85\textwidth,
+height=0.035\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+unbounded coords=jump,
+xmin=0.1825,
+xmax=0.377,
+xlabel style={font=\color{white!15!black}},
+xlabel={time (s)},
+ymin=0.8,
+ymax=1.4,
+ytick={\empty},
+ylabel style={font=\color{white!15!black}, yshift=16pt},
+ylabel={gait},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+ticklabel style={font=\small}
+]
+\addplot [color=mycolor1, line width=5.0pt, forget plot]
+  table[row sep=crcr]{%
+0.185336333333329	1\\
+0.198709666666662	1\\
+nan	nan\\
+0.232811666666662	1\\
+0.242841666666661	1\\
+nan	nan\\
+0.27894966666666	1\\
+0.289648333333327	1\\
+nan	nan\\
+0.322412999999993	1\\
+0.339798333333326	1\\
+};
+\addplot [color=mycolor2, line width=5.0pt, forget plot]
+  table[row sep=crcr]{%
+0.182995999999996	1.1\\
+0.185001999999996	1.1\\
+nan	nan\\
+0.199043999999996	1.1\\
+0.208739666666662	1.1\\
+nan	nan\\
+0.243175999999995	1.1\\
+0.256549333333328	1.1\\
+nan	nan\\
+0.28998266666666	1.1\\
+0.303690333333327	1.1\\
+nan	nan\\
+0.340132666666659	1.1\\
+0.349828333333325	1.1\\
+nan	nan\\
+0.374234666666658	1.1\\
+0.377243666666658	1.1\\
+};
+\addplot [color=mycolor3, line width=5.0pt, forget plot]
+  table[row sep=crcr]{%
+0.182327333333329	1.2\\
+0.182661666666663	1.2\\
+nan	nan\\
+0.209073999999995	1.2\\
+0.232477333333328	1.2\\
+nan	nan\\
+0.256883666666661	1.2\\
+0.278615333333327	1.2\\
+nan	nan\\
+0.30402466666666	1.2\\
+0.32207866666666	1.2\\
+nan	nan\\
+0.350162666666659	1.2\\
+0.373900333333325	1.2\\
+};
+\end{axis}
+\end{tikzpicture}%

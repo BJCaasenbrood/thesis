@@ -1,0 +1,77 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06270,0.35690,0.84710}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.436\textwidth,
+height=0.243\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=1,
+xtick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+xticklabels={{}},
+ymin=0,
+ymax=1,
+ytick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+yticklabels={{}},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+
+\begin{axis}[%
+width=0.436\textwidth,
+height=0.243\textwidth,
+at={(0.464\textwidth,0\textwidth)},
+scale only axis,
+xmin=0,
+xmax=15,
+xlabel style={font=\color{white!15!black}},
+xlabel={pressure $u$ (kPa)},
+ymin=-1,
+ymax=9,
+ylabel style={font=\color{white!15!black}},
+ylabel={grip distance $\delta R$ (mm)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids
+]
+\addplot [color=mycolor1, line width=2.0pt, mark size=0.8pt, mark=*, mark options={solid, mycolor1}, forget plot]
+  table[row sep=crcr]{%
+0	8.00674057006836\\
+0.600000381469727	6.64670467376709\\
+1.19999980926514	5.55512142181396\\
+1.80000019073486	4.69528770446777\\
+2.40000057220459	4.03275108337402\\
+3	3.45667266845703\\
+3.60000038146973	2.96025085449219\\
+4.19999980926514	2.52895069122314\\
+4.80000019073486	2.15070343017578\\
+5.40000057220459	1.81659889221191\\
+6	1.5201997756958\\
+6.60000038146973	1.24097156524658\\
+7.19999980926514	1.01728534698486\\
+7.80000019073486	0.801447868347168\\
+8.39999961853027	0.629354476928711\\
+9	0.465390205383301\\
+9.60000038146973	0.330510139465332\\
+10.1999998092651	0.219956398010254\\
+10.8000001907349	0.132235527038574\\
+11.3999996185303	0.0637130737304688\\
+12	0.020965576171875\\
+12.6000003814697	0.00111103057861328\\
+13.1999998092651	0\\
+13.8000001907349	0\\
+14.3999996185303	0\\
+15	0\\
+};
+\end{axis}
+\end{tikzpicture}%

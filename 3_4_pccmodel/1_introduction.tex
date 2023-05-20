@@ -22,6 +22,18 @@ The contributions here are two-fold. First, to derive a finite-dimensional appro
 
 Second, in regards to the FEM-based hyper-elastic modeling and the possible presence of unmodelled dynamics (e.g., material uncertainties or external loads on the end-effector), a passivity-based adaptive controller is proposed that enhances robustness towards material uncertainties and unmodelled dynamics in closed-loop, slowly improving their estimates online.
 
+\begin{figure}[!h]
+  \centering
+  %\vspace{-5mm}
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-4-1-1.pdf} \\[1.25em]
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-4-1-2.pdf}
+ %\input{./fig/fig_C2_srm_exampleV2.tex} \\[1.25em]
+ %\input{./fig/fig_C2_srm_exampleV2_pressure.tex}
+   \caption{(top) Soft robot manipulator with three parallel embedded pneumatic bellows. This manipulator changes its posture by inflation and deflation of an embedded pneumatic network (<0.1 \si{\mega \pascal}). (bottom) Differential pressure signals applied on the internal bellows structures given by the input vector $\uB = (u_1\,u_2,\,u_3)^\top$, shown by the trajectories (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}), respectively.}
+   \vspace{-0.1cm}
+   \label{fig:C2:soft_robot}
+ \end{figure}
+ 
 \section{Pneumatic soft continuum manipulator}
 By using additive manufacturing, we developed a soft and flexible robot manipulator that is suitable for pick-and-place applications. The 3-DOF soft manipulator can be seen in Figure \ref{fig:C2:soft_robot}. The soft manipulators's design is reminiscent of the Orm robot developed by Scheinman \cite{BibEntryOrm2019Sep}, the composition of the network of soft actuators is loosely inspired by the elephant's trunk consisting mainly of parallel muscles without skeletal support. The anatomy of the elephant's trunk provides an excellent study case, as it naturally exhibit continuum-body bending and moderate elongation \cite{Falkenhahn2015,Jones2006,Tatlicioglu2007}. The design is also similar to other soft robotic systems \cite{Suzumori1991,Falkenhahn2015,Drotman2017} that all undergo three-dimensional movement by inflation or deflation of an embedded pneumatic bellow network. The pneumatic network has three independent inputs, which are labeled $\uB = (u_1,\,u_2,\,u_3)^\top$. By varying these input, the soft manipulator can achieve bending in any preferred direction by differential pressurization of each channel ($<$0.1 \si{\mega \pascal}), \eg, $u_1 > u_2 = u_3 > 0$. Whereas, simultaneous pressurization accomplishes moderate elongation, \ie, $u_1 = u_2 = u_3$. As a demonstration, we provided the following pressure inputs to the system:
 %
@@ -36,16 +48,4 @@ where $P_0 = 5$ \si{\kilo \pascal}, $P_a = 25$ \si{\kilo \pascal}, $\delta = \fr
 
 \begin{rmk}[Additive manufacturing] The soft manipulator is exclusively composed of a printable, flexible thermoplastic elastomer (Young's modulus $\le$ 80 \si{\mega \pascal}), which intrinsically promotes softness and dexterity. The elastomer material is developed explicitly for Selective Laser Sintering (SLS), a 3-Dimensional (3D) printing method that uses a laser to solidify powdered material. The main advantage of SLS printing over other techniques is that the printed parts are fully self-supported, which allows for highly complex and high-detail structures. It should be mentioned, though, that the layer-by-layer material deposition will introduce undesired anisotropic mechanical effects. To mitigate anisotropy, the bellows are printed orthogonal to the printing plane, thereby ensuring mechanical symmetry. For the majority of this work, the 3D-printed soft robot in Figure \ref{fig:C2:soft_robot} will form the basis of the dynamical model. The 3D model is made publicly available at the \textit{Sorotoki} software repository at \textnormal{\url{github.com/BJCaasenbrood/SorotokiCode}} \cite{Caasenbrood2020}. 
 \end{rmk}
-
-\begin{figure}[!h]
- \centering
- %\vspace{-5mm}
- \includegraphics*[width=\textwidth]{./pdf/thesis-figure-4-1-1.pdf} \\[1.25em]
- \includegraphics*[width=\textwidth]{./pdf/thesis-figure-4-1-2.pdf}
-%\input{./fig/fig_C2_srm_exampleV2.tex} \\[1.25em]
-%\input{./fig/fig_C2_srm_exampleV2_pressure.tex}
-  \caption{(top) Soft robot manipulator with three parallel embedded pneumatic bellows. This manipulator changes its posture by inflation and deflation of an embedded pneumatic network (<0.1 \si{\mega \pascal}). (bottom) Differential pressure signals applied on the internal bellows structures given by the input vector $\uB = (u_1\,u_2,\,u_3)^\top$, shown by the trajectories (\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}), respectively.}
-  \vspace{-0.1cm}
-  \label{fig:C2:soft_robot}
-\end{figure}
 

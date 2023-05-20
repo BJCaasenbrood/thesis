@@ -7,30 +7,58 @@ The style file: apalike.bst
 A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
+Reallocated field_info (elt_size=4) to 12304 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
---line 89 of file MyBib.bib
+--line 110 of file MyBib.bib
 Warning--entry type for "Anderson1968" isn't style-file defined
---line 106 of file MyBib.bib
+--line 127 of file MyBib.bib
 Warning--entry type for "Immega1986" isn't style-file defined
---line 126 of file MyBib.bib
+--line 147 of file MyBib.bib
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 849 of file MyBib.bib
+--line 927 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1449 of file MyBib.bib
+--line 1620 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1456 of file MyBib.bib
+--line 1627 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2097 of file MyBib.bib
+--line 2355 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 2413 of file MyBib.bib
+--line 2817 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 2525 of file MyBib.bib
+--line 2929 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 2860 of file MyBib.bib
+--line 3347 of file MyBib.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 3386 of file MyBib.bib
-Warning--I didn't find a database entry for "Milana2021Apr"
+--line 3947 of file MyBib.bib
+Warning--I didn't find a database entry for "Kazemipour2022"
+Warning--I didn't find a database entry for "Pustina2022"
+Warning--I didn't find a database entry for "Chen2018Dec"
+Warning--I didn't find a database entry for "Marechal2021Jun"
+Warning--I didn't find a database entry for "Newmark1959Jul"
+Warning--I didn't find a database entry for "Overvelde2012"
+Warning--I didn't find a database entry for "Bertoldi2008Feb"
+Warning--I didn't find a database entry for "Overvelde2012May"
+Warning--I didn't find a database entry for "Bendsoe2004"
+Warning--I didn't find a database entry for "Svanberg1987"
+Warning--I didn't find a database entry for "Svanberg2007"
+Warning--I didn't find a database entry for "Caasenbrood2020May"
+Warning--I didn't find a database entry for "CChirikjian1992Dec"
+Warning--I didn't find a database entry for "Boyer2020"
+Warning--I didn't find a database entry for "Caasenbrood2022Nov"
+Warning--I didn't find a database entry for "Murray2017Sep"
+Warning--I didn't find a database entry for "DellaSantina2021Oct"
+Warning--I didn't find a database entry for "Li2023Jan"
+Warning--I didn't find a database entry for "Santina2020Dec"
+Warning--I didn't find a database entry for "Stella2022Nov"
+Warning--I didn't find a database entry for "Chirikjian2015Jul"
+Warning--I didn't find a database entry for "Renda2020Apr"
+Warning--I didn't find a database entry for "Loria2015Jun"
+Warning--I didn't find a database entry for "Caasenbrood2022Apr"
+Warning--I didn't find a database entry for "Illingworth1987Sep"
+Warning--I didn't find a database entry for "Raeisinezhad2021May"
+Warning--I didn't find a database entry for "DellaSantina2019Nov"
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
 Warning--empty year in BibEntryPuma2022Sep
@@ -44,52 +72,54 @@ Warning--empty journal in DellaSantina2021
 Warning--empty booktitle in Duriez2013
 Warning--can't use both volume and number fields in Holzapfel2002
 Warning--there's a number but no volume in Katzschmann2019
+Warning--can't use both volume and number fields in Lorensen1987Aug
 Warning--empty school in Mochiyama1992
 Warning--empty publisher in Murray1994
+Warning--empty publisher in Proper2023
 Warning--there's a number but no volume in Runge2017
 Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 164 entries,
+You've used 305 entries,
             1935 wiz_defined-function locations,
-            1507 strings with 38742 characters,
-and the built_in function-call counts, 71657 in all, are:
-= -- 7067
-> -- 3273
-< -- 105
-+ -- 1148
-- -- 1130
-* -- 6208
-:= -- 12288
-add.period$ -- 507
-call.type$ -- 164
-change.case$ -- 1370
-chr.to.int$ -- 154
-cite$ -- 186
-duplicate$ -- 2586
-empty$ -- 4750
-format.name$ -- 1352
-if$ -- 14050
-int.to.chr$ -- 11
+            2348 strings with 68896 characters,
+and the built_in function-call counts, 138565 in all, are:
+= -- 13539
+> -- 6766
+< -- 169
++ -- 2401
+- -- 2362
+* -- 12244
+:= -- 23812
+add.period$ -- 951
+call.type$ -- 305
+change.case$ -- 2686
+chr.to.int$ -- 276
+cite$ -- 329
+duplicate$ -- 4855
+empty$ -- 9007
+format.name$ -- 2773
+if$ -- 27072
+int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 151
-newline$ -- 817
-num.names$ -- 486
-pop$ -- 1219
+missing$ -- 294
+newline$ -- 1522
+num.names$ -- 909
+pop$ -- 2404
 preamble$ -- 1
-purify$ -- 1385
+purify$ -- 2706
 quote$ -- 0
-skip$ -- 2015
+skip$ -- 3730
 stack$ -- 0
-substring$ -- 5102
-swap$ -- 440
-text.length$ -- 37
+substring$ -- 9694
+swap$ -- 819
+text.length$ -- 67
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 962
-warning$ -- 20
-while$ -- 565
+type$ -- 1798
+warning$ -- 22
+while$ -- 1076
 width$ -- 0
-write$ -- 2108
-(There were 32 warnings)
+write$ -- 3946
+(There were 60 warnings)

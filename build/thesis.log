@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.28)  4 APR 2023 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.28)  15 MAY 2023 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,7 +348,18 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count290
 \@vwid@loff=\dimen279
 \@vwid@roff=\dimen280
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks33
+\footnotemargin=\dimen281
+\c@pp@next@reset=\count291
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip63
 
@@ -357,49 +368,49 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks33
-\ex@=\dimen281
+\@emptytoks=\toks34
+\ex@=\dimen282
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen282
+\pmbraise@=\dimen283
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count291
+\inf@bad=\count292
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count292
-\leftroot@=\count293
+\uproot@=\count293
+\leftroot@=\count294
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count294
-\DOTSCASE@=\count295
+\classnum@=\count295
+\DOTSCASE@=\count296
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box64
 \strutbox@=\box65
-\big@size=\dimen283
+\big@size=\dimen284
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count296
-\c@MaxMatrixCols=\count297
+\macc@depth=\count297
+\c@MaxMatrixCols=\count298
 \dotsspace@=\muskip16
-\c@parentequation=\count298
-\dspbrk@lvl=\count299
-\tag@help=\toks34
-\row@=\count300
-\column@=\count301
-\maxfields@=\count302
-\andhelp@=\toks35
-\eqnshift@=\dimen284
-\alignsep@=\dimen285
-\tagshift@=\dimen286
-\tagwidth@=\dimen287
-\totwidth@=\dimen288
-\lineht@=\dimen289
-\@envbody=\toks36
+\c@parentequation=\count299
+\dspbrk@lvl=\count300
+\tag@help=\toks35
+\row@=\count301
+\column@=\count302
+\maxfields@=\count303
+\andhelp@=\toks36
+\eqnshift@=\dimen285
+\alignsep@=\dimen286
+\tagshift@=\dimen287
+\tagwidth@=\dimen288
+\totwidth@=\dimen289
+\lineht@=\dimen290
+\@envbody=\toks37
 \multlinegap=\skip64
 \multlinetaggap=\skip65
-\mathdisplay@stack=\toks37
+\mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -416,15 +427,15 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
  (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count303
-\c@ALC@line=\count304
-\c@ALC@rem=\count305
-\c@ALC@depth=\count306
+\c@ALC@unique=\count304
+\c@ALC@line=\count305
+\c@ALC@rem=\count306
+\c@ALC@depth=\count307
 \ALC@tlm=\skip66
 \algorithmicindent=\skip67
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count307
+\c@AlgoLine=\count308
 \algocf@hangindent=\skip68
  (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -439,12 +450,12 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip74
 \algomargin=\skip75
 \skipalgocfslide=\skip76
-\algowidth=\dimen290
-\inoutsize=\dimen291
-\inoutindent=\dimen292
-\interspacetitleruled=\dimen293
-\interspacealgoruled=\dimen294
-\interspacetitleboxruled=\dimen295
+\algowidth=\dimen291
+\inoutsize=\dimen292
+\inoutindent=\dimen293
+\interspacetitleruled=\dimen294
+\interspacealgoruled=\dimen295
+\interspacetitleboxruled=\dimen296
 \algocf@ruledwidth=\skip77
 \algocf@inoutbox=\box66
 \algocf@inputbox=\box67
@@ -461,56 +472,56 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip84
 \algotitleheightruledefault=\skip85
 \algotitleheightrule=\skip86
-\c@algocfline=\count308
-\c@algocfproc=\count309
-\c@algocf=\count310
+\c@algocfline=\count309
+\c@algocfproc=\count310
+\c@algocf=\count311
 \algocf@algoframe=\box72
 \algocf@algobox=\box73
 ) (/usr/share/texlive/texmf-dist/tex/latex/accents/accents.sty
 Package: accents 2006/05/12 v1.4 Math Accent Tools
-\cc@skew=\dimen296
-\cc@wd=\dimen297
-\cc@code=\count311
-\cc@group=\count312
-\cc@skewchar=\count313
+\cc@skew=\dimen297
+\cc@wd=\dimen298
+\cc@code=\count312
+\cc@group=\count313
+\cc@skewchar=\count314
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks38
-\thm@bodyfont=\toks39
-\thm@headfont=\toks40
-\thm@notefont=\toks41
-\thm@headpunct=\toks42
+\thm@style=\toks39
+\thm@bodyfont=\toks40
+\thm@headfont=\toks41
+\thm@notefont=\toks42
+\thm@headpunct=\toks43
 \thm@preskip=\skip87
 \thm@postskip=\skip88
 \thm@headsep=\skip89
-\dth@everypar=\toks43
+\dth@everypar=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count314
-\c@@ppsavesec=\count315
-\c@@ppsaveapp=\count316
+\c@@pps=\count315
+\c@@ppsavesec=\count316
+\c@@ppsaveapp=\count317
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks44
+\AP@output=\toks45
 \AP@partial=\box74
 \AP@footins=\box75
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen298
+\col@sep=\dimen299
 \ar@mcellbox=\box76
-\extrarowheight=\dimen299
-\NC@list=\toks45
+\extrarowheight=\dimen300
+\NC@list=\toks46
 \extratabsurround=\skip90
 \backup@length=\skip91
 \ar@cellbox=\box77
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count317
-\U@D=\dimen300
+\babel@savecnt=\count318
+\U@D=\dimen301
 \l@unhyphenated=\language87
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count318
+\bbl@dirlevel=\count319
  (/usr/share/texlive/texmf-dist/tex/generic/babel-dutch/dutch.ldf
 Language: dutch 2021/08/29 v3.8l Dutch support from the babel system
 Package babel Info: Making " an active character on input line 127.
@@ -524,32 +535,32 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language11). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen301
-\lightrulewidth=\dimen302
-\cmidrulewidth=\dimen303
-\belowrulesep=\dimen304
-\belowbottomsep=\dimen305
-\aboverulesep=\dimen306
-\abovetopsep=\dimen307
-\cmidrulesep=\dimen308
-\cmidrulekern=\dimen309
-\defaultaddspace=\dimen310
-\@cmidla=\count319
-\@cmidlb=\count320
-\@aboverulesep=\dimen311
-\@belowrulesep=\dimen312
-\@thisruleclass=\count321
-\@lastruleclass=\count322
-\@thisrulewidth=\dimen313
+\heavyrulewidth=\dimen302
+\lightrulewidth=\dimen303
+\cmidrulewidth=\dimen304
+\belowrulesep=\dimen305
+\belowbottomsep=\dimen306
+\aboverulesep=\dimen307
+\abovetopsep=\dimen308
+\cmidrulesep=\dimen309
+\cmidrulekern=\dimen310
+\defaultaddspace=\dimen311
+\@cmidla=\count320
+\@cmidlb=\count321
+\@aboverulesep=\dimen312
+\@belowrulesep=\dimen313
+\@thisruleclass=\count322
+\@lastruleclass=\count323
+\@thisrulewidth=\dimen314
 ) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count323
-\csq@gtype=\count324
-\csq@glevel=\count325
-\csq@qlevel=\count326
-\csq@maxlvl=\count327
-\csq@tshold=\count328
-\csq@ltx@everypar=\toks46
+\csq@reset=\count324
+\csq@gtype=\count325
+\csq@glevel=\count326
+\csq@qlevel=\count327
+\csq@maxlvl=\count328
+\csq@tshold=\count329
+\csq@ltx@everypar=\toks47
  (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
@@ -562,15 +573,15 @@ Package csquotes Info: Enabling multilingual quotes.
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip92
-\enit@outerparindent=\dimen314
-\enit@toks=\toks47
+\enit@outerparindent=\dimen315
+\enit@toks=\toks48
 \enit@inbox=\box78
-\enit@count@id=\count329
-\enitdp@description=\count330
+\enit@count@id=\count330
+\enitdp@description=\count331
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen315
-\epsfysize=\dimen316
+\epsfxsize=\dimen316
+\epsfysize=\dimen317
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -598,51 +609,55 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen318
+\ESO@tempdimb=\dimen319
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count331
-\float@exts=\toks48
+\c@float@type=\count332
+\float@exts=\toks49
 \float@box=\box79
-\@float@everytoks=\toks49
+\@float@everytoks=\toks50
 \@floatcapt=\box80
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count332
+\c@r@tfl@t=\count333
 \rotFPtop=\skip93
 \rotFPbot=\skip94
 \rot@float@box=\box81
-\rot@mess@toks=\toks50
+\rot@mess@toks=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-01-21 L3 programming layer (loader) 
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count333
+\l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box82
 ))
 Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count334
-\l__lipsum_a_int=\count335
-\l__lipsum_b_int=\count336
+\g__lipsum_par_int=\count335
+\l__lipsum_a_int=\count336
+\l__lipsum_b_int=\count337
  (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip95
 \LTright=\skip96
 \LTpre=\skip97
 \LTpost=\skip98
-\LTchunksize=\count337
-\LTcapwidth=\dimen317
+\LTchunksize=\count338
+\LTcapwidth=\dimen320
 \LT@head=\box83
 \LT@firsthead=\box84
 \LT@foot=\box85
 \LT@lastfoot=\box86
 \LT@gbox=\box87
-\LT@cols=\count338
-\LT@rows=\count339
-\c@LT@tables=\count340
-\c@LT@chunks=\count341
-\LT@p@ftn=\toks51
+\LT@cols=\count339
+\LT@rows=\count340
+\c@LT@tables=\count341
+\c@LT@chunks=\count342
+\LT@p@ftn=\toks52
 ) (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -679,23 +694,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count342
+\c@tracingmulticols=\count343
 \mult@box=\box88
-\multicol@leftmargin=\dimen318
-\c@unbalance=\count343
-\c@collectmore=\count344
-\doublecol@number=\count345
-\multicoltolerance=\count346
-\multicolpretolerance=\count347
-\full@width=\dimen319
-\page@free=\dimen320
-\premulticols=\dimen321
-\postmulticols=\dimen322
+\multicol@leftmargin=\dimen321
+\c@unbalance=\count344
+\c@collectmore=\count345
+\doublecol@number=\count346
+\multicoltolerance=\count347
+\multicolpretolerance=\count348
+\full@width=\dimen322
+\page@free=\dimen323
+\premulticols=\dimen324
+\postmulticols=\dimen325
 \multicolsep=\skip99
 \multicolbaselineskip=\skip100
 \partial@page=\box89
 \last@line=\box90
-\maxbalancingoverflow=\dimen323
+\maxbalancingoverflow=\dimen326
 \mult@rightbox=\box91
 \mult@grightbox=\box92
 \mult@firstbox=\box93
@@ -736,93 +751,89 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box128
 \@tempa=\box129
 \@tempa=\box130
-\c@minrows=\count348
-\c@columnbadness=\count349
-\c@finalcolumnbadness=\count350
-\last@try=\dimen324
-\multicolovershoot=\dimen325
-\multicolundershoot=\dimen326
+\c@minrows=\count349
+\c@columnbadness=\count350
+\c@finalcolumnbadness=\count351
+\last@try=\dimen327
+\multicolovershoot=\dimen328
+\multicolundershoot=\dimen329
 \mult@nat@firstbox=\box131
 \colbreak@box=\box132
-\mc@col@check@num=\count351
+\mc@col@check@num=\count352
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip101
-\multirow@cntb=\count352
+\multirow@cntb=\count353
 \multirow@dima=\skip102
-\bigstrutjot=\dimen327
+\bigstrutjot=\dimen330
 ) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip103
 \bibsep=\skip104
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count353
+\c@NAT@ctr=\count354
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count354
-\calc@Bcount=\count355
-\calc@Adimen=\dimen328
-\calc@Bdimen=\dimen329
+\calc@Acount=\count355
+\calc@Bcount=\count356
+\calc@Adimen=\dimen331
+\calc@Bdimen=\dimen332
 \calc@Askip=\skip105
 \calc@Bskip=\skip106
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count356
+\calc@Ccount=\count357
 \calc@Cskip=\skip107
-) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen330
-\ESO@tempdimb=\dimen331
 )
-\AM@pagewidth=\dimen332
-\AM@pageheight=\dimen333
-\AM@fboxrule=\dimen334
+\AM@pagewidth=\dimen333
+\AM@pageheight=\dimen334
+\AM@fboxrule=\dimen335
  (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count357
+\pdfpages@includegraphics@status=\count358
 \AM@pagebox=\box133
-\AM@global@opts=\toks52
-\AM@pagecnt=\count358
-\AM@toc@title=\toks53
-\c@AM@survey=\count359
+\AM@global@opts=\toks53
+\AM@pagecnt=\count359
+\AM@toc@title=\toks54
+\c@AM@survey=\count360
 \AM@templatesizebox=\box134
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count360
+\c@KVtest=\count361
 \sf@farskip=\skip108
-\sf@captopadj=\dimen335
+\sf@captopadj=\dimen336
 \sf@capskip=\skip109
 \sf@nearskip=\skip110
-\c@subfigure=\count361
-\c@subfigure@save=\count362
-\c@lofdepth=\count363
-\c@subtable=\count364
-\c@subtable@save=\count365
-\c@lotdepth=\count366
+\c@subfigure=\count362
+\c@subfigure@save=\count363
+\c@lofdepth=\count364
+\c@subtable=\count365
+\c@subtable@save=\count366
+\c@lotdepth=\count367
 \sf@top=\skip111
 \sf@bottom=\skip112
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count367
+\lst@mode=\count368
 \lst@gtempboxa=\box135
-\lst@token=\toks54
-\lst@length=\count368
-\lst@currlwidth=\dimen336
-\lst@column=\count369
-\lst@pos=\count370
-\lst@lostspace=\dimen337
-\lst@width=\dimen338
-\lst@newlines=\count371
-\lst@lineno=\count372
-\lst@maxwidth=\dimen339
+\lst@token=\toks55
+\lst@length=\count369
+\lst@currlwidth=\dimen337
+\lst@column=\count370
+\lst@pos=\count371
+\lst@lostspace=\dimen338
+\lst@width=\dimen339
+\lst@newlines=\count372
+\lst@lineno=\count373
+\lst@maxwidth=\dimen340
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count373
-\lst@skipnumbers=\count374
+\c@lstnumber=\count374
+\lst@skipnumbers=\count375
 \lst@framebox=\box136
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -839,17 +850,17 @@ Package: mathtools 2021/02/02 v1.28 mathematical typesetting tools
  (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count375
-\l_MT_multwidth_dim=\dimen340
+\g_MT_multlinerow_int=\count376
+\l_MT_multwidth_dim=\dimen341
 \origjot=\skip113
-\l_MT_shortvdotswithinadjustabove_dim=\dimen341
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen342
-\l_MT_above_intertext_sep=\dimen343
-\l_MT_below_intertext_sep=\dimen344
-\l_MT_above_shortintertext_sep=\dimen345
-\l_MT_below_shortintertext_sep=\dimen346
+\l_MT_shortvdotswithinadjustabove_dim=\dimen342
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen343
+\l_MT_above_intertext_sep=\dimen344
+\l_MT_below_intertext_sep=\dimen345
+\l_MT_above_shortintertext_sep=\dimen346
+\l_MT_below_shortintertext_sep=\dimen347
 \xmathstrut@box=\box137
-\xmathstrut@dim=\dimen347
+\xmathstrut@dim=\dimen348
 ) (/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
  (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
@@ -860,39 +871,39 @@ Package: xparse 2022-01-12 L3 Experimental document command parser
 \widthInit=\skip114
 ) (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2022-02-02 v3.0.46 A comprehensive (SI) units package
-\l__siunitx_angle_tmp_dim=\dimen348
+\l__siunitx_angle_tmp_dim=\dimen349
 \l__siunitx_angle_marker_box=\box138
 \l__siunitx_angle_unit_box=\box139
-\l__siunitx_compound_count_int=\count376
+\l__siunitx_compound_count_int=\count377
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/01/04 v1.11 internationalization of LaTeX2e packages (CN)
 )
-\l__siunitx_number_exponent_fixed_int=\count377
-\l__siunitx_number_min_decimal_int=\count378
-\l__siunitx_number_min_integer_int=\count379
-\l__siunitx_number_round_precision_int=\count380
-\l__siunitx_number_group_minimum_int=\count381
+\l__siunitx_number_exponent_fixed_int=\count378
+\l__siunitx_number_min_decimal_int=\count379
+\l__siunitx_number_min_integer_int=\count380
+\l__siunitx_number_round_precision_int=\count381
+\l__siunitx_number_group_minimum_int=\count382
 \l__siunitx_table_tmp_box=\box140
-\l__siunitx_table_tmp_dim=\dimen349
-\l__siunitx_table_column_width_dim=\dimen350
+\l__siunitx_table_tmp_dim=\dimen350
+\l__siunitx_table_column_width_dim=\dimen351
 \l__siunitx_table_integer_box=\box141
 \l__siunitx_table_decimal_box=\box142
 \l__siunitx_table_before_box=\box143
 \l__siunitx_table_after_box=\box144
-\l__siunitx_table_before_dim=\dimen351
-\l__siunitx_table_carry_dim=\dimen352
-\l__siunitx_unit_tmp_int=\count382
-\l__siunitx_unit_position_int=\count383
-\l__siunitx_unit_total_int=\count384
+\l__siunitx_table_before_dim=\dimen352
+\l__siunitx_table_carry_dim=\dimen353
+\l__siunitx_unit_tmp_int=\count383
+\l__siunitx_unit_position_int=\count384
+\l__siunitx_unit_total_int=\count385
 ) (/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
 Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient ways
  (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count385
-\loi_nestcnt=\count386
+\loi_cnt_foreach_nest=\count386
+\loi_nestcnt=\count387
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
 )
-\c@@stackindex=\count387
+\c@@stackindex=\count388
 \@boxshift=\skip115
 \stack@tmplength=\skip116
 \temp@stkl=\skip117
@@ -903,22 +914,22 @@ Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified s
 \se@backgroundbox=\box148
 \stackedbox=\box149
 \@centerbox=\box150
-\c@ROWcellindex@=\count388
+\c@ROWcellindex@=\count389
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
  (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks55
-\verbatim@line=\toks56
+\every@verbatim=\toks56
+\verbatim@line=\toks57
 \verbatim@in@stream=\read4
 )
 \tcb@titlebox=\box151
 \tcb@upperbox=\box152
 \tcb@lowerbox=\box153
 \tcb@phantombox=\box154
-\c@tcbbreakpart=\count389
-\c@tcblayer=\count390
-\c@tcolorbox@number=\count391
+\c@tcbbreakpart=\count390
+\c@tcblayer=\count391
+\c@tcolorbox@number=\count392
 \tcb@temp=\box155
 \tcb@temp=\box156
 \tcb@temp=\box157
@@ -934,13 +945,13 @@ LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2020/08/01 v0.72
-\thmt@toks=\toks57
-\c@thmt@dummyctr=\count392
+\thmt@toks=\toks58
+\c@thmt@dummyctr=\count393
  (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2020/08/01 v0.72
  (/usr/share/texlive/texmf-dist/tex/latex/thmtools/parseargs.sty
 Package: parseargs 2020/08/01 v0.72
-\@parsespec=\toks58
+\@parsespec=\toks59
 )) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-kv.sty
 Package: thm-kv 2020/08/01 v0.72
 Package thm-kv Info: Theorem names will be uppercased on input line 42.
@@ -955,14 +966,14 @@ Package: thm-listof 2020/08/01 v0.72
 Package: thm-restate 2020/08/01 v0.72
 ) (/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 Package: thm-amsthm 2020/08/01 v0.72
-\thmt@style@headstyle=\toks59
+\thmt@style@headstyle=\toks60
 )) (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
 Package: todonotes 2021/06/04
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-\c@@todonotes@numberoftodonotes=\count393
+\c@@todonotes@numberoftodonotes=\count394
 ) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -970,108 +981,108 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen353
-\TX@old@table=\dimen354
-\TX@old@col=\dimen355
-\TX@target=\dimen356
-\TX@delta=\dimen357
-\TX@cols=\count394
-\TX@ftn=\toks60
+\TX@col@width=\dimen354
+\TX@old@table=\dimen355
+\TX@old@col=\dimen356
+\TX@target=\dimen357
+\TX@delta=\dimen358
+\TX@cols=\count395
+\TX@ftn=\toks61
 ) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks61
+\everycr=\toks62
 \minrowclearance=\skip119
 ) (/usr/share/texlive/texmf-dist/tex/latex/tabularray/tabularray.sty
 Package: tabularray 2021-12-01 v2021Q Typeset tabulars and arrays with LaTeX3
-\l__tblr_a_int=\count395
-\l__tblr_c_int=\count396
-\l__tblr_r_int=\count397
-\l__tblr_d_dim=\dimen358
-\l__tblr_h_dim=\dimen359
-\l__tblr_o_dim=\dimen360
-\l__tblr_p_dim=\dimen361
-\l__tblr_q_dim=\dimen362
-\l__tblr_r_dim=\dimen363
-\l__tblr_s_dim=\dimen364
-\l__tblr_t_dim=\dimen365
-\l__tblr_v_dim=\dimen366
-\l__tblr_w_dim=\dimen367
+\l__tblr_a_int=\count396
+\l__tblr_c_int=\count397
+\l__tblr_r_int=\count398
+\l__tblr_d_dim=\dimen359
+\l__tblr_h_dim=\dimen360
+\l__tblr_o_dim=\dimen361
+\l__tblr_p_dim=\dimen362
+\l__tblr_q_dim=\dimen363
+\l__tblr_r_dim=\dimen364
+\l__tblr_s_dim=\dimen365
+\l__tblr_t_dim=\dimen366
+\l__tblr_v_dim=\dimen367
+\l__tblr_w_dim=\dimen368
 \l__tblr_a_box=\box159
 \l__tblr_b_box=\box160
 \l__tblr_c_box=\box161
 \l__tblr_d_box=\box162
-\g__tblr_table_count_int=\count398
-\c@rownum=\count399
-\c@colnum=\count400
-\c@rowcount=\count401
-\c@colcount=\count402
-\abovesep=\dimen368
-\belowsep=\dimen369
-\leftsep=\dimen370
-\rightsep=\dimen371
-\g_tblr_level_int=\count403
-\g__tblr_data_row_key_count_int=\count404
-\g__tblr_data_column_key_count_int=\count405
-\g__tblr_data_cell_key_count_int=\count406
-\g__tblr_array_int=\count407
-\l__tblr_key_count_int=\count408
-\l__tblr_key_quotient_int=\count409
-\l__tblr_key_quotient_two_int=\count410
-\l__tblr_key_remainder_int=\count411
-\g__tblr_data_str_value_count_int=\count412
-\rulewidth=\dimen372
-\l__multicolumn_cell_number_int=\count413
+\g__tblr_table_count_int=\count399
+\c@rownum=\count400
+\c@colnum=\count401
+\c@rowcount=\count402
+\c@colcount=\count403
+\abovesep=\dimen369
+\belowsep=\dimen370
+\leftsep=\dimen371
+\rightsep=\dimen372
+\g_tblr_level_int=\count404
+\g__tblr_data_row_key_count_int=\count405
+\g__tblr_data_column_key_count_int=\count406
+\g__tblr_data_cell_key_count_int=\count407
+\g__tblr_array_int=\count408
+\l__tblr_key_count_int=\count409
+\l__tblr_key_quotient_int=\count410
+\l__tblr_key_quotient_two_int=\count411
+\l__tblr_key_remainder_int=\count412
+\g__tblr_data_str_value_count_int=\count413
+\rulewidth=\dimen373
+\l__multicolumn_cell_number_int=\count414
 \l__tblr_strut_ht_box=\box163
 \l__tblr_strut_dp_box=\box164
-\g__tblr_cell_wd_dim=\dimen373
-\g__tblr_cell_ht_dim=\dimen374
-\g__tblr_cell_head_dim=\dimen375
-\g__tblr_cell_foot_dim=\dimen376
-\l__column_target_dim=\dimen377
+\g__tblr_cell_wd_dim=\dimen374
+\g__tblr_cell_ht_dim=\dimen375
+\g__tblr_cell_head_dim=\dimen376
+\g__tblr_cell_foot_dim=\dimen377
+\l__column_target_dim=\dimen378
 \l__tblr_caption_box=\box165
 \l__tblr_caption_left_box=\box166
 \l__tblr_row_head_box=\box167
 \l__tblr_row_foot_box=\box168
-\l__tblr_row_head_foot_dim=\dimen378
-\tablewidth=\dimen379
+\l__tblr_row_head_foot_dim=\dimen379
+\tablewidth=\dimen380
 \l__tblr_table_firsthead_box=\box169
 \l__tblr_table_middlehead_box=\box170
 \l__tblr_table_lasthead_box=\box171
 \l__tblr_table_firstfoot_box=\box172
 \l__tblr_table_middlefoot_box=\box173
 \l__tblr_table_lastfoot_box=\box174
-\l__tblr_remain_height_dim=\dimen380
-\l__tblr_long_from_int=\count414
-\l__tblr_long_to_int=\count415
-\l__tblr_curr_i_int=\count416
-\l__tblr_prev_i_int=\count417
-\l__tblr_table_page_int=\count418
+\l__tblr_remain_height_dim=\dimen381
+\l__tblr_long_from_int=\count415
+\l__tblr_long_to_int=\count416
+\l__tblr_curr_i_int=\count417
+\l__tblr_prev_i_int=\count418
+\l__tblr_table_page_int=\count419
 \l__tblr_table_head_box=\box175
 \l__tblr_table_foot_box=\box176
-\l__tblr_table_head_foot_dim=\dimen381
-\l__tblr_table_head_body_foot_dim=\dimen382
+\l__tblr_table_head_foot_dim=\dimen382
+\l__tblr_table_head_body_foot_dim=\dimen383
 \l__tblr_table_box=\box177
 \l__tblr_table_hlines_box=\box178
 \l__tblr_hline_box=\box179
 \l__tblr_row_box=\box180
-\l__tblr_col_o_wd_dim=\dimen383
-\l__tblr_col_b_wd_dim=\dimen384
-\l__tblr_hline_leftskip_dim=\dimen385
-\l__tblr_hline_rightskip_dim=\dimen386
-\l__tblr_row_ht_dim=\dimen387
-\l__tblr_row_dp_dim=\dimen388
-\l__tblr_row_abovesep_dim=\dimen389
-\l__tblr_row_belowsep_dim=\dimen390
+\l__tblr_col_o_wd_dim=\dimen384
+\l__tblr_col_b_wd_dim=\dimen385
+\l__tblr_hline_leftskip_dim=\dimen386
+\l__tblr_hline_rightskip_dim=\dimen387
+\l__tblr_row_ht_dim=\dimen388
+\l__tblr_row_dp_dim=\dimen389
+\l__tblr_row_abovesep_dim=\dimen390
+\l__tblr_row_belowsep_dim=\dimen391
 \l__tblr_row_vlines_box=\box181
 \l__tblr_vline_box=\box182
 \l__tblr_cell_box=\box183
-\l__row_upper_dim=\dimen391
-\l__row_lower_dim=\dimen392
-\l__row_vpace_dim=\dimen393
-\l__tblr_vline_aboveskip_dim=\dimen394
-\l__tblr_vline_belowskip_dim=\dimen395
-\l__tblr_cell_wd_dim=\dimen396
-\l__tblr_cell_ht_dim=\dimen397
+\l__row_upper_dim=\dimen392
+\l__row_lower_dim=\dimen393
+\l__row_vpace_dim=\dimen394
+\l__tblr_vline_aboveskip_dim=\dimen395
+\l__tblr_vline_belowskip_dim=\dimen396
+\l__tblr_cell_wd_dim=\dimen397
+\l__tblr_cell_ht_dim=\dimen398
 \l__tblr_diag_box=\box184
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
@@ -1084,9 +1095,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen398
-\Hy@linkcounter=\count419
-\Hy@pagecounter=\count420
+\@linkdim=\dimen399
+\Hy@linkcounter=\count420
+\Hy@pagecounter=\count421
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -1098,7 +1109,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count421
+\Hy@SavedSpaceFactor=\count422
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -1115,17 +1126,17 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count422
+\c@Hy@tempcnt=\count423
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen399
+\XeTeXLinkMargin=\dimen400
  (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count423
-\Field@Width=\dimen400
-\Fld@charsize=\dimen401
+\Fld@menulength=\count424
+\Field@Width=\dimen401
+\Fld@charsize=\dimen402
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -1139,9 +1150,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count424
-\c@Item=\count425
-\c@Hfootnote=\count426
+\Hy@abspage=\count425
+\c@Item=\count426
+\c@Hfootnote=\count427
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -1150,8 +1161,8 @@ File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count427
-\c@bookmark@seq@number=\count428
+\Fld@listcount=\count428
+\c@bookmark@seq@number=\count429
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -1164,28 +1175,55 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count429
-))) (./src/colors.tex) (./src/theme.tex
+\BKM@id=\count430
+)) (/usr/share/texlive/texmf-dist/tex/latex/qrcode/qrcode.sty
+Package: qrcode 2015/01/08 v1.51 QR code generation
+\c@qr@i=\count431
+\c@qr@j=\count432
+\qr@a=\count433
+\qr@b=\count434
+\qr@c=\count435
+\qr@for@depth=\count436
+\qr@for@maxdepth=\count437
+\qr@for@start=\count438
+\qr@for@end=\count439
+\qr@for@step=\count440
+\qr@newforcount=\count441
+\qr@newforcount=\count442
+\qr@desiredheight=\skip121
+\qr@modulesize=\skip122
+\qr@minipagewidth=\skip123
+\c@maski=\count443
+\c@maskj=\count444
+\c@totalones=\count445
+\c@penaltyi=\count446
+\c@penaltyii=\count447
+\c@penaltyiii=\count448
+\c@penaltyiv=\count449
+\c@qr@hexchars=\count450
+\qr@newforcount=\count451
+\c@qr@divisionsremaining=\count452
+)) (./src/colors.tex) (./src/theme.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 39.
 Package hyperref Info: Option `colorlinks' set `true' on input line 39.
 ) (./src/commands.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen402
+\arrowsize=\dimen403
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen403
-\pgfdecoratedremainingdistance=\dimen404
-\pgfdecoratedinputsegmentcompleteddistance=\dimen405
-\pgfdecoratedinputsegmentremainingdistance=\dimen406
-\pgf@decorate@distancetomove=\dimen407
-\pgf@decorate@repeatstate=\count430
-\pgfdecorationsegmentamplitude=\dimen408
-\pgfdecorationsegmentlength=\dimen409
+\pgfdecoratedcompleteddistance=\dimen404
+\pgfdecoratedremainingdistance=\dimen405
+\pgfdecoratedinputsegmentcompleteddistance=\dimen406
+\pgfdecoratedinputsegmentremainingdistance=\dimen407
+\pgf@decorate@distancetomove=\dimen408
+\pgf@decorate@repeatstate=\count453
+\pgfdecorationsegmentamplitude=\dimen409
+\pgfdecorationsegmentlength=\dimen410
 )
 \tikz@lib@dec@box=\box185
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadings.code.tex
@@ -1235,67 +1273,67 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodepartsixbox=\box260
 \pgfnodepartfivebox=\box261
 )))
-\c@TermNum=\count431
-\c@ContNum=\count432
-\c@numfootnote=\count433
+\c@TermNum=\count454
+\c@ContNum=\count455
+\c@numfootnote=\count456
 ) (./src/mathematics.tex) (./src/vectors.tex) (./src/lemma.tex
-\c@rmk=\count434
-\c@dfn=\count435
-\c@thm=\count436
-\c@lem=\count437
-\c@asm=\count438
-\c@prop=\count439
-\c@example=\count440
-\c@cor=\count441
+\c@rmk=\count457
+\c@dfn=\count458
+\c@thm=\count459
+\c@lem=\count460
+\c@asm=\count461
+\c@prop=\count462
+\c@example=\count463
+\c@cor=\count464
 )
-\c@intermez=\count442
+\c@intermez=\count465
  (./src/review.tex (/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks62
-\SOUL@lasttoken=\toks63
-\SOUL@cmds=\toks64
-\SOUL@buffer=\toks65
-\SOUL@token=\toks66
-\SOUL@spaceskip=\skip121
-\SOUL@ttwidth=\dimen410
-\SOUL@uldp=\dimen411
-\SOUL@ulht=\dimen412
+\SOUL@word=\toks63
+\SOUL@lasttoken=\toks64
+\SOUL@cmds=\toks65
+\SOUL@buffer=\toks66
+\SOUL@token=\toks67
+\SOUL@spaceskip=\skip124
+\SOUL@ttwidth=\dimen411
+\SOUL@uldp=\dimen412
+\SOUL@ulht=\dimen413
 )) (./src/tikz.tex (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
- (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks67
-\t@pgfplots@tokb=\toks68
-\t@pgfplots@tokc=\toks69
-\pgfplots@tmpa=\dimen413
-\c@pgfplots@coordindex=\count443
-\c@pgfplots@scanlineindex=\count444
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count445
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks68
+\t@pgfplots@tokb=\toks69
+\t@pgfplots@tokc=\toks70
+\pgfplots@tmpa=\dimen414
+\c@pgfplots@coordindex=\count466
+\c@pgfplots@scanlineindex=\count467
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count468
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count446
-\t@pgfplotstable@a=\toks70
+\c@pgfplotstable@counta=\count469
+\t@pgfplotstable@a=\toks71
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count447
+\c@pgfplotslibrarysurf@no=\count470
  (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count448
-\pgfplots@xmin@reg=\dimen414
-\pgfplots@xmax@reg=\dimen415
-\pgfplots@ymin@reg=\dimen416
-\pgfplots@ymax@reg=\dimen417
-\pgfplots@zmin@reg=\dimen418
-\pgfplots@zmax@reg=\dimen419
+\pgfplots@numplots=\count471
+\pgfplots@xmin@reg=\dimen415
+\pgfplots@xmax@reg=\dimen416
+\pgfplots@ymin@reg=\dimen417
+\pgfplots@ymax@reg=\dimen418
+\pgfplots@zmin@reg=\dimen419
+\pgfplots@zmax@reg=\dimen420
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-\figureheight=\skip122
-\figurewidth=\skip123
+\figureheight=\skip125
+\figurewidth=\skip126
  (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks71
-\inpenc@posthook=\toks72
+\inpenc@prehook=\toks72
+\inpenc@posthook=\toks73
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
 Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
@@ -1305,52 +1343,52 @@ File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfcalendar.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.tex
 File: pgfcalendar.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-\pgfcalendarcurrentjulian=\count449
-\pgf@cal@easter@Y=\count450
-\pgf@cal@easter@G=\count451
-\pgf@cal@easter@C=\count452
-\pgf@cal@easter@X=\count453
-\pgf@cal@easter@Z=\count454
-\pgf@cal@easter@D=\count455
-\pgf@cal@easter@E=\count456
-\pgf@cal@easter@N=\count457
-\pgf@cal@easter@M=\count458
-\pgf@cal@easter@julianday=\count459
+\pgfcalendarcurrentjulian=\count472
+\pgf@cal@easter@Y=\count473
+\pgf@cal@easter@G=\count474
+\pgf@cal@easter@C=\count475
+\pgf@cal@easter@X=\count476
+\pgf@cal@easter@Z=\count477
+\pgf@cal@easter@D=\count478
+\pgf@cal@easter@E=\count479
+\pgf@cal@easter@N=\count480
+\pgf@cal@easter@M=\count481
+\pgf@cal@easter@julianday=\count482
 ))
-\gtt@currentline=\count460
-\gtt@lasttitleline=\count461
-\gtt@currgrid=\count462
-\gtt@chartwidth=\count463
-\gtt@lasttitleslot=\count464
-\gtt@elementid=\count465
-\gtt@today@slot=\count466
-\gtt@startjulian=\count467
-\gtt@endjulian=\count468
-\gtt@chartid=\count469
-\gtt@vrule@slot=\count470
-\gtt@calendar@slots=\count471
-\gtt@calendar@weeknumber=\count472
-\gtt@calendar@startofweek=\count473
-\gtt@left@slot=\count474
-\gtt@right@slot=\count475
+\gtt@currentline=\count483
+\gtt@lasttitleline=\count484
+\gtt@currgrid=\count485
+\gtt@chartwidth=\count486
+\gtt@lasttitleslot=\count487
+\gtt@elementid=\count488
+\gtt@today@slot=\count489
+\gtt@startjulian=\count490
+\gtt@endjulian=\count491
+\gtt@chartid=\count492
+\gtt@vrule@slot=\count493
+\gtt@calendar@slots=\count494
+\gtt@calendar@weeknumber=\count495
+\gtt@calendar@startofweek=\count496
+\gtt@left@slot=\count497
+\gtt@right@slot=\count498
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen420
-\pgfarrowlength=\dimen421
-\pgfarrowwidth=\dimen422
-\pgfarrowlinewidth=\dimen423
+\pgfarrowinset=\dimen421
+\pgfarrowlength=\dimen422
+\pgfarrowwidth=\dimen423
+\pgfarrowlinewidth=\dimen424
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.patchplots.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.colormaps.code.tex) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))) (./src/colormaps.tex) (./src/specialsymbols.tex) (./src/listing.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-))
+)) (./src/footnotes.tex)
 
-Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 60.
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 61.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 60.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 61.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1358,40 +1396,56 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Warning: Unused global option(s):
     [30pt].
 
-(build/thesis.aux (build/0_preface/preface.aux) (build/3_7_conclusion/conclusion.aux) (build/6_acknowledgement/acknowledgement.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
+(build/thesis.aux (build/0_preface/preface.aux) <Reading QR code for "https://bit.ly/3zIvbHt" at level 2-M from aux file.>
+
+LaTeX Warning: Label `fig:topo_result_bellow_fem' multiply defined.
+
+
+LaTeX Warning: Label `sec: chap2 section header' multiply defined.
+
+
+LaTeX Warning: Label `sec: chap2 section header' multiply defined.
+
+
+LaTeX Warning: Label `sec: chap2 section header' multiply defined.
+
+
+LaTeX Warning: Label `fig:C5:pneunet_estimate_experiment' multiply defined.
+
+(build/3_7_conclusion/conclusion.aux) (build/6_acknowledgement/acknowledgement.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count476
-\scratchdimen=\dimen424
+\scratchcounter=\count499
+\scratchdimen=\dimen425
 \scratchbox=\box264
-\nofMPsegments=\count477
-\nofMParguments=\count478
-\everyMPshowfont=\toks73
-\MPscratchCnt=\count479
-\MPscratchDim=\dimen425
-\MPnumerator=\count480
-\makeMPintoPDFobject=\count481
-\everyMPtoPDFconversion=\toks74
+\nofMPsegments=\count500
+\nofMParguments=\count501
+\everyMPshowfont=\toks74
+\MPscratchCnt=\count502
+\MPscratchDim=\dimen426
+\MPnumerator=\count503
+\makeMPintoPDFobject=\count504
+\everyMPtoPDFconversion=\toks75
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1402,11 +1456,11 @@ LaTeX Font Info:    ... okay on input line 60.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
 * h-part:(L,W,R)=(64.01869pt, 355.65945pt, 64.01869pt)
-* v-part:(T,H,B)=(76.82243pt, 549.1382pt, 56.9055pt)
+* v-part:(T,H,B)=(76.82243pt, 560.5193pt, 45.5244pt)
 * \paperwidth=483.69684pt
 * \paperheight=682.86613pt
 * \textwidth=355.65945pt
-* \textheight=549.1382pt
+* \textheight=560.5193pt
 * \oddsidemargin=-8.2513pt
 * \evensidemargin=-8.2513pt
 * \topmargin=-29.36447pt
@@ -1438,19 +1492,19 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count482
+\c@lstlisting=\count505
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 60.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 60.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2021/05/24 v2021C Select colors with proper color contrast
 )
-Package hyperref Info: Link coloring ON on input line 60.
+Package hyperref Info: Link coloring ON on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1458,11 +1512,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count483
+\c@section@level=\count506
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
@@ -1491,57 +1545,75 @@ File: ./img/TUeLOG_new-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./img/TUeLOG_new-eps-converted-to.pdf  used on input line 16.
 (pdftex.def)             Requested size: 170.71652pt x 47.04459pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
-<./img/disc_logo_kleur.png, id=15, 569.0058pt x 270.2898pt>
-File: ./img/disc_logo_kleur.png Graphic file (type png)
-<use ./img/disc_logo_kleur.png>
-Package pdftex.def Info: ./img/disc_logo_kleur.png  used on input line 20.
-(pdftex.def)             Requested size: 71.13188pt x 33.78613pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 28.
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+<./img/NWO_WR.png, id=15, 359.85062pt x 157.13477pt>
+File: ./img/NWO_WR.png Graphic file (type png)
+<use ./img/NWO_WR.png>
+Package pdftex.def Info: ./img/NWO_WR.png  used on input line 20.
+(pdftex.def)             Requested size: 170.71652pt x 74.54626pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 22.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 22.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 28.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 22.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 28.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 22.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 28.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 22.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 28.
+(Font)              <9> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 28.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+(Font)              <5> on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 31.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+Overfull \hbox (5.95406pt too wide) in paragraph at lines 20--25
+\T1/lmr/m/n/9 This work has been car-ried out within the re-search per-spec-tive pro-gram Wear-able Robotics,
+ []
+
+
+Overfull \hbox (4.6398pt too wide) in paragraph at lines 20--25
+\T1/lmr/m/n/9 which is funded by the Ned-er-landse Or-gan-isatie voor Weten-schap-pelijk On-der-zoek (NWO).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 32.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2 <./img/TUeLOG_new-eps-converted-to.pdf> <./img/disc_logo_kleur.png>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+) [2 <./img/TUeLOG_new-eps-converted-to.pdf> <./img/NWO_WR.png>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 63.
+(Font)              <10> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 63.
+(Font)              <7> on input line 64.
 ) [4] (./1_summary/abstract.tex [5
 
 
@@ -1553,395 +1625,1466 @@ Overfull \hbox (5.1918pt too wide) in paragraph at lines 27--28
 
 ) (./1_summary/samenvatting.tex [6] [7
 
-]
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
- [8]) (./1_summary/societal_summary.tex [9] [10
+] [8]) (./1_summary/societal_summary.tex [9] [10
 
 ]) [11] [12
 
-] (./2_nomenclature/nomenclature.tex
-Overfull \hbox (34.66934pt too wide) in alignment at lines 12--19
- [] [] 
- []
+] (build/thesis.toc [13
 
-
-Overfull \hbox (34.66934pt too wide) in alignment at lines 32--42
- [] [] 
- []
-
-
-Overfull \hbox (34.66934pt too wide) in alignment at lines 45--51
- [] [] 
- []
-
-
-Overfull \hbox (2.5433pt too wide) in paragraph at lines 59--59
-[]|$[][]\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 ( \OMS/lmsy/m/n/10 ^^A \OT1/lmr/m/n/10 )[]$| 
- []
-
-
-Overfull \hbox (2.5433pt too wide) in paragraph at lines 60--60
-[]|$[][]\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 ( \OMS/lmsy/m/n/10 ^^A \OT1/lmr/m/n/10 )[]$| 
- []
-
-
-Overfull \hbox (34.66934pt too wide) in alignment at lines 55--67
- [] [] 
- []
-
-[13
-
-]
-Overfull \hbox (34.66934pt too wide) in alignment at lines 70--86
- [] [] 
- []
-
-
-Overfull \hbox (2.62639pt too wide) in paragraph at lines 99--99
-[]|\T1/lmr/m/n/10 PneuNet| 
- []
-
-
-Overfull \hbox (3.87631pt too wide) in paragraph at lines 101--101
-[]|\T1/lmr/m/n/10 TopoOpt| 
- []
-
-
-Overfull \hbox (34.66934pt too wide) in alignment at lines 91--102
- [] [] 
- []
-
-[14]) [15] [16
-
-] (build/thesis.toc [17])
+] [14] [15])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [18]
-LaTeX Font Info:    Trying to load font information for T1+pnc on input line 93.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pnc.fd
-File: t1pnc.fd 2001/06/04 font definitions for T1/pnc.
-) [1
-
-
-] [2]
+ [16]
 Chapter 1.
-(./3_1_introduction/0_soft_robots_what_are_they.tex
-<./pdf/thesis-figure-1-0.pdf, id=203, 363.10657pt x 104.14407pt>
+LaTeX Font Info:    Trying to load font information for T1+pnc on input line 95.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pnc.fd
+File: t1pnc.fd 2001/06/04 font definitions for T1/pnc.
+) (./3_1_introduction/0_soft_robots_what_are_they.tex
+<./pdf/thesis-figure-1-0.pdf, id=325, 363.10657pt x 104.14407pt>
 File: ./pdf/thesis-figure-1-0.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-0.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-0.pdf  used on input line 13.
 (pdftex.def)             Requested size: 355.65945pt x 102.01122pt.
- [3
+ [1
 
-] [4 <./pdf/thesis-figure-1-0.pdf>]) (./3_1_introduction/1_brief_introduction.tex) (./3_1_introduction/2_question.tex [5]
-<./pdf/thesis-figure-1-1.pdf, id=266, 306.70787pt x 178.36035pt>
+
+] [2 <./pdf/thesis-figure-1-0.pdf>]
+<./pdf/thesis-figurex-0-0-1.pdf, id=378, 327.74445pt x 106.30716pt>
+File: ./pdf/thesis-figurex-0-0-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-0-0-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-0-0-1.pdf  used on input line 33.
+(pdftex.def)             Requested size: 355.65945pt x 115.36963pt.
+) (./3_1_introduction/1_brief_introduction.tex) (./3_1_introduction/2_question.tex
+<./pdf/thesis-figure-1-1.pdf, id=390, 306.70787pt x 178.36035pt>
 File: ./pdf/thesis-figure-1-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-1-1.pdf  used on input line 7.
+Package pdftex.def Info: ./pdf/thesis-figure-1-1.pdf  used on input line 4.
 (pdftex.def)             Requested size: 266.74458pt x 155.12868pt.
- (./pdf/thesis-figure-1-octopus.pdf_tex
-<./pdf//thesis-figure-1-octopus.pdf, id=271, page=1, 359.15105pt x 153.08672pt>
+ [3 <./pdf/thesis-figurex-0-0-1.pdf>] [4 <./pdf/thesis-figure-1-1.pdf>] (./pdf/thesis-figure-1-octopus.pdf_tex
+<./pdf//thesis-figure-1-octopus.pdf, id=481, page=1, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 1>
 Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 359.15105pt x 153.09566pt.
-<./pdf//thesis-figure-1-octopus.pdf, id=272, page=2, 359.15105pt x 153.08672pt>
+<./pdf//thesis-figure-1-octopus.pdf, id=482, page=2, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 2>
 Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 359.15105pt x 153.09566pt.
-<./pdf//thesis-figure-1-octopus.pdf, id=273, page=3, 359.15105pt x 153.08672pt>
+<./pdf//thesis-figure-1-octopus.pdf, id=483, page=3, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 3>
-Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page3 used on input line 66.
+Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page3 used on input line 69.
 (pdftex.def)             Requested size: 359.15105pt x 153.09566pt.
 )
-Overfull \hbox (3.4916pt too wide) in paragraph at lines 67--22
+Overfull \hbox (3.4916pt too wide) in paragraph at lines 70--25
  [][] 
  []
 
-
-Overfull \hbox (0.5621pt too wide) in paragraph at lines 26--27
-[]\T1/lmr/m/n/10 Recognizing the sig-nif-i-cance of both de-sign and con-trol in soft robot biomimicry,
- []
-
-[6 <./pdf/thesis-figure-1-1.pdf>]) (./3_1_introduction/3_problem.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./pdf//thesis-figure-1-octopus.pdf> <./pdf//thesis-figure-1-octopus.pdf
+[5 <./pdf//thesis-figure-1-octopus.pdf> <./pdf//thesis-figure-1-octopus.pdf
 
 pdfTeX warning: pdflatex (file ./pdf//thesis-figure-1-octopus.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./pdf//thesis-figure-1-octopus.pdf
 
 pdfTeX warning: pdflatex (file ./pdf//thesis-figure-1-octopus.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./3_1_introduction/4_contribution.tex [8] [9]
-<./pdf/thesis-figure-1-model.pdf, id=366, 344.65163pt x 102.4628pt>
-File: ./pdf/thesis-figure-1-model.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-1-model.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-1-model.pdf  used on input line 30.
-(pdftex.def)             Requested size: 355.65945pt x 105.74266pt.
-
-
-Package natbib Warning: Citation `Milana2021Apr' on page 10 undefined on input line 38.
-
-[10] [11 <./pdf/thesis-figure-1-model.pdf>]
-Underfull \vbox (badness 1852) has occurred while \output is active []
-
- [12]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 76.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) (./3_1_introduction/5_outline.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+>]) (./3_1_introduction/3_problem.tex [6]
+Package hyperref Info: bookmark level for unknown rmk defaults to 0 on input line 5.
+ [7]
+<./pdf/thesis-figurex-1-3-2.pdf, id=652, 336.67784pt x 97.29349pt>
+File: ./pdf/thesis-figurex-1-3-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-1-3-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-1-3-2.pdf  used on input line 18.
+(pdftex.def)             Requested size: 346.77013pt x 100.21489pt.
+ [8 <./pdf/thesis-figurex-1-3-2.pdf>] [9] [10] [11]) (./3_1_introduction/4_contribution.tex [12]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[13]) [14]
-Chapter 2.
-(./3_2_history/abstract.tex) (./3_2_history/early_soft_robots.tex [15
+[13] [14] [15] 
+
+<QR code requested for "https://bit.ly/3zIvbHt" in version 0-M.>
+<Copying the QR code for "https://bit.ly/3zIvbHt" in version 2-M as previously calculated.>
+) (./3_1_introduction/5_outline.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+) [17] [18
 
 ]
-<./pdf/thesis-figure-2-1.pdf, id=454, 513.51851pt x 322.05319pt>
+Chapter 2.
+(./3_2_history/abstract.tex) (./3_2_history/early_soft_robots.tex [19]
+<./pdf/thesis-figure-2-1.pdf, id=1001, 513.51851pt x 322.05319pt>
 File: ./pdf/thesis-figure-2-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-2-1.pdf  used on input line 28.
+Package pdftex.def Info: ./pdf/thesis-figure-2-1.pdf  used on input line 29.
 (pdftex.def)             Requested size: 394.78221pt x 247.59349pt.
 
-Overfull \hbox (21.42805pt too wide) in paragraph at lines 28--28
+Overfull \hbox (21.42805pt too wide) in paragraph at lines 29--29
 []  [] 
  []
 
-[16 <./pdf/thesis-figure-2-1.pdf>]
-Underfull \vbox (badness 1087) has occurred while \output is active []
-
- [17
+[20 <./pdf/thesis-figure-2-1.pdf>] [21
 
 ] (./fig/PAM.pdf_tex
-<./fig/PAM.pdf, id=553, page=1, 353.36972pt x 107.6197pt>
+<./fig/PAM.pdf, id=1089, page=1, 353.36972pt x 107.6197pt>
 File: ./fig/PAM.pdf Graphic file (type pdf)
 <use ./fig/PAM.pdf, page 1>
 Package pdftex.def Info: ./fig/PAM.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 353.3697pt x 107.62599pt.
-<./fig/PAM.pdf, id=554, page=2, 353.36972pt x 107.6197pt>
+<./fig/PAM.pdf, id=1090, page=2, 353.36972pt x 107.6197pt>
 File: ./fig/PAM.pdf Graphic file (type pdf)
 <use ./fig/PAM.pdf, page 2>
 Package pdftex.def Info: ./fig/PAM.pdf , page2 used on input line 61.
 (pdftex.def)             Requested size: 353.3697pt x 107.62599pt.
 )
-<./pdf/thesis-figure-2-2.pdf, id=565, 337.4698pt x 96.12111pt>
+<./pdf/thesis-figure-2-2.pdf, id=1101, 337.4698pt x 96.12111pt>
 File: ./pdf/thesis-figure-2-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-2-2.pdf  used on input line 52.
+Package pdftex.def Info: ./pdf/thesis-figure-2-2.pdf  used on input line 50.
 (pdftex.def)             Requested size: 355.65945pt x 101.3012pt.
- [18 <./pdf/thesis-figure-2-2.pdf> <./fig/PAM.pdf
+ [22 <./pdf/thesis-figure-2-2.pdf> <./fig/PAM.pdf
 
 pdfTeX warning: pdflatex (file ./fig/PAM.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./fig/PAM.pdf
 
 pdfTeX warning: pdflatex (file ./fig/PAM.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package hyperref Info: bookmark level for unknown rmk defaults to 0 on input line 58.
- [19] (./fig/fig_orm_elong.tex
-<./fig/fig_orm_elong-1.png, id=745, 1774.63pt x 652.4375pt>
-File: ./fig/fig_orm_elong-1.png Graphic file (type png)
-<use ./fig/fig_orm_elong-1.png>
-Package pdftex.def Info: ./fig/fig_orm_elong-1.png  used on input line 28.
-(pdftex.def)             Requested size: 207.34113pt x 76.10889pt.
-) (./fig/fig_orm_bend.tex
-<./fig/fig_orm_bend-1.png, id=746, 2044.63875pt x 652.4375pt>
-File: ./fig/fig_orm_bend-1.png Graphic file (type png)
-<use ./fig/fig_orm_bend-1.png>
-Package pdftex.def Info: ./fig/fig_orm_bend-1.png  used on input line 28.
-(pdftex.def)             Requested size: 207.34613pt x 66.1535pt.
-)
-Overfull \hbox (28.4531pt too wide) in paragraph at lines 99--68
+<./pdf/thesis-figurex-2-4-1.pdf, id=1261, 372.60204pt x 88.72147pt>
+File: ./pdf/thesis-figurex-2-4-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-2-4-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-2-4-1.pdf  used on input line 64.
+(pdftex.def)             Requested size: 372.60112pt x 88.72124pt.
+<./pdf/thesis-figurex-2-4-2.pdf, id=1262, 372.60204pt x 105.92574pt>
+File: ./pdf/thesis-figurex-2-4-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-2-4-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-2-4-2.pdf  used on input line 65.
+(pdftex.def)             Requested size: 372.60112pt x 105.92546pt.
+
+Overfull \hbox (16.94167pt too wide) in paragraph at lines 64--71
  [][] 
  []
 
 
-Overfull \hbox (28.4531pt too wide) in paragraph at lines 99--68
+Overfull \hbox (16.94167pt too wide) in paragraph at lines 64--71
  [] 
  []
 
-[20 <./fig/fig_orm_elong-1.png (PNG copy)> <./fig/fig_orm_bend-1.png (PNG copy)>]
-<./pdf/thesis-figure-2-5.pdf, id=771, 327.74947pt x 106.30515pt>
+[23] [24 <./pdf/thesis-figurex-2-4-1.pdf> <./pdf/thesis-figurex-2-4-2.pdf>]
+<./pdf/thesis-figure-2-5.pdf, id=1318, 327.74947pt x 106.30515pt>
 File: ./pdf/thesis-figure-2-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-5.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-5.pdf  used on input line 92.
 (pdftex.def)             Requested size: 355.65945pt x 115.36745pt.
- [21]
-<./pdf/thesis-figure-2-6.pdf, id=812, 310.50505pt x 118.3351pt>
+ [25]
+<./pdf/thesis-figure-2-6.pdf, id=1359, 310.50505pt x 118.3351pt>
 File: ./pdf/thesis-figure-2-6.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-6.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-6.pdf  used on input line 108.
 (pdftex.def)             Requested size: 355.65945pt x 135.54439pt.
-<./pdf/thesis-figure-2-7.pdf, id=816, 310.50204pt x 119.71425pt>
+<./pdf/thesis-figure-2-7.pdf, id=1363, 310.50204pt x 119.71425pt>
 File: ./pdf/thesis-figure-2-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-7.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-7.pdf  used on input line 121.
 (pdftex.def)             Requested size: 355.65945pt x 137.12411pt.
- [22 <./pdf/thesis-figure-2-5.pdf>] [23 <./pdf/thesis-figure-2-6.pdf> <./pdf/thesis-figure-2-7.pdf>]) (./3_2_history/state-of-the-art.tex [24]
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
-<./pdf/thesis-figure-1-2.pdf, id=929, 319.42668pt x 91.69545pt>
-File: ./pdf/thesis-figure-1-2.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-1-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-1-2.pdf  used on input line 15.
-(pdftex.def)             Requested size: 355.65945pt x 102.10213pt.
-[25]
-<./pdf/thesis-figure-1-3.pdf, id=984, 336.37569pt x 89.3438pt>
+[26 <./pdf/thesis-figure-2-5.pdf>]) (./3_2_history/state-of-the-art.tex
+Underfull \vbox (badness 1616) has occurred while \output is active []
+
+ [27 <./pdf/thesis-figure-2-6.pdf> <./pdf/thesis-figure-2-7.pdf>] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+<./pdf/thesis-figurex-1-2.pdf, id=1478, 319.42337pt x 91.69257pt>
+File: ./pdf/thesis-figurex-1-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-1-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-1-2.pdf  used on input line 15.
+(pdftex.def)             Requested size: 355.65945pt x 102.09894pt.
+[29]
+<./pdf/thesis-figure-1-3.pdf, id=1530, 336.37569pt x 89.3438pt>
 File: ./pdf/thesis-figure-1-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-3.pdf  used on input line 33.
 (pdftex.def)             Requested size: 355.65945pt x 94.47356pt.
 
-Overfull \hbox (7.91275pt too wide) in paragraph at lines 31--35
-[]  []
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./pdf/thesis-figure-1-2.pdf>]
-<./pdf/thesis-figure-1-4.pdf, id=1025, 336.35678pt x 88.05635pt>
+ [30 <./pdf/thesis-figurex-1-2.pdf>]
+<./pdf/thesis-figure-1-4.pdf, id=1568, 336.35678pt x 88.05635pt>
 File: ./pdf/thesis-figure-1-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-4.pdf  used on input line 51.
 (pdftex.def)             Requested size: 355.65945pt x 93.1122pt.
- [27 <./pdf/thesis-figure-1-3.pdf>]
-Overfull \hbox (1.8121pt too wide) in paragraph at lines 64--66
-[]\T1/lmr/m/n/10 Focussing on soft robot ma-nip-u-la-tors first, a pop-u-lar choice of finite-dimensional
+ [31 <./pdf/thesis-figure-1-3.pdf>] [32 <./pdf/thesis-figure-1-4.pdf>] [33] [34]) [35] [36
+
+]
+Chapter 3.
+
+Package hyperref Warning: Ignoring empty anchor on input line 123.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 123.
+(./3_3_design/0_abstract.tex) (./3_3_design/1_introduction.tex [37] [38]) (./3_3_design/2_fem.tex [39] [40] [41] [42]
+Overfull \hbox (7.64597pt too wide) in paragraph at lines 117--117
+|[]\T1/lmr/bx/n/12 Solving the en-ergy bal-ance via ap-prox-i-ma-tions of polyg-
  []
 
-[28 <./pdf/thesis-figure-1-4.pdf>]
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
- [29]
-
-Package natbib Warning: Citation `Milana2021Apr' on page 30 undefined on input line 77.
-
+[43] (./fig/fig_C3_voronoi.pdf_tex
+<./fig//fig_C3_voronoi.pdf, id=1865, page=1, 358.72147pt x 113.81102pt>
+File: ./fig//fig_C3_voronoi.pdf Graphic file (type pdf)
+<use ./fig//fig_C3_voronoi.pdf, page 1>
+Package pdftex.def Info: ./fig//fig_C3_voronoi.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 358.72148pt x 113.81073pt.
+<./fig//fig_C3_voronoi.pdf, id=1866, page=2, 358.72147pt x 113.81102pt>
+File: ./fig//fig_C3_voronoi.pdf Graphic file (type pdf)
+<use ./fig//fig_C3_voronoi.pdf, page 2>
+Package pdftex.def Info: ./fig//fig_C3_voronoi.pdf , page2 used on input line 61.
+(pdftex.def)             Requested size: 358.72148pt x 113.81073pt.
 )
-Underfull \vbox (badness 3623) has occurred while \output is active []
+Overfull \hbox (3.06203pt too wide) in paragraph at lines 65--140
+ [][] 
+ []
 
- [30] [31] [32
+[44 <./fig//fig_C3_voronoi.pdf> <./fig//fig_C3_voronoi.pdf
 
-] [33
+pdfTeX warning: pdflatex (file ./fig//fig_C3_voronoi.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (0.41035pt too wide) detected at line 155
+[]
+ []
 
-] [34]
-Chapter 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 128.
+) (./3_3_design/3_opt.tex [45] [46] [47] [48] [49] (./pdf/thesis-figure-3-1.pdf_tex
+<./pdf//thesis-figure-3-1.pdf, id=1971, page=1, 324.53233pt x 88.07854pt>
+File: ./pdf//thesis-figure-3-1.pdf Graphic file (type pdf)
+<use ./pdf//thesis-figure-3-1.pdf, page 1>
+Package pdftex.def Info: ./pdf//thesis-figure-3-1.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 324.53233pt x 88.07831pt.
+)) (./3_3_design/4_example.tex [50 <./pdf//thesis-figure-3-1.pdf>] [51]
+<./pdf/thesis-figure-3-3.pdf, id=2014, 327.74846pt x 87.9837pt>
+File: ./pdf/thesis-figure-3-3.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-3.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-3.pdf  used on input line 32.
+(pdftex.def)             Requested size: 337.87538pt x 90.71013pt.
+<./pdf/thesis-figure-3-4.pdf, id=2016, 334.38062pt x 124.34457pt>
+File: ./pdf/thesis-figure-3-4.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-4.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-4.pdf  used on input line 32.
+(pdftex.def)             Requested size: 337.87538pt x 125.64583pt.
+ [52 <./pdf/thesis-figure-3-3.pdf> <./pdf/thesis-figure-3-4.pdf>]
+<./pdf/thesis-figure-3-7.pdf, id=2073, 328.75423pt x 190.43964pt>
+File: ./pdf/thesis-figure-3-7.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-7.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-7.pdf  used on input line 44.
+(pdftex.def)             Requested size: 337.87538pt x 195.72493pt.
+<./pdf/thesis-figure-3-6.pdf, id=2075, 360.35881pt x 117.51717pt>
+File: ./pdf/thesis-figure-3-6.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-6.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-6.pdf  used on input line 53.
+(pdftex.def)             Requested size: 337.87538pt x 110.1882pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 128.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[35
-
-] [36
-
-] [37] [38]
+ [53 <./pdf/thesis-figure-3-7.pdf>]
+<./pdf/thesis-figure-3-2.pdf, id=2112, 327.75047pt x 88.67328pt>
+File: ./pdf/thesis-figure-3-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-2.pdf  used on input line 67.
+(pdftex.def)             Requested size: 337.87538pt x 91.42107pt.
+<./pdf/thesis-figure-3-5.pdf, id=2114, 341.08852pt x 118.67831pt>
+File: ./pdf/thesis-figure-3-5.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-3-5.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-3-5.pdf  used on input line 75.
+(pdftex.def)             Requested size: 337.87538pt x 117.56793pt.
+) (./3_3_design/5_conclusion.tex [54 <./pdf/thesis-figure-3-6.pdf>]) [55 <./pdf/thesis-figure-3-2.pdf> <./pdf/thesis-figure-3-5.pdf>] [56]
 Chapter 4.
 
-Package hyperref Warning: Ignoring empty anchor on input line 143.
+Package hyperref Warning: Ignoring empty anchor on input line 138.
 
-[39
+(./3_4_pccmodel/0_abstract.tex) (./3_4_pccmodel/1_introduction.tex [57
 
-] [40
+] [58] [59]
+<./pdf/thesis-figure-4-1-1.pdf, id=2288, 344.62752pt x 171.78177pt>
+File: ./pdf/thesis-figure-4-1-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-1-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-1-1.pdf  used on input line 28.
+(pdftex.def)             Requested size: 355.65945pt x 177.28056pt.
+<./pdf/thesis-figure-4-1-2.pdf, id=2290, 341.4838pt x 120.80634pt>
+File: ./pdf/thesis-figure-4-1-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-1-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-1-2.pdf  used on input line 29.
+(pdftex.def)             Requested size: 355.65945pt x 125.82547pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[60] [61 <./pdf/thesis-figure-4-1-1.pdf> <./pdf/thesis-figure-4-1-2.pdf>]
+Overfull \hbox (0.16846pt too wide) in paragraph at lines 49--50
+\T1/lmr/m/it/10 posed of a print-able, flex-i-ble ther-mo-plas-tic elas-tomer (Young's mod-u-lus $\OMS/lmsy/m/n/10 ^^T$ \T1/lmr/m/it/10 80 $[]$),
+ []
+
+) (./3_4_pccmodel/3_model.tex [62]
+Package hyperref Info: bookmark level for unknown asm defaults to 0 on input line 17.
+<./pdf/thesis-figure-4-2.pdf, id=2381, 2925.48965pt x 1468.52644pt>
+File: ./pdf/thesis-figure-4-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-2.pdf  used on input line 40.
+(pdftex.def)             Requested size: 355.65945pt x 178.52357pt.
+ [63] [64 <./pdf/thesis-figure-4-2.pdf>] [65] [66] [67]
+<./pdf/thesis-figure-4-3.pdf, id=2512, 358.77838pt x 112.97607pt>
+File: ./pdf/thesis-figure-4-3.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-3.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-3.pdf  used on input line 164.
+(pdftex.def)             Requested size: 355.65945pt x 112.00179pt.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 169.
+ [68 <./pdf/thesis-figure-4-3.pdf>]
+<./pdf/thesis-figure-4-5.pdf, id=2557, 342.98439pt x 164.78363pt>
+File: ./pdf/thesis-figure-4-5.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-5.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-5.pdf  used on input line 188.
+(pdftex.def)             Requested size: 342.98354pt x 164.78322pt.
+<./pdf/thesis-figure-4-4.pdf, id=2563, 337.87393pt x 138.54497pt>
+File: ./pdf/thesis-figure-4-4.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-4.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-4.pdf  used on input line 198.
+(pdftex.def)             Requested size: 337.87538pt x 138.5573pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[69 <./pdf/thesis-figure-4-5.pdf>]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 219.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [70 <./pdf/thesis-figure-4-4.pdf>] [71] [72]) (./3_4_pccmodel/4_multilink.tex [73]) (./3_4_pccmodel/5_solver.tex [74]) (./3_4_pccmodel/6_material.tex [75] [76]
+<./pdf/thesis-figure-4-6.pdf, id=2785, 320.09587pt x 60.10857pt>
+File: ./pdf/thesis-figure-4-6.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-6.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-6.pdf  used on input line 42.
+(pdftex.def)             Requested size: 320.09508pt x 60.10841pt.
+<./pdf/thesis-figure-4-7.pdf, id=2789, 393.3596pt x 125.29108pt>
+File: ./pdf/thesis-figure-4-7.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-7.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-7.pdf  used on input line 54.
+(pdftex.def)             Requested size: 393.35863pt x 125.29076pt.
+
+Overfull \hbox (34.23085pt too wide) in paragraph at lines 52--56
+[]  [] 
+ []
+
+[77] [78 <./pdf/thesis-figure-4-6.pdf> <./pdf/thesis-figure-4-7.pdf>] [79] [80] [81]
+<./pdf/thesis-figure-4-8.pdf, id=2893, 393.3596pt x 125.29108pt>
+File: ./pdf/thesis-figure-4-8.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-8.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-8.pdf  used on input line 193.
+(pdftex.def)             Requested size: 393.35863pt x 125.29076pt.
+
+Overfull \hbox (34.23085pt too wide) in paragraph at lines 193--193
+[]  []
+ []
+
+<./pdf/thesis-figure-4-9.pdf, id=2897, 344.27823pt x 162.45393pt>
+File: ./pdf/thesis-figure-4-9.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-9.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-9.pdf  used on input line 193.
+(pdftex.def)             Requested size: 344.27737pt x 162.45352pt.
+[82 <./pdf/thesis-figure-4-8.pdf> <./pdf/thesis-figure-4-9.pdf>]
+<./pdf/thesis-figure-4-10.pdf, id=2964, 348.05934pt x 137.87209pt>
+File: ./pdf/thesis-figure-4-10.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-10.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-10.pdf  used on input line 199.
+(pdftex.def)             Requested size: 348.05849pt x 137.87173pt.
+) (./3_4_pccmodel/7_control.tex [83
+
+ <./pdf/thesis-figure-4-10.pdf>] (./pdf/thesis-figure-4-11.pdf_tex
+<./fig/fig_C2_PBAdiagram.pdf, id=2998, page=1, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 1>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 57.
+<./fig/fig_C2_PBAdiagram.pdf, id=2999, page=2, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 2>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3000, page=3, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 3>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3001, page=4, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 4>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3002, page=5, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 5>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3003, page=6, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 6>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page6 used on input line 66.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3004, page=7, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 7>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page7 used on input line 69.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3005, page=8, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 8>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page8 used on input line 71.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3006, page=9, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 9>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page9 used on input line 73.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig/fig_C2_PBAdiagram.pdf, id=3007, page=10, 294.30818pt x 128.0374pt>
+File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_PBAdiagram.pdf, page 10>
+Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page10 used on input line 76.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]) (./3_4_pccmodel/8_results.tex [85 <./fig/fig_C2_PBAdiagram.pdf> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_PBAdiagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [86]
+<./pdf/thesis-figure-4-12.pdf, id=3058, 1150.2072pt x 698.96129pt>
+File: ./pdf/thesis-figure-4-12.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-12.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-12.pdf  used on input line 33.
+(pdftex.def)             Requested size: 355.65945pt x 216.12115pt.
+ [87 <./pdf/thesis-figure-4-12.pdf>] (./fig/fig_C2_setup_measure_V2.pdf_tex
+<./fig/fig_C2_setup_measure_V2.pdf, id=3077, page=1, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 1>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3078, page=2, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 2>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3079, page=3, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 3>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3080, page=4, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 4>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3081, page=5, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 5>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3082, page=6, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 6>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page6 used on input line 69.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3083, page=7, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 7>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page7 used on input line 71.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+<./fig/fig_C2_setup_measure_V2.pdf, id=3084, page=8, 342.17735pt x 437.63432pt>
+File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
+<use ./fig/fig_C2_setup_measure_V2.pdf, page 8>
+Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page8 used on input line 73.
+(pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 33.
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 33.
+
+
+LaTeX Warning: Text page 88 contains only floats.
+
+
+Overfull \vbox (2.15724pt too high) has occurred while \output is active []
+
+ [88
+
+ <./fig/fig_C2_setup_measure_V2.pdf> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig/fig_C2_setup_measure_V2.pdf
+
+pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [89
+
+]
+<./pdf/thesis-figure-4-14.pdf, id=3140, 338.29588pt x 217.56682pt>
+File: ./pdf/thesis-figure-4-14.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-14.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-14.pdf  used on input line 80.
+(pdftex.def)             Requested size: 338.29504pt x 217.56628pt.
+<./pdf/thesis-figure-4-15.pdf, id=3142, 344.63153pt x 181.38466pt>
+File: ./pdf/thesis-figure-4-15.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-15.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-15.pdf  used on input line 80.
+(pdftex.def)             Requested size: 344.63069pt x 181.3842pt.
+ [90 <./pdf/thesis-figure-4-14.pdf> <./pdf/thesis-figure-4-15.pdf>] [91
+
+]
+<./pdf/thesis-figure-4-16.pdf, id=3197, 330.09726pt x 191.18729pt>
+File: ./pdf/thesis-figure-4-16.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-16.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-16.pdf  used on input line 104.
+(pdftex.def)             Requested size: 330.09645pt x 191.18681pt.
+<./pdf/thesis-figure-4-17-1.pdf, id=3199, 286.03163pt x 149.48347pt>
+File: ./pdf/thesis-figure-4-17-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-17-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-17-1.pdf  used on input line 126.
+(pdftex.def)             Requested size: 286.03093pt x 149.4831pt.
+<./pdf/thesis-figure-4-17-2.pdf, id=3201, 307.02504pt x 88.20253pt>
+File: ./pdf/thesis-figure-4-17-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-17-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-17-2.pdf  used on input line 127.
+(pdftex.def)             Requested size: 307.02428pt x 88.2023pt.
+ [92 <./pdf/thesis-figure-4-16.pdf>] [93 <./pdf/thesis-figure-4-17-1.pdf> <./pdf/thesis-figure-4-17-2.pdf>]
+<./pdf/thesis-figure-4-18.pdf, id=3296, 334.29892pt x 158.3516pt>
+File: ./pdf/thesis-figure-4-18.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-18.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-18.pdf  used on input line 153.
+(pdftex.def)             Requested size: 334.2981pt x 158.35118pt.
+ [94 <./pdf/thesis-figure-4-18.pdf>] [95]
+<./pdf/thesis-figure-4-19.pdf, id=3334, 333.71474pt x 319.30592pt>
+File: ./pdf/thesis-figure-4-19.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-19.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-19.pdf  used on input line 196.
+(pdftex.def)             Requested size: 333.71391pt x 319.30515pt.
+ [96 <./pdf/thesis-figure-4-19.pdf>]
+<./pdf/thesis-figure-4-20.pdf, id=3371, 337.87227pt x 434.25237pt>
+File: ./pdf/thesis-figure-4-20.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-20.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-20.pdf  used on input line 222.
+(pdftex.def)             Requested size: 337.87144pt x 434.2513pt.
+ [97 <./pdf/thesis-figure-4-20.pdf>]
+Underfull \vbox (badness 2005) has occurred while \output is active []
+
+ [98
+
+]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[99]) (./3_4_pccmodel/9_conclusion.tex [100
+
+]
+<./pdf/thesis-figure-4-21.pdf, id=3414, 333.36043pt x 217.57285pt>
+File: ./pdf/thesis-figure-4-21.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-21.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-21.pdf  used on input line 4.
+(pdftex.def)             Requested size: 333.3596pt x 217.5723pt.
+<./pdf/thesis-figure-4-22.pdf, id=3418, 328.20316pt x 145.70134pt>
+File: ./pdf/thesis-figure-4-22.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-4-22.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-4-22.pdf  used on input line 4.
+(pdftex.def)             Requested size: 328.20235pt x 145.70097pt.
+ [101 <./pdf/thesis-figure-4-21.pdf> <./pdf/thesis-figure-4-22.pdf>]) [102
 
 ]
 Chapter 5.
 
-Package hyperref Warning: Ignoring empty anchor on input line 160.
+Package hyperref Warning: Ignoring empty anchor on input line 155.
 
-(./3_5_cosseratmodel/0_abstract.tex) [41
+(./3_5_cosseratmodel/0_abstract.tex) (./3_5_cosseratmodel/1_introduction.tex [103
 
-] [42
 
-] [43] [44]
+] [104]
+
+LaTeX Warning: Reference `sec:chap3_conclusion' on page 105 undefined on input line 14.
+
+) (./3_5_cosseratmodel/2_model.tex
+<./pdf/thesis-figure-5-1.pdf, id=3527, 2925.48965pt x 1468.52644pt>
+File: ./pdf/thesis-figure-5-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-1.pdf  used on input line 10.
+(pdftex.def)             Requested size: 355.65945pt x 178.52357pt.
+ [105] [106 <./pdf/thesis-figure-5-1.pdf>] [107] [108]
+Overfull \hbox (2.5733pt too wide) detected at line 120
+[]
+ []
+
+<./pdf/thesis-figure-5-2-1.pdf, id=3667, 350.04477pt x 127.7312pt>
+File: ./pdf/thesis-figure-5-2-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-2-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-2-1.pdf  used on input line 128.
+(pdftex.def)             Requested size: 350.04391pt x 127.73087pt.
+<./pdf/thesis-figure-5-2-2.pdf, id=3668, 352.84523pt x 113.72186pt>
+File: ./pdf/thesis-figure-5-2-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-2-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-2-2.pdf  used on input line 129.
+(pdftex.def)             Requested size: 352.84436pt x 113.72157pt.
+
+Underfull \vbox (badness 1910) has occurred while \output is active []
+
+ [109] [110 <./pdf/thesis-figure-5-2-1.pdf> <./pdf/thesis-figure-5-2-2.pdf>]
+<./pdf/thesis-figure-5-3.pdf, id=3742, 334.03157pt x 161.48898pt>
+File: ./pdf/thesis-figure-5-3.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-3.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-3.pdf  used on input line 200.
+(pdftex.def)             Requested size: 337.87538pt x 163.36131pt.
+ [111] [112 <./pdf/thesis-figure-5-3.pdf>] [113] [114] [115]
+Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 343.
+ [116] [117]) (./3_5_cosseratmodel/3_control.tex [118]) (./3_5_cosseratmodel/4_results.tex [119] [120]
+<./pdf/thesis-figure-5-4.pdf, id=3970, 310.495pt x 56.57838pt>
+File: ./pdf/thesis-figure-5-4.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-4.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-4.pdf  used on input line 72.
+(pdftex.def)             Requested size: 355.65945pt x 64.81339pt.
+<./pdf/thesis-figure-5-5.pdf, id=3972, 346.4905pt x 118.62016pt>
+File: ./pdf/thesis-figure-5-5.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-5.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-5.pdf  used on input line 72.
+(pdftex.def)             Requested size: 355.65945pt x 121.76564pt.
+<./pdf/thesis-figure-5-6.pdf, id=3974, 340.30237pt x 119.70422pt>
+File: ./pdf/thesis-figure-5-6.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-6.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-6.pdf  used on input line 72.
+(pdftex.def)             Requested size: 355.65945pt x 125.11229pt.
+ [121 <./pdf/thesis-figure-5-4.pdf> <./pdf/thesis-figure-5-5.pdf> <./pdf/thesis-figure-5-6.pdf>]
+
+Package hyperref Warning: Ignoring empty anchor on input line 81.
+
+[122]
+<./pdf/thesis-figure-5-7.pdf, id=4037, 341.546pt x 193.88936pt>
+File: ./pdf/thesis-figure-5-7.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-7.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-7.pdf  used on input line 130.
+(pdftex.def)             Requested size: 355.65945pt x 201.9094pt.
+<./pdf/thesis-figure-5-8.pdf, id=4039, 330.56902pt x 144.98064pt>
+File: ./pdf/thesis-figure-5-8.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-8.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-8.pdf  used on input line 130.
+(pdftex.def)             Requested size: 355.65945pt x 155.98607pt.
+ [123 <./pdf/thesis-figure-5-7.pdf> <./pdf/thesis-figure-5-8.pdf>]
+<./pdf/thesis-figure-5-9.pdf, id=4109, 341.546pt x 191.13307pt>
+File: ./pdf/thesis-figure-5-9.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-9.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-9.pdf  used on input line 130.
+(pdftex.def)             Requested size: 355.65945pt x 199.0391pt.
+<./pdf/thesis-figure-5-10.pdf, id=4111, 328.15298pt x 144.97462pt>
+File: ./pdf/thesis-figure-5-10.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-10.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-10.pdf  used on input line 130.
+(pdftex.def)             Requested size: 355.65945pt x 157.13876pt.
+
+Underfull \hbox (badness 1072) in paragraph at lines 130--130
+\T1/lmr/m/n/10 con-troller gains. The modal co-ef-fi-cients $[]$ are or-dered as fol-lows: $\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 2
+ []
+
+[124 <./pdf/thesis-figure-5-9.pdf> <./pdf/thesis-figure-5-10.pdf>] [125
+
+
+
+]
+<./pdf/thesis-figure-5-11.pdf, id=4169, 339.12898pt x 224.24878pt>
+File: ./pdf/thesis-figure-5-11.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-11.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-11.pdf  used on input line 171.
+(pdftex.def)             Requested size: 355.65945pt x 235.18074pt.
+<./pdf/thesis-figure-5-12.pdf, id=4171, 330.65733pt x 144.97462pt>
+File: ./pdf/thesis-figure-5-12.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-12.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-12.pdf  used on input line 171.
+(pdftex.def)             Requested size: 355.65945pt x 155.93536pt.
+
+Underfull \hbox (badness 2359) in paragraph at lines 171--171
+\T1/lmr/m/n/10 phant's trunk. The modal co-ef-fi-cients $[]$ are or-dered as fol-lows $\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 2
+ []
+
+[126 <./pdf/thesis-figure-5-11.pdf> <./pdf/thesis-figure-5-12.pdf>]) (./3_5_cosseratmodel/5_conclusion.tex
+Underfull \vbox (badness 2103) has occurred while \output is active []
+
+ [127
+
+
+]) [128]
 Chapter 6.
 
-Package hyperref Warning: Ignoring empty anchor on input line 175.
+Package hyperref Warning: Ignoring empty anchor on input line 169.
 
-[45
+(./3_6_sorotoki/0_abstract.tex) (./3_6_sorotoki/1_introduction.tex [129
+
+] [130] [131] [132]) (./3_6_sorotoki/2_relatedworks.tex [133] [134]
+
+Package natbib Warning: Citation `Kazemipour2022' on page 135 undefined on input line 15.
 
 
-] [46
+Package natbib Warning: Citation `Pustina2022' on page 135 undefined on input line 15.
 
-] [47] [48]
+[135] [136]
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 52.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.5> on input line 52.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.24997> on input line 52.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <3.75> on input line 52.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[137]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 53.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 66.
+) (./3_6_sorotoki/3_openrobots.tex
+<./pdf/thesis-figure-6-1.pdf, id=4428, 244.98528pt x 243.97147pt>
+File: ./pdf/thesis-figure-6-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-1.pdf  used on input line 12.
+(pdftex.def)             Requested size: 302.3127pt x 301.08078pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+[138
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [139 <./pdf/thesis-figure-6-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
+) (./3_6_sorotoki/4_software.tex [140]
+<./pdf/thesis-figure-6-2.pdf, id=4477, 845.58911pt x 272.21701pt>
+File: ./pdf/thesis-figure-6-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-2.pdf  used on input line 6.
+(pdftex.def)             Requested size: 535.29695pt x 172.32834pt.
+) (./3_6_sorotoki/5_sdf.tex
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
+
+
+Package natbib Warning: Citation `Chen2018Dec' on page 141 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+[141] [142 <./pdf/thesis-figure-6-2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <5> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 34.
+<./pdf/thesis-figure-6-3-1.pdf, id=4525, 244.98425pt x 86.87859pt>
+File: ./pdf/thesis-figure-6-3-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-3-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-3-1.pdf  used on input line 49.
+(pdftex.def)             Requested size: 176.04968pt x 62.43585pt.
+<./pdf/thesis-figure-6-3-2.pdf, id=4527, 244.98325pt x 73.24664pt>
+File: ./pdf/thesis-figure-6-3-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-3-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-3-2.pdf  used on input line 50.
+(pdftex.def)             Requested size: 176.04968pt x 52.63918pt.
+[143]) (./3_6_sorotoki/6_mesh.tex
+<./pdf/thesis-figure-6-4.pdf, id=4551, 227.30823pt x 71.22108pt>
+File: ./pdf/thesis-figure-6-4.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-4.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-4.pdf  used on input line 7.
+(pdftex.def)             Requested size: 176.04968pt x 55.16315pt.
+File: ./pdf/thesis-figure-6-4.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-4.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-4.pdf  used on input line 8.
+(pdftex.def)             Requested size: 176.04968pt x 55.16315pt.
+ [144 <./pdf/thesis-figure-6-3-1.pdf> <./pdf/thesis-figure-6-3-2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+) (./3_6_sorotoki/7_fem.tex [145 <./pdf/thesis-figure-6-4.pdf>]
+<./pdf/thesis-figure-6-5.pdf, id=4608, 953.46637pt x 382.37303pt>
+File: ./pdf/thesis-figure-6-5.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-5.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-5.pdf  used on input line 7.
+(pdftex.def)             Requested size: 302.3127pt x 121.2358pt.
+ [146 <./pdf/thesis-figure-6-5.pdf>]
+Overfull \hbox (0.42413pt too wide) in paragraph at lines 21--22
+[]\T1/lmr/m/n/10 Without loss of gen-er-al-ity, the ma-te-rial force can be de-com-posed into a position-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+Package hyperref Info: bookmark level for unknown intermez defaults to 0 on input line 23.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+LaTeX Warning: Reference `sec:C5:hyperelastic' on page 147 undefined on input line 50.
+
+[147]
+
+Package natbib Warning: Citation `Marechal2021Jun' on page 148 undefined on input line 87.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--89
+
+ []
+
+[148]
+
+Package natbib Warning: Citation `Newmark1959Jul' on page 149 undefined on input line 91.
+
+[149]
+
+Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 104.
+
+
+Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 106.
+
+
+Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 106.
+
+<./pdf/thesis-figure-6-6-1.pdf, id=4686, 309.68518pt x 79.92642pt>
+File: ./pdf/thesis-figure-6-6-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-6-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-6-1.pdf  used on input line 110.
+(pdftex.def)             Requested size: 337.87538pt x 87.20953pt.
+<./pdf/thesis-figure-6-6-2.pdf, id=4688, 309.53294pt x 78.61469pt>
+File: ./pdf/thesis-figure-6-6-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-6-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-6-2.pdf  used on input line 111.
+(pdftex.def)             Requested size: 337.87538pt x 85.81305pt.
+
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 119.
+
+
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 119.
+
+[150 <./pdf/thesis-figure-6-6-1.pdf> <./pdf/thesis-figure-6-6-2.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [151]
+
+LaTeX Warning: Reference `fig:C5:PipelineCrawler' on page 152 undefined on input line 185.
+
+
+Package natbib Warning: Citation `Bendsoe2004' on page 152 undefined on input line 217.
+
+[152]
+<./pdf/thesis-figure-6-8-1.pdf, id=4784, 510.17pt x 54.55482pt>
+File: ./pdf/thesis-figure-6-8-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-8-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-8-1.pdf  used on input line 219.
+(pdftex.def)             Requested size: 560.5193pt x 59.9439pt.
+<./pdf/thesis-figure-6-8-2.pdf, id=4786, 479.86378pt x 31.31499pt>
+File: ./pdf/thesis-figure-6-8-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-8-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-8-2.pdf  used on input line 219.
+(pdftex.def)             Requested size: 560.5193pt x 36.58199pt.
+<./pdf/thesis-figure-6-9-1a.pdf, id=4796, 497.78433pt x 131.81535pt>
+File: ./pdf/thesis-figure-6-9-1a.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-9-1a.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-9-1a.pdf  used on input line 219.
+(pdftex.def)             Requested size: 476.44482pt x 126.16315pt.
+ [153 <./pdf/thesis-figure-6-8-1.pdf> <./pdf/thesis-figure-6-8-2.pdf> <./pdf/thesis-figure-6-9-1a.pdf>]
+
+Package natbib Warning: Citation `Svanberg1987' on page 154 undefined on input line 233.
+
+
+Package natbib Warning: Citation `Svanberg2007' on page 154 undefined on input line 233.
+
+
+Package natbib Warning: Citation `Caasenbrood2020May' on page 154 undefined on input line 233.
+
+) (./3_6_sorotoki/8_beam.tex
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+ [154
+
+]
+
+Package natbib Warning: Citation `CChirikjian1992Dec' on page 155 undefined on input line 11.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+<./pdf/thesis-figure-cosserat.pdf, id=4843, 935.33002pt x 382.37303pt>
+File: ./pdf/thesis-figure-cosserat.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-cosserat.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-cosserat.pdf  used on input line 18.
+(pdftex.def)             Requested size: 302.3127pt x 123.58711pt.
+
+Package natbib Warning: Citation `Boyer2020' on page 155 undefined on input line 24.
+
+
+Package natbib Warning: Citation `Caasenbrood2022Nov' on page 155 undefined on input line 24.
+
+[155]
+
+Package natbib Warning: Citation `Murray2017Sep' on page 156 undefined on input line 35.
+
+
+Package natbib Warning: Citation `Boyer2020' on page 156 undefined on input line 35.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [156 <./pdf/thesis-figure-cosserat.pdf>]
+
+Package natbib Warning: Citation `DellaSantina2021Oct' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Li2023Jan' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Santina2020Dec' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Stella2022Nov' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Chirikjian2015Jul' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Boyer2020' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Caasenbrood2022Nov' on page 157 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Renda2020Apr' on page 157 undefined on input line 61.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[157]
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[158]
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+[159]
+<./pdf/thesis-figure-6-11-2.pdf, id=4954, 245.38374pt x 53.91443pt>
+File: ./pdf/thesis-figure-6-11-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-2.pdf  used on input line 124.
+(pdftex.def)             Requested size: 284.52864pt x 62.51689pt.
+<./pdf/thesis-figure-6-11-3.pdf, id=4956, 245.38475pt x 79.70377pt>
+File: ./pdf/thesis-figure-6-11-3.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-3.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-3.pdf  used on input line 125.
+(pdftex.def)             Requested size: 284.52864pt x 92.42114pt.
+<./pdf/thesis-figure-6-11-1.pdf, id=4958, 264.33702pt x 112.12253pt>
+File: ./pdf/thesis-figure-6-11-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-1.pdf  used on input line 138.
+(pdftex.def)             Requested size: 302.3127pt x 128.24185pt.
+ [160 <./pdf/thesis-figure-6-11-2.pdf> <./pdf/thesis-figure-6-11-3.pdf> <./pdf/thesis-figure-6-11-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 151--164
+
+ []
+
+[161]
+
+Package natbib Warning: Citation `Murray2017Sep' on page 162 undefined on input line 201.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
+
+ []
+
+[162]
+<./pdf/thesis-figure-6-13.pdf, id=5047, 395.00826pt x 112.63782pt>
+File: ./pdf/thesis-figure-6-13.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-13.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-13.pdf  used on input line 223.
+(pdftex.def)             Requested size: 352.10481pt x 100.40544pt.
+ [163 <./pdf/thesis-figure-6-13.pdf>]) (./3_6_sorotoki/9_model.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[164]
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+[165]
+
+Package natbib Warning: Citation `Loria2015Jun' on page 166 undefined on input line 32.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+
+ []
+
+[166]
+<./pdf/thesis-figurex-6-14-1.pdf, id=5126, 237.8486pt x 233.39195pt>
+File: ./pdf/thesis-figurex-6-14-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figurex-6-14-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figurex-6-14-1.pdf  used on input line 70.
+(pdftex.def)             Requested size: 352.10481pt x 345.5108pt.
+ [167] [168 <./pdf/thesis-figurex-6-14-1.pdf>]) (./3_6_sorotoki/10_control.tex
+
+Package natbib Warning: Citation `Caasenbrood2022Apr' on page 169 undefined on input line 4.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [169
+
+]
+
+Package natbib Warning: Citation `Illingworth1987Sep' on page 170 undefined on input line 35.
+
+[170]
+<./pdf/thesis-figure-6-15.pdf, id=5217, 358.84062pt x 233.26146pt>
+File: ./pdf/thesis-figure-6-15.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-15.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-15.pdf  used on input line 36.
+(pdftex.def)             Requested size: 337.87538pt x 219.64664pt.
+<./pdf/thesis-figure-6-16.png, id=5219, 815.2056pt x 254.3904pt>
+File: ./pdf/thesis-figure-6-16.png Graphic file (type png)
+<use ./pdf/thesis-figure-6-16.png>
+Package pdftex.def Info: ./pdf/thesis-figure-6-16.png  used on input line 36.
+(pdftex.def)             Requested size: 337.87538pt x 105.43806pt.
+ [171 <./pdf/thesis-figure-6-15.pdf> <./pdf/thesis-figure-6-16.png>]) (./3_6_sorotoki/11_studycases.tex [172
+
+]
+<./pdf/thesis-figure-6-17.pdf, id=5250, 244.98225pt x 196.50214pt>
+File: ./pdf/thesis-figure-6-17.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-17.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-17.pdf  used on input line 35.
+(pdftex.def)             Requested size: 248.96053pt x 199.7009pt.
+<./pdf/thesis-figure-6-18.pdf, id=5254, 245.38776pt x 194.37016pt>
+File: ./pdf/thesis-figure-6-18.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-18.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-18.pdf  used on input line 35.
+(pdftex.def)             Requested size: 248.96053pt x 197.20798pt.
+ [173 <./pdf/thesis-figure-6-17.pdf> <./pdf/thesis-figure-6-18.pdf>]
+<./pdf/thesis-figure-6-19-1.pdf, id=5311, 365.12692pt x 98.99356pt>
+File: ./pdf/thesis-figure-6-19-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-19-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-19-1.pdf  used on input line 56.
+(pdftex.def)             Requested size: 352.10481pt x 95.46321pt.
+ [174
+
+ <./pdf/thesis-figure-6-19-1.pdf>] (./fig/walker_states.pdf_tex
+<./pdf//states.pdf, id=5337, page=1, 269.40376pt x 100.63828pt>
+File: ./pdf//states.pdf Graphic file (type pdf)
+<use ./pdf//states.pdf, page 1>
+Package pdftex.def Info: ./pdf//states.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 231.17647pt x 86.3614pt.
+) (./fig/fig_passivewalker_theta.tex) (./fig/fig_passivewalker_theta_gait.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 310--83
+[][]
+ []
+
+
+Package natbib Warning: Citation `Raeisinezhad2021May' on page 175 undefined on input line 90.
+
+
+Underfull \vbox (badness 5924) has occurred while \output is active []
+
+ [175 <./pdf//states.pdf>]
+
+Package natbib Warning: Citation `Caasenbrood2020May' on page 176 undefined on input line 92.
+
+<./pdf/thesis-figure-6-22.pdf, id=5370, 327.29538pt x 98.13515pt>
+File: ./pdf/thesis-figure-6-22.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-22.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-22.pdf  used on input line 99.
+(pdftex.def)             Requested size: 337.87538pt x 101.31091pt.
+<./pdf/thesis-figure-6-23.pdf, id=5372, 245.38475pt x 72.12144pt>
+File: ./pdf/thesis-figure-6-23.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-23.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-23.pdf  used on input line 109.
+(pdftex.def)             Requested size: 337.87538pt x 99.30869pt.
+[176] [177 <./pdf/thesis-figure-6-22.pdf> <./pdf/thesis-figure-6-23.pdf>]
+<./pdf/thesis-figure-6-24.pdf, id=5429, 250.03212pt x 224.78178pt>
+File: ./pdf/thesis-figure-6-24.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-24.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-24.pdf  used on input line 153.
+(pdftex.def)             Requested size: 293.41795pt x 263.78592pt.
+ [178 <./pdf/thesis-figure-6-24.pdf>]
+<./pdf/thesis-figure-6-25.pdf, id=5452, 264.457pt x 174.13657pt>
+File: ./pdf/thesis-figure-6-25.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-25.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-25.pdf  used on input line 165.
+(pdftex.def)             Requested size: 284.52864pt x 187.36584pt.
+ [179 <./pdf/thesis-figure-6-25.pdf>]
+<./pdf/thesis-figure-6-26-1.pdf, id=5492, 244.98528pt x 126.27878pt>
+File: ./pdf/thesis-figure-6-26-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-26-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-26-1.pdf  used on input line 182.
+(pdftex.def)             Requested size: 266.74458pt x 137.5024pt.
+<./pdf/thesis-figure-6-26-2.pdf, id=5494, 242.45581pt x 122.24069pt>
+File: ./pdf/thesis-figure-6-26-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-26-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-26-2.pdf  used on input line 183.
+(pdftex.def)             Requested size: 266.74458pt x 134.49501pt.
+ [180] [181 <./pdf/thesis-figure-6-26-1.pdf> <./pdf/thesis-figure-6-26-2.pdf>] [182]
+Underfull \hbox (badness 10000) in paragraph at lines 236--244
+
+ []
+
+<./pdf/thesis-figure-6-28.pdf, id=5538, 326.57607pt x 106.49788pt>
+File: ./pdf/thesis-figure-6-28.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-28.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-28.pdf  used on input line 262.
+(pdftex.def)             Requested size: 337.87538pt x 110.18642pt.
+[183 <./pdf/thesis-figure-6-28.pdf>]
+<./pdf/thesis-figure-6-27.pdf, id=5562, 238.27515pt x 294.54047pt>
+File: ./pdf/thesis-figure-6-27.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-27.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-27.pdf  used on input line 269.
+(pdftex.def)             Requested size: 302.3127pt x 373.73413pt.
+ [184 <./pdf/thesis-figure-6-27.pdf>]
+Overfull \hbox (6.50545pt too wide) in paragraph at lines 270--270
+|[]\T1/lmr/bx/n/12 Impedance con-trol of soft robot ma-nip-u-la-tor with static
+ []
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 271.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 273.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 275.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 277.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 277.
+
+[185
+
+]
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 279.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 279.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 296.
+
+
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 341.
+
+[186]
+<./pdf/thesis-figure-6-29-1.pdf, id=5726, 479.8748pt x 100.52054pt>
+File: ./pdf/thesis-figure-6-29-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-29-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-1.pdf  used on input line 390.
+(pdftex.def)             Requested size: 532.49162pt x 111.55609pt.
+<./pdf/thesis-figure-6-29-2.pdf, id=5728, 480.27129pt x 99.91127pt>
+File: ./pdf/thesis-figure-6-29-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-29-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-2.pdf  used on input line 390.
+(pdftex.def)             Requested size: 532.49162pt x 110.77931pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./pdf/thesis-figure-6-30.pdf, id=5736, 338.09412pt x 150.35974pt>
+File: ./pdf/thesis-figure-6-30.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-30.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-30.pdf  used on input line 390.
+(pdftex.def)             Requested size: 284.52864pt x 126.54909pt.
+<./pdf/thesis-figure-6-31.pdf, id=5738, 338.73349pt x 150.35674pt>
+File: ./pdf/thesis-figure-6-31.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-31.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-31.pdf  used on input line 390.
+(pdftex.def)             Requested size: 284.52864pt x 126.30107pt.
+<./pdf/thesis-figure-6-32.pdf, id=5740, 338.09412pt x 150.35373pt>
+File: ./pdf/thesis-figure-6-32.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-32.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-32.pdf  used on input line 390.
+(pdftex.def)             Requested size: 284.52864pt x 126.54402pt.
+[187 <./pdf/thesis-figure-6-29-1.pdf> <./pdf/thesis-figure-6-29-2.pdf>] [188 <./pdf/thesis-figure-6-30.pdf> <./pdf/thesis-figure-6-31.pdf> <./pdf/thesis-figure-6-32.pdf>]
+<./pdf/thesis-figure-6-32-1.pdf, id=5837, 328.14897pt x 68.3343pt>
+File: ./pdf/thesis-figure-6-32-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-32-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-32-1.pdf  used on input line 398.
+(pdftex.def)             Requested size: 337.87538pt x 70.36426pt.
+<./pdf/thesis-figure-6-32-2.pdf, id=5839, 328.158pt x 86.65073pt>
+File: ./pdf/thesis-figure-6-32-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-32-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-32-2.pdf  used on input line 399.
+(pdftex.def)             Requested size: 337.87538pt x 89.21684pt.
+ [189
+
+]) (./3_6_sorotoki/12_conclusion.tex [190 <./pdf/thesis-figure-6-32-1.pdf> <./pdf/thesis-figure-6-32-2.pdf>]
+<./pdf/thesis-figure-6-34.pdf, id=5874, 244.98425pt x 207.6026pt>
+File: ./pdf/thesis-figure-6-34.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-34.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-34.pdf  used on input line 5.
+(pdftex.def)             Requested size: 284.52864pt x 241.12643pt.
+<./pdf/thesis-figure-6-35.pdf, id=5876, 351.63472pt x 109.43686pt>
+File: ./pdf/thesis-figure-6-35.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-35.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-35.pdf  used on input line 5.
+(pdftex.def)             Requested size: 337.87538pt x 105.1567pt.
+ [191 <./pdf/thesis-figure-6-34.pdf> <./pdf/thesis-figure-6-35.pdf>]) [192
+
+]
 \openout2 = `3_7_conclusion/conclusion.aux'.
 
  (./3_7_conclusion/conclusion.tex
 Chapter 7.
 
-LaTeX Warning: Reference `chap:topo' on page 49 undefined on input line 7.
+LaTeX Warning: Reference `chap:design_opt' on page 193 undefined on input line 12.
 
-[49
-
-
-]
-
-LaTeX Warning: Reference `' on page 50 undefined on input line 14.
+[193
 
 
-LaTeX Warning: Reference `chap:topo' on page 50 undefined on input line 16.
+] [194]
+Overfull \hbox (2.02046pt too wide) in paragraph at lines 43--43
+|[]\T1/lmr/bx/n/14.4 Recommendations and fu-ture hori-zons for soft
+ []
 
-[50]) [51] [52
+
+LaTeX Warning: Reference `' on page 195 undefined on input line 44.
+
+[195]) [196] [197
 
 
 
-] [53
 
-] [54] (./3_1_introduction/A_list_of_definitions.tex
+] [198] (./3_1_introduction/A_list_of_definitions.tex
 Appendix A.
-
-LaTeX Warning: Reference `' on page 55 undefined on input line 2.
-
-
-LaTeX Warning: Reference `' on page 55 undefined on input line 2.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-) [55
 
-] [56
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
-] (build/thesis.bbl [57
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+[199
 
 ]
-Underfull \hbox (badness 1210) in paragraph at lines 137--141
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+) (./3_4_pccmodel/A1_passivity.tex [200]
+Appendix B.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+[201
+
+] [202]) (./3_5_cosseratmodel/A1_lietheory.tex [203] [204
+
+]
+Appendix C.
+[205] [206]) (./3_5_cosseratmodel/A2_jacobian.tex) (./3_6_sorotoki/A1_newmark.tex [207] [208
+
+]
+Appendix D.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package natbib Warning: Citation `Newmark1959Jul' on page 209 undefined on input line 5.
+
+) [209] [210] (build/thesis.bbl [211
+
+
+
+] [212]
+Underfull \hbox (badness 1210) in paragraph at lines 286--290
 []\T1/lmr/m/n/9 Chirikjian, G. S. and Bur-dick, J. W. (1992).  A Ge-o-met-ric Ap-proach to
  []
 
-[58] [59]
-Underfull \hbox (badness 2368) in paragraph at lines 292--296
+[213] [214] [215]
+Underfull \hbox (badness 2368) in paragraph at lines 535--539
 []\T1/lmr/m/n/9 Garcia, C. (2019).  Robots Are a Few of My Fa-vorite Things.  [On-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--296
+Underfull \hbox (badness 10000) in paragraph at lines 535--539
 \T1/lmr/m/n/9 line; ac-cessed 15. Sep. 2022], url: [][]$\T1/lmtt/m/n/9 https : / / computerhistory . org / blog /
  []
 
-[60] [61] [62] [63] [64] [65] [66]) [67]
+[216] [217] [218]
+Underfull \hbox (badness 3503) in paragraph at lines 914--918
+\T1/lmr/m/n/9 Order Finite-Element Mod-els.  \T1/lmr/m/it/9 IEEE/ASME Trans-ac-tions on Mecha-tron-ics\T1/lmr/m/n/9 ,
+ []
+
+[219] [220] [221] [222] [223] [224] [225] [226] [227]) [228]
 \openout2 = `6_acknowledgement/acknowledgement.aux'.
 
- (./6_acknowledgement/acknowledgement.tex [68
-
-
-]) [69]
+ (./6_acknowledgement/acknowledgement.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70] [71]
+ [229
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [230] [231]
 \openout2 = `7_publications/publications.aux'.
 
- (./7_publications/publications.tex [72
+ (./7_publications/publications.tex [232
 
 
 
@@ -1951,7 +3094,7 @@ Overfull \hbox (1.94638pt too wide) in paragraph at lines 60--62
 []\T1/lmr/m/n/10 A. Amoozan-deh Nobaveh, and B. Caasen-brood, "\T1/lmr/m/it/10 De-sign Fea-si-bil-ity of an Energy-
  []
 
-[73]
+[233]
 Overfull \hbox (7.74335pt too wide) in paragraph at lines 70--71
 \T1/lmr/m/it/10 elling and Con-trol of Soft Robots\T1/lmr/m/n/10 ,^^Q 4TU Fed-er-a-tion`s Sym-po-sium on Soft Robotics,
  []
@@ -1961,39 +3104,61 @@ Overfull \hbox (0.91869pt too wide) in paragraph at lines 72--73
 \T1/lmr/m/it/10 based Con-trol of Soft Robots\T1/lmr/m/n/10 ,^^Q Eu-ro-pean Con-trol Con-fer-ence (ECC), 2021. (main
  []
 
-) [74]
+) [234]
 \openout2 = `8_cv/cv.aux'.
 
- (./8_cv/cv.tex) [75
+ (./8_cv/cv.tex) [235
 
 
 
 
-] [76
+] [236
 
 
 ]
 
 Package natbib Warning: There were undefined citations.
 
-[77] (build/thesis.aux (build/0_preface/preface.aux) (build/3_7_conclusion/conclusion.aux) (build/6_acknowledgement/acknowledgement.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
+[237]
+
+/home/brandon/Documents/phd/thesis/thesis.tex:233: LaTeX Error: \begin{example} on input line 30 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(build/thesis.aux (build/0_preface/preface.aux) <Reading QR code for "https://bit.ly/3zIvbHt" at level 2-M from aux file.>
+(build/3_7_conclusion/conclusion.aux) (build/6_acknowledgement/acknowledgement.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
 
 LaTeX Warning: There were undefined references.
 
- ) 
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 30 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 58069 strings out of 478287
- 1349429 string characters out of 5849289
- 1987079 words of memory out of 5000000
- 74767 multiletter control sequences out of 15000+600000
- 599507 words of font info for 110 fonts, out of 8000000 for 9000
+ 63641 strings out of 478287
+ 1448878 string characters out of 5849289
+ 2050760 words of memory out of 5000000
+ 79176 multiletter control sequences out of 15000+600000
+ 649798 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,20n,118p,3086b,2468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on build/thesis.pdf (95 pages, 14628031 bytes).
+ 115i,26n,118p,3073b,2674s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on build/thesis.pdf (253 pages, 36799855 bytes).
 PDF statistics:
- 1764 PDF objects out of 2073 (max. 8388607)
- 1395 compressed objects within 14 object streams
- 337 named destinations out of 1000 (max. 500000)
- 461 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7039 PDF objects out of 7423 (max. 8388607)
+ 5613 compressed objects within 57 object streams
+ 1270 named destinations out of 1440 (max. 500000)
+ 2096 words of extra memory for PDF output out of 10000 (max. 10000000)
 

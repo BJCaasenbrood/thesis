@@ -28,6 +28,7 @@
     stringstyle=\color{purple},             % Strings are purple
     showstringspaces=false,                 % Don't put marks in string spaces
     tabsize=1,                              % 5 spaces per tab
+    frame=single,
     morekeywords={},
     morekeywords=[2]{on, off, interp},
     morekeywords=[3]{pi,rotate},
@@ -42,3 +43,11 @@
     frame = single,
     xrightmargin=.3in                           % Line numbers go in steps of 5
 }
+
+\lstnewenvironment{matlabcode}[1][]%
+{
+   \noindent
+   \minipage{\linewidth} 
+   \vspace{0.5\baselineskip}
+   \lstset{style=matlab}}
+{\endminipage}

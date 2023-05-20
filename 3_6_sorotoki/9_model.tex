@@ -4,7 +4,7 @@
 In many instances, soft robots comprise multiple dynamic components that are interconnected to form the overall system. For instance, the soft robotic hand depicted in Figure \ref{fig:C5:examplebots}c comprises five actively controlled soft fingers connected to a rigid palm base, each of which exhibits its own fluid-structure interaction. While each soft finger can be modeled through the \class{Shape} class, the class itself lacks a composer or solver that addresses the interconnections between a network of dynamic systems.
 
 To address the issue, we propose the \class{Model.m} class, which concatenates dynamic systems to systematically increase complexity. The class is equipped with an implicit solver that facilitates communication of state information between subsystems. The goal of the \class{Model.m} class is two-fold: $(i)$ to facilitate the composition of multiple dynamic components that form a soft robotic system, and $(ii)$ to leverage the dynamic network structure to design controllers through interconnection of subsystems.
-For example, a soft robot, the fluidic actuation, and the model-based controller can be modelled as three seperate entities and be composed into one global closed-loop system. This approach also enables the development of adaptive controllers that require additional state dynamics for online estimation of parameters.
+For example, a soft robot, the fluidic actuation, and the model-based controller can be modelled as three seperate entities and be composed into one global closed-loop system. This approach also enables the development of adaptive controllers that require additional state dynamics for online estimation of parameters. \\
 
 \textbf{A. Interconnected network of dynamical systems.} The class \class{Model.m} allows users to compose an arbitrarily large network of dynamical systems that are presented in the state-space structure $\Sigma_i:\; \dot{\zB_i} = \fB_{i}(\zB_i, \uB_i, t)$. Then, the network of dynamical systems can written as
 %
@@ -61,13 +61,13 @@ The objective is to recreate the experimental oscillatory behavior of the soft h
 
 For each soft finger, it is assumed that it has its own fluidic network that is equipped with internal pressure regulation. However, as each soft finger deforms, the internal volume of the pressure reservoir also changes. This volumetric change is modeled as $V(\alpha) = V_0 (1 + \tanh(\alpha))$, where it is assumed that $\alpha = 0.06 q_1$ (i.e., the first joint of the soft beam) and $V_0$ the initial volume. Then, a for-loop is used to include the both \class{Shapes} and \class{Fluidic} systems to the global network of dynamical systems. 
 
-Finally, \code{mdl.addController(@Control) } is used to add the control law. In this auxilary function, we specifiy the pressure reference for the fluidic network, and we return the state deformations of the soft fingers to the fluidic network; required for the computation of the volumetric change. The dynamic simulation is solved implicity using the \code{mdl.simulate} command. The code for the dynamic simulation of the soft robotic hand is shown in Figure \ref{fig:C5:soft_hand_simulation}.
+Finally, \code{mdl.addController(@Control) } is used to add the control law. In this auxiliary function, we specify the pressure reference for the fluidic network, and we return the state deformations of the soft fingers to the fluidic network; required for the computation of the volumetric change. The dynamic simulation is solved implicitly using the \code{mdl.simulate} command. The code for the dynamic simulation of the soft robotic hand is shown in Figure \ref{fig:C5:soft_hand_simulation}.
 
 %\afterpage{
 \begin{figure*}[!t]
 \centering
 %\vfill
-\includegraphics*[width=0.99\textwidth]{./pdf/thesis-figure-6-14-1.pdf}
+\includegraphics*[width=0.99\textwidth]{./pdf/thesis-figurex-6-14-1.pdf}
 %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-14-2.pdf}
 %\input{./fig/fig_model_softhand_true.tex} \\[-0.01em]
 %\input{./fig/fig_model_softhand_simu.tex} \vspace{-3mm}

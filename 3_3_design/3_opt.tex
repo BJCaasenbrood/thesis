@@ -1,20 +1,23 @@
 \section{Nonlinear topology optimization}
 \label{chap:topo} 
+The present study focuses on the solution scheme for nonlinear deformations in hyper-elastic continuum solids. To enhance this approach, we introduce a modification to the Finite Element Method (FEM) model, known as the Solid Isotropic Material With Penalization (SIMP) method. This method is a widely used material interpolation scheme in topology optimization \cite{Bendsoe2003,Gain2013Dec,Talischi2012Mar,Vasista2013Jul}. Subsequently, we elaborate on how the optimization problem can be formulated to generate topologies driven by soft fluidic actuation.
+
 \subsection{Solid Isotropic Material With Penalization (SIMP)}
-The Solid Isotropic Material With Penalization (SIMP) method is a popular material interpolation scheme used in topology optimization \cite{Sigmund2015,Gain2013,Vasista2013}. In the approach, each finite element $e \in \{1,2,...,n\}$ is assigned with a continuous density variable $\rho_e \in [0,1]$ to indicate if an elemental volume is solid ($\rho_e = 1$) or void ($\rho_e = 0$). This leads to a real-valued density field representing the material distribution within a discretized domain $\mathcal{B}_0$, where the global material distribution is represented by the density vector $\vec{\rho} = \left[\,\rho_1,\,\rho_2,...,\,\rho_n\,\right]^\top$. The density vector $\vec{\rho}$ contains the design variables of the optimization scheme. To relate these artificial densities to elasticity, the strain energy of the constitutive material model ${\Psi}$ is then parameterized using $\vec{\rho}$. To improve numerical robustness, a modified SIMP approach is used in which the strain-energy function is artificially modified as follow 
+In the SIMP approach, each finite element $e \in \{1,2,...,n\}$ is assigned with a continuous density variable $\rho_e \in [0,1]$ to indicate if an elemental volume is solid ($\rho_e = 1$) or void ($\rho_e = 0$). This leads to a real-valued density field representing the material distribution within a discretized domain $\mathcal{B}_0$, where the global material distribution is represented by the density vector $\vec{\rho} = \left(\rho_1,\,\rho_2,\,...,\,\rho_n\right)^\top$. The density vector $\vec{\rho}$ then form the design variables of the optimization problem. To relate these artificial densities to elasticity, the strain energy density of the constitutive material model ${\Psi}$ is then parameterized using $\vec{\rho}$. To improve numerical robustness, a modified SIMP approach is used in which the strain-energy function is artificially modified as follows:
 %
 \begin{equation}
 {\Psi}_e = [\,\varepsilon + (1-\varepsilon)\,{\rho_e}^p\,]\, {\Psi}, \label{eq:simp}
 \end{equation}
 %
-where $p>1$ is the penalty factor for penalizing intermediate densities during the optimization process, and $0 < \varepsilon \ll 1$ is a lower-bound on the material densities. In this work, we choose $p = 4$ and $\varepsilon = 10^{-3}$. Given the artificial elasticity model above, it shall be clear that residual vector function in \eqref{eq:residual} now depends on the nodal displacements and the densities of the adaptive topology, $\boldsymbol{x}$ and $\boldsymbol{\rho}$, respectively.
+where $p\ge 1$ is the penalty factor for penalizing intermediate densities during the optimization process, and $0 < \varepsilon \ll 1$ is a lower-bound on the material densities. In this work, we choose $p = 4$ and $\varepsilon = 10^{-3}$. Given the artificial elasticity model above, it shall be clear that residual vector in \eqref{eq:residual} now depends on the nodal displacements and the densities of the adaptive topology, $\boldsymbol{x}$ and $\boldsymbol{\rho}$, respectively.
 
-\subsection{Artificial pneumatic loads by exploring dilation}
-The most general principle of actuation in soft robotics involves pneumatic networks that are embedded in the elastic body. Within the context of topology optimization, however, describing internal pressure-based loads is difficult. Contrary to conventional optimization problems with static loads, in a pressure-based problem, the location, direction, and magnitude of the load changes concerning the material distribution at every optimization step. This inherently yields design-dependency in the global force vector. To resolve this difficulty, we exploit the connectivity properties of polygonal tessellations to describe the physics involving pneumatics efficiently. More specifically, isolated regions of void polygonal elements will artificially mimic the geometrical loads in pneumatic actuation by volumetric expansion or contraction.
+\subsection{Artificial fluidic loads by elemental dilation}
+The most general principle of actuation in soft robotics involves pneumatic networks embedded in the elastic body. However, within the context of topology optimization, describing internal fluidic loads can be challenging. Unlike conventional optimization problems with static loads, in a pressure-based problem, the location, direction, and magnitude of the load change concerning the material distribution at every optimization step. This inherently yields design-dependency in the global force vector. To resolve this difficulty, we exploit the connectivity properties of polygonal tessellations to describe the physics involving pneumatics efficiently. Specifically, isolated regions of void polygonal elements will artificially mimic the geometrical loads in pneumatic actuation by volumetric expansion or contraction.
 
-To identify void regions in the topology, we introduce the notion of a so-called `virus' element whose purpose is to infect neighboring elements with a low elemental density (voids). These virus elements are chosen a-priori and invariant, similar to the input of a pneumatic network. If the elements adjacent to an infected element have a density lower than a specified threshold $\gamma$, that is, $\rho_e < \gamma$, they become infected, and its logic will spread to its adjacent neighborhood. Afterward, each infected element will be influenced by the same pneumatic load. Clearly, as the topological layout of the discretized domain $\mathcal{B}_0$ changes during the optimization procedure, the influence of the pneumatic load will vary accordingly. To better reflect the physics involving pneumatics, facial connectivity must be qualified for infection, where two elements must share a common edge to be adjacent. 
+To identify void regions in the topology, we introduce the notion of a so-called "\emph{virus}" element whose purpose is to infect neighboring elements with a low elemental density (voids). These virus elements are chosen \textit{a-priori} and remain invariant, similar to the input of a pneumatic network. If the elements adjacent to an infected element have a density lower than a specified threshold $\gamma$, that is, $\rho_e < \gamma$, they become infected, and its infection rule will spread to its adjacent neighborhood. Afterwards, each infected element will be influenced by the same pneumatic load. Clearly, as the topological layout of the discretized domain $\mathcal{B}_0$ changes during the optimization procedure, the influence of the pneumatic load will vary accordingly. To better reflect the physics involving pneumatics, facial connectivity must be qualified for infection, where two elements must share a common edge to be adjacent, \ie, edge connection rather than node connection.
 
-A flood-fill algorithm is used \cite{chartrand1977} to find the affected region of a virus element efficiently. In case of irregular tessellations, like the Voronoi tessellation, the flood-fill algorithm requires an adjacency matrix $\boldsymbol{\Gamma}$, which contains information about the mesh connectivity. The adjacency matrix can be directly computed from the element-node-incidence matrix. Here, the incidence matrix $\boldsymbol{A} \in \N^{n\times m}$ is a sparse unit-matrix with $n$ columns for each element and $m$ rows for each node, where $\boldsymbol{A}_{ij} = 1$ iff node $i$ is incident upon element $j$. Given the incidence matrix, the adjacency matrix $\boldsymbol{\Gamma}\in \N^{n\times n}$ can be computed by
+
+A flood-fill algorithm is used \cite{Chartrand1977Jan} to find the affected region of a virus element efficiently. In case of irregular tessellations, like the Voronoi tessellation, the flood-fill algorithm requires an adjacency matrix $\boldsymbol{\Gamma}$, which contains information about the mesh connectivity. The adjacency matrix can be directly computed from the element-node-incidence matrix. Here, the incidence matrix $\boldsymbol{A} \in \Z^{n\times m}$ is a sparse unit-matrix with $n$ columns for each element and $m$ rows for each node, where $\boldsymbol{A}_{ij} = 1$ iff node $i$ is incident upon element $j$. Given the incidence matrix, the adjacency matrix $\boldsymbol{\Gamma}\in \Z^{n\times n}$ can be computed by
 %
 \begin{equation}
 \boldsymbol{\Gamma} = \boldsymbol{A}\boldsymbol{A}^\top - \text{diag}(\boldsymbol{A}\boldsymbol{A}^\top), \label{eq:adjecency}
@@ -37,55 +40,58 @@ where the matrix has non-zero entries $\boldsymbol{\Gamma}_{ij} = 1,2$ iff eleme
   %$\text{bool} \gets \textbf{isEnclosed}(\mathcal{I})$\;
         $\mathcal{E} \gets \mathcal{E} \cup \mathcal{I}$\;
   }
-    \caption{Find elemental indices subjected to volumetric differential pressure loads \label{alg:floodfill}}
+    \caption{Find elements subjected to volumetric deformation \label{alg:floodfill}}
 \end{algorithm}
 
-From a mathematical perspective, suppose that Algorithm 1 can be described by a mapping $\phi: \R^n \mapsto \{\N\}$ such that the mapping $\phi(\boldsymbol{\rho})$ returns a set of elemental indices of infected elements $\mathcal{E} \subseteq \{1,2,...,n\}$ that undergo volumetric compression or expansion depending on boundary conditions. Then, the global force matrix $\boldsymbol{f}$ in \eqref{eq:residual} can be assembled from elemental force vectors of the elements belonging to the affected region of the virus element $\mathcal{E}$, that is, 
+From a mathematical perspective, let us consider Algorithm \ref{alg:floodfill} which can be represented by a mapping $\phi: \R^n \mapsto {\Z}$. Here, the mapping $\phi(\boldsymbol{\rho})$ returns a set of elemental indices of infected elements denoted by $\mathcal{E} \subseteq {1,2,...,n}$ that undergo volumetric compression or expansion based on boundary conditions. Using this mapping, we can assemble the global force matrix $\boldsymbol{f}$ in \eqref{eq:residual} from the elemental force vectors of the affected region of the virus element $\mathcal{E}$:
 %
 \begin{equation}
 %\boldsymbol{f}(\boldsymbol{x},\boldsymbol{\rho}) = \sum_{e \in \mathcal{E}} \tilde{p}_n \boldsymbol{W}_{\!e} \boldsymbol{K}_e \boldsymbol{n}_e, \label{eq:pressureforce}
-\boldsymbol{f}(\boldsymbol{x},\boldsymbol{\rho}) = \sum_{e \in \mathcal{E}} \tilde{p}_e \boldsymbol{W}_{\!e} \, \boldsymbol{t}_{e}, \label{eq:pressureforce}
+\fB_{\textrm{ext}}(\boldsymbol{x},\boldsymbol{\rho}) = \sum_{e \in \mathcal{E}} \tilde{p}_e \boldsymbol{W}_{\!e} \, \boldsymbol{t}_{e}, \label{eq:pressureforce}
 \end{equation}
 %
-where $\tilde{p}_e$ is a dimensionless parameter representing the magnitude and direction of artificial pneumatic loading, $\boldsymbol{W}_{\!e}$ a diagonal weighting matrix of densities at nodal level and $\boldsymbol{t}_e = \int_{\mathcal{V}_e} \boldsymbol{B}^\top \boldsymbol{D}_e \boldsymbol{\epsilon}_{v} \, dV$ the elemental force vector with $\boldsymbol{\epsilon}_{v} = [1,1,0]^\top$ the volumetric strain and $\boldsymbol{D}_e$ the fourth-order constitutive elasticity tensor in matrix notation \cite{Renaud2011}. We stress that the global force vector in \eqref{eq:pressureforce} represents an artificial pneumatic load, since this method assumes that the pressure loads can be emulated by anisotropic volumetric change of the polygonal elements. The magnitude and direction of this artificial pneumatic load can be controlled by varying the dimensionless parameter $\tilde{p}_e$.
-
+where $\tilde{p}_e$ is a dimensionless parameter that represents the magnitude and direction of artificial pneumatic loading. $\boldsymbol{W}_{\!e}$ is a diagonal weighting matrix of densities at nodal level, and $\boldsymbol{t}_e = \int_{\mathcal{V}_e} \BB_e^\top \DB_e \nB_v \; dV$ is the elemental force vector. The volumetric strain is represented by $\boldsymbol{n}_{v} = [1,1,0]^\top$, and $\boldsymbol{D}_e := \p \ten{S}/\p \ten{E}$ is the fourth-order constitutive elasticity tensor in matrix notation \cite{Renaud2011}. It is important to note that the global force vector in \eqref{eq:pressureforce} represents an artificial pneumatic load. This method assumes that pressure loads can be emulated by anisotropic volumetric change of the polygonal elements. By varying the dimensionless parameter $\tilde{p}_e$, the magnitude and direction of this artificial pneumatic load can be controlled.
 
 \subsection{Optimization problem}
-Given the notion of morphology in soft robotics, which is similar to compliant mechanisms, the general objective is to maximize the output displacement $\boldsymbol{u}_{out}$ on a virtual workpiece modeled by an artificial stiffness $k_{out} > 0$ \cite{Sigmund2015, Gain2013}. The objective function or the (desired) output displacement can be expressed by $\Phi = \boldsymbol{L}^\top\boldsymbol{x}(\boldsymbol{\rho})$, where $\boldsymbol{L} \in \R^{2n}$ a sparse unit-vector composed of nonzero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot. Given this description of directional output displacement, the topology optimization problem for soft robots can be formulated as
+Given the concept of morphology in soft robotics, which is similar to compliant mechanisms, the primary goal is to maximize the output displacement $\boldsymbol{x}_{out}$ on a virtual workpiece modeled by an artificial stiffness $k_{out} > 0$ \cite{Bendsoe2003,Gain2013Dec}. The objective function or the desired output displacement can be expressed as $\Phi = \boldsymbol{L}^\top\boldsymbol{x}(\boldsymbol{\rho})$, where $\boldsymbol{L} \in \R^{2n}$ is a sparse unit-vector composed of non-zero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot. Given this description of directional output displacement, the topology optimization problem for soft robots can be formulated as:
 \begin{equation}
 \begin{aligned}
 \max_{\boldsymbol{\rho}} \quad &  \Phi = \boldsymbol{L}^\top \boldsymbol{x}(\boldsymbol{\rho}), \\
 \textrm{s.t.} \quad & c:=\boldsymbol{R}(\boldsymbol{x},\boldsymbol{\rho}) \,= \,0,\\
-& g:=\boldsymbol{v}^\top \boldsymbol{\rho}  \le V^*, \\
+& g:=\boldsymbol{v}^\top \boldsymbol{\rho}  \le V^\star, \\
   &\boldsymbol{\rho} \in \mathcal{P},
   \label{eq:opt}
 \end{aligned}
 \end{equation}
-where $\boldsymbol{R} \in \R^{2n}$ the global residual force vector in its equilibrium state, $\boldsymbol{v} \in \R^{m}$ a constant vector of relative elemental volumes, $V^* \in \Rp$ the maximum material infill, and $\mathcal{P} = \{\boldsymbol{\rho} \in \R^n \; | \; 0  \le \rho_e \le 1 \; \forall e \in [1,n] \}$ a set of feasible material densities that ensure numerical robustness.
+where $\boldsymbol{R} \in \R^{2n}$ the global residual force vector in its equilibrium state, $\boldsymbol{v} \in \R^{m}$ a constant vector of relative elemental volumes, $ 0 < V^\star < 1$ the desired material infill, and $\mathcal{P} = \{\boldsymbol{\rho} \in \R^n \; | \; 0  \le \rho_e \le 1 \; \forall e \in [1,n] \}$ a set of feasible material densities that ensure numerical robustness.
 
 \subsection{Solver and sensitivity analysis}
-In this section, we discuss the use of a gradient-based optimization solver for the synthesis of the soft robot. Herein, we use the Method of Moving Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987}. The MMA is similar to other nonlinear programming approaches, like Optimality Criteria (OC) and Sequential Quadratic Programming (SQP), in that it finds an optimal solution to a nonlinear non-convex optimization problem with inequality constraints. The MMA solves a sequence of sub-problems, i.e., convex approximations of the true problem, which are constructed from gradient-based information of the objective function $\Phi$ and their constraints $c$ and $g$. The sensitivity of the inequality constraint in \eqref{eq:opt} is $\p g / \p \boldsymbol{\rho} = \boldsymbol{v}$ since we assume that the elemental volume $\boldsymbol{v}$ is constant. The sensitivity of the objective function is less trivial due to its dependency on the nodal displacements $\boldsymbol{x}(\boldsymbol{\rho})$. Since it is computationally expensive to obtain the displacements $\boldsymbol{x}$ through the Newton-Raphson method, it becomes beneficial to avoid the computation of their sensitivities. Thus, the sensitivities are computed through the adjoint method in which an augmented objective function is considered
+In this section, we discuss the use of a gradient-based optimization solver for synthesizing the soft robot. Here, we use the Method of Moving Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987Feb}. The MMA is similar to other nonlinear programming approaches, such as Optimality Criteria (OC) and Sequential Quadratic Programming (SQP), in that it finds an optimal solution to a nonlinear non-convex optimization problem with inequality constraints. The MMA solves a sequence of sub-problems, i.e., convex approximations of the true problem, which are constructed from gradient-based information of the objective function $\Phi$ and their constraints $c$ and $g$. The sensitivity of the inequality constraint in \eqref{eq:opt} is $\frac{\partial g}{\partial \boldsymbol{\rho}} = \boldsymbol{v}$ since we assume that the elemental volume $\boldsymbol{v}$ is constant. The sensitivity of the objective function is less trivial due to its dependency on the nodal displacements $\boldsymbol{x}(\boldsymbol{\rho})$. Since it is computationally expensive to obtain the displacements $\boldsymbol{x}$ through the Newton-Raphson method, it becomes beneficial to avoid the computation of their sensitivities. Thus, the sensitivities are computed through the adjoint method in which an augmented objective function is used.
+%
 \begin{equation}
-{\Phi} = \boldsymbol{L}^\top \boldsymbol{x} - \boldsymbol{\lambda}^\top \boldsymbol{R},
+{\Phi}(\xB,\vec{\rho}) = \boldsymbol{L}^\top \boldsymbol{x}(\vec{\rho}) - \boldsymbol{\lambda}^\top \boldsymbol{R}(\xB,\vec{\rho}),
 \end{equation}
-
-\noindent where $\boldsymbol{\lambda} \in \R^{2n}$ is a constant vector referred to as the adjoint vector. Note that, in case of equilibrium (i.e., $\boldsymbol{R} = 0$), the global residual forces are equivalent to zero; therefore, the adjoint vector can be chosen freely. For the sake of brevity, we denote differentiations by $\p(\cdot)/\p x := (\cdot),_{x}$. Differentiations of the objective function with respect to the elemental densities $\rho_e$ for each finite element $e \in \{1,2,...,n\}$ yields
+%
+where $\boldsymbol{\lambda} \in \R^{2n}$ is a constant vector referred to as the adjoint vector. Note that, in case of equilibrium (\ie, $\boldsymbol{R} = \vec{0}_n$), the global residual forces are equivalent to zero; therefore, the adjoint vector can be chosen freely without violating the original optimization problem. 
+%For the sake of brevity, we denote differentiations by $\p(\cdot)/\p x := (\cdot),_{x}$. 
+Differentiations of the objective function with respect to the elemental densities $\rho_e$ for each finite element $e \in \{1,2,...,n\}$ yields
+%
 \begin{align}
-\frac{\Phi}{\p {\rho_e}} & = \,\boldsymbol{L}^\top \frac{\x}{\p \rho_e} - \boldsymbol{\lambda}^\top\left( \frac{\p \boldsymbol{R}}{ \p \x} \frac{\p \x}{\p \rho_e} + \frac{\p \boldsymbol{R}}{ \p \rho_e} \right), \notag \\
- & = \left(\boldsymbol{L}^\top - \boldsymbol{\lambda}^\top \boldsymbol{K}_T \right) \frac{\boldsymbol{x}}{\p \rho_e} - \boldsymbol{\lambda}^\top \frac{\p \boldsymbol{R}}{\p \rho_e},  \label{eq:sen_deriv} 
+\frac{\p \Phi}{\p {\rho_e}} & = \,\boldsymbol{L}^\top \frac{\p \x}{\p \rho_e} - \boldsymbol{\lambda}^\top\left(\frac{\p \boldsymbol{R}}{ \p \x} \frac{\p \x}{\p \rho_e} + \frac{\p \boldsymbol{R}}{ \p \rho_e} \right), \notag \\[0.75em]
+ & = \left(\boldsymbol{L}^\top - \boldsymbol{\lambda}^\top \boldsymbol{K}_T \right) \frac{\p \boldsymbol{x}}{\p \rho_e} - \boldsymbol{\lambda}^\top \frac{\p \boldsymbol{R}}{\p \rho_e},  \label{eq:sen_deriv} 
 \end{align}
-
-\noindent where the Jacobian of the residual force vector is substituted by the tangent stiffness matrix $\KB_T = \p \RB/ \p {\boldsymbol{x}}$ (see \cite{Kim2018}). By choosing the adjoint vector $\boldsymbol{\lambda}^\top = \boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1}$, the terms involving $\boldsymbol{x},_{\rho_e}$ can be eliminated and thus computation of the gradient becomes feasible. Therefore, the gradient of the objective function can be compactly written as
+%
+\noindent where the Jacobian of the residual force vector is substituted by the tangent stiffness matrix $\KB_T:=\tfrac{\p \RB}{\p \x}$ (see \cite{Kim2018}). By choosing the adjoint vector $\boldsymbol{\lambda}^\top = \boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1}$, the terms involving $\tfrac{\p \x}{\p \rho_e}$ can be eliminated and thus computation of the gradient becomes feasible. Following this, the gradient of the objective function can be written compactly as:
+%
 \begin{align}
-\frac{\p {\Phi} }{\p \rho_e} \overset{\eqref{eq:residual}}{=} -\boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1} \left( \int_{\mathcal{B}_0} \boldsymbol{B}^\top \frac{\p \ST}{\p {\rho_e}} \; dV - \frac{ \p \fB}{\p {\rho_e}}  \right). \label{eq:sens_f}
+\frac{\p {\Phi} }{\p \rho_e} \overset{\eqref{eq:residual}}{=} -\boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1} \left( \sum_{e=1}^{n} \int_{\mathcal{V}_e} \boldsymbol{B}_e^\top \frac{\p \underline{\ST}_e}{\p {\rho_e}} \; dV - \frac{ \p \fB_{\textrm{ext}}}{\p {\rho_e}}  \right). \label{eq:sens_f}
 \end{align} 
-
-\noindent However, it shall be clear that the derivation of the loading sensitivity $\boldsymbol{f}\!,_{\rho_e}$ is not straightforward since the global force vector is constructed from nested functions of logic operations (e.g., flood-fill). Therefore, the loading sensitivity is derived numerically using the forward difference method. To reduce computation time, we propose to only compute the sensitivities of the elements at the boundary of the pressure region, since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. Conclusively, a brief overview of the computational design algorithm for synthesizing pressure-driven soft robots is provided in pseudo-code in Algorithm \ref{alg:topology_opt}. 
-
+%
+\afterpage{
 \begin{algorithm}[!t]
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
-  \Input{Domain $\mathcal{B}_0$, material $\Psi$, initial $\boldsymbol{\rho}^{(0)}$, infill $V^*$, virus $\mathcal{V}$, output $\boldsymbol{L}$, pressure $\tilde{p}_e$ }
+  \Input{Domain $\mathcal{B}_0$, material $\Psi$, initial $\boldsymbol{\rho}^{(0)}$, infill $V^*$, virus $\mathcal{V}$, output $\boldsymbol{L}$, artificial pressure $\tilde{p}_e$ }
   \Output{Optimal soft robot topology $\boldsymbol{\rho}^*$}
   construct tessellation $\mathcal{T} \gets {\textbf{VoronoiMesher}}(\mathcal{B}_0)$\;
   \While{$\text{convergence} \neq 1 $}{
@@ -99,3 +105,26 @@ In this section, we discuss the use of a gradient-based optimization solver for 
   }
   \caption{Computational design algorithm for pneumatic soft robots.\label{alg:topology_opt}}
 \end{algorithm}
+
+
+\begin{figure}[!t]
+  \centering
+  \vspace{4mm}
+  \input{./pdf/thesis-figure-3-1.pdf_tex}
+  \caption{Example of the filter and interpolation schemes to reduce mesh artifacts. (a) Ground truth. (b) The raw element-wise density field based on the ground truth. Notice the jitter around the boundaries of the material infill, leading to high sharp gradients in $\tfrac{\p \phi}{\p \rho_e}$. (c) Filtered densities using \eqref{eq:C3:filters}. (d) Isosurface reconstruction of the filtered density field using Radial Basis Function (RBF).}
+  \label{fig:C3:topo_filtering}
+\end{figure}
+}
+
+\noindent However, it should be noted that deriving the loading sensitivity $\p \boldsymbol{f}_{\textrm{ext}}/\p \rho_e$ is not straightforward since the global force vector is constructed from nested functions of logic operations such as flood-fill. Therefore, we derive the loading sensitivity numerically using the forward difference method. To reduce computation time, we propose computing the sensitivities of only the elements at the boundary of the pressure region since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. We provide pseudo-code for the computational design algorithm for synthesizing pressure-driven soft robots in Algorithm \ref{alg:topology_opt}. 
+
+\section{Gradient filters and interpolation}
+A well-known filtering technique is used to solve this issue, which has been proposed by Sigmund et al. \cite{Bendsoe2003}. The design sensitivities are modified based on a weighted average filtering scheme \cite{Gain2013Dec,Bendsoe2003}:
+%
+\begin{equation}
+\frac{\p \tilde{\Phi}}{\p {\rho_e}} = \frac{1}{\rho_e \sum^n_{i=1} H_{e,i}} \sum^n_{i=1} H_{e,i} \,\rho_i \frac{\p {\Phi}}{\p {\rho_i}},
+\label{eq:C3:filters}
+\end{equation}
+%
+where $H_{e,i} := \textrm{max} \left\{0, R_{\textrm{min}} - \Delta(\pB_e,\pB_i)\right\}$ the filter weight, $R_{\textrm{min}}$ the filter radius, and $\Delta(\pB_e,\pB_i)$ the Euclidean distance between the centers of the elements $i$ and $e$. The radial filtering is solely applied to the design sensitivities, and therefore, the polygonal mesh discretization heavily influences the final topology design. To enhance the optimization output quality, we introduce Radial Basis Functions (RBF) interpolation weighted with their filter densities. Subsequently, an isosurface extraction is performed to achieve a clear segregation between void and filled regions. This process is illustrated in Figure \ref{fig:C3:topo_filtering}.
+

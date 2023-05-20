@@ -1,0 +1,84 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06275,0.35686,0.84706}%
+\definecolor{mycolor2}{rgb}{0.86667,0.21176,0.10980}%
+\definecolor{mycolor3}{rgb}{0.18039,0.52157,0.25098}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=1.35\textwidth,
+height=0.065\textwidth,
+at={(0\textwidth,0\textwidth)},
+scale only axis,
+unbounded coords=jump,
+xmin=0,
+xmax=2,
+xlabel style={font=\color{white!15!black}},
+xlabel={time (s)},
+ymin=-0.2,
+ymax=0.6,
+ytick={\empty},
+ylabel style={font=\color{white!15!black}, yshift=18pt},
+ylabel={gait},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids
+]
+\addplot [color=mycolor1, line width=3.0pt, forget plot]
+  table[row sep=crcr]{%
+0.000501000000000085	0\\
+0.199899	0\\
+nan	nan\\
+0.400298999999993	0\\
+0.599696999999982	0\\
+nan	nan\\
+0.800096999999972	0\\
+0.999494999999961	0\\
+nan	nan\\
+1.200396	0\\
+1.39979400000003	0\\
+nan	nan\\
+1.60019400000006	0\\
+1.7995920000001	0\\
+};
+\addplot [color=mycolor2, line width=3.0pt, forget plot]
+  table[row sep=crcr]{%
+0.0731460000000002	0.2\\
+0.272543999999999	0.2\\
+nan	nan\\
+0.472943999999989	0.2\\
+0.672341999999979	0.2\\
+nan	nan\\
+0.873242999999968	0.2\\
+1.07264099999997	0.2\\
+nan	nan\\
+1.27304100000001	0.2\\
+1.47243900000004	0.2\\
+nan	nan\\
+1.67283900000008	0.2\\
+1.87223700000011	0.2\\
+};
+\addplot [color=mycolor3, line width=3.0pt, forget plot]
+  table[row sep=crcr]{%
+0.145791	0.4\\
+0.345188999999996	0.4\\
+nan	nan\\
+0.545588999999985	0.4\\
+0.744986999999975	0.4\\
+nan	nan\\
+0.945887999999964	0.4\\
+1.14528599999999	0.4\\
+nan	nan\\
+1.34568600000002	0.4\\
+1.54508400000005	0.4\\
+nan	nan\\
+1.74598500000009	0.4\\
+1.94538300000012	0.4\\
+};
+\end{axis}
+\end{tikzpicture}%

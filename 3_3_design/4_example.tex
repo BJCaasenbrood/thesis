@@ -1,15 +1,80 @@
-\section{Numerical Examples}
+\newpage
+\section[Numerical examples: generating soft robotic topologies]{Numerical examples: generating soft robotic topologies via optimization}
 \label{chap:results}
-As an illustrative example of the proposed computational algorithm, we synthesize a topology of a soft robot undergoing bending motion. This morphology is often associated with a popular class of soft robots named `PneuNet' actuators \cite{Polygerinos2015b, Galloway2016, Hughes2016}. PneuNet actuators consist of a set of rectangular pneumatic chambers inside an elastomer medium. When pressurized, these chambers inflate, and the elastomer structure undergoes bending. The goal of this numerical study case is to synthesize a soft robot topology that undergoes bending motion similar to the PneuNet actuator. 
+The proposed computational algorithm enables the synthesis of various topologies of soft robots exhibiting diverse motions. The choice of output vector $\LB$ is arbitrary, allowing for the generation of motion patterns that are useful in soft robotic locomotion or grasping by customizing the objective function. Our analysis focuses on three cases: ($i$) linear elongation or contraction, ($ii$) distributed bending, and ($iii$) grasping. All simulations are conducted using MATLAB\textsuperscript{\scriptsize\textregistered} on a modern machine (Ryzen 7-5800H, 3.2GHz). Unless stated otherwise, all simulation examples employ the same material model, specifically, the Yeoh parameters $c_1 = 36$ kPa, $c_2 = 0.25$ kPa, and $c_3 = 0.023$ kPa, which are based on the silicone elastomer Dragonskin 10A \cite{Xavier2022Jun}.
 
-In our example, the following settings are chosen. We consider a rectangular design domain $\mathcal{B}_0$ with dimensions 20$\times$40 mm (as shown in Fig. \ref{fig:topo_result}). The maximum material infill is $V^* = 0.3$. The bottom left corner is fixed, and the right bottom corner is equipped with an artificial spring $k_{out} = 1.0$ N/mm. The objective of the optimization is to maximize the vertical displacement of the left bottom corner in the direction $\boldsymbol{u}_{out}$. It shall be clear that the entries of the vector $\boldsymbol{L}$ are non-zero for the corresponding nodal degrees-of-freedom. The Yeoh parameters are $c_1 = 36$ kPa, $c_2 = 0.25$ kPa, and $c_3 = 0.023$ kPa modelled after the silicone elastomer Dragonskin 10A. Concerning the pneumatic actuation, the adaptive topology is subjected to an artificial pressure parameter $\tilde{p}_e = 0.01$, where the virus element is located at the center of the material domain $\mathcal{B}_0$.
+\subsection{Linear translational soft actuators}
+One of the simplest forms of motion in soft robotics is linear translation. Such motion can be achieved through the use of various topologies, such as the McKibben actuator or a serial chain for bellow-type actuators. Both of these soft actuation principles operate similar: pressurized fluid is applied to an enclosed interior, and due to low-axial compliance compared to the radial compliance imposed by geometrical shape (\eg, bellow shape) or material composites (\eg, McKibben \cite{Paynter1974,Paynter1988}), linear motion is produced.  Given their linear motion, these system are often associated with bio-inspired muscle, due them acting similar to hydrostatic muscular system found in nature \cite{Kier1985}. 
+ 
+In the first optimization benchmark we aim to find the optimal topology for a soft fluidic muscle. Exploring spatial symmetry, we consider a rectangular material domain $\mathcal{B}_0$ of dimension $20 \times 10$ \si{\milli \meter}, which forms the upper-left quadrant of the pneumatic soft muscle. This makes the cross-sectional size of the bellow $40$ \si{\milli \meter} in width and $20$ \si{\milli \meter} in height. The bottom of upper-left quadrant is structurally fixed, the left wall can move only vertically (symmetric boundary condition), and the other boundaries can move freely. The objective of the optimization is to maximize the displacement of the top-left corner in positive vertical direction. The top corner is equipped with an artificial spring $k_{out} = 1.0$ N/mm. The material infill is set to $V^\star = 0.25$. As for the initial conditions, we consider small circular hole of $3$ \si{\milli \meter}, which also resides the virus element subjected to an artificial pressure parameter $\tilde{p}_e = 0.01$. In our analysis, we consider 10k elements.
+%
+\afterpage{
+\begin{figure}[!t]
+  \centering
+  %\vspace{-3mm}
+  %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+  \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-3.pdf}
+  \caption{Evolution of topology optimization solver for the linear soft actuator, where $V^\star = 0.25$. The light blue region is pressurized. It can be observed that after a few iterations, a shape appears that is reminiscent of the conventional bellow. It is noteworthy that the shape is non-convex, with a slight curvature inwards, which enhances elongation without introducing excessive ballooning.}
+  \label{fig:C3:topo_result_bellow}
+\end{figure}
+%
+\begin{figure}[!t]
+  \centering
+  \vspace{-3mm}
+  %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+  \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-4.pdf}
+  \caption{(left) Numerical validation of the optimized linear soft actuator. (right) Input-displacement characteristic of the optimized soft actuator.}
+  \label{fig:topo_result_bellow_fem}
+\end{figure}
+}
 
-\begin{figure}[!b]
-    \centering
-    \vspace{-3mm}
-    %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
-    \caption{Topology optimization results for a soft bending actuator within the design domain of $20 \times 40$ mm. The Yeoh material parameters are $c_1 = 36$ kPa, $c_2 = 0.25$ kPa, and $c_3 = 0.023$ kPa; and $V^* = 0.3$.}
-    \label{fig:topo_result}
-  \end{figure}
+The evolution of the optimization solver is presented in Figure \ref{fig:C3:topo_result_bellow}. Interestingly, it reveals a bellow-shaped soft actuator structure, bearing resemblance to those commonly utilized in engineering applications. Additionally, the optimizer generates a non-convex bellow with  slightly curvature inward. This shape is intended to decrease the axial stiffness of the soft actuators, thereby reducing ballooning during significant elongation. Similar concave bellow designs have been seen in Festo's Bionic Arm \cite{Hairer2002}. The numerical validation of the structure is shown in Figure \ref{fig:topo_result_bellow_fem}, which indicate that the soft topology can achieve 100$\%$ extension at 10 \si{\kilo \pascal}. It is important to note, however, that the slope of the input-output trend is positive decreasing, which suggests that further increase in pressure may eventually lead to ballooning.
 
-  Using the method described in Algorithm \ref{alg:topology_opt}, an optimized topology is obtained (as shown in Fig. \ref{fig:topo_result}). As can be seen, the computational algorithm provides a new and interesting variation on the well-familiar PneuNet actuator. Contrary to its rectangular predecessor, the optimal structure has a significant resemblance to a bellow-shaped actuator to accommodate bending mobility further. To validate our synthesized topology, a three-dimensional finite element analysis is conducted. First, we use Gaussian radial basis functions (RBFs) to reconstruct a smooth manifold surface from the discretized optimization mesh. Due to spatial symmetry, the spatial reconstruction can be horizontally repeated to construct a full `PneuNet' actuator (see Fig. \ref{fig:filter}). The two-dimensional geometry is then imported into CAD and converted to three-dimensional geometry with enclosed pneumatic chambers. The pneumatic chambers are subjected to a positive differential pressure of $\Delta p = 15$ kPa. As can be illustrated by Fig. \ref{fig:fem_topo}, the finite element analysis verifies that the synthesized soft robot topology accomplishes the desired bending morphology when pressurized.
+\subsection{Pinching soft grippers}
+The second optimization benchmark involves the study of compliant mechanisms that are capable of transforming linear forces into grasping or pinching motions. In this analysis, we aim to investigate similar motions through fluidic actuation. It is a well-known issue in optimization for gripping mechanics that solvers frequently generate hinge-like structures that are susceptible to high stress concentration. We hypothesize that our soft material setting can naturally mitigate this problem, due to the overall low material compliance and enabling large deformation.
+
+The soft fluidic gripper's design domain is assumed to be symmetrical. Therefore, only the top half of the mechanism, with dimensions of $45 \times 15$ \si{\milli \meter}, is considered. The left side is fixed structurally, while the bottom can move horizontally due to the symmetry condition. On the right side, a cut-out is introduced, which serves as the gripper region. The objective of the optimization is to maximize the displacement of the gripper corner in negative vertical direction. This top corner is equipped with an artificial spring $k_{out} = 1.0$ N/mm, and the material infill is set to $V^\star = 0.30$. As for the initial conditions, we consider circular hole of radius $6$ \si{\milli \meter} at the left side. Concerning the pneumatic actuation, the adaptive topology is subjected to an artificial pressure parameter $\tilde{p}_e = 0.01$, where the virus element is also located at the left side. In our analysis, we consider 40k elements.
+
+The evolution of the optimization solver is presented in Figure \ref{fig:C3:topo_result_gripper}. The proposed solution consists of a tear-shaped pressure vessel, whose walls are connected to a compliant mechanism through struts that transfer volumetric deformation to pinch-grasping motions. This gripper mechanism is similar to those found in literature \cite{Gain2013Dec,Bendsoe2003}, which involve a central revolute compliant joint, resembling scissors. To validate the proposed structure, we converted the final 2D topology result shown in Figure \ref{fig:C3:topo_result_gripper} into a nonlinear FEM model and subjected it to an input pressure of $u = 10$ \si{\kilo \pascal}. The numerical validation results are presented in Figure \ref{fig:C3:topo_result_gripper_fem}, which also shows the relationship between pressure and gripper distance. Our numerical results demonstrate that gripping morphologies arise when the structure is subjected to positive pressure, where a fully closing grasp is achieved at $u \ge 10$ \si{\kilo \pascal}.
+
+\begin{figure}[!t]
+  \centering
+  %\vspace{-3mm}
+  %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+  \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-7.pdf}
+  \caption{Evolution of topology optimization solver for the soft fluidic gripper, where the material infill is $V^\star = 0.30$. The light blue region is pressurized. The optimizer proposes a topology with a large tear-shaped pressure vessel, whose walls are connected to small struts that transfer the gripping motion.}
+  \label{fig:C3:topo_result_gripper}
+\end{figure}
+
+\begin{figure}[!t]
+  \centering
+  %\vspace{-3mm}
+  %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+  \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-6.pdf}
+  \caption{(left) Numerical validation of the optimized linear soft actuator. (right) Input-displacement characteristic of the optimized soft actuator. Notice that at $u \ge 10$ \si{\kilo \pascal} no further deformations occurs at end-effector level as the gripper tips are in contact.}
+  \label{fig:C3:topo_result_gripper_fem}
+\end{figure}
+
+\subsection{Bending soft actuator -- PneuNet inspired}
+In the final benchmark, we focus on soft actuator that produce distributed bending. Such morphology is often associated with the popular class of soft actuators named "\emph{PneuNet}" actuators \cite{Polygerinos2013,Polygerinos2015,Galloway2016,Hughes2016Nov,Marchese2015}. PneuNet actuators consist of a set of rectangular pneumatic chambers inside an elastomer medium. When pressurized, these chambers inflate, and the elastomer structure undergoes bending. Typically, inextensible composite materials are used at the bottom of the structure to further promote bending. The goal of this numerical study case is to synthesize a soft robot topology that undergoes bending motion similar to the PneuNet actuator. 
+
+In our example, the following settings are chosen. We consider a rectangular design domain $\mathcal{B}_0$ with dimensions 20$\times$40 mm (as shown in Fig. \ref{fig:topo_result}). The maximum material infill is $V^\star = 0.3$. The bottom left corner is fixed, and the right bottom corner is equipped with an artificial spring $k_{out} = 1.0$ N/mm. The objective of the optimization is to maximize the vertical displacement of the left bottom corner in the negative vertical direction. Concerning the pneumatic actuation, the adaptive topology is subjected to an artificial pressure parameter $\tilde{p}_e = 0.01$, where the virus element is located at the center.
+
+\begin{figure}[!t]
+\centering
+%\vspace{-3mm}
+%\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+\includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-2.pdf}
+\caption{Evolution of topology optimization solver for the bending soft actuator, where $V^\star = 0.30$. The light blue region is pressurized. The optimization process results in a topology that bears resemblance to that of conventional PneuNets, with the exception that the pressure chambers take on a tear-shaped form. Additionally, the optimizer generates an in-extensibility layer by depositing more material at the bottom. }
+\label{fig:topo_result}\end{figure}
+
+\begin{figure}[!t]
+  \centering
+  %\vspace{-3mm}
+  %\includegraphics[height=0.33\textwidth]{./img/topo_bend/resultTopo.eps}
+  \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-3-5.pdf}
+  \caption{(left) Numerical validation of the optimized linear soft actuator. (right) Input-curvature characteristic of the optimized soft bending actuator. Notice that the input-output relation is roughly linear, which traditionally is accomplished using composite materials by introducing inextensible layers \cite{Polygerinos2013,Polygerinos2015}.}
+  \label{fig:topo_result_bellow_fem}
+\end{figure}
+
+Using the method described in Algorithm \ref{alg:topology_opt}, an optimized topology is obtained (as shown in Fig. \ref{fig:topo_result}). As can be seen, the computational algorithm provides a new and interesting variation on the well-familiar PneuNet actuator. Contrary to its rectangular predecessor, the optimal structure has a significant resemblance to a bellow-shaped actuator to accommodate bending mobility further. Here, however, these bellows are tear-shaped whose narrow side is oriented downwards. To validate our synthesized topology, a three-dimensional finite element analysis is conducted. First, we use Gaussian radial basis functions (RBFs) to reconstruct a smooth manifold surface from the discretized optimization mesh. Due to spatial symmetry, the spatial reconstruction can be horizontally repeated to construct a full `PneuNet' actuator (see Fig. \ref{fig:topo_result}). The two-dimensional optimization is then transformed into an nonlinear FEM model. The pneumatic chambers are subjected to a positive differential pressure of $\Delta p = 15$ kPa. As can be illustrated by Fig. \ref{fig:topo_result_bellow_fem}, the finite element analysis verifies that the synthesized soft robot topology accomplishes the desired bending morphology when pressurized.

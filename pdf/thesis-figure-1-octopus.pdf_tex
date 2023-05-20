@@ -57,11 +57,14 @@
     \put(0.03287179,0.2569182){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small objective\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{thesis-figure-1-octopus.pdf}}%
     \put(0.0203728,0.04388754){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small environment\end{tabular}}}}%
-    \put(0.22316027,0.37418404){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small reachable workspace $\mathcal{W}$\end{tabular}}}}%
+    \put(0.22316027,0.37418404){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small operational workspace $\mathcal{W}$\end{tabular}}}}%
     \put(0.50111126,0.04290928){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small biological system $\Sigma_{\textrm{bio}}$\end{tabular}}}}%
     \put(0.21202814,0.17685564){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small soft body $\mathcal{B}$\end{tabular}}}}%
-    \put(0.81511167,0.3737783){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize sensory system\end{tabular}}}}%
+    \put(0.63033072,0.34829242){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize 'food'$=\q_d$\end{tabular}}}}%
+    \put(0.84174595,0.26273435){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize $\q_d$\end{tabular}}}}%
+    \put(0.81511167,0.3737783){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize nervous system\end{tabular}}}}%
     \put(0.80929403,0.05980602){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize muscular system\end{tabular}}}}%
+    \put(0.81966222,0.14731339){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scriptsize internal control\end{tabular}}}}%
     \put(0.21575567,0.04216149){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small obstacle $\mathcal{O}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{thesis-figure-1-octopus.pdf}}%
   \end{picture}%

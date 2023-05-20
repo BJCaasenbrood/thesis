@@ -1,5 +1,6 @@
 %!TEX root = ../../thesis.tex
 \chapter{Appendices to Chapter 4}
+\vspace{-5mm}
 \section{Adjoint actions on $\SE{3}$ and $\seg{3}$} 
 \label{app:C2:adjoint}  
 \noindent Given the position vector $\gammaB \in \R^3$ and the homogeneous rotation matrix $\PhiB \in \SO{3}$, the adjoint action of the homogeneous transformation $\mat{g} = (\gammaB,\,\PhiB) \in \SE{3}$ is then defined as
@@ -25,7 +26,7 @@ Note that the operator $(\cdot)^\times$ denotes the isomorphism from $\R^3 \to \
 \end{equation}
 %
 
-\noindent These adjoint representation on the group $\SE{3}$ and its algebra $\seg{3}$ are analogous to the conventional notations in modern robotics mathematics, such as the work of Murray et al. \cite{Murray1994}).
+\noindent These adjoint representation on the group $\SE{3}$ and its algebra $\seg{3}$ are analogous to the conventional notations in modern robotics mathematics, such as the work of Murray et al. \cite{Murray1994}.
 
 %Please note that the superscript $^\sigma (\cdot)$ implies the vector is viewed from an inertial frame at the material coordinate $\sigma$.
 
@@ -87,7 +88,7 @@ By aiming to find the root of the residual dynamics $e(w) = 0$ and choosing $\wB
 where $j$ is the iteration index for finding the intermediate state solution $\wB=\zB_{i+1}$, and $0 < \alpha^+ \le 1$ a constant for controlling the update step. Once the residual dynamics converges on the sub-interval, i.e., $||\eB(\wB)||_2 \ll 1$, we repeat the procedure above until the solutions to $\zB(t)$ are recovered for the finite time horizon $\mathbb{T}$. Now the key here is that a rough approximation of the hessian $\HB(\wB) = \grad{\wB} \eB$ can suffice for numerical convergence. This implies we do not need a close approximation of hessian -- which can significantly speed-up simulation speed. This process, however, might require more iterations for the solutions to converge, but it outweighs computing the Hessian directly. Therefore, let us consider the first Taylor approximation of the Hessian:
 %
 \begin{align}
-    \HB(\wB) & \simeq \tmat{H}(\wB) \notag \\ & := \mat{I}_{2n } - \frac{\Delta t}{2} \begin{pmatrix} 0 & \mat{I}_{n},  \\
+    \HB(\wB) & \simeq \tmat{H}(\wB), \notag \\ & := \mat{I}_{2n } - \frac{\Delta t}{2} \begin{pmatrix} 0 & \mat{I}_{n},  \\
  -\mat{M} \inv \tmat{K} & -\MB\inv \tmat{D}
   \end{pmatrix},
 \end{align}

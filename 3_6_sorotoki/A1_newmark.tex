@@ -1,4 +1,5 @@
 \chapter{Appendices to Chapter 6}
+\vspace{-5mm}
 \section{Newmark-$\beta$ solver}
 \label{app:C5:newmark}
 The Newmark-$\beta$ method is an implicit numerical integration scheme extensively used to solve high-dimensional structural dynamic problem \cite{Newmark1959Jul,Holzapfel2002}. We briefly explain the algorithm implemented in the function \code{Fem.simulate}. First, let us subdivide the time domain such that $(0,...,T)$ with uniform timesteps $\dt = t_{i+1} - t_i$. Then, given the initial conditions for \eqref{eq:C5:femmodel}, we wish to compute the state evolution $\xB(t_i)$ and $\dot{\x}(t_i)$. For conciseness, let us write the discrete states of the FEM model as $\xB(t_i) = \xB^{(i)}$. Through the extended mean value theorem, we can formulate the general Newmark-$\beta$ scheme as
@@ -9,7 +10,7 @@ The Newmark-$\beta$ method is an implicit numerical integration scheme extensive
     {\xB}^{(i+1)}  & = {\vec{x}}^{(i)} + \dt\left[ \dxB^{(i)} + (\tfrac{1}{2}-\beta_2)\ddxB^{(i)} + \beta_2 \ddxB^{(i+1)} \right],
 \end{align}
 %
-where $\beta_1,\beta_2 \ge \frac{1}{2}$. Now, in the expressions above only the forward-time acceleration $\ddxB^{(i+1)}$ is the unknown partial solution, hence we conveniently write $\vec{w} := \ddot{\xB}^{(i+1)}$. Substituting these into the dynamic flow \eqref{eq:C5:femmodel}, we retrieve a residual expression:
+where $\beta_1,\beta_2 \ge \frac{1}{2}$. Now, in the expressions above only the forward-time acceleration $\ddxB^{(i+1)}$ is the unknown partial solution, hence we conveniently write $\vec{w} := \ddot{\xB}^{(i+1)}$. Substitution into the flow \eqref{eq:C5:femmodel}, we find:
 %
 \begin{equation}
 \mat{r}(\vec{w}): = \vec{w} +\nabla_{\xB}\Hm(\vec{w}) + \mat{R}\nabla_{\muB}\Hm(\vec{w}) -  \vec{G}\vec{u}^{(i+1)}.

@@ -31,29 +31,30 @@ In the first case study, the \textit{Sorotoki} toolkit will be used to examine t
 
 The objective of this study is to reproduce the dynamics of the soft passive walker described in Suzumori et al. \cite{Suzumori2008Sep} using \textit{Sorotoki}. In the work of Suzumori et al. \cite{Suzumori2008Sep}, the material parameters of the soft passive walker were given as: Young's modulus $E_0 = 1.2$ (\si{\mega \pascal}), Poisson ratio $\nu_0 = 0.49$, and density $\rho_0 = 3600 \cdot 10^{-12}$ (\si{\kilo \gram \per \milli \metre \cubed}). Since the material model is not exactly specified in \cite{Suzumori2008Sep}, a Neo-Hookean model was utilized with Rayleigh damping $\zeta = 1.5$.
 
-To design the geometry of the V-shaped soft legs, the \code{sStrut(V1,V2,W)} function was utilized. This function generates an element of the \code{Sdf} class, requiring two nodal positions \code{V1,V2} and the strut's width \code{W} as input. The function was used to assemble a pair of legs iteratively, using the union operator implemented as \textit{MATLAB}'s '\code{+}' arithmetic. The legs were then horizontally repeated three times with a uniform spacing of $25$ \si{\milli \metre}. A coupling soft body was added, along with two weights at intermediate locations. The resulting SDF is first converted to an \code{.png} template and the imported in the \code{msh = Mesh('SDF.png','ElementSize',1.0)} to generate the finite element mesh. The code for the implicit modeling routine is given below
+To design the geometry of the V-shaped soft legs, the \code{sStrut(V1,V2,W)} function was utilized. This function generates an element of the \code{Sdf} class, requiring two nodal positions \code{V1,V2} and the strut's width \code{W} as input. The function was used to assemble a pair of legs iteratively, using the union operator implemented as \textit{MATLAB}'s '\code{+}' arithmetic. The legs were then horizontally repeated three times with a uniform spacing of $25$ \si{\milli \metre}. A coupling soft body was added, along with two weights at intermediate locations. The resulting SDF is first converted to an \code{.png} template and the imported in the \code{msh = Mesh('SDF.png','ElementSize',1.0)} to generate the finite element mesh. %The code for the implicit modeling routine is given below
 
-\begin{lstlisting}[style=matlab] 
-sdf = Sdf([]);
-for i = 1:numel(Pts)
-    sdf = sdf + sStrut(Pts{i,1},Pts{i,2},1);
-end
+% \begin{lstlisting}[style=matlab] 
+% sdf = Sdf([]);
+% for i = 1:numel(Pts)
+%     sdf = sdf + sStrut(Pts{i,1},Pts{i,2},1);
+% end
 
-R = sRectangle(2).rotate(pi/4);
-W = R.translate([25,11]) + R.translate([50,11]);
+% R = sRectangle(2).rotate(pi/4);
+% W = R.translate([25,11]) + R.translate([50,11]);
 
-sdf = sdf.repeat([25,0],3) + ... 
-        sStrut([12,11],[62,11],1) + W;
+% sdf = sdf.repeat([25,0],3) + ... 
+%         sStrut([12,11],[62,11],1) + W;
 
-sdf.export('SDF.png');        
-\end{lstlisting}
+% sdf.export('SDF.png');        
+% \end{lstlisting}
 
 The mesh is then utilized to construct the finite element model, \ie, \code{fem = Fem(msh)}. The timestep for the implicit solver is set at $\Delta t = 0.33$ \si{\milli \second}, which is set using \code{fem.setTimeStep(dt)}. Instead of modeling the inclined surface, which would also require rotating the mesh, the direction of the gravitational acceleration vector is modified as follows: $g := \textrm{Rot}_y(\varphi) a_g$ with $\varphi = -\frac{\pi}{6}$ (rad). The gravitational acceleration is then added using the class function \code{fem.addGravity}. The inclined surface is modeled as a horizontal line SDF, which is used as a contact environment for the FEM model through the function \code{fem.addContact}. It should be noted that in Figure \ref{fig:C5:passivewalker_true}, the soft walker is held in place by two fingers, which results in initial deformations of the soft body and nonzero initial conditions for the dynamic locomotion. To account for this, the mesh is pinned at the grasp locations, and the initial quasi-static deformations are solved for using \code{fem.solve}. Finally, the forward dynamics are solved implicitly using a Newmark-$\beta$ solver by calling the routine \code{fem.simulate}.
 
 %
 \begin{figure}[!t]
-    \includegraphics*[width=.495\textwidth]{./pdf/thesis-figure-6-19-1.pdf}
-    \includegraphics*[width=.495\textwidth]{./pdf/thesis-figure-6-19-2.pdf}
+    \centering
+    \includegraphics*[width=.99\textwidth]{./pdf/thesis-figure-6-19-1.pdf}
+    %\includegraphics*[width=.495\textwidth]{./pdf/thesis-figure-6-19-2.pdf}
     %\input{./fig/fig_passivewalker_exp0.tex}
     \caption{Comparison of the front leg rectilinear displacement between the experimental data obtained from Suzumori et al. \cite{Suzumori2008Sep} and the numerical data produced by \textit{Sorotoki} shows that, although there are discrepancies, the step-like behavior and the traveled distance in the horizontal and vertical directions appear to be truthfully captured in comparison to the original experimental data. }
     \label{fig:C5:passivewalker_compare}
@@ -68,17 +69,17 @@ The numerical simulations presented in this study have effectively demonstrated 
 
 \begin{figure}[!t]
 \centering
-\def\svgwidth{0.85\textwidth}
-\input{./pdf/thesis-figure-6-20.pdf_tex}
-%\input{./fig/walker_states.pdf_tex}
+\def\svgwidth{0.65\textwidth}
+%\input{./pdf/thesis-figure-6-20.pdf_tex}
+\input{./fig/walker_states.pdf_tex}
 \caption{Definition of the angular deflection of the three pairs of soft legs, denoted by $\theta_1$, $\theta_2$, and $\theta_3$, respectively. It should be noted that each pair has an intrinsic V-shaped structure, thus their stable equilibrium position during rest is approximately $\theta_i^\star \approx 45$ \si{\degree}. Raw image obtained from \cite{Suzumori2008Sep}.}
 \label{fig:C5:passivewalker_states}
 \vspace{-2mm}
 \end{figure}
 %
 \begin{figure}[!t]
-    %\input{./fig/fig_passivewalker_theta.tex}
-    %\input{./fig/fig_passivewalker_theta_gait.tex}
+    \input{./fig/fig_passivewalker_theta.tex}
+    \input{./fig/fig_passivewalker_theta_gait.tex}
     \caption{Angular deflection of the V-shaped structure of the soft passive walker, simulated with Sorotoki. A clear gait cycle is observed in these deflections, indicating synchronization between the deformable structures due to the coupling of the soft body. By analyzing the stable gait cycles, a gait period of approximately $T_{\textrm{gait}} \approx 47.5$ \si{\milli \second} or $f_{\textrm{gait}} \approx 21.1$ \si{\hertz} is found.}
     \label{fig:C5:passivewalker_gait}
     \vspace{-6mm}
@@ -122,25 +123,25 @@ To simplify the problem, we consider a single pressure chamber of the PneuNet ac
 %     'OptimizationProblem','Compliant');
 % \end{lstlisting}
 %
-The initial material distribution is set using \code{fem.initialTopology(sdf)} with \code{sdf = sCircle(5,[7.5,15])}, which creates a hole in the center of the actuator. The center element of the mesh is designated as an invariant pressure input and influences neighboring elements that satisfy the void conditions (i.e., $\rho_i \le \varepsilon$ with $\varepsilon = 0.1$) using an efficient flood-fill algorithm. The influenced void elements undergo synchronous volumetric expansion to simulate a positive pressure load. Given its similarities to muscular contraction, the syntax for this function is added as \code{fem.addMyocyte}. The material properties of the Elastic 80A resin from Formlabs are then specified using \code{fem.Material = Elastic80A}. Boundary conditions are added to the FEM model using the syntax \code{fem.addSupport}. Finally, the optimization routine is started using the \code{fem.optimize} command. A code snippet is shown below:
+The initial material distribution is set using \code{fem.initialTopology(sdf)} with \code{sdf = sCircle(5,[7.5,15])}, which creates a hole in the center of the actuator. The center element of the mesh is designated as an invariant pressure input and influences neighboring elements that satisfy the void conditions (i.e., $\rho_i \le \varepsilon$ with $\varepsilon = 0.1$) using an efficient flood-fill algorithm. The influenced void elements undergo synchronous volumetric expansion to simulate a positive pressure load. Given its similarities to muscular contraction, the syntax for this function is added as \code{fem.addMyocyte}. The material properties of the Elastic 80A resin from Formlabs are then specified using \code{fem.Material = Elastic80A}. Boundary conditions are added to the FEM model using the syntax \code{fem.addSupport}. Finally, the optimization routine is started using the \code{fem.optimize} command. %A code snippet is shown below:
 
-\begin{lstlisting}[style=matlab] 
-% ------------------------------------------------
-fem = Fem(msh,'TimeSteps',1/60);
+% \begin{lstlisting}[style=matlab] 
+% % ------------------------------------------------
+% fem = Fem(msh,'TimeSteps',1/60);
 
-fem.Material = Elastic80A;
-fem = fem.initialTopology(sCircle(5,[7.5,15]));
+% fem.Material = Elastic80A;
+% fem = fem.initialTopology(sCircle(5,[7.5,15]));
 
-fem = fem.addSupport('Left',[1,1]);
-fem = fem.addSpring('Right',[0,1e-3]);
-fem = fem.addOutput('Right',[0,1]);
-fem = fem.addMyocyte('Center', 10 * kpa);
+% fem = fem.addSupport('Left',[1,1]);
+% fem = fem.addSpring('Right',[0,1e-3]);
+% fem = fem.addOutput('Right',[0,1]);
+% fem = fem.addMyocyte('Center', 10 * kpa);
 
-fem = fem.optimize('Compliant',... 
-                   'MaxIteration', 100, ...
-                   'VolumeInfill', 0.3);
-% ------------------------------------------------
-\end{lstlisting}
+% fem = fem.optimize('Compliant',... 
+%                    'MaxIteration', 100, ...
+%                    'VolumeInfill', 0.3);
+% % ------------------------------------------------
+% \end{lstlisting}
 
 The evolution of the material distribution during the first 100 optimization steps is depicted in Figure \ref{fig:C5:fig_optpneunet_solutions}. These interpolated isosurfaces are taken from the discrete FEM mesh and show the intermediate design solutions. Surprisingly, the optimization algorithm generates a design that is reminiscent of the fast PneuNet design presented by Mosadegh et al. \cite{Mosadegh2014}, but with a bellows-shaped pressure chamber in the form of an upside-down teardrop shape.
 
@@ -195,30 +196,33 @@ The aim of this study is to reproduce the static grasping and dynamic bolt-screw
 \end{multline}
 %
 where $\hB(\q_i,\dq_i)$ represents the collection of nonlinear internal forces, $\pB_i$ is the prescribed pressure input, $\JB_v(\q):= \lfloor\JB(L,\q)\rfloor_3$ is the linear velocity part of the generalized Jacobian matrix of the tip, $\mathcal{S}_{\Omega_{\textrm{env}}}$ represents the nodal indices that penetrates the object, and 
-$$\FT_{{n}} = -\mu_e d \cdot \vec{e}_n, \quad \FT_{{t}} = -\mu_v |\FT_{{n}}| \, \textrm{sign}(\dot{d}) \cdot \vec{e}_t$$
+\begin{equation}
+\FT_{{n}} = -\mu_e d \cdot \vec{e}_n; \quad \FT_{{t}} = -\mu_v |\FT_{{n}}| \, \textrm{sign}(\dot{d}) \cdot \vec{e}_t,
+\end{equation}
+
 denote the normal and tangent contact forces between the $i$-th finger and the rigid object, respectively. The distance between the finger and the object is given by $d = \texttt{sdf}_{\Omega_{\textrm{env}}}(\gammaB_L(\q))$, where $\texttt{sdf}_{\Omega{\textrm{env}}}(\cdot)$ represents the signed distance function of the rigid object and $\gammaB_L(\q)$ the finger's tip position. The parameters $\mu_e, \mu_v > 0$ represent the contact coefficients.
 
-In this study, we utilize a third-order Chebyshev polynomial basis to model the deformation of the pneumatic soft robot's finger. The basis is sampled over $N_p = 100$ uniform nodes and is assembled into a matrix using the command \code{pod = Basis(100,3,'chebyshev')}. It is assumed that only free strains occur in the bending, while elongation and torsion are constrained. As a result, each strain mobility vector is characterized by three modes of the Chebyshev basis, specified as \code{dof = [0,3,3,0,0,0]}, leaving the $\kappa_x$ and $\kappa_y$ curvatures free. The dynamic model for each finger is constructed using the command \code{shp = Shapes(pod,dof)}. The material properties of the finger are assigned using \code{shp.Material = NeoHookean(1.0, 0.3)}. To set the geometry of each finger, we call \code{shp.setLength(80)} to set its length, and \code{shp.setGeometry(sCircle(6))} to set a circular cross-section of radius $6$ (mm). Each finger of the soft gripper model is equipped with three fluidic chambers that are radially distributed along its circumference. As a result, the input map $\GB$ for each finger becomes a nonlinear, non-square matrix. We assume that these distributed forces can be represented by a tangent bundle of linear forces that are positioned $3$ (mm) away from the center axis. To assign these forces, the \code{shp.addFluidic(@p)} command can be utilized, which requires an anonymous function \code{@p} that describes the path of the soft actuator. A sample code for assembling one soft finger model is given below.
+In this study, we utilize a third-order Chebyshev polynomial basis to model the deformation of the pneumatic soft robot's finger. The basis is sampled over $N_p = 100$ uniform nodes and is assembled into a matrix using the command \code{pod = Basis(100,3,'chebyshev')}. It is assumed that only free strains occur in the bending, while elongation and torsion are constrained. As a result, each strain mobility vector is characterized by three modes of the Chebyshev basis, specified as \code{dof = [0,3,3,0,0,0]}, leaving the $\kappa_x$ and $\kappa_y$ curvatures free. The dynamic model for each finger is constructed using the command \code{shp = Shapes(pod,dof)}. The material properties are assigned using \code{shp.Material = NeoHookean(1.0, 0.3)}. To set the geometry of each finger, we call \code{shp.setLength(80)} to set its length, and \code{shp.setGeometry(sCircle(6))} to set a circular cross-section of radius $6$ (mm). Each finger of the soft gripper model is equipped with three fluidic chambers that are radially distributed along its circumference. As a result, the input map $\GB$ for each finger becomes a nonlinear, non-square matrix. We assume that these distributed forces can be represented by a tangent bundle of linear forces that are positioned $3$ (mm) away from the center axis. To assign these forces, the \code{shp.addFluidic(@p)} command can be utilized, which requires an anonymous function \code{@p} that describes the path of the soft actuator. %A sample code for assembling one soft finger model is given below.
 
-\begin{lstlisting}[style=matlab] 
-dof = [0,3,3,0,0,0];
-pod = Basis(100,5,'chebyshev');
+% \begin{lstlisting}[style=matlab] 
+% dof = [0,3,3,0,0,0];
+% pod = Basis(100,5,'chebyshev');
 
-shp = Shapes(pod, dof);
-shp = shp.setLength(80);
-shp = shp.setGeometry(sCircle(6));
-shp.Material = NeoHookeanMaterial(1.0, 0.3, ... 
-                'Rho', 2000 * 1e-12);
+% shp = Shapes(pod, dof);
+% shp = shp.setLength(80);
+% shp = shp.setGeometry(sCircle(6));
+% shp.Material = NeoHookeanMaterial(1.0, 0.3, ... 
+%                 'Rho', 2000 * 1e-12);
 
-% for loop to assemble fluidic chambers
-for ii = 1:3
-    phi  = (ii - 1) * pi / 3
-    path = @(s)  3.0 * [cos(phi); sin(phi); s];
-    shp  = shp.addFluidic(path); 
-end
+% % for loop to assemble fluidic chambers
+% for ii = 1:3
+%     phi  = (ii - 1) * pi / 3
+%     path = @(s)  3.0 * [cos(phi); sin(phi); s];
+%     shp  = shp.addFluidic(path); 
+% end
 
-shp = shp.rebuild(); % pre-assemble
-\end{lstlisting}
+% shp = shp.rebuild(); % pre-assemble
+% \end{lstlisting}
 
 The full soft gripper model, composed of four identical finger \textit{Shapes} classes, can be assembled using a for-loop routine. In this process, a class representing each finger is copied and assigned a unique $\textrm{SE}(3)$ base frame to each instance. Each finger is placed in a circular array with a radius of 37.5 (mm) relative to the center axis of the gripper body. The contact domain for each finger is specified using the method \code{shp.addContact(sdf)}, where \code{sdf} denotes the signed distance field of the contact object. For the beaker example, a cylindrical SDF with dimensions $40 \times 40 \times 60$ (mm) is considered, while for the wrench, a rectangular SDF with dimensions $5 \times 10 \times 100$ (mm) is used. Subsequently, each instance of the \class{Shapes} class is appended to the \class{Model} class constructor using the \code{mdl.addSystem(shp)}.
 
@@ -233,10 +237,10 @@ Subsequently, we aim to reproduce the hexagonal bolt screwing experiment of \cit
 %
 where $I_\Omega = $ is the inertia of the hex-bolt, $\mu_\Omega = 2.5$ its friction coefficient, and $\rB$ the relative position vector from the point of contact and the central turning axis of the screw. Note that we only include the tangential force components $\FT_t$ that are responsible for motion, as the normal forces are assumed to have a net zero-torque contribution. The model described in equation \eqref{eq:C5:screw} is incorporated into the simulation by using the command \code{mdl.addSystem(@f)}, where \code{@f(x,u,t)} is an anonymous function that represents the state space. The required input \code{u} for equation \eqref{eq:C5:screw} is connected to the soft gripper by utilizing the \code{mdl.addController(@Controller)} command, which inputs tangential reaction forces into the screw model. The controller also includes the prescribed pressure profile $\pB_{1,2,3,4}$ for each of the four soft fingers.\\
 %
-\begin{rmk}
-The inertia of the steel bolt $I_\Omega$ has been derived using standard ISO metric profiles of M10 screws. The screwing friction, however, has be determined using an ad-hoc approached, where the parameter has been tuned until desired behavior appears.\\
-\end{rmk}
-%
+% \begin{rmk}
+% The inertia of the steel bolt $I_\Omega$ has been derived using standard ISO metric profiles of M10 screws. The screwing friction, however, has be determined using an ad-hoc approached, where the parameter has been tuned until desired behavior appears.\\
+% \end{rmk}
+% %
 
 \afterpage{
 \begin{figure*}[!t]
@@ -251,18 +255,19 @@ The inertia of the steel bolt $I_\Omega$ has been derived using standard ISO met
 \clearpage
 }
 
-The comparison between the experiments conducted by Suzumori et al. \cite{Suzumori1991,Suzumori1992} and our numerical results obtained using \textit{Sorotoki} is depicted in Figure \ref{fig:C5:suzumori_gripper_screw}. Similar to the simulation of the static object grasping scenario, the simulation of the Suzumori soft gripper's screwing experiment accurately reflects the real-world experiment. Not only do we observe similar deformation characteristics in the soft finger, but we also observe the step-like turning of the bolt screw. To highlight its rotational motion, we present the rotation angle $\theta(t)$ in Figure \ref{fig:C5:suzumori_gripper_screw_states}, which shows that a bolt-screwing motion of 0.16 rps was achieved. Although this rate is slightly slower than the reported rate of 0.25 rps, it is believed that the underlying morphological characteristics are accurately captured. Note that although the system is of highly complex nature, the simulation program contains less than 100 lines of code (including visualization).
-
 %
-\begin{figure}[!t]
+\begin{figure}[!b]
     \centering
+    \vspace{-3mm}
     \includegraphics*[width=.95\textwidth]{./pdf/thesis-figure-6-28.pdf}
     %\input{./fig/fig_suzugripper_screw_plot.tex}
-    \caption{The evolution of the hexagonal bolt angle $\theta(t)$ is depicted, where the stair-like trajectory of the screwing motion, as observed in Suzumori's experiment, is apparent. Through careful parameter and input shaping, a bolt-screwing motion of 0.16 rps was achieved. This is slightly slower than the reported rate of 0.25 rps, however, it is believed that the underlying morphological characteristics are accurately captured.}
+    \caption{The evolution of the hexagonal bolt angle $\theta(t)$ is depicted, where the stair-like trajectory of the screwing motion, as observed in Suzumori's experiment, is apparent. Through careful parameter and input shaping, a bolt-screwing motion of 0.16 rps was achieved. This is slightly slower than the reported rate of 0.25 rps, however, the underlying morphological characteristics are accurately captured.}
     \label{fig:C5:suzumori_gripper_screw_states}
 \end{figure}
 
-\subsection{Impedance control of soft manipulator with static environmental interaction}
+The comparison between the experiments conducted by Suzumori et al. \cite{Suzumori1991,Suzumori1992} and our numerical results obtained using \textit{Sorotoki} is depicted in Figure \ref{fig:C5:suzumori_gripper_screw}. Similar to the simulation of the static object grasping scenario, the simulation of the Suzumori soft gripper's screwing experiment accurately reflects the real-world experiment. Not only do we observe similar deformation characteristics in the soft finger, but we also observe the step-like turning of the bolt screw. To highlight its rotational motion, we present the rotation angle $\theta(t)$ in Figure \ref{fig:C5:suzumori_gripper_screw_states}, which shows that a bolt-screwing motion of 0.16 rps was achieved. Although this rate is slightly slower than the reported rate of 0.25 rps, it is believed that the underlying morphological characteristics are accurately captured. Note that although the system is of highly complex nature, the simulation program contains less than 100 lines of code (including visualization).
+
+\subsection[Environmental impedance control of soft manipulator]{Impedance control of soft robot manipulator with static environmental interaction}
 In the next section, we will concentrate on designing controllers using the \class{Model} and \code{shapes} classes. The simulations of the Suzumori gripper performed previously were controlled in an open-loop manner, with the primary complexity arising from the interaction between the model and the dynamic object. We will now explore the potential of model-based controllers in \textit{Sorotoki}, where we take inspiration from the work of Della Santina et al. \cite{DellaSantina2019Nov} as an potential study-case.
 
 The study by Della Santina et al. \cite{DellaSantina2019Nov} presents a design for model-based controllers for soft robot manipulators, highlighting two control architectures: dynamic tracking and surface tracking. The authors proposed a Cartesian impedance controller for the latter architecture, which actively regulates the desired compliance behavior of the soft robot's end-effector in a static environment. Additionally, the work presented a contact path planning algorithm that initially brings the robot close to a desired setpoint on the surface (Phase 1: Approach), and then adjusts the setpoint to maintain contact with the surface (Phase 2: Explore). The proposed controller was validated both numerically and experimentally on a six-link soft robot manipulator, demonstrating that model-based controllers can lead to higher-level performances in soft robotic systems.
@@ -271,27 +276,27 @@ To maintain computational performance, the impedance controllers used in Della S
 
 Our aim in this section is to replicate the results of the closed-loop controlled multi-link soft robot during dynamic contact that were presented in the study by Della Santina et al. \cite{DellaSantina2019Nov}. Instead of employing the augmented rigid body model used in their work, we explore a reduced-order beam model, in which each link is represented as an inextensible, continuous PCC segment. This approach extends their work to a distributed mass robotic system. As a template for the soft manipulator model, we again utilize the \class{Shapes} class. According to \cite{DellaSantina2019Nov}, each CC segment of the soft manipulator has an intrinsic length of $\delta L_0 = 60$ (mm) and a mass of $m_0 = 334$ (g). The robot has a rounded rectangular cross-section of 60 $\times$ 20 (mm), which is described using \code{sdf = sSquircle}. The density of the soft robot manipulator, given its length and geometry, is approximated to be $\rho_0 = 1200 \cdot 10^{-12}$ (\si{\kilo \gram \per \milli \metre \cubed}). 
 
-A crucial aspect of the simulation is the dynamic interaction with the environment. Therefore, a static environment must be assigned to the dynamic model. While \cite{DellaSantina2019Nov} presents multiple examples of dynamic contact, this study focuses on the experiment with a 40$^\circ$ slanted surface with wave indentations, as shown in Figure \ref{fig:C5:dellasantina_experiment}. The surface features were extracted from the image data presented in \cite{DellaSantina2019Nov} and the \code{env = sPolyLine(V)} function was used to generate the SDF environment, where \code{V} is a polyline vector. The enviroment is then added using \code{Shapes.addContact(env)}. Once all settings are assigned to the class \class{Shapes}, the model is constructed by \code{mdl = Model(Shapes)}. The code for assembling the dynamic model is given below:
+A crucial aspect of the simulation is the dynamic interaction with the environment. Therefore, a static environment must be assigned to the dynamic model. While \cite{DellaSantina2019Nov} presents multiple examples of dynamic contact, this study focuses on the experiment with a 40$^\circ$ slanted surface with wave indentations, as shown in Figure \ref{fig:C5:dellasantina_experiment}. The surface features were extracted from the image data presented in \cite{DellaSantina2019Nov} and the \code{env = sPolyLine(V)} function was used to generate the SDF environment, where \code{V} is a polyline vector. The enviroment is then added using \code{Shapes.addContact(env)}. Once all settings are assigned to the class \class{Shapes}, the model is constructed by \code{mdl = Model(Shapes)}. %The code for assembling the dynamic model is given below:
 
-\begin{lstlisting}[style=matlab]   
- dof = [0,6,0,0,0,0];
- pod = Basis(100,6,'pcc');
+% \begin{lstlisting}[style=matlab]   
+%  dof = [0,6,0,0,0,0];
+%  pod = Basis(100,6,'pcc');
 
- shp = Shapes(pod, dof);
- shp = shp.setLength(60 * 6);
- shp = shp.setGeometry(sSquircle(3, 3, 0.25));
- shp = shp.addContact(sPolyLine(V));
- shp.Material = NeoHookeanMaterial(1.0, 0.3, ... 
-                 'Rho', 1200 * 1e-12);
+%  shp = Shapes(pod, dof);
+%  shp = shp.setLength(60 * 6);
+%  shp = shp.setGeometry(sSquircle(3, 3, 0.25));
+%  shp = shp.addContact(sPolyLine(V));
+%  shp.Material = NeoHookeanMaterial(1.0, 0.3, ... 
+%                  'Rho', 1200 * 1e-12);
 
- % build model (calls rebuild automatically)
- mdl = Model(shp);
-\end{lstlisting}
+%  % build model (calls rebuild automatically)
+%  mdl = Model(shp);
+% \end{lstlisting}
 
 Given the \class{Model} class, we can now start deriving the control law. For conciseness, let $\JB(\q) := \JB(L,\q)$ be the geometric Jacobian of the end-effector. We also introduce the Cartesian inertia matrix as $\LambdaB := (\JB^\top \MB \inv \JB^\top)\inv$. Then, the proposed Cartesian stiffness controller given in \cite{DellaSantina2019Nov} can be written as:
 %
 \begin{multline}
-    \tauB = \JB^\top \Big[\JB_M^{+\top} \fB_{e} + \fB_{g} + \JB^\top \etaB_{\CB}(\IB - \JB_M^{+\top}\JB)\dq + ... \\[0.25em] ... + \JB^\top(\KB_{c} (\gammaB_d - \gammaB_L) - \DB_c \JB \dq) \Big ],
+    \tauB = \JB^\top \Big[\JB_M^{+\top} \fB_{e} + \fB_{g} + \JB^\top \etaB_{\CB}(\IB - \JB_M^{+\top}\JB)\dq  \JB^\top(\KB_{c} (\gammaB_d - \gammaB_L) - \DB_c \JB \dq) \Big ],
     \label{eq:C5:dellasantina_controller}
 \end{multline}
 %
@@ -301,40 +306,39 @@ where $\gammaB_d$ and $\gammaB_L$ represent the desired and true end-effector po
     \etaB_{\CB} = \LambdaB (\JB \MB\inv \CB - \dot{\JB})
 \end{equation}
 %
-The closed-loop controller, implemented as an anonymous function, is derived from four system matrices: the inertia matrix $\MB(\q)$, the Coriolis matrix $\CB(\q,\dq)$, the Jacobian $\JB$, and its time derivative $\dot{\JB}$. In \textit{Sorotoki}, these matrices are automatically computed at each solver step and stored in a data structure named \code{shp.log}. The closed-loop controller can access this data structure. A sample code of the controller is provided below:
+The closed-loop controller, implemented as an anonymous function, is derived from four system matrices: the inertia matrix $\MB(\q)$, the Coriolis matrix $\CB(\q,\dq)$, the Jacobian $\JB$, and its time derivative $\dot{\JB}$. In \textit{Sorotoki}, these matrices are automatically computed at each solver step and stored in a data structure named \code{shp.log}. The closed-loop controller can access this data structure. %A sample code of the controller is provided below:
+%\vfill
 
-\begin{lstlisting}[style=matlab] 
-% ------------------------------------------------    
-function tau = Control(mdl)
-    % retrieve current log
-    log = mdl.System{1}.log;
+% \begin{lstlisting}[style=matlab] 
+% % ------------------------------------------------    
+% function tau = Control(mdl)
+%     % retrieve current log
+%     log = mdl.System{1}.log;
 
-    J  = log.FK.J(:,:,end);        
-    dJ = log.FK.dJdt(:,:,end); 
+%     J  = log.FK.J(:,:,end);        
+%     dJ = log.FK.dJdt(:,:,end); 
     
-    Mi  = inv(log.EL.M);
-    Lam = inv(J * Mi * J.'); 
-    Eta = Lam * (J * Mi * log.EL.C - dJ);
-    Jmi = Mi * J.' * Lam;
+%     Mi  = inv(log.EL.M);
+%     Lam = inv(J * Mi * J.'); 
+%     Eta = Lam * (J * Mi * log.EL.C - dJ);
+%     Jmi = Mi * J.' * Lam;
 
-    if mdl.System{1}.isContact()
-        xd = [0.3637; 0.1406];
-    else
-        xd = [0.2307, 0.2576];
-    end
+%     if mdl.System{1}.isContact()
+%         xd = [0.3637; 0.1406];
+%     else
+%         xd = [0.2307, 0.2576];
+%     end
 
-    % impedance controller
-    tau = J.' * (Jmi.' * fe + fg + ... 
-        Eta * (log.I - Jmi.' * J) * log.dq + ...
-        (Kc * (xd - log.FK.p) - Dc * J * log.dq));
-end
-% ------------------------------------------------
-\end{lstlisting}
+%     % impedance controller
+%     tau = J.' * (Jmi.' * fe + fg + ... 
+%         Eta * (log.I - Jmi.' * J) * log.dq + ...
+%         (Kc * (xd - log.FK.p) - Dc * J * log.dq));
+% end
+% % ------------------------------------------------
+% \end{lstlisting}
+
 %
 It is noteworthy that the controller above uses the command \code{shp.isContact} to detect if the robotic system is in contact. Similar to path planning in \cite{DellaSantina2020Jan}, upon contact, a new desired equilibrium position is adopted. These desired equilibrium positions for the end-effector are in line with the approach presented in \cite{DellaSantina2019Nov}. Subsequently, the implicit solver is invoked by calling \code{mdl.simulate} to solve the closed-loop dynamics. Snapshots of the dynamics have been presented in Figure \ref{fig:C5:dellasantina_experiment} which are produced by calling the function \code{shp.render}. Figure \ref{fig:C5:dellasantina_endeffector} shows the trajectory of the end-effector (dashed lines are the desired setpoints), Figure \ref{fig:C5:dellasantina_states} shows the evolution of the states, and Figure \ref{fig:C5:dellasantina_input} shows the control action $\tauB$ from \eqref{eq:C5:dellasantina_controller}.
-
-When comparing the experimental results reported by Della Santina et al. \cite{DellaSantina2020Jan} and the numerical simulations produced by \textit{Sorotoki}, we observe similar deformation characteristics in both systems. Most notably, the numerical implementation of the impedance Cartesian stiffness controller also follows the inclined surface until the setpoint is reached. These similarities highlight the reliability of Sorotoki in accurately reflecting true soft robotic systems, even in closed-loop scenarios. 
-
 %
 \afterpage{
 \begin{sidewaysfigure*}[!h]
@@ -349,10 +353,11 @@ When comparing the experimental results reported by Della Santina et al. \cite{D
 \end{sidewaysfigure*}
 }
 
+\afterpage{
 \begin{figure}[!t]
     \centering
     %\vspace{-20mm}
-    \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-30.pdf}
+    \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-30.pdf}
     %\input{./fig/fig_dellasantina_simu_EF.tex}
     \caption{The end-effector trajectories of the six-link soft manipulator, where $\{$\ldata{Matlab1}, \ldata{Matlab2}$\}$ denote the horizontal and vertical position, respectively. The setpoints assigned by the controller are indicated by the dashed lines. Note that at $t \approx 0.88$ (s), the point of contact, the controller switches setpoint. }
     \label{fig:C5:dellasantina_endeffector}
@@ -362,7 +367,7 @@ When comparing the experimental results reported by Della Santina et al. \cite{D
 \begin{figure}[!t]
     \centering
     %\vspace{-20mm}
-    \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-31.pdf}
+    \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-31.pdf}
     %\input{./fig/fig_dellasantina_simu_Q.tex}
     \caption{State evolutions of the six-link soft manipulator, where the states represent the planar curvature of each individual soft link. }
     \label{fig:C5:dellasantina_states}
@@ -372,12 +377,16 @@ When comparing the experimental results reported by Della Santina et al. \cite{D
 \begin{figure}[!t]
     \centering
     %\vspace{-20mm}
-    \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-32.pdf}
+    \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-32.pdf}
     %\input{./fig/fig_dellasantina_simu_U.tex}
     \caption{The control inputs $\tauB$ in (\si{\milli \newton \meter}) produced by the control law in \eqref{eq:C5:dellasantina_controller} exhibit a significant peak at the point of contact. This is due to two factors: $(i)$ the sudden change of setpoint and $(ii)$ the switch in control strategy to accommodate for compliance.}
     \label{fig:C5:dellasantina_input}
     %\vspace{-3mm}
 \end{figure}
+\clearpage
+}
+
+When comparing the experimental results reported by Della Santina et al. \cite{DellaSantina2020Jan} and the numerical simulations produced by \textit{Sorotoki}, we observe similar deformation characteristics in both systems. Most notably, the numerical implementation of the impedance Cartesian stiffness controller also follows the inclined surface until the setpoint is reached. These similarities highlight the reliability of Sorotoki in accurately reflecting true soft robotic systems, even in closed-loop scenarios. 
 
 \subsection[Contact robust shape sensing of elastomer soft actuator]{Contact robust shape sensing of elastomer soft actuator (PneuNet) using a FEM-based modal basis}
 In the next section, our focus shifts from simulation to the experimental domain. Our primary focus will be on the \class{Vision} and \class{Control} classes, and we aim to provide experimental validation for the Data-driven Variable Strain (DVS) basis approach detailed in Section \ref{sec:C5:femPODbasis}. The objectives of this study case are $(i)$ to derive a finite-dimensional Cosserat beam model of the PneuNet actuator and $(ii)$ to implement a real-time shape sensing algorithm that is robust against external forces through the exploration of model information.
@@ -398,38 +407,38 @@ We begin our investigation by conducting a nonlinear dynamics analysis of a soft
 
 Given that the \class{Shapes} class has been constructed, we can now tailor the real-time estimation algorithm. This is achieved through the utilization of an inverse kinematics algorithm, as described in Section \ref{sec:C5:inverseKinematics}. The algorithm can be invoked using the function \code{Shapes.IK(pos, q0)}, where \code{pos} represents the desired position (such as a camera measurement) and \code{q0} is an initial estimate. The inverse kinematics solver is then repeatedly called in the real-time control loop. To ensure that the inverse kinematics solution aligns with the true system behavior, we also consider the null-space subtask projection. In this case, the gradient of the subtask is assumed to be $\nabla \Phi_{\textrm{sub}}(\q) = \KB \q + \fB_g(\q) - \GB(\q) u$, where $u = 30 \cdot \textrm{sat}\left[ \sin(t) \right]$ (\si{\kilo \pascal}) is the prescribed pressure input assigned by the open-loop controller. This subtask serves to minimize the internal residual forces -- and thus is nothing more than a quasi-static deformation solver that is guided by the camera measurements. Note that model parameter have been pre-tuned to align with the experimental system presented in Figure \ref{fig:C5:pneunet_estimate_experiment}. However, certain initial estimates of the system parameters have been used that are produced by the Finite Element model.
 
-\par To instantiate the camera class, we call \code{cam = Vision('realsense')} and establish a Secure Shell (SSH) connection with the control platform through \code{brd = Control('ip','pwd')}. Once the connection with the control platform is established, a real-time while-loop containing the necessary shape estimation algorithms to be executed. The code for this process is provided below:
+\par To instantiate the camera class, we call \code{cam = Vision('realsense')} and establish a Secure Shell (SSH) connection with the control platform through \code{brd = Control('ip','pwd')}. Once the connection with the control platform is established, a real-time while-loop containing the necessary shape estimation algorithms to be executed. %The code for this process is provided below:
 
-\begin{lstlisting}[style=matlab] 
-while brd.loop(20)   % control-loop for 20 s
+% \begin{lstlisting}[style=matlab] 
+% while brd.loop(20)   % control-loop for 20 s
 
-    % set pressure signal
-    brd.setInput([Pressure(brd.t), 0]);
+%     % set pressure signal
+%     brd.setInput([Pressure(brd.t), 0]);
     
-    % real-time visualization
-    cam = cam.getFrame();
-    if isempty(h)
-        h = imshow(cam.lastFrame,.... 
-                   cam.WorldLimits); 
-    else
-        shp.FK(q,'Plot',true);
-        h.CData = cam.lastFrame;
-    end
+%     % real-time visualization
+%     cam = cam.getFrame();
+%     if isempty(h)
+%         h = imshow(cam.lastFrame,.... 
+%                    cam.WorldLimits); 
+%     else
+%         shp.FK(q,'Plot',true);
+%         h.CData = cam.lastFrame;
+%     end
 
-    % get color marker
-    cam = cam.getMarker(9);
+%     % get color marker
+%     cam = cam.getMarker(9);
 
-    % inverse kinematics solver
-    q = shp.IK(cam.output, q, ... 
-               'SubTask', @(s) gradPhi(s,p));               
-end
-% ------------------------------------------------
-function y = gradPhi(Shapes,p)
-  y = Shapes.Log.EL.fe + Shapes.Log.EL.fg ... 
-       - Shapes.Log.EL.G * p(1);
-end
-% ------------------------------------------------
-\end{lstlisting}
+%     % inverse kinematics solver
+%     q = shp.IK(cam.output, q, ... 
+%                'SubTask', @(s) gradPhi(s,p));               
+% end
+% % ------------------------------------------------
+% function y = gradPhi(Shapes,p)
+%   y = Shapes.Log.EL.fe + Shapes.Log.EL.fg ... 
+%        - Shapes.Log.EL.G * p(1);
+% end
+% % ------------------------------------------------
+% \end{lstlisting}
 
 \afterpage{
 \begin{figure}[!t]
@@ -445,7 +454,7 @@ end
     \centering
     \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-35.pdf}
     %\input{./fig/fig_pneunet_states.tex}
-    \vspace{-5mm}
+    %\vspace{-5mm}
     \caption{Evolution of the state estimations during the PneuNet experiment, where the ordering is given by $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. Note that the joint variables represent the modal coefficients of the DVS basis related to curvature-bending. }
     \label{fig:C5:pneunet_estimate_experiment}
     %\vspace{-5mm}
