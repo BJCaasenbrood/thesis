@@ -3,7 +3,7 @@
 \section{Research objective}
 In short, soft robotics is a rapidly emerging subfield within the broader domain of robotics that focuses on the use of soft materials to create systems capable of dexterous bio-inspired morphological behavior akin to animals, capable of locomotion, grasping, and manipulation. Such features are made possible by the unique mechanical properties intrinsic to soft materials and soft fluidic actuation. Although open-loop control strategies have already established bio-like features, soft robotics still lags behind in terms of precision and speed compared to rigid robotics. To address this gap, new design principles for soft fluidic actuation and accurate, fast control-oriented models are believed to be crucial missing components. Furthermore, in the context of biological systems, it is not solely their morphological design that accounts for their success. Rather, it is the intricate interplay between their physical structure and coordinated motor control that enables their functionality. This leads us to the main objective of this thesis:
 %
-\objective{Developement and analysis of new systematic tools balanced between the design, modeling, and control of soft continuum robots, whose goal is to pursue similar performance as rigid robotics and eventually biologal systems.}
+\objective{Development and analysis of new systematic tools balanced between the design, modeling, and control of soft continuum robots, whose goal is to achieve similar performance as rigid robotics and eventually biology.}
 %
 \noindent In the subsequent section, we shall discuss the challenges linked to the aforementioned objective and list the contributions made by the thesis. \vspace{-3mm}
 %The motivation for soft robotic technology to eventually offer better performance and efficiency than rigid robots, and eventually biological systems, highlights the need for generalizable solutions to these related issues of design and control, which are inherently interconnected.
@@ -25,12 +25,13 @@ In short, soft robotics is a rapidly emerging subfield within the broader domain
 \section{Research questions and contributions}
 In the pursuit of finding solutions to the research objective, we have divided our research into three branches: (I) automated design synthesis of soft fluidic actuators, (II) modeling for control of soft robot manipulators, and (III) the development of software aimed to support the soft robotics community. For each research objective, a number of contributions are listed. \\[0.1em]
 
-\par \textbf{I: Automated design synthesis of soft actuators}. Our first research branch is centered around the design aspect of soft robotics. As presented by abundance of literature on soft robotic design, either rooted in hand-driven principles or through optimization, achieving an optimal structural geometry that fully accounts for hyper-redundancies in soft materials is no easy feat. Unlike their rigid counterparts and many biological systems for that matter, the kinematics are inherently encoded in the topological structure of the soft materials and where actuation is presented in the system. This implies the workspace cannot be characterized analytically in closed from through joint motions stemming from one point, as commonly done for joints in rigid robotics.  It is therefore of paramount importance that the nonlinear behaviors of soft materials, both in hyper-elasticity and nonlinear geometrical deformation, is understood and accounted for during the design process. This brings us to our first research question:
+\par \textbf{I: Automated design synthesis of soft actuators}. Our first research branch is centered around the design aspect of soft robotics. As presented by abundance of literature on soft robotic design, either rooted in hand-driven principles or through optimization, achieving an optimal structural geometry that fully accounts for hyper-redundancies in soft materials is no easy feat. Unlike their rigid counterparts and many biological systems for that matter, the kinematics are inherently encoded in the topological structure of the soft materials and where actuation is presented in the system. This implies the workspace cannot be characterized analytically in closed from through joint motions stemming from one point, as commonly done for joints in rigid robotics.  It is therefore of paramount importance that the nonlinear behaviors of soft materials, both in hyper-elasticity and nonlinear geometrical deformation, is understood and accounted for during the design process. This brings us to our first research question (R1):
 %
-\begin{itemize}
- \setlength\itemsep{-.1em}
-\item {How do we design fluidic-interacting mechanical structures made from soft materials that deform according to a user-defined morphological pattern?}
-\end{itemize}
+\begin{center}
+\textit{
+How do we design fluidic-interacting mechanical structures made from soft materials that deform according to a user-defined morphological pattern?
+}
+\end{center}
 %
 % This deepens the research problem by imposing questions on optimality regarding material choice.
 %As presented by abundance of literature on soft robotic design, either rooted in engineering principles or through optimization, achieving an optimal structural geometry that fully accounts for hyper-redundancies in soft materials is no easy feat. Unlike their rigid counterparts and many biological systems for that matter, the kinematics are inherently encoded in the topological structure of the soft materials and where actuation is presented in the system. This implies the workspace cannot be characterized analytically in closed from through joint motions stemming from one point (unlike joints in rigid robotics). Furthermore, any external disturbances can lead to parasitic motion, \ie, distributed continuum deformations, which are often antagonistic to the input and thus cannot be solved via control alone. These parasitic motions, or better phrased \textit{"passive joint displacements"}, arise from the redundant flexibility of the system that are often unaccounted for during design. As such, they should be kept at as minimum as they lead to imprecisions in the mechanical operation and lost of mechanical efficiency (\eg, the balloon effect \cite{Daerden1999}). Furthermore, there exist many elasticity moduli for various options of soft material, ranging from soft gels to hard rubber \cite{Rus2015}. It is therefore of paramount importance that the nonlinear behaviors of soft materials, both in hyper-elasticity and nonlinear geometrical deformation, is understood and accounted for during the design process. This deepens the research problem by imposing questions on optimality regarding material choice.
@@ -55,13 +56,15 @@ The fundamental principles of compliant mechanical devices can be rigorously des
 
 \contribution{Testing and validation of optimized soft fluidic actuators by exploring Additive Manufacturing methods of printable soft materials.}{}
 
-\textbf{II: Modeling for control of soft manipulators}. The second research path focuses on the reduced-order modeling (ROM), aiming to balance precision and speed for control. Parallel to design, modeling for control is a crucial aspect in achieving biological performance. Accurate and fast models are required to achieve this goal. However, the infinite-dimensionality inherent in soft continuum robots poses significant challenges. While the PCC approach and its augmented rigid-body variations have been proposed as a solution, such models do not respect fundamental continuum mechanics. As a result, they impose strict operational constraints on any soft system, such as limiting hyper-elastic nonlinearities or slowing down actuation to prevent dynamic mismatching. This leads to two questions on the topics of modeling and control: %Recent studies \cite{Katzschmann2019,Milana2021,Franco2020} have explored these models and demonstrated exceptional computation speeds.
+\textbf{II: Modeling for control of soft manipulators}. The second research path focuses on the reduced-order modeling (ROM), aiming to balance precision and speed for control. Parallel to design, modeling for control is a crucial aspect in achieving biological performance. Accurate and fast models are required to achieve this goal. However, the infinite-dimensionality inherent in soft continuum robots poses significant challenges. While the PCC approach and its augmented rigid-body variations have been proposed as a solution, such models do not respect fundamental continuum mechanics. As a result, they impose strict operational constraints on any soft system, such as limiting hyper-elastic nonlinearities or slowing down actuation to prevent dynamic mismatching. This leads to the second and third research question (R2 and R3) on the topics of modeling and control: %Recent studies \cite{Katzschmann2019,Milana2021,Franco2020} have explored these models and demonstrated exceptional computation speeds.
 %
-\begin{itemize}
-\setlength\itemsep{-.1em}
-\item {How do we derive dynamic models that offer a reasonable trade-off between the accuracy and its applicability for control?}
-\item {Can we adopt classical control methods from rigid robotics to soft robotics?} 
-\end{itemize}
+\begin{center}
+\textit{
+How do we derive dynamic models that offer a reasonable trade-off \\ between the accuracy and its applicability for control? }
+\end{center}
+\begin{center}
+\textit{And, can we adopt classical controllers from rigid to soft robotics?}
+\end{center}
 %
 %\textit{(Accurate control-oriented models through PCC condition)}. 
 By building upon the original works of Chirikjian et al. \cite{Chirikjian1992} and Mochiyama et al. \cite{Mochiyama1992} in the 90's, the thesis presents a dynamic modeling formulation for soft manipulators that better preserves its continuum nature. To address the issue of infinite-dimensionality, a reduced-order modeling strategy for soft robot manipulators is proposed, whose mathematical framework is based on the differential geometric theory of spatial curves. Such framework allows for easy transferability to conventional ROM models in soft robotics, like the PCC strain \cite{DellaSantina2020,Katzschmann2019,Falkenhahn2015}. However, the thesis proposes two improvements that are essential development of model-based controllers. Inspired by the success of FEM-based models in soft robotics \cite{Duriez2013,Goury2018}, we bridge the gap between the PCC model and the underlying continuum mechanics by matching the quasi-static behavior to FEM data. Second, to enhance computational efficiency, new reduced-order integration scheme are required that compute the spatio-temporal dynamics in real-time, thus enabling controller design. This brings us to our third contribution: 
@@ -72,10 +75,9 @@ By building upon the original works of Chirikjian et al. \cite{Chirikjian1992} a
 %\textit{(Models beyond the PCC)}. 
 As mentioned in Section \ref{sec:C0:modelbasedcontrol}, the piecewise continuity in PCC approach inhibits kinematic redundancies, which restricts the exploration of the hyper-redundant nature that is a key attribute of soft robotics. For example, large nonlinear deflections due to gravity cannot be captured using constant strains alone, nor can environmental interactions be described accurately. This leads to the following research question:
 %
-\begin{itemize}
-\setlength\itemsep{-.1em}
-\item {Can we effectively explore the intrinsic morphological flexibilities of the soft robots, similar to biology, that are meaningful for modeling and control?}
-\end{itemize}
+\begin{center}
+\textit{Can we effectively explore the intrinsic morphological flexibilities of the soft robots, similar to biology, that are meaningful for modeling and control?}
+\end{center}
 %
 Therefore, the third research objective focuses on relaxing the PCC condition to pursue its true infinite-dimensionality more closely. This is achieved by adopting prior modeling strategies of differential curves, where spatially-varying strain fields are considered and approximated through sets of orthogonal shape functions rather than piecewise representations. Building upon prior models presented in the thesis, the underactuated and hyper-redundant soft system is written in a port-Hamiltonian framework \cite{Schaft2004,Ortega2002}, which enables energy-shaping techniques by modifying the closed-loop potential energy of the system - a well-known practice in classic robotics \cite{Schaft2004,Ortega1998,Ortega2002}. By exploring the hyper-redundancy in soft robotics, more advanced control objectives can be achieved, allowing for multi-modal shape regulation and full-body grasping. However, spatial discretization in these model-based controllers plays a crucial role in their dexterity to achieve various control tasks. Within this context, the fourth contribution reads:
 
@@ -113,10 +115,9 @@ Contribution IV provides a stable modeling platform for a variety of possible sh
 
 \textbf{C: Software development}. Our final research branches is centered around interdisciplinary and the transferal of knowledge towards the soft robotics community. Soft robotics is intrinsically multidisciplinary field since it involves the integration of knowledge and techniques from various scientific disciplines, such as materials science, mechanical and electrical engineering, computer science, and biology. This raises the question:
 
-\begin{itemize}
-\setlength\itemsep{-.1em}
-\item{To enable better designs and controllers for soft robotics community, how can we bridge the interdisciplinary aspects intrinsic to this field?}
-\end{itemize}
+\begin{center}
+\textit{To enable better designs and controllers within the soft robotics community, how can we bridge the interdisciplinary aspects that are intrinsic to the field?}
+\end{center}
 %
 The thesis culminates all aforementioned contributions into a comprehensive software package for soft robotics, named \texttt{Sorotoki}, which stands for SOft RObotics TOolKIt. The primary objective of this software is to bridge the gap between various disciplines of soft robotics, including design, modeling, and control. It provides a minimal programming framework that enables users to solve complex problems using minimal lines of code. The toolkit is closely integrated with Contributions I to V of this thesis and is publicly available at \url{https://github.com/BJCaasenbrood/SorotokiCode} \cite{SorotokiCode}. Thus, the final contribution of this thesis involves the creation of this software package.
 %

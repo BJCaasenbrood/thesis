@@ -3,8 +3,8 @@
 \label{sec: chap2 section header}
 As mentioned previously, soft robots are composed of elastic bodies that can be  modeled as a dynamically deformable continuum with of infinite-dimensional nature. In this section, we aim to derive a compact and computationally efficient model that envelops the continuous dynamics of  the soft manipulator in Figure \ref{fig:C2:soft_robot} (and soft robotic systems of similar topology, \eg, \cite{Katzschmann2018,Falkenhahn2015,BibEntryOrm2019Sep}) through a  small set of generalized coordinates. We denote these coordinates by $\q\in\Q$. Their respective velocities are denoted by $\dq\in T_{\q}\Q$ which belong to the tangent space of the configuration manifold $\Q \subseteq \R^n$.  Let it be clear that the choice on $\q$ is free. However, finding a choice that minimizes $n = \dim(\q)$ and that accurately reflects the continuum nature can be challenging. A state representation that satisfies both will help to keep computational cost low which is the current bottleneck for model-based control of soft robots. 
 
-We base our modeling framework on the work of Mochiyama et al. (2003, \cite{Mochiyama2003}), who outlined a theoretical foundation for continuum manipulators. Their work is extended upon by including extensibility, serial-chaining of multiple soft links, pneumatic actuation, and the introduction of nonlinear and time-dependent material behavior. Earlier modeling strategies addressing similar issues can be found in from Godage et al. (2016, \cite{Godage2015,Godage2016}), Della Santina et al. (2020, \cite{DellaSantina2020,DellaSantina2020a,DellaSantina2021}), Renda et al.
-(2018, \cite{Renda2018}), and Boyer et al. (2021, \cite{Boyer2021}). Leveraging from the aforementioned works, a  finite-dimensional approximation of the true soft robot dynamics with  can be written in the familiar Lagrangian form:
+We base our modeling framework on the work of Mochiyama et al. \cite{Mochiyama2003}, who outlined a theoretical foundation for continuum manipulators. Their work is extended upon by including extensibility, serial-chaining of multiple soft links, pneumatic actuation, and the introduction of nonlinear and time-dependent material behavior. Earlier modeling strategies addressing similar issues can be found in from Godage et al. \cite{Godage2015,Godage2016}, Della Santina et al \cite{DellaSantina2020,DellaSantina2020a,DellaSantina2021}, Renda et al.
+\cite{Renda2018}, and Boyer et al. \cite{Boyer2021}. Leveraging from the aforementioned works, a  finite-dimensional approximation of the true soft robot dynamics with  can be written in the familiar Lagrangian form:
 %
 \begin{align}
 \MB(\q) \ddq + \vec{h}(\q,\dq) & = \vec{J}^\top\!(\q) \vec{\lambda} + \vec{\tau}(\q,\vec{u}), \label{eq:C2:model0}\\
@@ -197,7 +197,7 @@ Then, by injecting the reference into the kinematic relations given by \eqref{eq
    %\input{./fig/fig_plotrobot.tex}
    \includegraphics[width=.95\textwidth]{./pdf/thesis-figure-4-4.pdf}
    %\vspace{-2mm}
-   \caption{Three-dimensional deformation of the three-bellow soft robot manipulator using the PCC model. Based on the prescribed reference $\q_d$ (and its time-derivative $\dq_d$), the forward kinematic relations for each point $\sigma$ along the backbone is computed and the volumetric mesh is deformed accordingly to its closest material-point on $\gammaB(\sigma)$.}
+   \caption{Three-dimensional deformation of the three-bellow soft robot manipulator using the PCC model. Based on the prescribed reference $\q_d$ (and its time-derivative $\dq_d$), the forward kinematic relations for each point $\sigma$ along the backbone is computed and the volumetric mesh is deformed accordingly to its closest material-point on the backbone curve $\gammaB(\sigma)$.}
    \vspace{-0.1cm}
    \label{fig:C2:EX1:strain_ref_3D}
  \end{figure}

@@ -1,5 +1,5 @@
 \section{Nonlinear topology optimization}
-\label{chap:topo} 
+\label{sec:C1:topo} 
 The present study focuses on the solution scheme for nonlinear deformations in hyper-elastic continuum solids. To enhance this approach, we introduce a modification to the Finite Element Method (FEM) model, known as the Solid Isotropic Material With Penalization (SIMP) method. This method is a widely used material interpolation scheme in topology optimization \cite{Bendsoe2003,Gain2013Dec,Talischi2012Mar,Vasista2013Jul}. Subsequently, we elaborate on how the optimization problem can be formulated to generate topologies driven by soft fluidic actuation.
 
 \subsection{Solid Isotropic Material With Penalization (SIMP)}
@@ -30,13 +30,13 @@ where the matrix has non-zero entries $\boldsymbol{\Gamma}_{ij} = 1,2$ iff eleme
     \SetKwInOut{Output}{Output}
     \Input{Tessellation $\mathcal{T}$, set of virus elements $\mathcal{V}$, threshold $\gamma$, material density vector $\boldsymbol{\rho}$}
     \Output{Set of elemental indices $\mathcal{E}$}
-    construct $\boldsymbol{\Gamma}  \gets {\textbf{BuildAdjacencyMatrix}}(\mathcal{T})$\;
-    modify $\boldsymbol{\Gamma}  \gets {\textbf{EdgeConnectivity}}(\boldsymbol{\Gamma})$\;
+    construct $\boldsymbol{\Gamma}  \gets {\texttt{BuildAdjacencyMatrix}}(\mathcal{T})$\;
+    modify $\boldsymbol{\Gamma}  \gets {\texttt{EdgeConnectivity}}(\boldsymbol{\Gamma})$\;
     find thresholds $\mathcal{X} = \{\, i \in [1,n] \;|\; \rho_i \ge \gamma \,\}$\;
     set zeros $\boldsymbol{\Gamma}_i = (\boldsymbol{\Gamma}^\top)_i = 0$ for all $i \in  \mathcal{X}$\;
     initialize empty set $\mathcal{E} \gets \emptyset$\;
-  \For{$i = 1: \text{numVirus} $}{{}
-  $\mathcal{I} \gets {\textbf{doFloodFill}}(\boldsymbol{\Gamma},\mathcal{V}_i)$\;
+  \For{$i = 1: \textrm{numVirus} $}{{}
+  $\mathcal{I} \gets {\texttt{doFloodFill}}(\boldsymbol{\Gamma},\mathcal{V}_i)$\;
   %$\text{bool} \gets \textbf{isEnclosed}(\mathcal{I})$\;
         $\mathcal{E} \gets \mathcal{E} \cup \mathcal{I}$\;
   }
@@ -81,7 +81,7 @@ Differentiations of the objective function with respect to the elemental densiti
  & = \left(\boldsymbol{L}^\top - \boldsymbol{\lambda}^\top \boldsymbol{K}_T \right) \frac{\p \boldsymbol{x}}{\p \rho_e} - \boldsymbol{\lambda}^\top \frac{\p \boldsymbol{R}}{\p \rho_e},  \label{eq:sen_deriv} 
 \end{align}
 %
-\noindent where the Jacobian of the residual force vector is substituted by the tangent stiffness matrix $\KB_T:=\tfrac{\p \RB}{\p \x}$ (see \cite{Kim2018}). By choosing the adjoint vector $\boldsymbol{\lambda}^\top = \boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1}$, the terms involving $\tfrac{\p \x}{\p \rho_e}$ can be eliminated and thus computation of the gradient becomes feasible. Following this, the gradient of the objective function can be written compactly as:
+\noindent where the Jacobian of the residual force vector is substituted by the tangent stiffness matrix $\KB_T:=\tfrac{\p \RB}{\p \x}$ (see \cite{Kim2018}). By choosing the adjoint vector $\boldsymbol{\lambda} = (\boldsymbol{K}_T)^{-T}\boldsymbol{L}$, the terms involving $\tfrac{\p \x}{\p \rho_e}$ can be eliminated and thus computation of the gradient becomes feasible. Following this, the gradient of the objective function can be written compactly as:
 %
 \begin{align}
 \frac{\p {\Phi} }{\p \rho_e} \overset{\eqref{eq:residual}}{=} -\boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1} \left( \sum_{e=1}^{n} \int_{\mathcal{V}_e} \boldsymbol{B}_e^\top \frac{\p \underline{\ST}_e}{\p {\rho_e}} \; dV - \frac{ \p \fB_{\textrm{ext}}}{\p {\rho_e}}  \right). \label{eq:sens_f}
@@ -93,15 +93,15 @@ Differentiations of the objective function with respect to the elemental densiti
   \SetKwInOut{Output}{Output}
   \Input{Domain $\mathcal{B}_0$, material $\Psi$, initial $\boldsymbol{\rho}^{(0)}$, infill $V^*$, virus $\mathcal{V}$, output $\boldsymbol{L}$, artificial pressure $\tilde{p}_e$ }
   \Output{Optimal soft robot topology $\boldsymbol{\rho}^*$}
-  construct tessellation $\mathcal{T} \gets {\textbf{VoronoiMesher}}(\mathcal{B}_0)$\;
+  construct tessellation $\mathcal{T} \gets {\texttt{VoronoiMesher}}(\mathcal{B}_0)$\;
   \While{$\text{convergence} \neq 1 $}{
   update artificial material $\Psi_e$ using \eqref{eq:simp} \;
   find infected set $\mathcal{E}$ using \textbf{Algorithm 1} \;
   build residual forces $\boldsymbol{R}$ using \eqref{eq:residual} and \eqref{eq:pressureforce}\; 
-  solve displacements $\boldsymbol{x} \gets \textbf{NewtonRaphson}(\boldsymbol{R})$ \;
+  solve displacements $\boldsymbol{x} \gets \texttt{NewtonRaphson}(\boldsymbol{R})$ \;
   evaluate $g,_{\boldsymbol{\rho}} \gets \p g/\p{{\rho}_e}$ \;
   evaluate $\Phi,_{\boldsymbol{\rho}} \gets\p\Phi/\p{{\rho}_e}$ using \eqref{eq:sens_f} \; 
-  update $\boldsymbol{\rho} \gets \textbf{MMA}(\Phi,_{\boldsymbol{\rho}},g,_{\boldsymbol{\rho}},\boldsymbol{\rho})$ \;
+  update $\boldsymbol{\rho} \gets \texttt{MMA}(\Phi,_{\boldsymbol{\rho}},g,_{\boldsymbol{\rho}},\boldsymbol{\rho})$ \;
   }
   \caption{Computational design algorithm for pneumatic soft robots.\label{alg:topology_opt}}
 \end{algorithm}
@@ -118,7 +118,7 @@ Differentiations of the objective function with respect to the elemental densiti
 
 \noindent However, it should be noted that deriving the loading sensitivity $\p \boldsymbol{f}_{\textrm{ext}}/\p \rho_e$ is not straightforward since the global force vector is constructed from nested functions of logic operations such as flood-fill. Therefore, we derive the loading sensitivity numerically using the forward difference method. To reduce computation time, we propose computing the sensitivities of only the elements at the boundary of the pressure region since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. We provide pseudo-code for the computational design algorithm for synthesizing pressure-driven soft robots in Algorithm \ref{alg:topology_opt}. 
 
-\section{Gradient filters and interpolation}
+\subsection{Gradient filters and interpolation}
 A well-known filtering technique is used to solve this issue, which has been proposed by Sigmund et al. \cite{Bendsoe2003}. The design sensitivities are modified based on a weighted average filtering scheme \cite{Gain2013Dec,Bendsoe2003}:
 %
 \begin{equation}
@@ -126,5 +126,5 @@ A well-known filtering technique is used to solve this issue, which has been pro
 \label{eq:C3:filters}
 \end{equation}
 %
-where $H_{e,i} := \textrm{max} \left\{0, R_{\textrm{min}} - \Delta(\pB_e,\pB_i)\right\}$ the filter weight, $R_{\textrm{min}}$ the filter radius, and $\Delta(\pB_e,\pB_i)$ the Euclidean distance between the centers of the elements $i$ and $e$. The radial filtering is solely applied to the design sensitivities, and therefore, the polygonal mesh discretization heavily influences the final topology design. To enhance the optimization output quality, we introduce Radial Basis Functions (RBF) interpolation weighted with their filter densities. Subsequently, an isosurface extraction is performed to achieve a clear segregation between void and filled regions. This process is illustrated in Figure \ref{fig:C3:topo_filtering}.
+where $H_{e,i} := \textrm{max} \left\{0, R_{\textrm{min}} - \Delta(\pB_e,\pB_i)\right\}$ is the filter weight, $R_{\textrm{min}}$ is the filter radius, and $\Delta(\pB_e,\pB_i)$ is the Euclidean distance between the centers of the elements $i$ and $e$. The radial filtering is solely applied to the design sensitivities, and therefore, the polygonal mesh discretization heavily influences the final topology design. To enhance the optimization output quality, we introduce Radial Basis Functions (RBF) interpolation weighted with their filter densities. Subsequently, an isosurface extraction is performed to achieve a clear segregation between void and filled regions. This process is illustrated in Figure \ref{fig:C3:topo_filtering}.
 

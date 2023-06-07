@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.4}Research objective}{12}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Research questions and contributions}{13}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Outline of the thesis}{17}{section.1.6}%
-\contentsline {chapter}{\numberline {2}A brief historical overview on the field of soft robotics}{19}{chapter.2}%
+\contentsline {chapter}{\numberline {2}A brief historical overview on the progress of soft robotics}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Early soft robotic technology}{21}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Recognition of soft robotics' potential}{23}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Modern soft robotics boom in academia}{28}{section.2.3}%
@@ -31,12 +31,12 @@
 \contentsline {subsection}{\numberline {3.3.2}Artificial fluidic loads by elemental dilation}{46}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Optimization problem}{48}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Solver and sensitivity analysis}{48}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Gradient filters and interpolation}{49}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Numerical examples: generating soft robotic topologies}{51}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Linear translational soft actuators}{51}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Pinching soft grippers}{52}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Bending soft actuator -- PneuNet inspired}{54}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Conclusion}{55}{section.3.6}%
+\contentsline {subsection}{\numberline {3.3.5}Gradient filters and interpolation}{49}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Numerical examples: generating soft robotic topologies}{51}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Linear translational soft actuators}{51}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Pinching soft grippers}{52}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Bending soft actuator -- PneuNet inspired}{54}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Conclusion}{55}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Dynamic modeling of soft robots -- PCC case}{57}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{58}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pneumatic soft continuum manipulator}{60}{section.4.2}%
@@ -54,7 +54,7 @@
 \contentsline {section}{\numberline {4.8}Experimental platform}{85}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{86}{section.4.9}%
 \contentsline {section}{\numberline {4.10}Conclusion}{102}{section.4.10}%
-\contentsline {chapter}{\numberline {5}Port-Hamiltonian cosserat models for soft robots}{103}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{103}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{104}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Generalized models for soft manipulators}{105}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Preliminary on geometric Cosserat theory}{105}{subsection.5.2.1}%
@@ -62,53 +62,55 @@
 \contentsline {subsection}{\numberline {5.2.3}Finite-dimensional projection}{110}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Reduced-order kinematics}{112}{subsection.5.2.4}%
 \contentsline {subsection}{\numberline {5.2.5}Reduced-order dynamics using Newton-Euler}{113}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Tendon and fluidic actuation}{117}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.6}Tendon and fluidic actuation}{116}{subsection.5.2.6}%
 \contentsline {subsection}{\numberline {5.2.7}Port-Hamiltonian formulation}{117}{subsection.5.2.7}%
 \contentsline {section}{\numberline {5.3}Energy-based controller for tasks on SE(3)}{118}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Simulation studies of bio-inspired robots}{119}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Soft robot manipulator inspired by octopus' tentacle}{120}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Multi-link soft robot inspired by the elephant's trunk}{125}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Conclusion}{127}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Sorotoki: A Matlab Toolkit for Soft Robots}{129}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{130}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Problem formulation}{130}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Contribution of Sorotoki software}{133}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Related works}{134}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Getting started with \texttt {Sorotoki}}{138}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Open-source soft robots of Sorotoki}{138}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Software architecture}{141}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Signed Distance Function (\texttt {Sdf})}{141}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Mesh generation (\texttt {Mesh})}{144}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Finite element modeling (\texttt {Fem})}{146}{subsection.6.5.3}%
-\contentsline {subsection}{\numberline {6.5.4}Reduced-order soft beam models (\texttt {Shapes})}{155}{subsection.6.5.4}%
-\contentsline {subsection}{\numberline {6.5.5}Model composer (\texttt {Model})}{164}{subsection.6.5.5}%
-\contentsline {subsection}{\numberline {6.5.6}Fluidic control hardware (\texttt {Control})}{170}{subsection.6.5.6}%
-\contentsline {subsection}{\numberline {6.5.7}Computer vision (\texttt {Vision})}{170}{subsection.6.5.7}%
-\contentsline {section}{\numberline {6.6}Soft robotics study cases}{172}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Multi-legged soft passive walker}{172}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{176}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Dynamic manipulation of high dexterity soft gripper}{180}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}Environmental impedance control of soft manipulator}{185}{subsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{189}{subsection.6.6.5}%
-\contentsline {section}{\numberline {6.7}Conclusion and future work}{190}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Conclusions and recommendations}{193}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conclusions}{193}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Recommendations and future horizons for soft robotics research}{195}{section.7.2}%
-\contentsline {part}{I\hspace {1em}Appendices}{197}{part.1}%
-\contentsline {chapter}{\numberline {A}List of definitions}{199}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Appendices to Chapter 4}{201}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{201}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Passivity properties of the inertia matrix}{201}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Implicit trapezoidal scheme for the time integration}{202}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Appendices to Chapter 5}{205}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Preliminaries on Lie group theory}{205}{section.C.1}%
-\contentsline {subsection}{\numberline {C.1.1}Basic definition(s)}{205}{subsection.C.1.1}%
-\contentsline {subsection}{\numberline {C.1.2}Exponential and logarithmic map}{206}{subsection.C.1.2}%
-\contentsline {section}{\numberline {C.2}Time-derivate of the geometric Jacobian for continuum robots}{207}{section.C.2}%
-\contentsline {chapter}{\numberline {D}Appendices to Chapter 6}{209}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Newmark-$\beta $ solver}{209}{section.D.1}%
+\contentsline {subsection}{\numberline {5.4.2}Mixing high-order models and low-order controllers}{125}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Multi-link soft robot inspired by the elephant's trunk}{126}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Conclusion}{128}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Sorotoki: a MATLAB toolkit for soft robots}{131}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{132}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Problem formulation}{132}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Contribution of Sorotoki software}{135}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Related works}{136}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Getting started with \texttt {Sorotoki}}{140}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Open-source soft robots of Sorotoki}{140}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Software architecture}{143}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Signed Distance Function (\texttt {Sdf})}{143}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Mesh generation (\texttt {Mesh})}{146}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Finite element modeling (\texttt {Fem})}{148}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Reduced-order soft beam models (\texttt {Shapes})}{157}{subsection.6.5.4}%
+\contentsline {subsection}{\numberline {6.5.5}Model composer (\texttt {Model})}{166}{subsection.6.5.5}%
+\contentsline {subsection}{\numberline {6.5.6}Fluidic control hardware (\texttt {Control})}{172}{subsection.6.5.6}%
+\contentsline {subsection}{\numberline {6.5.7}Computer vision (\texttt {Vision})}{172}{subsection.6.5.7}%
+\contentsline {section}{\numberline {6.6}Soft robotics study cases}{174}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Multi-legged soft passive walker}{174}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{178}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Dynamic manipulation of high dexterity soft gripper}{182}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Environmental impedance control of soft manipulator}{187}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{191}{subsection.6.6.5}%
+\contentsline {section}{\numberline {6.7}Conclusion and future work}{192}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Conclusions, recommendations, and outlook}{195}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusions}{195}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Recommendations}{198}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Future outlooks on soft robots}{201}{section.7.3}%
+\contentsline {part}{I\hspace {1em}Appendices}{203}{part.1}%
+\contentsline {chapter}{\numberline {A}List of definitions}{205}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendices to Chapter 4}{207}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{207}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Passivity properties of the inertia matrix}{207}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Implicit trapezoidal scheme for the time integration}{208}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Appendices to Chapter 5}{211}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Preliminaries on Lie group theory}{211}{section.C.1}%
+\contentsline {subsection}{\numberline {C.1.1}Basic definition(s)}{211}{subsection.C.1.1}%
+\contentsline {subsection}{\numberline {C.1.2}Exponential and logarithmic map}{212}{subsection.C.1.2}%
+\contentsline {section}{\numberline {C.2}Time-derivate of the geometric Jacobian for continuum robots}{213}{section.C.2}%
+\contentsline {chapter}{\numberline {D}Appendices to Chapter 6}{215}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Newmark-$\beta $ solver}{215}{section.D.1}%
 \vspace \bigskipamount 
-\contentsline {chapter}{Bibliography}{211}{section*.105}%
-\contentsline {chapter}{Acknowledgements}{229}{appendix*.107}%
-\contentsline {chapter}{List of publications}{233}{appendix*.108}%
-\contentsline {chapter}{Curriculum Vitae}{235}{appendix*.109}%
+\contentsline {chapter}{Bibliography}{217}{section*.106}%
+\contentsline {chapter}{Acknowledgements}{235}{appendix*.108}%
+\contentsline {chapter}{List of publications}{239}{appendix*.109}%
+\contentsline {chapter}{Curriculum Vitae}{241}{appendix*.110}%

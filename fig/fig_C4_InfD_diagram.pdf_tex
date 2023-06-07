@@ -1,0 +1,79 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig_C4_InfD_diagram.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{293.20866142bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.43504532)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.58500969,0.62749671){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\int$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.06826268,0.19749452){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\large{$G^+$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.07506215,0.64548356){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tmat{M}\,\ddq_r + \tmat{C}\, \dq_r + \tvec{f}\!\grav +  \tvec{f}\!\elastic - \tvec{\delta}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.71965429,0.62757821){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$ - \mat{K}_{\vec{\pi}}\,\vec{Y}^\top\vec{e}_r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.59435539,0.76314719){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textrm{PBA hyper-variables}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.19646999,0.37132851){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_{\textrm{beam}, \textrm{true}}$}\end{tabular}}}}%
+    \put(0.21902822,0.31562063){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$(k_{\textrm{true}} \gg k)$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.61097481,0.89569909){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{sensors}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.98753832,0.83614703){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\q_d, \dq_d, \ddq_d$}\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.97832986,0.3422913){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gB_d$\end{tabular}}}}%
+    \put(0.79516347,0.33422835){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\textrm{log}_{\textrm{SE}(3)}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.89932279,0.92384898){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

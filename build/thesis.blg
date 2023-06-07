@@ -18,22 +18,21 @@ Warning--entry type for "Immega1986" isn't style-file defined
 Warning--I'm ignoring Duriez2013's extra "publisher" field
 --line 927 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1620 of file MyBib.bib
+--line 1631 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1627 of file MyBib.bib
+--line 1638 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2355 of file MyBib.bib
+--line 2366 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 2817 of file MyBib.bib
+--line 2828 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 2929 of file MyBib.bib
+--line 2940 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3347 of file MyBib.bib
+--line 3358 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 3947 of file MyBib.bib
+--line 3958 of file MyBib.bib
 Warning--I didn't find a database entry for "Kazemipour2022"
-Warning--I didn't find a database entry for "Pustina2022"
 Warning--I didn't find a database entry for "Chen2018Dec"
 Warning--I didn't find a database entry for "Marechal2021Jun"
 Warning--I didn't find a database entry for "Newmark1959Jul"
@@ -81,45 +80,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 305 entries,
+You've used 306 entries,
             1935 wiz_defined-function locations,
-            2348 strings with 68896 characters,
-and the built_in function-call counts, 138565 in all, are:
-= -- 13539
-> -- 6766
-< -- 169
-+ -- 2401
-- -- 2362
-* -- 12244
-:= -- 23812
-add.period$ -- 951
-call.type$ -- 305
-change.case$ -- 2686
-chr.to.int$ -- 276
-cite$ -- 329
-duplicate$ -- 4855
-empty$ -- 9007
-format.name$ -- 2773
-if$ -- 27072
+            2350 strings with 69020 characters,
+and the built_in function-call counts, 139040 in all, are:
+= -- 13586
+> -- 6789
+< -- 170
++ -- 2409
+- -- 2370
+* -- 12282
+:= -- 23892
+add.period$ -- 954
+call.type$ -- 306
+change.case$ -- 2695
+chr.to.int$ -- 277
+cite$ -- 330
+duplicate$ -- 4874
+empty$ -- 9036
+format.name$ -- 2782
+if$ -- 27168
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 294
-newline$ -- 1522
-num.names$ -- 909
-pop$ -- 2404
+missing$ -- 295
+newline$ -- 1527
+num.names$ -- 912
+pop$ -- 2413
 preamble$ -- 1
-purify$ -- 2706
+purify$ -- 2715
 quote$ -- 0
-skip$ -- 3730
+skip$ -- 3746
 stack$ -- 0
-substring$ -- 9694
-swap$ -- 819
-text.length$ -- 67
+substring$ -- 9722
+swap$ -- 825
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1798
+type$ -- 1804
 warning$ -- 22
-while$ -- 1076
+while$ -- 1081
 width$ -- 0
-write$ -- 3946
-(There were 60 warnings)
+write$ -- 3959
+(There were 59 warnings)

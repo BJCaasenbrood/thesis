@@ -16,7 +16,7 @@ Following the mesh generation process, \textit{Sorotoki} offers a nonlinear fini
     \label{eq:C5:femmodel}
 \end{equation}
 %
-where $\x$, $\dx$, and $\ddx$ are the global nodal displacement, velocities and accelerations of the mesh tesselation, respectively; $\MB$ the constant generalized mass matrix, $\fB_\textrm{mat}$ the internal soft material forces, $\fB_\textrm{g}$ the constant gravitational forces, $\fB_u$ a user-defined input, and $\fB_{\Omega_{\textrm{env}}}$ the normal reaction forces and tangent friction forces imposed by the dynamic contact with a (possibly time-dependent) environment $\Omega_{\textrm{env}}$. The environment $\Omega_{\textrm{env}}$ can be described using the SDF functionality (see Section \ref{sec:C5:sdf}) using the syntax \code{fem.addContact(sdf)}. A broad collection of generalized external inputs can be added using: \code{fem.addLoad}, \code{fem.addDisplace}, \code{fem.addGravity}, and \code{fem.addTendon}. Pressure inputs can be added using the command \code{fem.addPressure}. 
+where $\x$, $\dx$, and $\ddx$ are the global nodal displacement, velocities and accelerations of the mesh tesselation, respectively; $\MB$ the constant generalized mass matrix, $\fB_\textrm{mat}$ the internal soft material forces, $\fB_\textrm{g}$ the constant gravitational forces, $\fB_u$ a user-defined input, and $\fB_{\Omega_{\textrm{env}}}$ the normal reaction forces and tangent friction forces imposed by the dynamic contact with a (possibly time-dependent) environment $\Omega_{\textrm{env}}$. The environment $\Omega_{\textrm{env}}$ can be described using the SDF functionality (see Section \ref{sec:C5:sdf}) using the syntax \code{fem.addContact(sdf)}. A broad collection of generalized external inputs can be added using: \code{fem.addLoad}, \code{fem.addDisplace}, \code{fem.addGravity}, and \code{fem.addTendon}. Time-varying pressure inputs can be added using the command \code{fem.addPressure}. 
 
 Without loss of generality, the material force can be decomposed into a position-dependent and velocity-dependent part: $\vec{f}_{\textrm{mat}}(\vec{x},\dot{\vec{x}}) = \vec{f}_{\textrm{e}}(\vec{x}) + \vec{f}_{\textrm{d}}(\dot{\vec{x}})$, \ie, an elastic and dissipation contribution, respectively. We assume that the dissipation is given by $\vec{f}_{\textrm{d}} = \zeta \mathbf{M} \dot{\vec{x}}$ with damping coefficient $\zeta > 0$. Materials can be assigned using \code{fem.addMaterial}. Note that the conservative elastic material forces $\vec{f}_{\textrm{e}}$ require more involved computation. Since this computation is not straightforward, we briefly explain the derivation of the nonlinear hyper-elastic material forces in \eqref{eq:C5:femmodel}, which follows standard nonlinear finite element procedures \cite{Kim2018,Holzapfel2002,Smith2018}. \\
 
@@ -122,6 +122,7 @@ A numerical solution is obtained through quasi-static analysis using the functio
 
 \begin{matlabcode}
 %% EXAMPLE: Fem class 
+load('sdf_porous_square.mat');
 msh = Mesh(sdf, 'NElem', 5e3);
 fem = Fem(msh, 'TimeStep', 1/60);
 
@@ -139,10 +140,10 @@ fem = fem.analysis( fem.Log.x(:,end) );
 \end{matlabcode}
     
 
-\begin{example}{Locomotion dynamics of soft crawling robot}
+\begin{example}[Locomotion dynamics of soft crawling robot]
 To demonstrate a dynamic finite element method (FEM) simulation that incorporates contact, we will utilize \sorotoki to model the locomotion of a multi-gait soft robot crawler inspired by the work of Shepard \cite{Shepherd2011Dec}. The study by Shepard  et al. \cite{Shepherd2011Dec} presents a soft robot system that consists of five pressure chambers - four for each leg and one for the spine. The pressure chambers are actuated in a sequential manner to produce an undulating motion. The work of Shepard  et al. \cite{Shepherd2011Dec} demonstrates that complex locomotion can be achieved through the use of open-loop controllers and the dynamic interaction between the soft robot and its environment.
 
-To simplify the model, we assume general plane motion. The geometry of the soft crawler's cross-section is first provided to \texttt{Mesh.m} to generate a triangular mesh. Then, a finite element method (FEM) model is generated, with the material model \texttt{fem.Material = Ecoflex0030}. To model the environment, the function \texttt{fem = fem.addContact(sLine)} is utilized, which simply creates an unbounded horizontal line. In accordance with \cite{Shepherd2011Dec}, a harmonic excitation is applied to each chamber, as expressed by the following: $u_i = A\textrm{sat}\left[\sin(\omega t - \phi_i) \right]$, where the index $i \in {1,2,3}$ represents the front, middle, and back pressure chambers embedded in the soft body. 
+To simplify the model, we assume general plane motion. The geometry of the soft crawler's cross-section is first provided to \texttt{Mesh.m} to generate a triangular mesh. Then, a finite element method (FEM) model is generated, with the material model \texttt{fem.Material = Ecoflex0030}. To model the environment, the function \texttt{fem = fem.addContact(sLine)} is utilized, which simply creates an unbounded horizontal line. In accordance with \cite{Shepherd2011Dec}, a harmonic excitation is applied to each chamber, as expressed by the following: $u_i = A\cdot\textrm{sat}\left[\sin(\omega t - \phi_i) \right]$, where the index $i \in {1,2,3}$ represents the front, middle, and back pressure chambers embedded in the soft body. 
 
 \begin{matlabcode} 
 %% EXAMPLE: Fem class   
@@ -154,14 +155,14 @@ fem = Fem(msh,'TimeStep',1/500);
 fem.Material = Ecoflex50();
 
 % -- add inextensible bottom layer 
-E1  = fem.FindElements([0 150 0 2]);
+E1  = fem.findElements([0 150 0 2]);
 fem = fem.addMaterialModifier(E1, 5);
 
 % -- add forces and constraints 
 Y  = 'BoxSelect';
-C1 = fem.FindEdges(Y,[0   50 0 15]);
-C2 = fem.FindEdges(Y,[50  100 0 15]);
-C3 = fem.FindEdges(Y,[100 150 0 15]);
+C1 = fem.findEdges(Y,[0   50 0 15]);
+C2 = fem.findEdges(Y,[50  100 0 15]);
+C3 = fem.findEdges(Y,[100 150 0 15]);
 
 fem = fem.addPressure(C1, @(x) Pressure(x,1));
 fem = fem.addPressure(C2, @(x) Pressure(x,2));
@@ -180,9 +181,10 @@ function y = Pressure(fem, i)
 end
 \end{matlabcode}
 
-The excitation signal parameters are set as follows: $A = 45$ (\si{\kilo \pascal}), $\omega = 5 \pi$ (\si{\radian}), and $\phi_i = \frac{\pi}{3} \cdot (i-1)$ (\si{\radian}). The saturation function is defined as $\textrm{sat}(x) = 0$ for $x < 0$, and $\textrm{sat}(x) = x$ for $x \geq 0$. Gravitational acceleration is added, and the dynamic simulation solver is invoked using \texttt{fem.simulate}. Figure \ref{fig:C5:fem_example_crawl} presents a comparison between the soft robot described in \cite{Shepherd2011Dec} and the dynamic simulation performed by \textit{Sorotoki}.
+The excitation signal parameters are set as follows: $A = 45$ \si{\kilo \pascal}, $\omega = 5 \pi$ \si{\radian}, and $\phi_i = \frac{\pi}{3} \cdot (i-1)$ \si{\radian}. The saturation function is defined as $\textrm{sat}(x) = 0$ for $x < 0$, and $\textrm{sat}(x) = x$ for $x \geq 0$. Gravitational acceleration is added, and the dynamic simulation solver is invoked using \texttt{fem.simulate}. Figure \ref{fig:C5:fem_example_crawl} presents a comparison between the soft robot described in \cite{Shepherd2011Dec} and the dynamic simulation performed by \textit{Sorotoki}.
 
-The results of the simulation performed using \textit{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. The code written in \textit{Sorotoki} is provided below, and its pipeline is shown in Figure \ref{fig:C5:PipelineCrawler}.
+The results of the simulation performed using \textit{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. The code written in \textit{Sorotoki} is provided below, and its pipeline is shown in Figure \ref{fig:C5:PipelineCrawler}. 
+\vfill
 \end{example}
 
 % \begin{figure}
@@ -220,7 +222,7 @@ Besides modeling, the field of computational inverse design can also benefit fro
 \tilde{\Psi}_{e} = \left[ \varepsilon + (1-\varepsilon){\rho_e}^p \right] \Psi,
 \end{equation}
 %
-where $0 < \varepsilon \ll 1$ a lower bound on the densities, and $p > 1$ a penalty factor for penalizing intermediate densities during the optimization process. By collecting the density values $\vec{\rho} = \textrm{vec}\{\rho_1,\rho_2,...,\rho_{N_e}\}$, the inverse design problem can be formulated in terms of two unknowns: the displacement field $\xB$ and the density field $\vec{\rho}$. Consequently, the computational design problem for general soft material structures can be expressed as a nonlinear topology optimization problem of the following form:
+where $0 < \varepsilon \ll 1$ a lower bound on the densities, and $p > 1$ a penalty factor for penalizing intermediate densities during the optimization process. By collecting the density values $\vec{\rho} = \textrm{col}\{\rho_1,\rho_2,...,\rho_{N_e}\}$, the inverse design problem can be formulated in terms of two unknowns: the displacement field $\xB$ and the density field $\vec{\rho}$. Consequently, the computational design problem for general soft material structures can be expressed as a nonlinear topology optimization problem of the following form:
 %
 \begin{mini}[2]
     {\vec{\rho}}{\Phi = -\beta_1\, \LB^\top\!\x \;+\; \beta_2 \fB\elastic^\top \! \fB_{\textrm{u}} }{}{}

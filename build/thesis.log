@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.28)  15 MAY 2023 10:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  6 JUN 2023 18:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -530,9 +530,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 105.
+(babel)             (\language31). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 108.
+(babel)             (\language31). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen302
@@ -1641,7 +1641,7 @@ LaTeX Font Info:    Trying to load font information for T1+pnc on input line 95.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pnc.fd
 File: t1pnc.fd 2001/06/04 font definitions for T1/pnc.
 ) (./3_1_introduction/0_soft_robots_what_are_they.tex
-<./pdf/thesis-figure-1-0.pdf, id=325, 363.10657pt x 104.14407pt>
+<./pdf/thesis-figure-1-0.pdf, id=329, 363.10657pt x 104.14407pt>
 File: ./pdf/thesis-figure-1-0.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-0.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-0.pdf  used on input line 13.
@@ -1650,29 +1650,29 @@ Package pdftex.def Info: ./pdf/thesis-figure-1-0.pdf  used on input line 13.
 
 
 ] [2 <./pdf/thesis-figure-1-0.pdf>]
-<./pdf/thesis-figurex-0-0-1.pdf, id=378, 327.74445pt x 106.30716pt>
+<./pdf/thesis-figurex-0-0-1.pdf, id=383, 327.74445pt x 106.30716pt>
 File: ./pdf/thesis-figurex-0-0-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-0-0-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-0-0-1.pdf  used on input line 33.
 (pdftex.def)             Requested size: 355.65945pt x 115.36963pt.
 ) (./3_1_introduction/1_brief_introduction.tex) (./3_1_introduction/2_question.tex
-<./pdf/thesis-figure-1-1.pdf, id=390, 306.70787pt x 178.36035pt>
+<./pdf/thesis-figure-1-1.pdf, id=395, 306.70787pt x 178.36035pt>
 File: ./pdf/thesis-figure-1-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-1.pdf  used on input line 4.
 (pdftex.def)             Requested size: 266.74458pt x 155.12868pt.
  [3 <./pdf/thesis-figurex-0-0-1.pdf>] [4 <./pdf/thesis-figure-1-1.pdf>] (./pdf/thesis-figure-1-octopus.pdf_tex
-<./pdf//thesis-figure-1-octopus.pdf, id=481, page=1, 359.15105pt x 153.08672pt>
+<./pdf//thesis-figure-1-octopus.pdf, id=485, page=1, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 1>
 Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 359.15105pt x 153.09566pt.
-<./pdf//thesis-figure-1-octopus.pdf, id=482, page=2, 359.15105pt x 153.08672pt>
+<./pdf//thesis-figure-1-octopus.pdf, id=486, page=2, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 2>
 Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 359.15105pt x 153.09566pt.
-<./pdf//thesis-figure-1-octopus.pdf, id=483, page=3, 359.15105pt x 153.08672pt>
+<./pdf//thesis-figure-1-octopus.pdf, id=487, page=3, 359.15105pt x 153.08672pt>
 File: ./pdf//thesis-figure-1-octopus.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-1-octopus.pdf, page 3>
 Package pdftex.def Info: ./pdf//thesis-figure-1-octopus.pdf , page3 used on input line 69.
@@ -1691,7 +1691,7 @@ pdfTeX warning: pdflatex (file ./pdf//thesis-figure-1-octopus.pdf): PDF inclusio
 >]) (./3_1_introduction/3_problem.tex [6]
 Package hyperref Info: bookmark level for unknown rmk defaults to 0 on input line 5.
  [7]
-<./pdf/thesis-figurex-1-3-2.pdf, id=652, 336.67784pt x 97.29349pt>
+<./pdf/thesis-figurex-1-3-2.pdf, id=656, 336.67784pt x 97.29349pt>
 File: ./pdf/thesis-figurex-1-3-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-1-3-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-1-3-2.pdf  used on input line 18.
@@ -1715,7 +1715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 ]
 Chapter 2.
 (./3_2_history/abstract.tex) (./3_2_history/early_soft_robots.tex [19]
-<./pdf/thesis-figure-2-1.pdf, id=1001, 513.51851pt x 322.05319pt>
+<./pdf/thesis-figure-2-1.pdf, id=1004, 513.51851pt x 322.05319pt>
 File: ./pdf/thesis-figure-2-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-1.pdf  used on input line 29.
@@ -1728,18 +1728,18 @@ Overfull \hbox (21.42805pt too wide) in paragraph at lines 29--29
 [20 <./pdf/thesis-figure-2-1.pdf>] [21
 
 ] (./fig/PAM.pdf_tex
-<./fig/PAM.pdf, id=1089, page=1, 353.36972pt x 107.6197pt>
+<./fig/PAM.pdf, id=1092, page=1, 353.36972pt x 107.6197pt>
 File: ./fig/PAM.pdf Graphic file (type pdf)
 <use ./fig/PAM.pdf, page 1>
 Package pdftex.def Info: ./fig/PAM.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 353.3697pt x 107.62599pt.
-<./fig/PAM.pdf, id=1090, page=2, 353.36972pt x 107.6197pt>
+<./fig/PAM.pdf, id=1093, page=2, 353.36972pt x 107.6197pt>
 File: ./fig/PAM.pdf Graphic file (type pdf)
 <use ./fig/PAM.pdf, page 2>
 Package pdftex.def Info: ./fig/PAM.pdf , page2 used on input line 61.
 (pdftex.def)             Requested size: 353.3697pt x 107.62599pt.
 )
-<./pdf/thesis-figure-2-2.pdf, id=1101, 337.4698pt x 96.12111pt>
+<./pdf/thesis-figure-2-2.pdf, id=1104, 337.4698pt x 96.12111pt>
 File: ./pdf/thesis-figure-2-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-2.pdf  used on input line 50.
@@ -1751,12 +1751,12 @@ pdfTeX warning: pdflatex (file ./fig/PAM.pdf): PDF inclusion: multiple pdfs with
 
 pdfTeX warning: pdflatex (file ./fig/PAM.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./pdf/thesis-figurex-2-4-1.pdf, id=1261, 372.60204pt x 88.72147pt>
+<./pdf/thesis-figurex-2-4-1.pdf, id=1264, 372.60204pt x 88.72147pt>
 File: ./pdf/thesis-figurex-2-4-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-2-4-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-2-4-1.pdf  used on input line 64.
 (pdftex.def)             Requested size: 372.60112pt x 88.72124pt.
-<./pdf/thesis-figurex-2-4-2.pdf, id=1262, 372.60204pt x 105.92574pt>
+<./pdf/thesis-figurex-2-4-2.pdf, id=1265, 372.60204pt x 105.92574pt>
 File: ./pdf/thesis-figurex-2-4-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-2-4-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-2-4-2.pdf  used on input line 65.
@@ -1772,18 +1772,18 @@ Overfull \hbox (16.94167pt too wide) in paragraph at lines 64--71
  []
 
 [23] [24 <./pdf/thesis-figurex-2-4-1.pdf> <./pdf/thesis-figurex-2-4-2.pdf>]
-<./pdf/thesis-figure-2-5.pdf, id=1318, 327.74947pt x 106.30515pt>
+<./pdf/thesis-figure-2-5.pdf, id=1321, 327.74947pt x 106.30515pt>
 File: ./pdf/thesis-figure-2-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-5.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-5.pdf  used on input line 92.
 (pdftex.def)             Requested size: 355.65945pt x 115.36745pt.
  [25]
-<./pdf/thesis-figure-2-6.pdf, id=1359, 310.50505pt x 118.3351pt>
+<./pdf/thesis-figure-2-6.pdf, id=1362, 310.50505pt x 118.3351pt>
 File: ./pdf/thesis-figure-2-6.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-6.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-6.pdf  used on input line 108.
 (pdftex.def)             Requested size: 355.65945pt x 135.54439pt.
-<./pdf/thesis-figure-2-7.pdf, id=1363, 310.50204pt x 119.71425pt>
+<./pdf/thesis-figure-2-7.pdf, id=1366, 310.50204pt x 119.71425pt>
 File: ./pdf/thesis-figure-2-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-2-7.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-2-7.pdf  used on input line 121.
@@ -1801,13 +1801,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<./pdf/thesis-figurex-1-2.pdf, id=1478, 319.42337pt x 91.69257pt>
+<./pdf/thesis-figurex-1-2.pdf, id=1481, 319.42337pt x 91.69257pt>
 File: ./pdf/thesis-figurex-1-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-1-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-1-2.pdf  used on input line 15.
 (pdftex.def)             Requested size: 355.65945pt x 102.09894pt.
 [29]
-<./pdf/thesis-figure-1-3.pdf, id=1530, 336.37569pt x 89.3438pt>
+<./pdf/thesis-figure-1-3.pdf, id=1533, 336.37569pt x 89.3438pt>
 File: ./pdf/thesis-figure-1-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-3.pdf  used on input line 33.
@@ -1821,7 +1821,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30 <./pdf/thesis-figurex-1-2.pdf>]
-<./pdf/thesis-figure-1-4.pdf, id=1568, 336.35678pt x 88.05635pt>
+<./pdf/thesis-figure-1-4.pdf, id=1571, 336.35678pt x 88.05635pt>
 File: ./pdf/thesis-figure-1-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-1-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-1-4.pdf  used on input line 51.
@@ -1841,12 +1841,12 @@ Overfull \hbox (7.64597pt too wide) in paragraph at lines 117--117
  []
 
 [43] (./fig/fig_C3_voronoi.pdf_tex
-<./fig//fig_C3_voronoi.pdf, id=1865, page=1, 358.72147pt x 113.81102pt>
+<./fig//fig_C3_voronoi.pdf, id=1867, page=1, 358.72147pt x 113.81102pt>
 File: ./fig//fig_C3_voronoi.pdf Graphic file (type pdf)
 <use ./fig//fig_C3_voronoi.pdf, page 1>
 Package pdftex.def Info: ./fig//fig_C3_voronoi.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 358.72148pt x 113.81073pt.
-<./fig//fig_C3_voronoi.pdf, id=1866, page=2, 358.72147pt x 113.81102pt>
+<./fig//fig_C3_voronoi.pdf, id=1868, page=2, 358.72147pt x 113.81102pt>
 File: ./fig//fig_C3_voronoi.pdf Graphic file (type pdf)
 <use ./fig//fig_C3_voronoi.pdf, page 2>
 Package pdftex.def Info: ./fig//fig_C3_voronoi.pdf , page2 used on input line 61.
@@ -1865,29 +1865,29 @@ Overfull \hbox (0.41035pt too wide) detected at line 155
  []
 
 ) (./3_3_design/3_opt.tex [45] [46] [47] [48] [49] (./pdf/thesis-figure-3-1.pdf_tex
-<./pdf//thesis-figure-3-1.pdf, id=1971, page=1, 324.53233pt x 88.07854pt>
+<./pdf//thesis-figure-3-1.pdf, id=1973, page=1, 324.53233pt x 88.07854pt>
 File: ./pdf//thesis-figure-3-1.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-3-1.pdf, page 1>
 Package pdftex.def Info: ./pdf//thesis-figure-3-1.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 324.53233pt x 88.07831pt.
 )) (./3_3_design/4_example.tex [50 <./pdf//thesis-figure-3-1.pdf>] [51]
-<./pdf/thesis-figure-3-3.pdf, id=2014, 327.74846pt x 87.9837pt>
+<./pdf/thesis-figure-3-3.pdf, id=2016, 327.74846pt x 87.9837pt>
 File: ./pdf/thesis-figure-3-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-3.pdf  used on input line 32.
 (pdftex.def)             Requested size: 337.87538pt x 90.71013pt.
-<./pdf/thesis-figure-3-4.pdf, id=2016, 334.38062pt x 124.34457pt>
+<./pdf/thesis-figure-3-4.pdf, id=2018, 334.38062pt x 124.34457pt>
 File: ./pdf/thesis-figure-3-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-4.pdf  used on input line 32.
 (pdftex.def)             Requested size: 337.87538pt x 125.64583pt.
  [52 <./pdf/thesis-figure-3-3.pdf> <./pdf/thesis-figure-3-4.pdf>]
-<./pdf/thesis-figure-3-7.pdf, id=2073, 328.75423pt x 190.43964pt>
+<./pdf/thesis-figure-3-7.pdf, id=2075, 328.75423pt x 190.43964pt>
 File: ./pdf/thesis-figure-3-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-7.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-7.pdf  used on input line 44.
 (pdftex.def)             Requested size: 337.87538pt x 195.72493pt.
-<./pdf/thesis-figure-3-6.pdf, id=2075, 360.35881pt x 117.51717pt>
+<./pdf/thesis-figure-3-6.pdf, id=2077, 360.35881pt x 117.51717pt>
 File: ./pdf/thesis-figure-3-6.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-6.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-6.pdf  used on input line 53.
@@ -1896,12 +1896,12 @@ Package pdftex.def Info: ./pdf/thesis-figure-3-6.pdf  used on input line 53.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53 <./pdf/thesis-figure-3-7.pdf>]
-<./pdf/thesis-figure-3-2.pdf, id=2112, 327.75047pt x 88.67328pt>
+<./pdf/thesis-figure-3-2.pdf, id=2114, 327.75047pt x 88.67328pt>
 File: ./pdf/thesis-figure-3-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-2.pdf  used on input line 67.
 (pdftex.def)             Requested size: 337.87538pt x 91.42107pt.
-<./pdf/thesis-figure-3-5.pdf, id=2114, 341.08852pt x 118.67831pt>
+<./pdf/thesis-figure-3-5.pdf, id=2116, 341.08852pt x 118.67831pt>
 File: ./pdf/thesis-figure-3-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-3-5.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-3-5.pdf  used on input line 75.
@@ -1914,12 +1914,12 @@ Package hyperref Warning: Ignoring empty anchor on input line 138.
 (./3_4_pccmodel/0_abstract.tex) (./3_4_pccmodel/1_introduction.tex [57
 
 ] [58] [59]
-<./pdf/thesis-figure-4-1-1.pdf, id=2288, 344.62752pt x 171.78177pt>
+<./pdf/thesis-figure-4-1-1.pdf, id=2290, 344.62752pt x 171.78177pt>
 File: ./pdf/thesis-figure-4-1-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-1-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-1-1.pdf  used on input line 28.
 (pdftex.def)             Requested size: 355.65945pt x 177.28056pt.
-<./pdf/thesis-figure-4-1-2.pdf, id=2290, 341.4838pt x 120.80634pt>
+<./pdf/thesis-figure-4-1-2.pdf, id=2292, 341.4838pt x 120.80634pt>
 File: ./pdf/thesis-figure-4-1-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-1-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-1-2.pdf  used on input line 29.
@@ -1935,25 +1935,25 @@ Overfull \hbox (0.16846pt too wide) in paragraph at lines 49--50
 
 ) (./3_4_pccmodel/3_model.tex [62]
 Package hyperref Info: bookmark level for unknown asm defaults to 0 on input line 17.
-<./pdf/thesis-figure-4-2.pdf, id=2381, 2925.48965pt x 1468.52644pt>
+<./pdf/thesis-figure-4-2.pdf, id=2383, 2925.48965pt x 1468.52644pt>
 File: ./pdf/thesis-figure-4-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-2.pdf  used on input line 40.
 (pdftex.def)             Requested size: 355.65945pt x 178.52357pt.
  [63] [64 <./pdf/thesis-figure-4-2.pdf>] [65] [66] [67]
-<./pdf/thesis-figure-4-3.pdf, id=2512, 358.77838pt x 112.97607pt>
+<./pdf/thesis-figure-4-3.pdf, id=2514, 358.77838pt x 112.97607pt>
 File: ./pdf/thesis-figure-4-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-3.pdf  used on input line 164.
 (pdftex.def)             Requested size: 355.65945pt x 112.00179pt.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 169.
  [68 <./pdf/thesis-figure-4-3.pdf>]
-<./pdf/thesis-figure-4-5.pdf, id=2557, 342.98439pt x 164.78363pt>
+<./pdf/thesis-figure-4-5.pdf, id=2559, 342.98439pt x 164.78363pt>
 File: ./pdf/thesis-figure-4-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-5.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-5.pdf  used on input line 188.
 (pdftex.def)             Requested size: 342.98354pt x 164.78322pt.
-<./pdf/thesis-figure-4-4.pdf, id=2563, 337.87393pt x 138.54497pt>
+<./pdf/thesis-figure-4-4.pdf, id=2565, 337.87393pt x 138.54497pt>
 File: ./pdf/thesis-figure-4-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-4.pdf  used on input line 198.
@@ -1967,12 +1967,12 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 219.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [70 <./pdf/thesis-figure-4-4.pdf>] [71] [72]) (./3_4_pccmodel/4_multilink.tex [73]) (./3_4_pccmodel/5_solver.tex [74]) (./3_4_pccmodel/6_material.tex [75] [76]
-<./pdf/thesis-figure-4-6.pdf, id=2785, 320.09587pt x 60.10857pt>
+<./pdf/thesis-figure-4-6.pdf, id=2787, 320.09587pt x 60.10857pt>
 File: ./pdf/thesis-figure-4-6.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-6.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-6.pdf  used on input line 42.
 (pdftex.def)             Requested size: 320.09508pt x 60.10841pt.
-<./pdf/thesis-figure-4-7.pdf, id=2789, 393.3596pt x 125.29108pt>
+<./pdf/thesis-figure-4-7.pdf, id=2791, 393.3596pt x 125.29108pt>
 File: ./pdf/thesis-figure-4-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-7.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-7.pdf  used on input line 54.
@@ -1983,7 +1983,7 @@ Overfull \hbox (34.23085pt too wide) in paragraph at lines 52--56
  []
 
 [77] [78 <./pdf/thesis-figure-4-6.pdf> <./pdf/thesis-figure-4-7.pdf>] [79] [80] [81]
-<./pdf/thesis-figure-4-8.pdf, id=2893, 393.3596pt x 125.29108pt>
+<./pdf/thesis-figure-4-8.pdf, id=2895, 393.3596pt x 125.29108pt>
 File: ./pdf/thesis-figure-4-8.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-8.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-8.pdf  used on input line 193.
@@ -1993,13 +1993,13 @@ Overfull \hbox (34.23085pt too wide) in paragraph at lines 193--193
 []  []
  []
 
-<./pdf/thesis-figure-4-9.pdf, id=2897, 344.27823pt x 162.45393pt>
+<./pdf/thesis-figure-4-9.pdf, id=2899, 344.27823pt x 162.45393pt>
 File: ./pdf/thesis-figure-4-9.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-9.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-9.pdf  used on input line 193.
 (pdftex.def)             Requested size: 344.27737pt x 162.45352pt.
 [82 <./pdf/thesis-figure-4-8.pdf> <./pdf/thesis-figure-4-9.pdf>]
-<./pdf/thesis-figure-4-10.pdf, id=2964, 348.05934pt x 137.87209pt>
+<./pdf/thesis-figure-4-10.pdf, id=2966, 348.05934pt x 137.87209pt>
 File: ./pdf/thesis-figure-4-10.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-10.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-10.pdf  used on input line 199.
@@ -2007,54 +2007,54 @@ Package pdftex.def Info: ./pdf/thesis-figure-4-10.pdf  used on input line 199.
 ) (./3_4_pccmodel/7_control.tex [83
 
  <./pdf/thesis-figure-4-10.pdf>] (./pdf/thesis-figure-4-11.pdf_tex
-<./fig/fig_C2_PBAdiagram.pdf, id=2998, page=1, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3000, page=1, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 1>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 57.
-<./fig/fig_C2_PBAdiagram.pdf, id=2999, page=2, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3001, page=2, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 2>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3000, page=3, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3002, page=3, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 3>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3001, page=4, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3003, page=4, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 4>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3002, page=5, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3004, page=5, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 5>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page5 used on input line 64.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3003, page=6, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3005, page=6, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 6>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page6 used on input line 66.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3004, page=7, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3006, page=7, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 7>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page7 used on input line 69.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3005, page=8, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3007, page=8, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 8>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page8 used on input line 71.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3006, page=9, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3008, page=9, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 9>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page9 used on input line 73.
 (pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
-<./fig/fig_C2_PBAdiagram.pdf, id=3007, page=10, 294.30818pt x 128.0374pt>
+<./fig/fig_C2_PBAdiagram.pdf, id=3009, page=10, 294.30818pt x 128.0374pt>
 File: ./fig/fig_C2_PBAdiagram.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_PBAdiagram.pdf, page 10>
 Package pdftex.def Info: ./fig/fig_C2_PBAdiagram.pdf , page10 used on input line 76.
@@ -2090,48 +2090,48 @@ pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: mult
 
 pdfTeX warning: pdflatex (file ./fig/fig_C2_PBAdiagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [86]
-<./pdf/thesis-figure-4-12.pdf, id=3058, 1150.2072pt x 698.96129pt>
+<./pdf/thesis-figure-4-12.pdf, id=3060, 1150.2072pt x 698.96129pt>
 File: ./pdf/thesis-figure-4-12.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-12.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-12.pdf  used on input line 33.
 (pdftex.def)             Requested size: 355.65945pt x 216.12115pt.
  [87 <./pdf/thesis-figure-4-12.pdf>] (./fig/fig_C2_setup_measure_V2.pdf_tex
-<./fig/fig_C2_setup_measure_V2.pdf, id=3077, page=1, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3079, page=1, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 1>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3078, page=2, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3080, page=2, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 2>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3079, page=3, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3081, page=3, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 3>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3080, page=4, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3082, page=4, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 4>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3081, page=5, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3083, page=5, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 5>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page5 used on input line 64.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3082, page=6, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3084, page=6, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 6>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page6 used on input line 69.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3083, page=7, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3085, page=7, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 7>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page7 used on input line 71.
 (pdftex.def)             Requested size: 342.17735pt x 437.65994pt.
-<./fig/fig_C2_setup_measure_V2.pdf, id=3084, page=8, 342.17735pt x 437.63432pt>
+<./fig/fig_C2_setup_measure_V2.pdf, id=3086, page=8, 342.17735pt x 437.63432pt>
 File: ./fig/fig_C2_setup_measure_V2.pdf Graphic file (type pdf)
 <use ./fig/fig_C2_setup_measure_V2.pdf, page 8>
 Package pdftex.def Info: ./fig/fig_C2_setup_measure_V2.pdf , page8 used on input line 73.
@@ -2176,12 +2176,12 @@ pdfTeX warning: pdflatex (file ./fig/fig_C2_setup_measure_V2.pdf): PDF inclusion
 >] [89
 
 ]
-<./pdf/thesis-figure-4-14.pdf, id=3140, 338.29588pt x 217.56682pt>
+<./pdf/thesis-figure-4-14.pdf, id=3142, 338.29588pt x 217.56682pt>
 File: ./pdf/thesis-figure-4-14.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-14.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-14.pdf  used on input line 80.
 (pdftex.def)             Requested size: 338.29504pt x 217.56628pt.
-<./pdf/thesis-figure-4-15.pdf, id=3142, 344.63153pt x 181.38466pt>
+<./pdf/thesis-figure-4-15.pdf, id=3144, 344.63153pt x 181.38466pt>
 File: ./pdf/thesis-figure-4-15.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-15.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-15.pdf  used on input line 80.
@@ -2189,35 +2189,35 @@ Package pdftex.def Info: ./pdf/thesis-figure-4-15.pdf  used on input line 80.
  [90 <./pdf/thesis-figure-4-14.pdf> <./pdf/thesis-figure-4-15.pdf>] [91
 
 ]
-<./pdf/thesis-figure-4-16.pdf, id=3197, 330.09726pt x 191.18729pt>
+<./pdf/thesis-figure-4-16.pdf, id=3199, 330.09726pt x 191.18729pt>
 File: ./pdf/thesis-figure-4-16.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-16.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-16.pdf  used on input line 104.
 (pdftex.def)             Requested size: 330.09645pt x 191.18681pt.
-<./pdf/thesis-figure-4-17-1.pdf, id=3199, 286.03163pt x 149.48347pt>
+<./pdf/thesis-figure-4-17-1.pdf, id=3201, 286.03163pt x 149.48347pt>
 File: ./pdf/thesis-figure-4-17-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-17-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-17-1.pdf  used on input line 126.
 (pdftex.def)             Requested size: 286.03093pt x 149.4831pt.
-<./pdf/thesis-figure-4-17-2.pdf, id=3201, 307.02504pt x 88.20253pt>
+<./pdf/thesis-figure-4-17-2.pdf, id=3203, 307.02504pt x 88.20253pt>
 File: ./pdf/thesis-figure-4-17-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-17-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-17-2.pdf  used on input line 127.
 (pdftex.def)             Requested size: 307.02428pt x 88.2023pt.
  [92 <./pdf/thesis-figure-4-16.pdf>] [93 <./pdf/thesis-figure-4-17-1.pdf> <./pdf/thesis-figure-4-17-2.pdf>]
-<./pdf/thesis-figure-4-18.pdf, id=3296, 334.29892pt x 158.3516pt>
+<./pdf/thesis-figure-4-18.pdf, id=3298, 334.29892pt x 158.3516pt>
 File: ./pdf/thesis-figure-4-18.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-18.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-18.pdf  used on input line 153.
 (pdftex.def)             Requested size: 334.2981pt x 158.35118pt.
  [94 <./pdf/thesis-figure-4-18.pdf>] [95]
-<./pdf/thesis-figure-4-19.pdf, id=3334, 333.71474pt x 319.30592pt>
+<./pdf/thesis-figure-4-19.pdf, id=3336, 333.71474pt x 319.30592pt>
 File: ./pdf/thesis-figure-4-19.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-19.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-19.pdf  used on input line 196.
 (pdftex.def)             Requested size: 333.71391pt x 319.30515pt.
  [96 <./pdf/thesis-figure-4-19.pdf>]
-<./pdf/thesis-figure-4-20.pdf, id=3371, 337.87227pt x 434.25237pt>
+<./pdf/thesis-figure-4-20.pdf, id=3373, 337.87227pt x 434.25237pt>
 File: ./pdf/thesis-figure-4-20.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-20.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-20.pdf  used on input line 222.
@@ -2228,18 +2228,22 @@ Underfull \vbox (badness 2005) has occurred while \output is active []
  [98
 
 ]
+Overfull \hbox (4.58055pt too wide) in paragraph at lines 259--259
+ [][] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [99]) (./3_4_pccmodel/9_conclusion.tex [100
 
 ]
-<./pdf/thesis-figure-4-21.pdf, id=3414, 333.36043pt x 217.57285pt>
+<./pdf/thesis-figure-4-21.pdf, id=3417, 333.36043pt x 217.57285pt>
 File: ./pdf/thesis-figure-4-21.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-21.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-21.pdf  used on input line 4.
 (pdftex.def)             Requested size: 333.3596pt x 217.5723pt.
-<./pdf/thesis-figure-4-22.pdf, id=3418, 328.20316pt x 145.70134pt>
+<./pdf/thesis-figure-4-22.pdf, id=3421, 328.20316pt x 145.70134pt>
 File: ./pdf/thesis-figure-4-22.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-4-22.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-4-22.pdf  used on input line 4.
@@ -2259,7 +2263,7 @@ Package hyperref Warning: Ignoring empty anchor on input line 155.
 LaTeX Warning: Reference `sec:chap3_conclusion' on page 105 undefined on input line 14.
 
 ) (./3_5_cosseratmodel/2_model.tex
-<./pdf/thesis-figure-5-1.pdf, id=3527, 2925.48965pt x 1468.52644pt>
+<./pdf/thesis-figure-5-1.pdf, id=3530, 2925.48965pt x 1468.52644pt>
 File: ./pdf/thesis-figure-5-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-1.pdf  used on input line 10.
@@ -2269,12 +2273,12 @@ Overfull \hbox (2.5733pt too wide) detected at line 120
 []
  []
 
-<./pdf/thesis-figure-5-2-1.pdf, id=3667, 350.04477pt x 127.7312pt>
+<./pdf/thesis-figure-5-2-1.pdf, id=3670, 350.04477pt x 127.7312pt>
 File: ./pdf/thesis-figure-5-2-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-2-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-2-1.pdf  used on input line 128.
 (pdftex.def)             Requested size: 350.04391pt x 127.73087pt.
-<./pdf/thesis-figure-5-2-2.pdf, id=3668, 352.84523pt x 113.72186pt>
+<./pdf/thesis-figure-5-2-2.pdf, id=3671, 352.84523pt x 113.72186pt>
 File: ./pdf/thesis-figure-5-2-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-2-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-2-2.pdf  used on input line 129.
@@ -2283,7 +2287,7 @@ Package pdftex.def Info: ./pdf/thesis-figure-5-2-2.pdf  used on input line 129.
 Underfull \vbox (badness 1910) has occurred while \output is active []
 
  [109] [110 <./pdf/thesis-figure-5-2-1.pdf> <./pdf/thesis-figure-5-2-2.pdf>]
-<./pdf/thesis-figure-5-3.pdf, id=3742, 334.03157pt x 161.48898pt>
+<./pdf/thesis-figure-5-3.pdf, id=3745, 334.03157pt x 161.48898pt>
 File: ./pdf/thesis-figure-5-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-3.pdf  used on input line 200.
@@ -2291,43 +2295,43 @@ Package pdftex.def Info: ./pdf/thesis-figure-5-3.pdf  used on input line 200.
  [111] [112 <./pdf/thesis-figure-5-3.pdf>] [113] [114] [115]
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 343.
  [116] [117]) (./3_5_cosseratmodel/3_control.tex [118]) (./3_5_cosseratmodel/4_results.tex [119] [120]
-<./pdf/thesis-figure-5-4.pdf, id=3970, 310.495pt x 56.57838pt>
+<./pdf/thesis-figure-5-4.pdf, id=3976, 310.495pt x 56.57838pt>
 File: ./pdf/thesis-figure-5-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-4.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-4.pdf  used on input line 72.
+Package pdftex.def Info: ./pdf/thesis-figure-5-4.pdf  used on input line 77.
 (pdftex.def)             Requested size: 355.65945pt x 64.81339pt.
-<./pdf/thesis-figure-5-5.pdf, id=3972, 346.4905pt x 118.62016pt>
+<./pdf/thesis-figure-5-5.pdf, id=3978, 346.4905pt x 118.62016pt>
 File: ./pdf/thesis-figure-5-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-5.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-5.pdf  used on input line 72.
+Package pdftex.def Info: ./pdf/thesis-figure-5-5.pdf  used on input line 77.
 (pdftex.def)             Requested size: 355.65945pt x 121.76564pt.
-<./pdf/thesis-figure-5-6.pdf, id=3974, 340.30237pt x 119.70422pt>
+<./pdf/thesis-figure-5-6.pdf, id=3980, 340.30237pt x 119.70422pt>
 File: ./pdf/thesis-figure-5-6.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-6.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-6.pdf  used on input line 72.
+Package pdftex.def Info: ./pdf/thesis-figure-5-6.pdf  used on input line 77.
 (pdftex.def)             Requested size: 355.65945pt x 125.11229pt.
  [121 <./pdf/thesis-figure-5-4.pdf> <./pdf/thesis-figure-5-5.pdf> <./pdf/thesis-figure-5-6.pdf>]
 
 Package hyperref Warning: Ignoring empty anchor on input line 81.
 
 [122]
-<./pdf/thesis-figure-5-7.pdf, id=4037, 341.546pt x 193.88936pt>
+<./pdf/thesis-figure-5-7.pdf, id=4040, 341.546pt x 193.88936pt>
 File: ./pdf/thesis-figure-5-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-7.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-7.pdf  used on input line 130.
 (pdftex.def)             Requested size: 355.65945pt x 201.9094pt.
-<./pdf/thesis-figure-5-8.pdf, id=4039, 330.56902pt x 144.98064pt>
+<./pdf/thesis-figure-5-8.pdf, id=4042, 330.56902pt x 144.98064pt>
 File: ./pdf/thesis-figure-5-8.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-8.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-8.pdf  used on input line 130.
 (pdftex.def)             Requested size: 355.65945pt x 155.98607pt.
  [123 <./pdf/thesis-figure-5-7.pdf> <./pdf/thesis-figure-5-8.pdf>]
-<./pdf/thesis-figure-5-9.pdf, id=4109, 341.546pt x 191.13307pt>
+<./pdf/thesis-figure-5-9.pdf, id=4112, 341.546pt x 191.13307pt>
 File: ./pdf/thesis-figure-5-9.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-9.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-9.pdf  used on input line 130.
 (pdftex.def)             Requested size: 355.65945pt x 199.0391pt.
-<./pdf/thesis-figure-5-10.pdf, id=4111, 328.15298pt x 144.97462pt>
+<./pdf/thesis-figure-5-10.pdf, id=4114, 328.15298pt x 144.97462pt>
 File: ./pdf/thesis-figure-5-10.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-10.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-10.pdf  used on input line 130.
@@ -2337,47 +2341,126 @@ Underfull \hbox (badness 1072) in paragraph at lines 130--130
 \T1/lmr/m/n/10 con-troller gains. The modal co-ef-fi-cients $[]$ are or-dered as fol-lows: $\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 2
  []
 
-[124 <./pdf/thesis-figure-5-9.pdf> <./pdf/thesis-figure-5-10.pdf>] [125
+[124 <./pdf/thesis-figure-5-9.pdf> <./pdf/thesis-figure-5-10.pdf>] (./fig/fig_C4_InfD_diagram.pdf_tex
+<./fig//fig_C4_InfD_diagram.pdf, id=4157, page=1, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 1>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4158, page=2, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 2>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 59.
+<./fig//fig_C4_InfD_diagram.pdf, id=4159, page=3, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 3>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4160, page=4, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 4>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4161, page=5, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 5>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4162, page=6, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 6>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page6 used on input line 66.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4163, page=7, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 7>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page7 used on input line 69.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4164, page=8, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 8>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page8 used on input line 71.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4165, page=9, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 9>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page9 used on input line 73.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4166, page=10, 294.30818pt x 128.0374pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 10>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page10 used on input line 76.
+(pdftex.def)             Requested size: 294.30818pt x 128.04683pt.
+) [125
 
 
+
+ <./fig//fig_C4_InfD_diagram.pdf> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./fig//fig_C4_InfD_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [126
 
 ]
-<./pdf/thesis-figure-5-11.pdf, id=4169, 339.12898pt x 224.24878pt>
+<./pdf/thesis-figure-5-11.pdf, id=4193, 339.12898pt x 224.24878pt>
 File: ./pdf/thesis-figure-5-11.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-11.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-11.pdf  used on input line 171.
+Package pdftex.def Info: ./pdf/thesis-figure-5-11.pdf  used on input line 183.
 (pdftex.def)             Requested size: 355.65945pt x 235.18074pt.
-<./pdf/thesis-figure-5-12.pdf, id=4171, 330.65733pt x 144.97462pt>
+<./pdf/thesis-figure-5-12.pdf, id=4195, 330.65733pt x 144.97462pt>
 File: ./pdf/thesis-figure-5-12.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-12.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-12.pdf  used on input line 171.
+Package pdftex.def Info: ./pdf/thesis-figure-5-12.pdf  used on input line 183.
 (pdftex.def)             Requested size: 355.65945pt x 155.93536pt.
 
-Underfull \hbox (badness 2359) in paragraph at lines 171--171
+Underfull \hbox (badness 2359) in paragraph at lines 183--183
 \T1/lmr/m/n/10 phant's trunk. The modal co-ef-fi-cients $[]$ are or-dered as fol-lows $\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 2
  []
 
-[126 <./pdf/thesis-figure-5-11.pdf> <./pdf/thesis-figure-5-12.pdf>]) (./3_5_cosseratmodel/5_conclusion.tex
+[127 <./pdf/thesis-figure-5-11.pdf> <./pdf/thesis-figure-5-12.pdf>]) (./3_5_cosseratmodel/5_conclusion.tex
 Underfull \vbox (badness 2103) has occurred while \output is active []
 
- [127
+ [128
 
 
-]) [128]
+]) [129] [130
+
+]
 Chapter 6.
 
 Package hyperref Warning: Ignoring empty anchor on input line 169.
 
-(./3_6_sorotoki/0_abstract.tex) (./3_6_sorotoki/1_introduction.tex [129
+(./3_6_sorotoki/0_abstract.tex) (./3_6_sorotoki/1_introduction.tex [131] [132] [133] [134]) (./3_6_sorotoki/2_relatedworks.tex [135] [136]
 
-] [130] [131] [132]) (./3_6_sorotoki/2_relatedworks.tex [133] [134]
+Package natbib Warning: Citation `Kazemipour2022' on page 137 undefined on input line 15.
 
-Package natbib Warning: Citation `Kazemipour2022' on page 135 undefined on input line 15.
-
-
-Package natbib Warning: Citation `Pustina2022' on page 135 undefined on input line 15.
-
-[135] [136]
+[137] [138]
 LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7.5> on input line 52.
@@ -2389,44 +2472,44 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[137]
+[139]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 66.
 ) (./3_6_sorotoki/3_openrobots.tex
-<./pdf/thesis-figure-6-1.pdf, id=4428, 244.98528pt x 243.97147pt>
+<./pdf/thesis-figure-6-1.pdf, id=4457, 244.98528pt x 243.97147pt>
 File: ./pdf/thesis-figure-6-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-1.pdf  used on input line 12.
+Package pdftex.def Info: ./pdf/thesis-figure-6-1.pdf  used on input line 13.
 (pdftex.def)             Requested size: 302.3127pt x 301.08078pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[138
+[140
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139 <./pdf/thesis-figure-6-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+ [141 <./pdf/thesis-figure-6-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-) (./3_6_sorotoki/4_software.tex [140]
-<./pdf/thesis-figure-6-2.pdf, id=4477, 845.58911pt x 272.21701pt>
+) (./3_6_sorotoki/4_software.tex [142]
+<./pdf/thesis-figure-6-2.pdf, id=4508, 845.58911pt x 272.21701pt>
 File: ./pdf/thesis-figure-6-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-2.pdf  used on input line 6.
@@ -2436,32 +2519,32 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
 
 
-Package natbib Warning: Citation `Chen2018Dec' on page 141 undefined on input line 3.
+Package natbib Warning: Citation `Chen2018Dec' on page 143 undefined on input line 3.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[141] [142 <./pdf/thesis-figure-6-2.pdf>]
+[143] [144 <./pdf/thesis-figure-6-2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <5> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 34.
-<./pdf/thesis-figure-6-3-1.pdf, id=4525, 244.98425pt x 86.87859pt>
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 35.
+<./pdf/thesis-figure-6-3-1.pdf, id=4555, 244.98425pt x 86.87859pt>
 File: ./pdf/thesis-figure-6-3-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-3-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-3-1.pdf  used on input line 49.
+Package pdftex.def Info: ./pdf/thesis-figure-6-3-1.pdf  used on input line 50.
 (pdftex.def)             Requested size: 176.04968pt x 62.43585pt.
-<./pdf/thesis-figure-6-3-2.pdf, id=4527, 244.98325pt x 73.24664pt>
+<./pdf/thesis-figure-6-3-2.pdf, id=4557, 244.98325pt x 73.24664pt>
 File: ./pdf/thesis-figure-6-3-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-3-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-3-2.pdf  used on input line 50.
+Package pdftex.def Info: ./pdf/thesis-figure-6-3-2.pdf  used on input line 51.
 (pdftex.def)             Requested size: 176.04968pt x 52.63918pt.
-[143]) (./3_6_sorotoki/6_mesh.tex
-<./pdf/thesis-figure-6-4.pdf, id=4551, 227.30823pt x 71.22108pt>
+[145]) (./3_6_sorotoki/6_mesh.tex
+<./pdf/thesis-figure-6-4.pdf, id=4581, 227.30823pt x 71.22108pt>
 File: ./pdf/thesis-figure-6-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-4.pdf  used on input line 7.
@@ -2470,18 +2553,23 @@ File: ./pdf/thesis-figure-6-4.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-4.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-4.pdf  used on input line 8.
 (pdftex.def)             Requested size: 176.04968pt x 55.16315pt.
- [144 <./pdf/thesis-figure-6-3-1.pdf> <./pdf/thesis-figure-6-3-2.pdf>]
+ [146 <./pdf/thesis-figure-6-3-1.pdf> <./pdf/thesis-figure-6-3-2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-) (./3_6_sorotoki/7_fem.tex [145 <./pdf/thesis-figure-6-4.pdf>]
-<./pdf/thesis-figure-6-5.pdf, id=4608, 953.46637pt x 382.37303pt>
+) (./3_6_sorotoki/7_fem.tex [147 <./pdf/thesis-figure-6-4.pdf>]
+<./pdf/thesis-figure-6-5.pdf, id=4639, 953.46637pt x 382.37303pt>
 File: ./pdf/thesis-figure-6-5.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-5.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-5.pdf  used on input line 7.
 (pdftex.def)             Requested size: 302.3127pt x 121.2358pt.
- [146 <./pdf/thesis-figure-6-5.pdf>]
+ [148 <./pdf/thesis-figure-6-5.pdf>]
+Overfull \hbox (0.3582pt too wide) in paragraph at lines 17--20
+\T1/lmtt/m/n/10 fem.addGravity\T1/lmr/m/n/10 , and \T1/lmtt/m/n/10 fem.addTendon\T1/lmr/m/n/10 . Time-varying pres-sure in-puts can be added
+ []
+
+
 Overfull \hbox (0.42413pt too wide) in paragraph at lines 21--22
 []\T1/lmr/m/n/10 Without loss of gen-er-al-ity, the ma-te-rial force can be de-com-posed into a position-
  []
@@ -2498,212 +2586,214 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
  []
 
 
-LaTeX Warning: Reference `sec:C5:hyperelastic' on page 147 undefined on input line 50.
+LaTeX Warning: Reference `sec:C5:hyperelastic' on page 149 undefined on input line 50.
 
-[147]
+[149]
 
-Package natbib Warning: Citation `Marechal2021Jun' on page 148 undefined on input line 87.
+Package natbib Warning: Citation `Marechal2021Jun' on page 150 undefined on input line 87.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 67--89
 
  []
 
-[148]
+[150]
 
-Package natbib Warning: Citation `Newmark1959Jul' on page 149 undefined on input line 91.
+Package natbib Warning: Citation `Newmark1959Jul' on page 151 undefined on input line 91.
 
-[149]
+[151]
 
-Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 104.
-
-
-Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 106.
+Package natbib Warning: Citation `Overvelde2012' on page 152 undefined on input line 104.
 
 
-Package natbib Warning: Citation `Overvelde2012' on page 150 undefined on input line 106.
+Package natbib Warning: Citation `Overvelde2012' on page 152 undefined on input line 106.
 
-<./pdf/thesis-figure-6-6-1.pdf, id=4686, 309.68518pt x 79.92642pt>
+
+Package natbib Warning: Citation `Overvelde2012' on page 152 undefined on input line 106.
+
+<./pdf/thesis-figure-6-6-1.pdf, id=4716, 309.68518pt x 79.92642pt>
 File: ./pdf/thesis-figure-6-6-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-6-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-6-1.pdf  used on input line 110.
 (pdftex.def)             Requested size: 337.87538pt x 87.20953pt.
-<./pdf/thesis-figure-6-6-2.pdf, id=4688, 309.53294pt x 78.61469pt>
+<./pdf/thesis-figure-6-6-2.pdf, id=4718, 309.53294pt x 78.61469pt>
 File: ./pdf/thesis-figure-6-6-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-6-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-6-2.pdf  used on input line 111.
 (pdftex.def)             Requested size: 337.87538pt x 85.81305pt.
 
-Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 114.
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 152 undefined on input line 114.
 
 
-Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 114.
+Package natbib Warning: Citation `Overvelde2012May' on page 152 undefined on input line 114.
 
 
-Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 114.
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 152 undefined on input line 114.
 
 
-Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 114.
+Package natbib Warning: Citation `Overvelde2012May' on page 152 undefined on input line 114.
 
 
-Package natbib Warning: Citation `Overvelde2012May' on page 150 undefined on input line 119.
+Package natbib Warning: Citation `Overvelde2012May' on page 152 undefined on input line 119.
 
 
-Package natbib Warning: Citation `Bertoldi2008Feb' on page 150 undefined on input line 119.
+Package natbib Warning: Citation `Bertoldi2008Feb' on page 152 undefined on input line 119.
 
-[150 <./pdf/thesis-figure-6-6-1.pdf> <./pdf/thesis-figure-6-6-2.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[152 <./pdf/thesis-figure-6-6-1.pdf> <./pdf/thesis-figure-6-6-2.pdf>]
+Underfull \vbox (badness 7273) has occurred while \output is active []
 
- [151]
+ [153]
 
-LaTeX Warning: Reference `fig:C5:PipelineCrawler' on page 152 undefined on input line 185.
+LaTeX Warning: Reference `fig:C5:PipelineCrawler' on page 154 undefined on input line 186.
 
 
-Package natbib Warning: Citation `Bendsoe2004' on page 152 undefined on input line 217.
+Package natbib Warning: Citation `Bendsoe2004' on page 154 undefined on input line 219.
 
-[152]
-<./pdf/thesis-figure-6-8-1.pdf, id=4784, 510.17pt x 54.55482pt>
+[154]
+<./pdf/thesis-figure-6-8-1.pdf, id=4816, 510.17pt x 54.55482pt>
 File: ./pdf/thesis-figure-6-8-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-8-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-8-1.pdf  used on input line 219.
+Package pdftex.def Info: ./pdf/thesis-figure-6-8-1.pdf  used on input line 221.
 (pdftex.def)             Requested size: 560.5193pt x 59.9439pt.
-<./pdf/thesis-figure-6-8-2.pdf, id=4786, 479.86378pt x 31.31499pt>
+<./pdf/thesis-figure-6-8-2.pdf, id=4818, 479.86378pt x 31.31499pt>
 File: ./pdf/thesis-figure-6-8-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-8-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-8-2.pdf  used on input line 219.
+Package pdftex.def Info: ./pdf/thesis-figure-6-8-2.pdf  used on input line 221.
 (pdftex.def)             Requested size: 560.5193pt x 36.58199pt.
-<./pdf/thesis-figure-6-9-1a.pdf, id=4796, 497.78433pt x 131.81535pt>
+<./pdf/thesis-figure-6-9-1a.pdf, id=4828, 497.78433pt x 131.81535pt>
 File: ./pdf/thesis-figure-6-9-1a.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-9-1a.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-9-1a.pdf  used on input line 219.
+Package pdftex.def Info: ./pdf/thesis-figure-6-9-1a.pdf  used on input line 221.
 (pdftex.def)             Requested size: 476.44482pt x 126.16315pt.
- [153 <./pdf/thesis-figure-6-8-1.pdf> <./pdf/thesis-figure-6-8-2.pdf> <./pdf/thesis-figure-6-9-1a.pdf>]
+ [155 <./pdf/thesis-figure-6-8-1.pdf> <./pdf/thesis-figure-6-8-2.pdf> <./pdf/thesis-figure-6-9-1a.pdf>]
 
-Package natbib Warning: Citation `Svanberg1987' on page 154 undefined on input line 233.
-
-
-Package natbib Warning: Citation `Svanberg2007' on page 154 undefined on input line 233.
+Package natbib Warning: Citation `Svanberg1987' on page 156 undefined on input line 235.
 
 
-Package natbib Warning: Citation `Caasenbrood2020May' on page 154 undefined on input line 233.
+Package natbib Warning: Citation `Svanberg2007' on page 156 undefined on input line 235.
 
-) (./3_6_sorotoki/8_beam.tex
-Underfull \vbox (badness 2142) has occurred while \output is active []
 
- [154
+Package natbib Warning: Citation `Caasenbrood2020May' on page 156 undefined on input line 235.
+
+) (./3_6_sorotoki/8_beam.tex [156
 
 ]
 
-Package natbib Warning: Citation `CChirikjian1992Dec' on page 155 undefined on input line 11.
+Package natbib Warning: Citation `CChirikjian1992Dec' on page 157 undefined on input line 11.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-<./pdf/thesis-figure-cosserat.pdf, id=4843, 935.33002pt x 382.37303pt>
+<./pdf/thesis-figure-cosserat.pdf, id=4874, 935.33002pt x 382.37303pt>
 File: ./pdf/thesis-figure-cosserat.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-cosserat.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-cosserat.pdf  used on input line 18.
 (pdftex.def)             Requested size: 302.3127pt x 123.58711pt.
 
-Package natbib Warning: Citation `Boyer2020' on page 155 undefined on input line 24.
+Package natbib Warning: Citation `Boyer2020' on page 157 undefined on input line 24.
 
 
-Package natbib Warning: Citation `Caasenbrood2022Nov' on page 155 undefined on input line 24.
+Package natbib Warning: Citation `Caasenbrood2022Nov' on page 157 undefined on input line 24.
 
-[155]
+[157]
 
-Package natbib Warning: Citation `Murray2017Sep' on page 156 undefined on input line 35.
+Package natbib Warning: Citation `Murray2017Sep' on page 158 undefined on input line 35.
 
 
-Package natbib Warning: Citation `Boyer2020' on page 156 undefined on input line 35.
+Package natbib Warning: Citation `Boyer2020' on page 158 undefined on input line 35.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [156 <./pdf/thesis-figure-cosserat.pdf>]
+ [158 <./pdf/thesis-figure-cosserat.pdf>]
 
-Package natbib Warning: Citation `DellaSantina2021Oct' on page 157 undefined on input line 61.
-
-
-Package natbib Warning: Citation `Li2023Jan' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `DellaSantina2021Oct' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Santina2020Dec' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Li2023Jan' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Stella2022Nov' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Santina2020Dec' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Chirikjian2015Jul' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Stella2022Nov' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Boyer2020' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Chirikjian2015Jul' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Caasenbrood2022Nov' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Boyer2020' on page 159 undefined on input line 61.
 
 
-Package natbib Warning: Citation `Renda2020Apr' on page 157 undefined on input line 61.
+Package natbib Warning: Citation `Caasenbrood2022Nov' on page 159 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Renda2020Apr' on page 159 undefined on input line 61.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-[157]
+[159]
 Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-[158]
-Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
+Overfull \hbox (5.33136pt too wide) in paragraph at lines 71--73
+\T1/lmr/m/n/10 Method (FEM) sim-u-la-tion. The sim-u-la-tion is car-ried out us-ing ei-ther \T1/lmtt/m/n/10 Fem.simulate
  []
 
-[159]
-<./pdf/thesis-figure-6-11-2.pdf, id=4954, 245.38374pt x 53.91443pt>
-File: ./pdf/thesis-figure-6-11-2.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-6-11-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-11-2.pdf  used on input line 124.
-(pdftex.def)             Requested size: 284.52864pt x 62.51689pt.
-<./pdf/thesis-figure-6-11-3.pdf, id=4956, 245.38475pt x 79.70377pt>
-File: ./pdf/thesis-figure-6-11-3.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-6-11-3.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-11-3.pdf  used on input line 125.
-(pdftex.def)             Requested size: 284.52864pt x 92.42114pt.
-<./pdf/thesis-figure-6-11-1.pdf, id=4958, 264.33702pt x 112.12253pt>
-File: ./pdf/thesis-figure-6-11-1.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-6-11-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-11-1.pdf  used on input line 138.
-(pdftex.def)             Requested size: 302.3127pt x 128.24185pt.
- [160 <./pdf/thesis-figure-6-11-2.pdf> <./pdf/thesis-figure-6-11-3.pdf> <./pdf/thesis-figure-6-11-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--164
+[160]
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 
  []
 
 [161]
-
-Package natbib Warning: Citation `Murray2017Sep' on page 162 undefined on input line 201.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+<./pdf/thesis-figure-6-11-2.pdf, id=4986, 245.38374pt x 53.91443pt>
+File: ./pdf/thesis-figure-6-11-2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-2.pdf  used on input line 126.
+(pdftex.def)             Requested size: 284.52864pt x 62.51689pt.
+<./pdf/thesis-figure-6-11-3.pdf, id=4988, 245.38475pt x 79.70377pt>
+File: ./pdf/thesis-figure-6-11-3.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-3.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-3.pdf  used on input line 127.
+(pdftex.def)             Requested size: 284.52864pt x 92.42114pt.
+<./pdf/thesis-figure-6-11-1.pdf, id=4990, 264.33702pt x 112.12253pt>
+File: ./pdf/thesis-figure-6-11-1.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-11-1.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-11-1.pdf  used on input line 140.
+(pdftex.def)             Requested size: 302.3127pt x 128.24185pt.
+ [162 <./pdf/thesis-figure-6-11-2.pdf> <./pdf/thesis-figure-6-11-3.pdf> <./pdf/thesis-figure-6-11-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 153--166
 
  []
 
-[162]
-<./pdf/thesis-figure-6-13.pdf, id=5047, 395.00826pt x 112.63782pt>
-File: ./pdf/thesis-figure-6-13.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-6-13.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-13.pdf  used on input line 223.
-(pdftex.def)             Requested size: 352.10481pt x 100.40544pt.
- [163 <./pdf/thesis-figure-6-13.pdf>]) (./3_6_sorotoki/9_model.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
+[163]
+
+Package natbib Warning: Citation `Murray2017Sep' on page 164 undefined on input line 203.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
 [164]
+<./pdf/thesis-figure-6-13.pdf, id=5079, 395.00826pt x 112.63782pt>
+File: ./pdf/thesis-figure-6-13.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-6-13.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-6-13.pdf  used on input line 225.
+(pdftex.def)             Requested size: 352.10481pt x 100.40544pt.
+ [165 <./pdf/thesis-figure-6-13.pdf>]) (./3_6_sorotoki/9_model.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[166]
 Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
@@ -2713,68 +2803,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-[165]
+[167]
 
-Package natbib Warning: Citation `Loria2015Jun' on page 166 undefined on input line 32.
+Package natbib Warning: Citation `Loria2015Jun' on page 168 undefined on input line 32.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--49
 
  []
 
-[166]
-<./pdf/thesis-figurex-6-14-1.pdf, id=5126, 237.8486pt x 233.39195pt>
+[168]
+<./pdf/thesis-figurex-6-14-1.pdf, id=5159, 237.8486pt x 233.39195pt>
 File: ./pdf/thesis-figurex-6-14-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-6-14-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figurex-6-14-1.pdf  used on input line 70.
+Package pdftex.def Info: ./pdf/thesis-figurex-6-14-1.pdf  used on input line 69.
 (pdftex.def)             Requested size: 352.10481pt x 345.5108pt.
- [167] [168 <./pdf/thesis-figurex-6-14-1.pdf>]) (./3_6_sorotoki/10_control.tex
+ [169] [170 <./pdf/thesis-figurex-6-14-1.pdf>]) (./3_6_sorotoki/10_control.tex
 
-Package natbib Warning: Citation `Caasenbrood2022Apr' on page 169 undefined on input line 4.
+Package natbib Warning: Citation `Caasenbrood2022Apr' on page 171 undefined on input line 4.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [169
+ [171
 
 ]
 
-Package natbib Warning: Citation `Illingworth1987Sep' on page 170 undefined on input line 35.
+Package natbib Warning: Citation `Illingworth1987Sep' on page 172 undefined on input line 35.
 
-[170]
-<./pdf/thesis-figure-6-15.pdf, id=5217, 358.84062pt x 233.26146pt>
+[172]
+<./pdf/thesis-figure-6-15.pdf, id=5250, 358.84062pt x 233.26146pt>
 File: ./pdf/thesis-figure-6-15.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-15.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-15.pdf  used on input line 36.
 (pdftex.def)             Requested size: 337.87538pt x 219.64664pt.
-<./pdf/thesis-figure-6-16.png, id=5219, 815.2056pt x 254.3904pt>
+<./pdf/thesis-figure-6-16.png, id=5252, 815.2056pt x 254.3904pt>
 File: ./pdf/thesis-figure-6-16.png Graphic file (type png)
 <use ./pdf/thesis-figure-6-16.png>
 Package pdftex.def Info: ./pdf/thesis-figure-6-16.png  used on input line 36.
 (pdftex.def)             Requested size: 337.87538pt x 105.43806pt.
- [171 <./pdf/thesis-figure-6-15.pdf> <./pdf/thesis-figure-6-16.png>]) (./3_6_sorotoki/11_studycases.tex [172
+ [173 <./pdf/thesis-figure-6-15.pdf> <./pdf/thesis-figure-6-16.png>]) (./3_6_sorotoki/11_studycases.tex [174
 
 ]
-<./pdf/thesis-figure-6-17.pdf, id=5250, 244.98225pt x 196.50214pt>
+<./pdf/thesis-figure-6-17.pdf, id=5282, 244.98225pt x 196.50214pt>
 File: ./pdf/thesis-figure-6-17.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-17.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-17.pdf  used on input line 35.
 (pdftex.def)             Requested size: 248.96053pt x 199.7009pt.
-<./pdf/thesis-figure-6-18.pdf, id=5254, 245.38776pt x 194.37016pt>
+<./pdf/thesis-figure-6-18.pdf, id=5286, 245.38776pt x 194.37016pt>
 File: ./pdf/thesis-figure-6-18.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-18.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-18.pdf  used on input line 35.
 (pdftex.def)             Requested size: 248.96053pt x 197.20798pt.
- [173 <./pdf/thesis-figure-6-17.pdf> <./pdf/thesis-figure-6-18.pdf>]
-<./pdf/thesis-figure-6-19-1.pdf, id=5311, 365.12692pt x 98.99356pt>
+ [175 <./pdf/thesis-figure-6-17.pdf> <./pdf/thesis-figure-6-18.pdf>]
+<./pdf/thesis-figure-6-19-1.pdf, id=5343, 365.12692pt x 98.99356pt>
 File: ./pdf/thesis-figure-6-19-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-19-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-19-1.pdf  used on input line 56.
 (pdftex.def)             Requested size: 352.10481pt x 95.46321pt.
- [174
+ [176
 
  <./pdf/thesis-figure-6-19-1.pdf>] (./fig/walker_states.pdf_tex
-<./pdf//states.pdf, id=5337, page=1, 269.40376pt x 100.63828pt>
+<./pdf//states.pdf, id=5369, page=1, 269.40376pt x 100.63828pt>
 File: ./pdf//states.pdf Graphic file (type pdf)
 <use ./pdf//states.pdf, page 1>
 Package pdftex.def Info: ./pdf//states.pdf , page1 used on input line 57.
@@ -2785,180 +2875,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--83
  []
 
 
-Package natbib Warning: Citation `Raeisinezhad2021May' on page 175 undefined on input line 90.
+Package natbib Warning: Citation `Raeisinezhad2021May' on page 177 undefined on input line 90.
 
 
 Underfull \vbox (badness 5924) has occurred while \output is active []
 
- [175 <./pdf//states.pdf>]
+ [177 <./pdf//states.pdf>]
 
-Package natbib Warning: Citation `Caasenbrood2020May' on page 176 undefined on input line 92.
+Package natbib Warning: Citation `Caasenbrood2020May' on page 178 undefined on input line 92.
 
-<./pdf/thesis-figure-6-22.pdf, id=5370, 327.29538pt x 98.13515pt>
+<./pdf/thesis-figure-6-22.pdf, id=5403, 327.29538pt x 98.13515pt>
 File: ./pdf/thesis-figure-6-22.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-22.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-22.pdf  used on input line 99.
 (pdftex.def)             Requested size: 337.87538pt x 101.31091pt.
-<./pdf/thesis-figure-6-23.pdf, id=5372, 245.38475pt x 72.12144pt>
+<./pdf/thesis-figure-6-23.pdf, id=5405, 245.38475pt x 72.12144pt>
 File: ./pdf/thesis-figure-6-23.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-23.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-23.pdf  used on input line 109.
 (pdftex.def)             Requested size: 337.87538pt x 99.30869pt.
-[176] [177 <./pdf/thesis-figure-6-22.pdf> <./pdf/thesis-figure-6-23.pdf>]
-<./pdf/thesis-figure-6-24.pdf, id=5429, 250.03212pt x 224.78178pt>
+[178] [179 <./pdf/thesis-figure-6-22.pdf> <./pdf/thesis-figure-6-23.pdf>]
+<./pdf/thesis-figure-6-24.pdf, id=5462, 250.03212pt x 224.78178pt>
 File: ./pdf/thesis-figure-6-24.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-24.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-24.pdf  used on input line 153.
 (pdftex.def)             Requested size: 293.41795pt x 263.78592pt.
- [178 <./pdf/thesis-figure-6-24.pdf>]
-<./pdf/thesis-figure-6-25.pdf, id=5452, 264.457pt x 174.13657pt>
+ [180 <./pdf/thesis-figure-6-24.pdf>]
+<./pdf/thesis-figure-6-25.pdf, id=5484, 264.457pt x 174.13657pt>
 File: ./pdf/thesis-figure-6-25.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-25.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-25.pdf  used on input line 165.
 (pdftex.def)             Requested size: 284.52864pt x 187.36584pt.
- [179 <./pdf/thesis-figure-6-25.pdf>]
-<./pdf/thesis-figure-6-26-1.pdf, id=5492, 244.98528pt x 126.27878pt>
+ [181 <./pdf/thesis-figure-6-25.pdf>]
+<./pdf/thesis-figure-6-26-1.pdf, id=5524, 244.98528pt x 126.27878pt>
 File: ./pdf/thesis-figure-6-26-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-26-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-26-1.pdf  used on input line 182.
 (pdftex.def)             Requested size: 266.74458pt x 137.5024pt.
-<./pdf/thesis-figure-6-26-2.pdf, id=5494, 242.45581pt x 122.24069pt>
+<./pdf/thesis-figure-6-26-2.pdf, id=5526, 242.45581pt x 122.24069pt>
 File: ./pdf/thesis-figure-6-26-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-26-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-26-2.pdf  used on input line 183.
 (pdftex.def)             Requested size: 266.74458pt x 134.49501pt.
- [180] [181 <./pdf/thesis-figure-6-26-1.pdf> <./pdf/thesis-figure-6-26-2.pdf>] [182]
-Underfull \hbox (badness 10000) in paragraph at lines 236--244
+ [182] [183 <./pdf/thesis-figure-6-26-1.pdf> <./pdf/thesis-figure-6-26-2.pdf>] [184]
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
-<./pdf/thesis-figure-6-28.pdf, id=5538, 326.57607pt x 106.49788pt>
+<./pdf/thesis-figure-6-28.pdf, id=5570, 326.57607pt x 106.49788pt>
 File: ./pdf/thesis-figure-6-28.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-28.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-28.pdf  used on input line 262.
+Package pdftex.def Info: ./pdf/thesis-figure-6-28.pdf  used on input line 259.
 (pdftex.def)             Requested size: 337.87538pt x 110.18642pt.
-[183 <./pdf/thesis-figure-6-28.pdf>]
-<./pdf/thesis-figure-6-27.pdf, id=5562, 238.27515pt x 294.54047pt>
+[185 <./pdf/thesis-figure-6-28.pdf>]
+<./pdf/thesis-figure-6-27.pdf, id=5594, 238.27515pt x 294.54047pt>
 File: ./pdf/thesis-figure-6-27.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-27.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-27.pdf  used on input line 269.
+Package pdftex.def Info: ./pdf/thesis-figure-6-27.pdf  used on input line 266.
 (pdftex.def)             Requested size: 302.3127pt x 373.73413pt.
- [184 <./pdf/thesis-figure-6-27.pdf>]
-Overfull \hbox (6.50545pt too wide) in paragraph at lines 270--270
+ [186 <./pdf/thesis-figure-6-27.pdf>]
+Overfull \hbox (6.50545pt too wide) in paragraph at lines 267--267
 |[]\T1/lmr/bx/n/12 Impedance con-trol of soft robot ma-nip-u-la-tor with static
  []
 
-
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 271.
-
-
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 273.
-
-
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 275.
-
-
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 277.
-
-
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 185 undefined on input line 277.
-
-[185
+[187
 
 ]
 
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 279.
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 188 undefined on input line 276.
 
 
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 279.
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 188 undefined on input line 276.
 
 
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 296.
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 188 undefined on input line 293.
 
 
-Package natbib Warning: Citation `DellaSantina2019Nov' on page 186 undefined on input line 341.
+Package natbib Warning: Citation `DellaSantina2019Nov' on page 188 undefined on input line 338.
 
-[186]
-<./pdf/thesis-figure-6-29-1.pdf, id=5726, 479.8748pt x 100.52054pt>
+[188]
+<./pdf/thesis-figure-6-29-1.pdf, id=5763, 479.8748pt x 100.52054pt>
 File: ./pdf/thesis-figure-6-29-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-29-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-29-1.pdf  used on input line 390.
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-1.pdf  used on input line 387.
 (pdftex.def)             Requested size: 532.49162pt x 111.55609pt.
-<./pdf/thesis-figure-6-29-2.pdf, id=5728, 480.27129pt x 99.91127pt>
+<./pdf/thesis-figure-6-29-2.pdf, id=5765, 480.27129pt x 99.91127pt>
 File: ./pdf/thesis-figure-6-29-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-29-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-29-2.pdf  used on input line 390.
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-2.pdf  used on input line 387.
 (pdftex.def)             Requested size: 532.49162pt x 110.77931pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./pdf/thesis-figure-6-30.pdf, id=5736, 338.09412pt x 150.35974pt>
+<./pdf/thesis-figure-6-30.pdf, id=5773, 338.09412pt x 150.35974pt>
 File: ./pdf/thesis-figure-6-30.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-30.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-30.pdf  used on input line 390.
+Package pdftex.def Info: ./pdf/thesis-figure-6-30.pdf  used on input line 387.
 (pdftex.def)             Requested size: 284.52864pt x 126.54909pt.
-<./pdf/thesis-figure-6-31.pdf, id=5738, 338.73349pt x 150.35674pt>
+<./pdf/thesis-figure-6-31.pdf, id=5775, 338.73349pt x 150.35674pt>
 File: ./pdf/thesis-figure-6-31.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-31.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-31.pdf  used on input line 390.
+Package pdftex.def Info: ./pdf/thesis-figure-6-31.pdf  used on input line 387.
 (pdftex.def)             Requested size: 284.52864pt x 126.30107pt.
-<./pdf/thesis-figure-6-32.pdf, id=5740, 338.09412pt x 150.35373pt>
+<./pdf/thesis-figure-6-32.pdf, id=5777, 338.09412pt x 150.35373pt>
 File: ./pdf/thesis-figure-6-32.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-32.pdf  used on input line 390.
+Package pdftex.def Info: ./pdf/thesis-figure-6-32.pdf  used on input line 387.
 (pdftex.def)             Requested size: 284.52864pt x 126.54402pt.
-[187 <./pdf/thesis-figure-6-29-1.pdf> <./pdf/thesis-figure-6-29-2.pdf>] [188 <./pdf/thesis-figure-6-30.pdf> <./pdf/thesis-figure-6-31.pdf> <./pdf/thesis-figure-6-32.pdf>]
-<./pdf/thesis-figure-6-32-1.pdf, id=5837, 328.14897pt x 68.3343pt>
+[189 <./pdf/thesis-figure-6-29-1.pdf> <./pdf/thesis-figure-6-29-2.pdf>] [190 <./pdf/thesis-figure-6-30.pdf> <./pdf/thesis-figure-6-31.pdf> <./pdf/thesis-figure-6-32.pdf>]
+<./pdf/thesis-figure-6-32-1.pdf, id=5874, 328.14897pt x 68.3343pt>
 File: ./pdf/thesis-figure-6-32-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-32-1.pdf  used on input line 398.
+Package pdftex.def Info: ./pdf/thesis-figure-6-32-1.pdf  used on input line 395.
 (pdftex.def)             Requested size: 337.87538pt x 70.36426pt.
-<./pdf/thesis-figure-6-32-2.pdf, id=5839, 328.158pt x 86.65073pt>
+<./pdf/thesis-figure-6-32-2.pdf, id=5876, 328.158pt x 86.65073pt>
 File: ./pdf/thesis-figure-6-32-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-32-2.pdf  used on input line 399.
+Package pdftex.def Info: ./pdf/thesis-figure-6-32-2.pdf  used on input line 396.
 (pdftex.def)             Requested size: 337.87538pt x 89.21684pt.
- [189
+ [191
 
-]) (./3_6_sorotoki/12_conclusion.tex [190 <./pdf/thesis-figure-6-32-1.pdf> <./pdf/thesis-figure-6-32-2.pdf>]
-<./pdf/thesis-figure-6-34.pdf, id=5874, 244.98425pt x 207.6026pt>
+]) (./3_6_sorotoki/12_conclusion.tex [192 <./pdf/thesis-figure-6-32-1.pdf> <./pdf/thesis-figure-6-32-2.pdf>]
+<./pdf/thesis-figure-6-34.pdf, id=5911, 244.98425pt x 207.6026pt>
 File: ./pdf/thesis-figure-6-34.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-34.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-34.pdf  used on input line 5.
 (pdftex.def)             Requested size: 284.52864pt x 241.12643pt.
-<./pdf/thesis-figure-6-35.pdf, id=5876, 351.63472pt x 109.43686pt>
+<./pdf/thesis-figure-6-35.pdf, id=5913, 351.63472pt x 109.43686pt>
 File: ./pdf/thesis-figure-6-35.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-35.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-35.pdf  used on input line 5.
 (pdftex.def)             Requested size: 337.87538pt x 105.1567pt.
- [191 <./pdf/thesis-figure-6-34.pdf> <./pdf/thesis-figure-6-35.pdf>]) [192
+ [193 <./pdf/thesis-figure-6-34.pdf> <./pdf/thesis-figure-6-35.pdf>]) [194
 
 ]
 \openout2 = `3_7_conclusion/conclusion.aux'.
 
  (./3_7_conclusion/conclusion.tex
 Chapter 7.
-
-LaTeX Warning: Reference `chap:design_opt' on page 193 undefined on input line 12.
-
-[193
+[195
 
 
-] [194]
-Overfull \hbox (2.02046pt too wide) in paragraph at lines 43--43
-|[]\T1/lmr/bx/n/14.4 Recommendations and fu-ture hori-zons for soft
+] [196] [197] [198] [199] [200]
+Overfull \hbox (2.68231pt too wide) in paragraph at lines 66--66
+|\T1/lmr/bx/n/12 Faster soft robots: flu-idics, ten-dons, mag-net-ics or di-electrics?| 
  []
 
-
-LaTeX Warning: Reference `' on page 195 undefined on input line 44.
-
-[195]) [196] [197
+) [201] [202
 
 
 
+] [203
 
-] [198] (./3_1_introduction/A_list_of_definitions.tex
+] [204] (./3_1_introduction/A_list_of_definitions.tex
 Appendix A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -2990,7 +3060,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[199
+[205
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 15--17
@@ -3002,7 +3072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) (./3_4_pccmodel/A1_passivity.tex [200]
+) (./3_4_pccmodel/A1_passivity.tex [206]
 Appendix B.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -3020,13 +3090,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[201
+[207
 
-] [202]) (./3_5_cosseratmodel/A1_lietheory.tex [203] [204
+] [208]) (./3_5_cosseratmodel/A1_lietheory.tex [209] [210
 
 ]
 Appendix C.
-[205] [206]) (./3_5_cosseratmodel/A2_jacobian.tex) (./3_6_sorotoki/A1_newmark.tex [207] [208
+[211] [212]) (./3_5_cosseratmodel/A2_jacobian.tex) (./3_6_sorotoki/A1_newmark.tex [213] [214
 
 ]
 Appendix D.
@@ -3043,18 +3113,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
 
-Package natbib Warning: Citation `Newmark1959Jul' on page 209 undefined on input line 5.
+Package natbib Warning: Citation `Newmark1959Jul' on page 215 undefined on input line 5.
 
-) [209] [210] (build/thesis.bbl [211
+) [215] [216] (build/thesis.bbl [217
 
 
 
-] [212]
+] [218]
 Underfull \hbox (badness 1210) in paragraph at lines 286--290
 []\T1/lmr/m/n/9 Chirikjian, G. S. and Bur-dick, J. W. (1992).  A Ge-o-met-ric Ap-proach to
  []
 
-[213] [214] [215]
+[219] [220] [221]
 Underfull \hbox (badness 2368) in paragraph at lines 535--539
 []\T1/lmr/m/n/9 Garcia, C. (2019).  Robots Are a Few of My Fa-vorite Things.  [On-
  []
@@ -3064,27 +3134,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 535--539
 \T1/lmr/m/n/9 line; ac-cessed 15. Sep. 2022], url: [][]$\T1/lmtt/m/n/9 https : / / computerhistory . org / blog /
  []
 
-[216] [217] [218]
+[222] [223] [224]
 Underfull \hbox (badness 3503) in paragraph at lines 914--918
 \T1/lmr/m/n/9 Order Finite-Element Mod-els.  \T1/lmr/m/it/9 IEEE/ASME Trans-ac-tions on Mecha-tron-ics\T1/lmr/m/n/9 ,
  []
 
-[219] [220] [221] [222] [223] [224] [225] [226] [227]) [228]
+[225] [226] [227] [228] [229] [230] [231] [232] [233]) [234]
 \openout2 = `6_acknowledgement/acknowledgement.aux'.
 
  (./6_acknowledgement/acknowledgement.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [229
+ [235
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [230] [231]
+ [236] [237]
 \openout2 = `7_publications/publications.aux'.
 
- (./7_publications/publications.tex [232
+ (./7_publications/publications.tex [238
 
 
 
@@ -3094,7 +3164,7 @@ Overfull \hbox (1.94638pt too wide) in paragraph at lines 60--62
 []\T1/lmr/m/n/10 A. Amoozan-deh Nobaveh, and B. Caasen-brood, "\T1/lmr/m/it/10 De-sign Fea-si-bil-ity of an Energy-
  []
 
-[233]
+[239]
 Overfull \hbox (7.74335pt too wide) in paragraph at lines 70--71
 \T1/lmr/m/it/10 elling and Con-trol of Soft Robots\T1/lmr/m/n/10 ,^^Q 4TU Fed-er-a-tion`s Sym-po-sium on Soft Robotics,
  []
@@ -3104,36 +3174,22 @@ Overfull \hbox (0.91869pt too wide) in paragraph at lines 72--73
 \T1/lmr/m/it/10 based Con-trol of Soft Robots\T1/lmr/m/n/10 ,^^Q Eu-ro-pean Con-trol Con-fer-ence (ECC), 2021. (main
  []
 
-) [234]
+) [240]
 \openout2 = `8_cv/cv.aux'.
 
- (./8_cv/cv.tex) [235
+ (./8_cv/cv.tex) [241
 
 
 
 
-] [236
+] [242
 
 
 ]
 
 Package natbib Warning: There were undefined citations.
 
-[237]
-
-/home/brandon/Documents/phd/thesis/thesis.tex:233: LaTeX Error: \begin{example} on input line 30 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(build/thesis.aux (build/0_preface/preface.aux) <Reading QR code for "https://bit.ly/3zIvbHt" at level 2-M from aux file.>
+[243] (build/thesis.aux (build/0_preface/preface.aux) <Reading QR code for "https://bit.ly/3zIvbHt" at level 2-M from aux file.>
 (build/3_7_conclusion/conclusion.aux) (build/6_acknowledgement/acknowledgement.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
 
 LaTeX Warning: There were undefined references.
@@ -3141,24 +3197,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 30 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 63641 strings out of 478287
- 1448878 string characters out of 5849289
- 2050760 words of memory out of 5000000
- 79176 multiletter control sequences out of 15000+600000
- 649798 words of font info for 161 fonts, out of 8000000 for 9000
+ 63710 strings out of 478287
+ 1451112 string characters out of 5849289
+ 2049517 words of memory out of 5000000
+ 79231 multiletter control sequences out of 15000+600000
+ 654411 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,26n,118p,3073b,2674s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on build/thesis.pdf (253 pages, 36799855 bytes).
+ 115i,26n,118p,3065b,2467s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on build/thesis.pdf (259 pages, 37027706 bytes).
 PDF statistics:
- 7039 PDF objects out of 7423 (max. 8388607)
- 5613 compressed objects within 57 object streams
- 1270 named destinations out of 1440 (max. 500000)
- 2096 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7113 PDF objects out of 7423 (max. 8388607)
+ 5669 compressed objects within 57 object streams
+ 1281 named destinations out of 1440 (max. 500000)
+ 2162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
