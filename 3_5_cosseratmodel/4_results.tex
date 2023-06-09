@@ -66,10 +66,12 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_bench}
   \end{figure}
+  \clearpage
  }
  
  Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the error does not seem to improve significantly. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
 \end{example}
+\vfill
 
 \begin{example}[Energy-based controller]
 Following, we now subjected the soft robot to the proposed energy-based controller in \eqref{eq:C3:control}, where the control gains are tuned to produce a smooth transient: $\lambda_1 = 0.01$ and $\lambda_2 = 0.001$. The artificial spring stiffness is chosen as $\mat{k}_p = \blkdiag{0.01\cdot \mat{I}_3, \mat{I}_3}$. Lastly, the desired configuration of the end-effector is chosen as follows:

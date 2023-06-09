@@ -51,7 +51,7 @@
 \contentsline {subsection}{\numberline {4.6.2}Hyperelasicity in joint space}{79}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Visco-elastic creep}{81}{subsection.4.6.3}%
 \contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{83}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Experimental platform}{85}{section.4.8}%
+\contentsline {section}{\numberline {4.8}Overview of experimental platform}{85}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{86}{section.4.9}%
 \contentsline {section}{\numberline {4.10}Conclusion}{102}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{103}{chapter.5}%
@@ -95,22 +95,22 @@
 \contentsline {chapter}{\numberline {7}Conclusions, recommendations, and outlook}{195}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Conclusions}{195}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Recommendations}{198}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Future outlooks on soft robots}{201}{section.7.3}%
-\contentsline {part}{I\hspace {1em}Appendices}{203}{part.1}%
-\contentsline {chapter}{\numberline {A}List of definitions}{205}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Appendices to Chapter 4}{207}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{207}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Passivity properties of the inertia matrix}{207}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Implicit trapezoidal scheme for the time integration}{208}{section.B.3}%
-\contentsline {chapter}{\numberline {C}Appendices to Chapter 5}{211}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Preliminaries on Lie group theory}{211}{section.C.1}%
-\contentsline {subsection}{\numberline {C.1.1}Basic definition(s)}{211}{subsection.C.1.1}%
-\contentsline {subsection}{\numberline {C.1.2}Exponential and logarithmic map}{212}{subsection.C.1.2}%
-\contentsline {section}{\numberline {C.2}Time-derivate of the geometric Jacobian for continuum robots}{213}{section.C.2}%
-\contentsline {chapter}{\numberline {D}Appendices to Chapter 6}{215}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Newmark-$\beta $ solver}{215}{section.D.1}%
+\contentsline {section}{\numberline {7.3}Future outlooks on soft robots}{200}{section.7.3}%
+\contentsline {part}{I\hspace {1em}Appendices}{201}{part.1}%
+\contentsline {chapter}{\numberline {A}List of definitions}{203}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendices to Chapter 4}{205}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{205}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Passivity properties of the inertia matrix}{205}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Implicit trapezoidal scheme for the time integration}{206}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Appendices to Chapter 5}{209}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Preliminaries on Lie group theory}{209}{section.C.1}%
+\contentsline {subsection}{\numberline {C.1.1}Basic definition(s)}{209}{subsection.C.1.1}%
+\contentsline {subsection}{\numberline {C.1.2}Exponential and logarithmic map}{210}{subsection.C.1.2}%
+\contentsline {section}{\numberline {C.2}Time-derivate of the geometric Jacobian for continuum robots}{211}{section.C.2}%
+\contentsline {chapter}{\numberline {D}Appendices to Chapter 6}{213}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Newmark-$\beta $ solver}{213}{section.D.1}%
 \vspace \bigskipamount 
-\contentsline {chapter}{Bibliography}{217}{section*.106}%
-\contentsline {chapter}{Acknowledgements}{235}{appendix*.108}%
-\contentsline {chapter}{List of publications}{239}{appendix*.109}%
-\contentsline {chapter}{Curriculum Vitae}{241}{appendix*.110}%
+\contentsline {chapter}{Bibliography}{215}{section*.106}%
+\contentsline {chapter}{Acknowledgements}{233}{appendix*.108}%
+\contentsline {chapter}{List of publications}{237}{appendix*.109}%
+\contentsline {chapter}{Curriculum Vitae}{239}{appendix*.110}%
