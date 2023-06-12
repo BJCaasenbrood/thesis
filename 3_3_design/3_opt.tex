@@ -88,6 +88,14 @@ Differentiations of the objective function with respect to the elemental densiti
 \end{align} 
 %
 \afterpage{
+  \begin{figure}[!t]
+    \centering
+    \vspace{4mm}
+    \input{./pdf/thesis-figure-3-1.pdf_tex}
+    \caption{Example of the filter and interpolation schemes to reduce mesh artifacts. (a) Ground truth. (b) The raw element-wise density field based on the ground truth. Notice the jitter around the boundaries of the material infill, leading to high sharp gradients in $\tfrac{\p \phi}{\p \rho_e}$. (c) Filtered densities using \eqref{eq:C3:filters}. (d) Isosurface reconstruction of the filtered density field using Radial Basis Function (RBF).}
+    \label{fig:C3:topo_filtering}
+  \end{figure}
+
 \begin{algorithm}[!t]
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
@@ -105,15 +113,6 @@ Differentiations of the objective function with respect to the elemental densiti
   }
   \caption{Computational design algorithm for pneumatic soft robots.\label{alg:topology_opt}}
 \end{algorithm}
-
-
-\begin{figure}[!t]
-  \centering
-  \vspace{4mm}
-  \input{./pdf/thesis-figure-3-1.pdf_tex}
-  \caption{Example of the filter and interpolation schemes to reduce mesh artifacts. (a) Ground truth. (b) The raw element-wise density field based on the ground truth. Notice the jitter around the boundaries of the material infill, leading to high sharp gradients in $\tfrac{\p \phi}{\p \rho_e}$. (c) Filtered densities using \eqref{eq:C3:filters}. (d) Isosurface reconstruction of the filtered density field using Radial Basis Function (RBF).}
-  \label{fig:C3:topo_filtering}
-\end{figure}
 }
 
 \noindent However, it should be noted that deriving the loading sensitivity $\p \boldsymbol{f}_{\textrm{ext}}/\p \rho_e$ is not straightforward since the global force vector is constructed from nested functions of logic operations such as flood-fill. Therefore, we derive the loading sensitivity numerically using the forward difference method. To reduce computation time, we propose computing the sensitivities of only the elements at the boundary of the pressure region since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. We provide pseudo-code for the computational design algorithm for synthesizing pressure-driven soft robots in Algorithm \ref{alg:topology_opt}. 

@@ -95,7 +95,6 @@
 \contentsline {chapter}{\numberline {7}Conclusions, recommendations, and outlook}{195}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Conclusions}{195}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Recommendations}{198}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Future outlooks on soft robots}{200}{section.7.3}%
 \contentsline {part}{I\hspace {1em}Appendices}{201}{part.1}%
 \contentsline {chapter}{\numberline {A}List of definitions}{203}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Appendices to Chapter 4}{205}{appendix.B}%

@@ -1319,6 +1319,13 @@ Schaft, A.~J. (2004).
 \newblock {\em Advanced Dynamics and Control of Structures and Machines},
   444(1):127--167.
 
+\bibitem[Scharff et~al., 2019]{Scharff2019Jul}
+Scharff, R. B.~N., Doornbusch, R.~M., Doubrovski, E.~L., Wu, J., Geraedts, J.
+  M.~P., and Wang, C. C.~L. (2019).
+\newblock {Color-Based Proprioception of Soft Actuators Interacting With
+  Objects}.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 24(5):1964--1973.
+
 \bibitem[Schegg et~al., 2022]{Schegg2022}
 Schegg, P., M{\ifmmode\acute{e}\else\'{e}\fi}nager, E., Khairallah, E.,
   Marchal, D., Dequidt, J., Preux, P., and Duriez, C. (2022).
@@ -1434,14 +1441,8 @@ Sonneville, V., Cardona, A., and Br{\"{u}}ls, O. (2014).
 \newblock {\em Computer Methods in Applied Mechanics and Engineering},
   268:451--474.
 
-\bibitem[Spong, 1996a]{Spong1996}
-Spong, M.~W. (1996a).
-\newblock {Energy Based Control of a Class of Underactuated Mechanical
-  Systems}.
-\newblock {\em IFAC Proceedings Volumes}, 29(1):2828--2832.
-
-\bibitem[Spong, 1996b]{Spong1996a}
-Spong, M.~W. (1996b).
+\bibitem[Spong, 1996]{Spong1996}
+Spong, M.~W. (1996).
 \newblock {Energy Based Control of a Class of Underactuated Mechanical
   Systems}.
 \newblock {\em IFAC Proceedings Volumes}, 29(1):2828--2832.
