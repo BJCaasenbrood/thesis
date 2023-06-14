@@ -380,6 +380,12 @@ De~Luca, A. and Book, W.~J. (2016).
 \newblock In {\em {Springer Handbook of Robotics}}, pages 243--282. Springer,
   Cham, Switzerland.
 
+\bibitem[Della~Santina, 2020]{DellaSantina2020Dec}
+Della~Santina, C. (2020).
+\newblock {The Soft Inverted Pendulum with Affine Curvature}.
+\newblock In {\em {2020 59th IEEE Conference on Decision and Control (CDC)}},
+  pages 4135--4142. IEEE.
+
 \bibitem[Della~Santina et~al., 2020a]{DellaSantina2020Jan}
 Della~Santina, C., Bicchi, A., and Rus, D. (2020a).
 \newblock {On an Improved State Parametrization for Soft Robots With Piecewise

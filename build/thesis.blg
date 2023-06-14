@@ -7,7 +7,7 @@ The style file: apalike.bst
 A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12326 items from 5000.
+Reallocated field_info (elt_size=4) to 12348 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -16,22 +16,22 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 927 of file MyBib.bib
+--line 939 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1631 of file MyBib.bib
+--line 1643 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1638 of file MyBib.bib
+--line 1650 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2367 of file MyBib.bib
+--line 2379 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 2829 of file MyBib.bib
+--line 2841 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 2941 of file MyBib.bib
+--line 2953 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3359 of file MyBib.bib
+--line 3371 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 3959 of file MyBib.bib
+--line 3971 of file MyBib.bib
 Warning--I didn't find a database entry for "Spong1996a"
 Warning--I didn't find a database entry for "Kazemipour2022"
 Warning--I didn't find a database entry for "Chen2018Dec"
@@ -81,45 +81,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 306 entries,
+You've used 307 entries,
             1935 wiz_defined-function locations,
-            2354 strings with 69242 characters,
-and the built_in function-call counts, 139199 in all, are:
-= -- 13597
-> -- 6815
-< -- 169
-+ -- 2418
-- -- 2380
-* -- 12304
-:= -- 23922
-add.period$ -- 954
-call.type$ -- 306
-change.case$ -- 2700
-chr.to.int$ -- 278
-cite$ -- 330
-duplicate$ -- 4874
-empty$ -- 9036
-format.name$ -- 2792
-if$ -- 27194
+            2361 strings with 69473 characters,
+and the built_in function-call counts, 139733 in all, are:
+= -- 13657
+> -- 6822
+< -- 171
++ -- 2420
+- -- 2382
+* -- 12336
+:= -- 23997
+add.period$ -- 958
+call.type$ -- 307
+change.case$ -- 2706
+chr.to.int$ -- 279
+cite$ -- 331
+duplicate$ -- 4903
+empty$ -- 9083
+format.name$ -- 2795
+if$ -- 27318
 int.to.chr$ -- 29
 int.to.str$ -- 0
-missing$ -- 295
-newline$ -- 1527
-num.names$ -- 912
-pop$ -- 2419
+missing$ -- 296
+newline$ -- 1532
+num.names$ -- 915
+pop$ -- 2427
 preamble$ -- 1
-purify$ -- 2720
+purify$ -- 2726
 quote$ -- 0
-skip$ -- 3746
+skip$ -- 3771
 stack$ -- 0
-substring$ -- 9722
-swap$ -- 825
-text.length$ -- 68
+substring$ -- 9774
+swap$ -- 837
+text.length$ -- 69
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1804
+type$ -- 1810
 warning$ -- 22
-while$ -- 1081
+while$ -- 1086
 width$ -- 0
-write$ -- 3959
+write$ -- 3973
 (There were 60 warnings)
