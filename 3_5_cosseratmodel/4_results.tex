@@ -1,5 +1,5 @@
 %!TEX root = ../../thesis.tex
-\section{Simulation studies of bio-inspired robots} \label{sec:chap3_result}
+\section{Simulation studies of bio-inspired soft robots} \label{sec:chap3_result}
 In this section, we detail the numerical simulations of the port-Hamiltonian model in \eqref{eq:C3:model_ph} together with the energy-shaping controller in \eqref{eq:C3:control}. 
 
 Due to the partial differential nature, we have to employ a nested ODE routine to recover the trajectories for $\vec{q}$ and $\vec{p}$. First, we employ an implicit trapezoidal solver with a fixed stepsize of $dt = 30 $ ms to solve \eqref{eq:C3:model_ph}. At each time increment, we have to evaluate the dynamic matrices \eqref{eq:C3:lag_M} to \eqref{eq:C3:lag_tau}. To efficiently compute these dynamic entities, we solve the spatial integration problem over the material domain $\Xs$ by using a second-order Runge-Kutta solver.  The stepsize for the spatial solver is chosen sufficiently small $\Delta \sigma = 1$ mm. The spatial stepsize is related to the length of the manipulator $L$, but also the degree of geometric deformations along the backbone. In some cases, high-gain feedback control can excite high-order modes thus requiring a smaller stepsize to capture these phenomena accurately. However, by keeping the control gains small paired with the fact that structural damping is dominant in soft elastomers often lead to slow transients (order of seconds). As such, the spatial discretization has been shown to relatively nonrestrictive. %Generally speaking, choosing $\Delta \sigma = 1\cdot10{-2} L$ is a good rule of thumb. 
@@ -38,12 +38,12 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \end{table}
 %
 \begin{example}[Solution convergence for increasing modal order]
- Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext}(t) = [J]_k^\top \left(0,0,\mB(t),0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ in \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we inclemently increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie, the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. 
+ Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext}(t) = [J]_k^\top \left(0,0,\mB(t),0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ in \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we incrementally increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie, the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. 
  
  \afterpage{
  \begin{figure}[!t]
   \centering
-  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-4.pdf}
+  \includegraphics*[width=1.02\textwidth]{./pdf/thesis-figure-5-4.pdf}
   \caption{Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $|\vec{m}_u| = 75$ \si{\newton \milli \meter} acting on its end-effector. }
   \vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_3d}
@@ -53,7 +53,7 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \centering
   %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge.tex} 
   \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-5.pdf}
-  \caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the trajectories of the end-effector $\gammaB_L$ converge after $k > 3$. }
+  \caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the relative difference in end-effector trajectories $\gammaB_L$ for increasing truncation order $k$ vanishes for $k > 3$. }
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence}
   \end{figure}
@@ -62,16 +62,15 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \centering
   %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge_bench.tex} 
   \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-6.pdf}
-  \caption{The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between simulation time and finite horizon time. All simulations achieve real-time computation. }
+  \caption{The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between CPU simulation time and finite horizon time (\ie, $T_{\textrm{cpu}}/T$) against the truncation order $k$, which shows all simulations achieve real-time computation. }
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_bench}
   \end{figure}
   \clearpage
  }
  
- Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the error does not seem to improve significantly. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
+ Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual CPU simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the difference in trajectories is near negligible. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
 \end{example}
-\vfill
 
 \begin{example}[Energy-based controller]
 Following, we now subjected the soft robot to the proposed energy-based controller in \eqref{eq:C3:control}, where the control gains are tuned to produce a smooth transient: $\lambda_1 = 0.01$ and $\lambda_2 = 0.001$. The artificial spring stiffness is chosen as $\mat{k}_p = \blkdiag{0.01\cdot \mat{I}_3, \mat{I}_3}$. Lastly, the desired configuration of the end-effector is chosen as follows:
@@ -129,18 +128,15 @@ For the second simulation run, we modified the control gains to highlight an int
   \end{figure}
   \clearpage
 }
-\clearpage
+%\clearpage
+% \begin{figure}[!t]
+%   \centering
+%   \input{./fig/fig_C4_InfD_diagram.pdf_tex}
+%   \caption{}
+% \end{figure}
 
-\begin{figure}[!t]
-  \centering
-  \input{./fig/fig_C4_InfD_diagram.pdf_tex}
-  \caption{}
-\end{figure}
-
-\subsection{Mixing high-order models and low-order controllers}
-
-
-\clearpage
+% \subsection{Mixing high-order models and low-order controllers}
+% \clearpage
 
 \subsection{Multi-link soft robot inspired by the elephant's trunk}
 In the second study-case, we consider a two-link soft robot that is inspired by the trunk of an elephant. A similar soft robotic system is considered in \cite{Falkenhahn2015} (\ie, the elephant-inspired bionic arm by \texttt{Festo}), where mobility of the bio-inspired robotic system is achieved through a pneumatic-network distributed along the continuous body of the robot. Therefore, considering a six-bellow network, the actuation matrix takes the form:
@@ -149,9 +145,9 @@ In the second study-case, we consider a two-link soft robot that is inspired by 
 \mat{G}(\vec{q})\vec{u} = \sum_{n=1}^6 \left[ \int_\Xs [\mat{J}]_k^\top(\sigma,\vec{q}) \thetaB_{\textrm{u},i}(\sigma)\; d\sigma\right] u_i,
 \end{equation*}
 %
-where $\{\thetaB_{\textrm{u},i}\}_{n=1}^6$ is a set of piecewise constant wrench functions related to the pneumatic actuation bellows distributed along the soft robotic body, and $\vec{u} = (u_1,\,u_2,\,u_3,\,u_4,\,u_5,\,u_6)^\top$ a vector of wrench amplitudes. The control input sets $\{u_1,..,u_3\}$ relate to the first link and $\{u_4,..,u_6\}$ to the second link of the robot. Given this input configuration, it also follows that $\rank(\mat{G}(\vec{q})) < \dim(\vec{q})$ for all $\vec{q} \in \R^{6k}$, \ie, underactuated. The system and solver properties are given in Table \ref{tab:C3:parameters2}. We again consider $k=8$ spatial modes. To simulate the effect of the gripper, we added an inertial mass at the end-effector modelled by:
+where $\{\thetaB_{\textrm{u},i}\}_{n=1}^6$ is a set of piecewise constant wrench functions related to the pneumatic actuation bellows distributed along the soft robotic body, and $\vec{u} = (u_1,\,u_2,\,u_3,\,u_4,\,u_5,\,u_6)^\top$ a vector of wrench amplitudes. The control input sets $\{u_1,..,u_3\}$ relate to the first link and $\{u_4,..,u_6\}$ to the second link of the robot. Given this input configuration, it also follows that $\rank(\mat{G}(\vec{q})) < \dim(\vec{q})$ for all $\vec{q} \in \R^{6k}$, \ie, underactuated. The system and solver properties are given in Table \ref{tab:C3:parameters2}. We again consider $k=8$ spatial modes. To simulate the effect of the gripper, we added an inertial mass at the end-effector modeled by:
 %
-$$\tauB_{\textrm{ext}} =  \ten{M}_{\textrm{grip}}\,\JB(\q,L)^\top \left[ \left(\vec{0}_3^\top,\, \aB_g ^\top \Ad^\top_{\gB(\cdot,L)} \right)^\top + \dot{\etaB}(\q,L) \right],$$
+$$\tauB_{\textrm{ext}} =  \ten{M}_{\textrm{grip}}\,\JB(L,\q)^\top \left[ \left(\vec{0}_3^\top,\, \aB_g ^\top \Ad^\top_{[\gB]_k(L,\cdot)} \right)^\top + [\dot{\etaB}]_k(L,\q,\dq,\ddq) \right],$$
 %
 where $\ten{M}_{\textrm{grip}}$ inertia tensor related to the gripper placed at the end-effector of the robot located at $\sigma = L$. Again we apply the energy-based controller in \eqref{eq:C3:control} to the system, where the control gains are $\lambda_1 = 5$ and $\lambda_2 = 1$, while the artificial stiffness matrix $\mat{k}_p$ is kept identical to previous simulations. Lastly, the desired configuration of the end-effector is chosen as follows:
 %

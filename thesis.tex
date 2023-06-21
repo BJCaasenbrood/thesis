@@ -75,7 +75,7 @@
 %%%% NOMENCLATURE **************************************************************
 \cleardoublepage
 \pdfbookmark{\contentsname}{Contents}
-% \input{2_nomenclature/nomenclature}
+\input{2_nomenclature/nomenclature}
 \tableofcontents
 \newpage
 
@@ -164,9 +164,9 @@
 % *************************************************************
 %\part[Open-access Software for Soft Robots]{Open-access Software \\ for Soft Robots}\label{part: software}
 %\cleardoublepage
-\chapter[Sorotoki: a MATLAB toolkit for soft robots]{Sorotoki: a MATLAB toolkit \\ for design, modeling, and \\ control of soft robots}
+\chapter[\texttt{Sorotoki}: a MATLAB toolkit for soft robots]{\texttt{Sorotoki}: a MATLAB toolkit \\ for design, modeling, and \\ control of soft robots}
 \label{chap:Sorotoki}
-\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Energy-shaping Controllers for Soft Robot Manipulators through Port-Hamiltonian Cosserat Models.} SN Computer Science, Springer, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. }
+\blankfootnote{This chapter is based on: B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Sorotoki: a MATLAB toolkit for design, modeling, and control of soft robots} (\textit{in preparation for submission}). }
 
 \input{3_6_sorotoki/0_abstract.tex}
 \input{3_6_sorotoki/1_introduction.tex}
@@ -193,9 +193,16 @@
 \part{Appendices}
 \definecolor{thumbcolor}{gray}{0.75}     % Change the color of the thumb index tags to gray
 \input{3_1_introduction/A_list_of_definitions.tex}
+
+\input{3_3_design/A1_wachpress.tex}
+\input{3_3_design/A2_strainstress_element.tex}
+\input{3_3_design/A3_tangent_yeohmodel.tex}
+
 \input{3_4_pccmodel/A1_passivity.tex}
+
 \input{3_5_cosseratmodel/A1_lietheory.tex}
 \input{3_5_cosseratmodel/A2_jacobian.tex}
+
 \input{3_6_sorotoki/A1_newmark.tex}
 %%%% BACK MATTER ***************************************************************
 \cleardoublepage

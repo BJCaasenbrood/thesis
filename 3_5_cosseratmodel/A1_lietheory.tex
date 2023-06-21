@@ -2,10 +2,10 @@
 \vspace{-5mm}
 \section{Preliminaries on Lie group theory} 
 \label{app:C3:liegroup}
-Here we briefly discuss some notation and basic operations on the Lie groups $\SO{3}$ and $\SE{3}$, and their respective Lie algebras $\sog{3}$ and $\seg{3}$. This appendix serves a compact comprehensive introduction in the context of robotics, and the appendix is based on the comprehensive work of Bullo and Murray (1995, \cite{Bullo1995}).
+Here we briefly discuss some notation and basic operations on the Lie groups $\SO{3}$ and $\SE{3}$, and their respective Lie algebras $\sog{3}$ and $\seg{3}$. This appendix serves a compact comprehensive introduction in the context of robotics, and the appendix is based on the comprehensive work of Bullo and Murray \cite{Bullo1995}.
 
 \subsection{Basic definition(s)}
-Here, we focus first on the (Lie) group of rigid-body transformations about the origin of $\R^3$ -- denoted by $\SE{3}$. Let $G \subset \SE{3}$ be a matrix Lie group and its respective algebra $\mathfrak{g} \in \seg{3}$ its Lie Algebra. Then, the evolution of a general rigid body under motion with pose $\gB \in G$ can be described using 
+Here, we focus first on the (Lie) group of rigid-body transformations about the origin of $\R^3$ denoted by $\SE{3}$. Let $G = \SE{3}$ be a matrix Lie group and its respective algebra $\mathfrak{g} = \seg{3}$, also known as the Lie algebra. Then, the evolution of a general rigid body under motion with pose $\gB \in G$ can be described using 
 %
 \begin{equation}
 \dot{\gB} = \gB\, \hat{\etaB}^{\textrm{b}} \;  \Longleftrightarrow  \; \dot{\gB} = \hat{\etaB}^{\textrm{s}}\,\gB. \quad \hat{\etaB}^{\textrm{b}},\hat{\etaB}^{\textrm{s}} \in \mathfrak{g}
@@ -68,7 +68,7 @@ where $\lVert \cdot \rVert$ stands for the Euclidean norm and the operator $A(\O
 A(\OmegaB) = \IB + \left(\frac{1 - \lVert \OmegaB \rVert}{\lVert \OmegaB \rVert}\right) \frac{\OmegaB^\times}{\lVert \OmegaB \rVert} + (1 - \sin \lVert \OmegaB \rVert) \frac{ \OmegaB^\times \OmegaB^\times }{\lVert \OmegaB \rVert^2}.
 \end{equation}
 %
-Note that we have seen equation \eqref{eq:C3:A1:rogdrigues} earlier which is known as the Rogdrigues' formula. Referring to \cite{Bullo1995}, in an open neighborhood of the origin in $G$, we define $\etaB = \log(\gB) \in \mathfrak{g}$ to be the \emph{exponential coordinates} of the group element $\gB$. 
+Note that we have seen equation \eqref{eq:C3:A1:rogdrigues} earlier which is known as the Rogdrigues' formula. Referring to \cite{Bullo1995}, in an open neighborhood of the origin in $G$, we define $\etaB = \log(\gB) \in \mathfrak{g}$ to be the \emph{"exponential coordinates"} of the group element $\gB$. 
 Then, the logarithmic map can be regarded as the local chart of the manifold $G$. 
 As such, let $\gB = (\PhiB, \gammaB) \in \SO{3} \times \R^3$ be such that $\trace(\PhiB) \neq -1$. Then, the logarithmic map $\log_{SO{3}}: \SO{3} \to \sog{3}$ is given by
 %

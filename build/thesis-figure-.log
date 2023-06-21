@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.4.28)  4 MAY 2023 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  21 JUN 2023 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -471,9 +471,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 105.
+(babel)             (\language31). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language11). Reported on input line 108.
+(babel)             (\language31). Reported on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen282
@@ -1430,48 +1430,89 @@ LaTeX Info: Redefining \nameref on input line 15.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(./fig/fig_fem_example_crawl_gait.tex
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 83.
+(./fig/fig_C3_wachpress.tex
+<./fig//fig_C3_wachpress-1.png, id=7, 557.08125pt x 557.08125pt>
+File: ./fig//fig_C3_wachpress-1.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-1.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-1.png  used on input line 28.
+(pdftex.def)             Requested size: 203.36272pt x 203.36272pt.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 28.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 83.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 28.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 83.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 28.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 83.
+(Font)              <10> on input line 28.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 83.
+(Font)              <7> on input line 28.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 83.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+(Font)              <5> on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<./fig//fig_C3_wachpress-2.png, id=8, 548.0475pt x 547.04375pt>
+File: ./fig//fig_C3_wachpress-2.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-2.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-2.png  used on input line 49.
+(pdftex.def)             Requested size: 203.36813pt x 203.00401pt.
+<./fig//fig_C3_wachpress-3.png, id=9, 541.02126pt x 540.0175pt>
+File: ./fig//fig_C3_wachpress-3.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-3.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-3.png  used on input line 70.
+(pdftex.def)             Requested size: 203.36127pt x 202.9263pt.
+<./fig//fig_C3_wachpress-4.png, id=10, 532.99126pt x 532.99126pt>
+File: ./fig//fig_C3_wachpress-4.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-4.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-4.png  used on input line 91.
+(pdftex.def)             Requested size: 203.36832pt x 203.36832pt.
+<./fig//fig_C3_wachpress-5.png, id=11, 528.97626pt x 527.9725pt>
+File: ./fig//fig_C3_wachpress-5.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-5.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-5.png  used on input line 112.
+(pdftex.def)             Requested size: 203.36995pt x 202.92764pt.
+<./fig//fig_C3_wachpress-6.png, id=12, 523.9575pt x 523.9575pt>
+File: ./fig//fig_C3_wachpress-6.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-6.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-6.png  used on input line 133.
+(pdftex.def)             Requested size: 203.35922pt x 203.35922pt.
+<./fig//fig_C3_wachpress-7.png, id=13, 519.9425pt x 519.9425pt>
+File: ./fig//fig_C3_wachpress-7.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-7.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-7.png  used on input line 154.
+(pdftex.def)             Requested size: 203.36385pt x 203.36385pt.
+<./fig//fig_C3_wachpress-8.png, id=14, 516.93124pt x 516.93124pt>
+File: ./fig//fig_C3_wachpress-8.png Graphic file (type png)
+<use ./fig//fig_C3_wachpress-8.png>
+Package pdftex.def Info: ./fig//fig_C3_wachpress-8.png  used on input line 175.
+(pdftex.def)             Requested size: 203.36133pt x 203.36133pt.
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (build/thesis-figure-.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig//fig_C3_wachpress-1.png (PNG copy)> <./fig//fig_C3_wachpress-2.png (PNG copy)> <./fig//fig_C3_wachpress-3.png (PNG copy)> <./fig//fig_C3_wachpress-4.png (PNG copy)> <./fig//fig_C3_wachpress-5.png (PNG copy)> <./fig//fig_C3_wachpress-6.png (PNG copy)> <./fig//fig_C3_wachpress-7.png (PNG copy)> <./fig//fig_C3_wachpress-8.png (PNG copy)>]) (build/thesis-figure-.aux) ) 
 Here is how much of TeX's memory you used:
- 56862 strings out of 478287
- 1323157 string characters out of 5849289
- 1852319 words of memory out of 5000000
- 74100 multiletter control sequences out of 15000+600000
- 482517 words of font info for 47 fonts, out of 8000000 for 9000
+ 56966 strings out of 478287
+ 1325758 string characters out of 5849289
+ 1872316 words of memory out of 5000000
+ 74191 multiletter control sequences out of 15000+600000
+ 491338 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,10n,136p,786b,1946s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
-Output written on build/thesis-figure-.pdf (1 page, 31358 bytes).
+ 115i,10n,136p,786b,2322s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on build/thesis-figure-.pdf (1 page, 507228 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

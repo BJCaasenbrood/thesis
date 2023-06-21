@@ -1,4 +1,4 @@
-\subsection{Mesh generation (\texttt{Mesh})}
+\subsection{Mesh generation for finite element analysis (\texttt{Mesh})}
 \label{sec:C5:mesh}
 In finite elements and computer graphics, mesh tessellation is a common language used to describe the structural geometry through a finite collection of vertices and edges. In \textit{Sorotoki}, meshes and mesh generation features are packaged into the class \texttt{Mesh.m}. In general, a mesh defines a discrete representation of a continuum body that is subdivided into smaller convex sub-volumes, referred to as "\textit{elements}". The nodal and elemental information are stored in data structures that can be accessed using \texttt{msh.Node} and \texttt{msh.Element}, respectively. For two-dimensional FEM problems, it is common to use linear elements such as $\texttt{Tri3}$ and $\texttt{Quad4}$ or quadratic elements like $\texttt{Tri6}$ and $\texttt{Quad8}$. For three-dimensional FEM problems, the common practice is to use hexahedron elements (\textit{i.e.}, \texttt{Hex8}) or tetrahedral elements (\textit{i.e.}, \texttt{Tet4} and \texttt{Tet12}). There are also polygonal tessellations, often denotes as \texttt{PolyN} finite elements \cite{Talischi2012Mar}. \textit{Sorotoki} supports all these types.
 %
@@ -7,7 +7,7 @@ In finite elements and computer graphics, mesh tessellation is a common language
     \includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-4.pdf}
     \includegraphics*[width=0.495\textwidth]{./pdf/thesis-figure-6-4.pdf}
     %\input{./fig/fig_mesh.tex} \\[0.35em]
-    \caption{Example of mesh generation in \textit{Sorotoki}. The figure shows the evolution of an unstructured polygonal mesh based on Lloyd's algorithm. The colors relate to the relative element size with respect to the mean element size, given by \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\milli \meter \squared}. Notice that only after a few iterations, the centers of the Voronoi cells become homogeneously distributed within the domain $\Omega$.}
+    \caption{Example of mesh generation in \texttt{Sorotoki}. The figure shows the evolution of an unstructured polygonal mesh based on Lloyd's algorithm. The colors relate to the relative element size with respect to the mean element size, given by \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\milli \meter \squared}. Notice that only after a few iterations, the centers of the Voronoi cells become homogeneously distributed within the domain $\Omega$.}
     \label{fig:sorotoki:meshexample}
     \vspace{-3mm}
 \end{figure}

@@ -6,7 +6,7 @@ The mapping from generalized coordinates $\dot{\vec{q}} \in \R^n$ to the velocit
 [\mat{J}]_k = \Ad_{{[\mat{g}]_k}}^{-1} \int_0^\sigma \Ad_{[\mat{g}]_k} \mat{\Theta} \; ds. \label{eq:app_jac0}
 \end{equation}
 %b
-Unlike its notation in rigid robotics, note that the geometric Jacobian matrix here is time and space-variant. Following the chain rule of differentiation, the partial time-derivative of the geometric Jacobian matrix yields
+Unlike rigid robotics, note that the geometric Jacobian matrix here is time and space-variant. Following the chain rule, the partial time-derivative of the geometric Jacobian matrix yields
 %
 \begin{equation}
 \dot{[\mat{J}]_k} = \dot{\left(\Ad_{{[\mat{g}]_k}}^{-1}\right)} \int_0^\sigma \Ad_{[g]_k} \mat{\Theta} \; ds + \Ad_{{[\mat{g}]_k}}^{-1} \int_0^\sigma \dot{\left(\Ad_{[g]_k}\right)} \mat{\Theta} \; ds. \label{eq:app_jac1}
@@ -22,7 +22,52 @@ Given the differential relations of the adjoint action mapping on the Lie group,
 Substituting the truncated variations of \eqref{eq:app_dAdg} and \eqref{eq:app_dAdginv} into \eqref{eq:app_jac1}, we find the complete expression of the time-derivate of the geometric Jacobian matrix
 %
 \begin{align}
-\dot{[\mat{J}]_k} & = -\ad_{\vec{\eta}} {[\mat{J}]_k} + \Ad_{{[\vec{g}]_k}}^{-1} \int_0^\sigma \Ad_{{[\mat{g}]_k}} \ad_{[\vec{\eta}]_k} \mat{\Theta}\; ds. \label{eq:app_dJ}
+\dot{[\mat{J}]_k} & = -\ad_{[\vec{\eta}]_k} {[\mat{J}]_k} + \Ad_{{[\vec{g}]_k}}^{-1} \int_0^\sigma \Ad_{{[\mat{g}]_k}} \ad_{[\vec{\eta}]_k} \mat{\Theta}\; ds. \label{eq:app_dJ}
 \end{align}
 %
-Since $\ad_{\vec{\eta}} (\mat{J} \dot{\vec{q}}) = \ad_{\vec{\eta}} \vec{\eta} = \vec{0}_6$ by definition, the first right-hand term vanishes if \eqref{eq:app_dJ} is post-multiplied with the generalized velocities $\dot{\vec{q}}$, thus leading to the acceleration twist $\dot{[\vec{\eta}]}_k$ in \eqref{eq:C3:deta_analytic}.
+Since $\ad_{\vec{\eta}} (\mat{J} \dot{\vec{q}}) = \ad_{\vec{\eta}} \vec{\eta} = \vec{0}_6$ by definition, the first right-hand term vanishes if \eqref{eq:app_dJ} is post-multiplied with the generalized velocities $\dot{\vec{q}}$, thus leading to the acceleration twist $\dot{[\vec{\eta}]}_k$ in \eqref{eq:C3:deta_analytic}. \clearpage
+
+\section{Derivation of the generalized linear stiffness and damping matrix for continuum robots}
+\label{app:C3:linearmaterialmatrices}
+In this section, we will derive the expression for the generalized stiffness matrix $\KB$ and the generalized stiffness matrix $\DB$ as given in \eqref{eq:C3:stiff_mat} and \eqref{eq:C3:damp_mat}, respectively. Their formulation follow directly from the derivation of the generalized conservative material forces, computed by spatial integration of the internal material wrenches $\ten{F}_{\textrm{mat}}$ as in \eqref{eq:C3:lag_C}. Recall that the expression is given by
+%
+\begin{equation}
+\fB_{\textrm{mat}}(\q,\dq) = \int_{\Xs} [\JB(\sigma,\q)]_k^\top \FT_\textrm{mat}(\sigma,\q,\dq) \; d\sigma. \label{eq:app_gen_materialforces}
+\end{equation}
+%
+The generalized material forces described in the aforementioned expression can be represented by a linear model $\fB_{\textrm{mat}}(\q,\dq) = \KB \q + \DB \dq$ when a Hookean material model is assumed. We will demonstrate that this statement hold true through the following derivation.
+
+Drawing from the existing work on geometric Cosserat models \cite{Grazioso2019,Renda2018,Boyer2021}, the material wrench can be expressed as $\ten{F}_{\textrm{mat}} = \p \ten{S}/\p \sigma - \ad_\xiB^\top \ten{S}$, where $\ten{S}$ represents the internal stress wrench resulting from deformation of the continuum body. Before substitution of the internal stress into $\FT_{\textrm{mat}}$, it is necessary to first establish the spatial derivative of the inverse adjoint action, akin to \eqref{eq:app_dAdginv}. This derivative can be expressed as follows:
+%
+\begin{align}
+\frac{\p}{\p \sigma}\left(\Ad_{\mat{g}\inv} \right) & = -\ad_{\vec{\xi}}\Ad_{\mat{g}\inv}. \label{eq:app_dAdginv_xi}
+\end{align}
+%
+Given that $\Ad_{\gB\inv}^{-\top} \equiv \Ad_{\gB}^{\top}$, we can rewrite the expression in \eqref{eq:app_dAdginv_xi} and obtain a new expression for the adjoint action$-\ad_\xiB^\top = \Ad_\gB^\top \frac{\p}{\p \sigma}({\Ad_\gB}^{-\top})$. By utilizing this expression, it is possible to simplify the expression $\p \ten{S}/\p \sigma - \ad_\xiB^\top \ten{S}$ via the chain rule as follows:
+%
+\begin{align}
+\ten{S}' - \ad_{\xiB}^\top \ten{S} & = \frac{\p \ten{S}}{\p \sigma} + \Ad_{[\gB]_k}^\top \frac{\p}{\p \sigma} \left(\Ad_{[\gB]_k}^{-\top} \right) \ten{S}, \notag \\[0.25em]
+& = \underbrace{\Ad_{[\gB]_k}^{\top} \Ad_{[\gB]_k}^{-\top}}_{\IB_6} \frac{\p \ten{S}}{\p \sigma} + \Ad_{[\gB]_k}^\top \frac{\p}{\p \sigma} \left(\Ad_{[g]_k}^{-\top} \right) \ten{S}, \notag \\[0.25em]
+& = \Ad_{[\gB]_k}^\top \left( \Ad_{[\gB]_k}^{-\top} \frac{\p \ten{S}}{\p \sigma}  + \frac{\p}{\p \sigma} \left(\Ad_{[\gB]_k}^{-\top} \right) \ten{S} \right), \notag \\[0.25em]
+& = \Ad_{[\gB]_k}^\top \frac{\p}{\p \sigma} \left( \Ad_{[\gB]_k}^{-\top} \ten{S} \right). \label{eq:app_materialwrench_mid}
+\end{align}
+%
+Substitution of \eqref{eq:app_materialwrench_mid} and the geometric Jacobian \eqref{eq:C3:jacobian_analytic} into \eqref{eq:app_gen_materialforces}, we find 
+%
+\begin{equation}
+\fB_{\textrm{mat}} = \int_{\Xs} \left( \int_0^\sigma \ThetaB^\top \Ad_{[\gB]_k}^\top\; ds \right) \frac{\p}{\p \sigma} \left( \Ad_{[\gB]_k}^{-\top} \ten{S} \right) \; d\sigma
+\end{equation}
+%
+By virtue of the integration by parts and applying the appropriate boundary conditions of the net wrenches at the base $\sigma = 0$ and $\sigma = L$ (\ie, force balance), the generalized material forces can be compactly written as $\fB_{\textrm{mat}} = \int_\Xs \ThetaB^\top \ten{S} \; d\sigma$ which is nothing more than a projection of the stress wrench onto the truncated modal basis $\{\thetaB_i\}_{i=1}^k$. By selecting a Hookean model, the internal stress wrench can be expressed as 
+%
+\begin{equation}
+\ten{S} = \ten{K} ([\xiB]_k - \xiB^\circ) + \ten{D} \dot{[\xiB]}_k,
+\end{equation}
+%
+where $\mat{\mathcal{K}} \in \cose{3} \times \seg{3}$ and $\mat{\mathcal{D}} \in  \cose{3} \times \seg{3}$ represent the stiffness and damping material tensor, respectively. Recall that $[\xiB]_k = \ThetaB \q + \xiB^\circ$ and $[\dot{\xiB}]_k = \ThetaB \dq$ denote the geometric strain and strain-rate, respectively. This yields $\ten{S} = \ten{K} \ThetaB \q + \ten{D} \ThetaB \dq$; and consequently, the generalized conservative forces caused by material deformation can be expressed as a linear model in the following way:
+%
+\begin{equation}
+\fB_{\textrm{mat}} = \underbrace{\int_\Xs \ThetaB^\top \ten{K} \ThetaB \; d\sigma}_{\KB} \q + \underbrace{\int_\Xs \ThetaB^\top \ten{D} \ThetaB \; d\sigma}_{\DB} \dq. 
+\end{equation}
+%
+The quadratic form of the given matrices implies that they are positive definite, \ie, $\KB \succ 0$ and $\DB \succ 0$.

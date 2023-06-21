@@ -1,0 +1,23 @@
+\chapter{Appendices to Chapter 3}
+\vspace{-5mm}
+\section{Wachspress shape functions for polygons}
+\label{app:C3:wachpress}
+There is no unique way to generalize barycentric coordinates to polygons and polygonal hedra. However, two specific choices have turned out to be useful in several applications: Wachspress and mean value coordinates. For convex polygons the coordinates of Wachspress and their generalizations due to Warren and others [30, 22, 32, 33, 15], are arguably the simplest since they are rational functions and it is relatively simple to evaluate them and their derivatives 
+%
+\begin{equation}
+N_i(\XB)  = \frac{w_i(\XB)}{\sum_{j=1}^{n_p} w_j(\XB)},
+\label{eq:app:wachpress}
+\end{equation}
+where $w_i$ are the shape interpolants given by \footnote{Note that when computing the interpolant in \eqref{eq:app:wachpress_weight}, it is convention to use $\pB_{n_p + 1} = \pB_1$}
+%
+\begin{equation}
+w_i(\XB)  = \frac{A(\pB_{i-1}, \pB_{i}, \pB_{i+1})}{A(\pB_{i-1}, \pB_{i}, \XB) A(\pB_{i}, \pB_{i+1}, \XB)},
+\label{eq:app:wachpress_weight}
+\end{equation}
+%
+where $A$ is the the signed area spanned by its three position vector arguments. The $A$ may be computed using $A = \tfrac{1}{2}\left[x_1(y_2 - y_2) + x_2 (y_3 - y_1) + x_3(y_1 - y_2) \right]$, where $(x_1,y_1),(x_2,y_2), (x_3,y_3) \subseteq \R^2$ are the position vectors that span the triangle. Since the reference element is a regular polygon, $A(\pB_{i-1}, \pB_{i}, \pB_{i+1})$ is constant for all $i$ in the summation for \eqref{eq:app:wachpress}, and can therefore be factored out of expression. By adopting the notation $A_i(\XB):= A(\pB_{i-1},\pB_{i},\XB)$, we can simplify the expression further to
+%
+\begin{equation}
+w_i(\XB) = \frac{1}{A_{i}(\XB) A_{i+1}(\XB)},
+\end{equation}
+%

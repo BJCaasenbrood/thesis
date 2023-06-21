@@ -4,7 +4,7 @@ In this section, we will introduce the preliminaries for the nonlinear topology 
 \subsection{Strain theory in continuum mechanics}
 We start by presenting the variational principle of continuum mechanics in a nonlinear geometrical context. Consider an undeformed material domain as $\mathcal{B}_0 \subset \R^3$. When external forces act on $\mathcal{B}_0$, it undergoes both rigid-body and elastic deformation, resulting in a new body, denoted by $\mathcal{B} \subset \R^3$. Let $\XB \in \mathcal{B}_0$ represent an arbitrary material point within the undeformed configuration, whose motion can be described by a continuous path between two position vectors $\XB$ and $\XB'$. These vectors correspond to a particular material point in the undeformed and quasi-static deformed configurations (\ie, zero-velocity), respectively. Suppose that the deformation mapping is described by a flow $\boldsymbol{\varphi}^{(t)}: \mathcal{B}_0 \to \mathcal{B}$ such that $\boldsymbol{X} \mapsto \boldsymbol{\varphi}^{(T)}(\boldsymbol{X}) = \boldsymbol{X}'$ for a time instance $T > 0$ when static equilibrium between elastic deformation and external forces is reached. More conveniently, we can write $\boldsymbol{X}' = \boldsymbol{X} + \dB(\boldsymbol{X},T)$ where $\dB(\XB,T)$ represents the displacement field at the equilibrium configuration.
 
-In the field of continuum mechanics, the primary objective is to determine an approximation of the displacement field $\dB(\XB,T)$ that satisfies the boundary conditions imposed on the initial body $\mathcal{B}$. To achieve this goal, it is necessary to establish a relationship between the displacement and strain, as well as between these strains and the internal stresses caused by elastic deformation. A fundamental measure of deformation is the deformation gradient tensor, which can be computed as follows: assuming that the mapping $\boldsymbol{\varphi}$ is sufficiently smooth \cite{Kim2018,Holzapfel2002}, the second-order deformation gradient tensor is obtained through spatial derivation:
+In the field of continuum mechanics, the primary objective is to determine an approximation of the displacement field $\dB(\XB,T)$ that satisfies the boundary conditions imposed on the initial body $\mathcal{B}$. To achieve this goal, it is necessary to establish a relationship between the displacement and strain, as well as between these strains and the internal stresses caused by elastic deformation. A fundamental measure of deformation is the deformation gradient tensor, which can be computed as follows: assuming that the mapping $\boldsymbol{\varphi}$ is sufficiently smooth \cite{Kim2018,Holzapfel2002}, the second-order deformation gradient tensor is obtained through spatial differentiation:
 %
 \begin{align}
 \boldsymbol{F} := \frac{\p \boldsymbol{\varphi} }{\p \boldsymbol{X}}   = \boldsymbol{I} + \frac{\p \dB }{\p \boldsymbol{X}}.
@@ -37,9 +37,9 @@ Soft robotics is a field that relies heavily on the use of elastomer materials. 
 \Uf_{\textrm{int}}(\ten{E}):= \int_{\mathcal{B}_0} \Psi(\ten{E})\; dV \ge 0
 \end{equation}
 %
-In literature, $\Psi$ is often chosen as polynomial regression model which fits empirical data of materials, leaving the choice on $\Psi$ generally free. Nevertheless, there exist popular options that are commonly used for rubber-like engineering materials. Popular constitutive models for hyperelastic behavior include Neo-Hookean \cite{Smith2018,Bern2019,Bern2021Apr}, Mooney \cite{Kim2018}, Ogden\cite{Xavier2022Jun}, or Yeoh\cite{Renaud2011}. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models are commonly expressed in terms of the strain invariants (${J}_1$, ${J}_2$, ${J}_3$).
+In literature, $\Psi$ is often chosen as polynomial regression model which fits empirical data of materials, leaving the choice on $\Psi$ generally free. Nevertheless, there exist popular options that are commonly used for rubber-like engineering materials. Popular constitutive models for hyperelastic behavior include Neo-Hookean \cite{Smith2018,Bern2019,Bern2021Apr}, Mooney \cite{Kim2018}, Ogden \cite{Xavier2022Jun}, or Yeoh \cite{Renaud2011}. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models is commonly expressed in terms of the strain invariants (${J}_1$, ${J}_2$, ${J}_3$).
 
-In this work, the Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. The Yeoh model is a popular constitutive model due to its unique dependency on the first invariant $J_1 = \text{tr}(\boldsymbol{C})$ with $\CB = \FB^\top \FB$ the right Cauchy strain tensor. The strain energy function of the Yeoh model \cite{Kim2018} is given by
+In this work, the Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. The Yeoh model is a popular constitutive model due to its unique dependency on the first invariant $J_1 = \textrm{tr}(\ten{C})$ with $\ten{C} = \mat{F}^\top \mat{F}$ the right Cauchy strain tensor. The strain energy function of the Yeoh model \cite{Kim2018} is given by.
 %
 \begin{equation}
 {\Psi} = \sum_{i = 1}^{3} c_i (J_1 - 3)^i, 
@@ -90,7 +90,7 @@ where $\textrm{sym}(\cdot)$ denotes the symmetric part of the tensor. It is impo
 % 
 where $\BB$ is referred to in literature as the strain-displacement matrix. Using the expression above, we can rewrite the contraction between the Piolla stress tensor and the Lagrangian stress tensor in \eqref{eq:C3:variation_Uf} as $\ten{S} : \delta \ten{E} = \big(\BB \delta \dB\big)^\top \underline{\ten{S}}$ with $\underline{\ten{S}}$ a matrix representation of the Piolla stress tensor following Voigt notation. We can use this to simplify the variational energy, as it is now linear in $\delta \dB$. 
 
-The variational equation in \eqref{eq:C3:variation_Uf} cannot be solved as easily as a system of linear equalities (\eg, \texttt{x = A/b}), due to the presence of nonlinearities in the displacement-strain relation. To solve this system of nonlinear equalities, a common strategy is to use the Newton-Raphson iterative method, which involves a sequence of linearizations followed by small update steps until the equality is satisfied. If \eqref{eq:C3:variation_Uf} is not satisfied, we can introduce a residual scaler which can be defined as follows:
+The variational equation in \eqref{eq:C3:variation_Uf} cannot be solved as easily as a system of linear equalities, due to the presence of nonlinearities in the displacement-strain relation. To solve this system of nonlinear equalities, a common strategy is to use the Newton-Raphson iterative method, which involves a sequence of linearizations followed by small update steps until the equality is satisfied. If \eqref{eq:C3:variation_Uf} is not satisfied, we can introduce a residual scaler which can be defined as follows:
 %
 \begin{equation}
 r = \int_{\mathcal{B}_0} \delta \dB^\top \BB^\top \underline{\ten{S}}\; dV - \int_{\mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{b}} \; dV - \int_{\p \mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{t}}  \; dS.
@@ -100,7 +100,7 @@ r = \int_{\mathcal{B}_0} \delta \dB^\top \BB^\top \underline{\ten{S}}\; dV - \in
 It is important to note that the residual above is linear in $\delta \dB$ and nonlinear in $\dB$, which stems from the fact that stress and displacements are implicitly related. This allows us to separate the variation from the residual above. Indeed, the residual above forms the weak form of the nonlinear elastic system, which often does not provide a closed-form solution for $r = 0$. Therefore, the following section focuses on spatial discretization.
 
 \begin{rmk}
-The current formulation of the continuum problem is applicable to both two-dimensional and three-dimensional problems. However, since this chapter focuses on planar design optimization, we will assume that $\mathcal{B}_0$ is an element of $\R^2$. To enable computability, this space will be discretized using planar elements where we explore polygonal mesh elements.
+The current formulation of the continuum problem is versatile in its ability to address both two-dimensional and three-dimensional situations. Nonetheless, given the emphasis on optimizing planar designs in this chapter, we will consider $\mathcal{B}_0$ to be a subset in $\R^2$. In order to facilitate computational feasibility, this space will be discretized using planar elements where we explore polygonal tessellation.
 \end{rmk}
 
 % Combining all prior ingredients, we can formulate a residual vector $\RB(\dB,\delta \dB)$ that of which we wish to find the solutions $\dB$ and $\delta \dB$ for which $\RB = 0$.
@@ -130,31 +130,42 @@ where $\mathcal{V}$ is the Voronoi cell from the point $\boldsymbol{p}_i$. Mathe
 \end{equation}
 %
 where $\Delta(\boldsymbol{x},\boldsymbol{y}) = ||\boldsymbol{x} -  \boldsymbol{y}||_2$ denotes the Euclidean distance between two points $\boldsymbol{x},\boldsymbol{y}\in \R^2$. Clearly, the choice of the point set $\mathcal{P}$ is of paramount importance in generating the Voronoi tessellation. To obtain a uniformly distributed set, Lloyd's algorithm can be used to iteratively update a set of points that are initially chosen randomly. For more detail on the generation of polygonal meshes, we refer the reader to the work of Talischi et al. \cite{Talischi2012}. As an example, we show the mesh generation of a circular domain in Figure \ref{fig:C3:voronoimeshExample}.  
-
-Due to the convexity of Euclidean distance function in \eqref{eq:vorcell}, the Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ are intrinsically convex polygons, whose exterior is spanned by a finite set of nodes. In the displacement-based implementation scheme of the FEM method, each node of the mesh assigned a displacement vector $\xB^e_i = (x^e_{i,1}, x^e_{i,2})^\top$, where the subscript $e$ will be used to identify the element and $i \in \{1,..,n_p\}$ the number of nodes that span the element. Then, the displacement field and its gradient can be interpolated as follows:
 %
 \begin{figure}
 \centering
 \vspace{-2mm}
 \input{./fig/fig_C3_voronoi.pdf_tex}
 \caption{Illustration of generating a planar Voronoi tessellation from a circular domain $\mathcal{B}_0$. (a) Material domain is sampled with $n_e$ points collected in by point-set $\mathcal{P}$. (b) Using Loyd's algorithm, a restricted Voronoi tessellation $\mathcal{T}(\mathcal{P})$ is generated composed of polygonal elements $\{\mathcal{V}_e\}_{e=1}^{n_e}$. (c) A polygonal element spanning the space $\mathcal{V}_e$, whose shape can be changed by the nodal displacement vector $\x^{e}$. \label{fig:C3:voronoimeshExample}}
+\vspace{-3mm}
 \end{figure}
 %
+The Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ in equation \eqref{eq:vorcell} are inherently convex polygons due to the Euclidean distance function's convexity. The convex nature of these shapes implies that all lines connecting any two points within the shapes lie entirely within the shape. In other words, the elements lack indentations or concave portions. Thus, the interior of the elements can be described using a finite set of nodes called the \textit{"nodal positions"} or \textit{"nodal coordinates"}. In the displacement-based implementation scheme of the FEM method, each node coordinate is assigned a displacement vector $\xB^e_i = (x^e_{i,1}, x^e_{i,2})^\top$, where the subscript $e$ identifies the element and $i \in {1,..,n_p}$ represents the number of nodes spanning the element. Then, the displacement field and its gradient can be interpolated as follows:
+%
 \begin{align}
-\dB(\XB_e,T) &\simeq \sum^{n_p}_{i=1} N_i^e(\XB_e) \xB^{e}_i  = \NB^{e} \xB^{e},% \\[0.5em]
+\dB(\XB_{\!e},T) &\approx \sum^{k(e)}_{i=1} N_i^{k}(\XB_{\!e}) \xB^{e}_i  = \NB^{k}(\XB_{\!e}) \xB^{e},% \\[0.5em]
 % \nabla_0 \dB(\XB_e,T) & \simeq \sum^{n_p}_{i=1} \tfrac{\p N}{\p \XB}(\XB_e) \xB^{e}_i = \Delta \NB^{e} \xB^{e}
 \end{align}
 %
-where $\XB_e \in \mathcal{V}_e$ represents the spatial location within the $e$-th polygonal element, and $\NB^{e}$ represents the interpolation or shape function matrix related to that element. These shape functions are often known analytical expressions that are unique to the topology of each element (\ie, the number of nodes per polygon). The reader is referred to Talischi et al. \cite{Talischi2012,Talischi2012Mar} for the expressions of $\NB^{e}$ using polygonal elements, which explore the Wachspress shape function \cite{Wachspress1975}.
+where $\XB_{\!e} \in \mathcal{V}_e$ represents the spatial location within the $e$-th polygonal element, and $\NB^{e}$ represents the interpolation or shape function matrix related to that element. These shape functions are often known analytical expressions that are unique to the topology of each element (\ie, the number of nodes per polygon). The reader is referred to Talischi et al. \cite{Talischi2012,Talischi2012Mar} for the expressions of $\NB^{e}$ using polygonal elements, which explore the Wachspress shape function \cite{Wachspress1975}.
+%
+\begin{figure}
+\centering
+\vspace{-2mm}
+\includegraphics[width=\textwidth]{./pdf/thesis-figure-3-wachpress.pdf}
+\caption{Wachspress shape functions related to the first nodal coordinate for an increasing polygonal degree $n_p$. The colormap depicts the intensity of the shape function with \protect\colormapcaption{0}{.75cm}$\!\!\in [0,1]$.}
+\vspace{-3mm}
+\end{figure}
+%
+
 %With a discretized domain in mind, we can collect all the nodal displacements $\xB^{e}$ into one vector, called the global displacement vector $\xB = \textrm{col}(\x^{1},\x^{2},...,\x^{n_e})$. Similarly, we have a global virtual displacement vector $\delta \x$. 
-Finally, by substitution of the spatial interpolations of the displacement $\dB = \NB^e \xB^e$ and virtual displacements $\delta \dB = \NB^e\delta \xB^e$, we can reformulate the residual in \eqref{eq:C3:residual_scalar} as follows
+Finally, by substitution of the spatial interpolations of the displacement $\dB \approx \NB^e \xB^e$ and virtual displacements $\delta \dB \approx \NB^e\delta \xB^e$, we can reformulate the residual in \eqref{eq:C3:residual_scalar} as follows
 %
 \begin{align}
 \vec{r}	& \approx \sum_{e=1}^{n_e} ({\delta \xB}^e)^\top \left[\int_{\mathcal{V}_e} \BB_e(\x^e)^\top \underline{\ten{S}}_e(\x^e) \; dV  - \int_{\mathcal{V}_e} \NB^{e} \fB_{\textrm{b}} \; dV  - \int_{\p \mathcal{V}_e} \NB^{e} \fB_{\textrm{t}} \; dS \right], \notag \\[0.5em]
 & = {\delta \x}^\top \left[ \fB_{\textrm{int}}(\xB) - \fB_{\textrm{ext}} \right],
 \end{align}
 %
-where $\x$ and $\delta \x$ are the global nodal displacement and the global nodal virtual displacement vectors, and $\BB_e$ and $\underline{\ten{S}}_e$ the elemental strain-displacement matrix and Piolla stress tensor, respectively. The derivation of these elemental matrices is found in Kim et al. \cite{Kim2018}. Since the entries of the displacement variation ${\delta \x}$ are zero at nodes where displacement is prescribed (\ie, fixed DOFs), we may consider an alternative form, the residual force vector, in which the virtual displacements are omitted by only regarding the free DOFs:
+where $\x$ and $\delta \x$ are the global nodal displacement and the global nodal virtual displacement vectors, and $\BB_e$ and $\underline{\ten{S}}_e$ the elemental strain-displacement matrix and Piolla stress tensor, respectively. The derivation of these elemental matrices is found Appendix \ref{app:C3:straindisplacement} which follows the work of Kim et al. \cite{Kim2018}. Since the entries of the displacement variation ${\delta \x}$ are zero at nodes where displacement is prescribed (\ie, fixed DOFs), we may consider an alternative form, the residual force vector, in which the virtual displacements are omitted by only regarding the free DOFs:
 %
 \begin{equation}
 \RB(\x) = \fB_{\textrm{int}}(\x) - \fB_{\textrm{ext}},

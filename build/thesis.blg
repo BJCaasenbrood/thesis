@@ -7,7 +7,7 @@ The style file: apalike.bst
 A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12348 items from 5000.
+Reallocated field_info (elt_size=4) to 12084 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -16,49 +16,23 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 939 of file MyBib.bib
+--line 950 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1643 of file MyBib.bib
+--line 1691 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1650 of file MyBib.bib
+--line 1698 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2379 of file MyBib.bib
+--line 2474 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 2841 of file MyBib.bib
+--line 2960 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 2953 of file MyBib.bib
+--line 3072 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3371 of file MyBib.bib
+--line 3516 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 3971 of file MyBib.bib
-Warning--I didn't find a database entry for "Spong1996a"
-Warning--I didn't find a database entry for "Kazemipour2022"
-Warning--I didn't find a database entry for "Chen2018Dec"
-Warning--I didn't find a database entry for "Marechal2021Jun"
-Warning--I didn't find a database entry for "Newmark1959Jul"
-Warning--I didn't find a database entry for "Overvelde2012"
-Warning--I didn't find a database entry for "Bertoldi2008Feb"
-Warning--I didn't find a database entry for "Overvelde2012May"
-Warning--I didn't find a database entry for "Bendsoe2004"
-Warning--I didn't find a database entry for "Svanberg1987"
-Warning--I didn't find a database entry for "Svanberg2007"
-Warning--I didn't find a database entry for "Caasenbrood2020May"
-Warning--I didn't find a database entry for "CChirikjian1992Dec"
-Warning--I didn't find a database entry for "Boyer2020"
-Warning--I didn't find a database entry for "Caasenbrood2022Nov"
-Warning--I didn't find a database entry for "Murray2017Sep"
-Warning--I didn't find a database entry for "DellaSantina2021Oct"
-Warning--I didn't find a database entry for "Li2023Jan"
-Warning--I didn't find a database entry for "Santina2020Dec"
-Warning--I didn't find a database entry for "Stella2022Nov"
-Warning--I didn't find a database entry for "Chirikjian2015Jul"
-Warning--I didn't find a database entry for "Renda2020Apr"
+--line 4116 of file MyBib.bib
 Warning--I didn't find a database entry for "Loria2015Jun"
-Warning--I didn't find a database entry for "Caasenbrood2022Apr"
-Warning--I didn't find a database entry for "Illingworth1987Sep"
-Warning--I didn't find a database entry for "Raeisinezhad2021May"
-Warning--I didn't find a database entry for "DellaSantina2019Nov"
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
 Warning--empty year in BibEntryPuma2022Sep
@@ -81,45 +55,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 307 entries,
+You've used 321 entries,
             1935 wiz_defined-function locations,
-            2361 strings with 69473 characters,
-and the built_in function-call counts, 139733 in all, are:
-= -- 13657
-> -- 6822
-< -- 171
-+ -- 2420
-- -- 2382
-* -- 12336
-:= -- 23997
-add.period$ -- 958
-call.type$ -- 307
-change.case$ -- 2706
-chr.to.int$ -- 279
-cite$ -- 331
-duplicate$ -- 4903
-empty$ -- 9083
-format.name$ -- 2795
-if$ -- 27318
-int.to.chr$ -- 29
+            2382 strings with 71228 characters,
+and the built_in function-call counts, 145137 in all, are:
+= -- 14189
+> -- 7054
+< -- 180
++ -- 2499
+- -- 2460
+* -- 12784
+:= -- 24954
+add.period$ -- 1000
+call.type$ -- 321
+change.case$ -- 2814
+chr.to.int$ -- 292
+cite$ -- 345
+duplicate$ -- 5106
+empty$ -- 9445
+format.name$ -- 2891
+if$ -- 28364
+int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 296
-newline$ -- 1532
-num.names$ -- 915
-pop$ -- 2427
+missing$ -- 309
+newline$ -- 1601
+num.names$ -- 957
+pop$ -- 2519
 preamble$ -- 1
-purify$ -- 2726
+purify$ -- 2835
 quote$ -- 0
-skip$ -- 3771
+skip$ -- 3929
 stack$ -- 0
-substring$ -- 9774
-swap$ -- 837
-text.length$ -- 69
+substring$ -- 10130
+swap$ -- 863
+text.length$ -- 71
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1810
+type$ -- 1892
 warning$ -- 22
-while$ -- 1086
+while$ -- 1131
 width$ -- 0
-write$ -- 3973
-(There were 60 warnings)
+write$ -- 4149
+(There were 34 warnings)

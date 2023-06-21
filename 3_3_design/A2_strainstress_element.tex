@@ -1,0 +1,33 @@
+
+\section{Element formulation for the Lagrangian strain and Cauchy stress tensors}
+\label{app:C3:straindisplacement} 
+When solving finite element numerically, it is often more convenient to utilize matrix-vector notation as opposed to tensor notation. This approach involves representing second-order symmetric tensors using vectors, while fourth-order symmetric tensors are represented using matrices. 
+
+Given the two-dimensional formulation of the finite element problem described in Chapter \ref{chap: design}, it is possible to define the Green-Lagrange strain tensor and second Piola stress strain tensor, which are both symmetric second-order tensors, as vectors belong to $\R^3$ following the Voigt notation:
+%
+\begin{align}
+\textrm{vec}\left( \ten{E} \right) &= \left(E_{11},\; E_{22},\, 2E_{12} \right)^\top, \\[0.25em]
+\textrm{vec}\left( \ten{S} \right) &= \left(S_{11},\; S_{22},\, S_{12} \right)^\top 
+\end{align}
+%
+For convenience, we will introduce the following notation $\textrm{vec}(\ten{E}) =: \underline{\ten{E}}$ and $\textrm{vec}(\ten{S}) =: \underline{\ten{S}}$. Our goal now is to derive an expression for the (nonlinear) strain-displacement matrix $\BB(\dB)$ which relates the displacement field and the variation of the Lagrangian strain as $\delta \underline{\ET} = \BB(\dB) \delta \dB$. To do so, we explore the elemental interpolation using the Wachspress shape function that we derived previously in Section \ref{app:C3:wachpress}. 
+
+The following vector form of the displacement gradient is defined first
+\begin{equation}
+\textrm{vec} \left(\nabla_0 \dB \right) = \left( \frac{\p d_1}{\p X_1},\,\frac{\p d_1}{\p X_2},\, \frac{\p d_2}{\p X_1},\, \frac{\p d_2}{\p X_2}\right)^\top 
+\end{equation}
+
+
+Then, finally, the nonlinear displacement–strain matrix can be computed as follows
+\begin{equation}
+\BB^{e} = \left(\BB_1,\,\BB_2,\,\BB_3, ...,\, \BB_{n_p} \right),
+\end{equation}
+%
+\begin{align}
+\BB_i = \begin{pmatrix} 
+F_{11} N_{i,1} & F_{21} N_{i,1} \\[0.25em]
+F_{12} N_{i,2} & F_{22} N_{i,2}  \\[0.25em]
+F_{11} N_{i,2} \; + F_{12} N_{i,1} & F_{21} N_{i,2}  \; + F_{22} N_{i,1} 
+\end{pmatrix}
+\end{align}
+%

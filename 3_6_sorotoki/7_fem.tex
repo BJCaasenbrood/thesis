@@ -4,7 +4,9 @@ Following the mesh generation process, \textit{Sorotoki} offers a nonlinear fini
 
 \begin{figure}
 \centering
-\includegraphics[width=0.85\textwidth]{./pdf/thesis-figure-6-5.pdf}
+%FemExample
+\includegraphics[width=0.85\textwidth]{./pdf/FemExample.pdf}
+%\includegraphics[width=0.85\textwidth]{./pdf/thesis-figure-6-5.pdf}
 \caption{Illustration of the Finite Element Method (FEM), where a solid geometry $\Omega$ is subdivided into $N_e$ finite elements $\Omega_e$. Each element has $\dim(\x_e)$ DOFs, which allows the computation of the deformation gradient $\FB$. The deformation gradient can be decomposed into $\FB = \QB\VB$, an isochoric deformation part $\VB$ and rigid-body rotation part $\QB$. }    
 \label{fig:C5:illustration_FEM}
 \end{figure}
@@ -47,7 +49,7 @@ A fundamental measure of deformation in continuum mechanics is the deformation g
 %
 \begin{intermez}[Derivation of hyperelastic forces]
     
-    Let $\Omega_i$ denote the subspace spanned by the $i$-th element of the finite element mesh, and let $\x_i$ denote its nodal displacement vector. The elasticity of the constitutive soft material can be described by a strain-energy density function $\Psi: \FB \to \R_{\ge 0}$. A comprehensive discussion on common constitutive models for $\Psi$ will be provided later in Section \ref{sec:C5:hyperelastic}. The elastic potential energy of the continuum body is given by $\mathcal{U}_e = \int_\Omega \Psi(\cdot) \; dV$, and the conservative hyper-elastic force contribution can be computed as $\fB_e := \nabla_{\x}\,\mathcal{U}_e$. This contribution can be approximated using piecewise finite element interpolation and integrated using the Gauss quadrature rule \cite{Kim2018} as follows:
+Let $\Omega_i$ denote the subspace spanned by the $i$-th element of the finite element mesh, and let $\x_i$ denote its nodal displacement vector. The elasticity of the constitutive soft material can be described by a strain-energy density function $\Psi: \FB \to \R_{\ge 0}$. A comprehensive discussion on common constitutive models for $\Psi$ will be provided later in the subsequent paragraph. The elastic potential energy of the continuum body is given by $\mathcal{U}_e = \int_\Omega \Psi(\cdot) \; dV$, and the conservative hyper-elastic force contribution can be computed as $\fB_e := \nabla_{\x}\,\mathcal{U}_e$. This contribution can be approximated using piecewise finite element interpolation and integrated using the Gauss quadrature rule \cite{Kim2018} as follows:
     %
     \begin{align}
         \fB_\textrm{e}(\x) & = \sum_{i=1}^{N_e} \frac{d}{d\x_i} \left\{\int_{\Omega_i} \Psi(\FB(\x_i,s)) \; ds\right\}, \notag                                                    \\
@@ -101,9 +103,9 @@ where $\lambda_i$ is a real scalar eigenvalue and $\thetaB_i$ is its correspondi
 
 \begin{example}[Nonlinear buckling analysis via decomposition]
 %\subsubsection*{Example C1: Nonlinear buckling analysis via decomposition}
-An excellent case study of the eigenvalue problem in nonlinear elasticity systems is the buckling behavior of patterned elastomer metamaterials, as studied by Bertoldi et al. \cite{Bertoldi2008} and later by Overvelde et al. \cite{Overvelde2012}. In their studies, an elastomer specimen with a periodic circular porous structure was subjected to uniaxial compression. The specimen displayed an inward buckling phenomenon at a critical loading point, resulting in the specimen exhibiting a negative Poisson ratio, \ie, auxetic behavior. To be specific, the structure undergoes a so-called "bifurcation" where solutions switch stability or new solutions arise for a critical parameter value. In this case, the bifurcation parameter is the compression ratio $\varepsilon$.
+An excellent case study of the eigenvalue problem in nonlinear elasticity systems is the buckling behavior of patterned elastomer metamaterials, as studied by Bertoldi et al. \cite{Bertoldi2008} and later by Overvelde et al. \cite{Overvelde2012May}. In their studies, an elastomer specimen with a periodic circular porous structure was subjected to uniaxial compression. The specimen displayed an inward buckling phenomenon at a critical loading point, resulting in the specimen exhibiting a negative Poisson ratio, \ie, auxetic behavior. To be specific, the structure undergoes a so-called "bifurcation" where solutions switch stability or new solutions arise for a critical parameter value. In this case, the bifurcation parameter is the compression ratio $\varepsilon$.
 
-In accordance with \cite{Overvelde2012}, a square elastomer specimen with circular holes was modeled using a Neo-Hookean material model, with Young's modulus $E = 19$ (\si{\kilo \pascal}) and Poisson ratio $\nu = 0.45$. As reported in \cite{Overvelde2012}, the critical buckling point was observed to occur at approximately $\varepsilon = -12.5\%$ uniaxial compression.
+In accordance with \cite{Overvelde2012May}, a square elastomer specimen with circular holes was modeled using a Neo-Hookean material model, with Young's modulus $E = 19$ (\si{\kilo \pascal}) and Poisson ratio $\nu = 0.45$. As reported in \cite{Overvelde2012May}, the critical buckling point was observed to occur at approximately $\varepsilon = -12.5\%$ uniaxial compression.
 
 \begin{figure}[!t]
     \centering
@@ -111,12 +113,12 @@ In accordance with \cite{Overvelde2012}, a square elastomer specimen with circul
 \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-6-2.pdf}
     %\input{./fig/fig_bucklemode_linear.tex}
 %\input{./fig/fig_bucklemode_nonlinear.tex}
-\caption{Nonlinear buckling mode analysis of periodic circular porous elastic structure inspired by \cite{Bertoldi2008Feb,Overvelde2012May}. The horizontal displacements are indicated by \protect\colormapcaption{0}{.75cm}$\!\!\in [-5,5]$ \si{\milli \meter}. (top) The first three eigenmodes of the elastomer structure for $\varepsilon = 0\%$ compression, no buckling modes appear. (bottom)  The first three eigenmodes for $\varepsilon = 12.5\%$ compression. Notice that the first mode $\thetaB_1$ is a buckling mode where the collapses holes orient periodically either vertically or horizontally. }
+\caption{Nonlinear buckling mode analysis of periodic circular porous elastic structure inspired by \cite{Bertoldi2008,Overvelde2012May}. The horizontal displacements are indicated by \protect\colormapcaption{0}{.75cm}$\!\!\in [-5,5]$ \si{\milli \meter}. (top) The first four eigenmodes of the elastomer structure for $\varepsilon = 0\%$ compression, no buckling modes appear. (bottom)  The first four eigenmodes for $\varepsilon = 12.5\%$ compression. Notice that the first mode $\thetaB_1$ is a buckling mode where the collapses holes orient periodically either vertically or horizontally. }
 \label{fig:C5:fig_bucklemode}
 \vspace{-3mm}
 \end{figure}
 
-A numerical solution is obtained through quasi-static analysis using the function \code{fem.solve}. To model compression, a displacement load was added using \code{fem.addDisplace('Top')}. The resulting equilibrium configuration was then utilized in the eigenvalue problem via the function \code{fem.analysis(x)}. The eigenmodes for the zero-stress and $\varepsilon = -12.5\%$ compression cases are illustrated in Figure \ref{fig:C5:fig_bucklemode}. It is worth noting that the first three eigenmodes of the elastomer structure at $\varepsilon = 0\%$ compression exhibit no buckling modes. Conversely, the first eigenmode $\thetaB_1$ at $\varepsilon = -12.5\%$ compression displays a buckling mode, wherein the collapse of the holes is periodically oriented either vertically or horizontally. This buckling mode is in accordance with the experiments from \cite{Overvelde2012May} and \cite{Bertoldi2008Feb}. The supplementary code is provided below: 
+A numerical solution is obtained through quasi-static analysis using the function \code{fem.solve}. To model compression, a displacement load was added using \code{fem.addDisplace('Top')}. The resulting equilibrium configuration was then utilized in the eigenvalue problem via the function \code{fem.analysis(x)}. The eigenmodes for the zero-stress and $\varepsilon = -12.5\%$ compression cases are illustrated in Figure \ref{fig:C5:fig_bucklemode}. It is worth noting that the first three eigenmodes of the elastomer structure at $\varepsilon = 0\%$ compression exhibit no buckling modes. Conversely, the first eigenmode $\thetaB_1$ at $\varepsilon = -12.5\%$ compression displays a buckling mode, wherein the collapse of the holes is periodically oriented either vertically or horizontally. This buckling mode is in accordance with the experiments from \cite{Overvelde2012May} and \cite{Bertoldi2008}. The supplementary code is provided below: 
 \end{example}
 %
 
@@ -180,10 +182,10 @@ function y = Pressure(fem, i)
     y = clamp(sin(5*pi*fem.Log.t - phi), 0, Inf);
 end
 \end{matlabcode}
+\vfill
+The excitation signal parameters are set as follows: $A = 45$ \si{\kilo \pascal}, $\omega = 5 \pi$ \si{\radian}, and $\phi_i = \frac{\pi}{3} \cdot (i-1)$ \si{\radian}. The saturation function is defined as $\textrm{sat}(x) = 0$ for $x < 0$, and $\textrm{sat}(x) = x$ for $x \geq 0$. Gravitational acceleration is added, and the dynamic simulation solver is invoked using \texttt{fem.simulate}. Figure \ref{fig:C5:fem_example_crawl} presents a comparison between the soft robot described in \cite{Shepherd2011Dec} and the dynamic simulation performed by \texttt{Sorotoki}.
 
-The excitation signal parameters are set as follows: $A = 45$ \si{\kilo \pascal}, $\omega = 5 \pi$ \si{\radian}, and $\phi_i = \frac{\pi}{3} \cdot (i-1)$ \si{\radian}. The saturation function is defined as $\textrm{sat}(x) = 0$ for $x < 0$, and $\textrm{sat}(x) = x$ for $x \geq 0$. Gravitational acceleration is added, and the dynamic simulation solver is invoked using \texttt{fem.simulate}. Figure \ref{fig:C5:fem_example_crawl} presents a comparison between the soft robot described in \cite{Shepherd2011Dec} and the dynamic simulation performed by \textit{Sorotoki}.
-
-The results of the simulation performed using \textit{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. The code written in \textit{Sorotoki} is provided below, and its pipeline is shown in Figure \ref{fig:C5:PipelineCrawler}. 
+The results of the simulation performed using \textit{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. 
 \vfill
 \end{example}
 
@@ -208,7 +210,7 @@ The results of the simulation performed using \textit{Sorotoki} show a morpholog
 \vspace{5mm}
 \includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-9-1a.pdf} 
 %\includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-9-2a.pdf}
-\caption{Numerical simulation of the center of mass displacement and gait for undulating soft crawler. The horizontal displacement is given by \data{Matlab1}, and the vertical displacement as \data{Matlab2}.}
+\caption{(top) Numerical simulation of the center of mass displacement and gait for undulating soft crawler. The horizontal displacement is given by \data{Matlab1}, and the vertical displacement as \data{Matlab2}. (bottom) The gait cycle of the soft crawler where the sequence $\{$\ldata{Matlab1}, \ldata{Matlab2}, \ldata{Matlab3}$\}$ shows the fluidic activation. }
 \label{fig:C5:fem_example_crawl_com}
 %\vspace{-5mm}
 \end{sidewaysfigure*}
@@ -216,7 +218,7 @@ The results of the simulation performed using \textit{Sorotoki} show a morpholog
 }
 
 \textbf{Gradient-based computational (inverse) design}
-Besides modeling, the field of computational inverse design can also benefit from the use of FEM models. Building up the \class{Fem} class, the objective is to find a topolgical structure of a continuum system based on a desired deformations or compliance. One widely adopted method is the Solid Isotropic Material with Penalization (SIMP) approach, which is a commonly used material interpolation technique in  topology optimization \cite{Bendsoe2004}. In the SIMP method, each finite element $e \in \{1,2,...,N_e \}$ is assigned a continuous density variable $\rho_e \in (0,1]$, which serves as an indicator of the material distribution within the mesh. If $\rho_e = 1$, the element is considered solid, while if $\rho_e = 0$, the element is considered void. This assignment of density variables enables the modification of the strain energy density in \eqref{eq:C5:fem_hyper}:
+Besides modeling, the field of computational inverse design can also benefit from the use of FEM models. Building up the \class{Fem} class, the objective is to find a topological structure of a continuum system based on a desired deformations or compliance. One widely adopted method is the Solid Isotropic Material with Penalization (SIMP) approach, which is a commonly used material interpolation technique in topology optimization \cite{Bendsoe2003}. In the SIMP method, each finite element $e \in \{1,2,...,n_e \}$ is assigned a continuous density variable $\rho_e \in (0,1]$, which serves as an indicator of the material distribution within the mesh. If $\rho_e = 1$, the element is considered solid, while if $\rho_e = 0$, the element is considered void. This assignment of density variables enables the modification of the strain energy density in \eqref{eq:C5:fem_hyper}:
 %
 \begin{equation}
 \tilde{\Psi}_{e} = \left[ \varepsilon + (1-\varepsilon){\rho_e}^p \right] \Psi,
@@ -226,14 +228,14 @@ where $0 < \varepsilon \ll 1$ a lower bound on the densities, and $p > 1$ a pena
 %
 \begin{mini}[2]
     {\vec{\rho}}{\Phi = -\beta_1\, \LB^\top\!\x \;+\; \beta_2 \fB\elastic^\top \! \fB_{\textrm{u}} }{}{}
-    \addConstraint{\rB(\xB,\vec{\rho})=0,}{}{}
+    \addConstraint{\tilde{\rB}(\xB,\vec{\rho})=0,}{}{}
     \addConstraint{\vec{v}^\top \vec{\rho}\le v^\star,}{}{}
     \addConstraint{\vec{\rho}\in \mathcal{P},}{}{}
     \label{eq:C5:topo_optimization}
 \end{mini}
 %
-where $\LB$ a sparse unit-vector composed of nonzero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot, $\vB$ the element volumes, $v*$ the desired volume infill, $\mathcal{P} = \left\{ \vec{\rho} \in \R^{n_e} ~|~  0 < \rho_i \le 1\right\}$ admissable set for the design variables, and $\beta_1$ and $\beta_2$ are positive scalars that can be adjusted to vary the optimization problem, with $\beta_1 \ll \beta_2$ resulting in compliance minimization and $\beta_1 \gg \beta_2$ leading to a compliant mechanism. To solve the optimization problem in Equation \eqref{eq:C5:topo_optimization}, we utilize the Method of Mixed Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987,Svanberg2007}. Earlier work on this computational design approach was presented in \cite{Caasenbrood2020May}, and the reader is referred to this work for the analytic gradients required for the MMA solver.
+where $\LB$ a sparse unit-vector composed of nonzero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot, $\vB$ the element volumes, $v*$ the desired volume infill, $\mathcal{P} = \left\{ \vec{\rho} \in \R^{n_e} ~|~  0 < \rho_i \le 1\right\}$ admissible set for the design variables, and $\beta_1$ and $\beta_2$ are positive scalars that can be adjusted to vary the optimization problem, with $\beta_1 \ll \beta_2$ resulting in compliance minimization and $\beta_1 \gg \beta_2$ leading to a compliant mechanism. To solve the optimization problem in Equation \eqref{eq:C5:topo_optimization}, we utilize the Method of Mixed Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987Feb,Svanberg2007}. Earlier work on this computational design approach was presented in Chapter \ref{chap: design}, and the chapter is referred to this work for the analytic gradients required for the MMA solver.
 
-The optimization routine in the \textit{Sorotoki} framework is incorporated into the \code{Fem} class and can be invoked by utilizing the command \code{fem.optimize('type')}, where \code{'type'} represents the optimization problem at hand. For minimizing compliance, the cost function is inherent to the finite element method (FEM) problem. However, when dealing with compliant mechanisms, it is necessary to specify the selection vector $\LB$, which can be defined using the \code{fem.addOutput(id)} command. The value of \code{id} represents the nodal indices of interest, which can be identified using the \code{fem.Mesh.findNode} functionality.
+The optimization routine in the \textit{Sorotoki} framework is incorporated into the \code{Fem} class and can be invoked by utilizing the command \code{fem.optimize('type')}, where \code{'type'} represents the optimization problem at hand. For minimizing compliance, the cost function is self-adjoint \cite{Bendsoe2003}, hence objective function and constraints are linear operators. However, when dealing with compliant mechanisms, it is necessary to specify the selection vector $\LB$, which can be defined using the \code{fem.addOutput(id)} command. The value of \code{id} represents the nodal indices of interest, which can be identified using the \code{fem.Mesh.findNode} functionality.
 
 

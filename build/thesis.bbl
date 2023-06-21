@@ -160,7 +160,7 @@ Bhatia, J.~S., Jackson, H., Tian, Y., Xu, J., and Matusik, W. (2022).
 \bibitem[Bishop, 1975]{Bishop1975}
 Bishop, R.~L. (1975).
 \newblock {There is More than One Way to Frame a Curve}.
-\newblock {\em Am. Math. Mon.}, 82(3):246--251.
+\newblock {\em American Mathematical Monthly}, 82(3):246--251.
 
 \bibitem[Borja et~al., 2022]{Borja2022Apr}
 Borja, P., Dabiri, A., and Santina, C.~D. (2022).
@@ -219,8 +219,8 @@ Caasenbrood, B., Pogromsky, A., and Nijmeijer, H. (2020).
 \newblock {Dynamic modeling of hyper-elastic soft robots using spatial curves}.
 \newblock {\em IFAC Proceedings Volumes (IFAC-PapersOnline)}.
 
-\bibitem[Caasenbrood et~al., 2022]{Caasenbrood2022}
-Caasenbrood, B., Pogromsky, A., and Nijmeijer, H. (2022).
+\bibitem[Caasenbrood et~al., 2022a]{Caasenbrood2022}
+Caasenbrood, B., Pogromsky, A., and Nijmeijer, H. (2022a).
 \newblock {Control-Oriented Models for Hyperelastic Soft Robots Through
   Differential Geometry of Curves}.
 \newblock {\em Soft Robotics}, 0(0).
@@ -231,6 +231,13 @@ Caasenbrood, B., Pogromsky, A.~Y., and Nijmeijer, H. (2021).
   models.
 \newblock In {\em International Conference on Informatics in Control,
   Automation and Robotics - ICINCO}, pages 311--319.
+
+\bibitem[Caasenbrood et~al., 2022b]{Caasenbrood2022Apr}
+Caasenbrood, B.~J., van Beek, F.~E., Chu, H.~K., and Kuling, I.~A. (2022b).
+\newblock {A Desktop-sized Platform for Real-time Control Applications of
+  Pneumatic Soft Robots}.
+\newblock In {\em {2022 IEEE 5th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 217--223. IEEE.
 
 \bibitem[Cao et~al., 2021]{Cao2021Apr}
 Cao, G., Huo, B., Yang, L., Zhang, F., Liu, Y., and Bian, G. (2021).
@@ -256,6 +263,11 @@ Chang, H.-S., Halder, U., Shih, C.-H., Naughton, N., Gazzola, M., and Mehta,
 Chartrand, G. (1977).
 \newblock {\em {Introductory Graph Theory}}.
 \newblock Courier Corporation.
+
+\bibitem[Chen and Zhang, 2018]{Chen2018Dec}
+Chen, Z. and Zhang, H. (2018).
+\newblock {Learning Implicit Fields for Generative Shape Modeling}.
+\newblock {\em ArXiv e-prints}.
 
 \bibitem[Cheney et~al., 2013]{Cheney2013}
 Cheney, N., MacCurdy, R., Clune, J., and Lipson, H. (2013).
@@ -656,6 +668,12 @@ Hoggett, R. (2014b).
 \newblock [Online; accessed 04. Sep. 2022], url:
   \url{http://cyberneticzoo.com/bionics/1981-robot-arm-with-pneumatic-gripper-nikolai-teleshev-russian/}.
 
+\bibitem[Hoggett, 2023]{cyberneticzoo}
+Hoggett, R. (2023).
+\newblock {cyberneticzoo.com - a history of cybernetic animals and early
+  robots}.
+\newblock [Online; accessed 14. Jun. 2023].
+
 \bibitem[Holzapfel, 2002]{Holzapfel2002}
 Holzapfel, G.~A. (2002).
 \newblock {\em {Nonlinear Solid Mechanics: A Continuum Approach for Engineering
@@ -705,6 +723,12 @@ Ilievski, F., Mazzeo, A.~D., Shepherd, R.~F., Chen, X., and Whitesides, G.~M.
   (2011).
 \newblock {Soft Robotics for Chemists}.
 \newblock {\em Angewandte Chemie International Edition}, 50(8):1890--1895.
+
+\bibitem[Illingworth and Kittler, 1987]{Illingworth1987Sep}
+Illingworth, J. and Kittler, J. (1987).
+\newblock {The Adaptive Hough Transform}.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  PAMI-9(5):690--698.
 
 \bibitem[Immega, 1986]{Immega1986}
 Immega, G. (1986).
@@ -795,6 +819,11 @@ Keplinger, C., Li, T., Baumgartner, R., Suo, Z., and Bauer, S. (2011).
 \newblock {Harnessing snap-through instability in soft dielectrics to achieve
   giant voltage-triggered deformation}.
 \newblock {\em Soft Matter}, 8(2):285--288.
+
+\bibitem[Khalil, 2014]{Khalil2014Feb}
+Khalil, H. (2014).
+\newblock {\em {Nonlinear Control}}.
+\newblock Pearson, London, England, UK.
 
 \bibitem[Khatib, 1987]{Khatib1987}
 Khatib, O. (1987).
@@ -916,6 +945,12 @@ Li, G., Chen, X., Zhou, F., Liang, Y., Xiao, Y., Cao, X., Zhang, Z., Zhang, M.,
 \newblock {Self-powered soft robot in the Mariana Trench}.
 \newblock {\em Nature}, 591:66--71.
 
+\bibitem[Li et~al., 2023]{Li2023Jan}
+Li, H., Xun, L., and Zheng, G. (2023).
+\newblock {Piecewise Linear Strain Cosserat Model for Soft Slender
+  Manipulator}.
+\newblock {\em IEEE Transactions on Robotics}, pages 1--18.
+
 \bibitem[Li et~al., 2022b]{Li2022Feb}
 Li, S., Kruszewski, A., Guerra, T.-M., and Nguyen, A.-T. (2022b).
 \newblock {Equivalent-Input-Disturbance-Based Dynamic Tracking Control for Soft
@@ -998,6 +1033,13 @@ Marchese, A.~D. and Rus, D. (2016).
 \newblock {Design, kinematics, and control of a soft spatial fluidic elastomer
   manipulator}.
 \newblock {\em The International Journal of Robotics Research}, 35(7):840--869.
+
+\bibitem[Marechal et~al., 2021]{Marechal2021Jun}
+Marechal, L., Balland, P., Lindenroth, L., Petrou, F., Kontovounisios, C., and
+  Bello, F. (2021).
+\newblock {Toward a Common Framework and Database of Materials for Soft
+  Robotics}.
+\newblock {\em Soft Robotics}, 8(3):284--297.
 
 \bibitem[Markiewicz, 1973]{Markiewicz1973}
 Markiewicz, B.~R. (1973).
@@ -1140,6 +1182,11 @@ Naughton, N., Sun, J., Tekinalp, A., Parthasarathy, T., Chowdhary, G., and
   Control}.
 \newblock {\em IEEE Robotics and Automation Letters}, 6(2):3389--3396.
 
+\bibitem[Newmark, 1959]{Newmark1959Jul}
+Newmark, N.~M. (1959).
+\newblock {A Method of Computation for Structural Dynamics}.
+\newblock {\em Journal of the Engineering Mechanics Division}, 85(3):67--94.
+
 \bibitem[Ortega et~al., 1998]{Ortega1998}
 Ortega, R., Perez, J. A.~L., Nicklasson, P.~J., and Sira-Ramirez, H. (1998).
 \newblock {\em {Passivity-based Control of Euler-Lagrange Systems: Mechanical,
@@ -1164,6 +1211,12 @@ Overvelde, J. T.~B., Kloek, T., D{'}haen, J. J.~A., and Bertoldi, K. (2015).
   instabilities}.
 \newblock {\em Proceedings of the National Academy of Sciences},
   112(35):10863--10868.
+
+\bibitem[Overvelde et~al., 2012]{Overvelde2012May}
+Overvelde, J. T.~B., Shan, S., and Bertoldi, K. (2012).
+\newblock {Compaction Through Buckling in 2D Periodic, Soft and Porous
+  Structures: Effect of Pore Shape}.
+\newblock {\em Advanced Materials}, 24(17):2337--2342.
 
 \bibitem[Park et~al., 2012]{Park2012}
 Park, Y.-L., Chen, B.-R., and Wood, R.~J. (2012).
@@ -1214,6 +1267,16 @@ Proper, B., Caasenbrood, B., and Kuling, I. (2023).
 Pustina, P., Borja, P., Santina, C.~D., and De~Luca, A. (2022).
 \newblock {P-satI-D Shape Regulation of Soft Robots}.
 \newblock {\em IEEE Robotics and Automation Letters}, pages 1--8.
+
+\bibitem[Pustina et~al., 2023]{Pustina2023Jun}
+Pustina, P., Della~Santina, C., Boyer, F., De~Luca, A., and Renda, F. (2023).
+\newblock {On the Collocated Form with Input Decoupling of Lagrangian Systems}.
+
+\bibitem[Raeisinezhad et~al., 2021]{Raeisinezhad2021May}
+Raeisinezhad, M., Pagliocca, N., Koohbor, B., and Trkov, M. (2021).
+\newblock {Design Optimization of a Pneumatic Soft Robotic Actuator Using
+  Model-Based Optimization and Deep Reinforcement Learning}.
+\newblock {\em Frontiers in Robotics and AI}, 8:639102.
 
 \bibitem[Rafsanjani et~al., 2018]{Rafsanjani2018Feb}
 Rafsanjani, A., Zhang, Y., Liu, B., Rubinstein, S.~M., and Bertoldi, K. (2018).
@@ -1317,13 +1380,6 @@ Satheeshbabu, S., Uppalapati, N.~K., Chowdhary, G., and Krishnan, G. (2019).
   Reinforcement Learning}.
 \newblock In {\em {2019 International Conference on Robotics and Automation
   (ICRA)}}, pages 5133--5139. IEEE.
-
-\bibitem[Schaft, 2004]{Schaft2004}
-Schaft, A.~J. (2004).
-\newblock {Port-Hamiltonian Systems: Network Modeling and Control of Nonlinear
-  Physical Systems}.
-\newblock {\em Advanced Dynamics and Control of Structures and Machines},
-  444(1):127--167.
 
 \bibitem[Scharff et~al., 2019]{Scharff2019Jul}
 Scharff, R. B.~N., Doornbusch, R.~M., Doubrovski, E.~L., Wu, J., Geraedts, J.
@@ -1447,6 +1503,12 @@ Sonneville, V., Cardona, A., and Br{\"{u}}ls, O. (2014).
 \newblock {\em Computer Methods in Applied Mechanics and Engineering},
   268:451--474.
 
+\bibitem[Spong, 1994]{Spong1994}
+Spong, M. (1994).
+\newblock {Partial feedback linearization of underactuated mechanical systems}.
+\newblock {\em Proceedings of IEEE/RSJ International Conference on Intelligent
+  Robots and Systems (IROS'94)}.
+
 \bibitem[Spong, 1996]{Spong1996}
 Spong, M.~W. (1996).
 \newblock {Energy Based Control of a Class of Underactuated Mechanical
@@ -1457,6 +1519,12 @@ Spong, M.~W. (1996).
 Spong, M.~W., Hutchinson, S., and Vidyasagar, M. (2006).
 \newblock {\em Robot modeling and control}.
 \newblock John Wiley \& Sons, New York.
+
+\bibitem[Stella et~al., 2022]{Stella2022Nov}
+Stella, F., Guan, Q., Leng, J., Della~Santina, C., and Hughes, J. (2022).
+\newblock {Piecewise Affine Curvature model: a reduced-order model for soft
+  robot-environment interaction beyond PCC}.
+\newblock {\em ArXiv e-prints}.
 
 \bibitem[St{\ifmmode\ddot{o}\else\"{o}\fi}lzle and Santina, 2021]{Stolzle2021}
 St{\ifmmode\ddot{o}\else\"{o}\fi}lzle, M. and Santina, C.~D. (2021).
@@ -1493,6 +1561,11 @@ Svanberg, K. (1987).
   method for structural optimization}.
 \newblock {\em International Journal for Numerical Methods in Engineering},
   24(2):359--373.
+
+\bibitem[Svanberg, 2007]{Svanberg2007}
+Svanberg, K. (2007).
+\newblock Mma and gcmma-two methods for nonlinear optimization.
+\newblock {\em vol}, 1:1--15.
 
 \bibitem[Takagi et~al., 1983]{Takagi1983}
 Takagi, T., Sakaguchi, Y., and Corp, B. (1983).
@@ -1646,6 +1719,13 @@ Trumi{\ifmmode\acute{c}\else\'{c}\fi}, M., Santina, C.~D.,
 \newblock {Adaptive Control of Soft Robots Based on an Enhanced 3D Augmented
   Rigid Robot Matching}.
 \newblock {\em IEEE Control Systems Letters}, 5(6):1934--1939.
+
+\bibitem[van~der Schaft, 2004]{Schaft2004}
+van~der Schaft, A.~J. (2004).
+\newblock {Port-Hamiltonian Systems: Network Modeling and Control of Nonlinear
+  Physical Systems}.
+\newblock {\em Advanced Dynamics and Control of Structures and Machines},
+  444(1):127--167.
 
 \bibitem[van Diepen and Shea, 2019]{Diepen2019}
 van Diepen, M. and Shea, K. (2019).
