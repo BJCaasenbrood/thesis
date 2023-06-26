@@ -37,16 +37,16 @@ Soft robotics is a field that relies heavily on the use of elastomer materials. 
 \Uf_{\textrm{int}}(\ten{E}):= \int_{\mathcal{B}_0} \Psi(\ten{E})\; dV \ge 0
 \end{equation}
 %
-In literature, $\Psi$ is often chosen as polynomial regression model which fits empirical data of materials, leaving the choice on $\Psi$ generally free. Nevertheless, there exist popular options that are commonly used for rubber-like engineering materials. Popular constitutive models for hyperelastic behavior include Neo-Hookean \cite{Smith2018,Bern2019,Bern2021Apr}, Mooney \cite{Kim2018}, Ogden \cite{Xavier2022Jun}, or Yeoh \cite{Renaud2011}. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models is commonly expressed in terms of the strain invariants (${J}_1$, ${J}_2$, ${J}_3$).
+In literature, $\Psi$ is often chosen as polynomial regression model which fits empirical data of materials, leaving the choice on $\Psi$ generally free. Nevertheless, there exist popular options that are commonly used for rubber-like engineering materials. Popular constitutive models for hyperelastic behavior include Neo-Hookean \cite{Smith2018,Bern2019,Bern2021Apr}, Mooney \cite{Kim2018}, Ogden \cite{Xavier2022Jun}, or Yeoh \cite{Renaud2011}. In contrast to linear elasticity strain energy, the strain energy for hyperelastic constitutive models is commonly expressed in terms of the strain invariants (${I}_1$, ${I}_2$, ${I}_3$).
 
-In this work, the Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. The Yeoh model is a popular constitutive model due to its unique dependency on the first invariant $J_1 = \textrm{tr}(\ten{C})$ with $\ten{C} = \mat{F}^\top \mat{F}$ the right Cauchy strain tensor. The strain energy function of the Yeoh model \cite{Kim2018} is given by.
+In this work, a compressible Yeoh constitutive model for hyperelasticity is used to describe the mechanics of soft materials. Let $I_1 = \textrm{tr}(\ten{C})$ be the first strain invariant with $\ten{C} = \mat{F}^\top \mat{F}$ the right Cauchy strain tensor. Then, following the work of Renaud et al. \cite{Renaud2011} and Kim  et al. \cite{Kim2018}, the strain energy function of the compressible Yeoh model is given by:
 %
 \begin{equation}
-{\Psi} = \sum_{i = 1}^{3} c_i (J_1 - 3)^i, 
+{\Psi} = \sum_{i = 1}^{3} c_i (J_1 - 3)^i + \sum_{j = 1}^{3} \frac{1}{d_j} (J - 1)^{2j},
 \label{eq:C3:psi_model_yeoh}
 \end{equation}
 %
-where $c_1 > 0$ and $c_2$, $c_3$ are material constants (\si{\newton \per \square \meter  }). The Yeoh model has the potential to considerably decrease the requirement for extensive material testing. As the model depends solely on $J_1$, the material parameters can be obtained solely from a uniaxial tension tests \cite{Renaud2011}. 
+where $J_1 = J^{-\tfrac{1}{3}} I_1$ is a modified first strain variant, and $c_1 > 0$ and $c_2$, $c_3$ are the material constants related to stiffness (\si{\newton \per \square \meter}), and the constants $d_{1,2,3} > 0$ related to material compressibility. %The Yeoh model has the potential to considerably decrease the requirement for extensive material testing. As the model depends solely on $J_1$, the material parameters can be obtained solely from a uniaxial tension tests \cite{Renaud2011}. 
 %To relate strains to stress given the model \eqref{eq:C3:psi_model_yeoh}, we require the Piolla stress measure. The second Piola- stress of a constitutive material can be calculated by differentiating the strain energy function with respect to the Lagrangian strain tensor \cite{Renaud2011,Kim2018}:
 
 % \begin{equation}
@@ -68,7 +68,7 @@ where $\p \mathcal{B}_0$ is the boundary of the undeformed continuum domain $\ma
 %
 \begin{align}
 \delta \Uf (\dB, \delta \dB) & =  \frac{d}{d\varepsilon} \Big[ \,\Uf (\dB + \varepsilon \delta \dB) \, \Big]_{\varepsilon = 0} \notag \\[0.5em]
-& =  \int_{\mathcal{B}_0} \frac{\p \Psi(\ten{E})}{\p \ten{E}} : \delta \ten{E} \; dV - \int_{\mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{b}} \; dV - \int_{\p \mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{t}}  \; dS, \notag \\[0.5em]
+& =  \int_{\mathcal{B}_0} \frac{\p \Psi}{\p \ten{E}}(\ten{E}) : \delta \ten{E} \; dV - \int_{\mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{b}} \; dV - \int_{\p \mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{t}}  \; dS, \notag \\[0.5em]
 & =  \int_{\mathcal{B}_0}\ten{S}(\ten{E}) : \delta \ten{E} \; dV - \delta \Uf_{\textrm{ext}}(\delta \dB) = 0
 \end{align}
 %	
@@ -117,7 +117,7 @@ The current formulation of the continuum problem is versatile in its ability to 
 \subsection[Solving the energy balance via polygonal elements]{Solving the energy balance via approximations of polygonal finite elements}
 For two-dimensional finite element problems, the three-node triangular and bilinear four-node quadrilateral elements are widely used, while the use of higher-order polygonal elements is still relatively scarce. Polygonal elements have some attractive features such as facial connectivity, regularity, and adaptability that suit complex material domains. This makes polygonal elements ideal for topology optimization since numerical issues such as checkerboard patterns and single-node connections are inherently alleviated \cite{Talischi2012,Gain2013Dec}. 
 
-An efficient method of generating polygonal meshes is constructing a Voronoi tessellation from a set of seeding points, where each point can be associated with its respective Voronoi cell. For two-dimensional tessellations, consider a set of $n$ number of unique seeding points $\mathcal{P} = \{ \boldsymbol{p}_i \}^n_{i = 1}$ that are uniformly distributed inside $\mathcal{B}_0 \subset \R^2$. Then, the corresponding (restricted) Voronoi tessellation is defined as the set of Voronoi cells that intersect $\mathcal{B}_0$, that is, 
+An efficient method of generating polygonal meshes is constructing a Voronoi tessellation from a set of seeding points, where each point can be associated with its respective Voronoi cell. For two-dimensional tessellations, consider a set of $n$ number of unique seeding points $\mathcal{P} = \{ \pB_i \}^n_{i = 1}$ that are uniformly distributed inside $\mathcal{B}_0 \subset \R^2$. Then, the corresponding (restricted) Voronoi tessellation is defined as the set of Voronoi cells that intersect $\mathcal{B}_0$, that is, 
 %
 \begin{equation}
 \mathcal{T}(\mathcal{P}) = \Big\{\, \mathcal{V}(\boldsymbol{p},\mathcal{P}) \,\cap \mathcal{B}_0 \;:\; \forall \boldsymbol{p} \in \mathcal{P} \,\Big\},
@@ -139,20 +139,25 @@ where $\Delta(\boldsymbol{x},\boldsymbol{y}) = ||\boldsymbol{x} -  \boldsymbol{y
 \vspace{-3mm}
 \end{figure}
 %
-The Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ in equation \eqref{eq:vorcell} are inherently convex polygons due to the Euclidean distance function's convexity. The convex nature of these shapes implies that all lines connecting any two points within the shapes lie entirely within the shape. In other words, the elements lack indentations or concave portions. Thus, the interior of the elements can be described using a finite set of nodes called the \textit{"nodal positions"} or \textit{"nodal coordinates"}. In the displacement-based implementation scheme of the FEM method, each node coordinate is assigned a displacement vector $\xB^e_i = (x^e_{i,1}, x^e_{i,2})^\top$, where the subscript $e$ identifies the element and $i \in {1,..,n_p}$ represents the number of nodes spanning the element. Then, the displacement field and its gradient can be interpolated as follows:
+The Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ in equation \eqref{eq:vorcell} are inherently convex polygons due to the Euclidean distance function's convexity. The convex nature of these shapes implies that all lines connecting any two points within the shapes lie entirely within the shape. In other words, the elements lack indentations or concave portions. Thus, the interior of the elements can be described using a finite set of nodes called the \textit{"nodal coordinates"} given by $\XB^e = \textrm{convhull}\{\mathcal{V}_e\}$. 
+
+Building on the finite element approach, a state vector $\xB^e_i = (x^e_{i,1}, x^e_{i,2})^\top$ is attributed to each coordinate. The index $e$ serves to distinguish individual elements, while $i \in {1,..,k}$ with $k$ potentially differing per element. Subsequently, the displacement field can be approximated as follows
 %
 \begin{align}
-\dB(\XB_{\!e},T) &\approx \sum^{k(e)}_{i=1} N_i^{k}(\XB_{\!e}) \xB^{e}_i  = \NB^{k}(\XB_{\!e}) \xB^{e},% \\[0.5em]
+\dB(\XB,T) &\approx \sum^{k(e)}_{i=1} N_i^{k}\big(\sigmaB(\XB)\big) \xB^{e}_i  =: \NB^{e} \xB^{e} \quad \forall \XB \in \mathcal{V}_e,% \\[0.5em]
 % \nabla_0 \dB(\XB_e,T) & \simeq \sum^{n_p}_{i=1} \tfrac{\p N}{\p \XB}(\XB_e) \xB^{e}_i = \Delta \NB^{e} \xB^{e}
 \end{align}
 %
-where $\XB_{\!e} \in \mathcal{V}_e$ represents the spatial location within the $e$-th polygonal element, and $\NB^{e}$ represents the interpolation or shape function matrix related to that element. These shape functions are often known analytical expressions that are unique to the topology of each element (\ie, the number of nodes per polygon). The reader is referred to Talischi et al. \cite{Talischi2012,Talischi2012Mar} for the expressions of $\NB^{e}$ using polygonal elements, which explore the Wachspress shape function \cite{Wachspress1975}.
+where $\sigmaB: \mathcal{V}_e \to P_{k}$ represents the isoparametric mapping from global coordinates to natural coordinates of a regular polygon $P_{k}$ with polygonal degree $k(e) \ge 3$, $N^k_i$ a spatial interpolation function, and $\NB^{e}$ the shape interpolation matrix. In this study, we investigate the widely used Wachspress shape functions \cite{Sukumar2004Nov,Talischi2012,Talischi2012Mar,Floater2014Jun} for isoparametric interpolation of polygons. Figure \ref{fig:C3:wachpressExample} illustrates the Wachspress shape functions related to the first nodal coordinate $N^k_1$ for different polygons of varying degree $k$. The derivation of $N^k_i$ is available in Appendix \ref{app:C3:wachpress}, which follows the approach outlined in \cite{Talischi2012Mar,Floater2014Jun}.
+
+%These  functions are often known analytical expressions that are unique to the topology of each element (\ie, the number of nodes per polygon). The reader is referred to Talischi et al. \cite{Talischi2012,Talischi2012Mar} for the expressions of $\NB^{e}$ using polygonal elements, which explore the Wachspress shape function \cite{Wachspress1975}.
 %
 \begin{figure}
 \centering
 \vspace{-2mm}
 \includegraphics[width=\textwidth]{./pdf/thesis-figure-3-wachpress.pdf}
-\caption{Wachspress shape functions related to the first nodal coordinate for an increasing polygonal degree $n_p$. The colormap depicts the intensity of the shape function with \protect\colormapcaption{0}{.75cm}$\!\!\in [0,1]$.}
+\caption{Wachspress shape functions related to the first nodal coordinate for an increasing polygonal degree $k$. The colormap depicts the intensity of the shape function $N_1^k$ with \protect\colormapcaption{0}{.75cm}$\!\!\in [0,1]$.}
+\label{fig:C3:wachpressExample}
 \vspace{-3mm}
 \end{figure}
 %
@@ -165,7 +170,7 @@ Finally, by substitution of the spatial interpolations of the displacement $\dB 
 & = {\delta \x}^\top \left[ \fB_{\textrm{int}}(\xB) - \fB_{\textrm{ext}} \right],
 \end{align}
 %
-where $\x$ and $\delta \x$ are the global nodal displacement and the global nodal virtual displacement vectors, and $\BB_e$ and $\underline{\ten{S}}_e$ the elemental strain-displacement matrix and Piolla stress tensor, respectively. The derivation of these elemental matrices is found Appendix \ref{app:C3:straindisplacement} which follows the work of Kim et al. \cite{Kim2018}. Since the entries of the displacement variation ${\delta \x}$ are zero at nodes where displacement is prescribed (\ie, fixed DOFs), we may consider an alternative form, the residual force vector, in which the virtual displacements are omitted by only regarding the free DOFs:
+where $\x$ and $\delta \x$ are the global nodal displacement and the global nodal virtual displacement vectors, and $\BB_e$ and $\underline{\ten{S}}_e$ the elemental strain-displacement matrix and Piolla stress tensor, respectively. The derivation of these elemental matrices is found Appendix \ref{app:C3:straindisplacement} which follows the work of Kim et al. \cite{Kim2018}. Since the entries of the displacement variation ${\delta \x}$ are zero at nodes where displacement is prescribed (\ie, fixed DoFs), we may consider an alternative form, the residual force vector, in which the virtual displacements are omitted by only regarding the free DoFs:
 %
 \begin{equation}
 \RB(\x) = \fB_{\textrm{int}}(\x) - \fB_{\textrm{ext}},
@@ -180,7 +185,7 @@ The static equilibrium of the structure can be determined by setting $\RB(\x)$, 
 \x^{(k+1)} & = \x^{(k)} + \Delta \x^{(k)}, \notag
 \end{align}
 %
-where the subscript $(k)$ denotes the iteration steps, while $\x^{(k)}$, $\RB^{(k)}$, and $\KB_T^{(k)}:=\tfrac{\p \RB}{\p \x}\big|_{\x = \x^{(k)}}$ represent the updated displacement vector, the residual force vector, and the tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, the reader is referred to Holzapfel et al. \cite{Holzapfel2002} or Renaud et al. \cite{Renaud2011}.
+where the subscript $(k)$ denotes the iteration steps, while $\x^{(k)}$, $\RB^{(k)}$, and $\KB_T^{(k)}:=\tfrac{\p \RB}{\p \x}\big|_{\x = \x^{(k)}}$ represent the updated displacement vector, the residual force vector, and the tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, the reader is referred to Renaud et al. \cite{Renaud2011}, whose approach is outlined in Appendix \ref{app:C3:yeohmodel}.
 
 % \begin{example}[Hyper-elastic uniaxial tension]
 % %Before continuing

@@ -112,13 +112,11 @@ Given the radial layout of the pneumatic bellows of the soft robot (see Figure \
 where $m$ is the number of bellows, and $\phi(\q) = \text{atan2}(\kappa_y,\kappa_x)$ the direction angle or heading. This stiffness correction term ensures the nonlinear bending stiffness becomes larger between bellows -- as it causes simultaneous deformation of multiple bellows. Please note that $\alpha_\phi(\q) \ge 1$ for all $\q \in \mathcal{Q}$.
 \end{asm}
 
-To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha_2 $, $\alpha_4 > \alpha_5$ and $\alpha_{1,4} > 0$.  To find the hyper-elastic parameter vector $\alphaB$, we use a weighted least-squares optimization. Recalling the previous profiles for elongation force and bending moment obtained from the FEM data, see Figure ??, we integrate the expressions \eqref{eq:C2:stiffness_tanh_eps} and \eqref{eq:C2:stiffness_tanh_beta} to find an analytic approximation, i.e., $F(\varepsilon; \alphaB):= \int_0^\varepsilon k_e(\xi) \xi \; d\xi$ and $M(\beta; \alphaB):= \int_0^\beta k_b(\xi) \xi \; d\xi$, respectively. The weighted regression is biased towards positive strains, to better represent the deformation characteristics under positive pressurization. Again, we use \texttt{fmincon.m} optimizer in \textit{Matlab}. The hyper-elastic material parameters $\alphaB$ that minimize the residual between the FEM data and the analytic model are given in Table \ref{tab:C2:elastic_parameters}, and the comparison between the FEM force profiles and our solution is given in Figure \ref{fig:C2:fem_stiffness_recover_compare} Notice that self-collision is not capture by the stiffness model. Theoretically, the self-contact interactions (as seen in Figure \ref{fig:C2:fem_stiffness_recover_compare}) can also be parameterized using a different set of polynomials, which are non-zero for the compression regions and zero otherwise. In other words, the regression can be enriched with polynomials that are asymmetric with respect to the origin. We also provided Figure \ref{fig:C2:stiffness_model} to show the change in stiffness when the soft robot deforms, where we can clearly see a discrete radial symmetry arise due to the radial composition of the three pneumatic bellow network of the sot robot. 
+To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha_2 $, $\alpha_4 > \alpha_5$ and $\alpha_{1,4} > 0$.  To find the hyper-elastic parameter vector $\alphaB$, we use a weighted least-squares optimization. Recalling the previous profiles for elongation force and bending moment obtained from the FEM data, see Figure ??, we integrate the expressions \eqref{eq:C2:stiffness_tanh_eps} and \eqref{eq:C2:stiffness_tanh_beta} to find an analytic approximation, i.e., $F(\varepsilon; \alphaB):= \int_0^\varepsilon k_e(\xi) \xi \; d\xi$ and $M(\beta; \alphaB):= \int_0^\beta k_b(\xi) \xi \; d\xi$, respectively. The weighted regression is biased towards positive strains, to better represent the deformation characteristics under positive pressurization. Again, we use \texttt{fmincon.m} optimizer in \textit{Matlab}. The hyper-elastic material parameters $\alphaB$ that minimize the residual between the FEM data and the analytic model are given in Table \ref{tab:C2:elastic_parameters}, and the comparison between the FEM force profiles and our solution is given in Figure \ref{fig:C2:fem_stiffness_recover_compare} Notice that self-collision is not capture by the stiffness model. Theoretically, the self-contact interactions (as seen in Figure \ref{fig:C2:fem_stiffness_recover_compare}) can also be parameterized using a different set of polynomials, which are non-zero for the compression regions and zero otherwise. In other words, the regression can be enriched with polynomials that are asymmetric with respect to the origin. We also provided Figure \ref{fig:C2:stiffness_model} to show the change in stiffness when the soft robot deforms, where we can clearly see a discrete radial symmetry arise due to the radial composition of the three bellow network. 
 
 
 
 % Using a weighted least-squarest optimization, the nonlinear stiffness parameter vector $\vec{\alpha}$ can be identified. The estimated hyper-elastic material parameters are shown in Table \ref{tab:C2:elastic_parameters}. Furthermore, the weighted regression is biased towards positive strains, to better represent the deformation characteristics under positive pressurization. Theoretically, the self-contact interactions (as seen in Figure \ref{fig:C2:fem_analysis}) can also be parameterized using a different set of (convex) non-zero polynomials, similar to the functions \eqref{eq:C2:stiffness_tanh_eps} and \eqref{eq:C2:stiffness_tanh_beta}.
-
-\afterpage{
 
 \begin{figure}[!t]
   \vspace{-1mm}
@@ -146,7 +144,8 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 \end{figure}
 
 \begin{table}[!t]
-  \caption{Estimated hyper-elastic and visco-elastic material parameters for the study case soft robot \label{tab:C2:elastic_parameters}}
+  %\rowcolors{0}{}{black!5}
+  \caption{Estimated hyper-elastic and viscoelastic material parameters for the study case soft robot \label{tab:C2:elastic_parameters}}
   \centering
   \begin{tabular}{ccccccc}
   \hline
@@ -159,10 +158,6 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
   \end{tabular}
   \vspace{-3mm}
   \end{table}
-  %
-%w
-  \clearpage
-}
 
 \subsection{Visco-elastic creep}
 \noindent In material mechanics, the tendency of mechanical solids to move slowly under stress is called creep. Unlike ideal elastic materials, when polymeric materials are subjected to abrupt change in stress, the constitutive network of polymer chains reconfigure until the stress is evenly distributed. Therefore, we introduce a new state vector $\vec{\lambda}(t)\in \mathbb{R}^n$, which contains the creep state variables. According to Meyer et al. (2009, \cite{Meyer2009}), the Kelvin-Voigt model for creep is given by a first-order ordinary differential equation of the form

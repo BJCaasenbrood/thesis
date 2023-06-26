@@ -50,10 +50,10 @@ From a mathematical perspective, let us consider Algorithm \ref{alg:floodfill} w
 \fB_{\textrm{ext}}(\boldsymbol{x},\boldsymbol{\rho}) = \sum_{e \in \mathcal{E}} \tilde{p}_e \boldsymbol{W}_{\!e} \, \boldsymbol{t}_{e}, \label{eq:pressureforce}
 \end{equation}
 %
-where $\tilde{p}_e$ is a dimensionless parameter that represents the magnitude and direction of artificial pneumatic loading. $\boldsymbol{W}_{\!e}$ is a diagonal weighting matrix of densities at nodal level, and $\boldsymbol{t}_e = \int_{\mathcal{V}_e} \BB_e^\top \DB_e \nB_v \; dV$ is the elemental force vector. The volumetric strain is represented by $\boldsymbol{n}_{v} = [1,1,0]^\top$, and $\boldsymbol{D}_e := \p \ten{S}/\p \ten{E}$ is the fourth-order constitutive elasticity tensor in matrix notation \cite{Renaud2011}. It is important to note that the global force vector in \eqref{eq:pressureforce} represents an artificial pneumatic load. This method assumes that pressure loads can be emulated by anisotropic volumetric change of the polygonal elements. By varying the dimensionless parameter $\tilde{p}_e$, the magnitude and direction of this artificial pneumatic load can be controlled.
+where $\tilde{p}_e$ is a dimensionless parameter that represents the magnitude and direction of artificial pneumatic loading. $\boldsymbol{W}_{\!e}$ is a diagonal weighting matrix of densities at nodal level, and $\boldsymbol{t}_e = \int_{\mathcal{V}_e} \BB_e^\top \mathbb{D}_e \nB_v \; dV$ is the elemental force vector. The volumetric strain is represented by $\boldsymbol{n}_{v} = [1,1,0]^\top$, and $\mathbb{D}_e := \p \ten{S}/\p \ten{E}$ is the fourth-order constitutive elasticity tensor in matrix notation \cite{Renaud2011}. It is important to note that the global force vector in \eqref{eq:pressureforce} represents an artificial pneumatic load. This method assumes that pressure loads can be emulated by anisotropic volumetric change of the polygonal elements. By varying the dimensionless parameter $\tilde{p}_e$, the magnitude and direction of this artificial pneumatic load can be controlled.
 
 \subsection{Optimization problem}
-Given the concept of morphology in soft robotics, which is similar to compliant mechanisms, the primary goal is to maximize the output displacement $\boldsymbol{x}_{out}$ on a virtual workpiece modeled by an artificial stiffness $k_{out} > 0$ \cite{Bendsoe2003,Gain2013Dec}. The objective function or the desired output displacement can be expressed as $\Phi = \boldsymbol{L}^\top\boldsymbol{x}(\boldsymbol{\rho})$, where $\boldsymbol{L} \in \R^{2n}$ is a sparse unit-vector composed of non-zero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot. Given this description of directional output displacement, the topology optimization problem for soft robots can be formulated as:
+Given the concept of morphology in soft robotics, which is similar to compliant mechanisms, the primary goal is to maximize the output displacement $\boldsymbol{x}_{out}$ on a virtual workpiece modeled by an artificial stiffness $k_{out} > 0$ \cite{Bendsoe2003,Gain2013Dec}. The objective function or the desired output displacement can be expressed as $\Phi = \boldsymbol{L}^\top\boldsymbol{x}(\boldsymbol{\rho})$, where $\boldsymbol{L} \in \R^{2n}$ is a sparse vector composed of non-zero entries for the degrees-of-freedom corresponding to the desired morphology of the soft robot. Given this description of directional output displacement, the topology optimization problem for soft robots can be formulated as:
 \begin{equation}
 \begin{aligned}
 \max_{\boldsymbol{\rho}} \quad &  \Phi = \boldsymbol{L}^\top \boldsymbol{x}(\boldsymbol{\rho}), \\
@@ -66,7 +66,9 @@ Given the concept of morphology in soft robotics, which is similar to compliant 
 where $\boldsymbol{R} \in \R^{2n}$ the global residual force vector in its equilibrium state, $\boldsymbol{v} \in \R^{m}$ a constant vector of relative elemental volumes, $ 0 < V^\star < 1$ the desired material infill, and $\mathcal{P} = \{\boldsymbol{\rho} \in \R^n \; | \; 0  \le \rho_e \le 1 \; \forall e \in [1,n] \}$ a set of feasible material densities that ensure numerical robustness.
 
 \subsection{Solver and sensitivity analysis}
-In this section, we discuss the use of a gradient-based optimization solver for synthesizing the soft robot. Here, we use the Method of Moving Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987Feb}. The MMA is similar to other nonlinear programming approaches, such as Optimality Criteria (OC) and Sequential Quadratic Programming (SQP), in that it finds an optimal solution to a nonlinear non-convex optimization problem with inequality constraints. The MMA solves a sequence of sub-problems, i.e., convex approximations of the true problem, which are constructed from gradient-based information of the objective function $\Phi$ and their constraints $c$ and $g$. The sensitivity of the inequality constraint in \eqref{eq:opt} is $\frac{\partial g}{\partial \boldsymbol{\rho}} = \boldsymbol{v}$ since we assume that the elemental volume $\boldsymbol{v}$ is constant. The sensitivity of the objective function is less trivial due to its dependency on the nodal displacements $\boldsymbol{x}(\boldsymbol{\rho})$. Since it is computationally expensive to obtain the displacements $\boldsymbol{x}$ through the Newton-Raphson method, it becomes beneficial to avoid the computation of their sensitivities. Thus, the sensitivities are computed through the adjoint method in which an augmented objective function is used.
+In this section, we discuss the use of a gradient-based optimization solver for synthesizing the soft robot. Here, we use the Method of Moving Asymptotes (MMA) proposed by Svanberg \cite{Svanberg1987Feb}. The MMA is similar to other nonlinear programming approaches, such as Optimality Criteria (OC) and Sequential Quadratic Programming (SQP), in that it finds an optimal solution to a nonlinear non-convex optimization problem with inequality constraints. The MMA solves a sequence of sub-problems, \ie, convex approximations of the true problem, which are constructed from gradient-based information of the objective function $\Phi$ and their constraints $c$ and $g$. Svanberg \cite{Svanberg1987Feb} has provided open numerical implementations for his MMA algorithm represented as MATLAB function called \texttt{mmasub}, which is subroutine of the MMA algorithm that updates the design parameters $\vec{\rho}^{(k)} \to \vec{\rho}^{(k+1)}$ given the design sensitivities of the objective $\Phi$ and the equality and inequality constraints $c$ and $g$, respectively. By recursively calling \texttt{mmasub}, the optimization problem in \eqref{eq:opt} can be solved numerically.
+
+The sensitivity of the inequality constraint in \eqref{eq:opt} is $\frac{\partial g}{\partial \boldsymbol{\rho}} = \boldsymbol{v}$ since we assume that the elemental volume $\boldsymbol{v}$ is constant. The sensitivity of the objective function is less trivial due to its dependency on the nodal displacements $\boldsymbol{x}(\boldsymbol{\rho})$. Since it is computationally expensive to obtain the displacements $\boldsymbol{x}$ through the Newton-Raphson method, it becomes beneficial to avoid the computation of their sensitivities. Thus, the sensitivities are computed through the adjoint method in which the objective function is augmented to include the equality constraint $c$. This leads to
 %
 \begin{equation}
 {\Phi}(\xB,\vec{\rho}) = \boldsymbol{L}^\top \boldsymbol{x}(\vec{\rho}) - \boldsymbol{\lambda}^\top \boldsymbol{R}(\xB,\vec{\rho}),
@@ -87,16 +89,10 @@ Differentiations of the objective function with respect to the elemental densiti
 \frac{\p {\Phi} }{\p \rho_e} \overset{\eqref{eq:residual}}{=} -\boldsymbol{L}^\top(\boldsymbol{K}_T)^{-1} \left( \sum_{e=1}^{n} \int_{\mathcal{V}_e} \boldsymbol{B}_e^\top \frac{\p \underline{\ST}_e}{\p {\rho_e}} \; dV - \frac{ \p \fB_{\textrm{ext}}}{\p {\rho_e}}  \right). \label{eq:sens_f}
 \end{align} 
 %
-\afterpage{
-  \begin{figure}[!t]
-    \centering
-    \vspace{4mm}
-    \input{./pdf/thesis-figure-3-1.pdf_tex}
-    \caption{Example of the filter and interpolation schemes to reduce mesh artifacts. (a) Ground truth. (b) The raw element-wise density field based on the ground truth. Notice the jitter around the boundaries of the material infill, leading to high sharp gradients in $\tfrac{\p \phi}{\p \rho_e}$. (c) Filtered densities using \eqref{eq:C3:filters}. (d) Isosurface reconstruction of the filtered density field using Radial Basis Function (RBF).}
-    \label{fig:C3:topo_filtering}
-  \end{figure}
 
-\begin{algorithm}[!t]
+\noindent However, it should be noted that deriving the loading sensitivity $\p \boldsymbol{f}_{\textrm{ext}}/\p \rho_e$ is not straightforward since the global force vector is constructed from nested functions of logic operations such as flood-fill. Therefore, we derive the loading sensitivity numerically using the forward difference method. To reduce computation time, we propose computing the sensitivities of only the elements at the boundary of the pressure region since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. We provide pseudo-code for the computational design algorithm for synthesizing pressure-driven soft robots in Algorithm \ref{alg:topology_opt}. 
+
+\begin{algorithm}[!h]
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
   \Input{Domain $\mathcal{B}_0$, material $\Psi$, initial $\boldsymbol{\rho}^{(0)}$, infill $V^*$, virus $\mathcal{V}$, output $\boldsymbol{L}$, artificial pressure $\tilde{p}_e$ }
@@ -113,9 +109,7 @@ Differentiations of the objective function with respect to the elemental densiti
   }
   \caption{Computational design algorithm for pneumatic soft robots.\label{alg:topology_opt}}
 \end{algorithm}
-}
-
-\noindent However, it should be noted that deriving the loading sensitivity $\p \boldsymbol{f}_{\textrm{ext}}/\p \rho_e$ is not straightforward since the global force vector is constructed from nested functions of logic operations such as flood-fill. Therefore, we derive the loading sensitivity numerically using the forward difference method. To reduce computation time, we propose computing the sensitivities of only the elements at the boundary of the pressure region since the gradient of the pneumatic region is largest near the boundary of the infected set $\mathcal{E}$. We provide pseudo-code for the computational design algorithm for synthesizing pressure-driven soft robots in Algorithm \ref{alg:topology_opt}. 
+\clearpage
 
 \subsection{Gradient filters and interpolation}
 A well-known filtering technique is used to solve this issue, which has been proposed by Sigmund et al. \cite{Bendsoe2003}. The design sensitivities are modified based on a weighted average filtering scheme \cite{Gain2013Dec,Bendsoe2003}:
@@ -125,5 +119,20 @@ A well-known filtering technique is used to solve this issue, which has been pro
 \label{eq:C3:filters}
 \end{equation}
 %
-where $H_{e,i} := \textrm{max} \left\{0, R_{\textrm{min}} - \Delta(\pB_e,\pB_i)\right\}$ is the filter weight, $R_{\textrm{min}}$ is the filter radius, and $\Delta(\pB_e,\pB_i)$ is the Euclidean distance between the centers of the elements $i$ and $e$. The radial filtering is solely applied to the design sensitivities, and therefore, the polygonal mesh discretization heavily influences the final topology design. To enhance the optimization output quality, we introduce Radial Basis Functions (RBF) interpolation weighted with their filter densities. Subsequently, an isosurface extraction is performed to achieve a clear segregation between void and filled regions. This process is illustrated in Figure \ref{fig:C3:topo_filtering}.
+where $H_{e,i} := \textrm{max} \left\{0, R_{\textrm{min}} - \Delta(\pB_e,\pB_i)\right\}$ is the filter weight, $R_{\textrm{min}}$ is the filter radius, and $\Delta(\pB_e,\pB_i)$ is the Euclidean distance between the centers of the elements $i$ and $e$. The radial filtering is solely applied to the design sensitivities, and therefore, the polygonal mesh discretization heavily influences the final topology design. In order to improve the quality of optimization output, we implement Radial Basis Functions (RBF) interpolation that is weighted with filter densities. This is followed by an isosurface extraction process that aids in achieving a distinct separation between void and filled regions. Mathematically, the filter topology of the optimization routine is given by 
+%
+\begin{equation}
+\mathcal{B}^\star = \Big\{ \XB \in \mathcal{B}_0 ~
+|~ \sum_{i=1}^{n_e} \psi_i(\XB - \pB_i) \ge \epsilon_\textrm{iso}\Big\}
+\end{equation}
+%
+where we explore a radial interpolation function $\psi_i(\rB) = \exp\left( - \alpha \rho_i \lVert\rB\rVert^2 \right)$ with $\alpha > 0$ a tuning parameter, and $\epsilon_{\textrm{iso}}$ is the isosurface value. The parameter $\alpha$ enables users to regulate the thickness (or radial dilation) of the optimized soft topology. For our specific investigation, we opt for $\alpha = R_\textrm{min}$ to ensure it aligns with the filter radius in equation \eqref{eq:C3:filters}. A visual representation of this process can be seen in Figure \ref{fig:C3:topo_filtering}.
+
+\begin{figure}[!t]
+  \centering
+  \vspace{4mm}
+  \input{./pdf/thesis-figure-3-1.pdf_tex}
+  \caption{An illustration of filter and interpolation schemes developed to minimize mesh artifacts. (a) The ground truth. (b) the raw element-wise density field based on the ground truth. Note the jitter around the boundaries of the material infill, which leads to high sharp gradients in $\tfrac{\partial \phi}{\partial \rho_e}$. (c) To address this issue, filtered densities are obtained using \eqref{eq:C3:filters}. (d) The isosurface reconstruction $\mathcal{B}^\star$ of the filtered density field of the optimizer.}
+  \label{fig:C3:topo_filtering}
+\end{figure}
 

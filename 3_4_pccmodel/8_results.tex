@@ -234,10 +234,15 @@ The benchmark table above gives some useful insight into which settings benefit 
 \caption{Benchmark results of the six-link soft robot manipulator for various temporal and spatial discretizations ($T =10$ s). The tables shows the mean tracking error of the end-effector relative to a ground truth ($f_s = 500$ Hz and $N_s = 500$ elements). The RMS errors are normalized with the total length $L = 0.15$ (i.e., the errors are presented in $\%$). The CPU times are also given, where the entries labelled (\cmark) achieve real-time computation (consistently).  \label{tab:benchmark_table}}
 \centering
 
+\renewcommand\arraystretch{1.15}
+\rowcolors{1}{}{blue!5}
 \begin{tabular}{l|lllllll}
 %\toprule
+\hline 
 $T = 10$ s  & $N_s = 24$ & $N_s =36$ &  $N_s =60$ &  $N_s = 90$ & $N_s = 120$ & $N_s =180$ \\[0.15em]
-\midrule
+%\midrule
+\hline
+\hline 
 %\hrule
 $f_s = 25$ Hz &  \small{19.03\% / 1.77s} (\cmark) &  \small{9.37\% / 2.54s} (\cmark)  & \small{5.36\% / 4.06s} (\cmark) &  \small{4.63\% / 5.98s } (\cmark) & \small{4.62\% / 7.93s} (\cmark)  & \small{4.43\% / 11.75s} \\ [0.5em]
 $f_s = 50$ Hz &  \small{17.51\% / 3.50s}  (\cmark)  &  \small{7.04\% / 5.04s} (\cmark) &  \small{4.33\% / 6.73s} (\cmark) & \small{3.69\% / 11.60s } & \small{3.60\% / 15.3s} & \small{3.69\% / 22.71s} \\ [0.5em]

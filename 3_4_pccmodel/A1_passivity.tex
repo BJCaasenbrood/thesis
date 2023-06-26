@@ -1,6 +1,6 @@
 %!TEX root = ../../thesis.tex
 \chapter{Appendices to Chapter 4}
-\vspace{-5mm}
+\vspace{-10mm}
 \section{Adjoint actions on $\SE{3}$ and $\seg{3}$} 
 \label{app:C2:adjoint}  
 \noindent Given the position vector $\gammaB \in \R^3$ and the homogeneous rotation matrix $\PhiB \in \SO{3}$, the adjoint action of the homogeneous transformation $\mat{g} = (\gammaB,\,\PhiB) \in \SE{3}$ is then defined as
@@ -53,7 +53,7 @@ Since $\JB^\top \ten{C} \JB$ is skew-symmetric, the remainder of the proof consi
 %
 Therefore, the matrix $\dot{\vec{M}} - 2\vec{C}$ is skew-symmetric.
 
-\section{Implicit trapezoidal scheme for the time integration}
+\section{Implicit trapezoidal time integration}
 \label{app:C2:timeint}
 \noindent Here, we detail an numerical approach to efficiently find the solutions to the approximated dynamic model $\MB(\q)\ddq + \CB(\q,\dq)\dq + \fB\elastic(\q,\dq) +  \fB\grav(\q) = \tauB$. We emphasize that the control input $\tauB(\cdot,t)$ could be state-dependent if closed-loop controllers are considered; for instance, the proposed passivity-based controller in \eqref{eq:C2:tau}. First, consider a new state vector defined as $\vec{z} := ( \q^\top,\dq^\top )^\top$ such that we can rewrite the Lagrangian model in state-space form:
 %

@@ -9,7 +9,7 @@ For the soft robotic simulations, we have chosen a linear isotropic Hookean mate
 Given these material properties, the inertia tensor and the stiffness tensor become diagonal matrices:
 %
 \begin{align*}
-\mat{\mathcal{M}} & = \blkdiag{ \rho_0 \mat{\mathcal{J}},\, \rho_0 A \mat{I}_3}; \quad 
+\mat{\mathcal{M}} & = \blkdiag{ \rho_0 \mat{\mathcal{J}},\, \rho_0 A \mat{I}_3}, \\[0.25em] 
 \mat{\mathcal{K}} & = \blkdiag{\mu_1 \mat{\mathcal{J}},\, E A_0,\, \mu_2  A_0,\,\mu_2  A_0},
 \end{align*}
 %
@@ -18,34 +18,38 @@ Given these material properties, the inertia tensor and the stiffness tensor bec
 \subsection{Soft robot manipulator inspired by octopus' tentacle}
 In the first study-case, we consider a soft robotic arm that is loosely inspired by the tentacles of an octopus. To introduce the under-actuation typically present in soft robotics, we have chosen an actuation matrix $\mat{G} = \blkdiag{\mat{I}_5, \mat{O}_3}$ such that only the first five modes are actively controllable.  We assume that the soft manipulator has a circular cross-section, thus the cross-sectional area is given by $A_0 = \pi r^2$ with radius $r$. The system properties are shown in Table \ref{tab:C3:parameters1}.
 %
+\renewcommand\arraystretch{1.15}
 \begin{table}[t]
   \vspace{-0.25cm}
   \caption{Parameters setting for the solver, the soft robot, and controller.}\label{tab:C3:parameters1} \centering
-  \begin{tabular}{l|c|c|l}
+  \rowcolors{0}{}{blue!5}
+  \begin{tabular}{l|ccl}
+    \hline
     Parameter description & Symbol & Value & Unit \\
-    \midrule
+    \hline 
+    \hline
     Intrinsic length & $L $ & $ 120$ & mm \\
-    Cross-section radius & $r $ & $ 8.25$ & $\text{mm}$ \\
+    Cross-sectional radius & $r $ & $ 8.25$ & $\text{mm}$ \\
     Uniform density & $\rho_0 $ & $ 1250$ & $\text{kg}\text{m}^{-3}$ \\
     %Gravitational acceleration & $a_{g} $ & $ 9.81$ & $\text{m}\text{s}^{-2}$ \\
     Young's modulus & $E $ & $ 25$ & $\text{MPa}$ \\
     Shear modulus & $\mu_1 $ & $ 10 $ & $\text{MPa}$ \\
     Constraint modulus & $\mu_2 $ & $ 15 $ & $\text{GPa}$ \\
     Rayleigh coefficient & $\zeta $ & $ 0.40 $ & - \\
-    \bottomrule
+    \hline
   \end{tabular}
-  \vspace{-3mm}
+  %\vspace{-3mm}
   \end{table}
 %
 \begin{example}[Solution convergence for increasing modal order]
  Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext}(t) = [J]_k^\top \left(0,0,\mB(t),0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ in \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we incrementally increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie, the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. 
  
- \afterpage{
+%  \afterpage{
  \begin{figure}[!t]
   \centering
   \includegraphics*[width=1.02\textwidth]{./pdf/thesis-figure-5-4.pdf}
   \caption{Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $|\vec{m}_u| = 75$ \si{\newton \milli \meter} acting on its end-effector. }
-  \vspace{-0.2cm}
+  %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_3d}
   \end{figure}
   %
@@ -66,8 +70,8 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_bench}
   \end{figure}
-  \clearpage
- }
+%   \clearpage
+%  }
  
  Furthermore, we compare these simulation runs with a high-order mode of $k = 25$, where investigate the root mean square error, absolute error, and the ratio between actual CPU simulation time $T_{\textrm{sim}}$ and finite horizon $T$. The benchmark is shown in Figure \ref{fig:C3:EX2:mode_convergence_bench}. From these results, we observe that the solutions quickly converge to a narrow error band, namely for $k>3$ the difference in trajectories is near negligible. The RMS error is about $3.25$ \si{\milli \meter} or $2.7\%$ normalized by $L$.  Regarding computation time, we observe a linear decrease for a linear increase in modal order $k$. Note that for $k > 8$, the simulations are close to losing real-time performance. We therefore choose a modal basis of order $k = 8$. 
 \end{example}
@@ -84,7 +88,6 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:oct
 Figure \ref{fig:octarm1} shows the evolution of the continuous deformation along the soft robotic body, whereas Figure \ref{fig:octarm1_states} shows the modal coefficients $\vec{q}(t)$ and generalized momenta $\vec{p}(t)$. As can be seen, the end-effector of the soft robot manipulator converges to the desired set-point $\mat{g}_d \in \SE{3}$. Although the control gains could be increased to promote a faster transient, it was observed that high gains lead to undesired (propagating) oscillations of the flexible structure. A possible solution might be to introduce negative damping to the controller Hamiltonian $\Hm_d$, to overcome the soft robot's structural damping.
 
 For the second simulation run, we modified the control gains to highlight an interesting property of the proposed controller. To be more specific, we increase the controller gains to $\lambda_1 = \lambda_2 = 0.1$. The numerical results for the increased controller gains are shown in Figure \ref{fig:octarm2} and Figure \ref{fig:octarm2_states}. Although the control goal and the initial conditions are chosen identical, the soft robot converges to a different configuration -- albeit, a shape with less '\textit{complexity}'. The cause of less complicated bending patterns has two origins. First, increasing the control gains also artificially impacts the structural stiffness of the soft robot, resulting in soft robot with a higher perceived stiffness. Second, by increasing the stabilizing term $\lambda_2$ in the damped Jacobian inverse \eqref{eq:C3:jacob_damped}, more weight is given towards finding a solution that also minimizes the joint angles $\lVert \vec{q} \rVert_2 $.  This is to be expected, as intrinsically, it requires more energy to achieve higher-order modes deformations $\{\theta_n\}_{n=1}^k$ of the Legendre basis. Hence, the energy-based controller will thus find a minimizer that accounts for the ordering of the shape basis, penalizing higher-order modes. To some extent, the high intrinsic damping in soft robots acts as a spatial low filter which is beneficial for both modeling as control. This effect is not observed in classical semi-rigid robots.  This result indicates that the proposed controller can be effectively tuned alter the structural compliance of the soft robot; and thus could be implemented carefully to preserve '\textit{softness}'. 
-
 \end{example}
 
 \afterpage{
@@ -176,15 +179,16 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
     \caption{The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
   \end{figure}
-\clearpage
 }
-\clearpage
 \begin{table}[t]
 \vspace{0.2cm}
+\rowcolors{0}{}{blue!5}
 \caption{Parameters setting for the numerical solver, the soft manipulator  by the elephant's trunk, and the energy-based controller.}\label{tab:C3:parameters2} \centering
-\begin{tabular}{l|c|c|l}
+\begin{tabular}{l|ccl}
+  \hline
   Parameter description & Symbol    & Value    & Unit                     \\
-  \midrule      
+  \hline
+  \hline      
   Intrinsic length      & $L $      & $ 360$   & mm                       \\
   Cross-section radius  & $r $      & $ 25$    & $\text{mm}$              \\
   Uniform density       & $\rho_0 $ & $ 250$   & $\text{kg}\text{m}^{-3}$ \\
@@ -193,7 +197,7 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
   Shear modulus         & $\mu_1 $  & $ 20 $   & $\text{MPa}$             \\
   Constraint modulus    & $\mu_2 $  & $ 15 $   & $\text{GPa}$             \\
   Rayleigh coefficient  & $\zeta $  & $ 0.45 $ & -                        \\
-  \bottomrule
+  \hline  
 \end{tabular}
 \end{table}
 %

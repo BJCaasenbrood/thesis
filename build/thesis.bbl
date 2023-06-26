@@ -500,6 +500,17 @@ Fischer, O., Toshimitsu, Y., Kazemipour, A., and Katzschmann, R.~K. (2022).
   Real-World Tasks}.
 \newblock {\em Advanced Intelligent Systems}.
 
+\bibitem[Floater, 2014]{Floater2014Jun}
+Floater, M.~S. (2014).
+\newblock {Wachspress and Mean Value Coordinates}.
+\newblock In {\em {Approximation Theory XIV: San Antonio 2013}}, pages 81--102.
+  Springer, Cham, Switzerland.
+
+\bibitem[Floater, 2015]{Floater2015May}
+Floater, M.~S. (2015).
+\newblock {Generalized barycentric coordinates and applications{$\ast$}}.
+\newblock {\em Acta Numerica}, 24:161--214.
+
 \bibitem[Franco, 2022]{Franco2022May}
 Franco, E. (2022).
 \newblock {Model-Based Eversion Control of Soft Growing Robots With Pneumatic
@@ -1532,6 +1543,12 @@ St{\ifmmode\ddot{o}\else\"{o}\fi}lzle, M. and Santina, C.~D. (2021).
   Backstepping Control}.
 \newblock {\em IEEE Control Syst. Lett.}, 6:1837--1842.
 
+\bibitem[Sukumar and Tabarraei, 2004]{Sukumar2004Nov}
+Sukumar, N. and Tabarraei, A. (2004).
+\newblock {Conforming polygonal finite elements}.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  61(12):2045--2066.
+
 \bibitem[Sumbre et~al., 2001]{Sumbre2001Sep}
 Sumbre, G., Gutfreund, Y., Fiorito, G., Flash, T., and Hochner, B. (2001).
 \newblock {Control of Octopus Arm Extension by a Peripheral Motor Program}.
@@ -1755,11 +1772,6 @@ Vasista, S. and Tong, L. (2013).
 Venkiteswaran, V.~K., Samaniego, L. F.~P., Sikorski, J., and Misra, S. (2019).
 \newblock {Bio-Inspired Terrestrial Motion of Magnetic Soft Millirobots}.
 \newblock {\em IEEE Robotics and Automation Letters}, 4(2):1753--1759.
-
-\bibitem[Wachspress and Rohde, 1975]{Wachspress1975}
-Wachspress, E. and Rohde, S. (1975).
-\newblock {A Rational Finite Element Basis}.
-\newblock [Online; accessed 1. May 2023].
 
 \bibitem[Wallin et~al., 2018]{Wallin2018Jun}
 Wallin, T.~J., Pikul, J., and Shepherd, R.~F. (2018).

@@ -212,14 +212,6 @@ Given an initial guess $\q^{(0)} \in \mathcal{Q}$, the aim is to compute an incr
 %
 where $\textrm{T}_{\textrm{SE}(3)}$ denotes the tangent operator map on the group $\mathrm{SE}(3)$, see \cite{Bullo1995}, $\KB_p$ an artificial stiffness tensor, $\NT_i = (\IB - \JB_{i}^+\JB_{i})$ represents the null-space projection, and $\vec{\Lambda}_i$ a diagonal activation matrix. The trivial choice is $\LambdaB_i = \IB_n$. The null space projector can be extremely useful in exploring the high redundancy in soft robots, allowing subtasks  $\Phi_\textrm{sub}$ to be considered parallel to the primary inverse kinematic problem. Classical examples of such subtasks include: minimizing elastic energy or obstacle avoidance. The iterative solver in \eqref{eq:C5:invkin1} and \eqref{eq:C5:invkin2} runs until convergence in $\q^{(k)}$ is achieved. \\
 
-\begin{example}[Contact kinematics of ultra-gentle soft gripper]
-To showcase the forward and inverse kinematic solvers of Sorotoki, we will describe the ultra-gentle underwater soft gripper developed by Sinatra et al. \cite{Sinatra2019Aug}. The soft gripper consists of six soft fingers attached to a rigid palm base, where each soft gripper was designed to apply low contact pressure and minimize harm to common jellyfish species. An illustration of the sysem is shown in Figure \ref{fig:C5:shapesexample}. The delicate compliance of the soft gripper is achieved through the use of an extremely low durometer silicone matrix (Shore 20A). The actuator has a simple rectangular geometry, with a narrow cross-section of approximately 10 $\times$ 2 \si{\milli \meter} and an internal off-center rectangular hole. The thinnest part of the soft actuator, called the membrane, is approximately 0.35 \si{\milli \meter} thick, and length of about 130 \si{\milli \meter}.
-
-In this study, we aim to reproduce a grasping scenario of a jellyfish modeled as a static SDF object. To achieve this, we first initiate a soft finger by utilizing the \class{Shapes} class. We employ a third-order Chebyshev basis to approximate the strain field. The geometric properties of the soft finger are specified through the functions \code{Shapes.setLength} and \code{Shapes.setGeometry}. Using a for-loop, we generate each soft finger sequentially, defining the spatial location of the fixed base with \code{Shapes.setBase}. Prior to deployment, each soft finger undergoes predeformation, which is calculated through the application of the forward kinematics solver \code{Shapes.FK(q)}. The joint configuration, \code{q}, is selected to match the experiments presented in Figure \ref{fig:C5:shapesexample}.
-
-Subsequently, the deformed backbone is projected onto the surface of the SDF jellyfish through the use of the function \code{sdf.project}. The inverse kinematics solver is then invoked with \code{Shapes.IK}, resulting in the image depicted in Figure \ref{fig:C5:shapesexample}. Note that the inverse kinematics solver effectively places the soft finger onto the surface of the SDF object without causing penetration. The code for the forward and inverse kinematics is presented below:
-\end{example}
-\vfill
 \begin{figure}[!t]
 \centering
 \includegraphics*[width=.99\textwidth]{./pdf/thesis-figure-6-13.pdf}
@@ -231,6 +223,14 @@ Subsequently, the deformed backbone is projected onto the surface of the SDF jel
 \vspace{-5mm}
 \end{figure}
 
+\begin{example}[Contact kinematics of ultra-gentle soft gripper]
+To showcase the forward and inverse kinematic solvers of Sorotoki, we will describe the ultra-gentle underwater soft gripper developed by Sinatra et al. \cite{Sinatra2019Aug}. The soft gripper consists of six soft fingers attached to a rigid palm base, where each soft gripper was designed to apply low contact pressure and minimize harm to common jellyfish species. An illustration of the sysem is shown in Figure \ref{fig:C5:shapesexample}. The delicate compliance of the soft gripper is achieved through the use of an extremely low durometer silicone matrix (Shore 20A). The actuator has a simple rectangular geometry, with a narrow cross-section of approximately 10 $\times$ 2 \si{\milli \meter} and an internal off-center rectangular hole. The thinnest part of the soft actuator, called the membrane, is approximately 0.35 \si{\milli \meter} thick, and length of about 130 \si{\milli \meter}.
+
+In this study, we aim to reproduce a grasping scenario of a jellyfish modeled as a static SDF object. To achieve this, we first initiate a soft finger by utilizing the \class{Shapes} class. We employ a third-order Chebyshev basis to approximate the strain field. The geometric properties of the soft finger are specified through the functions \code{Shapes.setLength} and \code{Shapes.setGeometry}. Using a for-loop, we generate each soft finger sequentially, defining the spatial location of the fixed base with \code{Shapes.setBase}. Prior to deployment, each soft finger undergoes predeformation, which is calculated through the application of the forward kinematics solver \code{Shapes.FK(q)}. The joint configuration, \code{q}, is selected to match the experiments presented in Figure \ref{fig:C5:shapesexample}.
+
+Subsequently, the deformed backbone is projected onto the surface of the SDF jellyfish through the use of the function \code{sdf.project}. The inverse kinematics solver is then invoked with \code{Shapes.IK}, resulting in the image depicted in Figure \ref{fig:C5:shapesexample}. Note that the inverse kinematics solver effectively places the soft finger onto the surface of the SDF object without causing penetration. The code for the forward and inverse kinematics is presented below:
+\end{example}
+
 \begin{lstlisting}[style=matlab] 
 %% EXAMPLE: Shapes class (forwards/inverse kinematics) 
 % jellyfish SDF
@@ -240,20 +240,19 @@ sdf = sSphere(0,0,-60,40)
 N = 200; % discretization
 M = 3;   % number of modes
 pod = Basis(N,M,'chebyshev');     
-dof = [0,M,M,0,0,0]; % geom. strain dof
 
-shp = Shapes(pod,dof,'Length',120);
+shp = Shapes(pod,[0,M,M,0,0,0],'Length',120);
 shp = shp.setGeometry(sRectangle(4,1));
 
 % inverse kinematics on SDF topology
 for k = 1:6
     shp = shp.setBase(G{k});  % set base SE(3)
 
-    pos = shp.FK(q0{k});    % forward kin.
-    prj = sdf.project(pos); % project points
+    pos = shp.FK(q0{k});      % forward kinematics 
+    prj = sdf.project(pos);   % project points
 
-    qd  = shp.IK(prj);      % inverse kin.
-    shp.render(qd);         % render shape
+    qd  = shp.IK(prj);        % inverse kinematics 
+    shp.render(qd);           % render shape
 end
 
 sdf.show();  % render jellyfish

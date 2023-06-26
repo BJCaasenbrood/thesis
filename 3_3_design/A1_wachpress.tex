@@ -1,23 +1,77 @@
 \chapter{Appendices to Chapter 3}
-\vspace{-5mm}
+\vspace{-10mm}
 \section{Wachspress shape functions for polygons}
 \label{app:C3:wachpress}
-There is no unique way to generalize barycentric coordinates to polygons and polygonal hedra. However, two specific choices have turned out to be useful in several applications: Wachspress and mean value coordinates. For convex polygons the coordinates of Wachspress and their generalizations due to Warren and others [30, 22, 32, 33, 15], are arguably the simplest since they are rational functions and it is relatively simple to evaluate them and their derivatives 
+The finite element method involves the reduction of an infinite-dimensional problem to a finite-dimensional one through the utilization of local spatial interpolation. This is achieved by assigning states to the exterior of the finite element and employing specialized basis functions to locally interpolate the continuum. These shape functions must be tailored towards the chosen elemental discretization, and thus researchers often rely on common element types including triangular elements (\eg, Tet3 or Tet6) and quadrilateral elements (\eg, Quad8). In the present work, we investigate polygonal elements called \texttt{PolyN}, resulting in a finite element mesh composed of heterogeneous element types.
+
+To find a suitable shape function for these \texttt{PolyN} elements, we explore a technique called \textit{"barycentric coordinates"} \cite{Floater2014Jun,Floater2015May}. Let $P_k \subset \R^2$ be a convex polygon viewed as an open set, which is spanned by a set of vertices $\{\vB_i\}_{i=1}^k$ (anti-clockwise ordering) where $k$ is the degree of the polygon. Then, any function $N_i: P_k \to \R$ is considered a barycentric coordinate if for all $\sigmaB \in P_k$, it holds that 
+%
+\begin{itemize}
+    \vspace{-2mm}
+    \setlength\itemsep{0.1em}
+    \item It is strictly positive, \ie, $N_i(\sigmaB) > 0$, 
+    \item Its sum is equal to one, \ie, $\sum_{i=1}^k N_i(\sigmaB) = 1$, 
+    \item And, $\sum_{i=1}^k N_i(\sigmaB) \vB_i \ge \sigmaB$, 
+\end{itemize}
+A common function that satisfies such conditions for any $k \ge 3$ is called the Wachspress shape functions, which are given as follows:
 %
 \begin{equation}
-N_i(\XB)  = \frac{w_i(\XB)}{\sum_{j=1}^{n_p} w_j(\XB)},
+N^k_i(\sigmaB)  = \frac{w_i(\sigmaB)}{\sum_{j=1}^{k} w_j(\sigmaB)},
 \label{eq:app:wachpress}
 \end{equation}
-where $w_i$ are the shape interpolants given by \footnote{Note that when computing the interpolant in \eqref{eq:app:wachpress_weight}, it is convention to use $\pB_{n_p + 1} = \pB_1$}
+%
+with $w_i$ the shape interpolation weights given by 
 %
 \begin{equation}
-w_i(\XB)  = \frac{A(\pB_{i-1}, \pB_{i}, \pB_{i+1})}{A(\pB_{i-1}, \pB_{i}, \XB) A(\pB_{i}, \pB_{i+1}, \XB)},
+w_i(\sigmaB)  = \frac{A(\vB_{i-1}, \vB_{i}, \vB_{i+1})}{A(\vB_{i-1}, \vB_{i}, \sigma) A(\vB_{i}, \vB_{i+1}, \sigma)},
 \label{eq:app:wachpress_weight}
 \end{equation}
 %
-where $A$ is the the signed area spanned by its three position vector arguments. The $A$ may be computed using $A = \tfrac{1}{2}\left[x_1(y_2 - y_2) + x_2 (y_3 - y_1) + x_3(y_1 - y_2) \right]$, where $(x_1,y_1),(x_2,y_2), (x_3,y_3) \subseteq \R^2$ are the position vectors that span the triangle. Since the reference element is a regular polygon, $A(\pB_{i-1}, \pB_{i}, \pB_{i+1})$ is constant for all $i$ in the summation for \eqref{eq:app:wachpress}, and can therefore be factored out of expression. By adopting the notation $A_i(\XB):= A(\pB_{i-1},\pB_{i},\XB)$, we can simplify the expression further to
+where $A$ is the the signed area spanned by its three arguments. By convention, we use $\vB_{n_p + 1} = \vB_1$ in \eqref{eq:app:wachpress_weight}. From a numerical standpoint, the computation of this area can be achieved in an efficient manner by evaluating \cite{Talischi2012Mar}:
+\begin{figure}
+\centering
+\vspace{-5mm}
+\input{./fig/fig_C3_voronoi_explain.pdf_tex}
+\caption{(a) IIllustration of the triangular areas used to define \eqref{eq:app:wachpress_weight}. Figure adopted from Talischi et al. \cite{Talischi2012Mar,Talischi2012}. (b) Example of isoparametric mapping from natural to global coordinates.\label{app:fig:C3:voronoimeshExplain}}
+\vspace{-3mm}
+\end{figure}
 %
 \begin{equation}
-w_i(\XB) = \frac{1}{A_{i}(\XB) A_{i+1}(\XB)},
+A(\vB_{i}, \vB_{i+1}, \sigmaB) = \frac{1}{2} \left| \begin{matrix}
+\sigma_1 & \sigma_2 & 1 \\
+v_{1,i-1} & v_{2,i-1} & 1 \\
+v_{1,i} & v_{2,i} & 1 \\
+\end{matrix} \right|
 \end{equation}
+%
+Since we consider regular polygonal elements where $\vB_i = \left(\cos(\frac{2\pi i}{k}), \sin(\frac{2\pi i}{k}) \right)$, it follows that $A(\vB_{i-1}, \vB_{i}, \vB_{i+1})$ is constant for all $i$ in the summation for \eqref{eq:app:wachpress}, and can therefore be factored out of expression. By adopting the notation $A_i(\sigmaB):= A(\vB_{i-1},\vB_{i},\sigmaB)$ and $\alpha_i = \left[A_i A_{i+1}\right]\inv$, we can simplify the expression for the Wachspress shape function in \eqref{eq:app:wachpress} further to
+%
+\begin{equation}
+N^k_i= \frac{\left[A_{i} A_{i+1}\right]\inv}{\sum_{j=1}^k \left[A_{j} A_{j+1}\right]\inv} = \frac{\alpha_i }{\sum_{j=1}^k \alpha_i},
+\label{eq:app:C3:N}
+\end{equation}
+%
+\begin{rmk}
+Let it be clear that \eqref{eq:app:C3:N} is expressed in the natural coordinates $\sigmaB \in P_k$ as opposed to $\XB \in \mathcal{B}_0$. The idea of using reference interpolation functions $N^k_i$ is due to convenience because it is unnecessary to build different shape functions for different elements. The only difference between elements is the mapping from global to natural coordinates. So, given such isoparametric elements, their coordinate transformation and the displacement can be expressed by
+%
+\begin{equation*}
+\XB(\sigmaB) \approx \sum^{k}_{i=1} N_{i}^k(\sigmaB) \XB_i^e;  \quad \quad
+\dB(\sigmaB,T) \approx \sum^{k}_{i=1} N_{i}^k(\sigmaB) \xB_i^e 
+\end{equation*}
+%  
+where $\XB_{i}^{e} = (X^e_1,\, X^e_2)^\top$ and $\x_{i}^{e} = (x^e_1,\, x^e_2)^\top$ are the nodal coordinates and the nodal displacement vector related to the $i$-th node of the element $\mathcal{V}_e$, respectively. We provided an illustration of the isoparametric mapping using a polygonal element of degree $k=5$ in Figure \ref{app:fig:C3:voronoimeshExplain}.
+\end{rmk}
+
+Finally, the element-wise derivative of the Wachspress shape function with respect to the natural coordinates is given by \cite{Talischi2012Mar}:
+%
+\begin{equation}
+\frac{\p N^k_i}{\p \sigma_j}= \frac{1}{\sum_{q=1}^k \alpha_q} \left(\frac{\p \alpha_i}{\p \sigma_j} - N_{i}^k \sum^{k}_q \frac{\p \alpha_q}{\p \sigma_j} \right)
+\label{eq:app:C3:dNds}
+\end{equation}
+%
+Again, note that the \eqref{eq:app:C3:dNds} is given in terms of the natural coordinates $\sigmaB = [\sigma_1. \sigma_2] \in P_k$. Yet, we are interested in the partial derivatives with respect to the global coordinates, for instance, the deformation gradient $\FB = \boldsymbol{I} + \frac{\p \dB }{\p \boldsymbol{X}}$, or the Piola stress tensor $\ten{S} = \p \Psi / \p \ten{E}$. Let us introduce the Jacobian matrix of the isoparametric mapping as
+%
+\begin{align}
+\JB & = \frac{\p \XB}{\p \sigmaB} = \sum_{i=1}^k \XB_i^{e} \left(\frac{\p N^k_i}{\p \sigma_1}, \; \frac{\p N^k_i}{\p \sigma_2} \right).
+\end{align}
 %
