@@ -42,8 +42,8 @@
 \contentsline {subsection}{\numberline {3.4.1}Linear translational soft actuators}{52}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Pinching soft grippers}{53}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Bending soft actuator -- PneuNet inspired}{55}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Solutions for varying material parameters}{56}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Conclusion}{56}{section.3.6}%
+\contentsline {subsection}{\numberline {3.4.4}Solutions for varying material parameters}{56}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Conclusion}{57}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Dynamic modeling of soft robots -- PCC case}{59}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{60}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Pneumatic soft continuum manipulator}{63}{section.4.2}%
@@ -93,7 +93,7 @@
 \contentsline {subsection}{\numberline {6.5.7}Computer vision (\texttt {Vision})}{172}{subsection.6.5.7}%
 \contentsline {section}{\numberline {6.6}Soft robotics study cases}{174}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Multi-legged soft passive walker}{174}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{177}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{178}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Dynamic manipulation of high dexterity soft gripper}{182}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Environmental impedance control of soft manipulator}{187}{subsection.6.6.4}%
 \contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{189}{subsection.6.6.5}%
@@ -106,7 +106,7 @@
 \contentsline {chapter}{\numberline {B}Appendices to Chapter 3}{207}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Wachspress shape functions for polygons}{207}{section.B.1}%
 \contentsline {section}{\numberline {B.2}Element formulation for the Lagrangian strain}{209}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Piolla stress tensor and stress-strain tangent operator for the compressible Yeoh model}{211}{section.B.3}%
+\contentsline {section}{\numberline {B.3}Piolla stress tensor and stress-strain tangent for the nearly incompressible Yeoh model}{211}{section.B.3}%
 \contentsline {chapter}{\numberline {C}Appendices to Chapter 4}{213}{appendix.C}%
 \contentsline {section}{\numberline {C.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{213}{section.C.1}%
 \contentsline {section}{\numberline {C.2}Passivity properties of the inertia matrix}{213}{section.C.2}%
@@ -115,8 +115,9 @@
 \contentsline {section}{\numberline {D.1}Preliminaries on Lie group theory}{217}{section.D.1}%
 \contentsline {subsection}{\numberline {D.1.1}Basic definition(s)}{217}{subsection.D.1.1}%
 \contentsline {subsection}{\numberline {D.1.2}Exponential and logarithmic map}{218}{subsection.D.1.2}%
-\contentsline {section}{\numberline {D.2}Time-derivate of the geometric Jacobian for continuum robots}{219}{section.D.2}%
-\contentsline {section}{\numberline {D.3}Derivation of the generalized linear stiffness and damping matrix for continuum robots}{220}{section.D.3}%
+\contentsline {section}{\numberline {D.2}Kinematic compatibility equation and analytic solution of the velocity twist}{219}{section.D.2}%
+\contentsline {section}{\numberline {D.3}Time-differentiation of the geometric Jacobian for continuum deformable robots}{219}{section.D.3}%
+\contentsline {section}{\numberline {D.4}Derivation of the generalized linear stiffness and damping matrix for continuum robots}{220}{section.D.4}%
 \contentsline {chapter}{\numberline {E}Appendices to Chapter 6}{223}{appendix.E}%
 \contentsline {section}{\numberline {E.1}Newmark-$\beta $ solver}{223}{section.E.1}%
 \vspace \bigskipamount 

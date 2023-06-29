@@ -27,6 +27,7 @@ The following vector form of the displacement gradient is defined first
 \begin{align}
 \textrm{voigt}_{\textrm{2D}} \left(\nabla_0 \dB \right) & = \left( \frac{\p d_1}{\p X_1},\,\frac{\p d_1}{\p X_2},\, \frac{\p d_2}{\p X_1},\, \frac{\p d_2}{\p X_2}\right)^\top \\[0.25em]
 \textrm{voigt}_{\textrm{2D}} \left(\FB\right) & = \left( F_{11},\,F_{12},\, F_{21},\,F_{2} \right)^\top \notag \\[0.15em] & = \left( 1 + \frac{\p d_1}{\p X_1},\,\frac{\p d_1}{\p X_2},\, \frac{\p d_2}{\p X_1},\,  1 + \frac{\p d_2}{\p X_2}\right)^\top 
+\label{eq:app:C3:F} 
 \end{align}
 %
 Then, the symmetric second-order Lagrangian strain tensor defined as $\ET = \frac{1}{2}(\FB^\top \FB - \boldsymbol{I})$ expressed using the Voigt notation can be calculated by
@@ -39,15 +40,17 @@ Then, the symmetric second-order Lagrangian strain tensor defined as $\ET = \fra
  \end{pmatrix}
 \end{equation}
 %
-Then, finally, the nonlinear displacement–strain matrix can be computed as follows
+Since we can estimate the displacement derivatives through shape interpolation functions, \ie, $\frac{\partial \dB}{\partial X_i} \approx \sum_{j}^k \frac{\partial N_{j}^k}{\partial X_i}\xB^k_j$, we can obtain an expression for the nonlinear displacement-strain matrix, which connects variational displacement with strain variations, represented as $\delta \ten{E} = \BB \delta \dB$. This nonlinear displacement-strain matrix is given by
 \begin{equation}
-\BB_{e} = \left(\BB_1,\,\BB_2,\,\BB_3, ...,\, \BB_{n_p} \right),
+\BB_{e} = \left(\BB_1,\,\BB_2,\,\BB_3, ...,\, \BB_{k} \right),
+\label{eq:app:C3:straindisplacementmatrix}
 \end{equation}
-%
+with
 \begin{align}
 \BB_i = \begin{pmatrix} 
 F_{11} \dfrac{\p N_{i}}{\p X_1}, & F_{12}  \dfrac{\p N_{i}}{\p X_2}, &  F_{11}  \dfrac{\p N_{i}}{\p X_2}  \; + F_{12} \dfrac{\p N_{i}}{\p X_1} \\[0.25em] \\
 F_{21}  \dfrac{\p N_{i}}{\p X_1},  & F_{22}  \dfrac{\p N_{i}}{\p X_2}, & F_{21}  \dfrac{\p N_{i}}{\p X_2} \; + F_{22}  \dfrac{\p N_{i}}{\p X_1}  
-\end{pmatrix}^\top
+\end{pmatrix}^\top,
 \end{align}
 %
+where again $k$ denotes the polygonal degree of the element. Then, \eqref{eq:app:C3:N}, \eqref{eq:app:C3:F} and \eqref{eq:app:C3:straindisplacementmatrix} combined, allow for the numerical computation of the residual force vector of the discretized PDE system given in \eqref{eq:C3:residual_scalar}. The derivation of the second Piolla stress tensor, denoted as $\ten{S}$, is presented in the subsequent section.

@@ -67,28 +67,26 @@ The mesh is then utilized to construct the finite element model, \ie, \code{fem 
 Figure \ref{fig:C5:passivewalker_soro} shows snapshots of the dynamic simulation of the soft passive walker at times corresponding to those depicted in Figure \ref{fig:C5:passivewalker_true}. Although slight deviations are noticeable, the overall dynamic characteristics of the locomotion are captured closely by the dynamic FEM model produced using \texttt{Sorotoki}. To further demonstrate the validity of the model, a comparison of the rectilinear displacement of the front leg between the experimental data and the simulated model is presented in Figure \ref{fig:C5:passivewalker_compare}. The experimental data is obtained from \cite{Suzumori2008Sep} and is shown in Figure \ref{fig:C5:passivewalker_compare} (in gray). As demonstrated in the figure, the step-like behavior is accurately captured by the numerical model, and the horizontal and vertical distances traveled by the numerical model closely match the original experimental data.
 
 To examine the gait cycle, we introduce state variables $\theta_1, \theta_2, \theta_3$ to represent the joint angles between the V-shaped legs, as depicted in Figure \ref{fig:C5:passivewalker_states}. The trajectory of these angles over a small time window of 200 \si{\milli \second} is shown in Figure \ref{fig:C5:passivewalker_gait}. The angular movements exhibit a clear and consistent "stable" gait cycle, indicating that synchronization indeed occurs between the deformable soft legs due to their interaction with the deformable soft body. An analysis of the stable gait cycle reveals a gait period of approximately $T_{\textrm{gait}} \approx 47.5$ \si{\milli \second} or $f_{\textrm{gait}} \approx 21.1$ \si{\hertz}.
-
-The numerical simulations presented in this study have effectively demonstrated the capabilities of the  \texttt{Sorotoki} framework in accurately capturing the complexities commonly encountered in dynamic analysis of soft robots. Furthermore, it has been demonstrated that the methodology proposed by Suzumori et al. \cite{Suzumori2008Sep} can be efficiently replicated using a minimal amount of code, specifically, approximately 30 lines within the \texttt{Sorotoki} framework.
-
-\afterpage{
-\begin{figure}[!t]
-\centering
-\def\svgwidth{0.65\textwidth}
-%\input{./pdf/thesis-figure-6-20.pdf_tex}
-\input{./fig/walker_states.pdf_tex}
-\caption{Definition of the angular deflection of the three pairs of soft legs, denoted by $\theta_1$, $\theta_2$, and $\theta_3$, respectively. It should be noted that each pair has an intrinsic V-shaped structure, thus their stable equilibrium position during rest is approximately $\theta_i^\star \approx 45$ \si{\degree}. Raw image obtained from \cite{Suzumori2008Sep}.}
-\label{fig:C5:passivewalker_states}
-\vspace{-2mm}
-\end{figure}
 %
 \begin{figure}[!t]
-    \input{./fig/fig_passivewalker_theta.tex}
-    \input{./fig/fig_passivewalker_theta_gait.tex}
-    \caption{Angular deflection of the V-shaped structure of the soft passive walker, simulated with Sorotoki. A clear gait cycle is observed in these deflections, indicating synchronization between the deformable structures due to the coupling of the soft body. By analyzing the stable gait cycles, a gait period of approximately $T_{\textrm{gait}} \approx 47.5$ \si{\milli \second} or $f_{\textrm{gait}} \approx 21.1$ \si{\hertz} is found.}
-    \label{fig:C5:passivewalker_gait}
-    \vspace{-6mm}
-\end{figure}
-}
+    \centering
+    \def\svgwidth{0.65\textwidth}
+    %\input{./pdf/thesis-figure-6-20.pdf_tex}
+    \input{./fig/walker_states.pdf_tex}
+    \caption{Definition of the angular deflection of the three pairs of soft legs, denoted by $\theta_1$, $\theta_2$, and $\theta_3$, respectively. It should be noted that each pair has an intrinsic V-shaped structure, thus their stable equilibrium position during rest is approximately $\theta_i^\star \approx 45$ \si{\degree}. Raw image obtained from \cite{Suzumori2008Sep}.}
+    \label{fig:C5:passivewalker_states}
+    \vspace{-2mm}
+    \end{figure}
+    %
+    \begin{figure}[!t]
+        \input{./fig/fig_passivewalker_theta.tex}
+        \input{./fig/fig_passivewalker_theta_gait.tex}
+        \caption{Angular deflection of the V-shaped structure of the soft passive walker, simulated with Sorotoki. A clear gait cycle is observed in these deflections, indicating synchronization between the deformable structures due to the coupling of the soft body. By analyzing the stable gait cycles, a gait period of approximately $T_{\textrm{gait}} \approx 47.5$ \si{\milli \second} or $f_{\textrm{gait}} \approx 21.1$ \si{\hertz} is found.}
+        \label{fig:C5:passivewalker_gait}
+        \vspace{-6mm}
+    \end{figure}
+%
+The numerical simulations presented in this study have effectively demonstrated the capabilities of the  \texttt{Sorotoki} framework in accurately capturing the complexities commonly encountered in dynamic analysis of soft robots. Furthermore, it has been demonstrated that the methodology proposed by Suzumori et al. \cite{Suzumori2008Sep} can be efficiently replicated using a minimal amount of code, specifically, approximately 30 lines within the \texttt{Sorotoki} framework.
 
 \subsection{Computational design of bending PneuNet actuator}
 In this section, we demonstrate the use of finite element models to aid in the design of PneuNet actuators, a popular type of soft robot actuator. PneuNet actuators, which have been in use since the 1980s, utilize a rectangular-shaped actuator with a stiffness differential to achieve a bending motion. Recent developments in the field, such as the work of Mosadegh et al. \cite{Mosadegh2014} and Ilievski et al. \cite{Ilievski2011Feb}, have proposed modern variations of PneuNet actuators that incorporate an inextensible but flexible bottom layer to further enhance the bending motion. The motion of a soft actuator depends on the interaction between the soft material, structural geometry, and the locations where external loads are applied. In their work, Mosadegh et al. \cite{Mosadegh2014} demonstrated the importance of geometry in the performance of PneuNet actuators by proposing a new design, called the fast PneuNet (fPN), that improved upon the earlier slower PneuNet (sPN) designs presented in \cite{Ilievski2011Feb}. The fPN design requires less gas for inflation and thus significantly increases the actuator's performance. Design optimization for PneuNet soft actuators remains an active area of research, as evidenced by recent studies \cite{Smith2022,Raeisinezhad2021May}.This demonstrates the continued interest in desing optimizing in soft PneuNet actuators, even decades after its initial development.
@@ -111,7 +109,7 @@ The objective in the nonlinear topology optimization approach is to find the opt
     \centering
     %\input{./fig/fig_optpneunet_fem.tex}
     \includegraphics*[width=.95\textwidth]{./pdf/thesis-figure-6-23.pdf}
-    \caption{Nonlinear finite element simulation of the optimized PneuNet actuator using \textit{Sorotoki}. The system is subjected to a linear ramp upto 80 \si{\kilo \pascal}, and we observe the classical bending behavior of PneuNet actuators. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. }
+    \caption{Nonlinear finite element simulation of the optimized PneuNet actuator using \texttt{Sorotoki}. The system is subjected to a linear ramp upto 80 \si{\kilo \pascal}, and we observe the classical bending behavior of PneuNet actuators. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. }
     \label{fig:C5:fig_optpneunet_fem}
     \vspace{-3mm}
 \end{figure}

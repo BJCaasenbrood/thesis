@@ -7,7 +7,7 @@ The style file: apalike.bst
 A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12128 items from 5000.
+Reallocated field_info (elt_size=4) to 12150 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -55,45 +55,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 323 entries,
+You've used 324 entries,
             1935 wiz_defined-function locations,
-            2394 strings with 71464 characters,
-and the built_in function-call counts, 146102 in all, are:
-= -- 14293
-> -- 7068
+            2399 strings with 71641 characters,
+and the built_in function-call counts, 146518 in all, are:
+= -- 14332
+> -- 7086
 < -- 183
-+ -- 2503
-- -- 2464
-* -- 12860
-:= -- 25102
-add.period$ -- 1007
-call.type$ -- 323
-change.case$ -- 2826
-chr.to.int$ -- 294
-cite$ -- 347
-duplicate$ -- 5149
-empty$ -- 9533
-format.name$ -- 2897
-if$ -- 28571
++ -- 2509
+- -- 2470
+* -- 12900
+:= -- 25175
+add.period$ -- 1010
+call.type$ -- 324
+change.case$ -- 2834
+chr.to.int$ -- 295
+cite$ -- 348
+duplicate$ -- 5163
+empty$ -- 9563
+format.name$ -- 2904
+if$ -- 28651
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 312
-newline$ -- 1611
-num.names$ -- 963
-pop$ -- 2529
+missing$ -- 313
+newline$ -- 1616
+num.names$ -- 966
+pop$ -- 2535
 preamble$ -- 1
-purify$ -- 2847
+purify$ -- 2855
 quote$ -- 0
-skip$ -- 3961
+skip$ -- 3971
 stack$ -- 0
-substring$ -- 10237
-swap$ -- 873
+substring$ -- 10270
+swap$ -- 874
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1904
+type$ -- 1910
 warning$ -- 22
-while$ -- 1142
+while$ -- 1145
 width$ -- 0
-write$ -- 4178
+write$ -- 4191
 (There were 34 warnings)

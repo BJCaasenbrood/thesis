@@ -33,10 +33,11 @@ A fundamental measure of deformation in continuum mechanics is the deformation g
     \centering
     \caption{Table of deformations measures relevant for continuum mechanics problem. All measures can be related to the first-order deformation tensor $\FB$, following the works  \cite{Holzapfel2002,Kim2018,Smith2018}.}
     \label{tab:C5:strain_measures}
+    \rowcolors{1}{}{blue!5}
     \begin{tabular}{ll}
         \hline
         Deformation measure       & \quad \; Derivation                                                     \\
-        \hline
+        \hline \hline
         Relative volume change    & \quad \; $J = \det{\FB}$                                                \\
         Polar decomposition       & \quad \; $\FB = \QB \VB$                                                \\
         Right Cauchy-Green tensor & \quad \; $\CB = \FB^\top \FB$                                           \\
@@ -71,6 +72,7 @@ To address this, \textit{Sorotoki} provides a library of hyper-elastic constitut
 \begin{table}[t]
     \renewcommand\arraystretch{1.25}
     \setlength{\tabcolsep}{2.25pt}
+    \rowcolors{1}{}{blue!5}
     %\rowcolors{1}{}{lightgray}
     \centering
     \caption{Table of material models included in \textit{Sorotoki}, including the NeoHookean model (NH), Mooney-Rivlin model (MR), and Yeoh (YH) model.}
@@ -78,7 +80,7 @@ To address this, \textit{Sorotoki} provides a library of hyper-elastic constitut
     \begin{tabular}{lcl}
         \hline
         Material model     & \;\;Parameters\;\; & \quad \;\; Energy-density potential $\Psi$                                     \\
-        \hline
+        \hline \hline
         Neo-Hookean (NH)   & $(\mu)$            & \quad \;\; $\Psi_{\textrm{NH}} := \frac{\mu}{2} \left(I_1 - 3 \right)$         \\
         Mooney-Rivlin (MR) & $(c_1,c_2)$        & \quad \;\; $\Psi_{\textrm{MR}} := \sum^{2}_{i=1} c_i \left(I_i - 3 \right)$    \\
         Yeoh (YH)          & $(c_1,c_2,c_3)$    & \quad \;\; $\Psi_{\textrm{YH}}  := \sum^{3}_{i=1} c_i \left(I_1 - 3 \right)^i$ \\
@@ -92,7 +94,7 @@ The material models presented in Table \ref{tab:C5:elasticitymodels} are impleme
 \textbf{C: Finite element solvers and (nonlinear) modal analysis}
 To solve the structural forward dynamics of the system \eqref{eq:C5:femmodel}, the toolkit uses an implicit Newmark-$\beta$ solver \cite{Newmark1959Jul}, which is briefly outlined in Appendix \ref{app:C5:newmark}. Implicit solvers offer improved stability compared to explicit methods, such as the Runge-Kutta solver (\texttt{ode45}), particularly when larger time steps are employed. However, the cost of larger time steps is a decreased numerical precision.  Alternatively, for quasi-static problems when $\ddx = \dx = \vec{0}_n$, we aim to seek the solutions to the static force equilibrium $\rB(\x) = \vec{0}_n$ where $\rB := -\fB_{\textrm{mat}} + \fB\grav + \fB_\textrm{u} + \fB_{\Omega_{\textrm{env}}}$ is the force residual vector. The nonlinear equality for nodal displacements $\x$ is solved using an iterative Newton-Raphson solver. To call these solvers, dynamic simulations are executed with \code{fem.simulate()} and quasi-static simulations with \code{fem.solve()}. Upon completion of a simulation, all displacements, velocities, forces, and stress information are stored in the \code{fem.Log} data structure. This log file can be accessed for data analysis or during simulation to facilitate state feedback control.
 
-Alternatively, we can explore nonlinear modal analysis at any quasi-static equilibrium configuration $\x^* \in \mathcal{X}$ of the system \eqref{eq:C5:femmodel}. Let $\KB_T:= \nabla_\x \fB \elastic$ be the Jacobian matrix of the (nonlinear) elastic potential forces, also referred to as the tangent stiffness. Then, the local eigenvalue problem for the linearized FEM model around the point $\x^*$ is given by 
+Alternatively, we can explore nonlinear modal analysis at any quasi-static equilibrium configuration $\x^* \in \mathcal{X}$ of the system \eqref{eq:C5:femmodel}. Let $\KB_T:= \left[\frac{\p \fB\elastic}{\p x_1} \;\hdots\; \frac{\p \fB\elastic}{\p x_2} \right]$ be the Jacobian matrix of the (nonlinear) elastic potential forces, also referred to as the tangent stiffness. Then, the local eigenvalue problem for the linearized FEM model around the point $\x^*$ is given by 
 %
 \begin{equation}
 \Big[\KB_T(\x^*)- \lambda_i \MB \Big] \thetaB_i = \vec{0}_n,

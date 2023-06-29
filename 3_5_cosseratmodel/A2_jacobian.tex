@@ -1,6 +1,8 @@
-\section{Time-derivate of the geometric Jacobian for continuum robots} 
+\section{Kinematic compatibility equation and analytic solution of the velocity twist}
+
+\section{Time-differentiation of the geometric Jacobian for continuum deformable robots} 
 \label{app:C3:jacobian}
-The mapping from generalized coordinates $\dot{\vec{q}} \in \R^n$ to the velocity-twist vector $\hat{\vec{\eta}} = \vec{g}\inv \dot{\mat{g}} \in \seg{3} \cong \R^6$ for a point $\sigma$ be given by $\vec{\eta}= \mat{J}\dot{\vec{q}}$ where $\mat{J}$ is the geometric Jacobian. The $k$-th order truncations of the exact geometric Jacobian is given by
+The mapping from generalized coordinates $\dot{\vec{q}} \in \mathbb{R}^n$ to the velocity-twist vector $\hat{\vec{\eta}} = \vec{g}^{-1} \dot{\mat{g}} \in \mathbb{R}^3 \cong \mathbb{R}^6$ for a point $\sigma$ is given by $\vec{\eta} = \mat{J}\dot{\vec{q}}$, where $\mat{J}$ is the geometric Jacobian. The $k$-th order truncation of the exact geometric Jacobian is given by:
 %
 \begin{equation}
 [\mat{J}]_k = \Ad_{{[\mat{g}]_k}}^{-1} \int_0^\sigma \Ad_{[\mat{g}]_k} \mat{\Theta} \; ds. \label{eq:app_jac0}
@@ -12,20 +14,20 @@ Unlike rigid robotics, note that the geometric Jacobian matrix here is time and 
 \dot{[\mat{J}]_k} = \dot{\left(\Ad_{{[\mat{g}]_k}}^{-1}\right)} \int_0^\sigma \Ad_{[g]_k} \mat{\Theta} \; ds + \Ad_{{[\mat{g}]_k}}^{-1} \int_0^\sigma \dot{\left(\Ad_{[g]_k}\right)} \mat{\Theta} \; ds. \label{eq:app_jac1}
 \end{equation}
 %
-Given the differential relations of the adjoint action mapping on the Lie group, that is, ${d/ds}\left(\Ad_{\mat{g}} \right) = \Ad_{\mat{g}} \ad_{\mat{\Upsilon}}$ given a twist $\vec{\Upsilon} = (\mat{g}\inv d\mat{g}/ds)^\vee$, we can express the time-derivate of the adjoint action and its inverse as
+Given the differential relations of the adjoint action mapping on the Lie group, that is, ${d/ds}\left(\Ad_{\mat{g}} \right) = \Ad_{\mat{g}} \ad_{\mat{\Upsilon}}$ given a twist $\vec{\Upsilon} = (\mat{g}\inv d\mat{g}/ds)^\vee$, we can express the time-derivative of the adjoint action and its inverse as
 %
 \begin{align}
 \frac{\p}{\p t}\left(\Ad_{\mat{g}} \right) & = \Ad_{\mat{g}} \ad_{\vec{\eta}}, \label{eq:app_dAdg}\\
 \frac{\p}{\p t}\left(\Ad_{\mat{g}\inv} \right) & = -\ad_{\vec{\eta}}\Ad_{\mat{g}\inv}. \label{eq:app_dAdginv}
 \end{align}
 %
-Substituting the truncated variations of \eqref{eq:app_dAdg} and \eqref{eq:app_dAdginv} into \eqref{eq:app_jac1}, we find the complete expression of the time-derivate of the geometric Jacobian matrix
+Substituting the truncated variations of \eqref{eq:app_dAdg} and \eqref{eq:app_dAdginv} into \eqref{eq:app_jac1}, we find the complete expression of the time-derivative of the geometric Jacobian matrix
 %
 \begin{align}
 \dot{[\mat{J}]_k} & = -\ad_{[\vec{\eta}]_k} {[\mat{J}]_k} + \Ad_{{[\vec{g}]_k}}^{-1} \int_0^\sigma \Ad_{{[\mat{g}]_k}} \ad_{[\vec{\eta}]_k} \mat{\Theta}\; ds. \label{eq:app_dJ}
 \end{align}
 %
-Since $\ad_{\vec{\eta}} (\mat{J} \dot{\vec{q}}) = \ad_{\vec{\eta}} \vec{\eta} = \vec{0}_6$ by definition, the first right-hand term vanishes if \eqref{eq:app_dJ} is post-multiplied with the generalized velocities $\dot{\vec{q}}$, thus leading to the acceleration twist $\dot{[\vec{\eta}]}_k$ in \eqref{eq:C3:deta_analytic}. \clearpage
+Since $\ad_{\vec{\eta}} (\mat{J} \dot{\vec{q}}) = \ad_{\vec{\eta}} \vec{\eta} = \vec{0}_6$ by definition, the first right-hand term vanishes if \eqref{eq:app_dJ} is post-multiplied with the generalized velocities $\dot{\vec{q}}$, thus leading to the acceleration twist $\dot{[\vec{\eta}]}_k$ in \eqref{eq:C3:deta_analytic}. 
 
 \section{Derivation of the generalized linear stiffness and damping matrix for continuum robots}
 \label{app:C3:linearmaterialmatrices}

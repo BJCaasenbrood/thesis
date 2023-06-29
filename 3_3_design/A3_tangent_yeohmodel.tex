@@ -1,5 +1,4 @@
-\clearpage
-\section{Piolla stress tensor and stress-strain tangent operator for the compressible Yeoh model}
+\section{Piolla stress tensor and stress-strain tangent for the nearly incompressible Yeoh model}
 \label{app:C3:yeohmodel}
 In section \ref{sec:C2:hyperelastic}, we have introduce the compressible Yeoh model given by 
 %
@@ -8,10 +7,14 @@ In section \ref{sec:C2:hyperelastic}, we have introduce the compressible Yeoh mo
 \label{eq:app:C3:psi}
 \end{equation}
 %
-where $J_1 = J^{-\tfrac{2}{3}} I_1$ with $I_1$ the first true strain invariant of the Lagrangian strain tensor, and $c_i$ and $d_i$ material parameters. To express the second Piolla-Kirchhoff stress tensor $\ten{S} = \p \Psi/ \p \ten{E}$ and the fourth-order tangent stiffness tensors, \ie, $\mathbb{D} = \p \ten{S}/ \p \ten{E}$, we require the partial derivatives of $J$ and $J_1$ with respect to the Green-Lagrangian strain tensor $\ten{E}$. According to \cite{Kim2018,Renaud2011}, it follows that $\tfrac{\p J}{\p \ten{E}} = J \ten{C}\inv$  and therefore it follows that
+where $J_1 = J^{-\tfrac{2}{3}} I_1$ with $I_1$ the first true strain invariant of the Lagrangian strain tensor, and $c_i$ and $d_i$ material parameters. To express the second Piolla-Kirchhoff stress tensor $\ten{S} = \p \Psi/ \p \ten{E}$ and the fourth-order tangent stiffness tensors, \ie, $\mathbb{D} = \p \ten{S}/ \p \ten{E}$, we require the partial derivatives of $J$ and $J_1$ with respect to the Green-Lagrangian strain tensor $\ten{E}$. According to \cite{Kim2018,Renaud2011}, it follows that 
 %
 \begin{align}
-\frac{\p J_1}{\p \ten{E}} = \IB - \frac{1}{3} \ten{C}\inv 
+\frac{\p J}{\p \ten{E}} & = J \ten{C}\inv \\[0.25em]
+\frac{\p J_1}{\p \ten{E}} & = \IB - \frac{1}{3} \ten{C}\inv 
 \end{align}
 %
-substitution of the tensor derivatives into \eqref{eq:app:C3:psi}
+Substitution of the tensor derivatives into \eqref{eq:app:C3:psi} leads to 
+\begin{equation}
+\ten{S} = 2\left(\sum_{i=1}^2 i {c_i} (J_1 - 3)^{i-1} \right) J^{-\tfrac{2}{3}}\left[\IB - \frac{I_1}{3}\CT\inv \right] 
+\end{equation}
