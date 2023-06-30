@@ -7,7 +7,7 @@ The style file: apalike.bst
 A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12150 items from 5000.
+Reallocated field_info (elt_size=4) to 12172 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -16,25 +16,35 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 950 of file MyBib.bib
+--line 963 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1714 of file MyBib.bib
+--line 1727 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1721 of file MyBib.bib
+--line 1734 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2510 of file MyBib.bib
+--line 2523 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 2996 of file MyBib.bib
+--line 3009 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3108 of file MyBib.bib
+--line 3121 of file MyBib.bib
+You're missing a field name---line 3534 of file MyBib.bib
+ : 
+ : %  author = {Tonkens, Sander and Lorenzetti, Joseph and Pavone, Marco},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3552 of file MyBib.bib
+--line 3565 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4152 of file MyBib.bib
+--line 4165 of file MyBib.bib
 Warning--I didn't find a database entry for "Loria2015Jun"
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
+Warning--to sort, need author or key in Tonkens2020
+Warning--empty author in Tonkens2020
+Warning--empty year in Tonkens2020
+Warning--empty title in Tonkens2020
+Warning--empty journal in Tonkens2020
 Warning--empty year in BibEntryPuma2022Sep
 Warning--empty year in BibEntryStanford2022Sep
 Warning--can't use both volume and number fields in Bendsoe2003
@@ -55,45 +65,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 324 entries,
+You've used 325 entries,
             1935 wiz_defined-function locations,
-            2399 strings with 71641 characters,
-and the built_in function-call counts, 146518 in all, are:
-= -- 14332
-> -- 7086
+            2404 strings with 71859 characters,
+and the built_in function-call counts, 146952 in all, are:
+= -- 14369
+> -- 7106
 < -- 183
-+ -- 2509
-- -- 2470
-* -- 12900
-:= -- 25175
-add.period$ -- 1010
-call.type$ -- 324
-change.case$ -- 2834
-chr.to.int$ -- 295
-cite$ -- 348
-duplicate$ -- 5163
-empty$ -- 9563
-format.name$ -- 2904
-if$ -- 28651
++ -- 2517
+- -- 2478
+* -- 12952
+:= -- 25236
+add.period$ -- 1011
+call.type$ -- 325
+change.case$ -- 2842
+chr.to.int$ -- 296
+cite$ -- 355
+duplicate$ -- 5177
+empty$ -- 9596
+format.name$ -- 2912
+if$ -- 28732
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 313
-newline$ -- 1616
+missing$ -- 314
+newline$ -- 1619
 num.names$ -- 966
-pop$ -- 2535
+pop$ -- 2550
 preamble$ -- 1
-purify$ -- 2855
+purify$ -- 2864
 quote$ -- 0
-skip$ -- 3971
+skip$ -- 3979
 stack$ -- 0
-substring$ -- 10270
+substring$ -- 10308
 swap$ -- 874
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1910
-warning$ -- 22
-while$ -- 1145
+type$ -- 1916
+warning$ -- 27
+while$ -- 1147
 width$ -- 0
-write$ -- 4191
-(There were 34 warnings)
+write$ -- 4198
+(There was 1 error message)

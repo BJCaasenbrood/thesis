@@ -77,7 +77,7 @@ where $\gB_L^{\textrm{FEM}}$ is simply the corresponding end-effector configurat
 
 Following the PCC condition, the bending angle $\beta$ can be calculated straightforwardly. Given these geometric curve parameters and the effective areas of the bellows, the applied elongation force and bending torque can be computed accordingly. The numerical results are provided in Figure \ref{fig:C2:fem_stress}. In practice, these nonlinear strain relations can also be determined experimentally; however, the numerical methods have the beneficial convenience of several post-processing procedures and gravitation-free deformations. To support our previous claim concerning the consistency of the PCC condition, Figure \ref{fig:C2:fem_analysis} provides a few FEM snapshots results together with the optimal backbone curve from \eqref{eq:C2:pos_exact}. It can be seen that the piece-wise constant curvature (PCC) condition, although a clear oversimplification of the true mechanics at hand, is remarkably consistent with the FEM simulations.
 
-\subsection{Hyperelasicity  in joint space}
+\subsection{Hyperelasticity  in joint space}
 \label{sec:C2:hyperelastic}
 \noindent From the finite element results in Figure \ref{fig:C2:fem_analysis}, the mathematical description for the nonlinear stiffness can be detailed further. However, a suitable candidate function must be chosen first to properly represent the hyperelastic stress-strain relation. The stiffness function $k_e (\varepsilon)$ and $k_b (\beta)$  have to satisfy the following properties.
 %
@@ -159,7 +159,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
   \vspace{-3mm}
   \end{table}
 
-\subsection{Visco-elastic creep}
+\subsection{Viscoelastic creep}
 \noindent In material mechanics, the tendency of mechanical solids to move slowly under stress is called creep. Unlike ideal elastic materials, when polymeric materials are subjected to abrupt change in stress, the constitutive network of polymer chains reconfigure until the stress is evenly distributed. Therefore, we introduce a new state vector $\vec{\lambda}(t)\in \mathbb{R}^n$, which contains the creep state variables. According to Meyer et al. (2009, \cite{Meyer2009}), the Kelvin-Voigt model for creep is given by a first-order ordinary differential equation of the form
 %
 \begin{align}
@@ -169,15 +169,15 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
   \end{align}
  %
 %
-\noindent where the vector $\vec{\alpha}_\lambda = (\alpha_{\lambda,1},\,\alpha_{\lambda,2},\,...,\,\alpha_{\lambda,2n})^\top$ contains positive parameters that describe the visco-elastic material dynamics, and the state variables $\lambda_i(t)$ with $i \in \{1,2,...,n\}$,  \ie, the creep strains. Note that the state dimension of the creep strains is equivalent to the state dimension $\dim(\q)$. Now, the dynamics of the visco-elastic creep can be easily included into
-\eqref{eq:C2:dynamic_model} as an external disturbance $\vec{\delta}(t)$. Hence, consider the visco-elastic creep forces of the Kelvin-Voigt model to be characterized by
+\noindent where the vector $\vec{\alpha}_\lambda = (\alpha_{\lambda,1},\,\alpha_{\lambda,2},\,...,\,\alpha_{\lambda,2n})^\top$ contains positive parameters that describe the viscoelastic material dynamics, and the state variables $\lambda_i(t)$ with $i \in \{1,2,...,n\}$,  \ie, the creep strains. Note that the state dimension of the creep strains is equivalent to the state dimension $\dim(\q)$. Now, the dynamics of the viscoelastic creep can be easily included into
+\eqref{eq:C2:dynamic_model} as an external disturbance $\vec{\delta}(t)$. Hence, consider the viscoelastic creep forces of the Kelvin-Voigt model to be characterized by
 %
 \begin{equation}
 \vec{\delta}_c({\vec{\lambda}}) = \mat{K}_{\lambda}^\top \vec{\lambda},
 \label{eq:C2:creepcompliance}
 \end{equation}
 %
-\noindent where $\mat{K}_\lambda \succ 0$ denotes the creep compliance matrix, which is a linear mapping from creep strains to creep forces. Since creeping strains are difficult, if not impossible, to distinguish from the elastic strains alone, we must include dynamic experiments to properly identify the creep coefficients. Using a regression approach similar to Section \ref{sec:C2:hyperelastic}, the creeping parameters $\vec{\alpha}_\lambda$ and the creep compliance $\mat{K}_\lambda$ are empirically estimated from experimental data (\eg, unforced oscillations). In this regression, the full dynamics are simulated and the parameter $\vec{\alpha}_\lambda$ are optimized to minimize the dynamic residual in tip position of the soft robot. The estimated visco-elastic parameters are also provided in Table \ref{tab:C2:elastic_parameters}. The linear damping parameters from the Rayleigh damping matrix $\mat{R}$ and the initial conditions for $\vec{\lambda}(t_0)$ are identified similarly.
+\noindent where $\mat{K}_\lambda \succ 0$ denotes the creep compliance matrix, which is a linear mapping from creep strains to creep forces. Since creeping strains are difficult, if not impossible, to distinguish from the elastic strains alone, we must include dynamic experiments to properly identify the creep coefficients. Using a regression approach similar to Section \ref{sec:C2:hyperelastic}, the creeping parameters $\vec{\alpha}_\lambda$ and the creep compliance $\mat{K}_\lambda$ are empirically estimated from experimental data (\eg, unforced oscillations). In this regression, the full dynamics are simulated and the parameter $\vec{\alpha}_\lambda$ are optimized to minimize the dynamic residual in tip position of the soft robot. The estimated viscoelastic parameters are also provided in Table \ref{tab:C2:elastic_parameters}. The linear damping parameters from the Rayleigh damping matrix $\mat{R}$ and the initial conditions for $\vec{\lambda}(t_0)$ are identified similarly.
 
 \begin{example}[Kelvin-Voigt creep dynamics] To highlight the dynamics of elastomer materials exhibiting creep, let us consider an rudimentary illustrative example of a 1-DOF mass-spring-damper system with a Kelvin-Voigt creep element. Let $\xB = (x_1,\,x_2,\,x_3)^\top = (\varepsilon,\, \dot{\varepsilon},\, \lambda)^\top$ be the state vector composed of the elongation strain, elongation rate, and the creep strain, respectively. Then, the dynamics can be written in the familiar state space form as follows:
 %
@@ -187,18 +187,18 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 \dot{x}_3 & = -\alpha_{\lambda,1}x_3 -\alpha_{\lambda,2}x_2
 \end{align}
 %
-where $m,k,c>0$  the mass, spring, damper coefficients; respectively, $k_{\lambda}>0$ the creep stiffness, $\alpha_{\lambda}>0$ the creep parameters, and $u: \Ts \to \R$ an auxiliary input (\ie, prescribed force). The following parameters are consider for this illustrative example: $m = 0.1$ \si{\kilo \gram}, $k = 10$ Nm$\inv$, $c = 0.1$ Nsm$\inv$, $k_{\lambda} = \alpha_{\lambda,1} = 2$, and $\alpha_{\lambda,2} = 5$.  To highlight the effects of visco-elastic creep, we choose a reference signal with fast-changing dynamics: $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$. Given the input, the simulation results are shown in Figure \ref{fig:C2:creep}. Note that the simulation result presents an unmodified Hookean model \data{Matlab1} in which $k_\lambda = 0$, and the Kelvin-Voigt variant \data{Matlab2}.
+where $m,k,c>0$  the mass, spring, damper coefficients; respectively, $k_{\lambda}>0$ the creep stiffness, $\alpha_{\lambda}>0$ the creep parameters, and $u: \Ts \to \R$ an auxiliary input (\ie, prescribed force). The following parameters are consider for this illustrative example: $m = 0.1$ \si{\kilo \gram}, $k = 10$ Nm$\inv$, $c = 0.1$ Nsm$\inv$, $k_{\lambda} = \alpha_{\lambda,1} = 2$, and $\alpha_{\lambda,2} = 5$.  To highlight the effects of viscoelastic creep, we choose a reference signal with fast-changing dynamics: $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$. Given the input, the simulation results are shown in Figure \ref{fig:C2:creep}. Note that the simulation result presents an unmodified Hookean model \data{Matlab1} in which $k_\lambda = 0$, and the Kelvin-Voigt variant \data{Matlab2}.
 %
-\begin{figure}[!h]
+\begin{figure}[!t]
    %\input{./3_chapters/2_chapter/img/fig_C2_creep.tex}
    \includegraphics*{./pdf/thesis-figure-4-10.pdf}
    \vspace{-0.2cm}
-   \caption{Simulation study of introducing visco-elastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and visco-elastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the visco-elastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
+   \caption{Simulation study of introducing viscoelastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and viscoelastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the viscoelastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
    \vspace{-0.1cm}
    \label{fig:C2:creep}
  \end{figure}
 %
-Clearly, we see a difference between the two trajectories. The original Hookean model oscillates around the quasi-static equilibrium, whereas the Kelvin-Voigt variant slowly converges to the setpoint. Note that this is clearly different than the traditional overdamped response, as the Kelvin-Voight model does allow for oscillations during the smooth transient. %Intuitively, visco-elastic creep can be seen as a mechanical memory that resists changes in deformation.
+Clearly, we see a difference between the two trajectories. The original Hookean model oscillates around the quasi-static equilibrium, whereas the Kelvin-Voigt variant slowly converges to the setpoint. Note that this is clearly different than the traditional overdamped response, as the Kelvin-Voigt model does allow for oscillations during the smooth transient. %Intuitively, visco-elastic creep can be seen as a mechanical memory that resists changes in deformation.
 %
 
 

@@ -46,7 +46,7 @@ In this work, the nearly incompressible Yeoh constitutive model for hyperelastic
 \label{eq:C3:psi_model_yeoh}
 \end{equation}
 %
-where $J_1 = J^{-\tfrac{1}{3}} I_1$ is a modified first strain variant, and $c_1 > 0$ and $c_2$, $c_3$ are the material constants related to stiffness (\si{\newton \per \square \meter}), and the constants $d_{1,2,3} > 0$ related to material compressibility. For consistency with linear elasticity in the limit of small strains, it is necessary that the shear modulus is $\mu = \tfrac{E_0}{2(1+\nu_0)} = 2 c_1$ and the bulk modulus is $\kappa = \tfrac{E_0}{3(1-\nu_0)} = \tfrac{2}{d_1}$ \cite{Holzapfel2002,Kim2018} where $E_0 > 0$ the Young's modulus and $-1 < \nu_0 < 0.5$ the Poisson's ratio. %The Yeoh model has the potential to considerably decrease the requirement for extensive material testing. As the model depends solely on $J_1$, the material parameters can be obtained solely from a uniaxial tension tests \cite{Renaud2011}. 
+where $J_1 = J^{-\tfrac{1}{3}} I_1$ is a modified first strain variant, and $c_1 > 0$ and $c_2$, $c_3$ are the material constants related to stiffness (\si{\newton \per \square \meter}), and the constants $d_{1,2,3} > 0$ related to material compressibility. For consistency with linear elasticity in the limit of small strains, it is necessary that the shear modulus is $\mu = \tfrac{E_0}{2(1+\nu_0)} = 2 c_1$ and the bulk modulus is $\kappa = \tfrac{E_0}{3(1-\nu_0)} = \tfrac{2}{d_1}$ where $E_0$ the Young's modulus and $\nu_0$ the Poisson's ratio \cite{Holzapfel2002,Kim2018}. %The Yeoh model has the potential to considerably decrease the requirement for extensive material testing. As the model depends solely on $J_1$, the material parameters can be obtained solely from a uniaxial tension tests \cite{Renaud2011}. 
 %To relate strains to stress given the model \eqref{eq:C3:psi_model_yeoh}, we require the Piolla stress measure. The second Piola- stress of a constitutive material can be calculated by differentiating the strain energy function with respect to the Lagrangian strain tensor \cite{Renaud2011,Kim2018}:
 
 % \begin{equation}
@@ -166,26 +166,26 @@ where $\sigmaB: \mathcal{V}e \to P{k}$ represents the isoparametric mapping from
 Finally, by substitution of the spatial interpolations of the displacement $\dB \approx \NB^e \xB^e$ and virtual displacements $\delta \dB \approx \NB^e\delta \xB^e$, we can reformulate the residual in \eqref{eq:C3:residual_scalar} as follows
 %
 \begin{align}
-\vec{r}	& \approx \sum_{e=1}^{n_e} ({\delta \xB}^e)^\top \left(\int_{\mathcal{V}_e} \BB_e(\x^e)^\top \underline{\ten{S}}_e(\x^e) \; dV  - \int_{\mathcal{V}_e} \NB^{e} \fB_{\textrm{b}} \; dV  - \int_{\p \mathcal{V}_e} \NB^{e} \fB_{\textrm{t}} \; dS \right), \notag \\[0.5em]
+r & \approx \sum_{e=1}^{n} ({\delta \xB}^e)^\top \left(\int_{\mathcal{V}_e} \BB_e(\x^e)^\top \underline{\ten{S}}_e(\x^e) \; dV  - \int_{\mathcal{V}_e} \NB^{e} \fB_{\textrm{b}} \; dV  - \int_{\p \mathcal{V}_e} \NB^{e} \fB_{\textrm{t}} \; dS \right), \notag \\[0.5em]
 & = {\delta \x}^\top \left( \fB_{\textrm{int}}(\xB) - \fB_{\textrm{ext}} \right),
 \end{align}
 %
 where $\x$ and $\delta \x$ are the global nodal displacement and the global nodal virtual displacement vectors, and $\BB_e$ and $\underline{\ten{S}}_e$ the elemental strain-displacement matrix and Piolla stress tensor, respectively. The derivation of these elemental matrices is found Appendix \ref{app:C3:straindisplacement} which follows the work of Kim et al. \cite{Kim2018}. Since the entries of the displacement variation ${\delta \x}$ are zero at nodes where displacement is prescribed (\ie, fixed DoFs), we may consider an alternative form, the residual force vector, in which the virtual displacements are omitted by only regarding the free DoFs:
 %
 \begin{equation}
-\RB(\x) = \fB_{\textrm{int}}(\x) - \fB_{\textrm{ext}},
+\rB(\x) = \fB_{\textrm{int}}(\x) - \fB_{\textrm{ext}},
 \label{eq:residual}
 \end{equation}
 %
 
-The static equilibrium of the structure can be determined by setting $\RB(\x)$, as given in \eqref{eq:residual}, equal to the zero vector. To obtain this equilibrium state, the Newton-Raphson method can be utilized through iterative calculation of a linear system \cite{Gain2013Dec,Kim2018,Holzapfel2002}:
+The static equilibrium of the structure can be determined by setting $\rB(\x)$, as given in \eqref{eq:residual}, equal to the zero vector. To obtain this equilibrium state, the Newton-Raphson method can be utilized through iterative calculation of a linear system \cite{Gain2013Dec,Kim2018,Holzapfel2002}:
 %
 \begin{align}
-\KB_T^{(i)} \Delta \x^{(i)} & = \RB^{(i)}, \notag \\[0.25em]
+\KB_T^{(i)} \Delta \x^{(i)} & = \rB^{(i)}, \notag \\[0.25em]
 \x^{(i+1)} & = \x^{(i)} + \Delta \x^{(i)}, \notag
 \end{align}
 %
-where the subscript $(i)$ denotes the iteration steps, while $\x^{(i)}$, $\RB^{(i)} := \RB(\x^{(i)})$, and $\KB_T^{(i)}:=\left[\tfrac{\p \RB}{\p \x_1} \; \hdots \; \tfrac{\p \RB}{\p \x_n} \right]_{\x = \x^{(i)}}$ represent the updated displacement vector, the residual force vector, and the evaluated tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, we refer \cite{Renaud2011}, whose approach is outlined in Appendix \ref{app:C3:yeohmodel}.
+where the subscript $(i)$ denotes the iteration steps, while $\x^{(i)}$, $\rB^{(i)} := \rB(\x^{(i)})$, and $\KB_T^{(i)}:=\left[\tfrac{\p \rB}{\p \x_1} \; \hdots \; \tfrac{\p \rB}{\p \x_n} \right]_{\x = \x^{(i)}}$ represent the updated displacement vector, the residual force vector, and the evaluated tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, we refer \cite{Renaud2011}, whose approach is outlined in Appendix \ref{app:C3:yeohmodel}.
 
 % \begin{example}[Hyper-elastic uniaxial tension]
 % %Before continuing

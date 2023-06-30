@@ -1,5 +1,8 @@
 \begin{thebibliography}{}
 
+\bibitem[Ton, ]{Tonkens2020}
+
+
 \bibitem[Bib, a]{BibEntryPuma2022Sep}
 {PUMA. The Leading Edge in Robotic Technology}.
 \newblock [Online; accessed 15. Sep. 2022], url:
@@ -98,6 +101,12 @@ Baaij, T., Holkenborg, M.~K., St{\ifmmode\ddot{o}\else\"{o}\fi}lzle, M.,
 \newblock {Learning 3D shape proprioception for continuum soft robots with
   multiple magnetic sensors}.
 \newblock {\em Soft Matter}, 19(1):44--56.
+
+\bibitem[Bao et~al., 2018]{Bao2018Jun}
+Bao, G., Fang, H., Chen, L., Wan, Y., Xu, F., Yang, Q., and Zhang, L. (2018).
+\newblock {Soft Robotics: Academic Insights and Perspectives Through
+  Bibliometric Analysis}.
+\newblock {\em Soft Robotics}, 5(3):229--241.
 
 \bibitem[Bartlett et~al., 2015a]{Bartlett2015}
 Bartlett, N.~W., Tolley, M.~T., Overvelde, J. T.~B., Weaver, J.~C., Mosadegh,
@@ -1705,11 +1714,6 @@ Tolley, M.~T., Shepherd, R.~F., Mosadegh, B., Galloway, K.~C., Wehner, M.,
   Karpelson, M., Wood, R.~J., and Whitesides, G.~M. (2014b).
 \newblock {A Resilient, Untethered Soft Robot}.
 \newblock {\em Soft Robotics}, 1(3):213--223.
-
-\bibitem[Tonkens et~al., 2020]{Tonkens2020}
-Tonkens, S., Lorenzetti, J., and Pavone, M. (2020).
-\newblock {Soft Robot Optimal Control Via Reduced Order Finite Element Models}.
-\newblock {\em ArXiv e-prints}.
 
 \bibitem[Tonkens et~al., 2021]{Tonkens2021May}
 Tonkens, S., Lorenzetti, J., and Pavone, M. (2021).
