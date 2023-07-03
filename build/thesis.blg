@@ -27,24 +27,15 @@ Warning--entry type for "Markiewicz1973" isn't style-file defined
 --line 3009 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
 --line 3121 of file MyBib.bib
-You're missing a field name---line 3534 of file MyBib.bib
- : 
- : %  author = {Tonkens, Sander and Lorenzetti, Joseph and Pavone, Marco},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3565 of file MyBib.bib
+--line 3556 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4165 of file MyBib.bib
+--line 4156 of file MyBib.bib
+Warning--I didn't find a database entry for "Tonkens2020"
 Warning--I didn't find a database entry for "Loria2015Jun"
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
-Warning--to sort, need author or key in Tonkens2020
-Warning--empty author in Tonkens2020
-Warning--empty year in Tonkens2020
-Warning--empty title in Tonkens2020
-Warning--empty journal in Tonkens2020
 Warning--empty year in BibEntryPuma2022Sep
 Warning--empty year in BibEntryStanford2022Sep
 Warning--can't use both volume and number fields in Bendsoe2003
@@ -65,45 +56,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 325 entries,
+You've used 324 entries,
             1935 wiz_defined-function locations,
             2404 strings with 71859 characters,
-and the built_in function-call counts, 146952 in all, are:
-= -- 14369
+and the built_in function-call counts, 146735 in all, are:
+= -- 14352
 > -- 7106
 < -- 183
 + -- 2517
 - -- 2478
-* -- 12952
-:= -- 25236
-add.period$ -- 1011
-call.type$ -- 325
-change.case$ -- 2842
-chr.to.int$ -- 296
-cite$ -- 355
-duplicate$ -- 5177
-empty$ -- 9596
+* -- 12930
+:= -- 25209
+add.period$ -- 1010
+call.type$ -- 324
+change.case$ -- 2838
+chr.to.int$ -- 295
+cite$ -- 348
+duplicate$ -- 5164
+empty$ -- 9573
 format.name$ -- 2912
-if$ -- 28732
+if$ -- 28691
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 314
-newline$ -- 1619
+missing$ -- 313
+newline$ -- 1616
 num.names$ -- 966
-pop$ -- 2550
+pop$ -- 2537
 preamble$ -- 1
-purify$ -- 2864
+purify$ -- 2859
 quote$ -- 0
-skip$ -- 3979
+skip$ -- 3971
 stack$ -- 0
-substring$ -- 10308
+substring$ -- 10295
 swap$ -- 874
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1916
-warning$ -- 27
+type$ -- 1910
+warning$ -- 22
 while$ -- 1147
 width$ -- 0
-write$ -- 4198
-(There was 1 error message)
+write$ -- 4192
+(There were 35 warnings)

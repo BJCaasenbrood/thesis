@@ -1,0 +1,54 @@
+\section{Mixing truncation: low-order control applied to high-order models for soft robots}
+In the previous section, we made the assumption that the truncation order $k$ of both the dynamic system and the controller are identical. However, in practical scenarios, this is never the case. Moreover, soft robots can be classified as infinite-dimensional systems that never be accurately matched by a finite state description. This brings forth several issues regarding the selection of an appropriate truncation controller and the potential consequences of an unsuitable truncation choice, such as a deterioration in control performance or even instability.
+
+As for the actuation map, we propose $\mat{G}_k = \blkdiag{\mat{I}_{k}, \mat{O}_{30-k}}$. Hence, for 
+
+
+\begin{figure*}[!t]
+    \centering
+    \vspace{-3mm}
+    %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmarm.tex}
+    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-13.pdf}
+    \vspace{-9mm}
+    \caption{Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball). }
+    \label{fig:C3:multilink_3D}
+  \end{figure*}
+
+  \afterpage{
+    \renewcommand\arraystretch{1.15}
+      \begin{table}[t]
+        \vspace{-0.25cm}
+        \setlength\tabcolsep{0.44em}
+        \caption{Error values of in steady-state condition for the energy-based controller for increasing model truncation $k$. Note that as the value of $k$ increases, the accuracy of the backbone estimate improves. However, for the tip error, we may not observe a consistent, monotonic trend with increasing $k$. }
+        \label{tab:C3:EX3:error} \centering
+        \rowcolors{0}{}{blue!5}
+        \begin{tabular}{l||cccccccc}
+          \hline
+          Truncation & $k=1$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k=6$ & $k=7$ & $k=8$ \\
+          \hline 
+          \hline
+          Tip error (mm) & 14.68 & 2.36 & 0.73 & 0.65 & 0.46 & 0.78 & 0.65 & 0.54\\
+          Curve error & 118\% & 16.1\% & 14.2\% & 8.34\% & 5.31\% & 4.53\% & 4.24\% & 4.01\% \\
+          \hline
+        \end{tabular}
+        \end{table}
+
+  \begin{figure}[!t]
+    \centering
+    %\input{./fig/fig_infdim_gamma.tex} 
+    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-14.pdf}
+    \caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Notice that the relative difference in end-effector trajectories $\gammaB_L$ for increasing truncation order $k$ vanishes for $k > 3$. }
+    %\vspace{-0.2cm}
+    \label{fig:C3:EX3:gamma}
+    \end{figure}
+
+    \begin{figure}[!t]
+      \centering
+      %\input{./fig/fig_infdim_gamma.tex} 
+      \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-15.pdf}
+      \caption{Root mean square error of backbone between high-order model and low-order observer. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. }
+      %\vspace{-0.2cm}
+      \label{fig:C3:EX3:backbone_convergence}
+      \end{figure}
+        \clearpage
+        }

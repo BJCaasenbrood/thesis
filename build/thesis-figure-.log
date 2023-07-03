@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  21 JUN 2023 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  3 JUL 2023 14:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -416,6 +416,20 @@ Package: relsize 2013/03/29 ver 4.1
 \c@algocfline=\count303
 \c@algocfproc=\count304
 \c@algocf=\count305
+
+
+/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty:2478: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2478 \newcounter{algocf}[\algocf@within]
+                                          %        % counter is numbered wit...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 \algocf@algoframe=\box72
 \algocf@algobox=\box73
 ) (/usr/share/texlive/texmf-dist/tex/latex/accents/accents.sty
@@ -1254,8 +1268,7 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \c@TermNum=\count451
 \c@ContNum=\count452
 \c@numfootnote=\count453
-) (./src/mathematics.tex) (./src/vectors.tex) (./src/review.tex
-(/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+) (./src/mathematics.tex) (./src/vectors.tex) (./src/review.tex (/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks61
 \SOUL@lasttoken=\toks62
@@ -1275,7 +1288,8 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \pgfplots@tmpa=\dimen401
 \c@pgfplots@coordindex=\count454
 \c@pgfplots@scanlineindex=\count455
- (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
 \c@pgfplotsarray@tmp=\count456
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
 \c@pgfplotstable@counta=\count457
@@ -1430,89 +1444,48 @@ LaTeX Info: Redefining \nameref on input line 15.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(./fig/fig_C3_wachpress.tex
-<./fig//fig_C3_wachpress-1.png, id=7, 557.08125pt x 557.08125pt>
-File: ./fig//fig_C3_wachpress-1.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-1.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-1.png  used on input line 28.
-(pdftex.def)             Requested size: 203.36272pt x 203.36272pt.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 28.
+(./fig/fig_infdim_backbone.tex
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4867.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 28.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4867.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 28.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4867.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 28.
+(Font)              <10> on input line 4867.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 28.
+(Font)              <7> on input line 4867.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 28.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+(Font)              <5> on input line 4867.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4867.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4867.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<./fig//fig_C3_wachpress-2.png, id=8, 548.0475pt x 547.04375pt>
-File: ./fig//fig_C3_wachpress-2.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-2.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-2.png  used on input line 49.
-(pdftex.def)             Requested size: 203.36813pt x 203.00401pt.
-<./fig//fig_C3_wachpress-3.png, id=9, 541.02126pt x 540.0175pt>
-File: ./fig//fig_C3_wachpress-3.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-3.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-3.png  used on input line 70.
-(pdftex.def)             Requested size: 203.36127pt x 202.9263pt.
-<./fig//fig_C3_wachpress-4.png, id=10, 532.99126pt x 532.99126pt>
-File: ./fig//fig_C3_wachpress-4.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-4.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-4.png  used on input line 91.
-(pdftex.def)             Requested size: 203.36832pt x 203.36832pt.
-<./fig//fig_C3_wachpress-5.png, id=11, 528.97626pt x 527.9725pt>
-File: ./fig//fig_C3_wachpress-5.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-5.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-5.png  used on input line 112.
-(pdftex.def)             Requested size: 203.36995pt x 202.92764pt.
-<./fig//fig_C3_wachpress-6.png, id=12, 523.9575pt x 523.9575pt>
-File: ./fig//fig_C3_wachpress-6.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-6.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-6.png  used on input line 133.
-(pdftex.def)             Requested size: 203.35922pt x 203.35922pt.
-<./fig//fig_C3_wachpress-7.png, id=13, 519.9425pt x 519.9425pt>
-File: ./fig//fig_C3_wachpress-7.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-7.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-7.png  used on input line 154.
-(pdftex.def)             Requested size: 203.36385pt x 203.36385pt.
-<./fig//fig_C3_wachpress-8.png, id=14, 516.93124pt x 516.93124pt>
-File: ./fig//fig_C3_wachpress-8.png Graphic file (type png)
-<use ./fig//fig_C3_wachpress-8.png>
-Package pdftex.def Info: ./fig//fig_C3_wachpress-8.png  used on input line 175.
-(pdftex.def)             Requested size: 203.36133pt x 203.36133pt.
- [1
+) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig//fig_C3_wachpress-1.png (PNG copy)> <./fig//fig_C3_wachpress-2.png (PNG copy)> <./fig//fig_C3_wachpress-3.png (PNG copy)> <./fig//fig_C3_wachpress-4.png (PNG copy)> <./fig//fig_C3_wachpress-5.png (PNG copy)> <./fig//fig_C3_wachpress-6.png (PNG copy)> <./fig//fig_C3_wachpress-7.png (PNG copy)> <./fig//fig_C3_wachpress-8.png (PNG copy)>]) (build/thesis-figure-.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (build/thesis-figure-.aux) ) 
 Here is how much of TeX's memory you used:
- 56966 strings out of 478287
- 1325758 string characters out of 5849289
- 1872316 words of memory out of 5000000
- 74191 multiletter control sequences out of 15000+600000
- 491338 words of font info for 50 fonts, out of 8000000 for 9000
+ 56885 strings out of 478287
+ 1323485 string characters out of 5849289
+ 2550225 words of memory out of 5000000
+ 74123 multiletter control sequences out of 15000+600000
+ 482517 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,10n,136p,786b,2322s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on build/thesis-figure-.pdf (1 page, 507228 bytes).
+ 115i,10n,136p,786b,1945s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
+Output written on build/thesis-figure-.pdf (1 page, 61666 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

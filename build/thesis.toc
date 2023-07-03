@@ -44,38 +44,39 @@
 \contentsline {subsection}{\numberline {3.4.3}Bending soft actuator -- PneuNet inspired}{55}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Solutions for varying material parameters}{56}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}Conclusion}{58}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Dynamic modeling of soft robots -- PCC case}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{62}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pneumatic soft continuum manipulator}{65}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Generalized models for soft manipulators}{66}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Piecewise curve kinematics}{68}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Piecewise curve dynamics using Euler-Lagrange}{74}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Overall dynamic model}{76}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Extension to multi-link systems}{77}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Accelerated computation of PDE-like systems}{78}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Parameter identification}{80}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Finite element method and hyper-elasticity}{80}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Hyperelasticity in joint space}{83}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{86}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{88}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Overview of experimental platform}{89}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{90}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Conclusion}{106}{section.4.10}%
-\contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{107}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{108}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Generalized models for soft manipulators}{109}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Preliminaries on geometric Cosserat theory}{109}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Local strain and velocity}{111}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Finite-dimensional projection}{114}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Reduced-order kinematics}{116}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Reduced-order dynamics using Newton-Euler}{117}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Tendon and fluidic actuation}{121}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Port-Hamiltonian formulation}{121}{subsection.5.2.7}%
-\contentsline {section}{\numberline {5.3}Energy-based controller for tasks on SE(3)}{122}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Simulation studies of bio-inspired soft robots}{123}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Soft robot manipulator inspired by octopus' tentacle}{124}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Multi-link soft robot inspired by the elephant's trunk}{127}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Conclusion}{130}{section.5.5}%
+\contentsline {chapter}{\numberline {4}Dynamic modeling of soft robots -- PCC case}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{60}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pneumatic soft continuum manipulator}{63}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Generalized models for soft manipulators}{64}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Piecewise curve kinematics}{66}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Piecewise curve dynamics using Euler-Lagrange}{72}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Overall dynamic model}{74}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Extension to multi-link systems}{75}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Accelerated computation of PDE-like systems}{76}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Parameter identification}{78}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Finite element method and hyper-elasticity}{78}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Hyperelasticity in joint space}{81}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{84}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{86}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Overview of experimental platform}{87}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{88}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Conclusion}{104}{section.4.10}%
+\contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{105}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{106}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Generalized models for soft manipulators}{107}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Preliminaries on geometric Cosserat theory}{107}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Local strain and velocity}{109}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Finite-dimensional projection}{112}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Reduced-order kinematics}{114}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Reduced-order dynamics using Newton-Euler}{115}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Tendon and fluidic actuation}{119}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Port-Hamiltonian formulation}{119}{subsection.5.2.7}%
+\contentsline {section}{\numberline {5.3}Energy-based controller for tasks on SE(3)}{120}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Simulation studies of bio-inspired soft robots}{121}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Soft robot manipulator inspired by octopus' tentacle}{122}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Multi-link soft robot inspired by the elephant's trunk}{125}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Mixing truncation: low-order control applied to high-order models for soft robots}{128}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Conclusion}{129}{section.5.6}%
 \contentsline {chapter}{\numberline {6}\texttt {Sorotoki}: a MATLAB toolkit for soft robots}{133}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Introduction}{134}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Problem formulation}{134}{subsection.6.1.1}%
@@ -120,7 +121,7 @@
 \contentsline {chapter}{\numberline {E}Appendices to Chapter 6}{225}{appendix.E}%
 \contentsline {section}{\numberline {E.1}Newmark-$\beta $ solver}{225}{section.E.1}%
 \vspace \bigskipamount 
-\contentsline {chapter}{Bibliography}{227}{section*.109}%
-\contentsline {chapter}{Acknowledgements}{247}{appendix*.111}%
-\contentsline {chapter}{List of publications}{251}{appendix*.112}%
-\contentsline {chapter}{Curriculum Vitae}{255}{appendix*.113}%
+\contentsline {chapter}{Bibliography}{227}{section*.113}%
+\contentsline {chapter}{Acknowledgements}{247}{appendix*.115}%
+\contentsline {chapter}{List of publications}{251}{appendix*.116}%
+\contentsline {chapter}{Curriculum Vitae}{255}{appendix*.117}%
