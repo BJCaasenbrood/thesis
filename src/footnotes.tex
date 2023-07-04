@@ -1,5 +1,5 @@
 \makeatletter
-
+\newlength{\offsetheight} 
 \renewcommand\@makefntext[1]{%
 \setlength\parindent{1em}%
 \noindent
@@ -14,27 +14,29 @@
   \endgroup
 }
 
-\newcommand{\thumbimageeven}[2]{
+\newcommand{\thumbimageeven}[3]{
+    \setlength{\offsetheight}{#3}
     \begin{tikzpicture}[remember picture, overlay]
             \node[text=black,font=\bfseries] at ($%
                 (current page.south west)-%
-                (-0.15*\thumbheight-2*\thumbsep,-\thumbheight/2-\thumbsep)%
+                (-0.33*\thumbheight-\thumbheight/2,-\thumbheight*0.85-\thumbsep - \offsetheight)%
                 $) {#1};
-            \node[text=black,font=\bfseries] at ($%
+            \node[text=black,font=\scriptsize] at ($%
                 (current page.south west)-%
-                (-0.15*\thumbheight-\thumbheight/2,-\thumbheight/2-\thumbsep)%
+                (-0.33*\thumbheight-\thumbheight/2,-\thumbheight*0.85+12pt - \offsetheight)%
                 $) {#2};    
     \end{tikzpicture}}
 
-\newcommand{\thumbimageodd}[2]{
+\newcommand{\thumbimageodd}[3]{
+    \setlength{\offsetheight}{#3}
       \begin{tikzpicture}[remember picture, overlay]
               \node[text=black,font=\bfseries] at ($%
                   (current page.south east)-%
-                  (0.15*\thumbheight+\thumbheight/2,-\thumbheight*0.5-\thumbsep)%
+                  (0.33*\thumbheight+\thumbheight/2,-\thumbheight*0.85-\thumbsep - \offsetheight)%
                   $) {#1};
               \node[text=black,font=\scriptsize] at ($%
                   (current page.south east)-%
-                  (0.15*\thumbheight+\thumbheight/2,-\thumbheight*0.5+12pt)%
+                  (0.33*\thumbheight+\thumbheight/2,-\thumbheight*0.85+12pt - \offsetheight)%
                   $) {#2};    
       \end{tikzpicture}}
       

@@ -346,7 +346,7 @@ It is noteworthy that the controller above uses the command \code{shp.isContact}
     \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-29-2.pdf}
     %\input{./fig/fig_dellasantina_true.tex} \\[0.35em]
     %\input{./fig/fig_dellasantina_simu.tex}
-    \caption{(top) The experimental results presented in the work of Della Santina et al. \cite{DellaSantina2020Jan} show a six-link soft manipulator controlled by the control law described in \eqref{eq:C5:dellasantina_controller}. The manipulator is in contact with a static environment. The controller first ensures that the soft robot approaches the environment (Phase 1: Approach) and then follows the rigid wavy surface (Phase 2: Explore). (bottom)  The numerical simulations performed using the \textit{Sorotoki} toolkit are inspired by the work of Della Santina et al. \cite{DellaSantina2020Jan}. In the simulation, the active setpoints are denoted by (\textcolor{Matlab2}{$\bullet$}) and the de-activated setpoints are denoted by (\textcolor{gray}{$\bullet$}). The end-effector trajectory is shown in \data{magenta} and the environment is shown in \data{Matlab1}. The results of the simulation truthfully reflect the approaching and surface tracking behavior as seen in the experiments.}
+    \caption{\small (top) The experimental results presented in the work of Della Santina et al. \cite{DellaSantina2020Jan} show a six-link soft manipulator controlled by the control law described in \eqref{eq:C5:dellasantina_controller}. The manipulator is in contact with a static environment. The controller first ensures that the soft robot approaches the environment (Phase 1: Approach) and then follows the rigid wavy surface (Phase 2: Explore). (bottom)  The numerical simulations performed using the \textit{Sorotoki} toolkit are inspired by the work of Della Santina et al. \cite{DellaSantina2020Jan}. In the simulation, the active setpoints are denoted by (\textcolor{Matlab2}{$\bullet$}) and the de-activated setpoints are denoted by (\textcolor{gray}{$\bullet$}). The end-effector trajectory is shown in \data{magenta} and the environment is shown in \data{Matlab1}. The results of the simulation truthfully reflect the approaching and surface tracking behavior as seen in the experiments.}
     \label{fig:C5:dellasantina_experiment}
     \vspace{-3mm}
 \end{sidewaysfigure*}
@@ -358,7 +358,7 @@ It is noteworthy that the controller above uses the command \code{shp.isContact}
     %\vspace{-20mm}
     \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-30.pdf}
     %\input{./fig/fig_dellasantina_simu_EF.tex}
-    \caption{The end-effector trajectories of the six-link soft manipulator, where $\{$\ldata{Matlab1}, \ldata{Matlab2}$\}$ denote the horizontal and vertical position, respectively. The setpoints assigned by the controller are indicated by the dashed lines. Note that at $t \approx 0.88$ (s), the point of contact, the controller switches setpoint. }
+    \caption{\small The end-effector trajectories of the six-link soft manipulator, where $\{$\ldata{Matlab1}, \ldata{Matlab2}$\}$ denote the horizontal and vertical position, respectively. The setpoints assigned by the controller are indicated by the dashed lines. Note that at $t \approx 0.88$ (s), the point of contact, the controller switches setpoint. }
     \label{fig:C5:dellasantina_endeffector}
     \vspace{-3mm}
 \end{figure}
@@ -368,7 +368,7 @@ It is noteworthy that the controller above uses the command \code{shp.isContact}
     %\vspace{-20mm}
     \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-31.pdf}
     %\input{./fig/fig_dellasantina_simu_Q.tex}
-    \caption{State evolutions of the six-link soft manipulator, where the states represent the planar curvature of each individual soft link. }
+    \caption{\small State evolutions of the six-link soft manipulator, where the states represent the planar curvature of each individual soft link. }
     \label{fig:C5:dellasantina_states}
     \vspace{-3mm}
 \end{figure}
@@ -378,7 +378,7 @@ It is noteworthy that the controller above uses the command \code{shp.isContact}
     %\vspace{-20mm}
     \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-32.pdf}
     %\input{./fig/fig_dellasantina_simu_U.tex}
-    \caption{The control inputs $\tauB$ in (\si{\milli \newton \meter}) produced by the control law in \eqref{eq:C5:dellasantina_controller} exhibit a significant peak at the point of contact. This is due to two factors: $(i)$ the sudden change of setpoint and $(ii)$ the switch in control strategy to accommodate for compliance.}
+    \caption{\small The control inputs $\tauB$ in (\si{\milli \newton \meter}) produced by the control law in \eqref{eq:C5:dellasantina_controller} exhibit a significant peak at the point of contact. This is due to two factors: $(i)$ the sudden change of setpoint and $(ii)$ the switch in control strategy to accommodate for compliance.}
     \label{fig:C5:dellasantina_input}
     %\vspace{-3mm}
 \end{figure}
@@ -401,7 +401,7 @@ Given that the \class{Shapes} class has been constructed, we can now tailor the 
     \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-32-2.pdf}
     %\input{./fig/fig_pneunet_modes_plot.tex} \\[0.25em]
     %\input{./fig/fig_pneunet_modes.tex}
-    \caption{(top) The first three DVS modes of the soft PneuNet actuator in vertical hanging condition, where the ordering is $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. (bottom) The respective deformation for each strain mode of the PneuNet actuator. Note that these differ from the DVS basis in Section \ref{sec:C5:femPODbasis}.}
+    \caption{\small (top) The first three DVS modes of the soft PneuNet actuator in vertical hanging condition, where the ordering is $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. (bottom) The respective deformation for each strain mode of the PneuNet actuator. Note that these differ from the DVS basis in Section \ref{sec:C5:femPODbasis}.}
     \label{fig:C5:pneunet_modes_fem}
     \vspace{-3mm}
 \end{figure}
@@ -444,7 +444,7 @@ Given that the \class{Shapes} class has been constructed, we can now tailor the 
     \centering
     \includegraphics*[width=0.8\textwidth]{./pdf/thesis-figure-6-34.pdf}
     %\input{./fig/fig_pneunet_estimate.tex}
-    \caption{Real-time shape estimation using the \class{Shapes} inverse kinematics algorithm in combination with the Data-driven Variable Strain (DVS) basis. The reconstructed backbone curve is depicted in \data{magenta}. Despite the presence of substantial contact forces on the soft actuator, the shape estimation algorithm accurately reflects the behavior of the real soft robotic system. Due to the relatively small state dimension of $\dim(\q) = 3$, the algorithm achieves a bandwidth of +60 \si{\hertz}.}
+    \caption{\small Real-time shape estimation using the \class{Shapes} inverse kinematics algorithm in combination with the Data-driven Variable Strain (DVS) basis. The reconstructed backbone curve is depicted in \data{magenta}. Despite the presence of substantial contact forces on the soft actuator, the shape estimation algorithm accurately reflects the behavior of the real soft robotic system. Due to the relatively small state dimension of $\dim(\q) = 3$, the algorithm achieves a bandwidth of +60 \si{\hertz}.}
     \label{fig:C5:pneunet_estimate_experiment}
     \vspace{-3mm}
 \end{figure}
@@ -454,7 +454,7 @@ Given that the \class{Shapes} class has been constructed, we can now tailor the 
     \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-35.pdf}
     %\input{./fig/fig_pneunet_states.tex}
     %\vspace{-5mm}
-    \caption{Evolution of the state estimations during the PneuNet experiment, where the ordering is given by $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. Note that the joint variables represent the modal coefficients of the DVS basis related to curvature-bending. }
+    \caption{\small Evolution of the state estimations during the PneuNet experiment, where the ordering is given by $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. Note that the joint variables represent the modal coefficients of the DVS basis related to curvature-bending. }
     \label{fig:C5:pneunet_estimate_experiment}
     %\vspace{-5mm}
 \end{figure}

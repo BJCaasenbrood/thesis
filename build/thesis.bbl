@@ -1083,6 +1083,13 @@ Mathew, A.~T., Hmida, I. M.~B., Armanini, C., Boyer, F., and Renda, F. (2022b).
   Geometric Variable-Strain Approach}.
 \newblock {\em IEEE Robotics {\&} Automation Magazine}, pages 2--18.
 
+\bibitem[Mazzolai et~al., 2019]{Mazzolai2019Oct}
+Mazzolai, B., Mondini, A., Tramacere, F., Riccomi, G., Sadeghi, A., Giordano,
+  G., Del~Dottore, E., Scaccia, M., Zampato, M., and Carminati, S. (2019).
+\newblock {Octopus-Inspired Soft Arm with Suction Cups for Enhanced Grasping
+  Tasks in Confined Environments}.
+\newblock {\em Advanced Intelligent Systems}, 1(6):1900041.
+
 \bibitem[McDonald et~al., 2020]{McDonald2020}
 McDonald, K., Rendos, A., Woodman, S., Brown, K.~A., and Ranzani, T. (2020).
 \newblock {Magnetorheological Fluid-Based Flow Control for Soft Robots}.
@@ -1356,6 +1363,12 @@ R{\ifmmode\ddot{o}\else\"{o}\fi}ntgen, W. (1880).
   Form{-} und Volumen{\ifmmode\ddot{a}\else\"{a}\fi}nderungen von
   dielectrischen K{\ifmmode\ddot{o}\else\"{o}\fi}rpern}.
 \newblock {\em Annalen der Physik}, 247:771--786.
+
+\bibitem[Rucker and Iii, 2011]{Rucker2011Jul}
+Rucker, D.~C. and Iii, R. J.~W. (2011).
+\newblock {Statics and Dynamics of Continuum Robots With General Tendon Routing
+  and External Loading}.
+\newblock {\em IEEE Transactions on Robotics}, 27(6):1033--1044.
 
 \bibitem[Runge et~al., 2017]{Runge2017}
 Runge, G., Wiese, M., Gunther, L., and Raatz, A. (2017).
