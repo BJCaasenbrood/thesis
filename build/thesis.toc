@@ -120,8 +120,9 @@
 \contentsline {section}{\numberline {D.3}Derivation of the generalized linear stiffness and damping matrix for continuum robots}{222}{section.D.3}%
 \contentsline {chapter}{\numberline {E}Appendices to Chapter 6}{225}{appendix.E}%
 \contentsline {section}{\numberline {E.1}Newmark-$\beta $ solver}{225}{section.E.1}%
+\contentsline {chapter}{\numberline {F}Hardware information of VEAB pressure control board}{227}{appendix.F}%
 \vspace \bigskipamount 
-\contentsline {chapter}{Bibliography}{227}{section*.113}%
-\contentsline {chapter}{Acknowledgements}{247}{appendix*.115}%
-\contentsline {chapter}{List of publications}{251}{appendix*.116}%
-\contentsline {chapter}{Curriculum Vitae}{255}{appendix*.117}%
+\contentsline {chapter}{Bibliography}{229}{section*.114}%
+\contentsline {chapter}{Acknowledgements}{249}{appendix*.116}%
+\contentsline {chapter}{List of publications}{253}{appendix*.117}%
+\contentsline {chapter}{Curriculum Vitae}{257}{appendix*.118}%
