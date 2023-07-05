@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{293.20866142bp}%
+    \setlength{\unitlength}{347.51566008bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,30 +50,46 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.43504532)%
+  \begin{picture}(1,0.45030259)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.58500969,0.62749671){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\int$}\end{tabular}}}}%
+    \put(0.10508384,0.36504481){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{$\Sigma_{\textrm{softrobot}}$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.06826268,0.19749452){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\large{$G^+$}\end{tabular}}}}%
+    \put(0.28707821,0.36504481){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{$\Sigma_{\textrm{sensor}}$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.07506215,0.64548356){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tmat{M}\,\ddq_r + \tmat{C}\, \dq_r + \tvec{f}\!\grav +  \tvec{f}\!\elastic - \tvec{\delta}$\end{tabular}}}}%
+    \put(0.83210805,0.25709567){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\JB^\top \eB$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.71965429,0.62757821){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$ - \mat{K}_{\vec{\pi}}\,\vec{Y}^\top\vec{e}_r$\end{tabular}}}}%
+    \put(0.81892029,0.15803073){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\ten{N}\,\nabla_{\q}\Psi$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.59435539,0.76314719){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textrm{PBA hyper-variables}\end{tabular}}}}%
+    \put(0.68820387,0.15998261){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny{$\Sigma$}\end{tabular}}}}%
+    \put(0.98253888,0.15770688){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\uB$}\end{tabular}}}}%
+    \put(0.87507275,0.32305615){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\eB$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.19646999,0.37132851){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_{\textrm{beam}, \textrm{true}}$}\end{tabular}}}}%
-    \put(0.21902822,0.31562063){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$(k_{\textrm{true}} \gg k)$}\end{tabular}}}}%
+    \put(0.76082115,0.25973583){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny{$L_1$}\end{tabular}}}}%
+    \put(0.76110623,0.15936549){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny{$L_2$}\end{tabular}}}}%
+    \put(0.59369043,0.15975463){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{$\int$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.61097481,0.89569909){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\Large{$\Sigma_\textrm{sensors}$}\end{tabular}}}}%
+    \put(0.0393451,0.23869569){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\GB_k^+$}\end{tabular}}}}%
+    \put(0.14618484,0.24139028){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\nabla_{\q}\mathcal{H}(\tilde{\q}) - \nabla_{\q}\mathcal{H}_d(\tilde{\q})$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.98753832,0.83614703){\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\q_d, \dq_d, \ddq_d$}\end{tabular}}}}}%
+    \put(0.22946312,0.11146299){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}{$\Sigma_{\textrm{observer}}$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.97832986,0.3422913){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gB_d$\end{tabular}}}}%
-    \put(0.79516347,0.33422835){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\textrm{log}_{\textrm{SE}(3)}$}\end{tabular}}}}%
+    \put(0.85611047,0.3573054){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny{$\Sigma$}\end{tabular}}}}%
+    \put(0.82950021,0.37824507){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\tiny{$-$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{fig_C4_InfD_diagram.pdf}}%
-    \put(0.89932279,0.92384898){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$-$\end{tabular}}}}%
+    \put(0.97707627,0.36080354){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\gammaB_L$}\end{tabular}}}}%
+    \put(0.47414529,0.16015352){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\tilde{\q}$}\end{tabular}}}}%
+    \put(0.46225834,0.24296569){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\gB_d$}\end{tabular}}}}%
+    \put(0.14229693,0.11616364){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\tilde{\q}$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.70475463,0.35773659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{FK}\end{tabular}}}}%
+    \put(0.04939575,0.38936288){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\uB$}\end{tabular}}}}%
+    \put(0.19432453,0.02086389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\textrm{(a)}$\end{tabular}}}}%
+    \put(0.72719783,0.01936298){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\textrm{(b)}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{fig_C4_InfD_diagram.pdf}}%
+    \put(0.01816816,0.08239009){\color[rgb]{0.59607843,0.56862745,0.91764706}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\large{$\Sigma_{\textrm{control}}$}}\end{tabular}}}}%
+    \put(0.55632503,0.08466119){\color[rgb]{0.20784314,0.80392157,0.80392157}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{\large{$\Sigma_{\textrm{observer}}$}}\end{tabular}}}}%
+    \put(0.400357,0.38715206){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small{$\yB$}\end{tabular}}}}%
   \end{picture}%
 \endgroup%

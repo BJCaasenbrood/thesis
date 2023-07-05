@@ -163,17 +163,14 @@ E1  = fem.findElements([0 150 0 2]);
 fem = fem.addMaterialModifier(E1, 5);
 
 % -- add forces and constraints 
-Y  = 'BoxSelect';
-C1 = fem.findEdges(Y,[0   50 0 15]);
-C2 = fem.findEdges(Y,[50  100 0 15]);
-C3 = fem.findEdges(Y,[100 150 0 15]);
-
-fem = fem.addPressure(C1, @(x) Pressure(x,1));
-fem = fem.addPressure(C2, @(x) Pressure(x,2));
-fem = fem.addPressure(C3, @(x) Pressure(x,3));
-
 fem = fem.addGravity();
 fem = fem.addContact(sLine());
+
+Y = 'BoxSelect';
+for i = 1:3
+    Ce = fem.findEdges(Y,[50*(i-1), 50*i, 0, 15]);
+    fem = fem.addPressure(Ce, @(x) Pressure(x,i));
+end
 
 % -- solve dynamics 
 fem = fem.simulate();

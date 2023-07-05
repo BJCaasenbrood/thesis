@@ -4,10 +4,9 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 0_preface/preface.aux
 A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
 The style file: apalike.bst
-A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12216 items from 5000.
+Reallocated field_info (elt_size=4) to 12282 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -18,20 +17,20 @@ Warning--entry type for "Immega1986" isn't style-file defined
 Warning--I'm ignoring Duriez2013's extra "publisher" field
 --line 976 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1740 of file MyBib.bib
+--line 1751 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1747 of file MyBib.bib
+--line 1758 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2536 of file MyBib.bib
+--line 2547 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 3022 of file MyBib.bib
+--line 3046 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3134 of file MyBib.bib
+--line 3158 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3569 of file MyBib.bib
+--line 3600 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4169 of file MyBib.bib
+--line 4200 of file MyBib.bib
 Warning--I didn't find a database entry for "Tonkens2020"
 Warning--I didn't find a database entry for "Loria2015Jun"
 Warning--to sort, need author or key in BibEntryStanford2022Sep
@@ -56,45 +55,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 326 entries,
+You've used 329 entries,
             1935 wiz_defined-function locations,
-            2414 strings with 72385 characters,
-and the built_in function-call counts, 147790 in all, are:
-= -- 14449
-> -- 7172
-< -- 184
-+ -- 2541
-- -- 2502
-* -- 13037
-:= -- 25394
-add.period$ -- 1016
-call.type$ -- 326
-change.case$ -- 2860
-chr.to.int$ -- 297
-cite$ -- 350
-duplicate$ -- 5192
-empty$ -- 9635
-format.name$ -- 2940
-if$ -- 28889
+            2429 strings with 72757 characters,
+and the built_in function-call counts, 148773 in all, are:
+= -- 14543
+> -- 7204
+< -- 186
++ -- 2551
+- -- 2512
+* -- 13113
+:= -- 25571
+add.period$ -- 1025
+call.type$ -- 329
+change.case$ -- 2878
+chr.to.int$ -- 300
+cite$ -- 353
+duplicate$ -- 5234
+empty$ -- 9711
+format.name$ -- 2953
+if$ -- 29080
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 315
-newline$ -- 1626
-num.names$ -- 972
-pop$ -- 2554
+missing$ -- 320
+newline$ -- 1641
+num.names$ -- 981
+pop$ -- 2575
 preamble$ -- 1
-purify$ -- 2881
+purify$ -- 2901
 quote$ -- 0
-skip$ -- 3992
+skip$ -- 4022
 stack$ -- 0
-substring$ -- 10371
-swap$ -- 876
+substring$ -- 10432
+swap$ -- 879
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1922
+type$ -- 1936
 warning$ -- 22
-while$ -- 1154
+while$ -- 1162
 width$ -- 0
-write$ -- 4218
+write$ -- 4256
 (There were 35 warnings)

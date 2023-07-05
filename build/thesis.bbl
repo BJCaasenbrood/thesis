@@ -640,6 +640,11 @@ Hairer, E., Lubich, C., and Wanner, G. (2002).
   Algorithms for Ordinary Differential Equations}}.
 \newblock Springer, Berlin, Germany.
 
+\bibitem[Hairer et~al., 2006]{Hairer2006}
+Hairer, E., Wanner, G., and Lubich, C. (2006).
+\newblock {\em {Geometric Numerical Integration}}.
+\newblock Springer, Berlin, Germany.
+
 \bibitem[Hawkes et~al., 2017]{Hawkes2017}
 Hawkes, E.~W., Blumenschein, L.~H., Greer, J.~D., and Okamura, A.~M. (2017).
 \newblock {A soft robot that navigates its environment through growth}.
@@ -1027,6 +1032,12 @@ Lynch, K.~M. and Park, F.~C. (2017).
 Maas, S.~A., Ellis, B.~J., Ateshian, G.~A., and Weiss, J.~A. (2012).
 \newblock {FEBio: finite elements for biomechanics}.
 \newblock {\em Journal of Biomechanical Engineering}, 134(1):011005.
+
+\bibitem[Magnus, 1954]{Magnus2006Oct}
+Magnus, W. (1954).
+\newblock {On the exponential solution of differential equations for a linear
+  operator}.
+\newblock {\em Communications on Pure and Applied Mathematics}, 7(4):649--673.
 
 \bibitem[Manns et~al., 2018]{Manns2018Jan}
 Manns, M., Morales, J., and Frohn, P. (2018).
@@ -1638,6 +1649,11 @@ Tatlicioglu, E., Walker, I.~D., and Dawson, D.~M. (2007b).
   manipulators}.
 \newblock In {\em {2007 IEEE/RSJ International Conference on Intelligent Robots
   and Systems}}, pages 1485--1490. IEEE.
+
+\bibitem[Taylor, 2010]{Taylor2010Jan}
+Taylor, M. (2010).
+\newblock {\em {Introduction to Lie Groups}}.
+\newblock Mathematics Department, The University of North Carolina.
 
 \bibitem[Tedrake, 2022a]{Russ2022}
 Tedrake, R. (2022a).

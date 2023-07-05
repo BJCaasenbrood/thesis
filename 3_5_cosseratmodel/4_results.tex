@@ -42,13 +42,14 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \end{table}
 %
 \begin{example}[Solution convergence for increasing modal order]
+  \label{ex:C3:convergence}
  Before investigating the performance of the controller, we study the affects of the truncation order $k$. Initially, it can be difficult find the optimal value for $k$ that balances precision and computational speed. Consider the case where we subject the soft robot by a external tip wrench $\tau_\textrm{ext}(t) = [J]_k^\top \left(0,0,\mB(t),0,0,0 \right)^\top$ given by a predefined moment $\mB(t) = 75 \cdot \textrm{erf}(t)$ in \si{\newton \milli \meter}. The applied moment causes a spiraling deformation of the soft arm, as can be seen in Figure \ref{fig:C3:EX2:mode_convergence_3d}. Observe that the soft arm undergoes a rather complex nonlinear three-dimensional deformation. Now, we incrementally increase the model truncation parameter $k \in \{1,...,10\}$ and investigate the convergence of the solutions $\gammaB_L$ (\ie, the end-effector location). The numerical results are shown in Figure \ref{fig:C3:EX2:mode_convergence}. 
  
 %  \afterpage{
  \begin{figure}[!t]
   \centering
   \includegraphics*[width=1.02\textwidth]{./pdf/thesis-figure-5-4.pdf}
-  \caption{Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $|\vec{m}_u| = 75$ \si{\newton \milli \meter} acting on its end-effector. }
+  \caption{\small Three-dimensional deformation of the soft tentacle due to an external pure-moment wrench of $\lVert \vec{m}_u \rVert = 75$ \si{\newton \milli \meter} acting on its end-effector. }
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_3d}
   \end{figure}
@@ -57,7 +58,7 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \centering
   %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge.tex} 
   \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-5.pdf}
-  \caption{Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the relative difference in end-effector trajectories $\gammaB_L$ for increasing truncation order $k$ vanishes for $k > 3$. }
+  \caption{\small Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal truncation order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8},\ldatanum{Matlab9}{9},\ldatanum{Matlab10}{10}\}$. Notice that the relative difference in end-effector trajectories $\gammaB_L$ for increasing truncation order $k$ vanishes for $k > 3$. }
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence}
   \end{figure}
@@ -66,7 +67,7 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
   \centering
   %\input{./3_chapters/3_chapter/img/fig_C3_modes_converge_bench.tex} 
   \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-6.pdf}
-  \caption{The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between CPU simulation time and finite horizon time (\ie, $T_{\textrm{cpu}}/T$) against the truncation order $k$, which shows all simulations achieve real-time computation. }
+  \caption{\small The benchmark results of the soft tentacle subjected to a tip-load for increasing model order $k$. (left) The root mean square error (RMSE) in (\ldatanum{Matlab1}{}) and absolute error in (\ldatanum{Matlab2}{}) for increasing $k$. Notice that the errors converge to an error band of about $3.25$ \si{\milli \meter}. (right) The ratio between CPU simulation time and finite horizon time (\ie, $T_{\textrm{cpu}}/T$) against the truncation order $k$, which shows all simulations achieve real-time computation. }
   %\vspace{-0.2cm}
   \label{fig:C3:EX2:mode_convergence_bench}
   \end{figure}
@@ -98,7 +99,7 @@ For the second simulation run, we modified the control gains to highlight an int
     %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmsoft.tex}
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-7.pdf}
     \vspace{-1mm}
-    \caption{Three-dimensional evolution of the soft robot manipulators, converging to the desired set-point $g_d \in \SE{3}$ (indicated by the pink ball). Observe that the morphological motion that arises due to the energy-based controller has a close similarity to those an octopus' tentacle. }
+    \caption{\small Three-dimensional evolution of the soft robot manipulators, converging to the desired set-point $g_d \in \SE{3}$ (indicated by the pink ball). Observe that the morphological motion that arises due to the energy-based controller has a close similarity to those an octopus' tentacle. }
     \label{fig:octarm1}
   \end{figure*}
   \vspace{2mm}
@@ -107,7 +108,7 @@ For the second simulation run, we modified the control gains to highlight an int
     \vspace{-20mm}
     %\input{./3_chapters/3_chapter/img/fig_C3_states_srmsoft.tex}
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-8.pdf}
-    \caption{The evolution of the modal coefficients and the generalized momenta of the soft robot manipulator. The modal coefficients $\q$ are ordered as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Observe that mainly mode 3 is dominant. \label{fig:octarm1_states}}
+    \caption{\small The evolution of the modal coefficients and the generalized momenta of the soft robot manipulator. The modal coefficients $\q$ are ordered as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Observe that mainly mode 3 is dominant. \label{fig:octarm1_states}}
   \end{figure}
   \clearpage
 }
@@ -119,7 +120,7 @@ For the second simulation run, we modified the control gains to highlight an int
     %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmstiff.tex}
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-9.pdf}
     \vspace{-1mm}
-    \caption{Three-dimensional evolution of the soft robot manipulators, converging to the desired set-point $g_d \in \SE{3}$ (indicated by the pink ball). Observe that a different morphology arises due to higher control gains, \ie, $\lambda_1 = \lambda_2 = 0.1$, which is caused by the controller affecting the structural compliance of the soft robot.}
+    \caption{\small Three-dimensional evolution of the soft robot manipulators, converging to the desired set-point $g_d \in \SE{3}$ (indicated by the pink ball). Observe that a different morphology arises due to higher control gains, \ie, $\lambda_1 = \lambda_2 = 0.1$, which is caused by the controller affecting the structural compliance of the soft robot.}
     \label{fig:octarm2}
 \end{figure*}
 \vspace{2mm}
@@ -127,7 +128,7 @@ For the second simulation run, we modified the control gains to highlight an int
     \centering
     %\input{./3_chapters/3_chapter/img/fig_C3_states_srmstiff.tex}
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-10.pdf}
-    \caption{The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator with the increased controller gains. The modal coefficients $\q$ are ordered as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Observe now that modes $1-3$ are dominant. \label{fig:octarm2_states}}
+    \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator with the increased controller gains. The modal coefficients $\q$ are ordered as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Observe now that modes $1-3$ are dominant. \label{fig:octarm2_states}}
   \end{figure}
   \clearpage
 }
@@ -157,33 +158,13 @@ where $\ten{M}_{\textrm{grip}}$ inertia tensor related to the gripper placed at 
 \begin{equation*}
 \mat{g}_d = \begin{pmatrix} \mat{\Phi}_d & \mat{\gamma}_d \\ \vec{0}_3^\top & 1 \end{pmatrix} \quad \text{with} \quad \mat{\gamma}_d = \begin{pmatrix}  0.125 \\ 0.100 \\ 0.175  \end{pmatrix} \;\;\;\text{and} \;\;\; \PhiB_d = \textrm{Rot}_y\left(\tfrac{1}{4}\pi \right).
 \end{equation*}
-%
-\afterpage{
-  \begin{figure*}[!t]
-    \centering
-    \vspace{-3mm}
-    %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmarm.tex}
-    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-11.pdf}
-    \vspace{-9mm}
-    \caption{Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball). }
-    \label{fig:C3:multilink_3D}
-  \end{figure*}
-  %\vspace{14mm}
-  \begin{figure}[!t]
-    \centering
-    \vspace{-0mm}
-    %\input{./3_chapters/3_chapter/img/fig_C3_states_srmarm.tex}
-    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
-    \caption{The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
-  \end{figure}
-}
 
-The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:multilink_3D} and Figure \ref{fig:C3:multilink_states} which could reach a real-time performance of $\pm65$Hz. Figure \ref{fig:C3:multilink_3D} shows the continuous deformation along the soft robotic body. Figure \ref{fig:C3:multilink_states} shows the trajectories of the modal coefficients $\vec{q}(t)$ and the generalized momenta $\vec{p}(t)$. As can be seen, the end-effector of the soft robot manipulator slowly converges to the desired set-point $\mat{g}_d \in \SE{3}$, even when dealing with piece-wise distributed actuation loads applied to the continuous backbone. To describe the discontinuous actuation profiles, however, higher order modes are required as can be seen in Figure \ref{fig:C3:multilink_states}. This might indicate there exist better tailored compact shape bases for this soft robotic system.
+The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:multilink_3D} and Figure \ref{fig:C3:multilink_states} which could reach a real-time performance of $\pm65$Hz. Figure \ref{fig:C3:multilink_3D} shows the continuous deformation along the soft robotic body, while Figure \ref{fig:C3:multilink_states} shows the trajectories of the modal coefficients $\vec{q}(t)$ and the generalized momenta $\vec{p}(t)$. As can be seen, the end-effector of the soft robot manipulator slowly converges to the desired set-point $\mat{g}_d \in \SE{3}$, even when dealing with piece-wise distributed actuation loads applied to the continuous backbone. To describe the discontinuous actuation profiles, however, higher order modes are required as can be seen in Figure \ref{fig:C3:multilink_states}. This might indicate there exist better tailored compact shape bases for this soft robotic system.
 %
 \begin{table}[t]
-\vspace{0.2cm}
+\vspace{-0.2cm}
 \rowcolors{0}{}{blue!5}
-\caption{Parameters setting for the numerical solver, the soft manipulator by the elephant's trunk, and the energy-based controller.}\label{tab:C3:parameters2} \centering
+\caption{\small Parameters setting for the numerical solver, the soft manipulator by the elephant's trunk, and the energy-based controller.}\label{tab:C3:parameters2} \centering
 \begin{tabular}{l|ccl}
   \hline
   Parameter description & Symbol    & Value    & Unit                     \\
@@ -201,3 +182,24 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
 \end{tabular}
 \end{table}
 %
+\afterpage{
+  \begin{figure*}[!t]
+    \centering
+    %\vspace{-3mm}
+    %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmarm.tex}
+    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-11.pdf}
+    \vspace{-9mm}
+    \caption{\small Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball). }
+    \label{fig:C3:multilink_3D}
+  \end{figure*}
+  %\vspace{14mm}
+  \begin{figure}[!t]
+    \centering
+    \vspace{-0mm}
+    %\input{./3_chapters/3_chapter/img/fig_C3_states_srmarm.tex}
+    \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
+    \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
+    \vfill
+  \end{figure}
+  \clearpage
+}
