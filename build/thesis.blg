@@ -6,7 +6,7 @@ A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
 The style file: apalike.bst
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12282 items from 5000.
+Reallocated field_info (elt_size=4) to 12194 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -14,25 +14,33 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 --line 127 of file MyBib.bib
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
+You're missing a field name---line 231 of file MyBib.bib
+ : 
+ : %  author = {Bartlett, Nicholas W. and Tolley, Michael T. and Overvelde, Johannes T. B. and Weaver, James C. and Mosadegh, Bobak and Bertoldi, Katia and Whitesides, George M. and Wood, Robert J.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 976 of file MyBib.bib
+--line 985 of file MyBib.bib
+You're missing a field name---line 1126 of file MyBib.bib
+ : 
+ : %  author = {Fang, Guoxin and Tian, Yingjun and Yang, Zhi-Xin and Geraedts, Jo M. P. and Wang, Charlie C. L.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1751 of file MyBib.bib
+--line 1762 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1758 of file MyBib.bib
+--line 1769 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2547 of file MyBib.bib
+--line 2567 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 3046 of file MyBib.bib
+--line 3079 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3158 of file MyBib.bib
+--line 3191 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3600 of file MyBib.bib
+--line 3633 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4200 of file MyBib.bib
-Warning--I didn't find a database entry for "Tonkens2020"
-Warning--I didn't find a database entry for "Loria2015Jun"
+--line 4233 of file MyBib.bib
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
 Warning--empty year in BibEntryPuma2022Sep
@@ -55,45 +63,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 329 entries,
+You've used 327 entries,
             1935 wiz_defined-function locations,
-            2429 strings with 72757 characters,
-and the built_in function-call counts, 148773 in all, are:
-= -- 14543
-> -- 7204
-< -- 186
-+ -- 2551
-- -- 2512
-* -- 13113
-:= -- 25571
-add.period$ -- 1025
-call.type$ -- 329
-change.case$ -- 2878
-chr.to.int$ -- 300
-cite$ -- 353
-duplicate$ -- 5234
-empty$ -- 9711
-format.name$ -- 2953
-if$ -- 29080
-int.to.chr$ -- 30
+            2420 strings with 72514 characters,
+and the built_in function-call counts, 147543 in all, are:
+= -- 14433
+> -- 7107
+< -- 187
++ -- 2510
+- -- 2476
+* -- 12980
+:= -- 25353
+add.period$ -- 1020
+call.type$ -- 327
+change.case$ -- 2850
+chr.to.int$ -- 301
+cite$ -- 351
+duplicate$ -- 5209
+empty$ -- 9652
+format.name$ -- 2915
+if$ -- 28855
+int.to.chr$ -- 27
 int.to.str$ -- 0
-missing$ -- 320
-newline$ -- 1641
-num.names$ -- 981
-pop$ -- 2575
+missing$ -- 319
+newline$ -- 1632
+num.names$ -- 975
+pop$ -- 2551
 preamble$ -- 1
-purify$ -- 2901
+purify$ -- 2873
 quote$ -- 0
-skip$ -- 4022
+skip$ -- 4008
 stack$ -- 0
-substring$ -- 10432
-swap$ -- 879
+substring$ -- 10348
+swap$ -- 878
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1936
+type$ -- 1924
 warning$ -- 22
-while$ -- 1162
+while$ -- 1155
 width$ -- 0
-write$ -- 4256
-(There were 35 warnings)
+write$ -- 4232
+(There were 2 error messages)

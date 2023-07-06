@@ -532,6 +532,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
@@ -2038,10 +2039,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.st
 INPUT /usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 OUTPUT build/thesis-figure-.pdf
-INPUT ./fig/fig_infdim_backbone.tex
-INPUT ./fig/fig_infdim_backbone.tex
-INPUT ./fig/fig_infdim_backbone.tex
-INPUT ./fig/fig_infdim_backbone.tex
+INPUT ./fig/fig_mesh_distribution.tex
+INPUT ./fig/fig_mesh_distribution.tex
+INPUT ./fig/fig_mesh_distribution.tex
+INPUT ./fig/fig_mesh_distribution.tex
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr5.tfm
 INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
@@ -2079,7 +2080,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT build/thesis-figure-.aux
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb

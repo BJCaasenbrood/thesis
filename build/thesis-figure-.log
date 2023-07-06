@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  3 JUL 2023 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  6 JUL 2023 07:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1444,48 +1444,48 @@ LaTeX Info: Redefining \nameref on input line 15.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(./fig/fig_infdim_backbone.tex
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4867.
+(./fig/fig_mesh_distribution.tex
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 99.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4867.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 99.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4867.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 99.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4867.
+(Font)              <10> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4867.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4867.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4867.
+(Font)              <5> on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4867.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (build/thesis-figure-.aux) ) 
 Here is how much of TeX's memory you used:
- 56885 strings out of 478287
- 1323485 string characters out of 5849289
- 2550225 words of memory out of 5000000
- 74123 multiletter control sequences out of 15000+600000
+ 56899 strings out of 478287
+ 1323878 string characters out of 5849289
+ 1857638 words of memory out of 5000000
+ 74137 multiletter control sequences out of 15000+600000
  482517 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,10n,136p,786b,1945s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
-Output written on build/thesis-figure-.pdf (1 page, 61666 bytes).
+ 115i,18n,136p,786b,2091s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
+Output written on build/thesis-figure-.pdf (1 page, 29477 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 22 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

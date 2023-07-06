@@ -455,10 +455,10 @@ Given that the \class{Shapes} class has been constructed, we can now tailor the 
     %\input{./fig/fig_pneunet_states.tex}
     %\vspace{-5mm}
     \caption{\small Evolution of the state estimations during the PneuNet experiment, where the ordering is given by $\{$\ldata{Matlab1},\ldata{Matlab2},\ldata{Matlab3}$\}$. Note that the joint variables represent the modal coefficients of the DVS basis related to curvature-bending. }
-    \label{fig:C5:pneunet_estimate_experiment}
+    \label{fig:C5:pneunet_estimate_experiment_state}
     %\vspace{-5mm}
 \end{figure}
 \clearpage
 }
 
-Figure \ref{fig:C5:pneunet_estimate_experiment} shows the experiment and overlayed on top are the real-time shape estimations from the inverse kinematics algorithm that uses a combination with the Data-driven Variable Strain (DVS) basis. Figure \ref{fig:C5:pneunet_estimate_experiment} shows the state trajectories and the time instance of contact. Despite the significant impact of contact forces on the soft actuator, the shape estimation algorithm qualitatively matches the deformation profile of the real soft robotic system. This is due to its relatively low state dimension of $\dim(\mathbf{q}) = 3$, enabling it to achieve a bandwidth of +60 \si{\hertz} with ease.
+Figure \ref{fig:C5:pneunet_estimate_experiment} shows the experiment and overlayed on top are the real-time shape estimations from the inverse kinematics algorithm that uses a combination with the Data-driven Variable Strain (DVS) basis. Figure \ref{fig:C5:pneunet_estimate_experiment_state} shows the state trajectories and the time instance of contact. Despite the significant impact of contact forces on the soft actuator, the shape estimation algorithm qualitatively matches the deformation profile of the real soft robotic system. This is due to its relatively low state dimension of $\dim(\mathbf{q}) = 3$, enabling it to achieve a bandwidth of +60 \si{\hertz} with ease.

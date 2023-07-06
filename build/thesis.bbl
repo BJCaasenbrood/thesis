@@ -105,15 +105,9 @@ Bao, G., Fang, H., Chen, L., Wan, Y., Xu, F., Yang, Q., and Zhang, L. (2018).
   Bibliometric Analysis}.
 \newblock {\em Soft Robotics}, 5(3):229--241.
 
-\bibitem[Bartlett et~al., 2015a]{Bartlett2015}
+\bibitem[Bartlett et~al., 2015]{Bartlett2015}
 Bartlett, N.~W., Tolley, M.~T., Overvelde, J. T.~B., Weaver, J.~C., Mosadegh,
-  B., Bertoldi, K., Whitesides, G.~M., and Wood, R.~J. (2015a).
-\newblock {A 3D-printed, functionally graded soft robot powered by combustion}.
-\newblock {\em Science}, 349(6244):161--165.
-
-\bibitem[Bartlett et~al., 2015b]{Bartlett2015Jul}
-Bartlett, N.~W., Tolley, M.~T., Overvelde, J. T.~B., Weaver, J.~C., Mosadegh,
-  B., Bertoldi, K., Whitesides, G.~M., and Wood, R.~J. (2015b).
+  B., Bertoldi, K., Whitesides, G.~M., and Wood, R.~J. (2015).
 \newblock {A 3D-printed, functionally graded soft robot powered by combustion}.
 \newblock {\em Science}, 349(6244):161--165.
 
@@ -352,6 +346,11 @@ Coevoet, E., Morales-Bieze, T., Largilliere, F., Zhang, Z., Thieffry, M.,
   robots}.
 \newblock {\em Advanced Robotics}, 31(22):1208--1224.
 
+\bibitem[Cohn and Dee, 2006]{Cohn2006Jul}
+Cohn, S.~E. and Dee, D.~P. (2006).
+\newblock {Observability of Discretized Partial Differential Equations}.
+\newblock {\em SIAM Journal on Numerical Analysis}.
+
 \bibitem[Connolly et~al., 2017]{Connolly2017Jan}
 Connolly, F., Walsh, C.~J., and Bertoldi, K. (2017).
 \newblock {Automatic design of fiber-reinforced soft actuators for trajectory
@@ -475,12 +474,6 @@ Falkenhahn, V., Mahl, T., Hildebrandt, A., Neumann, R., and Sawodny, O.
 \newblock {Dynamic Modeling of Bellows-Actuated Continuum Robots Using the
   Euler-Lagrange Formalism}.
 \newblock {\em IEEE Transactions on Robotics}, 31(6):1483--1496.
-
-\bibitem[Fang et~al., 2020]{Fang2020Dec}
-Fang, G., Tian, Y., Yang, Z.-X., Geraedts, J. M.~P., and Wang, C. C.~L. (2020).
-\newblock {Efficient Jacobian-Based Inverse Kinematics of Soft Robots by
-  Learning}.
-\newblock {\em ArXiv e-prints}.
 
 \bibitem[Fang et~al., 2022]{Fang2022Jun}
 Fang, G., Tian, Y., Yang, Z.-X., Geraedts, J. M.~P., and Wang, C. C.~L. (2022).
@@ -801,6 +794,11 @@ Kamble, V.~G., Mersch, J., Tahir, M.,
   Interactive Fiber-Elastomer Composites}.
 \newblock {\em Materials}, 15(1):390.
 
+\bibitem[Kang et~al., 2014]{Kang2014Jan}
+Kang, W., Xu, L., and Giraldo, F.~X. (2014).
+\newblock {Partial Observability and its Consistency for PDEs}.
+\newblock {\em ArXiv e-prints}.
+
 \bibitem[Katzschmann et~al., 2018]{Katzschmann2018}
 Katzschmann, R.~K., DelPreto, J., MacCurdy, R., and Rus, D. (2018).
 \newblock {Exploration of underwater life with an acoustically controlled soft
@@ -912,15 +910,9 @@ Komeno, N., Michael, B., K{\ifmmode\ddot{u}\else\"{u}\fi}chler, K., Anarossi,
   Dynamics}.
 \newblock {\em ArXiv e-prints}.
 
-\bibitem[Kriegman et~al., 2020a]{Kriegman2020}
-Kriegman, S., Blackiston, D., Levin, M., and Bongard, J. (2020a).
+\bibitem[Kriegman et~al., 2020]{Kriegman2020}
+Kriegman, S., Blackiston, D., Levin, M., and Bongard, J. (2020).
 \newblock {A scalable pipeline for designing reconfigurable organisms}.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  117(4):1853--1859.
-
-\bibitem[Kriegman et~al., 2020b]{Kriegman2019}
-Kriegman, S., Blackiston, D., Levin, M., and Bongard, J. (2020b).
-\newblock A scalable pipeline for designing reconfigurable organisms.
 \newblock {\em Proceedings of the National Academy of Sciences},
   117(4):1853--1859.
 
@@ -1017,6 +1009,12 @@ Lorensen, W.~E. and Cline, H.~E. (1987).
 \newblock In {\em {ACM SIGGRAPH Computer Graphics}}, volume~21, pages 163--169.
   Association for Computing Machinery, New York, NY, USA.
 
+\bibitem[Lor{\ifmmode\acute{\imath}\else\'{\i}\fi}a, 2015]{Loria2015Jun}
+Lor{\ifmmode\acute{\imath}\else\'{\i}\fi}a, A. (2015).
+\newblock {Observers are Unnecessary for Output-Feedback Control of Lagrangian
+  Systems}.
+\newblock {\em IEEE Transactions on Automatic Control}, 61(4):905--920.
+
 \bibitem[Luo et~al., 2016]{Luo2016Mar}
 Luo, Y., Li, M., and Kang, Z. (2016).
 \newblock {Topology optimization of hyperelastic structures with frictionless
@@ -1081,12 +1079,6 @@ Mathew, A.~T., Armanini, C., Alshehhi, A. A. S.~A., Hmida, I. M.~B., and Renda,
 \newblock {Multifunctional Underwater Soft Robots: A Simulation Essay}.
 \newblock {\em IOP Conference Series: Materials Science and Engineering},
   1261(1):012008.
-
-\bibitem[Mathew et~al., 2021]{Mathew2021Jul}
-Mathew, A.~T., Hmida, I.~B., Armanini, C., Boyer, F., and Renda, F. (2021).
-\newblock {SoRoSim: a MATLAB Toolbox for Soft Robotics Based on the Geometric
-  Variable-strain Approach}.
-\newblock {\em ArXiv e-prints}.
 
 \bibitem[Mathew et~al., 2022b]{Mathew2022}
 Mathew, A.~T., Hmida, I. M.~B., Armanini, C., Boyer, F., and Renda, F. (2022b).
@@ -1230,7 +1222,7 @@ Ortega, R., Perez, J. A.~L., Nicklasson, P.~J., and Sira-Ramirez, H. (1998).
 
 \bibitem[Ortega et~al., 2002]{Ortega2002}
 Ortega, R., Spong, M.~W., G{\'{o}}mez-Estern, F., and Blankenstein, G. (2002).
-\newblock {Stabilization of a Class of Underactuated MechanicalSystems Via
+\newblock {Stabilization of a Class of Underactuated Mechanical Systems Via
   Interconnection and Damping Assignment}.
 \newblock {\em IEEE Transactions on Automatic Control}, 47(8):1218--1233.
 
@@ -1306,6 +1298,7 @@ Pustina, P., Borja, P., Santina, C.~D., and De~Luca, A. (2022).
 \bibitem[Pustina et~al., 2023]{Pustina2023Jun}
 Pustina, P., Della~Santina, C., Boyer, F., De~Luca, A., and Renda, F. (2023).
 \newblock {On the Collocated Form with Input Decoupling of Lagrangian Systems}.
+\newblock {\em ArXiv e-prints}.
 
 \bibitem[Raeisinezhad et~al., 2021]{Raeisinezhad2021May}
 Raeisinezhad, M., Pagliocca, N., Koohbor, B., and Trkov, M. (2021).
@@ -1893,13 +1886,8 @@ Wolterink, G., Kolkman, S., and Krijnen, G. (2022).
   Position Estimation}.
 \newblock In {\em {2022 IEEE Sensors}}, pages 1--4. IEEE.
 
-\bibitem[Wu and Zheng, 2021a]{Wu2021}
-Wu, K. and Zheng, G. (2021a).
-\newblock {FEM-Based Gain-Scheduling Control of a Soft}.
-\newblock {\em Robotics and Automation Letters}, 6(2):3081--3088.
-
-\bibitem[Wu and Zheng, 2021b]{Wu2021Feb}
-Wu, K. and Zheng, G. (2021b).
+\bibitem[Wu and Zheng, 2021]{Wu2021Feb}
+Wu, K. and Zheng, G. (2021).
 \newblock {FEM-Based Gain-Scheduling Control of a Soft Trunk Robot}.
 \newblock {\em IEEE Robotics and Automation Letters}, 6(2):3081--3088.
 
