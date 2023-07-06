@@ -2525,6 +2525,12 @@ INPUT ./pdf/thesis-figure-4-1-2.pdf
 INPUT ./pdf/thesis-figure-4-1-2.pdf
 INPUT ./pdf/thesis-figure-4-1-2.pdf
 INPUT ./pdf/thesis-figure-4-1-2.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy7.tfm
 INPUT ./3_4_pccmodel/3_model.tex
 INPUT 3_4_pccmodel/3_model.tex
 INPUT ./3_4_pccmodel/3_model.tex
@@ -2649,12 +2655,6 @@ INPUT ./fig/fig_C2_PBAdiagram.pdf
 INPUT ./fig/fig_C2_PBAdiagram.pdf
 INPUT ./fig/fig_C2_PBAdiagram.pdf
 INPUT ./fig/fig_C2_PBAdiagram.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib7.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy7.tfm
 INPUT ./fig/fig_C2_PBAdiagram.pdf
 INPUT ./fig/fig_C2_PBAdiagram.pdf
 INPUT ./fig/fig_C2_PBAdiagram.pdf

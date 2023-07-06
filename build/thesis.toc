@@ -57,10 +57,10 @@
 \contentsline {subsection}{\numberline {4.6.1}Finite element method and hyper-elasticity}{78}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Hyperelasticity in joint space}{81}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{84}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{86}{section.4.7}%
+\contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{85}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Overview of experimental platform}{87}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{88}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Conclusion}{104}{section.4.10}%
+\contentsline {section}{\numberline {4.10}Conclusion}{102}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{105}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{106}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Generalized models for soft manipulators}{107}{section.5.2}%
