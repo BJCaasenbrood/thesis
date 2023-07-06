@@ -133,7 +133,7 @@ where we explore a radial interpolation function $\psi_{\textrm{RBF}}(\rB; \rho)
   \centering
   \vspace{-2mm}
   \input{./pdf/thesis-figure-3-1.pdf_tex}
-  \caption{An illustration of filter and interpolation schemes developed to minimize mesh artifacts. (a) The ground truth. (b) Density field based on the piecewise Voronoi tessellation. Note the jitter around the boundaries of the material infill, which leads to high sharp gradients in ${\partial \phi}/{\partial \rho_e}$. (c) To address this issue, filtered densities are obtained using \eqref{eq:C3:filters}. (d) The isosurface reconstruction $\mathcal{B}^\star$ of the filtered density field of the optimizer.}
+  \caption{\small An illustration of filter and interpolation schemes developed to minimize mesh artifacts. The areas (\textcolor{matinfil}{$\blacksquare$}, \textcolor{lightvoid}{$\blacksquare$}) denote the material infill and void regions, respectively. (a) The ground truth. (b) Density field based on the piecewise Voronoi tessellation. Note the jitter around the boundaries of the material infill, which leads to high sharp gradients in ${\partial \phi}/{\partial \rho_e}$. (c) To address this issue, filtered densities are obtained using \eqref{eq:C3:filters}. (d) The isosurface reconstruction $\mathcal{B}^\star$ of the filtered density field of the optimizer.}
   \label{fig:C3:topo_filtering}
 \end{figure}
 

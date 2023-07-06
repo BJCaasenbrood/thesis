@@ -14,33 +14,23 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 --line 127 of file MyBib.bib
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
-You're missing a field name---line 231 of file MyBib.bib
- : 
- : %  author = {Bartlett, Nicholas W. and Tolley, Michael T. and Overvelde, Johannes T. B. and Weaver, James C. and Mosadegh, Bobak and Bertoldi, Katia and Whitesides, George M. and Wood, Robert J.},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 985 of file MyBib.bib
-You're missing a field name---line 1126 of file MyBib.bib
- : 
- : %  author = {Fang, Guoxin and Tian, Yingjun and Yang, Zhi-Xin and Geraedts, Jo M. P. and Wang, Charlie C. L.},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
+--line 973 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1762 of file MyBib.bib
+--line 1741 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1769 of file MyBib.bib
+--line 1748 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2567 of file MyBib.bib
+--line 2546 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 3079 of file MyBib.bib
+--line 3058 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3191 of file MyBib.bib
+--line 3170 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3633 of file MyBib.bib
+--line 3612 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4233 of file MyBib.bib
+--line 4212 of file MyBib.bib
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
@@ -105,4 +95,4 @@ warning$ -- 22
 while$ -- 1155
 width$ -- 0
 write$ -- 4232
-(There were 2 error messages)
+(There were 34 warnings)

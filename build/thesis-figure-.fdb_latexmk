@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1688619851 "/home/brandon/Documents/phd/thesis/thesis-figure-.tex" "build/thesis-figure-.pdf" "thesis-figure-" 1688619851
-  "/dev/null" 1688618057 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1688676135 "/home/brandon/Documents/phd/thesis/thesis-figure-.tex" "build/thesis-figure-.pdf" "thesis-figure-" 1688676135
+  "/dev/null" 1688633312 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1651172963 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/brandon/Documents/phd/thesis/thesis-figure-.tex" 1688619850 405 026c87b835c0b88b232b725812861196 ""
+  "/home/brandon/Documents/phd/thesis/thesis-figure-.tex" 1688676133 402 4a581f479ae45fe7688e9b3087459333 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -308,6 +308,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty" 1448319911 5689 1bfa68243e89a54479e7d0580773c57e ""
   "/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1605910342 4902 efb3d66683a2da2a232f71e3a571a899 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc" 1254938640 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf/fonts/tfm/public/lm/lmex10.tfm" 1254938640 992 ce925c9346c7613270a79afbee98c070 ""
   "/usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm" 1254938640 1528 6d36b2385e0ca062a654de6ac59cb34f ""
@@ -319,6 +320,7 @@
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm" 1254938640 11868 4f81e9b6033c032bdaf9884f4d7ef412 ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr5.tfm" 1254938640 11804 aefb10c002e6492c25236524a447f969 ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm" 1254938640 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb" 1254938640 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb" 1254938640 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
   "/usr/share/texmf/tex/latex/lm/lmodern.sty" 1256929440 1606 c17281c7cff2bbd7ff0173e1433487ec ""
   "/usr/share/texmf/tex/latex/lm/omllmm.fd" 1256929440 888 44447a3a3af84a22454ef89500942d93 ""
@@ -329,8 +331,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1657187052 4380665 c882d4433d38081b00c35ad7e6299d49 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685517914 2801170 f01fd429e9b017c63904bd80777f29db ""
-  "build/thesis-figure-.aux" 1688619797 1039 fbf9d0c5ff34ba0d9df9fc397bd750fd "pdflatex"
-  "fig/fig_mesh_distribution.tex" 1688619844 1952 d652455d3f20620708b8dc38be970aa9 ""
+  "build/thesis-figure-.aux" 1688675556 1039 fbf9d0c5ff34ba0d9df9fc397bd750fd "pdflatex"
+  "fig/fig_sigma_octopus.tex" 1688675940 4288 ac8463933a07d6504e53a62155d07cb3 ""
   "src/colormaps.tex" 1669310420 3370 5cc71b7547673b2d78a8cc3677b87c95 ""
   "src/colors.tex" 1688029557 2189 457a7c38049848b8029a0432f3186818 ""
   "src/commands.tex" 1681369021 5929 e12e2cc05d9bd3b67b32c16480f8f628 ""
@@ -341,7 +343,7 @@
   "src/theme.tex" 1687942323 823 6f3106f781cfe0a92e860d5a4d1dfe4d ""
   "src/tikz.tex" 1678353569 642 006ee4629e220be385fdc3971483202c ""
   "src/vectors.tex" 1687412429 3781 3eabb5fbcae4d49d1027dc0c6e9e830a ""
-  "thesis-figure-.tex" 1688619850 405 026c87b835c0b88b232b725812861196 ""
+  "thesis-figure-.tex" 1688676133 402 4a581f479ae45fe7688e9b3087459333 ""
   (generated)
   "build/thesis-figure-.aux"
   "build/thesis-figure-.log"

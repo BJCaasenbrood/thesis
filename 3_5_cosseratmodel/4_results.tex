@@ -32,9 +32,9 @@ In the first study-case, we consider a soft robotic arm that is loosely inspired
     Cross-sectional radius & $r $ & $ 8.25$ & $\text{mm}$ \\
     Uniform density & $\rho_0 $ & $ 1250$ & $\text{kg}\text{m}^{-3}$ \\
     %Gravitational acceleration & $a_{g} $ & $ 9.81$ & $\text{m}\text{s}^{-2}$ \\
-    Young's modulus & $E $ & $ 25$ & $\text{MPa}$ \\
-    Shear modulus & $\mu_1 $ & $ 10 $ & $\text{MPa}$ \\
-    Constraint modulus & $\mu_2 $ & $ 15 $ & $\text{GPa}$ \\
+    Young's modulus & $E $ & $ 0.25$ & $\text{MPa}$ \\
+    Shear modulus & $\mu_1 $ & $ 0.10 $ & $\text{MPa}$ \\
+    Constraint modulus & $\mu_2 $ & $ 1.50 $ & $\text{GPa}$ \\
     Rayleigh coefficient & $\zeta $ & $ 0.40 $ & - \\
     \hline
   \end{tabular}
@@ -174,9 +174,9 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
   Cross-section radius  & $r $      & $ 25$    & $\text{mm}$              \\
   Uniform density       & $\rho_0 $ & $ 250$   & $\text{kg}\text{m}^{-3}$ \\
   %Gravitational acceleration & $a_{g} $ & $ 9.81$ & $\text{m}\text{s}^{-2}$ \\
-  Young's modulus       & $E $      & $ 35$    & $\text{MPa}$             \\
-  Shear modulus         & $\mu_1 $  & $ 20 $   & $\text{MPa}$             \\
-  Constraint modulus    & $\mu_2 $  & $ 15 $   & $\text{GPa}$             \\
+  Young's modulus       & $E $      & $ 3.50$    & $\text{MPa}$             \\
+  Shear modulus         & $\mu_1 $  & $ 2.00 $   & $\text{MPa}$             \\
+  Constraint modulus    & $\mu_2 $  & $ 1.50 $   & $\text{GPa}$             \\
   Rayleigh coefficient  & $\zeta $  & $ 0.45 $ & -                        \\
   \hline  
 \end{tabular}
@@ -202,4 +202,30 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
     \vfill
   \end{figure}
   \clearpage
+}
+
+\section{Mimicking biological motion through energy-based control with relaxed set-points}
+
+\afterpage{
+\begin{figure}[!t]
+  \centering
+  \vspace{-0mm}
+  \input{./pdf/thesis-figure-5-17.pdf_tex}
+  \vspace{-7mm}
+  %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
+  \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
+  %\vfill
+\end{figure}
+\begin{figure*}[!t]
+  \centering
+  %\vspace{-3mm}
+  %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmarm.tex}
+  \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-16_v2.pdf}
+  \vspace{-6mm}
+  \caption{\small \highlight{Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball).} }
+  \label{fig:C3:octopus_simu_real}
+\end{figure*}
+
+\clearpage
+
 }

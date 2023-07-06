@@ -1,5 +1,4 @@
-
-\vspace{-4mm}
+%\vspace{-4mm}
 \subsection{Model composer (\texttt{Model})}
 \label{sec:C5:model}
 In many instances, soft robots comprise multiple dynamic components that are interconnected to form the overall system. For instance, the soft robotic hand depicted in Figure \ref{fig:C5:examplebots}c comprises five actively controlled soft fingers connected to a rigid palm base, each of which exhibits its own fluid-structure interaction. While each soft finger can be modeled through the \class{Shape} class, the class itself lacks a composer or solver that addresses the interconnections between a network of dynamic systems.
@@ -70,7 +69,7 @@ Finally, \code{mdl.addController(@Control) } is used to add the control law. In 
 %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-14-2.pdf}
 %\input{./fig/fig_model_softhand_true.tex} \\[-0.01em]
 %\input{./fig/fig_model_softhand_simu.tex} \vspace{-3mm}
-\caption{(top) Experimental snapshots of the open-source soft robotic hand provided by the \textit{Sorotoki} toolkit. The five-fingered robot is subjected to a harmonic oscillator that commands oscillatory pressure to the individual fingers. Since each oscillator has a preset phase difference ($\phi = \pi/6$), the fingers of the soft robot hand undergo a periodic swinging motion. (bottom) Reconstructed soft robotic hand using \textit{Sorotoki}, where each finger is modelled using the \textit{Shapes.m} class and then composed using the \textit{Model.m} class. Following, each oscillator is added using \textit{mdl.addSystem} and then they ouputs are connected to the inputs of each \textit{Shapes.m} class. As can be seen, the dynamics between the numerical model and the experiments are in close agreement. }
+\caption{\small (top) Experimental snapshots of the open-source soft robotic hand provided by the \texttt{Sorotoki} toolkit. The five-fingered robot is subjected to a harmonic oscillator that commands oscillatory pressure to the individual fingers. Since each oscillator has a preset phase difference ($\phi = \pi/6$), the fingers of the soft robot hand undergo a periodic swinging motion. (bottom) Reconstructed soft robotic hand using \textit{Sorotoki}, where each finger is modelled using the \textit{Shapes.m} class and then composed using the \textit{Model.m} class. Following, each oscillator is added using \textit{mdl.addSystem} and then they ouputs are connected to the inputs of each \textit{Shapes.m} class. As can be seen, the dynamics between the numerical model and the experiments are in close agreement. }
 \label{fig:C5:soft_hand_simulation}
 \end{figure*}
 %\clearpage

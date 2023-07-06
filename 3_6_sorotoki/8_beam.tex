@@ -18,7 +18,7 @@ The method for constructing soft beam models in the \texttt{Sorotoki} toolkit is
 \includegraphics[width=0.85\textwidth]{./pdf/thesis-figure-cosserat.pdf}
 \caption{Illustration of the soft beam model using geometric Cosserat beam theory, where the backbone curve is $\gB(\sigma,t) \in \mathrm{SE}(3)$ shown as \data{magenta}. The geometric strain vector $\xiB := \textrm{vec}\left\{ \GammaB, \UB\right\}$ a vector of size 6 consisting of stretch-shear strains $\UB$ and twist-bending strains $\GammaB$.}   
 \label{fig:C5:CosseratExample}
-\vspace{-3mm}  
+\vspace{-6mm}  
 \end{figure}
 
 \textbf{A: Computationally-efficient soft beam models.} Following the geometric Cosserat beam frameworks \cite{Renda2020,Boyer2021,Caasenbrood2021}, the reduced nonlinear dynamics of a soft beam model, fixed to a non-inertial base, can be represented using a Lagrangian formulation:
@@ -45,7 +45,7 @@ where $\thetaB_i$ is the modal approximation vector related to the $i$-th strain
 \label{eq:C5:xi_computation_POD}
 \end{equation}
 %
-where $\ThetaB:= \textrm{blkdiag}\{\thetaB_1,\dots,\thetaB_6\}$ is referred to as the \textit{"modal approximation matrix"}, and $\q:=\textrm{vec}\{\q_1,\dots,\q_6\}$ is the generalized coordinate vector of the global soft beam model in \eqref{eq:C5:model_beam}. Note that a geometric strain entry may be constrained and therefore not contribute to the overall continuum dynamics, thus $\thetaB_i,\q_i$ are fixed to zero without loss of generality. The choice of basis plays a crucial role and often relies on \textit{ad-hoc} approaches. It is therefore critical to choose an appropriate basis for optimal performance of the soft robot model.
+where $\ThetaB:= \textrm{blkdiag}\{\thetaB_1,\dots,\thetaB_6\}$ is referred to as the \textit{"modal approximation matrix"}, and $\q:=\textrm{vec}\{\q_1,\dots,\q_6\}$ is the generalized coordinate vector of the global soft beam model in \eqref{eq:C5:model_beam}. Note that a geometric strain entry may be constrained and therefore not contribute to the overall continuum dynamics, thus $\thetaB_i,\q_i$ are fixed to zero without loss of generality. The choice of basis plays a crucial role and often relies on \textit{ad-hoc} approaches. It is therefore critical to choose an appropriate basis for optimal performance of the soft robot model. \\
 % 
 % \begin{figure}[!t]
 % \centering
@@ -154,7 +154,7 @@ To demonstrate the reconstruction of the DVS basis, we consider a soft bending a
 %% EXAMPLE: Shapes class (DVS basis)   
 fem = load('femPneuNet.mat');   % load fem model
 
-dof = [0,M,0,0,0,0];  % pure planar curvature bending
+dof = [0,3,0,0,0,0];  % pure planar curvature bending
 shp = Shapes(fem, dof, 'NNode', 200, 'Length',105);
 
 % generate DVS basis 
@@ -174,8 +174,8 @@ shp = shp.reconstruct();
 On the other hand, the local velocity twist is represented by $\etaB:= (\gB\inv\dot{\gB})^{\vee}$, which, similarly to rigid robotics, is linear in the joint velocities $\dot{\q}$. Regarding computation, the velocity twist of a point $\sigma$ on the curve $\gB$ can be represented as follows:
 %
 \begin{align}
-    [\etaB]_\ThetaB(\sigma,\q,\dq) & = \left[\mat{Ad}^{-1}_{[\gB](\sigma,\q)}\int_{0}^\sigma  \mat{Ad}_{[\gB](s,\q)} \ThetaB(s)\; ds \right]  \dq,  \notag \\
-                                  & =: \JB(\sigma,\q) \dq,
+    [\etaB]_\ThetaB(\sigma,\q,\dq) & = \left[\Ad^{-1}_{[\gB](\sigma,\q)}\int_{0}^\sigma  \Ad_{[\gB](s,\q)} \ThetaB(s)\; ds \right]  \dq  %\notag \\
+                                   =: \JB(\sigma,\q) \dq,
                                   \label{eq:C5:eta}                                  
 \end{align}
 %
@@ -218,7 +218,7 @@ where $\textrm{T}_{\textrm{SE}(3)}$ denotes the tangent operator map on the grou
 %\input{./fig/fig_mdl_example2.tex} \\[0.01em]
 %\input{./fig/fig_mdl_example2_grasp.tex}
 %\vspace{-5mm}
-\caption{(left) A snapshot of the ultra-gentle soft robot gripper developed by Sinatra et al. \cite{Sinatra2019Aug} is shown, demonstrating its ability to grasp a delicate jellyfish. (right) The reconstructed soft gripper using \texttt{Sorotoki} is presented, where each tentacle finger is modeled individually using the \textit{Shapes} class. It can be observed that the soft tentacles envelop the SDF object, indicating a balanced solution between task and subtask.}
+\caption{\small (left) A snapshot of the ultra-gentle soft robot gripper developed by Sinatra et al. \cite{Sinatra2019Aug} is shown, demonstrating its ability to grasp a delicate jellyfish. (right) The reconstructed soft gripper using \texttt{Sorotoki} is presented, where each tentacle finger is modeled individually using the \textit{Shapes} class. It can be observed that the soft tentacles envelop the SDF object, indicating a balanced solution between task and subtask.}
 \label{fig:C5:shapesexample}
 \vspace{-5mm}
 \end{figure}
