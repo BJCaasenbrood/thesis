@@ -6,7 +6,7 @@ A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
 The style file: apalike.bst
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12238 items from 5000.
+Reallocated field_info (elt_size=4) to 12216 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -31,7 +31,6 @@ Warning--entry type for "Takagi1983" isn't style-file defined
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
 --line 4225 of file MyBib.bib
-Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
 Warning--empty year in BibEntryPuma2022Sep
@@ -95,4 +94,4 @@ warning$ -- 22
 while$ -- 1159
 width$ -- 0
 write$ -- 4245
-(There were 34 warnings)
+(There were 33 warnings)

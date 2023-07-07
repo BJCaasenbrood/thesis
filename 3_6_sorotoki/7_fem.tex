@@ -1,6 +1,6 @@
 \subsection{Finite element modeling (\texttt{Fem})}
 \label{sec:C5:fem}
-Following the mesh generation process, \textit{Sorotoki} offers a nonlinear finite element solver for both quasi-static and fully dynamic simulations. An illustration of the FEM approach is given in Figure \ref{fig:C5:illustration_FEM}. FEM-based tools are crucial when describing large deformations in soft robots, which also accounts for hyperelastic materials and geometric nonlinearities. The FEM package is provided in a class called \class{Fem.m} and can be instantiated using \code{fem = Fem(Mesh)}. This class serves two main purposes: ($i$) to solve static or dynamic continuum problems with high accuracy, and ($ii$) to solve gradient-based optimization problems, also known as inverse design problems. It is important to note that, unlike \textit{SOFA}, the focus of \textit{Sorotoki} is on high-detail simulations rather than real-time implementation for control. The presented FEM simulation models are not intended for real-time applications, but rather for system identification and analysis.
+Following the mesh generation process, \textit{Sorotoki} offers a nonlinear finite element solver for both quasi-static and fully dynamic simulations. An illustration of the FEM approach is given in Figure \ref{fig:C5:illustration_FEM}. FEM-based tools are crucial when describing large deformations in soft robots, which also accounts for hyperelastic materials and geometric nonlinearities. The FEM package is provided in a class called \class{Fem.m} and can be instantiated using \code{fem = Fem(Mesh)}. This class serves two main purposes: ($i$) to solve static or dynamic continuum problems with high accuracy, and ($ii$) to solve gradient-based optimization problems, also known as inverse design problems. It is important to note that, unlike \texttt{SOFA}, the focus of \texttt{Sorotoki} is on high-detail simulations rather than real-time implementation for control. The presented FEM simulation models are not intended for real-time applications, but rather for system identification and analysis.
 
 \begin{figure}
 \centering
@@ -11,7 +11,7 @@ Following the mesh generation process, \textit{Sorotoki} offers a nonlinear fini
 \label{fig:C5:illustration_FEM}
 \end{figure}
 
-\textbf{A: High-detail finite element model.} The nonlinear dynamics of the finite element model in \textit{Sorotoki}, similar to \textit{SOFA} and \textit{Gibbon}, can be described by the general Newton-Euler equation of motion:
+\textbf{A: High-detail finite element model.} The nonlinear dynamics of the finite element model in \texttt{Sorotoki}, similar to \texttt{SOFA} and \texttt{Gibbon}, can be described by the general Newton-Euler equation of motion:
 %
 \begin{equation}
     \MB \ddx + \fB_\textrm{mat}(\x,\dx) + \fB\grav = \fB_{\textrm{u}}(\x,\uB,t) + \fB_{\Omega_{\textrm{env}}}(\x,\dx,t),
@@ -60,14 +60,14 @@ Let $\Omega_i$ denote the subspace spanned by the $i$-th element of the finite e
     %
 where the Gauss weights are denoted by $w_j > 0$, and the number of finite elements and Gauss samples are represented by $N_e$ and $N_w$, respectively.
 
-The term ${\partial \Psi}/{\partial \FB}$ is also referred to as the first Piolla-Kirchhoff (PK1) stress tensor, which can be represented in closed-form for many constitutive models. The term ${\partial \FB}/{\partial \x_e}$ denotes the deformation Jacobian, which can also be given in closed-form but depends on the choice of element type. In addition to the first Piolla stress tensor, we also introduce the Cauchy stress tensor (i.e., true stress) $\vec{\sigma} := J^{-1} \frac{\partial \Psi}{\partial \FB} \FB^\top$, which is a symmetric second-order tensor whose components represent the true stress. It should be noted that these tensor calculations are highly nonlinear, making their computation the most time-consuming aspect of the finite element assembly. To enhance computational efficiency, the toolkit employs \texttt{.mex} executable code that is generated during installation (\texttt{Matlab Coder} toolkit is required).
+The term ${\partial \Psi}/{\partial \FB}$ is also referred to as the first Piolla-Kirchhoff (PK1) stress tensor, which can be represented in closed-form for many constitutive models. The term ${\partial \FB}/{\partial \x_e}$ denotes the deformation Jacobian, which can also be given in closed-form but depends on the choice of element type. In addition to the first Piolla stress tensor, we also introduce the Cauchy stress tensor (i.e., true stress) $\vec{\sigma} := J^{-1} \frac{\partial \Psi}{\partial \FB} \FB^\top$, which is a symmetric second-order tensor whose components represent the true stress. It should be noted that these tensor calculations are highly nonlinear, making their computation the most time-consuming aspect of the finite element assembly. To enhance computational efficiency, the toolkit employs \texttt{.mex} executable code, generated during installation (\texttt{Matlab Coder} is required).
 \end{intermez}
 
 %\subsubsection{Hyperelastic models and soft material presets}
 %\label{sec:C5:hyperelastic}
 \textbf{B: Hyperelastic models and soft material presets.} An important aspect of soft robotics in general is to accurately describe large nonlinear deformations of inertial continuum bodies in motion. Yet, due to these large deformations, many classical Hookean elasticity models may not be accurate for elastomer materials. 
 
-To address this, \textit{Sorotoki} provides a library of hyper-elastic constitutive material models: Neo-Hookean (NH), Mooney-Rivlin (MR), and Yeoh model (YH). The strain energy densities for these models are derived based on the strain invariants $I_1$, $I_2$, and $I_3$ provided in Table \ref{tab:C5:strain_measures} and are shown in Table \ref{tab:C5:elasticitymodels}.
+To address this, \texttt{Sorotoki} provides a library of hyper-elastic constitutive material models: Neo-Hookean (NH), Mooney-Rivlin (MR), and Yeoh model (YH). The strain energy densities for these models are derived based on the strain invariants $I_1$, $I_2$, and $I_3$ provided in Table \ref{tab:C5:strain_measures} and are shown in Table \ref{tab:C5:elasticitymodels}.
 %
 \begin{table}[t]
     \renewcommand\arraystretch{1.25}
@@ -154,15 +154,15 @@ To simplify the model, we assume general plane motion. The geometry of the soft 
 msh = Mesh('MultiGait.png', 'MeshSize', 1.0, ...
             'BdBox', [0, 150, 0, 12]);
 
-% -- mesh to fem 
+% mesh to fem 
 fem = Fem(msh,'TimeStep',1/500);
 fem.Material = Ecoflex50();
 
-% -- add inextensible bottom layer 
+% add inextensible bottom layer 
 E1  = fem.findElements([0 150 0 2]);
 fem = fem.addMaterialModifier(E1, 5);
 
-% -- add forces and constraints 
+% add forces and constraints 
 fem = fem.addGravity();
 fem = fem.addContact(sLine());
 
@@ -172,7 +172,7 @@ for i = 1:3
     fem = fem.addPressure(Ce, @(x) Pressure(x,i));
 end
 
-% -- solve dynamics 
+% solve dynamics 
 fem = fem.simulate();
 
 % -- open-loop controller 
@@ -184,7 +184,7 @@ end
 \vfill
 The excitation signal parameters are set as follows: $A = 45$ \si{\kilo \pascal}, $\omega = 5 \pi$ \si{\radian}, and $\phi_i = \frac{\pi}{3} \cdot (i-1)$ \si{\radian}. The saturation function is defined as $\textrm{sat}(x) = 0$ for $x < 0$, and $\textrm{sat}(x) = x$ for $x \geq 0$. Gravitational acceleration is added, and the dynamic simulation solver is invoked using \texttt{fem.simulate}. Figure \ref{fig:C5:fem_example_crawl} presents a comparison between the soft robot described in \cite{Shepherd2011Dec} and the dynamic simulation performed by \texttt{Sorotoki}.
 
-The results of the simulation performed using \textit{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. 
+The results of the simulation performed using \texttt{Sorotoki} show a morphological behavior that is consistent with the experimental recordings. Figure \ref{fig:C5:fem_example_crawl_com} depicts the trajectory of the center of mass (CoM) of the soft robot during the undulating locomotion. Note that an identical stair-like evolution of the CoM is also observed in the work of Shepard et al. \cite{Shepherd2011Dec}. 
 \vfill
 \end{example}
 

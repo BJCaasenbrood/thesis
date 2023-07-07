@@ -136,7 +136,7 @@ where $\Delta(\boldsymbol{x},\boldsymbol{y}) = ||\boldsymbol{x} -  \boldsymbol{y
 \centering
 \vspace{-2mm}
 \input{./fig/fig_C3_voronoi.pdf_tex}
-\caption{Illustration of generating a planar Voronoi tessellation from a circular domain $\mathcal{B}_0$. (a) Material domain is sampled with $n_e$ points collected in by point-set $\mathcal{P}$ shown as ($\textcolor{Matlab1}{\bullet}$). (b) Using Loyd's algorithm \cite, a restricted Voronoi tessellation $\mathcal{T}(\mathcal{P})$ is generated composed of polygonal elements $\{\mathcal{V}_e\}_{e=1}^{n_e}$. (c) An isoparametric element related to the space $\mathcal{V}_e$, whose shape relates to the nodal displacements. \label{fig:C3:voronoimeshExample}}
+\caption{Illustration of generating a planar Voronoi tessellation from a circular domain $\mathcal{B}_0$. (a) Material domain is sampled with $n_e$ points collected in by point-set $\mathcal{P}$ shown as ($\textcolor{Matlab1}{\bullet}$). (b) Using Loyd's algorithm \cite{Talischi2012}, a restricted Voronoi tessellation $\mathcal{T}(\mathcal{P})$ is generated composed of polygonal elements $\{\mathcal{V}_e\}_{e=1}^{n_e}$. (c) An isoparametric element related to the space $\mathcal{V}_e$, whose shape relates to the nodal displacements. \label{fig:C3:voronoimeshExample}}
 \vspace{-3mm}
 \end{figure}
 %
@@ -185,7 +185,7 @@ The static equilibrium of the structure can be determined by setting $\rB(\x)$, 
 \x^{(i+1)} & = \x^{(i)} -\alpha \left(\KB_T^{(i)}\right)\inv \rB^{(i)},
 \end{align}
 %
-where the subscript $(i)$ denotes the iteration steps, while $\x^{(i)}$, $\rB^{(i)} := \rB(\x^{(i)})$, and $\KB_T^{(i)}:=\left[\tfrac{\p \rB}{\p x_1} \; \hdots \; \tfrac{\p \rB}{\p x_n} \right]_{\x = \x^{(i)}}$ represent the updated displacement vector, the residual force vector, and the evaluated tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, we refer \cite{Renaud2011}, whose approach is outlined in Appendix \ref{app:C3:yeohmodel}.
+where $\alpha>0$ an update coefficient, and the subscript $(i)$ denotes the iteration steps, while $\x^{(i)}$, $\rB^{(i)} := \rB(\x^{(i)})$, and $\KB_T^{(i)}:=\left[\tfrac{\p \rB}{\p x_1} \; \hdots \; \tfrac{\p \rB}{\p x_n} \right]_{\x = \x^{(i)}}$ represent the updated displacement vector, the residual force vector, and the evaluated tangent stiffness matrix, respectively. For further details on the derivation of the tangent stiffness based on the Yeoh elasticity model in \eqref{eq:C3:psi_model_yeoh}, we refer \cite{Renaud2011}, whose approach is outlined in Appendix \ref{app:C3:yeohmodel}.
 
 % \begin{example}[Hyper-elastic uniaxial tension]
 % %Before continuing

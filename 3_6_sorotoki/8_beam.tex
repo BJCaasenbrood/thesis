@@ -16,6 +16,7 @@ The method for constructing soft beam models in the \texttt{Sorotoki} toolkit is
 \centering
 %\vspace{-3mm}
 \includegraphics[width=0.85\textwidth]{./pdf/thesis-figure-cosserat.pdf}
+\vspace{3mm}
 \caption{\small Illustration of the soft beam model using geometric Cosserat beam theory, where the backbone curve is $\gB(\sigma,t) \in \mathrm{SE}(3)$ shown as \data{magenta}. The geometric strain vector $\xiB := \textrm{vec}\left\{ \GammaB, \UB\right\}$ a vector of size 6 consisting of stretch-shear strains $\UB$ and twist-bending strains $\GammaB$.}   
 \label{fig:C5:CosseratExample}
 \vspace{-6mm}  
@@ -74,8 +75,8 @@ Generally, finding a suitable reduction basis and reduction order can be a chall
 \gB_{\textrm{FEM}}(\sB, \x^{(i)}) = \begin{pmatrix} \QB(\sB,\x^{(i)}) & \pB(\sB,\x^{(i)}) \\ \vec{0} & 1 \end{pmatrix},
 \end{equation}
 %
-where $\sB \subseteq \Omega$ is an arbitrary point inside the undeformed mesh. It is important to note that if $\sB$ does not correspond to a nodal location of the mesh, interpolation using elemental shape functions is necessary. Now, let $\bar{\gammaB}: [0,L] \to \Omega$ be a unit-speed reference backbone curve that is contained within the mesh domain $\Omega$. Then, we can retrieve $\gB_{\textrm{FEM}}(\bar{\gammaB},\x^{(i)})$. Subsequently, the geometric strain can be approximated as $\xiB_{\textrm{FEM}} \approx (\gB_{\textrm{FEM}})\inv \delta \gB_{\textrm{FEM}}$. Here, $\delta \gB_{\textrm{FEM}}$ represents the spatial derivative of the reference curve w.r.t. $\sigma$, which is calculated using the central difference method. It is worth noting that the choice of $\bar{\gammaB}$ is free, allowing for the estimation of geometric strain for many complex structures. The full procedure is outlined in Algorithm \ref{algo:C5:fem_reconstruction}. \\
-%
+where $\sB \subseteq \Omega$ is an arbitrary point inside the undeformed mesh. It is important to note that if $\sB$ does not correspond to a nodal location of the mesh, interpolation using elemental shape functions is necessary. Now, let $\bar{\gammaB}: [0,L] \to \Omega$ be a unit-speed reference backbone curve that is contained within the mesh domain $\Omega$. Then, we can retrieve $\gB_{\textrm{FEM}}(\bar{\gammaB},\x^{(i)})$. Subsequently, the geometric strain can be approximated as $\xiB_{\textrm{FEM}} \approx (\gB_{\textrm{FEM}})\inv \delta \gB_{\textrm{FEM}}$. Here, $\delta \gB_{\textrm{FEM}}$ represents the spatial derivative of the reference curve w.r.t. $\sigma$, which is calculated using the central difference method. It is worth noting that the choice of $\bar{\gammaB}$ is free, allowing for the estimation of geometric strain for many complex structures. The full procedure is outlined in Algorithm \ref{algo:C5:fem_reconstruction}. \vspace{2mm}
+
 \begin{algorithm}[!t]
     \caption{Recover geometric strain field $\xiB_{\textrm{FEM}}$ from offline FEM \label{algo:C5:fem_reconstruction}}
     \KwIn{Nodal displacements $\xB$, mesh tesselation $\mathcal{T}$, reference curve $\bar{\gammaB}$, and sample set $\mathcal{S}$}
@@ -113,7 +114,7 @@ where $\sB \subseteq \Omega$ is an arbitrary point inside the undeformed mesh. I
     }
 \end{algorithm}
 
-\textit{Step 2: POD snapshot basis:} Next, we employ the "Snapshot Proper Orthogonal Decomposition" (POD) as described in \cite{Duriez2016,Goury2018}. This data-driven approach determines a suitable orthonormal basis from simulated or experimental data \cite{Astrid2008}. Let $y_{i}(\sigma,t) := \xi_{\textrm{FEM},i}(\sigma,t)$ represent the measurement of the $i$-th entry of the strain $\xiB_{\textrm{FEM}}$. For each discrete time $t_i$, the sample is condensed into a column vector $\vec{y}_i^{(t)} := \textrm{col}\left\{y_i(0,t),\dots,y_i(L,t) \right\}$ and then stacked into the "snapshot matrix" $\mat{S}_i = \textrm{row}\left\{ \vec{y}_i^{(0)},\dots,\vec{y}_i^{(T)} \right\}$ where $T$ is the finite horizon time. The correlation matrix $\mat{\mathcal{C}}_i = \tfrac{1}{m} \mat{S}_i^\top \mat{S}_i$ is then computed with $m = \dim(\yB_i)$, and the spectral decomposition is performed:
+\textit{Step 2: POD snapshot basis:} Next, we employ the "\textit{Snapshot Proper Orthogonal Decomposition}" (POD) as described in \cite{Duriez2016,Goury2018}. This data-driven approach determines a suitable orthonormal basis from simulated or experimental data \cite{Astrid2008}. Let $y_{i}(\sigma,t) := \xi_{\textrm{FEM},i}(\sigma,t)$ represent the measurement of the $i$-th entry of the strain $\xiB_{\textrm{FEM}}$. For each discrete time $t_i$, the sample is condensed into a column vector $\vec{y}_i^{(t)} := \textrm{col}\left\{y_i(0,t),\dots,y_i(L,t) \right\}$ and then stacked into the "snapshot matrix" $\mat{S}_i = \textrm{row}\left\{ \vec{y}_i^{(0)},\dots,\vec{y}_i^{(T)} \right\}$ where $T$ is the finite horizon time. The correlation matrix $\mat{\mathcal{C}}_i = \tfrac{1}{m} \mat{S}_i^\top \mat{S}_i$ is then computed with $m = \dim(\yB_i)$, and the spectral decomposition is performed:
 %
 \begin{equation}
 \mat{\mathcal{C}}_i \VB_i = \mat{\lambda}_i \VB_i,
@@ -206,11 +207,11 @@ Given an initial guess $\q^{(0)} \in \mathcal{Q}$, the aim is to compute an incr
 %
 \begin{align}
 \vec{\lambda}_i^{(k)} & = \JB_i^\top (\q^{(k)}) \left[ \KB_{p} \textrm{T}_{\textrm{SE}(3)}(\vec{\Xi}_i) \textrm{log}_{\textrm{SE}(3)} (\vec{\Xi}_i) \right]^\vee, \label{eq:C5:invkin1}\\
-\q^{(k+1)} & = \q^{(k)} + \sum^{N_p}_{i = 1} \vec{\Lambda}_i \left[\vec{\lambda}^{(k)}  - \NT_i(\q^{(k)}) \nabla \Phi_{\textrm{sub}} \right],
+\q^{(k+1)} & = \q^{(k)} + \sum^{N_p}_{i = 1} \vec{\Lambda}_i \left[\vec{\lambda}^{(k)}  - \NT_i(\q^{(k)}) \nabla \Psi_{\textrm{sub}} \right],
 \label{eq:C5:invkin2}
 \end{align}
 %
-where $\textrm{T}_{\textrm{SE}(3)}$ denotes the tangent operator map on the group $\mathrm{SE}(3)$, see \cite{Bullo1995}, $\KB_p$ an artificial stiffness tensor, $\NT_i = (\IB - \JB_{i}^+\JB_{i})$ represents the null-space projection, and $\vec{\Lambda}_i$ a diagonal activation matrix. The trivial choice is $\LambdaB_i = \IB_n$. The null space projector can be extremely useful in exploring the high redundancy in soft robots, allowing subtasks  $\Phi_\textrm{sub}$ to be considered parallel to the primary inverse kinematic problem. Classical examples of such subtasks include: minimizing elastic energy or obstacle avoidance. The iterative solver in \eqref{eq:C5:invkin1} and \eqref{eq:C5:invkin2} runs until convergence in $\q^{(k)}$ is achieved. \\
+where $\textrm{T}_{\textrm{SE}(3)}$ denotes the tangent operator map on the group $\mathrm{SE}(3)$, see \cite{Bullo1995}, $\KB_p$ an artificial stiffness tensor, $\NT_i = (\IB - \JB_{i}^\dag\JB_{i})$ represents the null-space projection, and $\vec{\Lambda}_i$ a diagonal activation matrix. The trivial choice is $\LambdaB_i = \IB_n$. The null space projector can be extremely useful in exploring the high redundancy in soft robots, allowing sub-tasks $\Psi_\textrm{sub}$ to be considered parallel to the primary inverse kinematic problem. Classical examples of such subtasks include: minimizing elastic energy or obstacle avoidance. The iterative solver in \eqref{eq:C5:invkin1} and \eqref{eq:C5:invkin2} runs until convergence in $\q^{(k)}$ is achieved. \\
 
 \begin{figure}[!t]
 \centering
@@ -218,7 +219,7 @@ where $\textrm{T}_{\textrm{SE}(3)}$ denotes the tangent operator map on the grou
 %\input{./fig/fig_mdl_example2.tex} \\[0.01em]
 %\input{./fig/fig_mdl_example2_grasp.tex}
 %\vspace{-5mm}
-\caption{\small (left) A snapshot of the ultra-gentle soft robot gripper developed by Sinatra et al. \cite{Sinatra2019Aug} is shown, demonstrating its ability to grasp a delicate jellyfish. (right) The reconstructed soft gripper using \texttt{Sorotoki} is presented, where each tentacle finger is modeled individually using the \textit{Shapes} class. It can be observed that the soft tentacles envelop the SDF object, indicating a balanced solution between task and subtask.}
+\caption{\small (left) A snapshot of the ultra-gentle soft robot gripper developed by Sinatra et al. \cite{Sinatra2019Aug} is shown, demonstrating its ability to grasp a delicate jellyfish. (right) The reconstructed soft gripper using \texttt{Sorotoki} is presented, where each tentacle finger is modeled individually using the \texttt{Shapes} class. It can be observed that the soft tentacles envelop the SDF object, indicating a balanced solution between task and subtask.}
 \label{fig:C5:shapesexample}
 \vspace{-5mm}
 \end{figure}

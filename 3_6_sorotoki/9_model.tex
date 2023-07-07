@@ -21,7 +21,7 @@ To proceed, we first convert the function to a \class{sys0 = StateSpace(@f0)} cl
 %
 
 \textbf{C. Fluidic reservoir with volume-variance}
-The majority of soft robots are actuated through fluidics. In recognition of this, \textit{Sorotoki} offers a variant of the \class{StateSpace} class, called \class{Fluidic}, which incorporates fluid-pressure dynamics of an enclosed pressure reservoir based on the ideal gas law. The dynamics of such fluidic reservoir is determined by the compressibility of the fluid and the capacitance of the reservoir that is related to its volume $V > 0$. As a soft robot deforms, so does its internal volume. As such, consider a scalar variable $J: \mathcal{Q} \to (0,+\infty]$ such that we can describe the volume by $V(J(\q)) = J(\q) V_0$ where $V_0$ is the intrinsic volume. From a physical point of view, the scalar $J(\q)$ can be seen as the relative volumetric change of the reservoir depending on the state of the soft robot. Assuming constant temperature $T$ and polytropic coefficient $n_k$, the pressure dynamics can be described by
+The majority of soft robots are actuated through fluidics. In recognition of this, \texttt{Sorotoki} offers a variant of the \class{StateSpace} class, called \class{Fluidic}, which incorporates fluid-pressure dynamics of an enclosed pressure reservoir based on the ideal gas law. The dynamics of such fluidic reservoir is determined by the compressibility of the fluid and the capacitance of the reservoir that is related to its volume $V > 0$. As a soft robot deforms, so does its internal volume. As such, consider a scalar variable $J: \mathcal{Q} \to (0,+\infty]$ such that we can describe the volume by $V(J(\q)) = J(\q) V_0$ where $V_0$ is the intrinsic volume. From a physical point of view, the scalar $J(\q)$ can be seen as the relative volumetric change of the reservoir depending on the state of the soft robot. Assuming constant temperature $T$ and polytropic coefficient $n_k$, the pressure dynamics can be described by
 %
 \begin{equation}
     \dot{p} = \frac{n_k}{V(J)} \left( R T \dot{m} - \frac{d V}{d J}(J) \dot{J} p \right) - \mu_{\textrm{leak}} p
@@ -37,6 +37,10 @@ where the input is $\dot{m}$ the mass flux into the reservoir, $R$ the ideal gas
 %
 where $\alpha_1,\alpha_2> 1$ are filter gains. Hence, the system of equations \eqref{eq:C5:pressure0}, \eqref{eq:C5:pressure1}, and \eqref{eq:C5:pressure2} leads to the full pressure dynamics. In case of an isochoric compression (\ie, no volume change $\dot{V} = 0$) with $J = 1 \Rightarrow \dot{J} = 0$, we can revert to a single-input-single-output (SISO) system with $u = \dot{m}$ (\ie, the mass flow $\dot{m}$ as the system's input).
 
+\begin{rmk}[On fluidic volume changes derived from FEM]
+The \texttt{Sorotoki} toolkit is equipped with functionalities that provide the volume of enclosed regions of the FEM. When \texttt{fem.solve()} or \texttt{fem.simulate()} is called, the time-series data of these volumes are stored, and thus can be used to identify how the state deformation $\mathbf{q}$ is related to the volume change using, \eg, methods of nonlinear regression
+\end{rmk}
+
 For many control applications for soft robotics, fluidic reservoirs are internally pressure regulated. Hence, the mass flow $\dot{m}(p,p_d)$ depends on the internal pressure $p$ and a (possibly time-varying) pressure trajectory $p_d$. The mass flow controller of a proportional pressure-regulated reservoir is modeled here as PI-type controller:
 %
 \begin{align}
@@ -44,7 +48,7 @@ For many control applications for soft robotics, fluidic reservoirs are internal
     \nu     & = k_p(p - p_d) + k_i \int p(\tau) - p_d(\tau) d\tau,
 \end{align}
 %
-where $\Psi_{\textrm{v}}(\nu,p)$ i a valve flow function related to mass flow saturation of the pressure valves, and $k_p,\,k_i >0$ the proportional and integral control gains, respectively. In \texttt{Sorotoki}, such fluidic system is provided as \class{Fluidic} class. The volume of the reservoir can be set using \code{Fluidic.setVolume(@V)} where $\code{V = @(x)...}$ is an auxiliary anonymous function. The mass flow function can be modified by the user using a similar command \code{Fluidic.setMassFlow(@M)}. By default, the flow function is chosen as $\Psi_{\textrm{v}}(\nu,p) = \nu$, and the internal regulation is \code{Fluidic.isRegulated = true}. \\
+where $\Psi_{\textrm{v}}(\nu,p)$ i a valve flow function related to mass flow saturation of the pressure valves, and $k_p,\,k_i >0$ the proportional and integral control gains, respectively. In \texttt{Sorotoki}, such fluidic system is provided as \class{Fluidic} class. The volume of the reservoir can be set using \code{Fluidic.setVolume(@V)} where $\code{V = @(x)...}$ is an auxiliary anonymous function. The mass flow function can be modified by the user using a similar command \code{Fluidic.setMassFlow(@M)}. By default, the flow function is $\Psi_{\textrm{v}}(\nu,p) = \nu$, and the regulation \code{Fluidic.isRegulated = true}. \\
 
 % \begin{figure}
 % %\includegraphics[width=0.485\textwidth]{./fig/Pipelinehand.pdf}
@@ -69,7 +73,7 @@ Finally, \code{mdl.addController(@Control) } is used to add the control law. In 
 %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-14-2.pdf}
 %\input{./fig/fig_model_softhand_true.tex} \\[-0.01em]
 %\input{./fig/fig_model_softhand_simu.tex} \vspace{-3mm}
-\caption{\small (top) Experimental snapshots of the open-source soft robotic hand provided by the \texttt{Sorotoki} toolkit. The five-fingered robot is subjected to a harmonic oscillator that commands oscillatory pressure to the individual fingers. Since each oscillator has a preset phase difference ($\phi = \pi/6$), the fingers of the soft robot hand undergo a periodic swinging motion. (bottom) Reconstructed soft robotic hand using \textit{Sorotoki}, where each finger is modelled using the \textit{Shapes.m} class and then composed using the \textit{Model.m} class. Following, each oscillator is added using \textit{mdl.addSystem} and then they ouputs are connected to the inputs of each \textit{Shapes.m} class. As can be seen, the dynamics between the numerical model and the experiments are in close agreement. }
+\caption{\small (top) Experimental snapshots of the open-source soft robotic hand provided by the \texttt{Sorotoki} toolkit. The five-fingered robot is subjected to a harmonic oscillator that commands oscillatory pressure to the individual fingers. Since each oscillator has a preset phase difference ($\phi = \pi/6$), the fingers of the soft robot hand undergo a periodic swinging motion. (bottom) Reconstructed soft robotic hand using \texttt{Sorotoki}, where each finger is modelled using the \texttt{Shapes.m} class and then composed using the \texttt{Model.m} class. Following, each oscillator is added using \texttt{mdl.addSystem} and then they ouputs are connected to the inputs of each \texttt{Shapes.m} class. As can be seen, the dynamics between the numerical model and the experiments are in close agreement. }
 \label{fig:C5:soft_hand_simulation}
 \end{figure*}
 %\clearpage
