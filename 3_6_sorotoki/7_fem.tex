@@ -7,7 +7,7 @@ Following the mesh generation process, \textit{Sorotoki} offers a nonlinear fini
 %FemExample
 \includegraphics[width=0.85\textwidth]{./pdf/FemExample.pdf}
 %\includegraphics[width=0.85\textwidth]{./pdf/thesis-figure-6-5.pdf}
-\caption{Illustration of the Finite Element Method (FEM), where a solid geometry $\Omega$ is subdivided into $N_e$ finite elements $\Omega_e$. Each element has $\dim(\x_e)$ DOFs, which allows the computation of the deformation gradient $\FB$. The deformation gradient can be decomposed into $\FB = \QB\VB$, an isochoric deformation part $\VB$ and rigid-body rotation part $\QB$. }    
+\caption{\small Illustration of the Finite Element Method (FEM), where a solid geometry $\Omega$ is subdivided into $N_e$ finite elements $\Omega_e$. Each element has $\dim(\x_e)$ DOFs, which allows the computation of the deformation gradient $\FB$. The deformation gradient can be decomposed into $\FB = \QB\VB$, an isochoric deformation part $\VB$ and rigid-body rotation part $\QB$. }    
 \label{fig:C5:illustration_FEM}
 \end{figure}
 
@@ -31,7 +31,7 @@ A fundamental measure of deformation in continuum mechanics is the deformation g
     \setlength{\tabcolsep}{2.25pt}
     %\rowcolors{1}{}{lightgray}
     \centering
-    \caption{Table of deformations measures relevant for continuum mechanics problem. All measures can be related to the first-order deformation tensor $\FB$, following the works  \cite{Holzapfel2002,Kim2018,Smith2018}.}
+    \caption{\small Table of deformations measures relevant for continuum mechanics problem. All measures can be related to the first-order deformation tensor $\FB$, following the works  \cite{Holzapfel2002,Kim2018,Smith2018}.}
     \label{tab:C5:strain_measures}
     \rowcolors{1}{}{blue!5}
     \begin{tabular}{ll}
@@ -75,7 +75,7 @@ To address this, \textit{Sorotoki} provides a library of hyper-elastic constitut
     \rowcolors{1}{}{blue!5}
     %\rowcolors{1}{}{lightgray}
     \centering
-    \caption{Table of material models included in \textit{Sorotoki}, including the NeoHookean model (NH), Mooney-Rivlin model (MR), and Yeoh (YH) model.}
+    \caption{\small Table of material models included in \textit{Sorotoki}, including the NeoHookean model (NH), Mooney-Rivlin model (MR), and Yeoh (YH) model.}
     \label{tab:C5:elasticitymodels}
     \begin{tabular}{lcl}
         \hline
@@ -115,7 +115,7 @@ In accordance with \cite{Overvelde2012May}, a square elastomer specimen with cir
 \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-6-2.pdf}
     %\input{./fig/fig_bucklemode_linear.tex}
 %\input{./fig/fig_bucklemode_nonlinear.tex}
-\caption{Nonlinear buckling mode analysis of periodic circular porous elastic structure inspired by \cite{Bertoldi2008,Overvelde2012May}. The horizontal displacements are indicated by \protect\colormapcaption{0}{.75cm}$\!\!\in [-5,5]$ \si{\milli \meter}. (top) The first four eigenmodes of the elastomer structure for $\varepsilon = 0\%$ compression, no buckling modes appear. (bottom)  The first four eigenmodes for $\varepsilon = 12.5\%$ compression. Notice that the first mode $\thetaB_1$ is a buckling mode where the collapses holes orient periodically either vertically or horizontally. }
+\caption{\small Nonlinear buckling mode analysis of periodic circular porous elastic structure inspired by \cite{Bertoldi2008,Overvelde2012May}. The horizontal displacements are indicated by \protect\colormapcaption{0}{.75cm}$\!\!\in [-5,5]$ \si{\milli \meter}. (top) The first four eigenmodes of the elastomer structure for $\varepsilon = 0\%$ compression, no buckling modes appear. (bottom)  The first four eigenmodes for $\varepsilon = 12.5\%$ compression. Notice that the first mode $\thetaB_1$ is a buckling mode where the collapses holes orient periodically either vertically or horizontally. }
 \label{fig:C5:fig_bucklemode}
 \vspace{-3mm}
 \end{figure}
@@ -204,12 +204,12 @@ The results of the simulation performed using \textit{Sorotoki} show a morpholog
 \includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-8-2.pdf}
 %\input{./fig/fig_fem_example_crawl_true.tex}
 %\input{./fig/fig_fem_example_crawl.tex}
-\caption{(top) Experiment of soft multi-gait crawling soft robot developed by Shepard et al \cite{Shepherd2011Dec} performing an undulating forward motion by periodic pressurizarion of its internal pressure chambers, back legs $\to$ middle $\to$ front legs. The soft robot is made from an elastomer material with strain-inhibit layer at the bottom to enhance bending. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. (bottom) Simulation recreation of the experiments performed by Shepard et al \cite{Shepherd2011Dec} using the Finite Element solver in the \sorotoki toolkit. Images sourced from public resources, with intellectual property belonging to cited authors, sources, and publishers. }
+\caption{\small (top) Experiment of soft multi-gait crawling soft robot developed by Shepard et al \cite{Shepherd2011Dec} performing an undulating forward motion by periodic pressurizarion of its internal pressure chambers, back legs $\to$ middle $\to$ front legs. The soft robot is made from an elastomer material with strain-inhibit layer at the bottom to enhance bending. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. (bottom) Simulation recreation of the experiments performed by Shepard et al \cite{Shepherd2011Dec} using the Finite Element solver in the \sorotoki toolkit. Images sourced from public resources, with intellectual property belonging to cited authors, sources, and publishers. }
 \label{fig:C5:fem_example_crawl} 
 \vspace{5mm}
 \includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-9-1a.pdf} 
 %\includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-9-2a.pdf}
-\caption{(top) Numerical simulation of the center of mass displacement and gait for undulating soft crawler. The horizontal displacement is given by \data{Matlab1}, and the vertical displacement as \data{Matlab2}. (bottom) The gait cycle of the soft crawler where the sequence $\{$\ldata{Matlab1}, \ldata{Matlab2}, \ldata{Matlab3}$\}$ shows the fluidic activation. }
+\caption{\small (top) Numerical simulation of the center of mass displacement and gait for undulating soft crawler. The horizontal displacement is given by \data{Matlab1}, and the vertical displacement as \data{Matlab2}. (bottom) The gait cycle of the soft crawler where the sequence $\{$\ldata{Matlab1}, \ldata{Matlab2}, \ldata{Matlab3}$\}$ shows the fluidic activation. }
 \label{fig:C5:fem_example_crawl_com}
 %\vspace{-5mm}
 \end{sidewaysfigure*}

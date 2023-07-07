@@ -37,7 +37,7 @@ where $\tilde{\q}$ is the controller state estimation, $\eB = \yB - \tilde{\gamm
   %\input{./3_chapters/3_chapter/img/fig_C3_3D_srmarm.tex}
   \includegraphics*[width=1.04\textwidth]{./pdf/thesis-figure-5-13.pdf}
   \vspace{-5mm}
-  \caption{\small \highlight{ Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball). }}
+  \caption{\small Three-dimensional evolution of the high-dimensional soft robotic system subject to a low-dimensional controller. The truncation order is indicated by $k$. The figure displays the true system as (\textcolor{matinfil!50}{$\blacksquare$}) and the low-dimensional shape estimations as (\textcolor{lightblue}{$\blacksquare$}). Notice that, independent of the truncation order $k$, all controllers converge to a neighborhood of the setpoint even when the estimates are off. }
   \label{fig:C3:softarm_3D_truncation}
   \vspace{-6mm}
 \end{figure*}
@@ -68,11 +68,11 @@ The numerical simulations conducted for the controller benchmark are presented i
 
 \begin{figure}[!t]
 \centering
-\vspace{-1mm}
+\vspace{-3mm}
 %\input{./fig/fig_infdim_gamma.tex} 
 \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-14.pdf}
-\vspace{-5mm}
-\caption{\small \highlight{ Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded as follows: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$.}}
+\vspace{-3mm}
+\caption{\small Temporal evolutions of the end-effector locations for increasing modal number $k$, where (left) is the $x$-position, (middle) the $y$-position, and (right) the $z$-position. The modal order is color-coded: $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$. Notice all, but the PCS controller ($k=1$) converges to the desired end-effector position.}
 \vspace{-0.2cm}
 \label{fig:C3:EX3:gamma_order}
 \end{figure}

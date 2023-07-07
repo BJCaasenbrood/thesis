@@ -2344,6 +2344,7 @@ INPUT ./3_1_introduction/4_contribution.tex
 INPUT 3_1_introduction/4_contribution.tex
 INPUT ./3_1_introduction/4_contribution.tex
 INPUT 3_1_introduction/4_contribution.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmri7.tfm
 INPUT ./3_1_introduction/5_outline.tex
@@ -2463,7 +2464,6 @@ INPUT ./3_3_design/3_opt.tex
 INPUT 3_3_design/3_opt.tex
 INPUT ./3_3_design/3_opt.tex
 INPUT 3_3_design/3_opt.tex
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT ./pdf/thesis-figure-3-1.pdf_tex

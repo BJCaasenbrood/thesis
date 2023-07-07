@@ -55,9 +55,9 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{thesis-figure-5-17.pdf}}%
     \put(0.72048226,0.24451036){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\large\textcolor{white}{$\sigma_d$}\end{tabular}}}}%
-    \put(0.15153007,0.28564449){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textcolor{white}{$\dot{\sigma}_d \approx 160$ mm/s}\end{tabular}}}}%
-    \put(0.24826515,0.10951452){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small \textcolor{white}{"bending wave propagation"}\end{tabular}}}}%
-    \put(0.69864979,0.10932246){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small \textcolor{white}{"static bending"}\end{tabular}}}}%
+    \put(0.15153007,0.29392558){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textcolor{white}{$\dot{\sigma}_d \approx 65.07$ mm/s}\end{tabular}}}}%
+    \put(0.20957468,0.10951452){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small \textcolor{white}{"bending wave propagation"}\end{tabular}}}}%
+    \put(0.66623543,0.10932246){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small \textcolor{white}{"global bending"}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{thesis-figure-5-17.pdf}}%
   \end{picture}%
 \endgroup%
