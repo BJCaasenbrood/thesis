@@ -75,9 +75,9 @@
 \contentsline {section}{\numberline {5.4}Simulation studies of bio-inspired soft robots}{121}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Soft robot manipulator inspired by octopus' tentacle}{122}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Multi-link soft robot inspired by the elephant's trunk}{125}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Mimicking biological motion through energy-based control with relaxed set-points}{128}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Mixing truncation: applying reduced-order model-based controllers to high-dimensional models of continuum soft robots}{131}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Conclusion}{135}{section.5.7}%
+\contentsline {section}{\numberline {5.5}Achieving bio-inspired motion through energy-based control using relaxed set-points}{128}{section.5.5}%
+\contentsline {section}{\numberline {5.6}On modal truncation: applying reduced-order model-based controllers to high-dimensional models of continuum soft robots}{132}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Conclusion}{136}{section.5.7}%
 \contentsline {chapter}{\numberline {6}\texttt {Sorotoki}: a MATLAB toolkit for soft robots}{137}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Introduction}{138}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Problem formulation}{138}{subsection.6.1.1}%
@@ -98,7 +98,7 @@
 \contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{184}{subsection.6.6.2}%
 \contentsline {subsection}{\numberline {6.6.3}Dynamic manipulation of high dexterity soft gripper}{188}{subsection.6.6.3}%
 \contentsline {subsection}{\numberline {6.6.4}Environmental impedance control of soft manipulator}{193}{subsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{195}{subsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{197}{subsection.6.6.5}%
 \contentsline {section}{\numberline {6.7}Conclusion and future work}{200}{section.6.7}%
 \contentsline {chapter}{\numberline {7}Conclusions, recommendations, and outlook}{201}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Conclusions}{201}{section.7.1}%

@@ -786,6 +786,12 @@ Jones, B.~A. and Walker, I.~D. (2007).
 \newblock In {\em {Proceedings 2007 IEEE International Conference on Robotics
   and Automation}}, pages 1363--1368. IEEE.
 
+\bibitem[Justh and Krishnaprasad, 2006]{Justh2006Jun}
+Justh, E.~W. and Krishnaprasad, P.~S. (2006).
+\newblock {Steering laws for motion camouflage}.
+\newblock {\em Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 462(2076):3629--3643.
+
 \bibitem[Kamble et~al., 2022]{Kamble2022Jan}
 Kamble, V.~G., Mersch, J., Tahir, M.,
   St{\ifmmode\ddot{o}\else\"{o}\fi}ckelhuber, K.~W., Das, A., and Wie{\ss}ner,

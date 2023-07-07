@@ -1,5 +1,6 @@
-\cleardoublepage
-\section{Mixing truncation: applying reduced-order model-based controllers to high-dimensional models of continuum soft robots}
+%\cleardoublepage
+\newpage
+\section{On modal truncation: applying reduced-order model-based controllers to high-dimensional models of continuum soft robots}
 In the previous section, we made the assumption that the truncation order $k$ of both the dynamic system and the controller is identical. However, in practical scenarios, this is never the case. Soft robots are, in theory, infinite-dimensional systems that can never be precisely matched by a finite state description. This brings forth several issues regarding the selection of an appropriate truncation controller and the potential consequences of an unsuitable truncation choice, such as a deterioration in control performance or even instability.
 %
 
@@ -11,7 +12,7 @@ Since we cannot measure $\q$ directly, we propose a controller-observer architec
   \begin{dcases}
     \vspace{2mm}
     \uB  = \GB_k^+ \left( \nabla_{\vec{q}_c}{\Hm} - \nabla_{\vec{q}_c}{\Hm}_d \right), \\ 
-    \dot{\tilde{\qB}} = L_1 \JB_v^\top\!\eB + L_2 (\IB - \JB_v^+\JB_v) \nabla_{\q_c} \Psi,
+    \dot{\tilde{\qB}} = L_1 \JB_v^\top\!\eB + L_2 (\IB - \JB_v^\dag\JB_v) \nabla_{\q_c} \Psi,
   \end{dcases}
 \end{align}
 %
@@ -28,7 +29,7 @@ Since we cannot measure $\q$ directly, we propose a controller-observer architec
   \vspace{-3mm}
 \end{figure}
 %
-where $\tilde{\q}$ is the controller state estimation, $\eB = \yB - \tilde{\gammaB}_L$ represents the difference between the true end-effector location and its estimate produced by the observer model, $\JB_v$ the linear velocity part of the Jacobian matrix, $\ten{N} = (\IB - \JB_v^+\JB_v)$ the null space, $\Psi$ a scalar-valued function that represents a sub-task for the observer, and $L_1,L_2 > 0$ are the observer gains. We select a sub-task energy potential $\Psi$ as the difference between the estimated potential energy and the work produced by the control input $\uB$, thus $\nabla{\q_c} \Psi(\tilde{\q},\uB) = \nabla_{\q_c}\mathcal{H}(\tilde{\q}) - \GB_k \uB$. Thus, the observer is nothing more than a continuous-time continuum deformation solver.%, aimed at finding a stable curve configuration given a known end-effector position and input $\uB$.
+where $\tilde{\q}$ is the controller state estimation, $\eB = \yB - \tilde{\gammaB}_L$ represents the difference between the true end-effector location and its estimate produced by the observer model, $\JB_v$ the linear velocity part of the Jacobian matrix, $\ten{N} = (\IB - \JB_v^\dag\JB_v)$ the null space, $\Psi$ a scalar-valued function that represents a sub-task for the observer, and $L_1,L_2 > 0$ are the observer gains. We select a sub-task energy potential $\Psi$ as the difference between the estimated potential energy and the work produced by the control input $\uB$, thus $\nabla{\q_c} \Psi(\tilde{\q},\uB) = \nabla_{\q_c}\mathcal{H}(\tilde{\q}) - \GB_k \uB$. Thus, the observer is nothing more than a continuous-time continuum deformation solver.%, aimed at finding a stable curve configuration given a known end-effector position and input $\uB$.
 %
 \begin{figure*}[!t]
   \centering
@@ -61,7 +62,7 @@ where $\tilde{\q}$ is the controller state estimation, $\eB = \yB - \tilde{\gamm
 %
 
 %
-We again consider a soft robot inspired by the octopus arm (see Table \ref{tab:C3:parameters1}) with the controller-observer gains: $\lambda_1 = \lambda_2 = 0.1$ and $L_1 = L_2 = 1$. The desired end-effector configuration is $\PhiB_d = \IB_3$ and $\gammaB_d = (70, 0, 40)^\top$. In this study, we analyze the performance of the reduced-order controller for truncation orders $k \in \{1,2,...,8\}$. Note that for $k=1$, the controller explores the "\emph{Piece-wise Constant Strain}" (PCS) assumption similar to Chapter \ref{chap:PCC}, while the true system $\Sigma_{\textrm{softrobot}}$ is not impeded by such kinematic restrictions. %
+We again consider the soft robot inspired by the octopus arm (see Table \ref{tab:C3:parameters1}) with the controller-observer gains: $\lambda_1 = \lambda_2 = 0.1$ and $L_1 = L_2 = 1$. The desired end-effector configuration is $\PhiB_d = \IB_3$ and $\gammaB_d = (70, 0, 40)^\top$. In this study, we analyze the performance of the reduced-order controller for truncation orders $k \in \{1,2,...,8\}$. Note that for $k=1$, the controller explores the "\emph{Piece-wise Constant Strain}" (PCS) assumption similar to Chapter \ref{chap:PCC}, while the true system $\Sigma_{\textrm{softrobot}}$ is not impeded by such kinematic restrictions. %
 
 The numerical simulations conducted for the controller benchmark are presented in Figure \ref{fig:C3:softarm_3D_truncation}, showcasing snapshots of the closed-loop system in operation. The figure displays the true system as (\textcolor{matinfil!50}{$\blacksquare$}) and the low-dimensional shape estimations as (\textcolor{lightblue}{$\blacksquare$}). Figure \ref{fig:C3:EX3:gamma_order} shows the trajectories of $\gammaB_L$ for various $k$, while Figure \ref{fig:C3:EX3:backbone_convergence} shows the RMS error between the backbone of the estimate and the true system. The steady-state values for these metrics are reported in Table \ref{tab:C3:EX3:error}. As anticipated, it is observed that with increasing $k$, the differences between the true system and shape estimates diminish, indicating a monotonically increasing precision. However, a few other remarkable observations can be made.
 

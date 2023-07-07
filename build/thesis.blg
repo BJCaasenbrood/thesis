@@ -6,7 +6,7 @@ A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
 The style file: apalike.bst
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12216 items from 5000.
+Reallocated field_info (elt_size=4) to 12238 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -17,20 +17,20 @@ Warning--entry type for "Immega1986" isn't style-file defined
 Warning--I'm ignoring Duriez2013's extra "publisher" field
 --line 973 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1741 of file MyBib.bib
+--line 1754 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1748 of file MyBib.bib
+--line 1761 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2546 of file MyBib.bib
+--line 2559 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 3058 of file MyBib.bib
+--line 3071 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3170 of file MyBib.bib
+--line 3183 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3612 of file MyBib.bib
+--line 3625 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4212 of file MyBib.bib
+--line 4225 of file MyBib.bib
 Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
@@ -54,45 +54,45 @@ Warning--empty school in Sanan2013
 Warning--empty publisher in Tedrake2022
 Warning--empty journal in Thieffry2020
 Warning--empty journal in Thieffry2017
-You've used 327 entries,
+You've used 328 entries,
             1935 wiz_defined-function locations,
-            2420 strings with 72514 characters,
-and the built_in function-call counts, 147543 in all, are:
-= -- 14433
-> -- 7107
-< -- 187
-+ -- 2510
-- -- 2476
-* -- 12980
-:= -- 25353
-add.period$ -- 1020
-call.type$ -- 327
-change.case$ -- 2850
-chr.to.int$ -- 301
-cite$ -- 351
-duplicate$ -- 5209
-empty$ -- 9652
-format.name$ -- 2915
-if$ -- 28855
+            2429 strings with 72735 characters,
+and the built_in function-call counts, 147965 in all, are:
+= -- 14477
+> -- 7120
+< -- 188
++ -- 2514
+- -- 2480
+* -- 13019
+:= -- 25423
+add.period$ -- 1023
+call.type$ -- 328
+change.case$ -- 2857
+chr.to.int$ -- 302
+cite$ -- 352
+duplicate$ -- 5223
+empty$ -- 9684
+format.name$ -- 2922
+if$ -- 28938
 int.to.chr$ -- 27
 int.to.str$ -- 0
-missing$ -- 319
-newline$ -- 1632
-num.names$ -- 975
-pop$ -- 2551
+missing$ -- 320
+newline$ -- 1637
+num.names$ -- 978
+pop$ -- 2555
 preamble$ -- 1
-purify$ -- 2873
+purify$ -- 2880
 quote$ -- 0
-skip$ -- 4008
+skip$ -- 4019
 stack$ -- 0
-substring$ -- 10348
-swap$ -- 878
+substring$ -- 10391
+swap$ -- 879
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1924
+type$ -- 1930
 warning$ -- 22
-while$ -- 1155
+while$ -- 1159
 width$ -- 0
-write$ -- 4232
+write$ -- 4245
 (There were 34 warnings)

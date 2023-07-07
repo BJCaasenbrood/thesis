@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  7 JUL 2023 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  7 JUL 2023 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1418,9 +1418,6 @@ LaTeX Warning: Label `sec: chap2 section header' multiply defined.
 
 LaTeX Warning: Label `sec: chap2 section header' multiply defined.
 
-
-LaTeX Warning: Label `fig:C3:multilink_states' multiply defined.
-
 <Reading QR code for "https://bit.ly/3zIvbHt" at level 2-M from aux file.>
 (build/3_7_conclusion/conclusion.aux) (build/7_publications/publications.aux) (build/8_cv/cv.aux))
 \openout1 = `thesis.aux'.
@@ -2401,7 +2398,12 @@ Package pdftex.def Info: ./pdf/thesis-figure-5-6.pdf  used on input line 69.
 <to be read again> 
                    \relax 
 l.87 ...ial stepsize due to explicit integration.}
-                                                   [124 <./pdf/thesis-figure-5-6.pdf>] [125]
+                                                   [124 <./pdf/thesis-figure-5-6.pdf>]
+Overfull \hbox (1.59105pt too wide) detected at line 160
+ $[][] \OT1/lmr/m/n/10 = []  [] [][] = [][]  [] [][] = [][] [] \OML/lmm/m/it/10 :$ 
+ []
+
+[125]
 <./pdf/thesis-figure-5-7.pdf, id=4356, 341.546pt x 193.88936pt>
 File: ./pdf/thesis-figure-5-7.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-7.pdf>
@@ -2423,21 +2425,31 @@ File: ./pdf/thesis-figure-5-10.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-10.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-5-10.pdf  used on input line 160.
 (pdftex.def)             Requested size: 355.65945pt x 157.13876pt.
- [127 <./pdf/thesis-figure-5-9.pdf> <./pdf/thesis-figure-5-10.pdf>]) (./3_5_cosseratmodel/4_result_infdim.tex [128
+ [127 <./pdf/thesis-figure-5-9.pdf> <./pdf/thesis-figure-5-10.pdf>]
+<./pdf/thesis-figure-5-11.pdf, id=4477, 339.12898pt x 224.24878pt>
+File: ./pdf/thesis-figure-5-11.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-11.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-11.pdf  used on input line 191.
+(pdftex.def)             Requested size: 355.65945pt x 235.18074pt.
+<./pdf/thesis-figure-5-12.pdf, id=4479, 330.65733pt x 144.97462pt>
+File: ./pdf/thesis-figure-5-12.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-12.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-12.pdf  used on input line 201.
+(pdftex.def)             Requested size: 355.65945pt x 155.93536pt.
+
+Overfull \hbox (6.68117pt too wide) in paragraph at lines 206--206
+|[]\T1/lmr/bx/n/14.4 Achieving bio-inspired mo-tion through energy-
+ []
+
+<./pdf/thesis-figure-5-16_v2.pdf, id=4484, 338.24173pt x 254.29453pt>
+File: ./pdf/thesis-figure-5-16_v2.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-16_v2.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-16_v2.pdf  used on input line 215.
+(pdftex.def)             Requested size: 355.65945pt x 267.40514pt.
+[128
 
 
 ]
-<./pdf/thesis-figure-5-11.pdf, id=4483, 339.12898pt x 224.24878pt>
-File: ./pdf/thesis-figure-5-11.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-5-11.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-11.pdf  used on input line 1.
-(pdftex.def)             Requested size: 355.65945pt x 235.18074pt.
-<./pdf/thesis-figure-5-12.pdf, id=4485, 330.65733pt x 144.97462pt>
-File: ./pdf/thesis-figure-5-12.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-5-12.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-12.pdf  used on input line 1.
-(pdftex.def)             Requested size: 355.65945pt x 155.93536pt.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 22.48878pt, for example:
@@ -2445,115 +2457,26 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.48878pt}.
 
-[129 <./pdf/thesis-figure-5-11.pdf> <./pdf/thesis-figure-5-12.pdf>] (./pdf/thesis-figure-5-17.pdf_tex
-<./pdf//thesis-figure-5-17.pdf, id=4526, page=1, 363.62952pt x 140.70267pt>
+[129 <./pdf/thesis-figure-5-11.pdf> <./pdf/thesis-figure-5-12.pdf>]
+Overfull \hbox (6.9254pt too wide) in paragraph at lines 225--229
+\OT1/lmr/m/n/10 0$ \T1/lmr/m/n/10 the con-trol gains, and the op-ti-mal ge-o-met-ric er-ror as $[][][] \OT1/lmr/m/n/10 = [][]([[]][](\OML/lmm/m/it/10 ^^[[]; []\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 ; [][]\OT1/lmr/m/n/10 )$
+ []
+
+[130 <./pdf/thesis-figure-5-16_v2.pdf>] (./pdf/thesis-figure-5-17.pdf_tex
+<./pdf//thesis-figure-5-17.pdf, id=4639, page=1, 363.62952pt x 140.70267pt>
 File: ./pdf//thesis-figure-5-17.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-5-17.pdf, page 1>
 Package pdftex.def Info: ./pdf//thesis-figure-5-17.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 363.6295pt x 140.7023pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 57.
-<./pdf//thesis-figure-5-17.pdf, id=4527, page=2, 363.62952pt x 140.70267pt>
+<./pdf//thesis-figure-5-17.pdf, id=4640, page=2, 363.62952pt x 140.70267pt>
 File: ./pdf//thesis-figure-5-17.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-5-17.pdf, page 2>
 Package pdftex.def Info: ./pdf//thesis-figure-5-17.pdf , page2 used on input line 61.
 (pdftex.def)             Requested size: 363.6295pt x 140.7023pt.
 )
-Overfull \hbox (7.97005pt too wide) in paragraph at lines 62--1
- [][] 
- []
-
-<./pdf/thesis-figure-5-16_v2.pdf, id=4528, 338.24173pt x 254.29453pt>
-File: ./pdf/thesis-figure-5-16_v2.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-5-16_v2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-16_v2.pdf  used on input line 1.
-(pdftex.def)             Requested size: 355.65945pt x 267.40514pt.
-
-LaTeX Warning: Text page 130 contains only floats.
-
-[130
-
-
- <./pdf/thesis-figure-5-16_v2.pdf> <./pdf//thesis-figure-5-17.pdf
-
-pdfTeX warning: pdflatex (file ./pdf//thesis-figure-5-17.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./pdf//thesis-figure-5-17.pdf
-
-pdfTeX warning: pdflatex (file ./pdf//thesis-figure-5-17.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./fig/fig_C4_InfD_diagram.pdf_tex
-<./fig//fig_C4_InfD_diagram.pdf, id=4637, page=1, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 1>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4638, page=2, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 2>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page2 used on input line 58.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4639, page=3, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 3>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page3 used on input line 60.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4640, page=4, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 4>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page4 used on input line 62.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4641, page=5, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 5>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page5 used on input line 64.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4642, page=6, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 6>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page6 used on input line 68.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4643, page=7, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 7>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page7 used on input line 72.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4644, page=8, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 8>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page8 used on input line 75.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4645, page=9, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 9>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page9 used on input line 77.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4646, page=10, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 10>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page10 used on input line 80.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4647, page=11, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 11>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page11 used on input line 85.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-<./fig//fig_C4_InfD_diagram.pdf, id=4648, page=12, 348.81883pt x 157.07402pt>
-File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
-<use ./fig//fig_C4_InfD_diagram.pdf, page 12>
-Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page12 used on input line 90.
-(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
-)
-<./pdf/thesis-figure-5-13.pdf, id=4653, 342.37811pt x 301.43806pt>
-File: ./pdf/thesis-figure-5-13.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-5-13.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-13.pdf  used on input line 37.
-(pdftex.def)             Requested size: 369.88344pt x 325.65404pt.
-
-Overfull \hbox (14.22398pt too wide) in paragraph at lines 37--39
- [][] 
- []
-
-
-Overfull \hbox (0.83089pt too wide) in paragraph at lines 51--60
+Overfull \hbox (7.97005pt too wide) in paragraph at lines 62--245
  [][] 
  []
 
@@ -2564,9 +2487,102 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.48878pt}.
 
-[131
+[131 <./pdf//thesis-figure-5-17.pdf> <./pdf//thesis-figure-5-17.pdf
 
-] [132 <./fig//fig_C4_InfD_diagram.pdf> <./fig//fig_C4_InfD_diagram.pdf
+pdfTeX warning: pdflatex (file ./pdf//thesis-figure-5-17.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./3_5_cosseratmodel/4_result_infdim.tex
+Overfull \hbox (0.575pt too wide) in paragraph at lines 3--3
+|[]\T1/lmr/bx/n/14.4 On modal trun-ca-tion: ap-ply-ing reduced-order
+ []
+
+(./fig/fig_C4_InfD_diagram.pdf_tex
+<./fig//fig_C4_InfD_diagram.pdf, id=4662, page=1, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 1>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4663, page=2, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 2>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4664, page=3, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 3>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page3 used on input line 60.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4665, page=4, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 4>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page4 used on input line 62.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4666, page=5, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 5>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page5 used on input line 64.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4667, page=6, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 6>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page6 used on input line 68.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4668, page=7, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 7>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page7 used on input line 72.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4669, page=8, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 8>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page8 used on input line 75.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4670, page=9, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 9>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page9 used on input line 77.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4671, page=10, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 10>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page10 used on input line 80.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4672, page=11, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 11>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page11 used on input line 85.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+<./fig//fig_C4_InfD_diagram.pdf, id=4673, page=12, 348.81883pt x 157.07402pt>
+File: ./fig//fig_C4_InfD_diagram.pdf Graphic file (type pdf)
+<use ./fig//fig_C4_InfD_diagram.pdf, page 12>
+Package pdftex.def Info: ./fig//fig_C4_InfD_diagram.pdf , page12 used on input line 90.
+(pdftex.def)             Requested size: 348.81883pt x 157.07602pt.
+)
+<./pdf/thesis-figure-5-13.pdf, id=4678, 342.37811pt x 301.43806pt>
+File: ./pdf/thesis-figure-5-13.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-13.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-13.pdf  used on input line 38.
+(pdftex.def)             Requested size: 369.88344pt x 325.65404pt.
+
+Overfull \hbox (14.22398pt too wide) in paragraph at lines 38--40
+ [][] 
+ []
+
+
+Overfull \hbox (0.83089pt too wide) in paragraph at lines 52--61
+ [][] 
+ []
+
+[132
+
+]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 22.48878pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.48878pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.48878pt}.
+
+[133 <./fig//fig_C4_InfD_diagram.pdf> <./fig//fig_C4_InfD_diagram.pdf
 
 pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./fig//fig_C4_InfD_diagram.pdf
@@ -2600,11 +2616,20 @@ pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: m
 
 pdfTeX warning: pdflatex (file ./fig//fig_C4_InfD_diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./pdf/thesis-figure-5-14.pdf, id=4680, 377.17815pt x 130.69426pt>
+<./pdf/thesis-figure-5-14.pdf, id=4704, 377.17815pt x 130.69426pt>
 File: ./pdf/thesis-figure-5-14.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-5-14.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-14.pdf  used on input line 72.
+Package pdftex.def Info: ./pdf/thesis-figure-5-14.pdf  used on input line 73.
 (pdftex.def)             Requested size: 355.65945pt x 123.24347pt.
+ [134 <./pdf/thesis-figure-5-13.pdf>]
+<./pdf/thesis-figure-5-15.pdf, id=4777, 367.17776pt x 133.58307pt>
+File: ./pdf/thesis-figure-5-15.pdf Graphic file (type pdf)
+<use ./pdf/thesis-figure-5-15.pdf>
+Package pdftex.def Info: ./pdf/thesis-figure-5-15.pdf  used on input line 88.
+(pdftex.def)             Requested size: 355.65945pt x 129.39807pt.
+) (./3_5_cosseratmodel/5_conclusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -2613,18 +2638,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.48878pt}.
 
-[133 <./pdf/thesis-figure-5-13.pdf>]
-<./pdf/thesis-figure-5-15.pdf, id=4753, 367.17776pt x 133.58307pt>
-File: ./pdf/thesis-figure-5-15.pdf Graphic file (type pdf)
-<use ./pdf/thesis-figure-5-15.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-5-15.pdf  used on input line 87.
-(pdftex.def)             Requested size: 355.65945pt x 129.39807pt.
-) (./3_5_cosseratmodel/5_conclusion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [134 <./pdf/thesis-figure-5-14.pdf> <./pdf/thesis-figure-5-15.pdf>]) [135] [136
-
-]
+[135 <./pdf/thesis-figure-5-14.pdf> <./pdf/thesis-figure-5-15.pdf>]) [136]
 Chapter 6.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 173.
@@ -2632,7 +2646,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1}) 
 <to be read again> 
                    \relax 
 l.175 ...textit{in preparation for submission}). }
-                                                   (./3_6_sorotoki/0_abstract.tex) (./3_6_sorotoki/1_introduction.tex [137] [138] [139] [140]
+                                                   (./3_6_sorotoki/0_abstract.tex) (./3_6_sorotoki/1_introduction.tex [137
+
+] [138] [139] [140]
 Overfull \hbox (1.9235pt too wide) in paragraph at lines 23--26
 \T1/lmr/m/n/10 To ad-dress some of these chal-lenges, we in-tro-duce \T1/lmtt/m/n/10 Sorotoki \T1/lmr/m/n/10 (short for Soft Robotics
  []
@@ -2659,7 +2675,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 <QR code requested for "https://bit.ly/3zIvbHt" in version 0-M.>
 <Copying the QR code for "https://bit.ly/3zIvbHt" in version 2-M as previously calculated.>
 ) (./3_6_sorotoki/3_openrobots.tex
-<./pdf/thesis-figure-6-1.pdf, id=4994, 244.98528pt x 243.97147pt>
+<./pdf/thesis-figure-6-1.pdf, id=5012, 244.98528pt x 243.97147pt>
 File: ./pdf/thesis-figure-6-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-1.pdf  used on input line 13.
@@ -2690,7 +2706,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
  []
 
 ) (./3_6_sorotoki/4_software.tex [148]
-<./pdf/thesis-figure-6-2.pdf, id=5043, 845.58911pt x 272.21701pt>
+<./pdf/thesis-figure-6-2.pdf, id=5061, 845.58911pt x 272.21701pt>
 File: ./pdf/thesis-figure-6-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-2.pdf  used on input line 6.
@@ -2710,18 +2726,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <5> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 35.
-<./pdf/thesis-figure-6-3-1.pdf, id=5092, 244.98425pt x 86.87859pt>
+<./pdf/thesis-figure-6-3-1.pdf, id=5111, 244.98425pt x 86.87859pt>
 File: ./pdf/thesis-figure-6-3-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-3-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-3-1.pdf  used on input line 50.
 (pdftex.def)             Requested size: 176.04968pt x 62.43585pt.
-<./pdf/thesis-figure-6-3-2.pdf, id=5094, 244.98325pt x 73.24664pt>
+<./pdf/thesis-figure-6-3-2.pdf, id=5113, 244.98325pt x 73.24664pt>
 File: ./pdf/thesis-figure-6-3-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-3-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-3-2.pdf  used on input line 51.
 (pdftex.def)             Requested size: 176.04968pt x 52.63918pt.
 [151]) (./3_6_sorotoki/6_mesh.tex (./pdf/thesis-figure-6-4-new.pdf_tex
-<./pdf//thesis-figure-6-4-new.pdf, id=5119, page=1, 343.83452pt x 78.97063pt>
+<./pdf//thesis-figure-6-4-new.pdf, id=5137, page=1, 343.83452pt x 78.97063pt>
 File: ./pdf//thesis-figure-6-4-new.pdf Graphic file (type pdf)
 <use ./pdf//thesis-figure-6-4-new.pdf, page 1>
 Package pdftex.def Info: ./pdf//thesis-figure-6-4-new.pdf , page1 used on input line 56.
@@ -2732,7 +2748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 [153 <./pdf//thesis-figure-6-4-new.pdf>]) (./3_6_sorotoki/7_fem.tex
-<./pdf/FemExample.pdf, id=5191, 953.46637pt x 382.37303pt>
+<./pdf/FemExample.pdf, id=5209, 953.46637pt x 382.37303pt>
 File: ./pdf/FemExample.pdf Graphic file (type pdf)
 <use ./pdf/FemExample.pdf>
 Package pdftex.def Info: ./pdf/FemExample.pdf  used on input line 8.
@@ -2764,12 +2780,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--93
  []
 
 [156] [157]
-<./pdf/thesis-figure-6-6-1.pdf, id=5274, 309.68518pt x 79.92642pt>
+<./pdf/thesis-figure-6-6-1.pdf, id=5292, 309.68518pt x 79.92642pt>
 File: ./pdf/thesis-figure-6-6-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-6-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-6-1.pdf  used on input line 114.
 (pdftex.def)             Requested size: 337.87538pt x 87.20953pt.
-<./pdf/thesis-figure-6-6-2.pdf, id=5276, 309.53294pt x 78.61469pt>
+<./pdf/thesis-figure-6-6-2.pdf, id=5294, 309.53294pt x 78.61469pt>
 File: ./pdf/thesis-figure-6-6-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-6-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-6-2.pdf  used on input line 115.
@@ -2778,17 +2794,17 @@ Package pdftex.def Info: ./pdf/thesis-figure-6-6-2.pdf  used on input line 115.
 Underfull \vbox (badness 1308) has occurred while \output is active []
 
  [159] [160]
-<./pdf/thesis-figure-6-8-1.pdf, id=5378, 510.17pt x 54.55482pt>
+<./pdf/thesis-figure-6-8-1.pdf, id=5396, 510.17pt x 54.55482pt>
 File: ./pdf/thesis-figure-6-8-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-8-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-8-1.pdf  used on input line 222.
 (pdftex.def)             Requested size: 560.5193pt x 59.9439pt.
-<./pdf/thesis-figure-6-8-2.pdf, id=5380, 479.86378pt x 31.31499pt>
+<./pdf/thesis-figure-6-8-2.pdf, id=5398, 479.86378pt x 31.31499pt>
 File: ./pdf/thesis-figure-6-8-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-8-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-8-2.pdf  used on input line 222.
 (pdftex.def)             Requested size: 560.5193pt x 36.58199pt.
-<./pdf/thesis-figure-6-9-1a.pdf, id=5390, 497.78433pt x 131.81535pt>
+<./pdf/thesis-figure-6-9-1a.pdf, id=5408, 497.78433pt x 131.81535pt>
 File: ./pdf/thesis-figure-6-9-1a.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-9-1a.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-9-1a.pdf  used on input line 222.
@@ -2800,7 +2816,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-<./pdf/thesis-figure-cosserat.pdf, id=5443, 935.33002pt x 382.37303pt>
+<./pdf/thesis-figure-cosserat.pdf, id=5461, 935.33002pt x 382.37303pt>
 File: ./pdf/thesis-figure-cosserat.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-cosserat.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-cosserat.pdf  used on input line 18.
@@ -2829,17 +2845,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--123
  []
 
 [167]
-<./pdf/thesis-figure-6-11-2.pdf, id=5570, 245.38374pt x 53.91443pt>
+<./pdf/thesis-figure-6-11-2.pdf, id=5588, 245.38374pt x 53.91443pt>
 File: ./pdf/thesis-figure-6-11-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-11-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-11-2.pdf  used on input line 126.
 (pdftex.def)             Requested size: 284.52864pt x 62.51689pt.
-<./pdf/thesis-figure-6-11-3.pdf, id=5572, 245.38475pt x 79.70377pt>
+<./pdf/thesis-figure-6-11-3.pdf, id=5590, 245.38475pt x 79.70377pt>
 File: ./pdf/thesis-figure-6-11-3.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-11-3.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-11-3.pdf  used on input line 127.
 (pdftex.def)             Requested size: 284.52864pt x 92.42114pt.
-<./pdf/thesis-figure-6-11-1.pdf, id=5574, 264.33702pt x 112.12253pt>
+<./pdf/thesis-figure-6-11-1.pdf, id=5592, 264.33702pt x 112.12253pt>
 File: ./pdf/thesis-figure-6-11-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-11-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-11-1.pdf  used on input line 140.
@@ -2859,7 +2875,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
-<./pdf/thesis-figure-6-13.pdf, id=5655, 395.00826pt x 112.63782pt>
+<./pdf/thesis-figure-6-13.pdf, id=5673, 395.00826pt x 112.63782pt>
 File: ./pdf/thesis-figure-6-13.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-13.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-13.pdf  used on input line 217.
@@ -2885,7 +2901,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
  []
 
 [174]
-<./pdf/thesis-figurex-6-14-1.pdf, id=5749, 237.8486pt x 233.39195pt>
+<./pdf/thesis-figurex-6-14-1.pdf, id=5765, 237.8486pt x 233.39195pt>
 File: ./pdf/thesis-figurex-6-14-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figurex-6-14-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figurex-6-14-1.pdf  used on input line 68.
@@ -2896,12 +2912,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [177
 
 ] [178]
-<./pdf/thesis-figure-6-15.pdf, id=5842, 358.84062pt x 233.26146pt>
+<./pdf/thesis-figure-6-15.pdf, id=5860, 358.84062pt x 233.26146pt>
 File: ./pdf/thesis-figure-6-15.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-15.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-15.pdf  used on input line 36.
 (pdftex.def)             Requested size: 337.87538pt x 219.64664pt.
-<./pdf/thesis-figure-6-16.png, id=5844, 815.2056pt x 254.3904pt>
+<./pdf/thesis-figure-6-16.png, id=5862, 815.2056pt x 254.3904pt>
 File: ./pdf/thesis-figure-6-16.png Graphic file (type png)
 <use ./pdf/thesis-figure-6-16.png>
 Package pdftex.def Info: ./pdf/thesis-figure-6-16.png  used on input line 36.
@@ -2909,18 +2925,18 @@ Package pdftex.def Info: ./pdf/thesis-figure-6-16.png  used on input line 36.
  [179 <./pdf/thesis-figure-6-15.pdf> <./pdf/thesis-figure-6-16.png>]) (./3_6_sorotoki/11_studycases.tex [180
 
 ]
-<./pdf/thesis-figure-6-17.pdf, id=5880, 244.98225pt x 196.50214pt>
+<./pdf/thesis-figure-6-17.pdf, id=5898, 244.98225pt x 196.50214pt>
 File: ./pdf/thesis-figure-6-17.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-17.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-17.pdf  used on input line 38.
 (pdftex.def)             Requested size: 248.96053pt x 199.7009pt.
-<./pdf/thesis-figure-6-18.pdf, id=5884, 245.38776pt x 194.37016pt>
+<./pdf/thesis-figure-6-18.pdf, id=5902, 245.38776pt x 194.37016pt>
 File: ./pdf/thesis-figure-6-18.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-18.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-18.pdf  used on input line 38.
 (pdftex.def)             Requested size: 248.96053pt x 197.20798pt.
  [181 <./pdf/thesis-figure-6-17.pdf> <./pdf/thesis-figure-6-18.pdf>]
-<./pdf/thesis-figure-6-19-1.pdf, id=5944, 365.12692pt x 98.99356pt>
+<./pdf/thesis-figure-6-19-1.pdf, id=5962, 365.12692pt x 98.99356pt>
 File: ./pdf/thesis-figure-6-19-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-19-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-19-1.pdf  used on input line 59.
@@ -2928,7 +2944,7 @@ Package pdftex.def Info: ./pdf/thesis-figure-6-19-1.pdf  used on input line 59.
  [182
 
  <./pdf/thesis-figure-6-19-1.pdf>] (./fig/walker_states.pdf_tex
-<./pdf//states.pdf, id=5969, page=1, 269.40376pt x 100.63828pt>
+<./pdf//states.pdf, id=5987, page=1, 269.40376pt x 100.63828pt>
 File: ./pdf//states.pdf Graphic file (type pdf)
 <use ./pdf//states.pdf, page 1>
 Package pdftex.def Info: ./pdf//states.pdf , page1 used on input line 57.
@@ -2939,35 +2955,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--84
  []
 
 [183 <./pdf//states.pdf>]
-<./pdf/thesis-figure-6-22.pdf, id=6005, 327.29538pt x 98.13515pt>
+<./pdf/thesis-figure-6-22.pdf, id=6023, 327.29538pt x 98.13515pt>
 File: ./pdf/thesis-figure-6-22.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-22.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-22.pdf  used on input line 101.
 (pdftex.def)             Requested size: 337.87538pt x 101.31091pt.
-<./pdf/thesis-figure-6-23.pdf, id=6007, 245.38475pt x 72.12144pt>
+<./pdf/thesis-figure-6-23.pdf, id=6025, 245.38475pt x 72.12144pt>
 File: ./pdf/thesis-figure-6-23.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-23.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-23.pdf  used on input line 111.
 (pdftex.def)             Requested size: 337.87538pt x 99.30869pt.
  [184] [185 <./pdf/thesis-figure-6-22.pdf> <./pdf/thesis-figure-6-23.pdf>]
-<./pdf/thesis-figure-6-24.pdf, id=6070, 250.03212pt x 224.78178pt>
+<./pdf/thesis-figure-6-24.pdf, id=6088, 250.03212pt x 224.78178pt>
 File: ./pdf/thesis-figure-6-24.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-24.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-24.pdf  used on input line 155.
 (pdftex.def)             Requested size: 293.41795pt x 263.78592pt.
  [186 <./pdf/thesis-figure-6-24.pdf>]
-<./pdf/thesis-figure-6-25.pdf, id=6148, 264.457pt x 174.13657pt>
+<./pdf/thesis-figure-6-25.pdf, id=6166, 264.457pt x 174.13657pt>
 File: ./pdf/thesis-figure-6-25.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-25.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-25.pdf  used on input line 167.
 (pdftex.def)             Requested size: 284.52864pt x 187.36584pt.
  [187 <./pdf/thesis-figure-6-25.pdf>]
-<./pdf/thesis-figure-6-26-1.pdf, id=6192, 244.98528pt x 126.27878pt>
+<./pdf/thesis-figure-6-26-1.pdf, id=6211, 244.98528pt x 126.27878pt>
 File: ./pdf/thesis-figure-6-26-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-26-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-26-1.pdf  used on input line 184.
 (pdftex.def)             Requested size: 266.74458pt x 137.5024pt.
-<./pdf/thesis-figure-6-26-2.pdf, id=6194, 242.45581pt x 122.24069pt>
+<./pdf/thesis-figure-6-26-2.pdf, id=6213, 242.45581pt x 122.24069pt>
 File: ./pdf/thesis-figure-6-26-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-26-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-26-2.pdf  used on input line 185.
@@ -2977,13 +2993,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--243
 
  []
 
-<./pdf/thesis-figure-6-28.pdf, id=6238, 326.57607pt x 106.49788pt>
+<./pdf/thesis-figure-6-28.pdf, id=6256, 326.57607pt x 106.49788pt>
 File: ./pdf/thesis-figure-6-28.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-28.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-28.pdf  used on input line 261.
 (pdftex.def)             Requested size: 337.87538pt x 110.18642pt.
 [191 <./pdf/thesis-figure-6-28.pdf>]
-<./pdf/thesis-figure-6-27.pdf, id=6263, 238.27515pt x 294.54047pt>
+<./pdf/thesis-figure-6-27.pdf, id=6281, 238.27515pt x 294.54047pt>
 File: ./pdf/thesis-figure-6-27.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-27.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-27.pdf  used on input line 268.
@@ -2996,56 +3012,55 @@ Overfull \hbox (6.50545pt too wide) in paragraph at lines 269--269
 [193
 
 ] [194]
-<./pdf/thesis-figure-6-29-1.pdf, id=6432, 479.8748pt x 100.52054pt>
+<./pdf/thesis-figure-6-29-1.pdf, id=6450, 479.8748pt x 100.52054pt>
 File: ./pdf/thesis-figure-6-29-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-29-1.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-29-1.pdf  used on input line 354.
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-1.pdf  used on input line 388.
 (pdftex.def)             Requested size: 532.49162pt x 111.55609pt.
-<./pdf/thesis-figure-6-29-2.pdf, id=6434, 480.27129pt x 99.91127pt>
+<./pdf/thesis-figure-6-29-2.pdf, id=6452, 480.27129pt x 99.91127pt>
 File: ./pdf/thesis-figure-6-29-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-29-2.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-29-2.pdf  used on input line 354.
+Package pdftex.def Info: ./pdf/thesis-figure-6-29-2.pdf  used on input line 388.
 (pdftex.def)             Requested size: 532.49162pt x 110.77931pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[195]
-<./pdf/thesis-figure-6-30.pdf, id=6456, 338.09412pt x 150.35974pt>
+<./pdf/thesis-figure-6-30.pdf, id=6460, 338.09412pt x 150.35974pt>
 File: ./pdf/thesis-figure-6-30.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-30.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-30.pdf  used on input line 397.
+Package pdftex.def Info: ./pdf/thesis-figure-6-30.pdf  used on input line 388.
 (pdftex.def)             Requested size: 284.52864pt x 126.54909pt.
-<./pdf/thesis-figure-6-31.pdf, id=6458, 338.73349pt x 150.35674pt>
+<./pdf/thesis-figure-6-31.pdf, id=6462, 338.73349pt x 150.35674pt>
 File: ./pdf/thesis-figure-6-31.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-31.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-31.pdf  used on input line 397.
+Package pdftex.def Info: ./pdf/thesis-figure-6-31.pdf  used on input line 388.
 (pdftex.def)             Requested size: 284.52864pt x 126.30107pt.
-<./pdf/thesis-figure-6-32.pdf, id=6460, 338.09412pt x 150.35373pt>
+<./pdf/thesis-figure-6-32.pdf, id=6464, 338.09412pt x 150.35373pt>
 File: ./pdf/thesis-figure-6-32.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32.pdf>
-Package pdftex.def Info: ./pdf/thesis-figure-6-32.pdf  used on input line 397.
+Package pdftex.def Info: ./pdf/thesis-figure-6-32.pdf  used on input line 388.
 (pdftex.def)             Requested size: 284.52864pt x 126.54402pt.
- [196 <./pdf/thesis-figure-6-29-1.pdf> <./pdf/thesis-figure-6-29-2.pdf>] [197 <./pdf/thesis-figure-6-30.pdf> <./pdf/thesis-figure-6-31.pdf> <./pdf/thesis-figure-6-32.pdf>]
-<./pdf/thesis-figure-6-32-1.pdf, id=6554, 328.14897pt x 68.3343pt>
+[195 <./pdf/thesis-figure-6-29-1.pdf> <./pdf/thesis-figure-6-29-2.pdf>] [196 <./pdf/thesis-figure-6-30.pdf> <./pdf/thesis-figure-6-31.pdf> <./pdf/thesis-figure-6-32.pdf>] [197
+
+]
+<./pdf/thesis-figure-6-32-1.pdf, id=6572, 328.14897pt x 68.3343pt>
 File: ./pdf/thesis-figure-6-32-1.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32-1.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-32-1.pdf  used on input line 401.
 (pdftex.def)             Requested size: 337.87538pt x 70.36426pt.
-<./pdf/thesis-figure-6-32-2.pdf, id=6556, 328.158pt x 86.65073pt>
+<./pdf/thesis-figure-6-32-2.pdf, id=6574, 328.158pt x 86.65073pt>
 File: ./pdf/thesis-figure-6-32-2.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-32-2.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-32-2.pdf  used on input line 402.
 (pdftex.def)             Requested size: 337.87538pt x 89.21684pt.
-) (./3_6_sorotoki/12_conclusion.tex [198
-
- <./pdf/thesis-figure-6-32-1.pdf> <./pdf/thesis-figure-6-32-2.pdf>]
-<./pdf/thesis-figure-6-34.pdf, id=6584, 244.98425pt x 207.6026pt>
+) (./3_6_sorotoki/12_conclusion.tex [198 <./pdf/thesis-figure-6-32-1.pdf> <./pdf/thesis-figure-6-32-2.pdf>]
+<./pdf/thesis-figure-6-34.pdf, id=6602, 244.98425pt x 207.6026pt>
 File: ./pdf/thesis-figure-6-34.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-34.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-34.pdf  used on input line 5.
 (pdftex.def)             Requested size: 284.52864pt x 241.12643pt.
-<./pdf/thesis-figure-6-35.pdf, id=6586, 351.63472pt x 109.43686pt>
+<./pdf/thesis-figure-6-35.pdf, id=6604, 351.63472pt x 109.43686pt>
 File: ./pdf/thesis-figure-6-35.pdf Graphic file (type pdf)
 <use ./pdf/thesis-figure-6-35.pdf>
 Package pdftex.def Info: ./pdf/thesis-figure-6-35.pdf  used on input line 5.
@@ -3121,7 +3136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--202
 (./3_3_design/A1_wachpress.tex [212]
 Appendix B.
 (./fig/fig_C3_voronoi_explain.pdf_tex
-<./fig//fig_C3_voronoi_explain.pdf, id=6740, page=1, 353.33296pt x 125.19212pt>
+<./fig//fig_C3_voronoi_explain.pdf, id=6758, page=1, 353.33296pt x 125.19212pt>
 File: ./fig//fig_C3_voronoi_explain.pdf Graphic file (type pdf)
 <use ./fig//fig_C3_voronoi_explain.pdf, page 1>
 Package pdftex.def Info: ./fig//fig_C3_voronoi_explain.pdf , page1 used on input line 56.
@@ -3223,7 +3238,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 563--567
  []
 
 [236] [237] [238] [239]
-Underfull \hbox (badness 3503) in paragraph at lines 969--973
+Underfull \hbox (badness 3503) in paragraph at lines 975--979
 \T1/lmr/m/n/9 Order Finite-Element Mod-els.  \T1/lmr/m/it/9 IEEE/ASME Trans-ac-tions on Mecha-tron-ics\T1/lmr/m/n/9 ,
  []
 
@@ -3242,7 +3257,7 @@ Overfull \hbox (2.16702pt too wide) in paragraph at lines 68--70
 \openout2 = `8_cv/cv.aux'.
 
  (./8_cv/cv.tex
-<./fig/Brandon.jpg, id=7059, 277.035pt x 369.38pt>
+<./fig/Brandon.jpg, id=7078, 277.035pt x 369.38pt>
 File: ./fig/Brandon.jpg Graphic file (type jpg)
 <use ./fig/Brandon.jpg>
 Package pdftex.def Info: ./fig/Brandon.jpg  used on input line 9.
@@ -3264,18 +3279,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 64137 strings out of 478287
- 1459943 string characters out of 5849289
- 2074319 words of memory out of 5000000
- 79529 multiletter control sequences out of 15000+600000
+ 64146 strings out of 478287
+ 1460118 string characters out of 5849289
+ 2073450 words of memory out of 5000000
+ 79535 multiletter control sequences out of 15000+600000
  665697 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,26n,118p,3093b,2429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtto10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on build/thesis.pdf (275 pages, 53860472 bytes).
+Output written on build/thesis.pdf (275 pages, 53866900 bytes).
 PDF statistics:
- 7999 PDF objects out of 8907 (max. 8388607)
- 6347 compressed objects within 64 object streams
- 1377 named destinations out of 1440 (max. 500000)
+ 8017 PDF objects out of 8907 (max. 8388607)
+ 6366 compressed objects within 64 object streams
+ 1380 named destinations out of 1440 (max. 500000)
  2424 words of extra memory for PDF output out of 10000 (max. 10000000)
 

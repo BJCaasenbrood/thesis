@@ -156,9 +156,10 @@ $$\tauB_{\textrm{ext}} =  \ten{M}_{\textrm{grip}}\,\JB(L,\q)^\top \left[ \left(\
 where $\ten{M}_{\textrm{grip}}$ inertia tensor related to the gripper placed at the end-effector of the robot located at $\sigma = L$. Again we apply the energy-based controller in \eqref{eq:C3:control} to the system, where the control gains are $\lambda_1 = 5$ and $\lambda_2 = 1$, while the artificial stiffness matrix $\mat{k}_p$ is kept identical to previous simulations. Lastly, the desired configuration of the end-effector is chosen as follows:
 %
 \begin{equation*}
-\mat{g}_d = \begin{pmatrix} \mat{\Phi}_d & \mat{\gamma}_d \\ \vec{0}_3^\top & 1 \end{pmatrix} \quad \text{with} \quad \mat{\gamma}_d = \begin{pmatrix}  0.125 \\ 0.100 \\ 0.175  \end{pmatrix} \;\;\;\text{and} \;\;\; \PhiB_d = \textrm{Rot}_y\left(\tfrac{1}{4}\pi \right).
+\mat{g}_d = \begin{pmatrix} \mat{\Phi}_d & \mat{\gamma}_d \\ \vec{0}_3^\top & 1 \end{pmatrix} \; \text{with} \; \mat{\gamma}_d = \begin{pmatrix} 0.125 & \!0.100\! & 0.175 \end{pmatrix}^\top \;\text{and} \; \PhiB_d = \textrm{Rot}_y\left(\tfrac{1}{4}\pi \right).
 \end{equation*}
 
+\vspace{-2mm}
 The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:multilink_3D} and Figure \ref{fig:C3:multilink_states} which could reach a real-time performance of $\pm65$Hz. Figure \ref{fig:C3:multilink_3D} shows the continuous deformation along the soft robotic body, while Figure \ref{fig:C3:multilink_states} shows the trajectories of the modal coefficients $\vec{q}(t)$ and the generalized momenta $\vec{p}(t)$. As can be seen, the end-effector of the soft robot manipulator slowly converges to the desired set-point $\mat{g}_d \in \SE{3}$, even when dealing with piece-wise distributed actuation loads applied to the continuous backbone. To describe the discontinuous actuation profiles, however, higher order modes are required as can be seen in Figure \ref{fig:C3:multilink_states}. This might indicate there exist better tailored compact shape bases for this soft robotic system.
 %
 \begin{table}[t]
@@ -176,13 +177,13 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
   %Gravitational acceleration & $a_{g} $ & $ 9.81$ & $\text{m}\text{s}^{-2}$ \\
   Young's modulus       & $E $      & $ 3.50$    & $\text{MPa}$             \\
   Shear modulus         & $\mu_1 $  & $ 2.00 $   & $\text{MPa}$             \\
-  Constraint modulus    & $\mu_2 $  & $ 1.50 $   & $\text{GPa}$             \\
+  %Constraint modulus    & $\mu_2 $  & $ 1.50 $   & $\text{GPa}$             \\
   Rayleigh coefficient  & $\zeta $  & $ 0.45 $ & -                        \\
   \hline  
 \end{tabular}
+\vspace{-3mm}
 \end{table}
 %
-\afterpage{
   \begin{figure*}[!t]
     \centering
     %\vspace{-3mm}
@@ -198,24 +199,15 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
     \vspace{-0mm}
     %\input{./3_chapters/3_chapter/img/fig_C3_states_srmarm.tex}
     \includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
-    \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
-    \vfill
+    \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}\vfill
   \end{figure}
-  \clearpage
-}
 
-\section{Mimicking biological motion through energy-based control with relaxed set-points}
 
-\afterpage{
-\begin{figure}[!t]
-  \centering
-  \vspace{-0mm}
-  \input{./pdf/thesis-figure-5-17.pdf_tex}
-  \vspace{-7mm}
-  %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
-  \caption{\small The evolution of the modal coefficients (left) and the generalized momenta (right) of the soft robot manipulator inspired by the elephant's trunk. The modal coefficients $\q$ are ordered as follows $k \in \{\ldatanum{Matlab1}{1},\ldatanum{Matlab2}{2},\ldatanum{Matlab3}{3},\ldatanum{Matlab4}{4},\ldatanum{Matlab5}{5},\ldatanum{Matlab6}{6},\ldatanum{Matlab7}{7},\ldatanum{Matlab8}{8}\}$ where the full and dashed lines represent the first and second link, respectively. Observe that mainly modes 1 and 5 are dominant in both links. \label{fig:C3:multilink_states}}
-  %\vfill
-\end{figure}
+\section{Achieving bio-inspired motion through energy-based control using relaxed set-points}
+For in our third study case, we wish to pursue the typical biological motions found in nature via means of model-based control. In particular, we are interested in the experimental recording made by Sumbre et al. \cite{Sumbre2001Sep} of an octopus. Their worked studied the goal-directed arm movements of the octopus, produced by the nervous system to generate a sequence of motor commands that bring the arm closer towards the target. Note that the control of the octopus arm is highly complex, as the arm can be moved in any direction with a virtually infinite DoFs. According to Sumbre et al. \cite{Sumbre2001Sep}, the octopus reduces control complexity of this flexible appendage by using highly stereotypical movements that arise from localized motor control embedded in the arm rather than a centralized controller. %$^1$\blankfootnote{The main contribution of \cite{Sumbre2001Sep} highlighted that \textit{"basic motor program"} for voluntary movement (\ie, low-level motion controller) is embedded within the neural circuitry of the arm rather than a centralized brain. This was shown by "decerebrating" the arm, \ie, decoupling of the brain, and carefully placed electrodes, it was possible electrically evoke stereotypical bend propagation.}
+Figure \ref{fig:C3:octopus_simu_real} shows such stereotypical motion, namely a bending propagating wave. Our goal is to qualitatively reproduce these experimental findings, where we aim to seek a model-based controller that successful mimic such stereotypical bend propagation found in octopi. 
+
+%
 \begin{figure*}[!t]
   \centering
   %\vspace{-3mm}
@@ -225,7 +217,32 @@ The numerical results of the closed-loop system are shown in Figure \ref{fig:C3:
   \caption{\small \highlight{Three-dimensional evolution of the soft robot inspired by the elephant's trunk (whose muscular network is mimicked through six pneumatic bellows), slowly converging to the desired set-point $\vec{g}_d \in \SE{3}$ (\ie, the pink ball).} }
   \label{fig:C3:octopus_simu_real}
 \end{figure*}
+%
+ We inspire our modified control law on the sensorimotor feedback control proposed by Wang et al. \cite{Wang2022Dec} (which itself is inspired from \cite{Justh2006Jun}) that is part of a series of seminal works on reproducing bio-inspired motion (primarily octopi) for Cosserat beam control \cite{Chang2022,Chang2023,Gazzola2018}. Rather than end-effector setpoint stabilization as in prior examples of this chapter, the works \cite{Wang2022Dec,Justh2006Jun} instead minimizes Euclidean distance between the target and any closest point on the backbone curve. Here, we propose several modifications: ($i$) we explore a energy-shaping technique \eqref{eq:C3:control} with full system information, $(ii)$ we introduce terms that also minimize the energy spent on elastic structural deformation via null-space projections \cite{Murray1994,Spong2006}, and $(iii)$ we use geodesics in $\SE{3}$ rather than in $\R^3$ like the Euclidean distance. The later implies we look at position as orientation information. The controller in \eqref{eq:C3:control} is modified by choosing a different desired potential energy function $\nabla_\q \,\mathcal{U}_d$:
+%
+\begin{equation}
+\nabla_\q\, \mathcal{U}_d = \lambda_1 {\JB_d}^\dag\ten{F}_\textrm{u}(\ten{E}_{\textrm{d}}) - \lambda_3 \left(\IB - \JB_{d} {\JB_{d}}^\dag\right) \nabla_\q\,\mathcal{U}\elastic,
+\end{equation}
+%
+where $\JB_d := \JB(\sigma_d,\q)$, its pseudo inverse as $\JB_d^\dag = \mat{J}_d^\top\bigl(\JB_d {\JB_d}^\top + \lambda_2 \mat{I} \bigr)\inv$, $\lambda_1,\lambda_2,\lambda_3 > 0$ the control gains, and the optimal geometric error as $\hat{\ten{E}}_d = \log_{\textrm{SE}(3)}([\gB]_k\inv(\sigma_d,\q),\gB_d)$ with $\sigma_d$ to spatial coordinate that minimizes the geodesic distance between the backbone curve and the desired setpoint $\gB_d$. To be specific, this adaptive geodesic minimizer is found using
+%
+\begin{equation}
+\sigma_d = \underset{\sigma \in (0,L]}{\textrm{argmin}} \;  \left\lVert \widehat{\log}_{\textrm{SE}(3)}\big([\gB]_k\inv(\sigma_d),\gB_d \big) \right\rVert_2,
+\end{equation}
+%
+which is found using a line search algorithm. 
 
+We again consider the soft robot inspired by the octopus arm (see Table \ref{tab:C3:parameters1}) with the controller-observer gains: $\lambda_1 = \lambda_2 = 0.1$ and $\lambda_3 = 0.01$. The desired end-effector configuration is $\PhiB_d = \IB_3$ and $\gammaB_d = (70, 0, 40)^\top$. To simulate the viscous fluidic drag, we additionally add an external wrench $\ten{F}_{\textrm{drag}} = -\frac{1}{2}\rho_{\textrm{water}} \lVert\JB \dq\rVert \ten{A}_{\textrm{drag}} \JB \dq $ where $\rho_{\textrm{water}} = 1000$ $\text{kg}\text{m}^{-3}$ and $\ten{A}_{\textrm{drag}} \in \cose{e} \times \seg{3}$ a symmetric tensor related drag coefficient that are imposed by the cross-sectional geometry of the tentacle. This fluidic drag can then incorporated as an generalized force using $\tauB_{\textrm{drag}}= \int_\Xs \ten{F}_{\textrm{drag}} \; d\sigma$. 
+
+% extending its tentacle towards an object of interest, using coordinated activation of a tightly packed network of muscle fibers. The highly flexible appendage allows for traveling bending wave propagation, while the octopus orients its suckers towards the object to ensure a secure grip \cite{Sumbre2001Sep}.
+
+\begin{figure}[!t]
+  \centering
+  \vspace{-0mm}
+  \input{./pdf/thesis-figure-5-17.pdf_tex}
+  \vspace{-7mm}
+  %\includegraphics*[width=\textwidth]{./pdf/thesis-figure-5-12.pdf}
+  \caption{\small bla \label{fig:C3:bend_propogate}}
+  %\vfill
+\end{figure}
 \clearpage
-
-}
