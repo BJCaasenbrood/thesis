@@ -102,8 +102,8 @@ Differentiations of the objective function with respect to the elemental densiti
   \While{$\text{convergence} \neq 1 $}{
   update artificial material $\Psi_e$ using \eqref{eq:simp} \;
   find infected set $\mathcal{E}$ using \textbf{Algorithm 1} \;
-  build residual forces $\boldsymbol{R}$ using \eqref{eq:residual} and \eqref{eq:pressureforce}\; 
-  solve displacements $\boldsymbol{x} \gets \texttt{NewtonRaphson}(\boldsymbol{R})$ \;
+  build residual forces $\boldsymbol{r}$ using \eqref{eq:residual} and \eqref{eq:pressureforce}\; 
+  solve displacements $\boldsymbol{x} \gets \texttt{NewtonRaphson}(\boldsymbol{r})$ \;
   evaluate $g,_{\boldsymbol{\rho}} \gets \p g/\p{{\rho}_e}$ \;
   evaluate $\Phi,_{\boldsymbol{\rho}} \gets\p\Phi/\p{{\rho}_e}$ using \eqref{eq:sens_f} \; 
   update $\boldsymbol{\rho} \gets \texttt{MMA}(\Phi,_{\boldsymbol{\rho}},g,_{\boldsymbol{\rho}},\boldsymbol{\rho})$ \;
