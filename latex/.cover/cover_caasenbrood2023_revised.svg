@@ -26,14 +26,14 @@
      inkscape:document-units="pt"
      showgrid="false"
      inkscape:zoom="0.30364078"
-     inkscape:cx="299.69624"
-     inkscape:cy="507.17825"
-     inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:cx="938.6091"
+     inkscape:cy="602.68584"
+     inkscape:window-width="1440"
+     inkscape:window-height="831"
      inkscape:window-x="0"
-     inkscape:window-y="72"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer2"
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1" />
   <defs
@@ -10688,19 +10688,19 @@
        y="0"><tspan
          x="1681.7293"
          y="365.76703"
-         id="tspan10354"><tspan
+         id="tspan9132"><tspan
            style="fill:#ffffff"
-           id="tspan10352">You are cordially invited </tspan></tspan><tspan
+           id="tspan9130">You are cordially invited </tspan></tspan><tspan
          x="1683.0392"
          y="391.76703"
-         id="tspan10358"><tspan
+         id="tspan9136"><tspan
            style="fill:#ffffff"
-           id="tspan10356">to the public defense of </tspan></tspan><tspan
+           id="tspan9134">to the public defense of </tspan></tspan><tspan
          x="1689.2492"
          y="417.76703"
-         id="tspan10362"><tspan
+         id="tspan9140"><tspan
            style="fill:#ffffff"
-           id="tspan10360">my Ph.D. dissertation:</tspan></tspan></text>
+           id="tspan9138">my Ph.D. dissertation:</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,-164.81664,122.16168)"
@@ -10710,21 +10710,21 @@
        y="0"><tspan
          x="1726.3491"
          y="365.76703"
-         id="tspan10366"><tspan
+         id="tspan9144"><tspan
            style="fill:#ffffff"
-           id="tspan10364">Wednesday,
+           id="tspan9142">Wednesday,
 </tspan></tspan><tspan
          x="1708.3091"
          y="391.76703"
-         id="tspan10370"><tspan
+         id="tspan9148"><tspan
            style="fill:#ffffff"
-           id="tspan10368">January 10, 2024
+           id="tspan9146">January 10, 2024
 </tspan></tspan><tspan
          x="1738.6491"
          y="417.76703"
-         id="tspan10374"><tspan
+         id="tspan9152"><tspan
            style="fill:#ffffff"
-           id="tspan10372">at 16h00</tspan></tspan></text>
+           id="tspan9150">at 16h00</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,-164.85382,12.254631)"
@@ -10734,21 +10734,21 @@
        y="0"><tspan
          x="1683.6957"
          y="368.32038"
-         id="tspan10378"><tspan
+         id="tspan9156"><tspan
            style="fill:#ffffff"
-           id="tspan10376">Design, Modeling, &amp; 
+           id="tspan9154">Design, Modeling, &amp; 
 </tspan></tspan><tspan
          x="1694.7911"
          y="397.78708"
-         id="tspan10382"><tspan
+         id="tspan9160"><tspan
            style="fill:#ffffff"
-           id="tspan10380">Control Strategies
+           id="tspan9158">Control Strategies
 </tspan></tspan><tspan
          x="1707.4276"
          y="427.25379"
-         id="tspan10386"><tspan
+         id="tspan9164"><tspan
            style="fill:#ffffff"
-           id="tspan10384">for Soft Robots</tspan></tspan></text>
+           id="tspan9162">for Soft Robots</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,-165.09417,311.40652)"
@@ -10758,9 +10758,9 @@
        y="0"><tspan
          x="1678.0177"
          y="368.32038"
-         id="tspan10390"><tspan
+         id="tspan9168"><tspan
            style="fill:#ffffff"
-           id="tspan10388">Brandon Caasenbrood
+           id="tspan9166">Brandon Caasenbrood
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -10771,27 +10771,27 @@
        y="0"><tspan
          x="1690.3814"
          y="365.76703"
-         id="tspan10394"><tspan
+         id="tspan9172"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10392">Eindhoven University
+           id="tspan9170">Eindhoven University
 </tspan></tspan><tspan
          x="1693.0714"
          y="391.76703"
-         id="tspan10398"><tspan
+         id="tspan9176"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10396">of Technology (TU/e)
+           id="tspan9174">of Technology (TU/e)
 </tspan></tspan><tspan
          x="1717.2214"
          y="417.76703"
-         id="tspan10402"><tspan
+         id="tspan9180"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10400">Atlas building
+           id="tspan9178">Atlas building
 </tspan></tspan><tspan
          x="1725.8413"
          y="443.76703"
-         id="tspan10406"><tspan
+         id="tspan9184"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10404">Room 0.710</tspan></tspan></text>
+           id="tspan9182">Room 0.710</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.75,0,0,0.75,-163.85644,362.19172)"
@@ -10801,21 +10801,21 @@
        y="0"><tspan
          x="1721.1914"
          y="365.76703"
-         id="tspan10410"><tspan
+         id="tspan9188"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10408">Paranymphs:
+           id="tspan9186">Paranymphs:
 </tspan></tspan><tspan
          x="1705.5413"
          y="391.76703"
-         id="tspan10414"><tspan
+         id="tspan9192"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10412">Bob van de Voort
+           id="tspan9190">Bob van de Voort
 </tspan></tspan><tspan
          x="1712.4314"
          y="417.76703"
-         id="tspan10418"><tspan
+         id="tspan9196"><tspan
            style="fill:#ffffff;stroke-opacity:0"
-           id="tspan10416">Gijs Akkermans</tspan></tspan></text>
+           id="tspan9194">Gijs Akkermans</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0.75px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.75"
@@ -10860,70 +10860,70 @@
        y="0"><tspan
          x="30.234375"
          y="278.51687"
-         id="tspan10422"><tspan
+         id="tspan9200"><tspan
            dx="0 -2 4.2997608 0 0 -2.0000019 4.2997608 0 0 0 -1.9999986 4.299757 0 0 -2.0000072 4.2997684 0 0 0 0 0 0 0 -2.0000086 4.2997608 0 0 -2 4.2997608 0 0 0 0 -1.9999981 4.2997608 0 -1.9999995 4.2997608 0 0 0 -1.9999986 4.2997608 0 0 0 0 0 0 0 -1.9999857 4.2997608 0 0 -2.0000162 4.2997608 0 0 0 0 0 0 -2.0000134 4.2997608 0 0 0 0 0 0 0 0 0 0 -1.9999986 4.2997608 0 0 0 0 0 0 0 -1.9999986"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10420">&gt; The past two decades, the field of soft robotics has sparked significant interest </tspan></tspan><tspan
+           id="tspan9198">&gt; The past two decades, the field of soft robotics has sparked significant interest </tspan></tspan><tspan
          x="30.234375"
          y="295.79025"
-         id="tspan10426"><tspan
+         id="tspan9204"><tspan
            dx="0 0 0 0 0 -2.0000005 4.0388088 0 0 0 -1.9999986 4.038805 0 0 0 0 0 0 0 0 0 -2.0000062 4.0388203 0 0 0 0 0 0 0 0 0 0 0 -2.0000091 4.0388203 0 0 0 0 0 0 0 -2.0000062 4.038805 0 -2.0000148 4.038805 0 0 0 0 -1.9999828 4.038805 0 0 0 0 0 0 -1.9999933 4.038805 0 0 0 -1.9999986 4.038805 0 0 0 0 0 -1.9999857 4.038805 0 0 0 0 0 0 -1.9999847 4.038805 0 0 0 -1.9999986"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10424">among many scientific disciplines. Contrary to rigid robots, soft robots explore soft </tspan></tspan><tspan
+           id="tspan9202">among many scientific disciplines. Contrary to rigid robots, soft robots explore soft </tspan></tspan><tspan
          x="30.234375"
          y="313.06363"
-         id="tspan10430"><tspan
+         id="tspan9208"><tspan
            dx="0 0 0 0 0 0 0 0 0 -2.000001 5.3425465 0 0 0 -2.0000062 5.3425465 0 0 0 0 0 0 0 0 0 0 0 0 -2.0000062 5.3425465 0 0 0 0 0 0 -2 5.3425465 0 0 -2 5.3425465 0 0 0 0 0 0 -2.0000162 5.3425465 0 0 0 0 0 0 0 0 0 -2.0000238 5.3425465 0 0 0 0 0 -2.0000153 5.3425465 -1.9999943 5.3425465 0 0 0 -2.0000038 5.3425465 0 0 0 0 0 -1.9999757 5.3425159 0 -1.9999995"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10428">materials that significantly enhance the robot’s dexterity, enable a rich family of </tspan></tspan><tspan
+           id="tspan9206">materials that significantly enhance the robot’s dexterity, enable a rich family of </tspan></tspan><tspan
          x="30.234375"
          y="330.337"
-         id="tspan10434"><tspan
+         id="tspan9212"><tspan
            dx="0 0 0 0 0 0 -2 7.2120457 0 0 0 0 0 0 0 0 0 0 -2.000001 7.2120457 0 0 -1.9999981 7.2120533 0 0 0 0 0 0 -2 7.212038 0 0 0 0 0 0 0 0 0 0 0 0 -2.0000124 7.2120533 0 0 0 0 0 0 0 0 0 -1.9999857 7.2120533 0 0 0 0 0 0 0 0 -1.9999948 7.2120533 0 0 0 0 0 0 -1.9999986 7.2120533 0 0 -2.0000134"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10432">motion primitives, and enhance environmental robustness regarding contact and </tspan></tspan><tspan
+           id="tspan9210">motion primitives, and enhance environmental robustness regarding contact and </tspan></tspan><tspan
          x="30.234375"
          y="347.61038"
-         id="tspan10438"><tspan
+         id="tspan9216"><tspan
            dx="0 0 0 0 0 0 0 -1.9999976 2.2956636 0 0 0 0 -2 2.2956636 0 0 -2.000001 2.2956636 0 0 0 0 0 0 0 0 0 -2.0000086 2.2956712 0 0 0 -1.9999986 2.295656 0 0 0 0 0 0 0 -2.000001 2.295656 0 0 -2.000001 2.2956865 0 0 0 0 0 0 0 0 0 0 -2.0000134 2.2956712 0 0 -2.0000162 2.2956712 0 0 0 0 0 0 0 0 -2.0000124 2.2956712 0 -2.0000038 2.2956712 0 0 0 0 0 0 -2.0000153 2.2956712 0 0 0 0 -1.9999857"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10436">impact. Since its inception, soft robotics has exemplified its potential in diverse areas </tspan></tspan><tspan
+           id="tspan9214">impact. Since its inception, soft robotics has exemplified its potential in diverse areas </tspan></tspan><tspan
          x="30.234375"
          y="364.88376"
-         id="tspan10442"><tspan
+         id="tspan9220"><tspan
            dx="0 0 0 0 -2 8.3863602 0 -2.000001 8.3863583 0 0 0 -2 8.3863621 0 0 0 0 0 0 0 0 0 0 0 0 -1.9999933 8.3863544 0 0 0 0 0 0 0 -2 8.3863544 0 0 0 0 0 0 0 0 -1.9999933 8.3863697 0 0 0 0 0 0 0 0 0 0 -2.0000038 8.3863697 0 0 0 0 -1.9999886 8.3863392 0 0 0 0 0 0 0 0 0 0 0 0 -2.0000124"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10440">such as safe manipulation, adaptive grasping, exploration under environmental </tspan></tspan><tspan
+           id="tspan9218">such as safe manipulation, adaptive grasping, exploration under environmental </tspan></tspan><tspan
          x="30.234375"
          y="382.15713"
-         id="tspan10446"><tspan
+         id="tspan9224"><tspan
            dx="0 0 0 0 0 0 0 0 0 0 0 0 -1.9999971 5.6370792 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.9999933 5.6370869 0 0 -1.9999981 5.6370716 0 0 -2 5.6370716 0 0 0 0 0 0 0 0 0 -2.0000062 5.6371021 0 -1.9999995 5.6371021 0 0 0 -2.0000062 5.6371021 0 0 0 0 0 0 0 -1.9999938 5.6371021 0 -2.0000062 5.6371021 0 0 0 0 0 0 0 0 -1.9999948 5.6370716 0 0 -1.9999847"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10444">uncertainty, rehabilitation, and the biomimicry of many animals. By exploring the </tspan></tspan><tspan
+           id="tspan9222">uncertainty, rehabilitation, and the biomimicry of many animals. By exploring the </tspan></tspan><tspan
          x="30.234375"
          y="399.43051"
-         id="tspan10450"><tspan
+         id="tspan9228"><tspan
            dx="0 0 0 0 0 0 0 0 0 -2.0000019 5.1796665 0 0 0 0 0 0 0 0 -2 5.1796665 0 0 0 0 0 -2 5.1796589 0 -1.9999995 5.1796741 0 0 0 -1.9999986 5.1796589 0 0 0 0 0 0 0 0 0 -1.9999933 5.1796436 0 0 0 -1.9999986 5.1796741 0 0 0 0 0 0 0 -2.0000162 5.1796741 0 0 0 0 -2.0000162 5.1796741 0 0 -1.9999847 5.1796436 0 0 -2.0000062 5.1796436 0 0 0 0 0 0 -1.9999857"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10448">uncharted versatile nature of soft materials, soft robotics paves the way towards </tspan></tspan><tspan
+           id="tspan9226">uncharted versatile nature of soft materials, soft robotics paves the way towards </tspan></tspan><tspan
          x="30.234375"
          y="416.70389"
-         id="tspan10454"><tspan
+         id="tspan9232"><tspan
            dx="0 0 0 0 0 0 0 0 0 -1.9999986 3.977453 0 0 0 0 0 0 0 0 0 -1.9999971 3.9774492 0 0 0 0 0 0 0 0 0 0 -2 3.9774644 0 -1.9999886 3.9774492 0 0 0 0 0 0 0 0 0 -2.0000062 3.9774644 0 0 0 0 0 0 0 0 -1.9999938 3.9774339 0 0 0 -1.9999857 3.9774339 0 0 0 0 0 -2.0000162 3.9774644 0 0 0 -2.0000162 3.9774644 0 -2.0000148 3.9774644 0 0 0 0 0 0 -1.9999886"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10452">achieving biological performance in modern-day robotics. This thesis aims to further </tspan></tspan><tspan
+           id="tspan9230">achieving biological performance in modern-day robotics. This thesis aims to further </tspan></tspan><tspan
          x="30.234375"
          y="433.97726"
-         id="tspan10458"><tspan
+         id="tspan9236"><tspan
            dx="0 0 0 -2 6.2173061 0 0 0 0 0 0 0 -2.000001 6.21731 0 -1.9999962 6.2173023 0 0 0 -1.9999986 6.2173023 0 0 0 0 0 0 0 -2.000001 6.2173023 0 -1.9999909 6.2173023 0 0 0 0 0 0 0 0 0 -1.9999948 6.2173023 0 0 0 -1.9999847 6.2173023 0 -1.9999995 6.2173023 0 0 -1.9999847 6.2173023 0 0 0 -2.0000038 6.2173023 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.0000062"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10456">the advances in soft robotics by addressing some of the open multidisciplinary </tspan></tspan><tspan
+           id="tspan9234">the advances in soft robotics by addressing some of the open multidisciplinary </tspan></tspan><tspan
          x="30.234375"
          y="451.25064"
-         id="tspan10462"><tspan
+         id="tspan9240"><tspan
            dx="0 0 0 0 0 0 0 0 0 0 -1.9999971 1.9999979 0 0 0 0 0 -1.9999962 1.999994 0 0 0 -2.000001 2.0000017 0 0 0 0 0 0 0 0 0 0 -1.9999995 2.0000017 0 0 0 0 -1.9999948 2.0000017 0 0 0 0 -2.0000134 2.0000169 0 -1.9999995 2.0000169 0 0 0 0 0 0 0 0 -1.9999938"
            style="font-family:oswald;-inkscape-font-specification:oswald;text-align:justify"
-           id="tspan10460">challenges within this (currently) young field of research.
+           id="tspan9238">challenges within this (currently) young field of research.
 </tspan></tspan></text>
     <rect
        style="fill:#000000;fill-opacity:0.1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
@@ -11523,7 +11523,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="cutouts"
-     style="display:none;opacity:0.482105">
+     style="display:inline;opacity:0.482105">
     <path
        style="fill:#00abee;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="m 1077.1641,751.17969 h 170.0781 V 70.867188 h -170.0781 z m 0,0"
