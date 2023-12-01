@@ -8,17 +8,17 @@ Here we briefly discuss some notation and basic operations on the Lie groups $\S
 Here, we focus first on the (Lie) group of rigid-body transformations about the origin of $\R^3$ denoted by $\SE{3}$. Let $G = \SE{3}$ be a matrix Lie group and its respective algebra $\mathfrak{g} = \seg{3}$, also known as the Lie algebra. Then, the evolution of a general rigid body under motion with pose $\gB \in G$ can be described using 
 %
 \begin{equation}
-\dot{\gB} = \gB\, \hat{\etaB}^{\textrm{b}} \;  \Longleftrightarrow  \; \dot{\gB} = \hat{\etaB}^{\textrm{s}}\,\gB. \quad \hat{\etaB}^{\textrm{b}},\hat{\etaB}^{\textrm{s}} \in \mathfrak{g}
+\dot{\gB} = \gB\, \hat{\etaB}^{\textrm{b}} \;  \Longleftrightarrow  \; \dot{\gB} = \hat{\etaB}^{\textrm{s}}\,\gB. \quad \hat{\etaB}^{\textrm{b}},\hat{\etaB}^{\textrm{s}} \in \mathfrak{g},
 \end{equation}
 %
 where the velocity twist relative its body frame is given by $\hat{\etaB}^\textrm{b}$ or to a spatial frame by $\hat{\etaB}^\textrm{s}$. Since $\dot{\gB} = \gB \hat{\etaB}^{\textrm{b}}$ is invariant under left multiplication by constant matrices, we call it \textit{left invariant}; and correspondingly $\dot{\gB} = \hat{\etaB}^{\textrm{s}} \gB $ is said to be \textit{right invariant}. Let it be clear that the geometric strain $\xiB(\sigma,t)$ and velocity twist $\etaB(\sigma,t)$ in \eqref{eq:C3:xi} and \eqref{eq:C3:eta} are thus expressed in the body frame. Next, let us discuss the adjoint actions. For all $\gB \in G$ and any $\XB,\YB \in \mathfrak{g}$, the adjoint action $\Ad_{\gB}$ and the matrix commutator or adjoint action on the algebra $\ad_{\XB}$ are defined as 
 %
 \begin{align}
-\Ad_{\gB} \XB & = \gB \XB \gB \inv \label{eq:C3:A1:adjoint1}\\
+\Ad_{\gB} \XB & = \gB \XB \gB \inv \label{eq:C3:A1:adjoint1},\\
 \ad_{\XB} \YB & = \left[\XB,\YB\right]  = \XB \YB - \YB\XB. \label{eq:C3:A1:adjoint2}
 \end{align}
 %
-Now, on $\SE{3}$ and $\seg{3}$ we represent a matrix group element $\gB = (\PhiB, \gammaB) \in  \SO{3} \times \R^3 \cong \SE{3}$ and a (velocity) twist vector field $\hat{\etaB} = (\OmegaB,\VB) \in \seg{3}$ using homogenous coordinates,
+Now, on $\SE{3}$ and $\seg{3}$ we represent a matrix group element $\gB = (\PhiB, \gammaB) \in  \SO{3} \times \R^3 \cong \SE{3}$ and a (velocity) twist vector field $\hat{\etaB} = (\OmegaB,\VB) \in \seg{3}$ using homogeneous coordinates,
 %
 \begin{align}
     \gB  := 
@@ -31,7 +31,7 @@ Now, on $\SE{3}$ and $\seg{3}$ we represent a matrix group element $\gB = (\PhiB
     \begin{pmatrix}
     \OmegaB^{\times} & \vec{V} \; \\
     \vec{0}_3^\top & 1
-    \end{pmatrix}.
+    \end{pmatrix},
 \end{align}
 %
 where the operator $(\cdot)^{\times}:\R^3 \to \sog{3}$ is defined such that $\x^\times\yB = \x \times \yB$ for all $\x,\yB \in \R^3$, and $(\cdot)^\wedge:\R^6 \to \seg{3}$. Now, representing the geometric twist as a column vector $\etaB^\wedge \to \etaB$, it straightforwardly follows from \eqref{eq:C3:A1:adjoint1} and \eqref{eq:C3:A1:adjoint2} that the adjoint actions can be written in the form:
@@ -68,7 +68,7 @@ where $\lVert \cdot \rVert$ stands for the Euclidean norm and the operator $A(\O
 A(\OmegaB) = \IB + \left(\frac{1 - \lVert \OmegaB \rVert}{\lVert \OmegaB \rVert}\right) \frac{\OmegaB^\times}{\lVert \OmegaB \rVert} + (1 - \sin \lVert \OmegaB \rVert) \frac{ \OmegaB^\times \OmegaB^\times }{\lVert \OmegaB \rVert^2}.
 \end{equation}
 %
-Note that we have seen equation \eqref{eq:C3:A1:rogdrigues} earlier which is known as the Rogdrigues' formula. Referring to \cite{Bullo1995}, in an open neighborhood of the origin in $G$, we define $\etaB = \log(\gB) \in \mathfrak{g}$ to be the \emph{"exponential coordinates"} of the group element $\gB$. 
+Note that we have seen equation \eqref{eq:C3:A1:rogdrigues} earlier which is known as the Rogdrigues' formula. Referring to \cite{Bullo1995}, in an open neighborhood of the origin in $G$, we define $\etaB = \log(\gB) \in \mathfrak{g}$ to be the \emph{``exponential coordinates''} of the group element $\gB$. 
 Then, the logarithmic map can be regarded as the local chart of the manifold $G$. 
 As such, let $\gB = (\PhiB, \gammaB) \in \SO{3} \times \R^3$ be such that $\trace(\PhiB) \neq -1$. Then, the logarithmic map $\log_{SO{3}}: \SO{3} \to \sog{3}$ is given by
 %

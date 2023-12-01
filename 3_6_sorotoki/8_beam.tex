@@ -36,13 +36,13 @@ Due to the complexity of deriving the forward kinematics and dynamics in the Cos
 \textbf{B: Finite dimensional projection.} To start, our aim is to obtain a finite-dimensional approximation of the local geometric strain vector, denoted as $\xiB:= (\gB\inv \tfrac{\p \gB}{\p \sigma})^\wedge := (\GammaB^\top,\,\UB^\top)^\top$, where $\sigma \in [0,L]$ is a spatial coordinate and $(\cdot)^{\wedge}: \textrm{se}(3) \to \R^6$ (see \cite{Murray1994} or Appendix \ref{app:C3:liegroup}). Here, $\Gamma_{i}$ and $U_{i}$ are the torsion-curvature and elongation-shear curve parameters, respectively. To achieve this, we employ a Ritz-Galerkin modal discretization approach following the work of Boyer et al. \cite{Boyer2021}. This approach assumes that the strain can be accurately represented through a finite series of orthonormal basis functions:
 %
 \begin{align}
-[\xi_i]_{\thetaB_i}(\sigma,\q_i) & = \sum_{j=1}^{k_i} \theta_{i,j}(\sigma) q_{i,j} + \xi_i^\circ (\sigma), \notag \\ & = \underbrace{\big[\theta_{i,1}(\sigma)\; \hdots\; \theta_{i,k_i} (\sigma) \big]}_{\thetaB_i^\top(\sigma)} \q_i + \xi_i^\circ(\sigma)
+[\xi_i]_{\thetaB_i}(\sigma,\q_i) & = \sum_{j=1}^{k_i} \theta_{i,j}(\sigma) q_{i,j} + \xi_i^\circ (\sigma), \notag \\ & = \underbrace{\big[\theta_{i,1}(\sigma)\; \hdots\; \theta_{i,k_i} (\sigma) \big]}_{\thetaB_i^\top(\sigma)} \q_i + \xi_i^\circ(\sigma),
 \end{align}
 %
 where $\thetaB_i$ is the modal approximation vector related to the $i$-th strain component, $\q_i$ is its corresponding modal coefficient, and $[\cdot]_{\thetaB}$ denotes the subspace projection operator. By collecting all terms $q_{i,j}$ and $\theta_{i,j}$, we compactly express the finite-dimensional approximation as an affine operation:
 %
 \begin{equation}
-[\xiB]_{\ThetaB}(\sigma,\q) = \ThetaB^{\!\top}\!(\sigma) \q + \xiB^{\circ}(\sigma)
+[\xiB]_{\ThetaB}(\sigma,\q) = \ThetaB^{\!\top}\!(\sigma) \q + \xiB^{\circ}(\sigma),
 \label{eq:C5:xi_computation_POD}
 \end{equation}
 %
@@ -114,7 +114,7 @@ where $\sB \subseteq \Omega$ is an arbitrary point inside the undeformed mesh. I
     }
 \end{algorithm}
 
-\textit{Step 2: POD snapshot basis:} Next, we employ the "\textit{Snapshot Proper Orthogonal Decomposition}" (POD) as described in \cite{Duriez2016,Goury2018}. This data-driven approach determines a suitable orthonormal basis from simulated or experimental data \cite{Astrid2008}. Let $y_{i}(\sigma,t) := \xi_{\textrm{FEM},i}(\sigma,t)$ represent the measurement of the $i$-th entry of the strain $\xiB_{\textrm{FEM}}$. For each discrete time $t_i$, the sample is condensed into a column vector $\vec{y}_i^{(t)} := \textrm{col}\left\{y_i(0,t),\dots,y_i(L,t) \right\}$ and then stacked into the "snapshot matrix" $\mat{S}_i = \textrm{row}\left\{ \vec{y}_i^{(0)},\dots,\vec{y}_i^{(T)} \right\}$ where $T$ is the finite horizon time. The correlation matrix $\mat{\mathcal{C}}_i = \tfrac{1}{m} \mat{S}_i^\top \mat{S}_i$ is then computed with $m = \dim(\yB_i)$, and the spectral decomposition is performed:
+\textit{Step 2: POD snapshot basis:} Next, we employ the ``\textit{Snapshot Proper Orthogonal Decomposition}'' (POD) as described in \cite{Duriez2016,Goury2018}. This data-driven approach determines a suitable orthonormal basis from simulated or experimental data \cite{Astrid2008}. Let $y_{i}(\sigma,t) := \xi_{\textrm{FEM},i}(\sigma,t)$ represent the measurement of the $i$-th entry of the strain $\xiB_{\textrm{FEM}}$. For each discrete time $t_i$, the sample is condensed into a column vector $\vec{y}_i^{(t)} := \textrm{col}\left\{y_i(0,t),\dots,y_i(L,t) \right\}$ and then stacked into the "snapshot matrix" $\mat{S}_i = \textrm{row}\left\{ \vec{y}_i^{(0)},\dots,\vec{y}_i^{(T)} \right\}$ where $T$ is the finite horizon time. The correlation matrix $\mat{\mathcal{C}}_i = \tfrac{1}{m} \mat{S}_i^\top \mat{S}_i$ is then computed with $m = \dim(\yB_i)$, and the spectral decomposition is performed:
 %
 \begin{equation}
 \mat{\mathcal{C}}_i \VB_i = \mat{\lambda}_i \VB_i,
@@ -146,21 +146,21 @@ where $\VB_i = \textrm{row}\{\vB_{i,1},,...\vB_{i,m}\}$ is a eigenvector basis a
 \vspace{-6mm}
 \label{fig:C5:gvis_experiment}
 \end{figure}
-%
+
 \begin{example}{Data-driven basis from PneuNet simulation}
 To demonstrate the reconstruction of the DVS basis, we consider a soft bending actuation, also known as the PneuNet actuator. A FEM simulation model is constructed where the soft actuator is subjected to a linearly increasing pressure up to $40$ \si{\kilo \pascal} and curls around a cylindrical object when pressurized. Figure \ref{fig:C5:gvis_modes} (top) illustrates the true system and the FEM simulation obtained through \code{fem.simulate}. The FEM class is then integrated into the \class{Shapes} class through the syntax \code{shp = Shapes(fem,dof)}, where \code{dof = [0,3,0,0,0,0]} indicates the desire to recover the first three curvature bending modes from the \code{fem} object class. The length and base orientation are specified using \code{shp.setLength} and \code{shp.setBase}, respectively. The basis is then reconstructed by calling \code{shp.reconstruct}. The first three curvature bending modes are displayed in Figure \ref{fig:C5:gvis_modes} (bottom). It can be observed that the geometrical features of the PneuNet actuator are encoded in the basis, with the 12 embedded pressure chambers represented by the DVS strain basis. The associated code is provided below:
 \end{example}
 %
 \begin{matlabcode}
 %% EXAMPLE: Shapes class (DVS basis)   
-fem = load('femPneuNet.mat');   % load fem model
+fem = preset.fem.pneunet('contact',true);
+fem = fem.simulate();
 
-dof = [0,3,0,0,0,0];  % pure planar curvature bending
-shp = Shapes(fem, dof, 'NNode', 200, 'Length',105);
+dof = [0,3,0,0,0,0];  % 3-DOF bending
+shp = Shapes([], dof);
 
 % generate DVS basis 
-shp = shp.reference(@(s) [s,0,0].' );
-shp = shp.reconstruct();
+shp = shp.reconstruct(fem);
 \end{matlabcode} 
 % 
 \\
@@ -168,11 +168,11 @@ shp = shp.reconstruct();
 \textbf{D: Forward beam kinematics.} Once a basis representation $\ThetaB$ has been selected, the forward kinematics of the continuum body can be efficiently solved using exponential maps for the group $\SE{3}$. As such, the backbone curve is approximated by
 %
 \begin{equation}
-    [\gB]_{\ThetaB}(\sigma,\q) = \gB_0 \exp_{\textrm{SE}(3)} \left[ \int_0^\sigma {[\hat{\xiB}]_\ThetaB}(s,\q) \; ds\right]
+    [\gB]_{\ThetaB}(\sigma,\q) = \gB_0 \exp_{\textrm{SE}(3)} \big[ \OmegaB_k(\sigma,\q)\big],
     \label{eq:C5:gcurve}
 \end{equation}
 %
-On the other hand, the local velocity twist is represented by $\etaB:= (\gB\inv\dot{\gB})^{\vee}$, which, similarly to rigid robotics, is linear in the joint velocities $\dot{\q}$. Regarding computation, the velocity twist of a point $\sigma$ on the curve $\gB$ can be represented as follows:
+where $\OmegaB_k$ is the $k$-th order approximation of the Magnus expansion \cite{Orekhov2020}. We use a first order approximation of the Magnus expansion given by $\OmegaB_1 = \int_0^\sigma {[\hat{\xiB}]_\ThetaB}(s,\q) \; ds$. On the other hand, the local velocity twist is represented by $\etaB:= (\gB\inv\dot{\gB})^{\vee}$, which, similarly to rigid robotics, is linear in the joint velocities $\dot{\q}$. Regarding computation, the velocity twist of a point $\sigma$ on the curve $\gB$ can be represented as follows:
 %
 \begin{align}
     [\etaB]_\ThetaB(\sigma,\q,\dq) & = \left[\Ad^{-1}_{[\gB](\sigma,\q)}\int_{0}^\sigma  \Ad_{[\gB](s,\q)} \ThetaB(s)\; ds \right]  \dq  %\notag \\
@@ -189,7 +189,7 @@ Given the expressions in \eqref{eq:C5:xi_computation_POD}, \eqref{eq:C5:gcurve},
 Suppose the desired shape of the soft manipulator is $\gB^\star(\sigma) \in \WT_\sigma$ with 
 %
 \begin{equation}
-\WT_\sigma := \big\{ \XB \in \mathrm{SE}(3)\;|\; \XB = [\gB]_\ThetaB(\sigma,\q),\, \q \in \mathcal{Q} \big\}    
+\WT_\sigma := \big\{ \XB \in \mathrm{SE}(3)\;|\; \XB = [\gB]_\ThetaB(\sigma,\q),\, \q \in \mathcal{Q} \big\},    
 \end{equation}
 %
 the set of possible configurations of the backbone curve at $\sigma$. Note that $\WT_L$ spans the workspace of the end-effector, and $\WT_\Omega := \{\WT_\sigma \;|\; \sigma \in [0,L]\}$ the workspace of the entire soft body. For sake of readability, we redefine $\gB_i(\q) := [\gB]_\ThetaB(\sigma_i,\q)$ and $\gB^\star_{i} := \gB^\star(\sigma_i)$. For readability, we also rewrite the geometric Jacobian by $\JB_i(\q) := \JB(\sigma_i,\q)$.
@@ -234,7 +234,7 @@ Subsequently, the deformed backbone is projected onto the surface of the SDF jel
 \end{example}
 
 \begin{lstlisting}[style=matlab] 
-%% EXAMPLE: Shapes class (forwards/inverse kinematics) 
+%% EXAMPLE: Shapes class 
 % jellyfish SDF
 sdf = sSphere(0,0,-60,40) 
 
@@ -243,18 +243,21 @@ N = 200; % discretization
 M = 3;   % number of modes
 pod = Basis(N,M,'chebyshev');     
 
-shp = Shapes(pod,[0,M,M,0,0,0],'Length',120);
+shp = Shapes(pod,[0,M,M,0,0,0]);
+
+shp = shp.addContact(sdf);
+shp = shp.setLength(120);
 shp = shp.setGeometry(sRectangle(4,1));
 
 % inverse kinematics on SDF topology
 for k = 1:6
-    shp = shp.setBase(G{k});  % set base SE(3)
+    shp = shp.setBase(G{k}); % set base in SE3
 
-    pos = shp.FK(q0{k});      % forward kinematics 
-    prj = sdf.project(pos);   % project points
+    pos = shp.FK(q0{k});     % forward kinematics
+    prj = sdf.project(pos);  % project onto SDF
 
-    qd  = shp.IK(prj);        % inverse kinematics 
-    shp.render(qd);           % render shape
+    qd  = shp.IK(prj);       % inverse kinematics
+    shp.render(qd);          % render
 end
 
 sdf.show();  % render jellyfish

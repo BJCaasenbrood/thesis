@@ -1,0 +1,2000 @@
+\begin{thebibliography}{}
+
+\bibitem[Bib, a]{BibEntryPuma2022Sep}
+{PUMA. The Leading Edge in Robotic Technology}.
+\newblock [Online; accessed 15. Sep. 2022], url:
+  \url{https://digital.hagley.org/islandora/object/islandora%3A2650820}.
+
+\bibitem[Bib, b]{BibEntryStanford2022Sep}
+{The Stanford Arm, Computer History Museum}.
+\newblock [Online; accessed 15. Sep. 2022], url:
+  \url{https://www.computerhistory.org/collections/catalog/102723508}.
+
+\bibitem[Albu-Sch{\ifmmode\ddot{a}\else\"{a}\fi}ffer et~al.,
+  2011]{AlbuSchaffer2011}
+Albu-Sch{\ifmmode\ddot{a}\else\"{a}\fi}ffer, A., Eiberger, O., Fuchs, M.,
+  Grebenstein, M., Haddadin, S., Ott, C., Stemmer, A.,
+  Wimb{\ifmmode\ddot{o}\else\"{o}\fi}ck, T., Wolf, S., Borst, C., and
+  Hirzinger, G. (2011).
+\newblock {Anthropomorphic Soft Robotics {\textendash} From Torque Control to
+  Variable Intrinsic Compliance}.
+\newblock In {\em {Robotics Research}}, pages 185--207. Springer, Berlin,
+  Germany.
+
+\bibitem[Albu-Schaffer et~al., 2004]{AlbuSchaffer2004}
+Albu-Schaffer, A., Fischer, M., Schreiber, G., Schoeppe, F., and Hirzinger, G.
+  (2004).
+\newblock {Soft robotics: what Cartesian stiffness can obtain with passively
+  compliant, uncoupled joints?}
+\newblock In {\em {2004 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}}, volume~4, pages 3295--3301. IEEE.
+
+\bibitem[Alora et~al., 2022]{Alora2022}
+Alora, J.~I., Cenedese, M., Schmerling, E., Haller, G., and Pavone, M. (2022).
+\newblock {Data-Driven Spectral Submanifold Reduction for Nonlinear Optimal
+  Control of High-Dimensional Robots}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[An et~al., 2023]{An2023Jan}
+An, X., Cui, Y., Sun, H., Shao, Q., and Zhao, H. (2023).
+\newblock {Active-Cooling-in-the-Loop Controller Design and Implementation for
+  an SMA-Driven Soft Robotic Tentacle}.
+\newblock {\em IEEE Transactions on Robotics}, pages 1--17.
+
+\bibitem[Anderson and Spong, 1988]{Anderson1988}
+Anderson, R.~J. and Spong, M.~W. (1988).
+\newblock {Hybrid impedance control of robotic manipulators}.
+\newblock {\em IEEE Journal on Robotics and Automation}, 4(5):549--556.
+
+\bibitem[Anderson and Horn, 1968]{Anderson1968}
+Anderson, V. and Horn, C. (1968).
+\newblock {Tensor arm manipulator}.
+\newblock US Patent No.3,497,083.
+
+\bibitem[Andorf et~al., 1974]{Andorf1974}
+Andorf, P., Franz, D., Lieb, A., Upper, G., Guttropf, W., and K.~G., C.~F.
+  (1974).
+\newblock {Robot finger}.
+\newblock US Patent No.3,981,528.
+
+\bibitem[Ansari and Bhattacharya, 2022]{Ansari2022Sep}
+Ansari, S. and Bhattacharya, B. (2022).
+\newblock {Design and Development of a Tomato Picking Soft Robotic Gripper with
+  a Separator and Mechanical Iris Based Pedicel Cutting Mechanism}.
+\newblock In {\em {Advances in System-Integrated Intelligence}}, pages
+  276--286. Springer, Cham, Switzerland.
+
+\bibitem[Antman, 2005]{Antman2005}
+Antman, S.~S. (2005).
+\newblock {\em {Nonlinear Problems of Elasticity}}.
+\newblock Springer, New York, NY, USA.
+
+\bibitem[Armanini et~al., 2023]{Armanini2023}
+Armanini, C., Boyer, F., Mathew, A.~T., Duriez, C., and Renda, F. (2023).
+\newblock {Soft Robots Modeling: A Structured Overview}.
+\newblock {\em IEEE Transactions on Robotics}, pages 1--21.
+
+\bibitem[Asbeck et~al., 2015]{Asbeck2015Nov}
+Asbeck, A.~T., Schmidt, K., and Walsh, C.~J. (2015).
+\newblock {Soft exosuit for hip assistance}.
+\newblock {\em Robotics and Autonomous Systems}, 73:102--110.
+
+\bibitem[Astrid et~al., 2008]{Astrid2008}
+Astrid, P., Weiland, S., Willcox, K., and Backx, T. (2008).
+\newblock {Missing point estimation in models described by proper orthogonal
+  decomposition}.
+\newblock {\em IEEE Transactions on Automatic Control}, 53(10):2237--2251.
+
+\bibitem[Atekson, 2022]{BibEntryBH62022Sep}
+Atekson, C. (2022).
+\newblock {Big Hero 6: Let's Build Baymax}.
+\newblock [Online; accessed 15. Sep. 2022], url:
+  \url{http://www.cs.cmu.edu/~cga/bighero6}.
+
+\bibitem[Baaij et~al., 2023]{Baaij2023}
+Baaij, T., Holkenborg, M.~K., St{\ifmmode\ddot{o}\else\"{o}\fi}lzle, M.,
+  van~der Tuin, D., Naaktgeboren, J., Babu{\ifmmode\check{s}\else\v{s}\fi}ka,
+  R., and Santina, C.~D. (2023).
+\newblock {Learning 3D shape proprioception for continuum soft robots with
+  multiple magnetic sensors}.
+\newblock {\em Soft Matter}, 19(1):44--56.
+
+\bibitem[Bao et~al., 2018]{Bao2018Jun}
+Bao, G., Fang, H., Chen, L., Wan, Y., Xu, F., Yang, Q., and Zhang, L. (2018).
+\newblock {Soft Robotics: Academic Insights and Perspectives Through
+  Bibliometric Analysis}.
+\newblock {\em Soft Robotics}, 5(3):229--241.
+
+\bibitem[Bartlett et~al., 2015]{Bartlett2015}
+Bartlett, N.~W., Tolley, M.~T., Overvelde, J. T.~B., Weaver, J.~C., Mosadegh,
+  B., Bertoldi, K., Whitesides, G.~M., and Wood, R.~J. (2015).
+\newblock {A 3D-printed, functionally graded soft robot powered by combustion}.
+\newblock {\em Science}, 349(6244):161--165.
+
+\bibitem[Bends{\o}e and Sigmund, 2003]{Bendsoe2003}
+Bends{\o}e, M.~P. and Sigmund, O. (2003).
+\newblock {\em {Topology optimization: theory, methods, and applications}},
+  volume 2nd Editio.
+
+\bibitem[Benner et~al., 2014]{Benner2014}
+Benner, P., Sachs, E., and Volkwein, S. (2014).
+\newblock {Model order reduction for PDE constrained optimization}.
+\newblock {\em International Series of Numerical Mathematics}, 165:303--326.
+
+\bibitem[Bern et~al., 2019]{Bern2019}
+Bern, J., Banzet, P., Poranne, R., and Coros, S. (2019).
+\newblock {Trajectory Optimization for Cable-Driven Soft Robot Locomotion}.
+\newblock {\em Proceedings of Robotics: Science and Systems}.
+
+\bibitem[Bern et~al., 2022]{Bern2022}
+Bern, J.~M., Chang, K.-H., and Coros, S. (2022).
+\newblock {Interactive design of animated plushies}.
+\newblock {\em ACM Transactions on Graphics}, 36(4):1--11.
+
+\bibitem[Bern and Rus, 2021]{Bern2021Apr}
+Bern, J.~M. and Rus, D. (2021).
+\newblock {Soft IK with Stiffness Control}.
+\newblock In {\em {2021 IEEE 4th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 465--471. IEEE.
+
+\bibitem[Berthet-Rayne et~al., 2021]{Berthet2021}
+Berthet-Rayne, P., Sadati, S. M.~H., Petrou, G., Patel, N., Giannarou, S.,
+  Leff, D.~R., and Bergeles, C. (2021).
+\newblock {MAMMOBOT: A Miniature Steerable Soft Growing Robot for Early Breast
+  Cancer Detection}.
+\newblock {\em IEEE Rob. Autom. Lett.}, 6(3):5056--5063.
+
+\bibitem[Bertoldi et~al., 2008]{Bertoldi2008}
+Bertoldi, K., Boyce, M.~C., Deschanel, S., Prange, S.~M., and Mullin, T.
+  (2008).
+\newblock {Mechanics of deformation-triggered pattern transformations and
+  superelastic behavior in periodic elastomeric structures}.
+\newblock {\em Journal of the Mechanics and Physics of Solids},
+  56(8):2642--2668.
+
+\bibitem[Bhatia et~al., 2022]{Bhatia2022}
+Bhatia, J.~S., Jackson, H., Tian, Y., Xu, J., and Matusik, W. (2022).
+\newblock {Evolution Gym: A Large-Scale Benchmark for Evolving Soft Robots}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Bishop, 1975]{Bishop1975}
+Bishop, R.~L. (1975).
+\newblock {There is More than One Way to Frame a Curve}.
+\newblock {\em American Mathematical Monthly}, 82(3):246--251.
+
+\bibitem[Borja et~al., 2022]{Borja2022Apr}
+Borja, P., Dabiri, A., and Santina, C.~D. (2022).
+\newblock {Energy-based shape regulation of soft robots with unactuated
+  dynamics dominated by elasticity}.
+\newblock In {\em {2022 IEEE 5th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 396--402. IEEE.
+
+\bibitem[Boyer et~al., 2021]{Boyer2021}
+Boyer, F., Lebastard, V., Candelier, F., and Renda, F. (2021).
+\newblock {Dynamics of Continuum and Soft Robots: A Strain Parameterization
+  Based Approach}.
+\newblock {\em IEEE Transactions on Robotics}, 37(3):847--863.
+
+\bibitem[Boyer et~al., 2010]{Boyer2010}
+Boyer, F., Porez, M., and Leroyer, A. (2010).
+\newblock {Poincar{\ifmmode\acute{e}\else\'{e}\fi}{\textendash}Cosserat
+  Equations for the Lighthill Three-dimensional Large Amplitude Elongated Body
+  Theory: Application to Robotics}.
+\newblock {\em Journal of Nonlinear Science}, 20(1):47--79.
+
+\bibitem[Boyvat et~al., 2017]{Boyvat2017Jul}
+Boyvat, M., Koh, J.-S., and Wood, R.~J. (2017).
+\newblock {Addressable wireless actuation for multijoint folding robots and
+  devices}.
+\newblock {\em Science Robotics}, 2(8):eaan1544.
+
+\bibitem[Brock and Stokes, 1991]{Brock1991}
+Brock, R. and Stokes, A. (1991).
+\newblock On the synthesis of compliant mechanisms.
+\newblock In {\em IEEE Conference on Robotics and Automation}, pages
+  2168--2173.
+
+\bibitem[Bruder et~al., 2020]{Bruder2020Dec}
+Bruder, D., Fu, X., Gillespie, R.~B., Remy, C.~D., and Vasudevan, R. (2020).
+\newblock {Data-Driven Control of Soft Robots Using Koopman Operator Theory}.
+\newblock {\em IEEE Transactions on Robotics}, 37(3):948--961.
+
+\bibitem[Bruder et~al., 2021]{Bruder2019}
+Bruder, D., Fu, X., Gillespie, R.~B., Remy, C.~D., and Vasudevan, R. (2021).
+\newblock Data-driven control of soft robots using koopman operator theory.
+\newblock {\em IEEE Transactions on Robotics}, 37(3):948--961.
+
+\bibitem[Bullo and Murray, 1995]{Bullo1995}
+Bullo, F. and Murray, R.~M. (1995).
+\newblock {Proportional Derivative (PD) Control on the Euclidean Group}.
+\newblock {\em California Institute of Technology}.
+
+\bibitem[Caasenbrood, 2020]{SorotokiCode}
+Caasenbrood, B. (2020).
+\newblock \textup{SOROTOKI} - an open-source soft robotics toolkit for matlab.
+\newblock GitHub.
+
+\bibitem[Caasenbrood et~al., 2020]{Caasenbrood2020}
+Caasenbrood, B., Pogromsky, A., and Nijmeijer, H. (2020).
+\newblock {Dynamic modeling of hyper-elastic soft robots using spatial curves}.
+\newblock {\em IFAC Proceedings Volumes (IFAC-PapersOnline)}.
+
+\bibitem[Caasenbrood et~al., 2022a]{Caasenbrood2022}
+Caasenbrood, B., Pogromsky, A., and Nijmeijer, H. (2022a).
+\newblock {Control-Oriented Models for Hyperelastic Soft Robots Through
+  Differential Geometry of Curves}.
+\newblock {\em Soft Robotics}, 10(1):129--148.
+
+\bibitem[Caasenbrood et~al., 2021]{Caasenbrood2021}
+Caasenbrood, B., Pogromsky, A.~Y., and Nijmeijer, H. (2021).
+\newblock Energy-based control for soft manipulators using cosserat-beam
+  models.
+\newblock In {\em International Conference on Informatics in Control,
+  Automation and Robotics - ICINCO}, pages 311--319.
+
+\bibitem[Caasenbrood et~al., 2022b]{Caasenbrood2022Apr}
+Caasenbrood, B.~J., van Beek, F.~E., Chu, H.~K., and Kuling, I.~A. (2022b).
+\newblock {A Desktop-sized Platform for Real-time Control Applications of
+  Pneumatic Soft Robots}.
+\newblock In {\em {2022 IEEE 5th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 217--223. IEEE.
+
+\bibitem[Cao et~al., 2021]{Cao2021Apr}
+Cao, G., Huo, B., Yang, L., Zhang, F., Liu, Y., and Bian, G. (2021).
+\newblock {Model-Based Robust Tracking Control Without Observers for Soft
+  Bending Actuators}.
+\newblock {\em IEEE Robotics and Automation Letters}, 6(3):5175--5182.
+
+\bibitem[Chang et~al., 2022]{Chang2022}
+Chang, H.-S., Halder, U., Shih, C.-H., Naughton, N., Gazzola, M., and Mehta,
+  P.~G. (2022).
+\newblock {Energy Shaping Control of a Muscular Octopus Arm Moving in Three
+  Dimensions}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Chang et~al., 2023]{Chang2023}
+Chang, H.-S., Halder, U., Shih, C.-H., Naughton, N., Gazzola, M., and Mehta,
+  P.~G. (2023).
+\newblock {Energy-shaping control of a muscular octopus arm moving in three
+  dimensions}.
+\newblock {\em Proceedings of the Royal Society A}.
+
+\bibitem[Chartrand, 1977]{Chartrand1977Jan}
+Chartrand, G. (1977).
+\newblock {\em {Introductory Graph Theory}}.
+\newblock Courier Corporation.
+
+\bibitem[Chen and Zhang, 2018]{Chen2018Dec}
+Chen, Z. and Zhang, H. (2018).
+\newblock {Learning Implicit Fields for Generative Shape Modeling}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Cheney et~al., 2013]{Cheney2013}
+Cheney, N., MacCurdy, R., Clune, J., and Lipson, H. (2013).
+\newblock {Unshackling evolution: evolving soft robots with multiple materials
+  and a powerful generative encoding}.
+\newblock In {\em {GECCO '13: Proceedings of the 15th annual conference on
+  Genetic and evolutionary computation}}, pages 167--174. Association for
+  Computing Machinery, New York, NY, USA.
+
+\bibitem[Chirikjian and Burdick, 1989]{Chirikjian1989}
+Chirikjian, G. and Burdick, J. (1989).
+\newblock {A Modal Approach to the Kinematics of Hyper-Redudant Manipulators}.
+\newblock California Insitute of Technology, Pasadena.
+
+\bibitem[Chirikjian, 1992]{Chirikjian1992}
+Chirikjian, G.~S. (1992).
+\newblock {\em {Theory and applications of hyper-redundant robotic
+  manipulators}}.
+\newblock PhD thesis.
+
+\bibitem[Chirikjian and Burdick, ]{Chirikjian1991_crawler}
+Chirikjian, G.~S. and Burdick, J.~W.
+\newblock {Kinematics of hyper-redundant robot locomotion with applications to
+  grasping}.
+\newblock In {\em {Proceedings. 1991 IEEE International Conference on Robotics
+  and Automation}}, pages 09--11. IEEE.
+
+\bibitem[Chirikjian and Burdick, 1991]{Chirikjian1991}
+Chirikjian, G.~S. and Burdick, J.~W. (1991).
+\newblock {Kinematics of Hyper-Redundant Manipulators}.
+\newblock In {\em {Advances in Robot Kinematics}}, pages 392--399. Springer,
+  Vienna, Wien, Austria.
+
+\bibitem[Chirikjian and Burdick, 1992]{Chirikjian1992Dec}
+Chirikjian, G.~S. and Burdick, J.~W. (1992).
+\newblock {A Geometric Approach to Hyper-Redundant Manipulator Obstacle
+  Avoidance}.
+\newblock {\em Journal of Mechanical Design}, 114(4):580--585.
+
+\bibitem[Chirikjian and Burdick, 1994a]{Chirikjian1994Jun}
+Chirikjian, G.~S. and Burdick, J.~W. (1994a).
+\newblock {A modal approach to hyper-redundant manipulator kinematics}.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 10(3):343--354.
+
+\bibitem[Chirikjian and Burdick, 1994b]{Chirikjian1994}
+Chirikjian, G.~S. and Burdick, J.~W. (1994b).
+\newblock A hyper-redundant manipulator.
+\newblock {\em IEEE Robotics Automation Magazine}, 1:22--29.
+
+\bibitem[Choi et~al., 2011]{Choi2011}
+Choi, W., Whitesides, G.~M., Wang, M., Chen, X., Shepherd, R.~F., Mazzeo,
+  A.~D., Morin, S.~A., Stokes, A.~A., and Ilievski, F. (2011).
+\newblock {Multigait soft robot}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(51):20400--20403.
+
+\bibitem[Cianchetti et~al., 2013]{Cianchetti2013Nov}
+Cianchetti, M., Ranzani, T., Gerboni, G., De~Falco, I., Laschi, C., and
+  Menciassi, A. (2013).
+\newblock {STIFF-FLOP surgical manipulator: Mechanical design and experimental
+  characterization of the single module}.
+\newblock In {\em {2013 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}}, pages 3576--3581. IEEE.
+
+\bibitem[Cianchetti et~al., 2014]{Cianchetti2014}
+Cianchetti, M., Ranzani, T., Gerboni, G., Nanayakkara, T., Althoefer, K.,
+  Dasgupta, P., and Menciassi, A. (2014).
+\newblock {Soft Robotics Technologies to Address Shortcomings in Today's
+  Minimally Invasive Surgery: The STIFF-FLOP Approach}.
+\newblock {\em Soft Robotics}, 1(2):122--131.
+
+\bibitem[Coevoet et~al., 2017a]{Coevoet2017Feb}
+Coevoet, E., Escande, A., and Duriez, C. (2017a).
+\newblock {Optimization-Based Inverse Model of Soft Robots With Contact
+  Handling}.
+\newblock {\em IEEE Robotics and Automation Letters}, 2(3):1413--1419.
+
+\bibitem[Coevoet et~al., 2017b]{Coevoet2017}
+Coevoet, E., Morales-Bieze, T., Largilliere, F., Zhang, Z., Thieffry, M.,
+  Sanz-Lopez, M., Carrez, B., Marchal, D., Goury, O., Dequidt, J., and Duriez,
+  C. (2017b).
+\newblock {Software toolkit for modeling, simulation, and control of soft
+  robots}.
+\newblock {\em Advanced Robotics}, 31(22):1208--1224.
+
+\bibitem[Cohn and Dee, 2006]{Cohn2006Jul}
+Cohn, S.~E. and Dee, D.~P. (2006).
+\newblock {Observability of Discretized Partial Differential Equations}.
+\newblock {\em SIAM Journal on Numerical Analysis}.
+
+\bibitem[Connolly et~al., 2017]{Connolly2017Jan}
+Connolly, F., Walsh, C.~J., and Bertoldi, K. (2017).
+\newblock {Automatic design of fiber-reinforced soft actuators for trajectory
+  matching}.
+\newblock {\em Proceedings of the National Academy of Sciences}, 114(1):51--56.
+
+\bibitem[Corke, 2011]{Corke2011}
+Corke, P. (2011).
+\newblock {\em {Robotics, Vision and Control}}.
+\newblock Springer, Berlin, Germany.
+
+\bibitem[Corke, 2020]{Corke2020}
+Corke, P. (2020).
+\newblock {Why Robots are Important}.
+\newblock {\em Age of Robots}, 2:122--126.
+
+\bibitem[da~Cunha et~al., 2020a]{Pilz2020}
+da~Cunha, M.~P., Ambergen, S., Debije, M.~G., Homburg, E.~F., den Toonder,
+  J.~M., and Schenning, A.~P. (2020a).
+\newblock {A Soft Transporter Robot Fueled by Light}.
+\newblock {\em Advanced Science}, 7(5):1--7.
+
+\bibitem[da~Cunha et~al., 2020b]{daCunha2020}
+da~Cunha, M.~P., Debije, M.~G., and Schenning, A. P. H.~J. (2020b).
+\newblock {Bioinspired light-driven soft robots based on liquid crystal
+  polymers}.
+\newblock {\em Chemical Society Reviews}, 49(18):6568--6578.
+
+\bibitem[Daerden, 1999]{Daerden1999}
+Daerden, F. (1999).
+\newblock {\em {Conception and Realization of Pleated Pneumatic Artificial
+  Muscles and their Use as Compliant Actuation Elements}}.
+\newblock PhD thesis.
+
+\bibitem[Daerden and Lefeber, 2000]{Daerden2000}
+Daerden, F. and Lefeber, D. (2000).
+\newblock Pneumatic artificial muscles: actuators for robotics and automation.
+\newblock {\em European journal of Mechanical and Environmental Engineering},
+  47:10--21.
+
+\bibitem[De~Luca and Book, 2016]{DeLuca2016Jul}
+De~Luca, A. and Book, W.~J. (2016).
+\newblock {Robots with Flexible Elements}.
+\newblock In {\em {Springer Handbook of Robotics}}, pages 243--282. Springer,
+  Cham, Switzerland.
+
+\bibitem[Della~Santina, 2020]{DellaSantina2020Dec}
+Della~Santina, C. (2020).
+\newblock {The Soft Inverted Pendulum with Affine Curvature}.
+\newblock In {\em {2020 59th IEEE Conference on Decision and Control (CDC)}},
+  pages 4135--4142. IEEE.
+
+\bibitem[Della~Santina et~al., 2020a]{DellaSantina2020Jan}
+Della~Santina, C., Bicchi, A., and Rus, D. (2020a).
+\newblock {On an Improved State Parametrization for Soft Robots With Piecewise
+  Constant Curvature and Its Use in Model Based Control}.
+\newblock {\em IEEE Robotics and Automation Letters}, 5(2):1001--1008.
+
+\bibitem[Della~Santina et~al., 2020b]{DellaSantina2020Springer}
+Della~Santina, C., Catalano, M.~G., and Bicchi, A. (2020b).
+\newblock {Soft Robots}.
+\newblock In {\em {Encyclopedia of Robotics}}, pages 1--15. Springer, Berlin,
+  Germany.
+
+\bibitem[{Della Santina} et~al., 2021]{DellaSantina2021}
+{Della Santina}, C., Duriez, C., and Rus, D. (2021).
+\newblock {Model Based Control of Soft Robots: A Survey of the State of the Art
+  and Open Challenges}.
+\newblock pages 1--69.
+
+\bibitem[{Della Santina} et~al., 2020]{DellaSantina2020a}
+{Della Santina}, C., Katzschmann, R.~K., Bicchi, A., and Rus, D. (2020).
+\newblock {Model-based dynamic feedback control of a planar soft robot:
+  trajectory tracking and interaction with the environment}.
+\newblock {\em International Journal of Robotics Research}, 39(4):490--513.
+
+\bibitem[Della~Santina and Rus, 2020]{DellaSantina2020}
+Della~Santina, C. and Rus, D. (2020).
+\newblock Control oriented modeling of soft robots: The polynomial curvature
+  case.
+\newblock {\em IEEE Robotics and Automation Letters}, 5(2):290--298.
+
+\bibitem[Drotman et~al., 2017]{Drotman2017}
+Drotman, D., Jadhav, S., Karimi, M., de~Zonia, P., and Tolley, M.~T. (2017).
+\newblock {3D printed soft actuators for a legged robot capable of navigating
+  unstructured terrain}.
+\newblock In {\em {2017 IEEE International Conference on Robotics and
+  Automation (ICRA)}}, pages 5532--5538. IEEE.
+
+\bibitem[Drotman et~al., 2021]{Drotman2021Feb}
+Drotman, D., Jadhav, S., Sharp, D., Chan, C., and Tolley, M.~T. (2021).
+\newblock {Electronics-free pneumatic circuits for controlling soft-legged
+  robots}.
+\newblock {\em Science Robotics}, 6(51):eaay2627.
+
+\bibitem[Duriez, 2013]{Duriez2013}
+Duriez, C. (2013).
+\newblock {Control of elastic soft robots based on real-time finite element
+  method}.
+\newblock pages 3982--3987. Proceedings - IEEE International Conference on
+  Robotics and Automation.
+
+\bibitem[Duriez et~al., 2016]{Duriez2016}
+Duriez, C., Coevoet, E., Largilliere, F., Morales-Bieze, T., Zhang, Z.,
+  Sanz-Lopez, M., Carrez, B., Marchal, D., Goury, O., and Dequidt, J. (2016).
+\newblock {Framework for online simulation of soft robots with
+  optimization-based inverse model}.
+\newblock In {\em {2016 IEEE International Conference on Simulation, Modeling,
+  and Programming for Autonomous Robots (SIMPAR)}}, pages 111--118. IEEE.
+
+\bibitem[Falkenhahn et~al., 2015a]{Falkenhahn2015May}
+Falkenhahn, V., Hildebrandt, A., Neumann, R., and Sawodny, O. (2015a).
+\newblock {Model-based feedforward position control of constant curvature
+  continuum robots using feedback linearization}.
+\newblock In {\em {2015 IEEE International Conference on Robotics and
+  Automation (ICRA)}}, pages 762--767. IEEE.
+
+\bibitem[Falkenhahn et~al., 2015b]{Falkenhahn2015}
+Falkenhahn, V., Mahl, T., Hildebrandt, A., Neumann, R., and Sawodny, O.
+  (2015b).
+\newblock {Dynamic Modeling of Bellows-Actuated Continuum Robots Using the
+  Euler-Lagrange Formalism}.
+\newblock {\em IEEE Transactions on Robotics}, 31(6):1483--1496.
+
+\bibitem[Fang et~al., 2022]{Fang2022Jun}
+Fang, G., Tian, Y., Yang, Z.-X., Geraedts, J. M.~P., and Wang, C. C.~L. (2022).
+\newblock {Efficient Jacobian-Based Inverse Kinematics With Sim-to-Real
+  Transfer of Soft Robots by Learning}.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 27(6):5296--5306.
+
+\bibitem[Felt et~al., 2015]{Felt2015Oct}
+Felt, W., Chin, K.~Y., and Remy, C.~D. (2015).
+\newblock {Contraction Sensing With Smart Braid McKibben Muscles}.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 21(3):1201--1209.
+
+\bibitem[Felt et~al., 2019]{Felt2019Feb}
+Felt, W., Telleria, M.~J., Allen, T.~F., Hein, G., Pompa, J.~B., Albert, K.,
+  and Remy, C.~D. (2019).
+\newblock {An inductance-based sensing system for bellows-driven continuum
+  joints in soft robots}.
+\newblock {\em Autonomous Robots}, 43(2):435--448.
+
+\bibitem[Fischer et~al., 2022]{Fischer2022}
+Fischer, O., Toshimitsu, Y., Kazemipour, A., and Katzschmann, R.~K. (2022).
+\newblock {Dynamic Task Space Control Enables Soft Manipulators to Perform
+  Real-World Tasks}.
+\newblock {\em Advanced Intelligent Systems}.
+
+\bibitem[Floater, 2014]{Floater2014Jun}
+Floater, M.~S. (2014).
+\newblock {Wachspress and Mean Value Coordinates}.
+\newblock In {\em {Approximation Theory XIV: San Antonio 2013}}, pages 81--102.
+  Springer, Cham, Switzerland.
+
+\bibitem[Floater, 2015]{Floater2015May}
+Floater, M.~S. (2015).
+\newblock {Generalized barycentric coordinates and applications{$\ast$}}.
+\newblock {\em Acta Numerica}, 24:161--214.
+
+\bibitem[Franco, 2022]{Franco2022May}
+Franco, E. (2022).
+\newblock {Model-Based Eversion Control of Soft Growing Robots With Pneumatic
+  Actuation}.
+\newblock {\em IEEE Control Systems Letters}, 6:2689--2694.
+
+\bibitem[Franco and Astolfi, 2022]{Franco2022}
+Franco, E. and Astolfi, A. (2022).
+\newblock {Energy shaping control of underactuated mechanical systems with
+  fluidic actuation}.
+\newblock {\em International Journal of Robust and Nonlinear Control},
+  32(18):10011--10028.
+
+\bibitem[Franco and Garriga-Casanovas, 2020]{Franco2020}
+Franco, E. and Garriga-Casanovas, A. (2020).
+\newblock {Energy-shaping control of soft continuum manipulators with in-plane
+  disturbances}.
+\newblock {\em International Journal of Robotics Research}.
+
+\bibitem[Franco et~al., 2020]{Franco2020Jan}
+Franco, E., Tang, J., Casanovas, A.~G., Y~Baena, F.~R., and Astolfi, A. (2020).
+\newblock {Position Control of Soft Manipulators with Dynamic and Kinematic
+  Uncertainties}.
+\newblock {\em IFAC-PapersOnLine}, 53(2):9847--9852.
+
+\bibitem[Fras and Althoefer, 2018]{Fras2018Oct}
+Fras, J. and Althoefer, K. (2018).
+\newblock {Soft Biomimetic Prosthetic Hand: Design, Manufacturing and
+  Preliminary Examination}.
+\newblock In {\em {2018 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}}, pages 1--6. IEEE.
+
+\bibitem[Gain et~al., 2013]{Gain2013Dec}
+Gain, A.~L., Paulino, G.~H., Duarte, L., and Menezes, I. F.~M. (2013).
+\newblock {Topology Optimization Using Polytopes}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Galloway et~al., 2016]{Galloway2016}
+Galloway, K.~C., Becker, K.~P., Phillips, B., Kirby, J., Licht, S., Tchernov,
+  D., Wood, R.~J., and Gruber, D.~F. (2016).
+\newblock {Soft Robotic Grippers for Biological Sampling on Deep Reefs}.
+\newblock {\em Soft Robotics}, 3(1):23--33.
+
+\bibitem[Galloway et~al., 2019]{Galloway2019}
+Galloway, K.~C., Chen, Y., Templeton, E., Rife, B., Godage, I.~S., and Barth,
+  E.~J. (2019).
+\newblock {Fiber Optic Shape Sensing for Soft Robotics}.
+\newblock {\em Soft Robotics}, 6(5):671--684.
+
+\bibitem[Garcia, 2019]{BibEntryOrm2019Sep}
+Garcia, C. (2019).
+\newblock {Robots Are a Few of My Favorite Things}.
+\newblock [Online; accessed 15. Sep. 2022], url:
+  \url{https://computerhistory.org/blog/robots-are-a-few-of-my-favorite-things-by-chris-garcia}.
+
+\bibitem[Garofalo et~al., 2013]{Garofalo2013}
+Garofalo, G., Ott, C., and Albu-Schaffer, A. (2013).
+\newblock {On the closed form computation of the dynamic matrices and their
+  differentiations}.
+\newblock {\em IEEE International Conference on Intelligent Robots and
+  Systems}, pages 2364--2369.
+
+\bibitem[Gazzola et~al., 2018]{Gazzola2018}
+Gazzola, M., Dudte, L.~H., McCormick, A.~G., and Mahadevan, L. (2018).
+\newblock {Forward and inverse problems in the mechanics of soft filaments}.
+\newblock {\em Royal Society Open Science}, 5(6).
+
+\bibitem[Ghorbel et~al., 1998]{Ghorbel1998Dec}
+Ghorbel, F., Srinivasan, B., and Spong, M.~W. (1998).
+\newblock {On the uniform boundedness of the inertia matrix of serial robot
+  manipulators}.
+\newblock {\em Journal of Robotic Systems}, 15(1):17--28.
+
+\bibitem[Godage et~al., 2016]{Godage2016}
+Godage, I.~S., Medrano-Cerda, G.~A., Branson, D.~T., Guglielmino, E., and
+  Caldwell, D.~G. (2016).
+\newblock {Dynamics for variable length multisection continuum arms}.
+\newblock {\em Int. J. Rob. Res.}, 35(6):695--722.
+
+\bibitem[Godage and Walker, 2015]{Godage2015}
+Godage, I.~S. and Walker, I.~D. (2015).
+\newblock {Dual Quaternion based modal kinematics for multisection continuum
+  arms}.
+\newblock {\em Proceedings - IEEE International Conference on Robotics and
+  Automation}, 2015-June(June):1416--1422.
+
+\bibitem[Gong and Yu, 2022]{Gong2022Feb}
+Gong, D. and Yu, J. (2022).
+\newblock {\em {Design and Control of the McKibben Artificial Muscles Actuated
+  Humanoid Manipulator}}.
+\newblock IntechOpen.
+
+\bibitem[Goury and Duriez, 2018]{Goury2018}
+Goury, O. and Duriez, C. (2018).
+\newblock {Fast, Generic, and Reliable Control and Simulation of Soft Robots
+  Using Model Order Reduction}.
+\newblock {\em IEEE Transactions on Robotics}, 34(6):1565--1576.
+
+\bibitem[Graule et~al., 2022]{Graule2022}
+Graule, M.~A., McCarthy, T.~P., Teeple, C.~B., Werfel, J., and Wood, R.~J.
+  (2022).
+\newblock {SoMoGym: A Toolkit for Developing and Evaluating Controllers and
+  Reinforcement Learning Algorithms for Soft Robots}.
+\newblock {\em IEEE Robotics and Automation Letters}, 7(2):4071--4078.
+
+\bibitem[Grazioso et~al., 2019]{Grazioso2019}
+Grazioso, S., {Di Gironimo}, G., and Siciliano, B. (2019).
+\newblock {A Geometrically Exact Model for Soft Continuum Robots: The Finite
+  Element Deformation Space Formulation}.
+\newblock {\em Soft Robotics}, 6(6):790--811.
+
+\bibitem[Grzesiak et~al., 2011]{Grzesiak2011}
+Grzesiak, A., Becker, R., and Verl, A. (2011).
+\newblock {The Bionic Handling Assistant: a success story of additive
+  manufacturing}.
+\newblock {\em Assembly Automation}, 31(4):329--333.
+
+\bibitem[Hairer et~al., 2002]{Hairer2002}
+Hairer, E., Lubich, C., and Wanner, G. (2002).
+\newblock {\em {Geometric Numerical Integration: Structure-Preserving
+  Algorithms for Ordinary Differential Equations}}.
+\newblock Springer, Berlin, Germany.
+
+\bibitem[Hairer et~al., 2006]{Hairer2006}
+Hairer, E., Wanner, G., and Lubich, C. (2006).
+\newblock {\em {Geometric Numerical Integration}}.
+\newblock Springer, Berlin, Germany.
+
+\bibitem[Hawkes et~al., 2017]{Hawkes2017}
+Hawkes, E.~W., Blumenschein, L.~H., Greer, J.~D., and Okamura, A.~M. (2017).
+\newblock {A soft robot that navigates its environment through growth}.
+\newblock {\em Science Robotics}, 2(8):eaan3028.
+
+\bibitem[Hennig, 2023]{MPM}
+Hennig, J. (2023).
+\newblock {Matlab Package Manager (mpm)}.
+\newblock [Online; accessed 15. Sept. 2023].
+
+\bibitem[Hiller and Lipson, 2014]{Hiller2014}
+Hiller, J. and Lipson, H. (2014).
+\newblock {Dynamic Simulation of Soft Multimaterial 3D-Printed Objects}.
+\newblock {\em Soft Robotics}, 1(1):88--101.
+
+\bibitem[Hofer et~al., 2019]{Hofer2019}
+Hofer, M., Spannagl, L., and D'Andrea, R. (2019).
+\newblock {Iterative Learning Control for Fast and Accurate Position Tracking
+  with an Articulated Soft Robotic Arm}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Hogan, 1984a]{Hogan1984}
+Hogan, N. (1984a).
+\newblock {Impedance Control: An Approach to Manipulation}.
+\newblock In {\em {1984 American Control Conference}}, pages 304--313. IEEE.
+
+\bibitem[Hogan, 1984b]{Hogan1984Jan}
+Hogan, N. (1984b).
+\newblock {Impedance control of industrial robots}.
+\newblock {\em Robotics and Computer-Integrated Manufacturing}, 1(1):97--113.
+
+\bibitem[Hoggett, 2012]{Buckley2012}
+Hoggett, R. (2012).
+\newblock {1988 - "Shadow" Biped Walker - David Buckley et al (British)}.
+\newblock [Online; accessed 7. Sep. 2022], url:
+  \url{http://cyberneticzoo.com/walking-machines/1988-shadow-biped-walker-david-buckley-et-al-british}.
+
+\bibitem[Hoggett, 2014a]{Mckibben}
+Hoggett, R. (2014a).
+\newblock {1957 - "Artificial Muscle" - Joseph Laws McKibben (American)}.
+\newblock [Online; accessed 23. Aug. 2022], url:
+  \url{http://cyberneticzoo.com/bionics/1957-artificial-muscle-joseph-laws-mckibben-american}.
+
+\bibitem[Hoggett, 2014b]{Teleshev1981}
+Hoggett, R. (2014b).
+\newblock {1981 - Robot Arm with Pneumatic Gripper - Nikolai Teleshev
+  (Russian)}.
+\newblock [Online; accessed 04. Sep. 2022], url:
+  \url{http://cyberneticzoo.com/bionics/1981-robot-arm-with-pneumatic-gripper-nikolai-teleshev-russian/}.
+
+\bibitem[Hoggett, 2023]{cyberneticzoo}
+Hoggett, R. (2023).
+\newblock {cyberneticzoo.com - a history of cybernetic animals and early
+  robots}.
+\newblock [Online; accessed 14. Jun. 2023].
+
+\bibitem[Holzapfel, 2002]{Holzapfel2002}
+Holzapfel, G.~A. (2002).
+\newblock {\em {Nonlinear Solid Mechanics: A Continuum Approach for Engineering
+  Science}}, volume~37.
+\newblock Kluwer Academic Publishers, Heidelberg, Germany.
+
+\bibitem[Hu et~al., 2019a]{Hu2019Oct}
+Hu, Y., Anderson, L., Li, T.-M., Sun, Q., Carr, N., Ragan-Kelley, J., and
+  Durand, F. (2019a).
+\newblock {DiffTaichi: Differentiable Programming for Physical Simulation}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Hu et~al., 2019b]{Hu2019taichi}
+Hu, Y., Li, T.-M., Anderson, L., Ragan-Kelley, J., and Durand, F. (2019b).
+\newblock Taichi: a language for high-performance computation on spatially
+  sparse data structures.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(6):201.
+
+\bibitem[Hu et~al., 2019c]{Hu2019May}
+Hu, Y., Liu, J., Spielberg, A., Tenenbaum, J.~B., Freeman, W.~T., Wu, J., Rus,
+  D., and Matusik, W. (2019c).
+\newblock {ChainQueen: A Real-Time Differentiable Physical Simulator for Soft
+  Robotics}.
+\newblock In {\em {2019 International Conference on Robotics and Automation
+  (ICRA)}}, pages 6265--6271. IEEE.
+
+\bibitem[Hubbard et~al., 2021]{Hubbard2021}
+Hubbard, J.~D., Acevedo, R., Edwards, K.~M., Alsharhan, A.~T., Wen, Z., Landry,
+  J., Wang, K., Schaffer, S., and Sochol, R.~D. (2021).
+\newblock {Fully 3D-printed soft robots with integrated fluidic circuitry}.
+\newblock {\em Science Advances}, 7(29).
+
+\bibitem[Hughes et~al., 2016]{Hughes2016Nov}
+Hughes, J., Culha, U., Giardina, F., Guenther, F., Rosendo, A., and Iida, F.
+  (2016).
+\newblock {Soft Manipulators and Grippers: A Review}.
+\newblock {\em Frontiers in Robotics and AI}, 3.
+
+\bibitem[Hyatt et~al., 2020]{Hyatt2020}
+Hyatt, P., Johnson, C.~C., and Killpack, M.~D. (2020).
+\newblock {Model Reference Predictive Adaptive Control for Large-Scale Soft
+  Robots}.
+\newblock {\em Frontiers in Robotics and AI}, 7.
+
+\bibitem[Ilievski et~al., 2011]{Ilievski2011Feb}
+Ilievski, F., Mazzeo, A.~D., Shepherd, R.~F., Chen, X., and Whitesides, G.~M.
+  (2011).
+\newblock {Soft Robotics for Chemists}.
+\newblock {\em Angewandte Chemie International Edition}, 50(8):1890--1895.
+
+\bibitem[Illingworth and Kittler, 1987]{Illingworth1987Sep}
+Illingworth, J. and Kittler, J. (1987).
+\newblock {The Adaptive Hough Transform}.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  PAMI-9(5):690--698.
+
+\bibitem[Immega, 1986]{Immega1986}
+Immega, G. (1986).
+\newblock Romac muscle powered robots.
+\newblock Technical Report MS86-777.
+
+\bibitem[Jiang et~al., 2016]{Jiang2016Dec}
+Jiang, H., Liu, X., Chen, X., Wang, Z., Jin, Y., and Chen, X. (2016).
+\newblock {Design and simulation analysis of a soft manipulator based on
+  honeycomb pneumatic networks}.
+\newblock In {\em {2016 IEEE International Conference on Robotics and
+  Biomimetics (ROBIO)}}, pages 350--356. IEEE.
+
+\bibitem[Jiao et~al., 2022]{Jiao2022Jun}
+Jiao, D., Zhu, Q.~L., Li, C.~Y., Zheng, Q., and Wu, Z.~L. (2022).
+\newblock {Programmable Morphing Hydrogels for Soft Actuators and Robots: From
+  Structure Designs to Active Functions}.
+\newblock {\em Accounts of Chemical Research}, 55(11):1533--1545.
+
+\bibitem[Joachimczak et~al., 2014]{Joachimczak2014Jul}
+Joachimczak, M., Suzuki, R., and Arita, T. (2014).
+\newblock {Fine Grained Artificial Development for Body-Controller Coevolution
+  of Soft-Bodied Animats}.
+\newblock {\em MIT Press}, pages 239--246.
+
+\bibitem[Joachimczak et~al., 2015]{Joachimczak2015}
+Joachimczak, M., Suzuki, R., and Arita, T. (2015).
+\newblock {Improving Evolvability of Morphologies and Controllers of
+  Developmental Soft-Bodied Robots with Novelty Search}.
+\newblock {\em Frontiers in Robotics and AI}, 0.
+
+\bibitem[Jones and Walker, 2006]{Jones2006}
+Jones, B.~A. and Walker, I.~D. (2006).
+\newblock {Kinematics for multisection continuum robots}.
+\newblock {\em IEEE Transaction on Robotics}, 22(1):43--55.
+
+\bibitem[Jones and Walker, 2007]{Jones2007Apr}
+Jones, B.~A. and Walker, I.~D. (2007).
+\newblock {Limiting-case Analysis of Continuum Trunk Kinematics}.
+\newblock In {\em {Proceedings 2007 IEEE International Conference on Robotics
+  and Automation}}, pages 1363--1368. IEEE.
+
+\bibitem[Justh and Krishnaprasad, 2006]{Justh2006Jun}
+Justh, E.~W. and Krishnaprasad, P.~S. (2006).
+\newblock {Steering laws for motion camouflage}.
+\newblock {\em Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 462(2076):3629--3643.
+
+\bibitem[Kamble et~al., 2022]{Kamble2022Jan}
+Kamble, V.~G., Mersch, J., Tahir, M.,
+  St{\ifmmode\ddot{o}\else\"{o}\fi}ckelhuber, K.~W., Das, A., and Wie{\ss}ner,
+  S. (2022).
+\newblock {Development of Liquid Diene Rubber Based Highly Deformable
+  Interactive Fiber-Elastomer Composites}.
+\newblock {\em Materials}, 15(1):390.
+
+\bibitem[Kang et~al., 2014]{Kang2014Jan}
+Kang, W., Xu, L., and Giraldo, F.~X. (2014).
+\newblock {Partial Observability and its Consistency for PDEs}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Katzschmann et~al., 2018]{Katzschmann2018}
+Katzschmann, R.~K., DelPreto, J., MacCurdy, R., and Rus, D. (2018).
+\newblock {Exploration of underwater life with an acoustically controlled soft
+  robotic fish}.
+\newblock {\em Science Robotics}, 3(16):eaar3449.
+
+\bibitem[Katzschmann et~al., 2019a]{Katzschmann2019}
+Katzschmann, R.~K., Santina, C.~D., Toshimitsu, Y., Bicchi, A., and Rus, D.
+  (2019a).
+\newblock {Dynamic Motion Control of Multi-Segment Soft Robots Using Piecewise
+  Constant Curvature Matched with an Augmented Rigid Body Model}.
+\newblock In {\em {2019 2nd IEEE International Conference on Soft Robotics
+  (RoboSoft)}}, pages 14--18. IEEE.
+
+\bibitem[Katzschmann et~al., 2019b]{Katzschmann2019Apr}
+Katzschmann, R.~K., Thieffry, M., Goury, O., Kruszewski, A., Guerra, T.-M.,
+  Duriez, C., and Rus, D. (2019b).
+\newblock {Dynamically Closed-Loop Controlled Soft Robotic Arm using a Reduced
+  Order Finite Element Model with State Observer}.
+\newblock In {\em {2019 2nd IEEE International Conference on Soft Robotics
+  (RoboSoft)}}, pages 717--724. IEEE.
+
+\bibitem[Kazemipour et~al., 2022]{Kazemipour2022May}
+Kazemipour, A., Fischer, O., Toshimitsu, Y., Wong, K.~W., and Katzschmann,
+  R.~K. (2022).
+\newblock {Adaptive Dynamic Sliding Mode Control of Soft Continuum
+  Manipulators}.
+\newblock In {\em {2022 International Conference on Robotics and Automation
+  (ICRA)}}, pages 3259--3265. IEEE.
+
+\bibitem[Kennedy et~al., 2020]{Kennedy2020Nov}
+Kennedy, E. B.~L., Buresch, K.~C., Boinapally, P., and Hanlon, R.~T. (2020).
+\newblock {Octopus arms exhibit exceptional flexibility}.
+\newblock {\em Scientific Reports}, 10(20872):1--10.
+
+\bibitem[Keplinger et~al., 2011]{Keplinger2011}
+Keplinger, C., Li, T., Baumgartner, R., Suo, Z., and Bauer, S. (2011).
+\newblock {Harnessing snap-through instability in soft dielectrics to achieve
+  giant voltage-triggered deformation}.
+\newblock {\em Soft Matter}, 8(2):285--288.
+
+\bibitem[Khalil, 2014]{Khalil2014Feb}
+Khalil, H. (2014).
+\newblock {\em {Nonlinear Control}}.
+\newblock Pearson, London, England, UK.
+
+\bibitem[Khatib, 1987]{Khatib1987}
+Khatib, O. (1987).
+\newblock {A unified approach for motion and force control of robot
+  manipulators: The operational space formulation}.
+\newblock {\em IEEE Journal on Robotics and Automation}, 3(1):43--53.
+
+\bibitem[Kier and Smith, 1985]{Kier1985}
+Kier, W.~M. and Smith, K.~K. (1985).
+\newblock {Tongues, tentacles and trunks: the biomechanics of movement in
+  muscular-hydrostats}.
+\newblock {\em Zoological Journal of the Linnean Society}, 83(4):307--324.
+
+\bibitem[Kier and Stella, 2007]{Kier2007Oct}
+Kier, W.~M. and Stella, M.~P. (2007).
+\newblock {The arrangement and function of octopus arm musculature and
+  connective tissue}.
+\newblock {\em Journal of Morphology}, 268(10):831--843.
+
+\bibitem[Kim et~al., 2021]{Kim2021Feb}
+Kim, D., Kim, S.-H., Kim, T., Kang, B.~B., Lee, M., Park, W., Ku, S., Kim, D.,
+  Kwon, J., Lee, H., Bae, J., Park, Y.-L., Cho, K.-J., and Jo, S. (2021).
+\newblock {Review of machine learning methods in soft robotics}.
+\newblock {\em PloS One}, 16(2):e0246102.
+
+\bibitem[Kim et~al., 2020]{Kim2020Jun}
+Kim, K., Agogino, A.~K., and Agogino, A.~M. (2020).
+\newblock {Rolling Locomotion of Cable-Driven Soft Spherical Tensegrity
+  Robots}.
+\newblock {\em Soft Robotics}, 7(3):346--361.
+
+\bibitem[Kim, 2018]{Kim2018}
+Kim, N.~H. (2018).
+\newblock {\em Introduction Analysis Finite Element to Nonlinear}.
+\newblock Springer.
+
+\bibitem[Kim et~al., 2013]{Kim2013}
+Kim, S., Laschi, C., and Trimmer, B. (2013).
+\newblock {Soft robotics: a bioinspired evolution in robotics}.
+\newblock {\em Trends in Biotechnology}, 31(5):287--294.
+
+\bibitem[Kim et~al., 2019a]{Kim2019Aug}
+Kim, S.~Y., Baines, R., Booth, J., Vasios, N., Bertoldi, K., and
+  Kramer-Bottiglio, R. (2019a).
+\newblock {Reconfigurable soft body trajectories using unidirectionally
+  stretchable composite laminae}.
+\newblock {\em Nature Communications}, 10(3464):1--8.
+
+\bibitem[Kim et~al., 2019b]{Kim2019AugMagnet}
+Kim, Y., Parada, G.~A., Liu, S., and Zhao, X. (2019b).
+\newblock {Ferromagnetic soft continuum robots}.
+\newblock {\em Science Robotics}, 4(33):eaax7329.
+
+\bibitem[Kim et~al., 2018]{KimYoonho2018}
+Kim, Y., Yuk, H., Zhao, R., Chester, S.~A., and Zhao, X. (2018).
+\newblock {Printing ferromagnetic domains for untethered fast-transforming soft
+  materials}.
+\newblock {\em Nature}, 558:274--279.
+
+\bibitem[Komeno et~al., 2022]{Komeno2022Oct}
+Komeno, N., Michael, B., K{\ifmmode\ddot{u}\else\"{u}\fi}chler, K., Anarossi,
+  E., and Matsubara, T. (2022).
+\newblock {Deep Koopman with Control: Spectral Analysis of Soft Robot
+  Dynamics}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Kriegman et~al., 2020]{Kriegman2020}
+Kriegman, S., Blackiston, D., Levin, M., and Bongard, J. (2020).
+\newblock {A scalable pipeline for designing reconfigurable organisms}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  117(4):1853--1859.
+
+\bibitem[Kukolj, 1988]{Kukolj1988}
+Kukolj, M. (1988).
+\newblock Axially contractable actuautor.
+\newblock US Patent No. 4,733,603.
+
+\bibitem[Largilliere et~al., 2015]{Largilliere2015}
+Largilliere, F., Verona, V., Coevoet, E., Sanz-Lopez, M., Dequidt, J., and
+  Duriez, C. (2015).
+\newblock {Real-time control of soft-robots using asynchronous finite element
+  modeling}.
+\newblock {\em Proceedings - IEEE International Conference on Robotics and
+  Automation}, 2015-June(June):2550--2555.
+
+\bibitem[Laschi and Cianchetti, 2014]{Laschi2014}
+Laschi, C. and Cianchetti, M. (2014).
+\newblock {Soft Robotics: New Perspectives for Robot Bodyware and Control}.
+\newblock {\em Frontiers in Bioengineering and Biotechnology}, 0.
+
+\bibitem[Lee et~al., 2020]{Lee2020Dec}
+Lee, Y., Song, W.~J., and Sun, J.-Y. (2020).
+\newblock {Hydrogel soft robotics}.
+\newblock {\em Materials Today Physics}, 15:100258.
+
+\bibitem[Levien, 2008]{Levien2008}
+Levien, R. (2008).
+\newblock The elastica: a mathematical history.
+\newblock Technical Report UCB/EECS-2008-103, EECS Department, University of
+  California, Berkeley.
+
+\bibitem[Li et~al., 2022a]{Li2022Nov}
+Li, D., Fan, D., Zhu, R., Lei, Q., Liao, Y., Yang, X., Pan, Y., Wang, Z., Wu,
+  Y., Liu, S., and Wang, H. (2022a).
+\newblock {Origami-Inspired Soft Twisting Actuator}.
+\newblock {\em Soft Robotics}.
+
+\bibitem[Li et~al., 2021]{Li2021Mar}
+Li, G., Chen, X., Zhou, F., Liang, Y., Xiao, Y., Cao, X., Zhang, Z., Zhang, M.,
+  Wu, B., Yin, S., Xu, Y., Fan, H., Chen, Z., Song, W., Yang, W., Pan, B., Hou,
+  J., Zou, W., He, S., Yang, X., Mao, G., Jia, Z., Zhou, H., Li, T., Qu, S.,
+  Xu, Z., Huang, Z., Luo, Y., Xie, T., Gu, J., Zhu, S., and Yang, W. (2021).
+\newblock {Self-powered soft robot in the Mariana Trench}.
+\newblock {\em Nature}, 591:66--71.
+
+\bibitem[Li et~al., 2023]{Li2023Jan}
+Li, H., Xun, L., and Zheng, G. (2023).
+\newblock {Piecewise Linear Strain Cosserat Model for Soft Slender
+  Manipulator}.
+\newblock {\em IEEE Transactions on Robotics}, pages 1--18.
+
+\bibitem[Li et~al., 2022b]{Li2022Feb}
+Li, S., Kruszewski, A., Guerra, T.-M., and Nguyen, A.-T. (2022b).
+\newblock {Equivalent-Input-Disturbance-Based Dynamic Tracking Control for Soft
+  Robots via Reduced-Order Finite-Element Models}.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 27(5):4078--4089.
+
+\bibitem[Li et~al., 2017a]{Li2017Dec}
+Li, S., Vogt, D.~M., Rus, D., and Wood, R.~J. (2017a).
+\newblock {Fluid-driven origami-inspired artificial muscles}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  114(50):13132--13137.
+
+\bibitem[Li et~al., 2017b]{Li2017a}
+Li, Z., Wu, L., Ren, H., and Yu, H. (2017b).
+\newblock {Kinematic comparison of surgical tendon-driven manipulators and
+  concentric tube manipulators}.
+\newblock {\em Mechanism and Machine Theory}, 107(September 2016):148--165.
+
+\bibitem[Liu et~al., 2022]{Liu2022Mar}
+Liu, P., Zhang, K., Tateo, D., Jauhri, S., Peters, J., and Chalvatzaki, G.
+  (2022).
+\newblock {Regularized Deep Signed Distance Fields for Reactive Motion
+  Generation}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Lloyd, 1982]{Lloyd1982Mar}
+Lloyd, S. (1982).
+\newblock {Least squares quantization in PCM}.
+\newblock {\em IEEE Transactions on Information Theory}, 28(2):129--137.
+
+\bibitem[L{\ifmmode\acute{o}\else\'{o}\fi}pez-Valdeolivas et~al.,
+  2018]{Lopez2018}
+L{\ifmmode\acute{o}\else\'{o}\fi}pez-Valdeolivas, M., Liu, D., Broer, D.~J.,
+  and S{\ifmmode\acute{a}\else\'{a}\fi}nchez-Somolinos, C. (2018).
+\newblock {4D Printed Actuators with Soft-Robotic Functions}.
+\newblock {\em Macromolecular Rapid Communications}, 39(5):1700710.
+
+\bibitem[Lorensen and Cline, 1987]{Lorensen1987Aug}
+Lorensen, W.~E. and Cline, H.~E. (1987).
+\newblock {Marching cubes: A high resolution 3D surface construction
+  algorithm}.
+\newblock In {\em {ACM SIGGRAPH Computer Graphics}}, volume~21, pages 163--169.
+  Association for Computing Machinery, New York, NY, USA.
+
+\bibitem[Lor{\ifmmode\acute{\imath}\else\'{\i}\fi}a, 2015]{Loria2015Jun}
+Lor{\ifmmode\acute{\imath}\else\'{\i}\fi}a, A. (2015).
+\newblock {Observers are Unnecessary for Output-Feedback Control of Lagrangian
+  Systems}.
+\newblock {\em IEEE Transactions on Automatic Control}, 61(4):905--920.
+
+\bibitem[Luo et~al., 2016]{Luo2016Mar}
+Luo, Y., Li, M., and Kang, Z. (2016).
+\newblock {Topology optimization of hyperelastic structures with frictionless
+  contact supports}.
+\newblock {\em International Journal of Solids and Structures}, 81:373--382.
+
+\bibitem[Lynch and Park, 2017]{Lynch2017}
+Lynch, K.~M. and Park, F.~C. (2017).
+\newblock {\em {Modern Robotics: Mechanics, Planning, and Control}}.
+\newblock Cambridge University Press, Cambridge, England, UK.
+
+\bibitem[Maas et~al., 2012]{Maas2012}
+Maas, S.~A., Ellis, B.~J., Ateshian, G.~A., and Weiss, J.~A. (2012).
+\newblock {FEBio: finite elements for biomechanics}.
+\newblock {\em Journal of Biomechanical Engineering}, 134(1):011005.
+
+\bibitem[Magnus, 1954]{Magnus2006Oct}
+Magnus, W. (1954).
+\newblock {On the exponential solution of differential equations for a linear
+  operator}.
+\newblock {\em Communications on Pure and Applied Mathematics}, 7(4):649--673.
+
+\bibitem[Manns et~al., 2018]{Manns2018Jan}
+Manns, M., Morales, J., and Frohn, P. (2018).
+\newblock {Additive manufacturing of silicon based PneuNets as soft robotic
+  actuators}.
+\newblock {\em Procedia CIRP}, 72:328--333.
+
+\bibitem[Marchese et~al., 2015]{Marchese2015}
+Marchese, A.~D., Katzschmann, R.~K., and Rus, D. (2015).
+\newblock {A Recipe for Soft Fluidic Elastomer Robots}.
+\newblock {\em Soft Robotics}, 2(1):7--25.
+
+\bibitem[Marchese et~al., 2014]{Marchese2014}
+Marchese, A.~D., Onal, C.~D., and Rus, D. (2014).
+\newblock {Autonomous Soft Robotic Fish Capable of Escape Maneuvers Using
+  Fluidic Elastomer Actuators}.
+\newblock {\em Soft Robotics}, 1(1):75--87.
+
+\bibitem[Marchese and Rus, 2016]{Marchese2016}
+Marchese, A.~D. and Rus, D. (2016).
+\newblock {Design, kinematics, and control of a soft spatial fluidic elastomer
+  manipulator}.
+\newblock {\em The International Journal of Robotics Research}, 35(7):840--869.
+
+\bibitem[Marechal et~al., 2021]{Marechal2021Jun}
+Marechal, L., Balland, P., Lindenroth, L., Petrou, F., Kontovounisios, C., and
+  Bello, F. (2021).
+\newblock {Toward a Common Framework and Database of Materials for Soft
+  Robotics}.
+\newblock {\em Soft Robotics}, 8(3):284--297.
+
+\bibitem[Markiewicz, 1973]{Markiewicz1973}
+Markiewicz, B.~R. (1973).
+\newblock {Analysis of the computed torque drive method and comparison with
+  conventional position servo for a computer-controlled manipulator}.
+\newblock Technical Memorandum 33-601.
+
+\bibitem[Mathew et~al., 2022a]{Mathew2022Oct}
+Mathew, A.~T., Armanini, C., Alshehhi, A. A. S.~A., Hmida, I. M.~B., and Renda,
+  F. (2022a).
+\newblock {Multifunctional Underwater Soft Robots: A Simulation Essay}.
+\newblock {\em IOP Conference Series: Materials Science and Engineering},
+  1261(1):012008.
+
+\bibitem[Mathew et~al., 2022b]{Mathew2022}
+Mathew, A.~T., Hmida, I. M.~B., Armanini, C., Boyer, F., and Renda, F. (2022b).
+\newblock {SoRoSim: A MATLAB Toolbox for Hybrid Rigid-Soft Robots Based on the
+  Geometric Variable-Strain Approach}.
+\newblock {\em IEEE Robotics {\&} Automation Magazine}, pages 2--18.
+
+\bibitem[Mazzolai et~al., 2019]{Mazzolai2019Oct}
+Mazzolai, B., Mondini, A., Tramacere, F., Riccomi, G., Sadeghi, A., Giordano,
+  G., Del~Dottore, E., Scaccia, M., Zampato, M., and Carminati, S. (2019).
+\newblock {Octopus-Inspired Soft Arm with Suction Cups for Enhanced Grasping
+  Tasks in Confined Environments}.
+\newblock {\em Advanced Intelligent Systems}, 1(6):1900041.
+
+\bibitem[McDonald et~al., 2020]{McDonald2020}
+McDonald, K., Rendos, A., Woodman, S., Brown, K.~A., and Ranzani, T. (2020).
+\newblock {Magnetorheological Fluid-Based Flow Control for Soft Robots}.
+\newblock {\em Advanced Intelligent Systems}, 2(11):2000139.
+
+\bibitem[Merriam-Webster, 1983]{MerriamWebster1983}
+Merriam-Webster (1983).
+\newblock {\em {Websters Ninth New Collegiate Dictionary}}.
+\newblock Merriam-webster+ Inc.
+
+\bibitem[Meyers and Chawla, 2009]{Meyer2009}
+Meyers, M.~A. and Chawla, K.~K. (2009).
+\newblock {\em {Mechanical Behavior of Materials}}.
+\newblock Cambridge University Press, Cambridge, England, UK.
+
+\bibitem[Mickle, 2008]{Mickle2008}
+Mickle, P. (2008).
+\newblock {1961: A peep into the automated future}.
+\newblock [Online; accessed 10. Aug. 2022], url:
+  \url{http://www.capitalcentury.com/1961.html}.
+
+\bibitem[Milana et~al., 2021]{Milana2021}
+Milana, E., Stella, F., Gorissen, B., Reynaerts, D., and Santina, C.~D. (2021).
+\newblock {Model-Based Control Can Improve the Performance of Artificial
+  Cilia}.
+\newblock In {\em {2021 IEEE 4th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 527--530. IEEE.
+
+\bibitem[Mochiyama, 1992]{Mochiyama1992}
+Mochiyama, H. (1992).
+\newblock {\em {Theory and applications of hyper-redundant robotic
+  manipulators}}.
+\newblock PhD thesis.
+
+\bibitem[Mochiyama et~al., 1998]{Mochiyama1998}
+Mochiyama, H., Shimemura, E., and Kobayashi, H. (1998).
+\newblock {Direct kinematics of manipulators with hyper degrees of freedom and
+  Frenet-Serret formula}.
+\newblock {\em Proceedings. 1998 IEEE International Conference on Robotics and
+  Automation (Cat. No.98CH36146)}, 2(May):1653--1658.
+
+\bibitem[Mochiyama et~al., 1999]{Mochiyama1999}
+Mochiyama, H., Shimemura, E., and Kobayashi, H. (1999).
+\newblock {Shape Control of Manipulators with Hyper Degrees of Freedom}.
+\newblock {\em The International Journal of Robotics Research}, 18(6):584--600.
+
+\bibitem[Mochiyama and Suzuki, 2003]{Mochiyama2003}
+Mochiyama, H. and Suzuki, T. (2003).
+\newblock {Kinematics and dynamics of a cable-like hyper-flexible manipulator}.
+\newblock {\em IEEE International Conference on Robotics and Automation}, pages
+  3672--3677.
+
+\bibitem[Moerman, 2018]{Moerman2018}
+Moerman, K.~M. (2018).
+\newblock {GIBBON: The Geometry and Image-Based Bioengineering add-On}.
+\newblock {\em Journal of Open Source Software}, 3(22):506.
+
+\bibitem[Morgan and Narendra, 1977]{Morgan1977}
+Morgan, A.~P. and Narendra, K.~S. (1977).
+\newblock {On the Uniform Asymptotic Stability of Certain Linear Nonautonomous
+  Differential Equations}.
+\newblock {\em SIAM Journal on Control and Optimization}.
+
+\bibitem[Morin, 1953]{Morin1953}
+Morin, A. (1953).
+\newblock Elastic diaphragm.
+\newblock US Patent No. 2,642,091.
+
+\bibitem[Morzadec et~al., 2019]{Morzadec2019Apr}
+Morzadec, T., Marcha, D., and Duriez, C. (2019).
+\newblock {Toward Shape Optimization of Soft Robots}.
+\newblock In {\em {2019 2nd IEEE International Conference on Soft Robotics
+  (RoboSoft)}}, pages 521--526. IEEE.
+
+\bibitem[Mosadegh et~al., 2014]{Mosadegh2014}
+Mosadegh, B., Polygerinos, P., Keplinger, C., Wennstedt, S., Shepherd, R.~F.,
+  Gupta, U., Shim, J., Bertoldi, K., Walsh, C.~J., and Whitesides, G.~M.
+  (2014).
+\newblock {Pneumatic networks for soft robotics that actuate rapidly}.
+\newblock {\em Advanced Functional Materials}, 24(15):2163--2170.
+
+\bibitem[Mullin et~al., 2007]{Mullin2007}
+Mullin, T., Deschanel, S., Bertoldi, K., and Boyce, M.~C. (2007).
+\newblock {Pattern Transformation Triggered by Deformation}.
+\newblock {\em Physical Review Letters}, 99(8):084301.
+
+\bibitem[Murray et~al., 1994]{Murray1994}
+Murray, R.~M., Li, Z., and Sastry, S.~S. (1994).
+\newblock {\em {A Mathematical Introduction to Robotic Manipulation}},
+  volume~29.
+
+\bibitem[Mustaza et~al., 2019]{Mustaza2019}
+Mustaza, S.~M., Elsayed, Y., Lekakou, C., Saaj, C., and Fras, J. (2019).
+\newblock {Dynamic Modeling of Fiber-Reinforced Soft Manipulator: A
+  Visco-Hyperelastic Material-Based Continuum Mechanics Approach}.
+\newblock {\em Soft Robotics}, 6(3):305--317.
+
+\bibitem[Naccarato and Hughes, 1991]{Naccarato1991Apr}
+Naccarato, F. and Hughes, P. (1991).
+\newblock {Inverse kinematics of variable-geometry truss manipulators}.
+\newblock {\em Journal of Robotic Systems}, 8(2):249--266.
+
+\bibitem[Naccarato et~al., 1989]{Naccarato1989Dec}
+Naccarato, F., Hughes, P., and Hughes, P. (1989).
+\newblock {an inverse kinematics algorithm for a highly redundant
+  variable-geometry-truss manipulator}.
+\newblock {\em in JPL, Proceedings of the 3rd Annual Conference on Aerospace
+  Computational Control, Volume 1}.
+
+\bibitem[Naughton et~al., 2021]{Naughton2021}
+Naughton, N., Sun, J., Tekinalp, A., Parthasarathy, T., Chowdhary, G., and
+  Gazzola, M. (2021).
+\newblock {Elastica: A Compliant Mechanics Environment for Soft Robotic
+  Control}.
+\newblock {\em IEEE Robotics and Automation Letters}, 6(2):3389--3396.
+
+\bibitem[Newmark, 1959]{Newmark1959Jul}
+Newmark, N.~M. (1959).
+\newblock {A Method of Computation for Structural Dynamics}.
+\newblock {\em Journal of the Engineering Mechanics Division}, 85(3):67--94.
+
+\bibitem[Ortega et~al., 1998]{Ortega1998}
+Ortega, R., Perez, J. A.~L., Nicklasson, P.~J., and Sira-Ramirez, H. (1998).
+\newblock {\em {Passivity-based Control of Euler-Lagrange Systems: Mechanical,
+  Electrical and Electromechanical Applications}}.
+\newblock Springer, London, England, UK.
+
+\bibitem[Ortega et~al., 2002]{Ortega2002}
+Ortega, R., Spong, M.~W., G{\'{o}}mez-Estern, F., and Blankenstein, G. (2002).
+\newblock {Stabilization of a Class of Underactuated Mechanical Systems Via
+  Interconnection and Damping Assignment}.
+\newblock {\em IEEE Transactions on Automatic Control}, 47(8):1218--1233.
+
+\bibitem[Ortiz et~al., 2022]{Ortiz2022Apr}
+Ortiz, J., Clegg, A., Dong, J., Sucar, E., Novotny, D., Zollhoefer, M., and
+  Mukadam, M. (2022).
+\newblock {iSDF: Real-Time Neural Signed Distance Fields for Robot Perception}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Overvelde et~al., 2015]{Overvelde2015Sep}
+Overvelde, J. T.~B., Kloek, T., D{'}haen, J. J.~A., and Bertoldi, K. (2015).
+\newblock {Amplifying the response of soft actuators by harnessing snap-through
+  instabilities}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  112(35):10863--10868.
+
+\bibitem[Overvelde et~al., 2012]{Overvelde2012May}
+Overvelde, J. T.~B., Shan, S., and Bertoldi, K. (2012).
+\newblock {Compaction Through Buckling in 2D Periodic, Soft and Porous
+  Structures: Effect of Pore Shape}.
+\newblock {\em Advanced Materials}, 24(17):2337--2342.
+
+\bibitem[Park et~al., 2012]{Park2012}
+Park, Y.-L., Chen, B.-R., and Wood, R.~J. (2012).
+\newblock {Design and Fabrication of Soft Artificial Skin Using Embedded
+  Microchannels and Liquid Conductors}.
+\newblock {\em IEEE Sensors Journal}, 12(8):2711--2718.
+
+\bibitem[Paynter, 1974a]{Paynter1988}
+Paynter, H. (1974a).
+\newblock Hyperboloid of revolution fluid-driven tension actuators and methods
+  of making.
+\newblock US Patent No. 4721 030.
+
+\bibitem[Paynter, 1974b]{Paynter1974}
+Paynter, H. (1974b).
+\newblock Tension actuated pressurized gas driven rotary motors.
+\newblock US Patent No. 3,854,383.
+
+\bibitem[{Peter Asaro and Selma Šabanović}, 2010]{ETHW2020Dec}
+{Peter Asaro and Selma Šabanović} (2010).
+\newblock {Oral-History: Victor Scheinman - Engineering and Technology History
+  Wiki}.
+\newblock {\em IEEE History Center}.
+\newblock transcript: \url{https://ethw.org/Oral-History:Victor_Scheinman}.
+
+\bibitem[Polygerinos et~al., 2013]{Polygerinos2013}
+Polygerinos, P., Lyne, S., Wang, Z., Nicolini, L.~F., Mosadegh, B., Whitesides,
+  G.~M., and Walsh, C.~J. (2013).
+\newblock {Towards a soft pneumatic glove for hand rehabilitation}.
+\newblock {\em IEEE International Conference on Intelligent Robots and
+  Systems}, pages 1512--1517.
+
+\bibitem[Polygerinos et~al., 2015]{Polygerinos2015}
+Polygerinos, P., Wang, Z., Galloway, K.~C., Wood, R.~J., and Walsh, C.~J.
+  (2015).
+\newblock {Soft robotic glove for combined assistance and at-home
+  rehabilitation}.
+\newblock {\em Robotics and Autonomous Systems}, 73:135--143.
+
+\bibitem[Proper et~al., 2023]{Proper2023}
+Proper, B., Caasenbrood, B., and Kuling, I. (2023).
+\newblock Reliable cleaning of 3d sla/dlp printed soft fluidic actuators with
+  complex internal geometry.
+\newblock In {\em 6th IEEE International Conference on Soft Robotics, RoboSoft
+  2023}.
+
+\bibitem[Pustina et~al., 2022]{Pustina2022}
+Pustina, P., Borja, P., Santina, C.~D., and De~Luca, A. (2022).
+\newblock {P-satI-D Shape Regulation of Soft Robots}.
+\newblock {\em IEEE Robotics and Automation Letters}, pages 1--8.
+
+\bibitem[Pustina et~al., 2023]{Pustina2023Jun}
+Pustina, P., Della~Santina, C., Boyer, F., De~Luca, A., and Renda, F. (2023).
+\newblock {On the Collocated Form with Input Decoupling of Lagrangian Systems}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Raeisinezhad et~al., 2021]{Raeisinezhad2021May}
+Raeisinezhad, M., Pagliocca, N., Koohbor, B., and Trkov, M. (2021).
+\newblock {Design Optimization of a Pneumatic Soft Robotic Actuator Using
+  Model-Based Optimization and Deep Reinforcement Learning}.
+\newblock {\em Frontiers in Robotics and AI}, 8:639102.
+
+\bibitem[Rafsanjani et~al., 2018]{Rafsanjani2018Feb}
+Rafsanjani, A., Zhang, Y., Liu, B., Rubinstein, S.~M., and Bertoldi, K. (2018).
+\newblock {Kirigami skins make a simple soft actuator crawl}.
+\newblock {\em Science Robotics}, 3(15):eaar7555.
+
+\bibitem[Reiner et~al., 2011]{Reiner2011Jun}
+Reiner, T., M{\ifmmode\ddot{u}\else\"{u}\fi}ckl, G., and Dachsbacher, C.
+  (2011).
+\newblock {Interactive modeling of implicit surfaces using a direct
+  visualization approach with signed distance functions}.
+\newblock {\em Computers {\&} Graphics}, 35(3):596--603.
+
+\bibitem[Renaud et~al., 2009]{Renaud2011}
+Renaud, C., Cros, J.~M., Feng, Z.~Q., and Yang, B. (2009).
+\newblock {The Yeoh model applied to the modeling of large deformation
+  contact/impact problems}.
+\newblock {\em International Journal of Impact Engineering}, 36(5):659--666.
+
+\bibitem[Renda et~al., 2020]{Renda2020}
+Renda, F., Armanini, C., Lebastard, V., Candelier, F., and Boyer, F. (2020).
+\newblock {A Geometric Variable-Strain Approach for Static Modeling of Soft
+  Manipulators with Tendon and Fluidic Actuation}.
+\newblock {\em IEEE Robotics and Automation Letters}, 5(3):4006--4013.
+
+\bibitem[Renda et~al., 2018]{Renda2018}
+Renda, F., Boyer, F., Dias, J., and Seneviratne, L. (2018).
+\newblock {Discrete Cosserat Approach for Multisection Soft Manipulator
+  Dynamics}.
+\newblock {\em IEEE Transactions on Robotics}, 34(6):1518--1533.
+
+\bibitem[Renda et~al., 2017]{Renda2017Aug}
+Renda, F., Cianchetti, M., Abidi, H., Dias, J., and Seneviratne, L. (2017).
+\newblock {Screw-Based Modeling of Soft Manipulators With Tendon and Fluidic
+  Actuation}.
+\newblock {\em Journal of Mechanisms and Robotics}, 9(4).
+
+\bibitem[Robinson and Davies, 1999]{Robinson1999}
+Robinson, G. and Davies, J. B.~C. (1999).
+\newblock {Continuum robots - a state of the art}.
+\newblock In {\em {Proceedings 1999 IEEE International Conference on Robotics
+  and Automation (Cat. No.99CH36288C)}}, volume~4, pages 2849--2854vol.4. IEEE.
+
+\bibitem[Roels et~al., 2020]{Roels2020Dec}
+Roels, E., Terryn, S., Brancart, J., Verhelle, R., Van~Assche, G., and
+  Vanderborght, B. (2020).
+\newblock {Additive Manufacturing for Self-Healing Soft Robots}.
+\newblock {\em Soft Robotics}, 7(6):711--723.
+
+\bibitem[Roh et~al., 2019]{Roh2019Apr}
+Roh, S., Okello, L.~B., Golbasi, N., Hankwitz, J.~P., Liu, J. A.-C., Tracy,
+  J.~B., and Velev, O.~D. (2019).
+\newblock {3D-Printed Silicone Soft Architectures with Programmed
+  Magneto-Capillary Reconfiguration}.
+\newblock {\em Advanced Materials Technologies}, 4(4):1800528.
+
+\bibitem[R{\ifmmode\ddot{o}\else\"{o}\fi}ntgen, 1880]{Rontgen1880}
+R{\ifmmode\ddot{o}\else\"{o}\fi}ntgen, W. (1880).
+\newblock {Ueber die durch Electricit{\ifmmode\ddot{a}\else\"{a}\fi}t bewirkten
+  Form{-} und Volumen{\ifmmode\ddot{a}\else\"{a}\fi}nderungen von
+  dielectrischen K{\ifmmode\ddot{o}\else\"{o}\fi}rpern}.
+\newblock {\em Annalen der Physik}, 247:771--786.
+
+\bibitem[Rucker and Iii, 2011]{Rucker2011Jul}
+Rucker, D.~C. and Iii, R. J.~W. (2011).
+\newblock {Statics and Dynamics of Continuum Robots With General Tendon Routing
+  and External Loading}.
+\newblock {\em IEEE Transactions on Robotics}, 27(6):1033--1044.
+
+\bibitem[Runge et~al., 2017]{Runge2017}
+Runge, G., Wiese, M., Gunther, L., and Raatz, A. (2017).
+\newblock {A framework for the kinematic modeling of soft material robots
+  combining finite element analysis and piecewise constant curvature
+  kinematics}.
+\newblock {\em 2017 3rd International Conference on Control, Automation and
+  Robotics, ICCAR 2017}, (April):7--14.
+
+\bibitem[Rus and Tolley, 2015]{Rus2015}
+Rus, D. and Tolley, M.~T. (2015).
+\newblock {Design, fabrication and control of soft robots}.
+\newblock {\em Nature}, 521:467--475.
+
+\bibitem[Sadati et~al., 2020]{Sadati2020}
+Sadati, S. M.~H., Naghibi, S.~E., Shiva, A., Michael, B., Renson, L., Howard,
+  M., Rucker, C.~D., Althoefer, K., Nanayakkara, T., Zschaler, S., Bergeles,
+  C., Hauser, H., and Walker, I.~D. (2020).
+\newblock {TMTDyn: A Matlab package for modeling and control of hybrid
+  rigid{\textendash}continuum robots based on discretized lumped systems and
+  reduced-order models}.
+\newblock {\em International Journal on Robotics Research}, 40(1):296--347.
+
+\bibitem[Salerno et~al., 1989]{Salerno1989Jan}
+Salerno, R.~J., Reinholtz, C.~F., Robertshaw, H.~H., Reinholtz, C.~F., and
+  Robertshaw, H.~H. (1989).
+\newblock {shape control of high degree-of-freedom variable geometry trusses}.
+\newblock {\em NASA. Langley Research Center, Proceedings of the Workshop on
+  Computational Aspects in the Control of Flexible Systems, Part 2}.
+
+\bibitem[Sanan, 2013]{Sanan2013}
+Sanan, S. (2013).
+\newblock {\em Soft Inflatable Robots for Safe Physical Human Interaction}.
+\newblock PhD thesis.
+
+\bibitem[Satheeshbabu et~al., 2019]{Satheeshbabu2019May}
+Satheeshbabu, S., Uppalapati, N.~K., Chowdhary, G., and Krishnan, G. (2019).
+\newblock {Open Loop Position Control of Soft Continuum Arm Using Deep
+  Reinforcement Learning}.
+\newblock In {\em {2019 International Conference on Robotics and Automation
+  (ICRA)}}, pages 5133--5139. IEEE.
+
+\bibitem[Schegg et~al., 2022]{Schegg2022}
+Schegg, P., M{\ifmmode\acute{e}\else\'{e}\fi}nager, E., Khairallah, E.,
+  Marchal, D., Dequidt, J., Preux, P., and Duriez, C. (2022).
+\newblock {SofaGym: An Open Platform for Reinforcement Learning Based on Soft
+  Robot Simulations}.
+\newblock {\em Soft Robotics}, 0(0).
+
+\bibitem[Schulte, 1961]{Schulte1961}
+Schulte, H. (1961).
+\newblock The characteristics of the mckibben artificial muscle.
+\newblock {\em The Application of External Power in Prosthetics and Orthotic},
+  pages 94--115.
+
+\bibitem[Shepherd et~al., 2011]{Shepherd2011Dec}
+Shepherd, R.~F., Ilievski, F., Choi, W., Morin, S.~A., Stokes, A.~A., Mazzeo,
+  A.~D., Chen, X., Wang, M., and Whitesides, G.~M. (2011).
+\newblock {Multigait soft robot}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(51):20400--20403.
+
+\bibitem[Shim et~al., 2013]{Shim2013Aug}
+Shim, J., Shan, S., Ko{\ifmmode\check{s}\else\v{s}\fi}mrlj, A., Kang, S.~H.,
+  Chen, E.~R., Weaver, J.~C., and Bertoldi, K. (2013).
+\newblock {Harnessing instabilities for design of soft reconfigurable
+  auxetic/chiral materials}.
+\newblock {\em Soft Matter}, 9(34):8198--8202.
+
+\bibitem[Shiriaev et~al., 1999]{Shiriaev1999Dec}
+Shiriaev, A., Ludvigsen, H., Egeland, O., and Pogromsky, A. (1999).
+\newblock {On global properties of passivity based control of the inverted
+  pendulum}.
+\newblock In {\em {Proceedings of the 38th IEEE Conference on Decision and
+  Control (Cat. No.99CH36304)}}, volume~3, pages 2513--2518vol.3. IEEE.
+
+\bibitem[Sifakis and Barbic, 2012]{Sifakis2012Aug}
+Sifakis, E. and Barbic, J. (2012).
+\newblock {FEM simulation of 3D deformable solids: a practitioner's guide to
+  theory, discretization and model reduction}.
+\newblock In {\em {SIGGRAPH '12: ACM SIGGRAPH 2012 Courses}}, pages 1--50.
+  Association for Computing Machinery, New York, NY, USA.
+
+\bibitem[Simo and Vu-Quoc, 1986]{Simo1986}
+Simo, J.~C. and Vu-Quoc, L. (1986).
+\newblock {A three-dimensional finite-strain rod model. part II: Computational
+  aspects}.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  58(1):79--116.
+
+\bibitem[Sims, 1994]{Sims1994}
+Sims, K. (1994).
+\newblock {Evolving virtual creatures}.
+\newblock In {\em {SIGGRAPH '94: Proceedings of the 21st annual conference on
+  Computer graphics and interactive techniques}}, pages 15--22. Association for
+  Computing Machinery, New York, NY, USA.
+
+\bibitem[Sinatra et~al., 2019]{Sinatra2019Aug}
+Sinatra, N.~R., Teeple, C.~B., Vogt, D.~M., Parker, K.~K., Gruber, D.~F., and
+  Wood, R.~J. (2019).
+\newblock {Ultragentle manipulation of delicate structures using a soft robotic
+  gripper}.
+\newblock {\em Science Robotics}, 4(33):eaax5425.
+
+\bibitem[Skorina et~al., 2017]{Skorina2017Jan}
+Skorina, E.~H., Luo, M., Tao, W., Chen, F., Fu, J., and Onal, C.~D. (2017).
+\newblock {Adapting to Flexibility: Model Reference Adaptive Control of Soft
+  Bending Actuators}.
+\newblock {\em IEEE Robotics and Automation Letters}, 2(2):964--970.
+
+\bibitem[Slotine and Li, 1989]{Slotine1989Jul}
+Slotine, J.-J.~E. and Li, W. (1989).
+\newblock {Composite adaptive control of robot manipulators}.
+\newblock {\em Automatica}, 25(4):509--519.
+
+\bibitem[Slotine and Weiping, 1988]{Slotine1988}
+Slotine, J. J.~E. and Weiping, L. (1988).
+\newblock {Adaptive manipulator control: A case study}.
+\newblock {\em IEEE Transactions on Automatic Control}, 33(11):995--1003.
+
+\bibitem[Slotine J.-J., 1987]{SlotineJ1987}
+Slotine J.-J., E. (1987).
+\newblock {Theoretical Issues In Adaptive Manipulator Control}.
+\newblock {\em Proc. Fifth Yale Workshop on the Applications of Adaptive
+  Systems Theory}, pages 252--258.
+
+\bibitem[Smith et~al., 2018]{Smith2018}
+Smith, B., Goes, F.~D., and Kim, T. (2018).
+\newblock Stable neo-hookean flesh simulation.
+\newblock {\em ACM Trans. Graph.}, 37(2).
+
+\bibitem[Smith et~al., 2022a]{Smith2022_FEM}
+Smith, L., Haimes, J., and MacCurdy, R. (2022a).
+\newblock {Stretching the Boundary: Shell Finite Elements for Pneumatic Soft
+  Actuators}.
+\newblock In {\em {2022 IEEE 5th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 403--408. IEEE.
+
+\bibitem[Smith et~al., 2022b]{Smith2022}
+Smith, L., Hainsworth, T., Haimes, J., and MacCurdy, R. (2022b).
+\newblock {Automated Synthesis of Bending Pneumatic Soft Actuators}.
+\newblock In {\em {2022 IEEE 5th International Conference on Soft Robotics
+  (RoboSoft)}}, pages 358--363. IEEE.
+
+\bibitem[Smith and MacCurdy, 2023]{Smith2023Feb}
+Smith, L. and MacCurdy, R. (2023).
+\newblock {SoRoForge: End-to-End Soft Actuator Design}.
+\newblock {\em IEEE Transactions on Automation Science and Engineering}, pages
+  1--12.
+
+\bibitem[Sonneville et~al., 2014]{Sonneville2014}
+Sonneville, V., Cardona, A., and Br{\"{u}}ls, O. (2014).
+\newblock {Geometrically exact beam finite element formulated on the special
+  Euclidean group SE(3)}.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  268:451--474.
+
+\bibitem[Spong, 1994]{Spong1994}
+Spong, M. (1994).
+\newblock {Partial feedback linearization of underactuated mechanical systems}.
+\newblock {\em Proceedings of IEEE/RSJ International Conference on Intelligent
+  Robots and Systems (IROS'94)}.
+
+\bibitem[Spong, 1996]{Spong1996}
+Spong, M.~W. (1996).
+\newblock {Energy Based Control of a Class of Underactuated Mechanical
+  Systems}.
+\newblock {\em IFAC Proceedings Volumes}, 29(1):2828--2832.
+
+\bibitem[Spong et~al., 2006]{Spong2006}
+Spong, M.~W., Hutchinson, S., and Vidyasagar, M. (2006).
+\newblock {\em Robot modeling and control}.
+\newblock John Wiley \& Sons, New York.
+
+\bibitem[Stella et~al., 2022]{Stella2022Nov}
+Stella, F., Guan, Q., Leng, J., Della~Santina, C., and Hughes, J. (2022).
+\newblock {Piecewise Affine Curvature model: a reduced-order model for soft
+  robot-environment interaction beyond PCC}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[St{\ifmmode\ddot{o}\else\"{o}\fi}lzle and Santina, 2021]{Stolzle2021}
+St{\ifmmode\ddot{o}\else\"{o}\fi}lzle, M. and Santina, C.~D. (2021).
+\newblock {Piston-Driven Pneumatically-Actuated Soft Robots: Modeling and
+  Backstepping Control}.
+\newblock {\em IEEE Control Syst. Lett.}, 6:1837--1842.
+
+\bibitem[Sukumar and Tabarraei, 2004]{Sukumar2004Nov}
+Sukumar, N. and Tabarraei, A. (2004).
+\newblock {Conforming polygonal finite elements}.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  61(12):2045--2066.
+
+\bibitem[Sumbre et~al., 2001]{Sumbre2001Sep}
+Sumbre, G., Gutfreund, Y., Fiorito, G., Flash, T., and Hochner, B. (2001).
+\newblock {Control of Octopus Arm Extension by a Peripheral Motor Program}.
+\newblock {\em Science}, 293(5536):1845--1848.
+
+\bibitem[Suzumori et~al., 1991]{Suzumori1991}
+Suzumori, K., Iikura, S., and Tanaka, H. (1991).
+\newblock {Development of flexible microactuator and its applications to
+  robotic mechanisms}.
+\newblock In {\em {Proceedings. 1991 IEEE International Conference on Robotics
+  and Automation}}, volume~2, pages 1622--1627.
+
+\bibitem[Suzumori et~al., 1992]{Suzumori1992}
+Suzumori, K., Iikura, S., and Tanaka, H. (1992).
+\newblock {Applying a flexible microactuator to robotic mechanisms}.
+\newblock {\em IEEE Control Systems Magazine}, 12(1):21--27.
+
+\bibitem[Suzumori and Saito, 2008]{Suzumori2008Sep}
+Suzumori, K. and Saito, F. (2008).
+\newblock {Micro rubber structure realizing multi-legged passive walking}.
+\newblock In {\em {2008 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}}, pages 445--450. IEEE.
+
+\bibitem[Svanberg, 1987]{Svanberg1987Feb}
+Svanberg, K. (1987).
+\newblock {The method of moving asymptotes{\ifmmode---\else\textemdash\fi}a new
+  method for structural optimization}.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  24(2):359--373.
+
+\bibitem[Svanberg, 2007]{Svanberg2007}
+Svanberg, K. (2007).
+\newblock Mma and gcmma-two methods for nonlinear optimization.
+\newblock {\em vol}, 1:1--15.
+
+\bibitem[Takagi et~al., 1983]{Takagi1983}
+Takagi, T., Sakaguchi, Y., and Corp, B. (1983).
+\newblock {Pneumatic actuator for manipulator}.
+\newblock US Patent No. 4,615,260.
+
+\bibitem[Talischi et~al., 2012a]{Talischi2012}
+Talischi, C., Paulino, G.~H., Pereira, A., and Menezes, I. F.~M. (2012a).
+\newblock {PolyMesher: a general-purpose mesh generator for polygonal elements
+  written in Matlab}.
+\newblock {\em Structural and Multidisciplinary Optimization}, 45(3):309--328.
+
+\bibitem[Talischi et~al., 2012b]{Talischi2012Mar}
+Talischi, C., Paulino, G.~H., Pereira, A., and Menezes, I. F.~M. (2012b).
+\newblock {PolyTop: a Matlab implementation of a general topology optimization
+  framework using unstructured polygonal finite element meshes}.
+\newblock {\em Structural and Multidisciplinary Optimization}, 45(3):329--357.
+
+\bibitem[Tapia et~al., 2020]{Tapia2020}
+Tapia, J., Knoop, E., Mutný, M., Otaduy, M.~A., and B\"{a}cher, M. (2020).
+\newblock {MakeSense}: Automated sensor design for proprioceptive soft robots.
+\newblock {\em Soft Robotics}, 7(3).
+
+\bibitem[Tatlicioglu et~al., 2007a]{Tatlicioglu2007a}
+Tatlicioglu, E., Walker, I.~D., and Dawson, D.~M. (2007a).
+\newblock {Dynamic Modelling for Planar Extensible Continuum Robot
+  Manipulators}.
+\newblock In {\em {Proceedings 2007 IEEE International Conference on Robotics
+  and Automation}}, pages 1357--1362. IEEE.
+
+\bibitem[Tatlicioglu et~al., 2007b]{Tatlicioglu2007}
+Tatlicioglu, E., Walker, I.~D., and Dawson, D.~M. (2007b).
+\newblock {New dynamic models for planar extensible continuum robot
+  manipulators}.
+\newblock In {\em {2007 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}}, pages 1485--1490. IEEE.
+
+\bibitem[Taylor, 2010]{Taylor2010Jan}
+Taylor, M. (2010).
+\newblock {\em {Introduction to Lie Groups}}.
+\newblock Mathematics Department, The University of North Carolina.
+
+\bibitem[Tedrake, 2022a]{Russ2022}
+Tedrake, R. (2022a).
+\newblock Underactuated robotics -- algorithms for walking, running, swimming,
+  flying, and manipulation.
+\newblock Course Notes for MIT 6.832.
+
+\bibitem[Tedrake, 2022b]{Tedrake2022}
+Tedrake, R. (2022b).
+\newblock {\em Underactuated Robotics -- Algorithms for Walking, Running,
+  Swimming, Flying, and Manipulation}.
+\newblock Course Notes for MIT 6.832, url: \url{http://underactuated.mit.edu}.
+
+\bibitem[Tekinalp et~al., 2022]{Tekinalp2022}
+Tekinalp, A., Kim, S.~H., Parthasarathy, T., and Bhosale, Y. (2022).
+\newblock Pyelastica: A computational framework for cosserat rod assemblies.
+
+\bibitem[Teng et~al., 2018]{Teng2018}
+Teng, L., Jeronimo, K., Wei, T., Nemitz, M.~P., Lyu, G., and Stokes, A.~A.
+  (2018).
+\newblock {Integrating soft sensor systems using conductive thread}.
+\newblock {\em Journal of Micromechanics and Microengineering}, 28(5):054001.
+
+\bibitem[Terryn et~al., 2021]{Terryn2021Jul}
+Terryn, S., Langenbach, J., Roels, E., Brancart, J., Bakkali-Hassani, C.,
+  Poutrel, Q.-A., Georgopoulou, A., George~Thuruthel, T., Safaei, A.,
+  Ferrentino, P., Sebastian, T., Norvez, S., Iida, F., Bosman, A.~W.,
+  Tournilhac, F., Clemens, F., Van~Assche, G., and Vanderborght, B. (2021).
+\newblock {A review on self-healing polymers for soft robotics}.
+\newblock {\em Materials Today}, 47:187--205.
+
+\bibitem[Thieffry, 2019]{Thieffry2020}
+Thieffry, M. (2019).
+\newblock {\em {Model-Based Dynamic Control of Soft Robots}}.
+\newblock PhD thesis, Universit{\ifmmode\acute{e}\else\'{e}\fi} Polytechnique
+  des Hauts-de-France.
+
+\bibitem[Thieffry et~al., 2017]{Thieffry2017}
+Thieffry, M., Kruszewski, A., Goury, O., Thieffry, M., Kruszewski, A., Goury,
+  O., Guerra, T.-m., Duriez, C., Thieffry, M., and Kruszewski, A. (2017).
+\newblock {Dynamic Control of Soft Robots}.
+
+\bibitem[Thieffry et~al., 2019]{Thieffry2019}
+Thieffry, M., Kruszewski, A., Guerra, T.-M., and Duriez, C. (2019).
+\newblock {Trajectory Tracking Control Design for Large-Scale Linear Dynamical
+  Systems With Applications to Soft Robotics}.
+\newblock {\em IEEE Transactions on Control Systems Technology},
+  29(2):556--566.
+
+\bibitem[Thuruthel et~al., 2017]{Thuruthel2017Oct}
+Thuruthel, T.~G., Falotico, E., Renda, F., and Laschi, C. (2017).
+\newblock {Learning dynamic models for open loop predictive control of soft
+  robotic manipulators}.
+\newblock {\em Bioinspiration {\&} Biomimetics}, 12(6):066003.
+
+\bibitem[Thuruthel et~al., 2018]{Thuruthel2018Nov}
+Thuruthel, T.~G., Falotico, E., Renda, F., and Laschi, C. (2018).
+\newblock {Model-Based Reinforcement Learning for Closed-Loop Dynamic Control
+  of Soft Robotic Manipulators}.
+\newblock {\em IEEE Transactions on Robotics}, 35(1):124--134.
+
+\bibitem[Tian et~al., 2020]{Tian2020May}
+Tian, J., Zhao, X., Gu, X.~D., and Chen, S. (2020).
+\newblock {Designing Ferromagnetic Soft Robots (FerroSoRo) with Level-Set-Based
+  Multiphysics Topology Optimization}.
+\newblock In {\em {2020 IEEE International Conference on Robotics and
+  Automation (ICRA)}}, pages 10067--10074. IEEE.
+
+\bibitem[Till et~al., 2019]{Till2019}
+Till, J., Aloi, V., and Rucker, C. (2019).
+\newblock {Real-time dynamics of soft and continuum robots based on Cosserat
+  rod models}.
+\newblock {\em International Journal of Robotics Research}, 38(6):723--746.
+
+\bibitem[Tolley et~al., 2014a]{Tolley2014}
+Tolley, M.~T., Shepherd, R.~F., Karpelson, M., Bartlett, N.~W., Galloway,
+  K.~C., Wehner, M., Nunes, R., Whitesides, G.~M., and Wood, R.~J. (2014a).
+\newblock {An untethered jumping soft robot}.
+\newblock In {\em {2014 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}}, pages 561--566. IEEE.
+
+\bibitem[Tolley et~al., 2014b]{Tolley2014Sep}
+Tolley, M.~T., Shepherd, R.~F., Mosadegh, B., Galloway, K.~C., Wehner, M.,
+  Karpelson, M., Wood, R.~J., and Whitesides, G.~M. (2014b).
+\newblock {A Resilient, Untethered Soft Robot}.
+\newblock {\em Soft Robotics}, 1(3):213--223.
+
+\bibitem[Tonkens et~al., 2021]{Tonkens2021May}
+Tonkens, S., Lorenzetti, J., and Pavone, M. (2021).
+\newblock {Soft Robot Optimal Control Via Reduced Order Finite Element Models}.
+\newblock In {\em {2021 IEEE International Conference on Robotics and
+  Automation (ICRA)}}, pages 12010--12016. IEEE.
+
+\bibitem[Toshimitsu et~al., 2021]{Toshimitsu2021Sep}
+Toshimitsu, Y., Wong, K.~W., Buchner, T., and Katzschmann, R. (2021).
+\newblock {SoPrA: Fabrication {\&} Dynamical Modeling of a Scalable Soft
+  Continuum Robotic Arm with Integrated Proprioceptive Sensing}.
+\newblock In {\em {2021 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}}, pages 653--660. IEEE.
+
+\bibitem[Trivedi et~al., 2008]{Trivedi2008}
+Trivedi, D., Rahn, C.~D., Kier, W.~M., and Walker, I.~D. (2008).
+\newblock {Soft Robotics: Biological Inspiration, State of the Art, and Future
+  Research}.
+\newblock {\em Applied Bionics and Biomechanics}, 5(3):520417--117.
+
+\bibitem[Trumi{\ifmmode\acute{c}\else\'{c}\fi} et~al., 2020]{Trumic2020}
+Trumi{\ifmmode\acute{c}\else\'{c}\fi}, M., Santina, C.~D.,
+  Jovanovi{\ifmmode\acute{c}\else\'{c}\fi}, K., and Fagiolini, A. (2020).
+\newblock {Adaptive Control of Soft Robots Based on an Enhanced 3D Augmented
+  Rigid Robot Matching}.
+\newblock {\em IEEE Control Systems Letters}, 5(6):1934--1939.
+
+\bibitem[van~der Schaft, 2004]{Schaft2004}
+van~der Schaft, A.~J. (2004).
+\newblock {Port-Hamiltonian Systems: Network Modeling and Control of Nonlinear
+  Physical Systems}.
+\newblock {\em Advanced Dynamics and Control of Structures and Machines},
+  444(1):127--167.
+
+\bibitem[van Diepen and Shea, 2019]{Diepen2019}
+van Diepen, M. and Shea, K. (2019).
+\newblock {A Spatial Grammar Method for the Computational Design Synthesis of
+  Virtual Soft Locomotion Robots}.
+\newblock {\em Journal of Mechanical Design}, 141(10).
+
+\bibitem[van Laake et~al., 2022]{vanLaake2022Sep}
+van Laake, L.~C., de~Vries, J., Malek~Kani, S., and Overvelde, J. T.~B. (2022).
+\newblock {A fluidic relaxation oscillator for reprogrammable sequential
+  actuation in soft robots}.
+\newblock {\em Matter}, 5(9):2898--2917.
+
+\bibitem[Vantomme et~al., 2021]{Vantomme2021}
+Vantomme, G., Elands, L. C.~M., Gelebart, A.~H., Meijer, E.~W., Pogromsky,
+  A.~Y., Nijmeijer, H., and Broer, D.~J. (2021).
+\newblock {Coupled liquid crystalline oscillators in Huygens{'} synchrony}.
+\newblock {\em Nature Materials}, 20:1702--1706.
+
+\bibitem[Vasista and Tong, 2013]{Vasista2013Jul}
+Vasista, S. and Tong, L. (2013).
+\newblock {Topology-Optimized Design and Testing of a Pressure-Driven
+  Morphing-Aerofoil Trailing-Edge Structure}.
+\newblock {\em AIAA Journal}.
+
+\bibitem[Venkiteswaran et~al., 2019]{Venkiteswaran2019Feb}
+Venkiteswaran, V.~K., Samaniego, L. F.~P., Sikorski, J., and Misra, S. (2019).
+\newblock {Bio-Inspired Terrestrial Motion of Magnetic Soft Millirobots}.
+\newblock {\em IEEE Robotics and Automation Letters}, 4(2):1753--1759.
+
+\bibitem[Wallin et~al., 2018]{Wallin2018Jun}
+Wallin, T.~J., Pikul, J., and Shepherd, R.~F. (2018).
+\newblock {3D printing of soft robotic systems}.
+\newblock {\em Nature Reviews Materials}, 3:84--100.
+
+\bibitem[Wang et~al., 2016a]{Wang2016}
+Wang, C., Zhao, M., and Ge, T. (2016a).
+\newblock {Structural topology optimization with design-dependent pressure
+  loads}.
+\newblock {\em Structural and Multidisciplinary Optimization},
+  53(5):1005--1018.
+
+\bibitem[Wang et~al., 2016b]{Wang2016Sep}
+Wang, H., Zhang, R., Chen, W., Liang, X., and Pfeifer, R. (2016b).
+\newblock {Shape Detection Algorithm for Soft Manipulator Based on Fiber Bragg
+  Gratings}.
+\newblock {\em IEEE/ASME Transactions on Mechatronics}, 21(6):2977--2982.
+
+\bibitem[Wang et~al., 2020]{Wang2020Nov}
+Wang, R., Zhang, X., Zhu, B., Zhang, H., Chen, B., and Wang, H. (2020).
+\newblock {Topology optimization of a cable-driven soft robotic gripper}.
+\newblock {\em Structural and Multidisciplinary Optimization},
+  62(5):2749--2763.
+
+\bibitem[Wang et~al., 2022a]{Wang2022Dec}
+Wang, T., Halder, U., Gribkova, E., Gillette, R., Gazzola, M., and Mehta, P.~G.
+  (2022a).
+\newblock {A Sensory Feedback Control Law for Octopus Arm Movements}.
+\newblock In {\em {2022 IEEE 61st Conference on Decision and Control (CDC)}},
+  pages 1059--1066. IEEE.
+
+\bibitem[Wang et~al., 2019]{Wang2019Apr}
+Wang, T., Zhang, Y., Zhu, Y., and Zhu, S. (2019).
+\newblock {A computationally efficient dynamical model of fluidic soft
+  actuators and its experimental verification}.
+\newblock {\em Mechatronics}, 58:1--8.
+
+\bibitem[Wang et~al., 2022b]{Wang2022Mar}
+Wang, Z., Wang, G., Chen, X., and Freris, N.~M. (2022b).
+\newblock {Dynamical Modeling and Control of Soft Robots with Non-constant
+  Curvature Deformation}.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Webster and Jones, 2010]{Webster2010}
+Webster, R.~J. and Jones, B.~A. (2010).
+\newblock {Design and Kinematic Modeling of Constant Curvature Continuum
+  Robots: A Review}.
+\newblock {\em International Journal of Robotics Research}, 29(13):1661--1683.
+
+\bibitem[Weerakoon and Chopra, 2021]{Weerakoon2021Dec}
+Weerakoon, L. and Chopra, N. (2021).
+\newblock {Swing up Control of a Soft Inverted Pendulum with Revolute Base}.
+\newblock In {\em {2021 60th IEEE Conference on Decision and Control (CDC)}},
+  pages 685--690. IEEE Press.
+
+\bibitem[Wehner et~al., 2016]{Wehner2016}
+Wehner, M., Truby, R.~L., Fitzgerald, D.~J., Mosadegh, B., Whitesides, G.~M.,
+  Lewis, J.~A., and Wood, R.~J. (2016).
+\newblock {An integrated design and fabrication strategy for entirely soft,
+  autonomous robots}.
+\newblock {\em Nature}, 536(7617):451--455.
+
+\bibitem[Weisburd, 1988]{Weisburd1988}
+Weisburd, S. (1988).
+\newblock The muscular machinery of tentacles, trunks and tongues.
+\newblock {\em Science News}, 113:204--205.
+
+\bibitem[Wilson and Inou, 2007]{Wilson2007}
+Wilson, J.~F. and Inou, N. (2007).
+\newblock Bellows-type springs for robotics.
+\newblock In {\em Proc. Adv. Spring Technol. JSSE 60th Anniversary Int. Symp},
+  pages 109--119.
+
+\bibitem[Wilson and Mahajan, 1989]{Wilson1989Jun}
+Wilson, J.~F. and Mahajan, U. (1989).
+\newblock {The Mechanics and Positioning of Highly Flexible Manipulator Limbs}.
+\newblock {\em Journal of Mechanisms, Transmissions, and Automation in Design},
+  111(2):232--237.
+
+\bibitem[Wilson and Snyder, 1988]{Wilson1988Dec}
+Wilson, J.~F. and Snyder, J.~M. (1988).
+\newblock {The Elastica With End-Load Flip-Over}.
+\newblock {\em Journal of Applied Mechanics}, 55(4):845--848.
+
+\bibitem[Wolterink et~al., 2022]{Wolterink2022Oct}
+Wolterink, G., Kolkman, S., and Krijnen, G. (2022).
+\newblock {3D Printed Soft Robotic Actuator With Embedded Strain Sensing For
+  Position Estimation}.
+\newblock In {\em {2022 IEEE Sensors}}, pages 1--4. IEEE.
+
+\bibitem[Wu and Zheng, 2021]{Wu2021Feb}
+Wu, K. and Zheng, G. (2021).
+\newblock {FEM-Based Gain-Scheduling Control of a Soft Trunk Robot}.
+\newblock {\em IEEE Robotics and Automation Letters}, 6(2):3081--3088.
+
+\bibitem[Wu et~al., 2021a]{Wu2021Dec}
+Wu, S., Baker, G.~L., Yin, J., and Zhu, Y. (2021a).
+\newblock {Fast Thermal Actuators for Soft Robotics}.
+\newblock {\em Soft Robotics}, 0(0).
+
+\bibitem[Wu et~al., 2021b]{Wu2021Sep}
+Wu, S., Ze, Q., Dai, J., Udipi, N., Paulino, G.~H., and Zhao, R. (2021b).
+\newblock {Stretchable origami robotic arm with omnidirectional bending and
+  twisting}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  118(36):e2110023118.
+
+\bibitem[Xavier et~al., 2021]{Xavier2021Feb}
+Xavier, M.~S., Fleming, A.~J., and Yong, Y.~K. (2021).
+\newblock {Finite Element Modeling of Soft Fluidic Actuators: Overview and
+  Recent Developments}.
+\newblock {\em Advanced Intelligent Systems}, 3(2):2000187.
+
+\bibitem[Xavier et~al., 2022]{Xavier2022Jun}
+Xavier, M.~S., Tawk, C.~D., Zolfagharian, A., Pinskier, J., Howard, D., Young,
+  T., Lai, J., Harrison, S.~M., Yong, Y.~K., Bodaghi, M., and Fleming, A.~J.
+  (2022).
+\newblock {Soft Pneumatic Actuators: A Review of Design, Fabrication, Modeling,
+  Sensing, Control and Applications}.
+\newblock {\em IEEE Access}, 10:59442--59485.
+
+\bibitem[Yang et~al., 2016]{Yang2016}
+Yang, D., Verma, M.~S., So, J.~H., Mosadegh, B., Keplinger, C., Lee, B.,
+  Khashai, F., Lossner, E., Suo, Z., and Whitesides, G.~M. (2016).
+\newblock {Buckling Pneumatic Linear Actuators Inspired by Muscle}.
+\newblock {\em Advanced Materials Technologies}, 1(3):31--33.
+
+\bibitem[Yap et~al., 2015]{Yap2015}
+Yap, H.~K., Lim, J.~H., Nasrallah, F., Goh, J. C.~H., and Yeow, R. C.~H.
+  (2015).
+\newblock {A soft exoskeleton for hand assistive and rehabilitation application
+  using pneumatic actuators with variable stiffness}.
+\newblock In {\em {2015 IEEE International Conference on Robotics and
+  Automation (ICRA)}}, pages 4967--4972. IEEE.
+
+\bibitem[Yarlott, 1972]{Yarlott1972}
+Yarlott, J. (1972).
+\newblock Fluid actuator.
+\newblock US Patent No. 3,645,173.
+
+\bibitem[Yuhn et~al., 2023]{Yuhn2023Feb}
+Yuhn, C., Sato, Y., Kobayashi, H., Kawamoto, A., and Nomura, T. (2023).
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  414:116187.
+
+\bibitem[Zanna, 1999]{Zanna1999}
+Zanna, A. (1999).
+\newblock {Collocation and Relaxed Collocation for the Fer and the Magnus
+  Expansions on JSTOR}.
+\newblock {\em SIAM Journal on Numerical Analysis}, 36(4):1145--1182.
+
+\bibitem[Zhang et~al., 2017a]{Zhang2017Topo}
+Zhang, W., Zhu, J., and Gao, T. (2017a).
+\newblock {\em {Topology Optimization in Engineering Structure Design}}.
+\newblock ISTE Press - Elsevier.
+
+\bibitem[Zhang et~al., 2019]{Zhang2019}
+Zhang, X., Chan, F., Parthasarathy, T., and Gazzola, M. (2019).
+\newblock Modeling and simulation of complex dynamic musculoskeletal
+  architectures.
+\newblock {\em Nature Communications}, 10(1):1--12.
+
+\bibitem[Zhang et~al., 2017b]{Zhang2017}
+Zhang, Z., Bieze, T.~M., Dequidt, J., Kruszewski, A., and Duriez, C. (2017b).
+\newblock Visual servoing control of soft robots based on finite element model.
+\newblock In {\em 2017 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 2895--2901.
+
+\bibitem[Zheng et~al., 2020]{Zheng2020May}
+Zheng, G., Zhou, Y., and Ju, M. (2020).
+\newblock {Robust control of a silicone soft robot using neural networks}.
+\newblock {\em ISA Transactions}, 100:38--45.
+
+\bibitem[Zhou and Lee, 2021]{Zhou2021Apr}
+Zhou, X. and Lee, P.~S. (2021).
+\newblock {Three-dimensional printing of tactile sensors for soft robotics}.
+\newblock {\em MRS Bulletin}, 46(4):330--336.
+
+\bibitem[Zolfagharian et~al., 2020]{Zolfagharian2020Jun}
+Zolfagharian, A., Denk, M., Bodaghi, M., Kouzani, A.~Z., and Kaynak, A. (2020).
+\newblock {Topology-Optimized 4D Printing of a Soft Actuator}.
+\newblock {\em Acta Mechanica Solida Sinica}, 33(3):418--430.
+
+\bibitem[Zufferey et~al., 2022]{Zufferey2022Dec}
+Zufferey, R., Tormo-Barbero, J., Feliu-Taleg{\ifmmode\acute{o}\else\'{o}\fi}n,
+  D., Nekoo, S.~R., Acosta, J.~{\ifmmode\acute{A}\else\'{A}\fi}., and Ollero,
+  A. (2022).
+\newblock {How ornithopters can perch autonomously on a branch}.
+\newblock {\em Nature Communications}, 13(7713):1--11.
+
+\end{thebibliography}

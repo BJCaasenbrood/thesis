@@ -24,14 +24,14 @@ Taking the derivative of the constitutive material model $\Psi$ with respect to 
 where $\beta_1 = \sum_{i=1}^3 i {c_i} (J_1 - 3)^{i-1} $ and $\beta_2 = \sum_{j=1}^3 \frac{2j}{d_j} \left(J - 1\right)^{2j - 1}$ are scalar functions of the strain variants. In order to solve nonlinear structures using the finite element method, it is necessary to calculate the stress-strain tangent operator $\mathbb{D}$ in order to construct the tangent stiffness matrix $\KB_T$. First, let us introduce the following tensor operation between two second-order tensors $\AT$ and $\BT$ as: 
 %
 \begin{equation}
-(\AT \otimes \BT)_{ijkl} = A_{ij} B_{kl}, \quad \quad (\AT \,\overline{\underline{\otimes}}\, \BT)_{ijkl} = \frac{1}{2}\left(A_{ik} B_{jl} + A_{il}B_{jk} \right)
+(\AT \otimes \BT)_{ijkl} = A_{ij} B_{kl}; \quad \quad (\AT \,\overline{\underline{\otimes}}\, \BT)_{ijkl} = \frac{1}{2}\left(A_{ik} B_{jl} + A_{il}B_{jk} \right),
 \end{equation}
 %
 for indices $i,j,k,l \in \{1,2,3\}$. Then, the derivative of the second Piolla stress tensor in \eqref{eq:app:C3:secondPiollastress} with respect to the Lagrangian strain $\ten{E}$ is gives the stress-strain tangent tensor $\mathbb{D}$ which is a fourth-order tensor calculated as follows \cite{Renaud2011}:
 %
 \begin{align}
-\mathbb{D} & = 4J^{-\tfrac{4}{3}}\gamma_1 \left[\IB - \frac{I_1}{3}\CT\inv \right] \otimes \left[\IB - \frac{I_1}{3}\CT\inv \right] \notag \\[0.25em]
-& - \frac{4}{3}J^{-\tfrac{2}{3}} \beta_1 \left[\ten{C}\inv \otimes \IB + \IB \otimes \ten{C}\inv + \frac{I_3}{3} \ten{C}\inv \otimes \ten{C}\inv - I_1 \ten{C}\inv \overline{\underline{\otimes}} \,\ten{C}\inv \right] \notag \\[0.25em]
+\mathbb{D} & = 4J^{-\tfrac{4}{3}}\gamma_1 \left[\IB - \frac{I_1}{3}\CT\inv \right] \otimes \left[\IB - \frac{I_1}{3}\CT\inv \right], \notag \\[0.25em]
+& - \frac{4}{3}J^{-\tfrac{2}{3}} \beta_1 \left[\ten{C}\inv \otimes \IB + \IB \otimes \ten{C}\inv + \frac{I_3}{3} \ten{C}\inv \otimes \ten{C}\inv - I_1 \ten{C}\inv \overline{\underline{\otimes}} \,\ten{C}\inv \right], \notag \\[0.25em]
 & + \gamma_2 J^2 \ten{C}\inv \otimes \ten{C}\inv + \beta_2 J \left[\ten{C}\inv \otimes \ten{C} \inv - 2 \ten{C}\inv \overline{\underline{\otimes}} \ten{C}\inv \right],
 \end{align}
 %
@@ -61,7 +61,7 @@ Furthermore, considering the plane strain conditions and utilizing the Voigt not
 where we use that $\mathbb{D}_{ij12} = 0$ for all $i,j \in \{1,2,3\}$ except $i=1$ and $j=2$. Applying a reduced formulation, we obtain the tangent stiffness matrix by evaluating the Jacobian of the conservative elastic forces with respect to the state displacements $\xB$. The expression for this matrix is as follows:
 %
 \begin{align}
-\KB_T & := \frac{\p}{\p \x}  \left[ \sum_{e=1}^{n} \int_{\mathcal{V}_e} \BB_e^\top \underline{\ten{S}}_e \; dV \right] = \sum_{e=1}^{n} \int_{\mathcal{V}_e} \frac{\p \BB_e^\top}{\p \x} \underline{\ten{S}}_e +  \BB_e^\top \frac{\p \underline{\ten{S}}_e}{\p \ten{E}} \frac{\p \ten{E}}{\p \x} \; dV \notag \\[0.25em]
+\KB_T & := \frac{\p}{\p \x}  \left[ \sum_{e=1}^{n} \int_{\mathcal{V}_e} \BB_e^\top \underline{\ten{S}}_e \; dV \right] = \sum_{e=1}^{n} \int_{\mathcal{V}_e} \frac{\p \BB_e^\top}{\p \x} \underline{\ten{S}}_e +  \BB_e^\top \frac{\p \underline{\ten{S}}_e}{\p \ten{E}} \frac{\p \ten{E}}{\p \x} \; dV, \notag \\[0.25em]
 & = \sum_{e=1}^{n} \int_{\mathcal{V}_e} \frac{\p \BB_e^\top}{\p \x} \underline{\ten{S}}_e +  \BB_e^\top \underline{\DB} \BB_e \; dV.
 \end{align}
 %

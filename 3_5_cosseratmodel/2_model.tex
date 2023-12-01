@@ -1,7 +1,7 @@
 %!TEX root = ../../thesis.tex
 %\subsection{Preliminaries on Lie groups}
 \section{Generalized models for soft manipulators} \label{sec:chap3_model}
-In this chapter, we will explore Lie group theory applied to deformable robots. We have introduced some of notations earlier in Chapter \ref{chap:PCC}, but for convenience, we briefly recapulate this here. The Lie group of rigid-body transformation on $\R^3$ is denoted by $\SE{3}$. The group of homogeneous rotation is denoted by $\SO{3}$. The tangent space at the identity of the group is called its \textit{Lie algebra}, and it can be used to describe the evolution of the Lie group. The Lie algebras of $\SE{3}$ and $\SO{3}$ are denoted by $\seg{3}$ and $\sog{3}$, respectively. Lastly, the cross operator (\ie, "$\times$") and hat operator (\ie, "$\wedge$") are used to transform a column vector of $\R^3$ or $\R^6$ into an element of the Lie algebra $\sog{3}$ or $\seg{3}$, respectively. A comprehensive introduction is given in Appendix \ref{app:C3:liegroup} based on the work of Murray et al. \cite{Murray1994}. 
+In this chapter, we will explore Lie group theory applied to deformable robots. We have introduced some of notations earlier in Chapter \ref{chap:PCC}, but for convenience, we briefly recapitulate this here. The Lie group of rigid-body transformation on $\R^3$ is denoted by $\SE{3}$. The group of homogeneous rotation is denoted by $\SO{3}$. The tangent space at the identity of the group is called its \textit{Lie algebra}, and it can be used to describe the evolution of the Lie group. The Lie algebras of $\SE{3}$ and $\SO{3}$ are denoted by $\seg{3}$ and $\sog{3}$, respectively. Lastly, the cross operator (\ie, ` $\times$') and hat operator (\ie, `$\wedge$') are used to transform a column vector of $\R^3$ or $\R^6$ into an element of the Lie algebra $\sog{3}$ or $\seg{3}$, respectively. A comprehensive introduction is given in Appendix \ref{app:C3:liegroup} based on the work of Murray et al. \cite{Murray1994}. 
 
 \begin{figure}[!t]
   \vspace{-2mm}
@@ -22,13 +22,13 @@ Following the geometric approach \cite{Simo1986,Boyer2010,Boyer2021,Renda2018,Re
 \label{eq:C3:backbone}
 \end{equation}
 %
-An important notion in Lie group theory applied to robotics is the so-called "\textit{exponential coordinate representation}". Conventionally, for rigid multi-body mechanics, any rigid-body transformation from one coordinate frame into another can characterized by a vector living in $\R^6$, called the \textit{twist}, whose six entries are referred to as the exponential coordinates. Three of these exponential coordinates are related to the translation and the other three to orientation. As such, the same principle applies to rigid-body rotations described by matrices in $\SO{3}$ that can be parameterized by three exponential coordinates. For example, we may express a general rotation in terms of its exponential coordinates $\RB(\OmegaB,t) = \exp\left( {\OmegaB}^\times t \right)$ where $\OmegaB^\times \in \sog{3}$ is a skew-symmetric matrix with its three unique entries $\OmegaB = (\omega_1,\omega_2,\omega_3)^\top$ being the unit-time angular velocities. Recall that the superscript denotes the skew-symmetric matrix operator $(\cdot)^\times:\R^3 \to \sog{3}$. %A similar structure holds for rigid-body transformations in $\SE{3}$ similar to \eqref{eq:C3:backbone}.
+An important notion in Lie group theory applied to robotics is the so-called ``\textit{exponential coordinate representation}''. Conventionally, for rigid multi-body mechanics, any rigid-body transformation from one coordinate frame into another can characterized by a vector living in $\R^6$, called the \textit{twist}, whose six entries are referred to as the exponential coordinates. Three of these exponential coordinates are related to the translation and the other three to orientation. As such, the same principle applies to rigid-body rotations described by matrices in $\SO{3}$ that can be parameterized by three exponential coordinates. For example, we may express a general rotation in terms of its exponential coordinates $\RB(\OmegaB,t) = \exp\left( {\OmegaB}^\times t \right)$ where $\OmegaB^\times \in \sog{3}$ is a skew-symmetric matrix with its three unique entries $\OmegaB = (\omega_1,\omega_2,\omega_3)^\top$ being the unit-time angular velocities. Recall that the superscript denotes the skew-symmetric matrix operator $(\cdot)^\times:\R^3 \to \sog{3}$. %A similar structure holds for rigid-body transformations in $\SE{3}$ similar to \eqref{eq:C3:backbone}.
 
 Since soft robot models are expressed in spatial and temporal coordinates, we aim to seek two exponential coordinate descriptions -- a spatial (strain) twist $\xiB$ called the geometric strain, and a temporal (velocity) twist $\etaB$ called the geometric velocity. The expressions for the strain field $\vec{\xi}$ and velocity field $\vec{\eta}$ anywhere on the Cosserat beam can be found by exploring the differential geometry of the curve $\gB$. To do so, we must introduce some smoothness conditions.
 
 \begin{asm}[Distributed actuation and body loads]
 \label{assum:0}
-In this study, we assume any control input of the continuum robot can be represented by a distributed input force $\nB_u: \Xs \times \Ts \to \R^3$ and distributed input moment $\mB_u: \Xs \times \Ts \to \R^3$, which act upon the deformable backbone $\gB$. These inputs are conveniently collected into a vector $\FT_u = \left(\mB_u^\top, \nB_u^\top \right)^\top$ referred to as the "\textit{control wrench}". It is important to note that the modeling of distributed input wrenches encompasses various forms of soft actuation, such as pneumatics, hydraulics, tendons, and ferro-magnetic and thermo-mechanical actuation. Similarly, we also introduce a distributed body-load force (\eg, due to gravity) given by $\FT_\textrm{b} = (\vec{0}_3, \nB_\textrm{b}^\top)^\top$ where $\nB_\textrm{u} = -\rho_0 A_0 \PhiB^\top \aB_\textrm{b}$ with $\aB_\textrm{b}$ a body acceleration, $\rho_0$ the density, and $A_0$ the cross-sectional area. Both $\FT_\textrm{u}$ and $\FT_\textrm{g}$ are wrenches expresses in the body frame whose direction depends on the body configuration $\gB$. \end{asm}
+In this study, we assume any control input of the continuum robot can be represented by a distributed input force $\nB_u: \Xs \times \Ts \to \R^3$ and distributed input moment $\mB_u: \Xs \times \Ts \to \R^3$, which act upon the deformable backbone $\gB$. These inputs are conveniently collected into a vector $\FT_u = \left(\mB_u^\top, \nB_u^\top \right)^\top$ referred to as the `\textit{control wrench}'. It is important to note that the modeling of distributed input wrenches encompasses various forms of soft actuation, such as pneumatics, hydraulics, tendons, and ferro-magnetic and thermo-mechanical actuation. Similarly, we also introduce a distributed body-load force (\eg, due to gravity) given by $\FT_\textrm{b} = (\vec{0}_3, \nB_\textrm{b}^\top)^\top$ where $\nB_\textrm{u} = -\rho_0 A_0 \PhiB^\top \aB_\textrm{b}$ with $\aB_\textrm{b}$ a body acceleration, $\rho_0$ the density, and $A_0$ the cross-sectional area. Both $\FT_\textrm{u}$ and $\FT_\textrm{g}$ are wrenches expresses in the body frame whose direction depends on the body configuration $\gB$. \end{asm}
 
 \begin{asm}[On differentiability]
 \label{assum:1}
@@ -37,7 +37,7 @@ Any external distributed force acting on the continuum time-variant backbone cur
 %
 
 \subsection{Local strain and velocity}
-Following the Cosserat beam modeling approach from Simo et al. \cite{Simo1986}, Boyer et al. \cite{Boyer2021}, Renda et al. \cite{Renda2018,Renda2020}, let $\vec{\Gamma} = (\kappa_1,\, \kappa_2, \kappa_3)^\top$ and $\vec{U} = (\nu_1,\, \nu_2,\, \nu_3)^\top$ be the torsion-curvature and elongation-shear strain vector, respectively. First, the spaces $\seg{3}$ and $\mathbb{R}^6$ are isomorphic (\ie, structure preserving) and we denote the mapping between these spaces is called the \emph{"isomorphism"} by $\hat{(\cdot)}: \R^6 \to \seg{3}$ and its inverse $\check{(\cdot)}: \seg{3} \to \R^6$. Then, an expression for strain field $\vec{\xi}(\sigma,t)$ is obtained through spatial differentiation of $\mat{g}$:
+Following the Cosserat beam modeling approach from Simo et al. \cite{Simo1986}, Boyer et al. \cite{Boyer2021}, Renda et al. \cite{Renda2018,Renda2020}, let $\vec{\Gamma} = (\kappa_1,\, \kappa_2, \kappa_3)^\top$ and $\vec{U} = (\nu_1,\, \nu_2,\, \nu_3)^\top$ be the torsion-curvature and elongation-shear strain vector, respectively. First, the spaces $\seg{3}$ and $\mathbb{R}^6$ are isomorphic (\ie, structure preserving) and we denote the mapping between these spaces is called the \emph{`isomorphism'} by $\hat{(\cdot)}: \R^6 \to \seg{3}$ and its inverse $\check{(\cdot)}: \seg{3} \to \R^6$. Then, an expression for strain field $\vec{\xi}(\sigma,t)$ is obtained through spatial differentiation of $\mat{g}$:
 %
 \begin{equation}
 \hat{\vec{\xi}} := \mat{g}\inv \frac{\p \mat{g}}{\p \sigma} = \begin{pmatrix} \vec{\Gamma}^\times & \vec{U} \\[0.5em] \vec{0}_3^\top & 0 \end{pmatrix} \;\; \xRightarrow[]{\textrm{\;\;isomorphism\;\;}} \;\; \vec{\xi} := \begin{pmatrix} \vec{\Gamma} \\ \vec{U} \end{pmatrix}.
@@ -55,7 +55,7 @@ Following, the temporal exponential coordinates are given by $\vec{\Omega} = (\o
 %
 Let it be clear that $\xiB(\sigma,t)$ and $\etaB(\sigma,t)$ are yet unknown {vector fields}, they simply follow from the differential geometry of $\SE{3}$. As such, they live in its tangent space $\seg{3}$ called its Lie algebra. Now given the geometric structures in \eqref{eq:C3:xi} and \eqref{eq:C3:eta}, we can start detailing the forward kinematics of the soft continuum robot by exploring the differential geometry of the spatio-temporal manifold $\gB(\sigma,t)$. Their connection is described in detail in \cite{Simo1986,Boyer2010,Boyer2021,Renda2017Aug,Renda2018}, but briefly recapitulated here to be self-contained. 
 
-Recalling Assumption \ref{assum:1}, which assumes the configuration space $\mat{g}$ to be everywhere differentiable, we can introduce the equality of mixed partials, \ie, $\frac{\p }{\p t}(\frac{\p \mat{g}}{\p \sigma}) = \frac{\p }{\p \sigma} (\frac{\p \mat{g}}{\p t})$. Then, by substitution of $\frac{\p \mat{g}}{\p t} = \vec{g}\hat{\vec{\eta}}$ and $\frac{\p \mat{g}}{\p \sigma} = \mat{g}\hat{\vec{\xi}}$, we obtain the so-called \emph{compatibility equation}:
+Recalling Assumption \ref{assum:1}, which assumes the configuration space $\mat{g}$ to be everywhere differentiable, we can introduce the equality of mixed partials, \ie, $\frac{\p }{\p t}(\frac{\p \mat{g}}{\p \sigma}) = \frac{\p }{\p \sigma} (\frac{\p \mat{g}}{\p t})$. Then, by substitution of $\frac{\p \mat{g}}{\p t} = \vec{g}\hat{\vec{\eta}}$ and $\frac{\p \mat{g}}{\p \sigma} = \mat{g}\hat{\vec{\xi}}$, we obtain the so-called \emph{``compatibility equation''}:
 %
 \begin{equation}
 \mat{g} \hat{\vec{\eta}}\hat{\vec{\xi}} + \mat{g} \frac{\p \hat{\vec{\xi}}}{\p t}  = \mat{g} \hat{\vec{\xi}} \hat{\vec{\eta}}  + \mat{g} \frac{\p \hat{\vec{\eta}}}{\p \sigma},
@@ -104,7 +104,7 @@ Drawing an analogy to rigid robotics, the expression in \eqref{eq:C3:pde_kin} ma
 \end{pmatrix} = \begin{pmatrix}
 \begin{bmatrix} \gB \hat{\xiB} \\[0.25em] \vec{0} 
 \end{bmatrix}
-, & -\ad_{\vec{\xi}}\vec{\eta} + \dot{\vec{\xi}}, & -\ad_{\vec{\xi}}\dot{\etaB} -\ad_{\dot{\xiB}}\etaB  + \ddot{\vec{\xi}}
+, & -\ad_{\vec{\xi}}\vec{\eta} + \dot{\vec{\xi}}, & -\ad_{\vec{\xi}}\dot{\etaB} -\ad_{\dot{\xiB}}\etaB  + \ddot{\vec{\xi}},
 \label{eq:C3:cont_kin_pde}
 \end{pmatrix}
 \end{equation}
@@ -133,7 +133,7 @@ where $\kappa_{\textrm{max}} = 60$ \si{\milli \meter \inv} is the curvature ampl
   \label{fig:C3:EX1:cantilever_FK_example}
 \end{figure}
 
-Then, substitution of $\sB_i$, $\vB_i$ and $\aB_i$ into \eqref{eq:C3:cont_kin_pde} leads to an ordinary differential equation that depends exclusively on $\sigma$. The forward kinematics can then be solved for the spatial horizon $\Xs = [0,L]$ using an explicit integration routine (fourth order Runge Kutta method), which produces $\gB$, $\etaB$ and $\dot{\etaB}$. We repeat this process until the full forward kinematics is recovered for all $t \in \Ts$. The results for the Euler-Bernoulli cantilever beam are shown in Figure \ref{fig:C3:EX1:cantilever_FK_example}. Figure \ref{fig:C3:EX1:cantilever_FK_example} shows for $\kappa(\sigma,t)$ evolves over space and time, and how they relate to the continuum deformations. It also shows the position $\gammaB_L$ and the linear velocities $\lfloor \etaB \rfloor_3$ of the end-effector. Note that this approach can easily deal with non-constant curvature situations, in contrast to the approach discussed in Chapter \ref{chap:PCC}. Namely, Chapter \ref{chap:PCC} subdivided the domain $\Xs$ into small PCC segments leading to notorious discontinuities at the interfaces (see Figure \ref{fig:C4:basis_example}).
+Then, substitution of $\sB_i$, $\vB_i$ and $\aB_i$ into \eqref{eq:C3:cont_kin_pde} leads to an ordinary differential equation that depends exclusively on $\sigma$. The forward kinematics can then be solved for the spatial horizon $\Xs = [0,L]$ using an explicit integration routine (fourth order Runge Kutta method), which produces $\gB$, $\etaB$ and $\dot{\etaB}$. We repeat this process until the full forward kinematics is recovered for all $t \in \Ts$. The results for the Euler-Bernoulli cantilever beam are shown in Figure \ref{fig:C3:EX1:cantilever_FK_example}. Figure \ref{fig:C3:EX1:cantilever_FK_example} shows the curvature $\kappa(\sigma,t)$ evolving over space and time, and how it relates to the continuum deformations. It also shows the position $\gammaB_L$ and the linear velocities $\lfloor \etaB \rfloor_3$ of the end-effector. Note that this approach can easily deal with non-constant curvature situations, in contrast to the approach discussed in Chapter \ref{chap:PCC}. Namely, Chapter \ref{chap:PCC} subdivided the domain $\Xs$ into small PCC segments leading to notorious discontinuities at the interfaces (see Figure \ref{fig:C4:basis_example}).
 
 \end{example}
 
@@ -150,7 +150,7 @@ Then, substitution of $\sB_i$, $\vB_i$ and $\aB_i$ into \eqref{eq:C3:cont_kin_pd
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Finite-dimensional projection}
-The problem is, however, that the exponential coordinates of the geometric strain vector belong (in theory) to an infinite set of real-valued functions. Similar to many continuum mechanics problems, the state dimension for such multi-variable coordinate representation are of infinite dimensional nature. To solve this, we must project our solution space onto a finite dimensional subset that is countable and therefore computable in this setting. In the finite element method, the solution presents itself by dividing the continuum into a finite set of elements. Here we follow an approach similar to Chirikjian et al. \cite{Chirikjian1991,Chirikjian1992} that proposed to express the spatial deformations of slender (semi-rigid) continuum robots by finite set of basis functions called \textit{spatial modes}. This idea also finds application is disturbance rejection for structural vibration of semi-rigid flexible manipulators whose modeling strategies are identical the Euler-Bernoulli assumptions. Here though we introduce a modal approximation to find a suitable finite-dimensional approximation of the strain twist $\vec{\xi}(\sigma,t)$ for all points along the material domain $\Xs$. To do so, we assume the following: %
+The problem is, however, that the exponential coordinates of the geometric strain vector belong (in theory) to an infinite set of real-valued functions. Similar to many continuum mechanics problems, the state dimension for such multi-variable coordinate representation are of infinite dimensional nature. To solve this, we must project our solution space onto a finite dimensional subset that is countable and therefore computable in this setting. In the finite element method, the solution presents itself by dividing the continuum into a finite set of elements. Here we follow an approach similar to Chirikjian et al. \cite{Chirikjian1991,Chirikjian1992} that proposed to express the spatial deformations of slender (semi-rigid) continuum robots by finite set of basis functions called \textit{`spatial modes'}. This idea also finds application is disturbance rejection for structural vibration of semi-rigid flexible manipulators whose modeling strategies are identical the Euler-Bernoulli assumptions. Here though we introduce a modal approximation to find a suitable finite-dimensional approximation of the strain twist $\vec{\xi}(\sigma,t)$ for all points along the material domain $\Xs$. To do so, we assume the following: %
 \begin{asm}
 \vspace{1mm}
 Assuming the strain field has a separable spatio-temporal nature, any entry of the strain vector field $\vec{\xi} = \left( \xi_1, \xi_2, ..., \xi_6 \right)^\top$ can be written as an infinite expansion of the following form:
@@ -209,7 +209,7 @@ where $\mat{\Theta} \in \R^{6 \times 6k}$ is a sparse matrix-valued function who
   \end{figure}
   %
 \begin{equation}
-\theta_n(\sigma) = \dfrac{2}{2^{n}(n-1)!} \dfrac{d^{n-1}}{d\sigma^{n-1}}\left[\left( \dfrac{2\sigma}{L}-1 \right)^2 -1 \right]^{n-1}
+\theta_n(\sigma) = \dfrac{2}{2^{n}(n-1)!} \dfrac{d^{n-1}}{d\sigma^{n-1}}\left[\left( \dfrac{2\sigma}{L}-1 \right)^2 -1 \right]^{n-1},
 \label{eq:C3:chebyshev}
 \end{equation}
 %
@@ -222,7 +222,7 @@ where $\mat{\Theta} \in \R^{6 \times 6k}$ is a sparse matrix-valued function who
 \subsection{Reduced-order kinematics}
 Given the finite-dimensional truncation in \eqref{eq:trunc_2}, we can now find an expression for the finite-dimensional forward kinematics in terms of the generalized coordinates $\vec{q}$ and its velocities components $\dot{\vec{q}}$.
 
-First, let us regard the configuration of the soft robot $\mat{g} \in \SE{3}$. Recall that the spatial evolution of the curve is described by $\p \mat{g}/\p\sigma = \mat{g} \vec{\xi}^\wedge$, see \eqref{eq:C3:xi}. Given the initial condition $\mat{g}(0,\cdot) = \mat{g}_0$, an approximation of the continuously deformable soft robot can be obtained by partial integration over the spatial domain$^{1}$: \blankfootnote{$^1$ The solution to \eqref{eq:C3:mappingSE3g} follows from the so-called \textit{Magnus Series Expansion} \cite{Renda2020}. Namely, \eqref{eq:C3:xi} can be written in the form $\YB' = \YB \AB(\sigma)$, and following \cite{Hairer2006} (see Theorem 7.1 from Magnus \cite{Magnus2006Oct}), it can solved explicitly by $\YB(\sigma) = \YB(0) \exp(\OmegaB(\sigma))$ with $\OmegaB$ the Magnus expansion of $\AB$. }
+First, let us regard the configuration of the soft robot $\mat{g} \in \SE{3}$. Recall that the spatial evolution of the curve is described by $\p \mat{g}/\p\sigma = \mat{g} \vec{\xi}^\wedge$, see \eqref{eq:C3:xi}. Given the initial condition $\mat{g}(0,\cdot) = \mat{g}_0$, an approximation of the continuously deformable soft robot can be obtained by partial integration over the spatial domain$^{1}$: \blankfootnote{$^1$ The solution to \eqref{eq:C3:mappingSE3g} follows from the first-order ``\textit{Magnus Series Expansion}'' \cite{Renda2020}. Namely, \eqref{eq:C3:xi} can be written in the form $\YB' = \YB \AB(\sigma)$, and following \cite{Hairer2006} (see Theorem 7.1 from Magnus \cite{Magnus2006Oct}), it can solved explicitly by $\YB(\sigma) = \YB(0) \exp(\OmegaB(\sigma))$ with $\OmegaB$ the Magnus expansion of $\AB$. }
 %
 %\vspace{-2mm}
 \begin{equation}
@@ -236,21 +236,21 @@ The computation of the mapping $\exp_{\SE{3}}$ is given in Appendix \ref{app:C3:
 \frac{\p \vec{\eta}}{\p \sigma } = -\ad_{\xiB} \vec{\eta} + \dot{\vec{\xi}}. \label{eq:eta_adg}
 \end{equation}
 %
-To solve the above, let us introduce $\vec{\chi}(a) = \exp\big(-\ad_{\small \int_0^a\!\xiB(\chi)d\chi}\big)$ which allows us to conveniently write the "\textit{state transition matrix}" as $\phiB(\sigma,s) = \exp\big(-\ad_{\small \int_s^\sigma\!\xiB(\chi)d\chi}\big) = \vec{\chi}(\sigma) \vec{\chi}\inv(s)$ \cite{Hairer2006,Magnus2006Oct}. Subsequently, by fixing a time instance $t$, substituting the modal approximation of the strain rate $[\dot{\vec{\xi}}]_k = \PhiB \q$, and assuming the initial condition $\etaB_0 = \etaB(0,t)$, we can derive an analytical solution for equation \eqref{eq:eta_adg} in the following form:
+To solve the above, let us introduce $\vec{\chi}(a) = \exp\big(-\ad_{\small \int_0^a\!\xiB(\chi)d\chi}\big)$ which allows us to conveniently write the `\textit{state transition matrix}' as $\phiB(\sigma,s) = \exp\big(-\ad_{\small \int_s^\sigma\!\xiB(\chi)d\chi}\big) = \vec{\chi}(\sigma) \vec{\chi}\inv(s)$ \cite{Hairer2006,Magnus2006Oct}. Subsequently, by fixing a time instance $t$, substituting the modal approximation of the strain rate $[\dot{\vec{\xi}}]_k = \PhiB \dq$, and assuming the initial condition $\etaB_0 = \etaB(0,t)$, we can derive an analytical solution for equation \eqref{eq:eta_adg} in the following form:
 %
 \begin{align}
 [\vec{\eta}]_k(\sigma,\vec{q},\dot{\vec{q}}) & = \phiB(\sigma,0)\etaB_0 + \int_0^\sigma \phiB(\sigma,s) [\dot{\vec{\xi}}]_k(s,t) \; ds, \notag \\
 & = \vec{\chi}(\sigma) \etaB_0 + \vec{\chi}(\sigma)\int_0^\sigma \vec{\chi}\inv(s) \mat{\Theta}(s) \dot{\vec{q}} \; ds.
 \end{align}
 %
-Given the fact that $\exp(-\ad_{\YB}) = \Ad\inv_{\exp(\hat{\YB})}$ for every $\YB$ belonging to the set $\seg{3}$ (as documented by Taylor \cite{Taylor2010Jan}, page 90), we can utilize the solution discovered in a manner similar to equation \eqref{eq:C3:mappingSE3g} to rephrase $\vec{\chi}(\sigma)$ as $\Ad\inv_{\gB(\sigma)}$. Consequently, assuming $\etaB = \vec{0}_6$, whereby the base of the soft robot is structurally fixed, we can derive a convenient expression for the approximation of the velocity twist:%$^1$\blankfootnote{$^1$ The derived solution is analogous to \cite{Renda2017Aug,Renda2018,Boyer2021}.}:
+Given the fact that $\exp(-\ad_{\YB}) = \Ad\inv_{\exp(\hat{\YB})}$ for every $\YB$ belonging to the set $\seg{3}$ (see  Taylor \cite{Taylor2010Jan}, page 90), we can utilize the solution discovered in a manner similar to equation \eqref{eq:C3:mappingSE3g} to rephrase $\vec{\chi}(\sigma)$ as $\Ad\inv_{\gB(\sigma)}$. Consequently, assuming $\etaB = \vec{0}_6$, whereby the base of the soft robot is structurally fixed, we can derive a convenient expression for the approximation of the velocity twist:%$^1$\blankfootnote{$^1$ The derived solution is analogous to \cite{Renda2017Aug,Renda2018,Boyer2021}.}:
 % Now, given the initial condition $\vec{\eta}(0,t) = \vec{0}_6$ and the approximations $[\vec{\xi}]_k$ and $[\mat{g}]_k$, and using the differential property of the adjoint action $-\mat{\ad}_{\vec{\xi}} = \p /\p \sigma [\Ad_{g^{-1}}] \Ad_{g}$ \cite{Murray1994}, we can solve the continuum forward kinematics in \eqref{eq:C3:pde_kin} as we can find an approximation to the velocity twist $\vec{\eta}$ by spatial integration:
 %
 \begin{align}
 [\vec{\eta}]_k(\sigma,\vec{q},\dot{\vec{q}}) = \Ad_{[\mat{g}]_k(\sigma,\q)}\inv \int_0^\sigma \Ad_{[\mat{g}]_k(s,\q)} \mat{\Theta}(s) \dot{\vec{q}} \; ds \,. \label{eq:C3:eta_analytic}
 \end{align}
 %
-Note from \eqref{eq:C3:eta_analytic} that the joint velocity exhibits a linear relationship with the velocity twist. This attribute is typical of rigid robotics, \eg, see \cite{Murray1994,Spong2006}. As such, it is possible to extract $\dot{\q}$ out of the integrand which naturally gives rise to a linear matrix transformation called the \textit{"geometric manipulator Jacobian"}. The geometric Jacobian matrix $[\mat{J}]_k \in \R^{6\times 6k}$ is defined by 
+Note from \eqref{eq:C3:eta_analytic} that the joint velocity exhibits a linear relationship with the velocity twist. This attribute is typical of rigid robotics, \eg, see \cite{Murray1994,Spong2006}. As such, it is possible to extract $\dot{\q}$ out of the integrand which naturally gives rise to a linear matrix transformation called the \textit{`geometric manipulator Jacobian'}. The geometric Jacobian matrix $[\mat{J}]_k \in \R^{6\times 6k}$ is defined by 
 %
 \begin{equation}
 [\mat{J}]_k:= \Ad_{[\mat{g}]_k(\sigma,\q)}\inv \int_0^\sigma \Ad_{[\mat{g}]_k(s,\q)} \mat{\Theta}(s) \; ds, \label{eq:C3:jacobian_analytic}
@@ -309,7 +309,7 @@ which is nothing more than the Newton-Euler equation for rigid-body motion on $\
   \label{eq:C3:projected_NE_jacobian}
 \end{align}
 %
-where $\CT_{(\cdot)} = -\CT_{(\cdot)} ^\top :=  \MT \ad_{(\cdot)}  - \ad_{(\cdot)} ^\top \MT$ is a skew-symmetric matrix. It is important to note that by pre-multiplication of the transpose Jacobian, we have eliminated the constraint wrenches, \ie, $[\JB]_k^\top \FT_c = \vec{0}_n$ \cite{Murray1994}. Finally, the finite-dimensional dynamics of the deformable soft robot is found by spatial integration of \eqref{eq:C3:projected_NE_jacobian} over the material domain $\Xs$. The overall dynamics can be written in the familiar Euler-Lagrangian (EL) form as follows
+where $\CT_{(\cdot)} = -\CT_{(\cdot)} ^\top :=  \MT \ad_{(\cdot)}  - \ad_{(\cdot)} ^\top \MT$ is a skew-symmetric matrix. It is important to note that by pre-multiplication of the transpose Jacobian, we have eliminated the constraint wrenches, \ie, $[\JB]_k^\top \FT_c = \vec{0}_n$ \cite{Murray1994}. Finally, the finite-dimensional dynamics of the deformable soft robot is found by spatial integration of \eqref{eq:C3:projected_NE_jacobian} over the material domain $\Xs$. The overall dynamics can be written in the familiar Euler-Lagrangian (EL) form as follows:
 %
 \begin{equation}
   \mat{M}(\vec{q})\ddot{\vec{q}} + \mat{C}(\vec{q},\dot{\vec{q}})\dot{\vec{q}} + \vec{f}\!\grav(\vec{q}) + \vec{f}_{\textrm{mat}}(\vec{q},\dot{\vec{q}}) = \vec{\tau}(\vec{q},\uB)
@@ -337,7 +337,7 @@ with the system matrices:
 where $\mat{\mathcal{K}} \in \cose{3} \times \seg{3}$ and $\mat{\mathcal{D}} \in  \cose{3} \times \seg{3}$ are the stiffness and damping tensor, respectively.
 The vector $\vec{Gu}$ represents the distributed forces $\nB_\textrm{u}(\sigma,t)$ and moments $\mB_\textrm{u}(\sigma,t)$ generated by various kinds of the internal actuators (\eg, tendons or pneumatics). We will later detail the derivation of $\GB(\q)$ in this chapter as it depends highly on the geometrical placement of the soft actuators. If $\rank(\GB) < \dim(\q)$, the system \eqref{eq:C3:dyn_model_lag} is said to be underactuated. Within the context of soft robotics, whose infinite-dimensional configuration space cannot be matched by a finite number of actuators, these systems are often intrinsically under-actuated. 
 
-To compute the Lagrangian matrices \eqref{eq:C3:lag_M}-\eqref{eq:C3:damp_mat}, that all involve a spatial integration over $\Xs = [0,L]$, we rewrite these integrations into one global matrix differential equation and solve it efficiently using a Matrix-Differential solver proposed in Chapter \ref{chap:PCC}. As such, these system matrices are not computed exactly but approximated with sufficient precision. The numerical precision depends on the stepsize of the discretized spatial domain $\Xs$. 
+To compute the Lagrangian matrices \eqref{eq:C3:lag_M} to \eqref{eq:C3:damp_mat}, that all involve a spatial integration over $\Xs = [0,L]$, we rewrite these integrations into one global matrix differential equation and solve it efficiently using a Matrix-Differential solver proposed in Chapter \ref{chap:PCC}. As such, these system matrices are not computed exactly but approximated with sufficient precision. The numerical precision depends on the stepsize of the discretized spatial domain $\Xs$. 
 \begin{asm}
 \label{lem:C3:1}
 The inertia matrix $\mat{M}(\vec{q})$ is a symmetric, positive definite, symmetric. and is uniformly bounded such that there exists positive constants $\lambda^{-} \le \lambda^{+}$ such that  $\lambda^{-} \mat{I}_{n} \preceq \mat{M}(\vec{q}) \preceq \lambda^{+} \mat{I}_{n} < \infty$.
@@ -402,7 +402,7 @@ In this section, the Lagrangian model in \eqref{eq:C3:dyn_model_lag} is rewritte
 Given the system's Hamiltonian $\mathcal{H}$, it can be shown that generalized velocities can be written in terms of partial derivatives of the Hamiltonian function
 %
 \begin{equation}
-\dot{\vec{q}} = \nabla_{\vec{p}} \Hm \quad \Longrightarrow  \quad \nabla_{\vec{p}} \Hm := \left(\frac{\p \Hm}{\p \pB} \right)^\top= \mat{M}\inv \vec{p}.
+\dot{\vec{q}} = \nabla_{\vec{p}} \Hm \quad \Longrightarrow  \quad \nabla_{\vec{p}} \Hm := \left(\frac{\p \Hm}{\p \pB} \right)^\top= \mat{M}\inv \vec{p},
 \label{eq:C3:state_diff}
 \end{equation}
 %
@@ -410,7 +410,7 @@ where we denote $\nabla_{\xB}(\cdot) := \p (\cdot)^\top/\p \xB$ as the gradient 
 %
 \begin{align}
 \dot{\vec{p}} & = \dot{\mat{M}}\dot{\vec{q}} + \mat{M}\ddot{\vec{q}},\notag \\
-& = \left(\dot{\mat{M}} - \mat{C} - \mat{D} \right) \mat{M}\inv \vec{p} - \vec{Kq} - \vec{f}\!\grav + \vec{Gu}
+& = \left(\dot{\mat{M}} - \mat{C} - \mat{D} \right) \mat{M}\inv \vec{p} - \vec{Kq} - \vec{f}\!\grav + \vec{Gu}.
 \label{eq:C3:momenta_diff1},
 \end{align}
 %

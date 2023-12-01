@@ -5,17 +5,17 @@ In this section, we will introduce the preliminaries for the nonlinear topology 
 \subsection{Strain theory in continuum mechanics}
 We start by presenting the variational principle of continuum mechanics in a nonlinear geometrical context. Consider an undeformed material domain as $\mathcal{B}_0 \subset \R^3$. When external forces act on $\mathcal{B}_0$, it undergoes both rigid-body and elastic deformation, resulting in a new body, denoted by $\mathcal{B} \subset \R^3$. Let $\XB \in \mathcal{B}_0$ represent an arbitrary material point within the undeformed configuration, whose motion can be described by a continuous path between two position vectors $\XB$ and $\XB'$. These vectors correspond to a particular material point in the undeformed and quasi-static deformed configurations (\ie, zero-velocity), respectively. Suppose that the deformation mapping is described by a flow $\boldsymbol{\varphi}^{(t)}: \mathcal{B}_0 \to \mathcal{B}$ such that $\boldsymbol{X} \mapsto \boldsymbol{\varphi}^{(T)}(\boldsymbol{X}) = \boldsymbol{X}'$ for a time instance $T > 0$ when static equilibrium between elastic deformation and external forces is reached. More conveniently, we can write $\boldsymbol{X}' = \boldsymbol{X} + \dB(\boldsymbol{X},T)$ where $\dB(\XB,T)$ represents the displacement field at the equilibrium configuration.
 
-In the field of continuum mechanics, the primary objective is to determine an approximation of the displacement field $\dB(\XB,T)$ that satisfies the boundary conditions imposed on the (undeformed) \textit{"reference body"} $\mathcal{B}_0$. To achieve this goal, it is necessary to establish a relationship between the displacement and strain, as well as a connection between strain and internal stress resulting in material displacement. A fundamental measure of deformation is the deformation gradient tensor, which can be computed as follows: assuming that the mapping $\boldsymbol{\varphi}$ is sufficiently smooth \cite{Kim2018,Holzapfel2002}, the second-order deformation gradient tensor is obtained through spatial differentiation:
+In the field of continuum mechanics, the primary objective is to determine an approximation of the displacement field $\dB(\XB,T)$ that satisfies the boundary conditions imposed on the (undeformed) \textit{``reference body''} $\mathcal{B}_0$. To achieve this goal, it is necessary to establish a relationship between the displacement and strain, as well as a connection between strain and internal stress resulting in material displacement. A fundamental measure of deformation is the deformation gradient tensor, which can be computed as follows: assuming that the mapping $\boldsymbol{\varphi}$ is sufficiently smooth \cite{Kim2018,Holzapfel2002}, the second-order deformation gradient tensor is obtained through spatial differentiation:
 %
 \begin{align}
-\boldsymbol{F} :=  \nabla_0 \vec{\varphi} = \boldsymbol{I} + \nabla_0 \dB
+\boldsymbol{F} :=  \nabla_0 \vec{\varphi} = \boldsymbol{I} + \nabla_0 \dB,
 \label{eq:C2:Fgrad}
 \end{align}
 %
 where $\nabla_0 (\cdot):= \left[\frac{\p (\cdot)}{\p X_1}\, \frac{\p (\cdot)}{\p X_2}\, \frac{\p (\cdot)}{\p X_3}\right]$ defines the gradient operator. The deformation gradient tensor, as shown in \eqref{eq:C2:Fgrad}, provides valuable information about the local deformation. Specifically, it describes the deformation of an infinitesimal sub-volume of the material domain $\mathcal{B}_0$ around $\XB$. The volume change of this sub-volume can be calculated using $J := \det{\FB} > 0$. Following convention \cite{Kim2018,Holzapfel2002}, we can derive the Green-Lagrange strain tensor from equation \eqref{eq:C2:Fgrad} as $\ET : = \frac{1}{2}(\FB^\top \FB - \boldsymbol{I})$. In terms of the displacement gradient $\nabla_{0} \dB$, the general expression for the Green-Lagrange strain tensor is given by:
 %
 \begin{align}
-\ten{E} & := \frac{1}{2}\big( \nabla_0 \dB  +\nabla_0^\top \dB  + \nabla_0 \dB^\top \, \nabla_0 \dB \big)
+\ten{E} & := \frac{1}{2}\big( \nabla_0 \dB  +\nabla_0^\top \dB  + \nabla_0 \dB^\top \, \nabla_0 \dB \big),
 \label{eq:E_tens}
 \end{align}
 %
@@ -68,7 +68,7 @@ A common way of finding solutions to the displacements $\dB$ of continuum solids
 where $\p \mathcal{B}_0$ is the boundary of the undeformed continuum domain $\mathcal{B}_0$, and $\fB_{\textrm{b}}(\XB,T)$ and $\fB_{\textrm{t}}(\XB,T)$ are the body and traction forces evaluated at time $T$, respectively. The variation of the potential energy can be obtained by taking the first order variation of $\Uf(\dB)$ in the direction $\delta \dB$, where $\delta \dB$ corresponds to the virtual displacements in the principle of virtual work, which must satisfy the homogeneous boundary conditions (\ie, the kinematically admissible displacements).  The variation of the potential energy is given by:
 %
 \begin{align}
-\delta \Uf (\dB, \delta \dB) & =  \frac{d}{d\varepsilon} \Big[ \,\Uf (\dB + \varepsilon \delta \dB) \, \Big]_{\varepsilon = 0} \notag \\[0.5em]
+\delta \Uf (\dB, \delta \dB) & =  \frac{d}{d\varepsilon} \Big[ \,\Uf (\dB + \varepsilon \delta \dB) \, \Big]_{\varepsilon = 0}, \notag \\[0.5em]
 & =  \int_{\mathcal{B}_0} \frac{\p \Psi}{\p \ten{E}}(\ten{E}) : \delta \ten{E} \; dV - \int_{\mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{b}} \; dV - \int_{\p \mathcal{B}_0}  \delta \dB^\top \! \fB_{\textrm{t}}  \; dS, \notag \\[0.5em]
 & =  \int_{\mathcal{B}_0}\ten{S}(\ten{E}) : \delta \ten{E} \; dV - \delta \Uf_{\textrm{ext}}(\delta \dB) = 0
 \end{align}
@@ -77,9 +77,9 @@ where $:$ denotes the contraction operator \cite{Kim2018, Holzapfel2002}, which 
 The variation of the Lagrangian strain, given its definition in \eqref{eq:E_tens}, is then given by
 %
 \begin{align}
-\delta \ten{E}(\dB, \delta \dB) & = \frac{d}{d\varepsilon} \Big[ \,\ten{E} (\dB + \varepsilon \delta \dB) \, \Big]_{\varepsilon = 0} \notag  \\[0.5em]
+\delta \ten{E}(\dB, \delta \dB) & = \frac{d}{d\varepsilon} \Big[ \,\ten{E} (\dB + \varepsilon \delta \dB) \, \Big]_{\varepsilon = 0}, \notag  \\[0.5em]
 & = \frac{1}{2} \Big(\nabla_0 \delta \dB + \nabla_0 \delta \dB^\top + \nabla_0 \delta \dB^\top \nabla_0 \dB + \nabla_0\dB^\top \nabla_0  \delta \dB  \Big), \notag \\[0.5em]
-& = \textrm{sym}\Big(\nabla_0 \delta \dB^\top \left[\IB +  \nabla_0 \dB \right] \Big) = \textrm{sym} \Big( \nabla_0 \delta \dB^\top \FB \Big)
+& = \textrm{sym}\Big(\nabla_0 \delta \dB^\top \left[\IB +  \nabla_0 \dB \right] \Big) = \textrm{sym} \Big( \nabla_0 \delta \dB^\top \FB \Big),
 \label{eq:C3:variation_Uf}
 \end{align}
 %
@@ -140,7 +140,7 @@ where $\Delta(\boldsymbol{x},\boldsymbol{y}) = ||\boldsymbol{x} -  \boldsymbol{y
 \vspace{-3mm}
 \end{figure}
 %
-The Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ in \eqref{eq:vorcell} are inherently convex polygons due to the Euclidean distance function's convexity. The convex nature of these shapes implies that all lines connecting any two points within the shapes lie entirely within the shape. In other words, the elements lack indentations or concave portions. The interior of the elements can be described using a finite set of nodes called the \textit{"nodal coordinates"} given by $\XB^e \in S$ with $S \in \textrm{convhull}\{\mathcal{V}_e\}$ the convex hull of the element $\mathcal{V}_e$.
+The Voronoi cells $\mathcal{V}_e \in \mathcal{T}(\mathcal{P})$ in \eqref{eq:vorcell} are inherently convex polygons due to the Euclidean distance function's convexity. The convex nature of these shapes implies that all lines connecting any two points within the shapes lie entirely within the shape. In other words, the elements lack indentations or concave portions. The interior of the elements can be described using a finite set of nodes called the \textit{``nodal coordinates''} given by $\XB^e \in S$ with $S \in \textrm{convhull}\{\mathcal{V}_e\}$ the convex hull of the element $\mathcal{V}_e$.
 
 Building on the finite element approach, a state vector $\xB^e_i = (x^e_{i,1}, x^e_{i,2})^\top$ is attributed to each coordinate. The index $e$ serves to distinguish individual elements, while $i \in \{1,..,k\}$ with $k$ the polygonal degree of the element. Subsequently, the displacement field can be approximated as follows
 %

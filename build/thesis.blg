@@ -2,11 +2,13 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 0_preface/preface.aux
+A level-1 auxiliary file: 0_preface/titlepage.aux
 A level-1 auxiliary file: 3_7_conclusion/conclusion.aux
 The style file: apalike.bst
 A level-1 auxiliary file: 7_publications/publications.aux
 A level-1 auxiliary file: 8_cv/cv.aux
-Reallocated field_info (elt_size=4) to 12216 items from 5000.
+A level-1 auxiliary file: 6_acknowledgement/acknowledgement.aux
+Reallocated field_info (elt_size=4) to 12282 items from 5000.
 Database file #1: MyBib.bib
 Warning--entry type for "Andorf1974" isn't style-file defined
 --line 110 of file MyBib.bib
@@ -14,84 +16,72 @@ Warning--entry type for "Anderson1968" isn't style-file defined
 --line 127 of file MyBib.bib
 Warning--entry type for "Immega1986" isn't style-file defined
 --line 147 of file MyBib.bib
-Warning--I'm ignoring Duriez2013's extra "publisher" field
---line 973 of file MyBib.bib
 Warning--entry type for "Paynter1974" isn't style-file defined
---line 1754 of file MyBib.bib
+--line 1777 of file MyBib.bib
 Warning--entry type for "Paynter1988" isn't style-file defined
---line 1761 of file MyBib.bib
+--line 1784 of file MyBib.bib
 Warning--entry type for "Kukolj1988" isn't style-file defined
---line 2559 of file MyBib.bib
+--line 2585 of file MyBib.bib
 Warning--entry type for "Markiewicz1973" isn't style-file defined
---line 3071 of file MyBib.bib
+--line 3106 of file MyBib.bib
 Warning--entry type for "Morin1953" isn't style-file defined
---line 3183 of file MyBib.bib
+--line 3214 of file MyBib.bib
 Warning--entry type for "Takagi1983" isn't style-file defined
---line 3625 of file MyBib.bib
+--line 3666 of file MyBib.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--entry type for "Yarlott1972" isn't style-file defined
---line 4225 of file MyBib.bib
+--line 4275 of file MyBib.bib
 Warning--to sort, need author or key in BibEntryStanford2022Sep
 Warning--to sort, need author or key in BibEntryPuma2022Sep
 Warning--empty year in BibEntryPuma2022Sep
 Warning--empty year in BibEntryStanford2022Sep
-Warning--can't use both volume and number fields in Bendsoe2003
-Warning--empty publisher in Bendsoe2003
-Warning--empty booktitle in SorotokiCode
-Warning--empty school in Chirikjian1992
-Warning--empty school in Daerden1999
+Warning--empty year in Chirikjian1991crawler
 Warning--empty journal in DellaSantina2021
-Warning--empty booktitle in Duriez2013
+Warning--empty year in Duriez2013
 Warning--can't use both volume and number fields in Holzapfel2002
-Warning--there's a number but no volume in Katzschmann2019
 Warning--can't use both volume and number fields in Lorensen1987Aug
-Warning--empty school in Mochiyama1992
-Warning--empty publisher in Murray1994
-Warning--empty publisher in Proper2023
-Warning--there's a number but no volume in Runge2017
-Warning--empty school in Sanan2013
+Warning--empty year in Runge2017
 Warning--empty publisher in Tedrake2022
-Warning--empty journal in Thieffry2020
-Warning--empty journal in Thieffry2017
-You've used 328 entries,
+Warning--empty title in Yuhn2023Feb
+You've used 331 entries,
             1935 wiz_defined-function locations,
-            2429 strings with 72735 characters,
-and the built_in function-call counts, 147965 in all, are:
-= -- 14477
-> -- 7120
-< -- 188
-+ -- 2514
+            2449 strings with 72895 characters,
+and the built_in function-call counts, 149894 in all, are:
+= -- 14723
+> -- 7128
+< -- 196
++ -- 2515
 - -- 2480
-* -- 13019
-:= -- 25423
-add.period$ -- 1023
-call.type$ -- 328
-change.case$ -- 2857
-chr.to.int$ -- 302
-cite$ -- 352
-duplicate$ -- 5223
-empty$ -- 9684
-format.name$ -- 2922
-if$ -- 28938
-int.to.chr$ -- 27
+* -- 13117
+:= -- 25679
+add.period$ -- 1042
+call.type$ -- 331
+change.case$ -- 2870
+chr.to.int$ -- 304
+cite$ -- 345
+duplicate$ -- 5336
+empty$ -- 9875
+format.name$ -- 2929
+if$ -- 29429
+int.to.chr$ -- 28
 int.to.str$ -- 0
-missing$ -- 320
-newline$ -- 1637
-num.names$ -- 978
-pop$ -- 2555
+missing$ -- 322
+newline$ -- 1655
+num.names$ -- 987
+pop$ -- 2578
 preamble$ -- 1
-purify$ -- 2880
+purify$ -- 2895
 quote$ -- 0
-skip$ -- 4019
+skip$ -- 4092
 stack$ -- 0
-substring$ -- 10391
-swap$ -- 879
-text.length$ -- 72
+substring$ -- 10585
+swap$ -- 926
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1930
-warning$ -- 22
-while$ -- 1159
+type$ -- 1948
+warning$ -- 12
+while$ -- 1185
 width$ -- 0
-write$ -- 4245
-(There were 33 warnings)
+write$ -- 4304
+(There were 22 warnings)

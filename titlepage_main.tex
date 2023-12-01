@@ -1,0 +1,71 @@
+%%%% DOCUMENT CLASS ************************************************************
+%\documentclass[print,thumbmain]{thesis}  % uncomment for writing
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[final,thumbmain]{thesis}  % uncomment for rendering/final version
+%\geometry{showframe}                    % uncomment to check geometry setting
+%%%% ENABLES *******************************************************************
+%\def\themeOrange{1}
+\def\themePurple{1}
+%\def\themeBlueAlt{1}
+%%%% PREAMBLE ******************************************************************
+\input{src/packages}
+\input{src/colors}
+\input{src/theme}
+\input{src/commands}
+\input{src/mathematics}
+\input{src/vectors}
+\input{src/lemma}
+\input{src/review}
+\input{src/tikz}
+\input{src/colormaps}
+\input{src/specialsymbols}
+\input{src/listing}
+\input{src/footnotes}
+\graphicspath{{./pdf/}{./img/}{./fig/}}
+%\graphicspath{./fig/}{../../fig/}{../../../fig/}
+%\graphicspath{{img/}{3_chapters/0_introduction/img/}{3_chapters/2_chapter/img/}{3_chapters/4_chapter/img/}{../../img/}{../../../img/}}
+%%%% TIKZ Externalize **********************************************************
+%\tikzexternalize
+% %%%% DARK MODE *****************************************************************
+% \setreviewson
+% \ifx\darkMode\undefined
+% \else
+%    \pagecolor[rgb]{0.1,0.1,0.1}
+%    \color[rgb]{0.95,0.95,0.95}
+
+%    \hypersetup{
+%       colorlinks=true,
+%       linkcolor = magenta,
+%       filecolor = magenta,
+%       citecolor = magenta,
+%       urlcolor  = magenta
+%    }
+% \fi
+%%%% REVIEW *****************************************************************
+%\usepackage{showframe}
+\setreviewsoff
+
+%%%% DOCUMENT DETAILS **********************************************************
+\author{Brandon Jonathan Caasenbrood}
+\newcommand{\placeofbirth}{Roermond}
+\renewcommand{\year}{2023}
+\newcommand{\defensedate}{woensdag 10 januari 2024}
+\newcommand{\defensetime}{16:00}
+\newcommand{\maintitle}{Design, Modeling, and Control \\[0.35em] Strategies for Soft Robots}
+\newcommand{\subtitle}{bla}
+\newcommand{\isbn}{123-45-678-9012-3}     % 123 bold math-45-678-9012-3
+\newcommand{\printer}{Ipskamp printing, Enschede, the Netherlands}
+\newcommand{\rector}{prof.dr. S.K. Lenaerts}
+% other relevant meta data about the thesis can be found in preface.tex
+\makeatletter % generates all the \author stuff
+%%%% MAIN DOCUMENT *************************************************************
+\begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% ***************************************************************************
+\pagenumbering{roman}
+
+% Front matter
+\include{0_preface/titlepage}
+\include{8_cv/cv}
+
+\end{document}
+%%%% THAT's ALL FOLKS **********************************************************

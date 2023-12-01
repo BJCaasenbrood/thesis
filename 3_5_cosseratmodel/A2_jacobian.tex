@@ -31,7 +31,7 @@ Since $\ad_{\vec{\eta}} (\mat{J} \dot{\vec{q}}) = \ad_{\vec{\eta}} \vec{\eta} = 
 
 \section{Derivation of the generalized linear stiffness and damping matrix for continuum robots}
 \label{app:C3:linearmaterialmatrices}
-In this section, we will derive the expression for the generalized stiffness matrix $\KB$ and the generalized stiffness matrix $\DB$ as given in \eqref{eq:C3:stiff_mat} and \eqref{eq:C3:damp_mat}, respectively. Their formulation follow directly from the derivation of the generalized conservative material forces, computed by spatial integration of the internal material wrenches $\ten{F}_{\textrm{mat}}$ as in \eqref{eq:C3:lag_C}. Recall that the expression is given by
+In this section, we will derive the expression for the generalized stiffness matrix $\KB$ and the generalized stiffness matrix $\DB$ as given in \eqref{eq:C3:stiff_mat} and \eqref{eq:C3:damp_mat}, respectively. Their formulation follow directly from the derivation of the generalized conservative material forces, computed by spatial integration of the internal material wrenches $\ten{F}_{\textrm{mat}}$ as in \eqref{eq:C3:lag_G}. Recall that the expression is given by
 %
 \begin{equation}
 \fB_{\textrm{mat}}(\q,\dq) = \int_{\Xs} [\JB(\sigma,\q)]_k^\top \FT_\textrm{mat}(\sigma,\q,\dq) \; d\sigma. \label{eq:app_gen_materialforces}
@@ -57,7 +57,7 @@ Given that $\Ad_{\gB\inv}^{-\top} \equiv \Ad_{\gB}^{\top}$, we can rewrite the e
 Substitution of \eqref{eq:app_materialwrench_mid} and the geometric Jacobian \eqref{eq:C3:jacobian_analytic} into \eqref{eq:app_gen_materialforces}, we find 
 %
 \begin{equation}
-\fB_{\textrm{mat}} = \int_{\Xs} \left( \int_0^\sigma \ThetaB^\top \Ad_{[\gB]_k}^\top\; ds \right) \frac{\p}{\p \sigma} \left( \Ad_{[\gB]_k}^{-\top} \ten{S} \right) \; d\sigma
+\fB_{\textrm{mat}} = \int_{\Xs} \left( \int_0^\sigma \ThetaB^\top \Ad_{[\gB]_k}^\top\; ds \right) \frac{\p}{\p \sigma} \left( \Ad_{[\gB]_k}^{-\top} \ten{S} \right) \; d\sigma.
 \end{equation}
 %
 By virtue of the integration by parts and applying the appropriate boundary conditions of the net wrenches at the base $\sigma = 0$ and $\sigma = L$ (\ie, force balance), the generalized material forces can be compactly written as $\fB_{\textrm{mat}} = \int_\Xs \ThetaB^\top \ten{S} \; d\sigma$ which is nothing more than a projection of the stress wrench onto the truncated modal basis $\{\thetaB_i\}_{i=1}^k$. By selecting a Hookean model, the internal stress wrench can be expressed as 

@@ -48,14 +48,16 @@
 %%%% DOCUMENT DETAILS **********************************************************
 \author{Brandon Jonathan Caasenbrood}
 \newcommand{\placeofbirth}{Roermond}
-\renewcommand{\year}{2023}
-\newcommand{\defensedate}{woensdag ?? oktober 2023}
+\renewcommand{\year}{2024}
+\newcommand{\defensedate}{woensdag 10 januari 2024}
 \newcommand{\defensetime}{16:00}
 \newcommand{\maintitle}{Design, Modeling, and Control \\[0.35em] Strategies for Soft Robots}
-\newcommand{\subtitle}{bla}
-\newcommand{\isbn}{123-45-678-9012-3}     % 123 bold math-45-678-9012-3
+\newcommand{\subtitle}{}
+\newcommand{\isbn}{978-90-386-5881-0}  % 123 bold math-45-678-9012-3
+\newcommand{\doi}{10.6100/3fmj-dg12}
 \newcommand{\printer}{Ipskamp printing, Enschede, the Netherlands}
-\newcommand{\rector}{prof.dr.ir. F.P.T. Baaijens}
+\newcommand{\rector}{prof.dr. S.K. Lenaerts}
+
 % other relevant meta data about the thesis can be found in preface.tex
 \makeatletter % generates all the \author stuff
 %%%% MAIN DOCUMENT *************************************************************
@@ -68,6 +70,7 @@
 
 % Front matter
 \include{0_preface/preface}
+\include{0_preface/titlepage}
 
 \input{1_summary/abstract} 
 \input{1_summary/samenvatting}
@@ -133,6 +136,7 @@
 \input{3_3_design/3_opt.tex}
 \input{3_3_design/4_example.tex}
 \input{3_3_design/5_conclusion.tex}
+
 % *************************************************************
 % *************************************************************
 % *************************************************************
@@ -157,7 +161,7 @@
 \chapter[Port-Hamiltonian Cosserat models -- beyond the PCC]{Port-Hamiltonian Cosserat \\ models for soft robots -- beyond the constant strain approach}
 \label{chap:BeyondPCC}
 
-\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Energy-shaping Controllers for Soft Robot Manipulators through Port-Hamiltonian Cosserat Models.} SN Computer Science, Springer, 2022. \texttt{doi:} \url{10.1089/soro.2021.0035}}. }
+\blankfootnote{This chapter is based on: {B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \textit{Energy-shaping Controllers for Soft Robot Manipulators through Port-Hamiltonian Cosserat Models.} SN Computer Science, Springer, 2022. \texttt{doi:} \url{10.1007/s42979-022-01373-w}}. }
 
 \input{3_5_cosseratmodel/0_abstract.tex}
 \input{3_5_cosseratmodel/1_introduction.tex}
@@ -172,7 +176,7 @@
 %\cleardoublepage
 \chapter[\texttt{Sorotoki}: a MATLAB toolkit for soft robots]{\texttt{Sorotoki}: a MATLAB toolkit \\ for design, modeling, and \\ control of soft robots}
 \label{chap:Sorotoki}
-\blankfootnote{This chapter is based on: B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \texttt{Sorotoki}: \textit{a MATLAB toolkit for design, modeling, and control of soft robots} (\textit{in preparation for submission}). }
+\blankfootnote{This chapter is based on: B.J. Caasenbrood, A.Y. Pogromsky, and H. Nijmijer. \texttt{Sorotoki}: \textit{a MATLAB toolkit for design, modeling, and control of soft robots} (\textit{under review}). }
 
 \input{3_6_sorotoki/0_abstract.tex}
 \input{3_6_sorotoki/1_introduction.tex}
@@ -191,29 +195,27 @@
 % *************************************************************
 % \part{Closing}
 % \label{part: closing}
-
 \include{3_7_conclusion/conclusion}
 %%%% APPENDIX ******************************************************************
+\definecolor{titlecolor}{gray}{0.50}
+\definecolor{thumbcolor}{gray}{0.75}     % Change the color of the thumb index tags to gray
+
 \appendix
 \cleardoublepage
 \part{Appendices}
-\definecolor{thumbcolor}{gray}{0.75}     % Change the color of the thumb index tags to gray
 \input{3_1_introduction/A_list_of_definitions.tex}
 
 \input{3_3_design/A1_wachpress.tex}
 \input{3_3_design/A2_strainstress_element.tex}
 \input{3_3_design/A3_tangent_yeohmodel.tex}
-
 \input{3_4_pccmodel/A1_passivity.tex}
-
 \input{3_5_cosseratmodel/A1_lietheory.tex}
 \input{3_5_cosseratmodel/A2_jacobian.tex}
-
 \input{3_6_sorotoki/A1_newmark.tex}
 
 %\input{3_8_auxilary/VEAB_board.tex}
 %%%% BACK MATTER ***************************************************************
-\cleardoublepage
+\clearpage
 \isstarredchaptertrue           % This state variable is used for creating the thumb index by indicating that the following chapter is not numbered (i.e. \chapter*{})
 \bookmarksetup{startatroot}
 \addtocontents{toc}{\bigskip}%
@@ -225,14 +227,13 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
 \bibliography{MyBib}
-%
 }
 \normalsize
 %%%% BACK MATTER ***************************************************************
 \newpage
-%\include{6_acknowledgement/acknowledgement}
 \include{7_publications/publications}
 \include{8_cv/cv}
+\include{6_acknowledgement/acknowledgement}
 \newpage{~}
 
 \thispagestyle{empty}

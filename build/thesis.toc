@@ -56,7 +56,7 @@
 \contentsline {section}{\numberline {4.6}Parameter identification}{78}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Finite element method and hyper-elasticity}{78}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Hyperelasticity in joint space}{81}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{84}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{83}{subsection.4.6.3}%
 \contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{85}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Overview of experimental platform}{87}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{88}{section.4.9}%
@@ -124,4 +124,5 @@
 \vspace \bigskipamount 
 \contentsline {chapter}{Bibliography}{233}{section*.116}%
 \contentsline {chapter}{List of publications}{253}{appendix*.118}%
-\contentsline {chapter}{About the author}{255}{appendix*.119}%
+\contentsline {chapter}{Curriculum Vitae}{255}{appendix*.119}%
+\contentsline {chapter}{Acknowledgements}{257}{appendix*.121}%

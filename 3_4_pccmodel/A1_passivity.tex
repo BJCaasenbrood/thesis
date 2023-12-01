@@ -70,7 +70,7 @@ where $\vec{f}(\cdot,\cdot)$ is a nonlinear vector-valued function given by
 The objective here is to compute the solutions to the system above over the finite horizon $\mathbb{T} = [0,T]$ efficiently such that real-time control applications are possible. To do so, we consider an implicit trapezoidal scheme which is given by
 %
 \begin{equation}
-\zB_{i+1} = \zB_{i} + \frac{\Delta t}{2} \left( \fB(\zB_{i},t_{i}) + \fB(\zB_{i+1},t_{i+1}),  \right)
+\zB_{i+1} = \zB_{i} + \frac{\Delta t}{2} \left( \fB(\zB_{i},t_{i}) + \fB(\zB_{i+1},t_{i+1})  \right),
 \end{equation}
 %
 where $\zB_{i}$ is the state solution at time instance $t_{i}$, and $\Delta t = t_{i+1} - t_{i}$ the timestep. The advantage of implicit schemes over explicit ones is the improved numerical stability for coarser temporal discretization at the mere cost of numerical precision. Let is be clear that evaluating nonlinear vector function $\fB(\cdot,\cdot)$ is numerically expensive, as it requires the computation of $\mat{M}$, $\mat{C}$ and $\vec{\fB}\grav$. Therefore, it is advantageous to minimize its calls by using coarser timesteps while retaining stability using an implicit scheme. By fixing $\zB_{i}$ and aiming to seek the intermediate state solutions $\vec{w}:=\vec{z}_{i+1}$, we can define the residual dynamics on the time interval $[t_{i}, t_{i+1}]$ as

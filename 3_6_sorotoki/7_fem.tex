@@ -1,6 +1,6 @@
 \subsection{Finite element modeling (\texttt{Fem})}
 \label{sec:C5:fem}
-Following the mesh generation process, \textit{Sorotoki} offers a nonlinear finite element solver for both quasi-static and fully dynamic simulations. An illustration of the FEM approach is given in Figure \ref{fig:C5:illustration_FEM}. FEM-based tools are crucial when describing large deformations in soft robots, which also accounts for hyperelastic materials and geometric nonlinearities. The FEM package is provided in a class called \class{Fem.m} and can be instantiated using \code{fem = Fem(Mesh)}. This class serves two main purposes: ($i$) to solve static or dynamic continuum problems with high accuracy, and ($ii$) to solve gradient-based optimization problems, also known as inverse design problems. It is important to note that, unlike \texttt{SOFA}, the focus of \texttt{Sorotoki} is on high-detail simulations rather than real-time implementation for control. The presented FEM simulation models are not intended for real-time applications, but rather for system identification and analysis.
+Following the mesh generation process, \texttt{Sorotoki} offers a nonlinear finite element solver for both quasi-static and fully dynamic simulations. An illustration of the FEM approach is given in Figure \ref{fig:C5:illustration_FEM}. FEM-based tools are crucial when describing large deformations in soft robots, which also accounts for hyperelastic materials and geometric nonlinearities. The FEM package is provided in a class called \class{Fem.m} and can be instantiated using \code{fem = Fem(Mesh)}. This class serves two main purposes: ($i$) to solve static or dynamic continuum problems with high accuracy, and ($ii$) to solve gradient-based optimization problems, also known as inverse design problems. It is important to note that, unlike \texttt{SOFA}, the focus of \texttt{Sorotoki} is on high-detail simulations rather than real-time implementation for control. The presented FEM simulation models are not intended for real-time applications, but rather for system identification and analysis.
 
 \begin{figure}
 \centering
@@ -54,7 +54,7 @@ Let $\Omega_i$ denote the subspace spanned by the $i$-th element of the finite e
     %
     \begin{align}
         \fB_\textrm{e}(\x) & = \sum_{i=1}^{N_e} \frac{d}{d\x_i} \left\{\int_{\Omega_i} \Psi(\FB(\x_i,s)) \; ds\right\}, \notag                                                    \\
-                           & \approx \sum_{i=1}^{N_e} \sum_{j=1}^{N_w} w_j \, \underbrace{\frac{\p \Psi}{\p \FB}(\FB(\x_i,s_j)) }_{\textrm{PK1}} \frac{\p \FB}{\p \x_i}(\x_i,s_j)
+                           & \approx \sum_{i=1}^{N_e} \sum_{j=1}^{N_w} w_j \, \underbrace{\frac{\p \Psi}{\p \FB}(\FB(\x_i,s_j)) }_{\textrm{PK1}} \frac{\p \FB}{\p \x_i}(\x_i,s_j),.
         \label{eq:C5:fem_hyper}
     \end{align}
     %
@@ -88,7 +88,7 @@ To address this, \texttt{Sorotoki} provides a library of hyper-elastic constitut
     \end{tabular}
 \end{table}
 %
-The material models presented in Table \ref{tab:C5:elasticitymodels} are implemented in \textit{Sorotoki} under the class \class{Material}, but have specific constructors tailored towards each material, \texttt{NeoHookeanMaterial}, \texttt{MooneyMaterial}, and \texttt{YeohMaterial}. Regarding their parameters, the work of Marechal et al. \cite{Marechal2021Jun} provides an open-source database that includes a broad collection of soft materials commonly used in soft robotics, gathered through uniaxial material tests. Based on their dataset and relevant other literature \cite{Xavier2022Jun,Smith2018,Kim2018,Goury2018}, \textit{Sorotoki} offers some preset material models of soft materials commonly used in soft robotics, such as the Ecoflex30/50 series, Dragonskin10/30 series, NinjaFlex, and Formlabs Elastic50A/80A material. These material classes also include the physical data for density, viscosity, and tangential contact friction. Following \eqref{eq:C5:fem_hyper}, the first Piola-Kirchhoff (PK1) stress tensor is evaluated analytically using the function call \code{P = Material.PiollaStress(F)}.  \\
+The material models presented in Table \ref{tab:C5:elasticitymodels} are implemented in \texttt{Sorotoki} under the class \class{Material}, but have specific constructors tailored towards each material, \texttt{NeoHookeanMaterial}, \texttt{MooneyMaterial}, and \texttt{YeohMaterial}. Regarding their parameters, the work of Marechal et al. \cite{Marechal2021Jun} provides an open-source database that includes a broad collection of soft materials commonly used in soft robotics, gathered through uniaxial material tests. Based on their dataset and relevant other literature \cite{Xavier2022Jun,Smith2018,Kim2018,Goury2018}, \texttt{Sorotoki} offers some preset material models of soft materials commonly used in soft robotics, such as the Ecoflex30/50 series, Dragonskin10/30 series, NinjaFlex, and Formlabs Elastic50A/80A material. These material classes also include the physical data for density, viscosity, and tangential contact friction. Following \eqref{eq:C5:fem_hyper}, the first Piola-Kirchhoff (PK1) stress tensor is evaluated analytically using the function call \code{P = Material.PiollaStress(F)}.  \\
 %
 
 \textbf{C: Finite element solvers and (nonlinear) modal analysis}
@@ -126,24 +126,25 @@ A numerical solution is obtained through quasi-static analysis using the functio
 
 \begin{matlabcode}
 %% EXAMPLE: Fem class 
-load('sdf_porous_square.mat');
-msh = Mesh(sdf, 'NElem', 5e3);
-fem = Fem(msh, 'TimeStep', 1/60);
+msh = preset.mesh.porous_square;
+fem = Fem(msh);
+
+% get compression value
+dX  = -0.125 * msh.BdBox(2);
 
 % assign material 
-fem.Material = NeoHookeanMaterial(1.0, 0.45);
+fem.Material = NeoHookean(1.0, 0.45);
 
 % add displacement and forces 
-fem = fem.addConstraint('Bottom', [1,1]);
-fem = fem.addConstraint('Top', [1,0]);
-fem = fem.addDisplace('Top', [0,-0.125 * W]);
+fem = fem.addSupport('bottom', [1, 1]);
+fem = fem.addSupport('top', [1, 0]);
+fem = fem.addDisplace('top', [0, dX]);
 
 %  quasi-solve and eigen-analysis 
-fem = fem.solve();
-fem = fem.analysis( fem.Log.x(:,end) );
+fem = fem.solve('TimeStep', 1/60);
+fem = fem.eigen(fem.solver.sol.x);
 \end{matlabcode}
     
-
 \begin{example}[Locomotion dynamics of soft crawling robot]
 To demonstrate a dynamic finite element method (FEM) simulation that incorporates contact, we will utilize \texttt{Sorotoki} to model the locomotion of a multi-gait soft robot crawler inspired by the work of Shepard \cite{Shepherd2011Dec}. The study by Shepard  et al. \cite{Shepherd2011Dec} presents a soft robot system that consists of five pressure chambers - four for each leg and one for the spine. The pressure chambers are actuated in a sequential manner to produce an undulating motion. The work of Shepard  et al. \cite{Shepherd2011Dec} demonstrates that complex locomotion can be achieved through the use of open-loop controllers and the dynamic interaction between the soft robot and its environment.
 
@@ -151,34 +152,36 @@ To simplify the model, we assume general plane motion. The geometry of the soft 
 
 \begin{matlabcode} 
 %% EXAMPLE: Fem class   
-msh = Mesh('MultiGait.png', 'MeshSize', 1.0, ...
-            'BdBox', [0, 150, 0, 12]);
+msh = preset.mesh.multigait_crawler;
 
 % mesh to fem 
-fem = Fem(msh,'TimeStep',1/500);
-fem.Material = Ecoflex50();
+fem = Fem(msh);
+fem = fem.addMaterial( Ecoflex50 );
+fem = fem.addMaterial( Dragonskin30 );
 
 % add inextensible bottom layer 
-E1  = fem.findElements([0 150 0 2]);
-fem = fem.addMaterialModifier(E1, 5);
+E1  = fem.findElements([0, 150, 0, 2]);
+fem = fem.setMaterial(E1,2);
 
 % add forces and constraints 
 fem = fem.addGravity();
 fem = fem.addContact(sLine());
 
-Y = 'BoxSelect';
+type = 'BoxSelect';
 for i = 1:3
-    Ce = fem.findEdges(Y,[50*(i-1), 50*i, 0, 15]);
-    fem = fem.addPressure(Ce, @(x) Pressure(x,i));
+    box = [50*(i-1), 50*i, 0, 15];
+    Ie  = fem.findEdges(type, box);
+    fem = fem.addPressure(Ie, ...
+      @(t) 45*kpa * activation(t,i));
 end
 
 % solve dynamics 
-fem = fem.simulate();
+fem = fem.simulate('TimeStep',1/500);
 
-% -- open-loop controller 
-function y = Pressure(fem, i)
+%% open-loop controller 
+function y = activation(t, i)
     phi = pi / 3 * (i - 1);
-    y = clamp(sin(5*pi*fem.Log.t - phi), 0, Inf);
+    y = uclamp(sin(5*pi*t - phi));
 end
 \end{matlabcode}
 \vfill
@@ -204,7 +207,7 @@ The results of the simulation performed using \texttt{Sorotoki} show a morpholog
 \includegraphics*[width=\textwidth]{./pdf/thesis-figure-6-8-2.pdf}
 %\input{./fig/fig_fem_example_crawl_true.tex}
 %\input{./fig/fig_fem_example_crawl.tex}
-\caption{\small (top) Experiment of soft multi-gait crawling soft robot developed by Shepard et al \cite{Shepherd2011Dec} performing an undulating forward motion by periodic pressurizarion of its internal pressure chambers, back legs $\to$ middle $\to$ front legs. The soft robot is made from an elastomer material with strain-inhibit layer at the bottom to enhance bending. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. (bottom) Simulation recreation of the experiments performed by Shepard et al \cite{Shepherd2011Dec} using the Finite Element solver in the \sorotoki toolkit. Images sourced from public resources, with intellectual property belonging to cited authors, sources, and publishers. }
+\caption{\small (top) Experiment of soft multi-gait crawling soft robot developed by Shepard et al \cite{Shepherd2011Dec} performing an undulating forward motion by periodic pressurizarion of its internal pressure chambers, back legs $\to$ middle $\to$ front legs. The soft robot is made from an elastomer material with strain-inhibit layer at the bottom to enhance bending. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,10]$ \si{\mega \pascal}. (bottom) Simulation recreation of the experiments performed by Shepard et al \cite{Shepherd2011Dec} using the Finite Element solver in the \texttt{Sorotoki} toolkit. Images sourced from public resources, with intellectual property belonging to cited authors, sources, and publishers. }
 \label{fig:C5:fem_example_crawl} 
 \vspace{5mm}
 \includegraphics*[width=0.85\textwidth]{./pdf/thesis-figure-6-9-1a.pdf} 

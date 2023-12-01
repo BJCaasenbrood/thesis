@@ -6,7 +6,7 @@
 \subsection{Finite element method and hyper-elasticity}
 Generally, soft robots are operated by (differential) pressure to air channels embedded in the elastic body. If the applied pressure is sufficiently larger than the ambient pressure, the elastic body deforms to counteract the external forces -- the critical point at which the external force overcome the internal elastic forces is proportional to the Young's modulus of the material. To enable efficient mobility, soft robots often explore of materials (or material composites) with a low Young's moduli, e.g., silicone elastomers. Unfortunately, large deformations of these rubber-like materials inherently lead to state-dependency in the mechanical compliance, and thus Hookean elasticity is no longer accurate -- rendering them hyper-elastic. These hyper-elastic materials branch a whole new subfield in continuum mechanics. Although analytic descriptions exist, hyper-elasticity is generally treated numerically through Finite Element techniques \cite{Duriez2013,Largilliere2015,Coevoet2017} paired with a (nonlinear) continuum mechanics framework.
 
-Many variations of constitutive models for hyper-elastic materials are available, including Saint Venant-Kirchhoff, Neo-Hookean, Mooney-Rivlin, Ogden, and Yeoh  which are detailed in various work \cite{Meyer2009,Renaud2011,Kim2018}. In Mustaza et al. \cite{Mustaza2019}, a Yeoh constitutive model is explored to describe hyper-elastic material characteristics of a silicone-composite actuator. Duriez et al. \cite{Duriez2013} and related works \cite{Coevoet2017,Largilliere2015} employ Neo-Hookean material models to enrich the nonlinear deformations in FEM-driven models. There are many different constitutive models available, each better suited to describe specific nonlinear elastic behavior. Constitutive material models are mathematical functions used to express the (nonlinear) relationship between stress and strain in terms of deformation.  Let the spatial domain of robot's soft continuum body be given by $\mathbb{V}$ which is a compact subset of $\mathbb{R}^3$. This continuum body can be regarded as a collection of continuum particles called "\textit{material points}" represented by a spatial coordinate $\XB = [X_1, X_2, X_3]^\top \subseteq \mathcal{B}_0$. Now, assume there exists a mapping $\vec{\varphi}^{(t)}: \mathcal{B}_0 \to \mathcal{B}$ that maps these material points $\x$ into their deformed configuration $\mathcal{B}$. Then, given the deformation map $\vec{\varphi}^{(t)}$, the local geometrical deformations of the continuum solid relative to an undeformed configuration are described by the deformation gradient tensor given as follows \cite{Holzapfel2002,Kim2018}: \vspace{-3mm}
+Many variations of constitutive models for hyper-elastic materials are available, including Saint Venant-Kirchhoff, Neo-Hookean, Mooney-Rivlin, Ogden, and Yeoh  which are detailed in various work \cite{Meyer2009,Renaud2011,Kim2018}. In Mustaza et al. \cite{Mustaza2019}, a Yeoh constitutive model is explored to describe hyper-elastic material characteristics of a silicone-composite actuator. Duriez et al. \cite{Duriez2013} and related works \cite{Coevoet2017,Largilliere2015} employ Neo-Hookean material models to enrich the nonlinear deformations in FEM-driven models. There are many different constitutive models available, each better suited to describe specific nonlinear elastic behavior. Constitutive material models are mathematical functions used to express the (nonlinear) relationship between stress and strain in terms of deformation.  Let the spatial domain of robot's soft continuum body be given by $\mathbb{V}$ which is a compact subset of $\mathbb{R}^3$. This continuum body can be regarded as a collection of continuum particles called `\textit{material points}' represented by a spatial coordinate $\XB = [X_1, X_2, X_3]^\top \subseteq \mathcal{B}_0$. Now, assume there exists a mapping $\vec{\varphi}^{(t)}: \mathcal{B}_0 \to \mathcal{B}$ that maps these material points $\x$ into their deformed configuration $\mathcal{B}$. Then, given the deformation map $\vec{\varphi}^{(t)}$, the local geometrical deformations of the continuum solid relative to an undeformed configuration are described by the deformation gradient tensor given as follows \cite{Holzapfel2002,Kim2018}: \vspace{-3mm}
 
 \begin{equation}
 \mat{F} = \grad{\XB}\vec{\varphi}^{(T)}(\XB).
@@ -41,7 +41,7 @@ $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2
   %\input{./3_chapters/2_chapter/img/fig_C2_fembend.tex} 
   \includegraphics*{./pdf/thesis-figure-4-6.pdf}
   \vspace{-0.2cm}
-  \caption{ High resolution finite element simulations of the soft robot manipulator  \data{lightgreen} subjected to various input pressures $-20 \,\si{\kilo \pascal} \le \uB_i(t) \le 80 \,\si{\kilo \pascal}$.  These results are produced using \texttt{Abaqus/CEA} numerical solver.  To validate the PCC condition, an optimal backbone curve $\gammaB(\q^\star)$ is shown \data{magenta} whose joint coordinates are recovered by solving the optimization problem \eqref{eq:C2:optimization_problem}.}
+  \caption{\small High resolution finite element simulations of the soft robot manipulator (\textcolor{lightgreen}{$\blacksquare$}) subjected to various input pressures $-20 \,\si{\kilo \pascal} \le \uB_i(t) \le 80 \,\si{\kilo \pascal}$.  These results are produced using \texttt{Abaqus/CEA} numerical solver.  To validate the PCC condition, an optimal backbone curve $\gammaB(\q^\star)$ is shown \data{magenta} whose joint coordinates are recovered by solving the optimization problem \eqref{eq:C2:optimization_problem}.}
   \vspace{-0.1cm}
   \label{fig:C2:fem_analysis}
 \end{figure}
@@ -53,7 +53,7 @@ $ subjected to the kinematic relation in \eqref{eq:C2:phi_rodr} and \eqref{eq:C2
   %\input{./3_chapters/2_chapter/img/fig_C2_fem_nofit.tex}
   \includegraphics*{./pdf/thesis-figure-4-7.pdf}
   %\vspace{-0.5cm}
-  \caption{Elongation force $F$ (\si{\newton}) and bending moment $M$ (\si{\newton \meter}) recovered from the finite element data analysis. Note that the curve parametrization using the Bishop variables $ \varepsilon = q_1$ and $\kappa = \sqrt{ \kappa_x^2 +  \kappa_y^2} = \sqrt{ {q_1}^2 +  {q_2}^2}$ are found using the optimization routine in \eqref{eq:C2:optimization_problem}. Notice also that self-collision occurs between the bellows for negative bending angles.}
+  \caption{\small Elongation force $F$ (\si{\newton}) and bending moment $M$ (\si{\newton \meter}) recovered from the finite element data analysis. Note that the curve parametrization using the Bishop variables $ \varepsilon = q_1$ and $\kappa = \sqrt{ \kappa_x^2 +  \kappa_y^2} = \sqrt{ {q_1}^2 +  {q_2}^2}$ are found using the optimization routine in \eqref{eq:C2:optimization_problem}. Notice also that self-collision occurs between the bellows for negative bending angles.}
   \vspace{-0.4cm}
   \label{fig:C2:fem_stress}
 \end{figure}
@@ -112,7 +112,7 @@ Given the radial layout of the pneumatic bellows of the soft robot (see Figure \
 where $m$ is the number of bellows, and $\phi(\q) = \text{atan2}(\kappa_y,\kappa_x)$ the direction angle or heading. This stiffness correction term ensures the nonlinear bending stiffness becomes larger between bellows -- as it causes simultaneous deformation of multiple bellows. Please note that $\alpha_\phi(\q) \ge 1$ for all $\q \in \mathcal{Q}$.
 \end{asm}
 
-To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha_2 $, $\alpha_4 > \alpha_5$ and $\alpha_{1,4} > 0$.  To find the hyper-elastic parameter vector $\alphaB$, we use a weighted least-squares optimization. Recalling the previous profiles for elongation force and bending moment obtained from the FEM data, see Figure ??, we integrate the expressions \eqref{eq:C2:stiffness_tanh_eps} and \eqref{eq:C2:stiffness_tanh_beta} to find an analytic approximation, i.e., $F(\varepsilon; \alphaB):= \int_0^\varepsilon k_e(\xi) \xi \; d\xi$ and $M(\beta; \alphaB):= \int_0^\beta k_b(\xi) \xi \; d\xi$, respectively. The weighted regression is biased towards positive strains, to better represent the deformation characteristics under positive pressurization. Again, we use \texttt{fmincon.m} optimizer in \textit{Matlab}. The hyper-elastic material parameters $\alphaB$ that minimize the residual between the FEM data and the analytic model are given in Table \ref{tab:C2:elastic_parameters}, and the comparison between the FEM force profiles and our solution is given in Figure \ref{fig:C2:fem_stiffness_recover_compare} Notice that self-collision is not capture by the stiffness model. Theoretically, the self-contact interactions (as seen in Figure \ref{fig:C2:fem_stiffness_recover_compare}) can also be parameterized using a different set of polynomials, which are non-zero for the compression regions and zero otherwise. In other words, the regression can be enriched with polynomials that are asymmetric with respect to the origin. We also provided Figure \ref{fig:C2:stiffness_model} to show the change in stiffness when the soft robot deforms, where we can clearly see a discrete radial symmetry arise due to the radial composition of the three bellow network. 
+To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha_2 $, $\alpha_4 > \alpha_5$ and $\alpha_{1,4} > 0$.  To find the hyper-elastic parameter vector $\alphaB$, we use a weighted least-squares optimization. Recalling the previous profiles for elongation force and bending moment obtained from the FEM data, see Figure \ref{fig:C2:fem_stress} we integrate the expressions \eqref{eq:C2:stiffness_tanh_eps} and \eqref{eq:C2:stiffness_tanh_beta} to find an analytic approximation, i.e., $F(\varepsilon; \alphaB):= \int_0^\varepsilon k_e(\xi) \xi \; d\xi$ and $M(\beta; \alphaB):= \int_0^\beta k_b(\xi) \xi \; d\xi$, respectively. The weighted regression is biased towards positive strains, to better represent the deformation characteristics under positive pressurization. Again, we use \texttt{fmincon.m} optimizer in \textit{Matlab}. The hyper-elastic material parameters $\alphaB$ that minimize the residual between the FEM data and the analytic model are given in Table \ref{tab:C2:elastic_parameters}, and the comparison between the FEM force profiles and our solution is given in Figure \ref{fig:C2:fem_stiffness_recover_compare} Notice that self-collision is not capture by the stiffness model. Theoretically, the self-contact interactions (as seen in Figure \ref{fig:C2:fem_stiffness_recover_compare}) can also be parameterized using a different set of polynomials, which are non-zero for the compression regions and zero otherwise. In other words, the regression can be enriched with polynomials that are asymmetric with respect to the origin. We also provided Figure \ref{fig:C2:stiffness_model} to show the change in stiffness when the soft robot deforms, where we can clearly see a discrete radial symmetry arise due to the radial composition of the three bellow network. 
 
 
 
@@ -126,7 +126,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
    \includegraphics*{./pdf/thesis-figure-4-8.pdf}
    %\includegraphics[width = 0.99\textwidth]{fig_1024x256.pdf}
    \vspace{-0.5cm}
-   \caption{Comparison of the (nonlinear) mechanical compliance between the proposed hyper-elastic model \data{Matlab2} and the finite element simulations \data{Matlab1}. Notice the proposed stiffness model \eqref{eq:C2:stiffness_tanh_beta} does not capture the self-collision. }
+   \caption{\small Comparison of the (nonlinear) mechanical compliance between the proposed hyper-elastic model \data{Matlab2} and the finite element simulations \data{Matlab1}. Notice the proposed stiffness model \eqref{eq:C2:stiffness_tanh_beta} does not capture the self-collision. }
    \vspace{-0.1cm}
    \label{fig:C2:fem_stiffness_recover_compare}
  \end{figure}
@@ -138,7 +138,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
   %\input{./3_chapters/2_chapter/img/fig_C2_stiffness.tex}
   \includegraphics*{./pdf/thesis-figure-4-9.pdf}
   \vspace{-0.25cm}
-  \caption{ Amplitude of the nonlinear stiffness components for elongation and bending. Both stiffness functions are evaluated for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$ (left) Elongation stiffness, the stiffness values is shown by the colormap \protect\colormapcaption{0}{.75cm}$\!\!\in [0.8,1.2]$ \si{\newton \meter \inv}. (right) Elongation stiffness, the stiffness values is shown by the colormap \protect\colormapcaption{0}{.75cm}$\!\!\in [10,100]$ \si{\milli \newton  \meter}. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity $\phi = k\tfrac{\pi}{3}$.}
+  \caption{\small Amplitude of the nonlinear stiffness components for elongation and bending. Both stiffness functions are evaluated for a radially distributed sampling of the curvature joint space $(\kappa_x,\,\kappa_y) \in [-\pi,\pi)$ (left) Elongation stiffness, the stiffness values is shown by the colormap \protect\colormapcaption{0}{.75cm}$\!\!\in [0.8,1.2]$ \si{\newton \meter \inv}. (right) Elongation stiffness, the stiffness values is shown by the colormap \protect\colormapcaption{0}{.75cm}$\!\!\in [10,100]$ \si{\milli \newton  \meter}. Note that the bending stiffness has a discrete symmetry in the circumferential direction with periodicity $\phi = \tfrac{\pi}{3}k$ rad.}
   \vspace{-0.1cm}
   \label{fig:C2:stiffness_model}
 \end{figure}
@@ -147,6 +147,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
   %\rowcolors{0}{}{black!5}
   \caption{Estimated hyper-elastic and viscoelastic material parameters for the study case soft robot \label{tab:C2:elastic_parameters}}
   \centering
+  \rowcolors{1}{}{blue!5} 
   \begin{tabular}{ccccccc}
   \hline
   & $i=1$ &  $i=2$ &  $i=3$ & $i=4$ &  $i=5$ & $i=6$ \\
@@ -164,7 +165,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 %
 \begin{align}
 \frac{d}{dt}\begin{pmatrix} {\lambda}_1 \\ \vdots \\ {\lambda}_n \end{pmatrix} & = \begin{pmatrix} -\alpha_{\lambda,1} & \hdots & 0 \\
-\vdots & \ddots & \vdots  \\ 0 & \hdots & -\alpha_{\lambda,2n-1} \end{pmatrix} \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix} -\begin{pmatrix} \alpha_{\lambda,2} \\ \vdots \\ \alpha_{\lambda,2n} \end{pmatrix} \dq
+\vdots & \ddots & \vdots  \\ 0 & \hdots & -\alpha_{\lambda,2n-1} \end{pmatrix} \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix} -\begin{pmatrix} \alpha_{\lambda,2} \\ \vdots \\ \alpha_{\lambda,2n} \end{pmatrix} \dq,
 \label{eq:C2:creepmodel}
   \end{align}
  %
@@ -184,7 +185,7 @@ To satisfy the aforementioned conditions, it should hold that $\alpha_1 > \alpha
 \begin{align}
 \dot{x}_1 & = x_1, \\
 \dot{x}_2 & = \frac{1}{m}\left[ -k x_1 - c x_2 + k_\lambda x_3 + u \right], \\
-\dot{x}_3 & = -\alpha_{\lambda,1}x_3 -\alpha_{\lambda,2}x_2
+\dot{x}_3 & = -\alpha_{\lambda,1}x_3 -\alpha_{\lambda,2}x_2,
 \end{align}
 %
 where $m,k,c>0$  the mass, spring, damper coefficients; respectively, $k_{\lambda}>0$ the creep stiffness, $\alpha_{\lambda}>0$ the creep parameters, and $u: \Ts \to \R$ an auxiliary input (\ie, prescribed force). The following parameters are consider for this illustrative example: $m = 0.1$ \si{\kilo \gram}, $k = 10$ Nm$\inv$, $c = 0.1$ Nsm$\inv$, $k_{\lambda} = \alpha_{\lambda,1} = 2$, and $\alpha_{\lambda,2} = 5$.  To highlight the effects of viscoelastic creep, we choose a reference signal with fast-changing dynamics: $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$. Given the input, the simulation results are shown in Figure \ref{fig:C2:creep}. Note that the simulation result presents an unmodified Hookean model \data{Matlab1} in which $k_\lambda = 0$, and the Kelvin-Voigt variant \data{Matlab2}.
@@ -193,7 +194,7 @@ where $m,k,c>0$  the mass, spring, damper coefficients; respectively, $k_{\lambd
    %\input{./3_chapters/2_chapter/img/fig_C2_creep.tex}
    \includegraphics*{./pdf/thesis-figure-4-10.pdf}
    \vspace{-0.2cm}
-   \caption{Simulation study of introducing viscoelastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and viscoelastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the viscoelastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
+   \caption{\small Simulation study of introducing viscoelastic Kelvin-Voigt dynamics to a mass-spring-damper system, where we show the evolution of the elongation $\varepsilon$ subjected to an smooth block signal $u(t) = 0.15\cdot \textrm{sign}\left[ \sin(0.2\pi t) \right]$ in \data{lightgrey} compared between the original Hookean model \data{Matlab1} and viscoelastic Kelvin-Voigt model \data{Matlab2}. Also, the evolution of the viscoelastic creeping strain $\lambda$ is shown in \data{Matlab3}.}
    \vspace{-0.1cm}
    \label{fig:C2:creep}
  \end{figure}

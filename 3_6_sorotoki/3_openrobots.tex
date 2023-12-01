@@ -1,12 +1,14 @@
 \section{Open-source soft robots of \texttt{Sorotoki}}
 Aside from software, we also present a selection of open-source soft robotic systems,  see Figure \ref{fig:C5:examplebots}, as part of the \texttt{Sorotoki} toolkit. These systems all feature fluidic actuation and can be fabricated using conventional additive manufacturing techniques such as Selective Laser Sintering (SLS), Stereo-LithogrAphy (SLA), or Direct Light Projection (DLP). FormLabs Elastic 80A\texttrademark
-\, resin or a flexible TPU with a shore hardness of $\le 80$A are suggested for the elastically deformable bodies in SLA/DLP and SLS printing, respectively. Moreover, these soft robots can also be realized using multi-material Fused Deposition Modeling (FDM) with both flexible filaments (e.g., NinjaFlex) and water-soluble filaments. Nevertheless, FDM-fabricated systems may suffer from inferior quality, air-tightness, and anisotropy when compared to those produced by SLS or SLA/DLP. For that reason, we recommend SLS/SLA/DLP over FDM for its simplicity and reliability. For further details concerning the SLS/DLP manufacturing process, consult Proper et al. \cite{Proper2023}. The 3D models (in \texttt{.stl} format) are publicly available through Git:
-%
-\begin{lstlisting}[style=terminal]
-$ git clone https://github.com/BJCaasenbrood/SorotokiBots
+\, resin or a flexible TPU with a shore hardness of $\le 80$A are suggested for the elastically deformable bodies in SLA/DLP and SLS printing, respectively. Moreover, these soft robots can also be realized using multi-material Fused Deposition Modeling (FDM) with both flexible filaments (e.g., NinjaFlex) and water-soluble filaments. Nevertheless, FDM-fabricated systems may suffer from inferior quality, air-tightness, and anisotropy when compared to those produced by SLS or SLA/DLP. For that reason, we recommend SLS/SLA/DLP over FDM for its simplicity and reliability. For further details concerning the SLS/DLP manufacturing process, see Proper et al. \cite{Proper2023}. The printing files are available through \texttt{mpm}:
+
+\vspace{3mm}
+\begin{lstlisting}[style=Matlabterminal]
+>> mpm install sorotokibots
 \end{lstlisting}
 %
-A brief description for each soft robot and their functionality is provided below. \\
+\clearpage
+
 \begin{figure}[!t]
     \centering
     %\input{./fig/fig_examplebots.tex}
@@ -16,7 +18,6 @@ A brief description for each soft robot and their functionality is provided belo
     \label{fig:C5:examplebots}
 \end{figure}
 %  
-
 \textbf{A: Soft bending actuator.} The first system is a soft bending actuator (Figure \ref{fig:C5:examplebots}a), an alternative to the PneuNet actuator proposed by Mosadegh et al. \cite{Mosadegh2014}. Like the PneuNet actuator, our soft actuator consists of an array of bellows placed on a relatively inextensible elastic medium. The stiffness gradient in the actuator allows for pure bending to occur when the network of bellows is pressurized. The geometry of the PneuNet-based soft robot was optimized using Sorotoki's topology optimizer, which was specifically tailored for use with FormLabs Elastic 80A resin. The soft actuator is fully 3D-printed using SLA and can accept pressures in the range of $-10 \le u \le 100$ kPa at its central pressure input. \\
 
 \textbf{B: Planar soft actuator.} The second system is a planar soft actuator that comprises two pneumatic bellow networks that are connected in parallel (Figure \ref{fig:C5:examplebots}b). Similar to the previous soft actuator, bending occurs due to a pressure differential between the two pneumatic networks. However, the system is also capable of pure elongation and contraction if the pressure in both networks is equal. This enhances the motion capabilities of the soft robot, enabling it to move within a planar workspace of approximately 100 $\times$ 100 mm. The system has two pressure range of $-10 \le u \le 50$ kPa. \\

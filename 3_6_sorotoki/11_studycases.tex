@@ -1,9 +1,8 @@
-
 \section{Soft robotics study cases}
 \label{sec:C5:studycases}
-In the subsequent section, we will delve into the capabilities of the toolkit, \texttt{Sorotoki}. To provide a comprehensive overview of the toolkit, various problem scenarios will be considered, each with specific problem settings aimed at the design, modeling, or control of soft robots. We will also focus on widely cited papers in the field of soft robotics and demonstrate these, mostly experimental, works using the \texttt{Sorotoki}.
+In the subsequent section, we will dive into the capabilities of the toolkit, \texttt{Sorotoki}. To provide a comprehensive overview of the toolkit, various problem scenarios will be considered, each with specific problem settings aimed at the design, modeling, or control of soft robots. We will also focus on widely cited papers in the field of soft robotics and demonstrate these, mostly experimental, works using the \texttt{Sorotoki}.
 \begin{rmk}
-It is noteworthy that the full code can be accessed in the repository under the folder \texttt{./scripts/paper/}, enabling users of the toolkit to reproduce all presented simulation results in the following section.
+It is noteworthy that the full code can be accessed in the repository under the folder \texttt{./examples/paper/}, enabling users of the toolkit to reproduce all presented simulation results in the following section. Presets are found under the \texttt{./+preset/} folder.
 \end{rmk}
 %
 \afterpage{
@@ -13,7 +12,7 @@ It is noteworthy that the full code can be accessed in the repository under the 
 \includegraphics*[width=0.7\textwidth]{./pdf/thesis-figure-6-17.pdf}
 %\input{./fig/fig_passivewalker_ref.tex}
 \vspace{-1mm}
-\caption{Snapsnots of the multi-legged passive walker from Suzumori and Saito \cite{Suzumori2008Sep} can be observed. The soft walker is placed on an inclined surface with a slope of $\varphi = -30\si{\degree}$ and initiates locomotion from an offset in the gravitational potential. These video frames were captured using a high-speed camera.
+\caption{\small Snapsnots of the multi-legged passive walker from Suzumori and Saito \cite{Suzumori2008Sep} can be observed. The soft walker is placed on an inclined surface with a slope of $\varphi = -30\si{\degree}$ and initiates locomotion from an offset in the gravitational potential. These video frames were captured using a high-speed camera. Images from Suzumori et al. \cite{Suzumori2008Sep}, used with permission with rights belonging to \copyright2008 IEEE.
 \label{fig:C5:passivewalker_true}}
 \end{figure}
 %
@@ -22,7 +21,7 @@ It is noteworthy that the full code can be accessed in the repository under the 
 %\vspace{-5mm}
 \includegraphics*[width=.7\textwidth]{./pdf/thesis-figure-6-18.pdf}
 %\input{./fig/fig_passivewalker_soro.tex}
-\caption{Snaphots of the multi-legged passive walker from \texttt{Sorotoki}. The experimental setup is similar to that described in \cite{Suzumori2008Sep}. By comparing the gaits in Fig. \ref{fig:C5:passivewalker_true}, a resemblance can be seen between the results obtained in \texttt{Sorotoki} and those reported in \cite{Suzumori2008Sep}. The Von Mises stresses are shown as \protect\colormapcaption{0}{.75cm}$\!\!\in [0,100]$ \si{\mega \pascal}. }
+\caption{\small Snaphots of the multi-legged passive walker from \texttt{Sorotoki}. The experimental setup is similar to that described in \cite{Suzumori2008Sep}. By comparing the gaits in Fig. \ref{fig:C5:passivewalker_true}, a resemblance can be seen between the results obtained in \texttt{Sorotoki} and those reported in \cite{Suzumori2008Sep}. The Von Mises stress as shown by \protect\colormapcaption{0}{.75cm}$\!\!\in [0,100]$ \si{\mega \pascal}. }
 \label{fig:C5:passivewalker_soro}
 \end{figure}
 \clearpage
@@ -73,7 +72,7 @@ To examine the gait cycle, we introduce state variables $\theta_1, \theta_2, \th
     \def\svgwidth{0.65\textwidth}
     %\input{./pdf/thesis-figure-6-20.pdf_tex}
     \input{./fig/walker_states.pdf_tex}
-    \caption{\small Definition of the angular deflection of the three pairs of soft legs, denoted by $\theta_1$, $\theta_2$, and $\theta_3$, respectively. It should be noted that each pair has an intrinsic V-shaped structure, thus their stable equilibrium position during rest is approximately $\theta_i^\star \approx 45$ \si{\degree}. Raw image obtained from \cite{Suzumori2008Sep}.}
+    \caption{\small Definition of the angular deflection of the three pairs of soft legs, denoted by $\theta_1$, $\theta_2$, and $\theta_3$, respectively. It should be noted that each pair has an intrinsic V-shaped structure, thus their stable equilibrium position during rest is approximately $\theta_i^\star \approx 45$ \si{\degree}. Image from \cite{Suzumori2008Sep}, used with permission with rights belonging to \copyright2008 IEEE.}
     \label{fig:C5:passivewalker_states}
     \vspace{-2mm}
     \end{figure}
@@ -186,7 +185,7 @@ In their research, Suzumori et al. developed a highly dexterous soft gripper con
     \includegraphics*[width=0.75\textwidth]{./pdf/thesis-figure-6-26-2.pdf}
     %\input{./fig/fig_suzugripper_old.tex}  \\[0.5em]
     %\input{./fig/fig_suzugripper_soro.tex}
-    \caption{\small (top) Pinch and pair-pinch grasping configurations of the soft gripper proposed by Suzumori et al. \cite{Suzumori1992, Suzumori1991}. The high compliance of each soft finger allows for an adaptive, stable grasp that conforms to the shape of the rigid object. (bottom) A reconstructed soft gripper using the \texttt{Sorotoki} framework. To model each soft finger, we utilized the \class{Shapes} class and composed the entire gripper using the \class{Model} class. The rigid objects were modeled using the \class{Sdf} class. We observed a close resemblance between our simulation model and the original experiments performed by Suzumori et al. in \cite{Suzumori1991, Suzumori1992}.}
+    \caption{\small (top) Pinch and pair-pinch grasping configurations of the soft gripper proposed by Suzumori et al. \cite{Suzumori1992, Suzumori1991}. The high compliance of each soft finger allows for an adaptive, stable grasp that conforms to the shape of the rigid object. (bottom) A reconstructed soft gripper using the \texttt{Sorotoki} framework. To model each soft finger, we utilized the \class{Shapes} class and composed the entire gripper using the \class{Model} class. The rigid objects were modeled using the \class{Sdf} class. We observed a close resemblance between our simulation model and the original experiments performed by Suzumori et al. in \cite{Suzumori1991, Suzumori1992}. Used with copyright permission with rights belonging to \copyright1991 IEEE.}
     \label{fig:C5:suzumori_gripper_grasp}
     \vspace{-3mm}
 \end{figure}
@@ -296,14 +295,14 @@ A crucial aspect of the simulation is the dynamic interaction with the environme
 Given the \class{Model} class, we can now start deriving the control law. For conciseness, let $\JB(\q) := \JB(L,\q)$ be the geometric Jacobian of the end-effector. We also introduce the Cartesian inertia matrix as $\LambdaB := (\JB^\top \MB \inv \JB^\top)\inv$. Then, the proposed Cartesian stiffness controller given in \cite{DellaSantina2020a} can be written as:
 %
 \begin{multline}
-    \tauB = \JB^\top \Big[\JB_M^{+\top} \fB_{e} + \fB_{g} + \JB^\top \etaB_{\CB}(\IB - \JB_M^{+\top}\JB)\dq  \JB^\top(\KB_{c} (\gammaB_d - \gammaB_L) - \DB_c \JB \dq) \Big ],
+    \tauB = \JB^\top \Big[\JB_M^{+\top} \fB_{e} + \fB_{g} + \JB^\top \etaB_{\CB}(\IB - \JB_M^{+\top}\JB)\dq + \JB^\top(\KB_{c} (\gammaB_d - \gammaB_L) - \DB_c \JB \dq) \Big ],
     \label{eq:C5:dellasantina_controller}
 \end{multline}
 %
-where $\gammaB_d$ and $\gammaB_L$ represent the desired and true end-effector positions, respectively; and $\KB_c$ and $\DB_c$ are the desired stiffness and damping of the end-effector. The closed-loop controller employs a so-called \textit{"dynamically consistent pseudo-inverse"} of the Jacobian, denoted as $\JB_M^{+}$, which is defined as $\JB_M^{+} := \MB^{-1} \JB^\top \LambdaB$. The controller also utilizes the Cartesian Coriolis terms, denoted as $\etaB_{\CB}(\q,\dq)$, which are expressed in the Cartesian frame and given by:
+where $\gammaB_d$ and $\gammaB_L$ represent the desired and true end-effector positions, respectively; and $\KB_c$ and $\DB_c$ are the desired stiffness and damping of the end-effector. The closed-loop controller employs a so-called \textit{``dynamically consistent pseudo-inverse''} of the Jacobian, denoted as $\JB_M^{+}$, which is defined as $\JB_M^{+} := \MB^{-1} \JB^\top \LambdaB$. The controller also utilizes the Cartesian Coriolis terms, denoted as $\etaB_{\CB}(\q,\dq)$, which are expressed in the Cartesian frame and given by:
 %
 \begin{equation}
-    \etaB_{\CB} = \LambdaB (\JB \MB\inv \CB - \dot{\JB})
+    \etaB_{\CB} = \LambdaB (\JB \MB\inv \CB - \dot{\JB}).
 \end{equation}
 %
 The closed-loop controller, implemented as an anonymous function, is derived from four system matrices: the inertia matrix $\MB(\q)$, the Coriolis matrix $\CB(\q,\dq)$, the Jacobian $\JB$, and its time derivative $\dot{\JB}$. In \texttt{Sorotoki}, these matrices are automatically computed at each solver step and stored in a data structure named \code{shp.log}. The closed-loop controller can access this data structure. %A sample code of the controller is provided below:
@@ -347,7 +346,7 @@ It is noteworthy that the controller above uses the command \code{shp.isContact}
     \includegraphics*[width=0.95\textwidth]{./pdf/thesis-figure-6-29-2.pdf}
     %\input{./fig/fig_dellasantina_true.tex} \\[0.35em]
     %\input{./fig/fig_dellasantina_simu.tex}
-    \caption{\small (top) The experimental results presented in the work of Della Santina et al. \cite{DellaSantina2020Jan} show a six-link soft manipulator controlled by the control law described in \eqref{eq:C5:dellasantina_controller}. The manipulator is in contact with a static environment. The controller first ensures that the soft robot approaches the environment (Phase 1: Approach) and then follows the rigid wavy surface (Phase 2: Explore). (bottom)  The numerical simulations performed using the \texttt{Sorotoki} toolkit are inspired by the work of Della Santina et al. \cite{DellaSantina2020Jan}. In the simulation, the active setpoints are denoted by (\textcolor{Matlab2}{$\bullet$}) and the de-activated setpoints are denoted by (\textcolor{gray}{$\bullet$}). The end-effector trajectory is shown in \data{magenta} and the environment is shown in \data{Matlab1}. The results of the simulation truthfully reflect the approaching and surface tracking behavior as seen in the experiments.}
+    \caption{\small (top) The experimental results presented in the work of Della Santina et al. \cite{DellaSantina2020Jan} show a six-link soft manipulator controlled by the control law described in \eqref{eq:C5:dellasantina_controller}. The manipulator is in contact with a static environment. The controller first ensures that the soft robot approaches the environment (Phase 1: Approach) and then follows the rigid wavy surface (Phase 2: Explore). (bottom)  The numerical simulations performed using the \texttt{Sorotoki} toolkit are inspired by the work of Della Santina et al. \cite{DellaSantina2020Jan}. In the simulation, the active setpoints are denoted by (\textcolor{Matlab2}{$\bullet$}) and the de-activated setpoints are denoted by (\textcolor{gray}{$\bullet$}). The end-effector trajectory is shown in \data{magenta} and the environment is shown in \data{Matlab1}. The results of the simulation truthfully reflect the approaching and surface tracking behavior as seen in the experiments. Used with copyright permission with rights belonging to \copyright2020 Sage Journals.}
     \label{fig:C5:dellasantina_experiment}
     \vspace{-3mm}
 \end{sidewaysfigure*}

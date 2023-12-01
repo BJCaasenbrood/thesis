@@ -1,0 +1,128 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{v}{chapter*.1}%
+\contentsline {chapter}{Samenvatting}{vii}{chapter*.2}%
+\contentsline {chapter}{Societal summary}{xi}{chapter*.3}%
+\contentsline {chapter}{Nomenclature}{xiii}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Soft robotics -- a new perspective}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Soft robots: what are they?}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Soft robotics from a biometic perspective}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}State-of-the-art solutions in soft robotics}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Soft fluidic actuators inspired by muscular hydrostats}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Human-driven design versus design optimization}{8}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Model-based control for soft robots}{10}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Research objective}{12}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Research questions and contributions}{13}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Outline of the thesis}{17}{section.1.6}%
+\contentsline {chapter}{\numberline {2}A brief historical overview on the progress of soft robotics}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Early soft robotic technology}{21}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Recognition of soft robotics' potential}{23}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Modern soft robotics boom in academia}{28}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Tailoring design of fluidic soft actuation}{29}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Engineering principles in soft fluidic actuators}{29}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Exploring optimization and evolutionary algorithms}{30}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Gaining performance using feedback control}{31}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Control-oriented models for soft robots}{32}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Soft robot simulation and programming environments}{34}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Closing the loop in soft robotics}{34}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Summary}{35}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Gradient-based optimization for soft robots}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{38}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Nonlinear finite element method}{39}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Strain theory in continuum mechanics}{40}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Isotropic hyperelasticity materials}{41}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Variational principle of energy minimization}{42}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Solving the energy balance via polygonal elements}{43}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Nonlinear topology optimization}{46}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Solid Isotropic Material With Penalization (SIMP)}{46}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Artificial fluidic loads by elemental dilation}{47}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Optimization problem}{48}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Solver and sensitivity analysis}{49}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Gradient filters and interpolation}{51}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Numerical examples: generating soft robotic topologies}{52}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Linear translational soft actuators}{52}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Pinching soft grippers}{53}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Bending soft actuator -- PneuNet inspired}{55}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Solutions for varying material parameters}{56}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Conclusion}{58}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Dynamic modeling of soft robots -- PCC case}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{60}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pneumatic soft continuum manipulator}{63}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Generalized models for soft manipulators}{64}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Piecewise curve kinematics}{66}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Piecewise curve dynamics using Euler-Lagrange}{72}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Overall dynamic model}{74}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Extension to multi-link systems}{75}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Accelerated computation of PDE-like systems}{76}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Parameter identification}{78}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Finite element method and hyper-elasticity}{78}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Hyperelasticity in joint space}{81}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Viscoelastic creep}{84}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Passivity-based adaptive control}{85}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Overview of experimental platform}{87}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Numerical and experimental implementation}{88}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Conclusion}{102}{section.4.10}%
+\contentsline {chapter}{\numberline {5}Port-Hamiltonian Cosserat models -- beyond the PCC}{105}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{106}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Generalized models for soft manipulators}{107}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Preliminaries on geometric Cosserat theory}{107}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Local strain and velocity}{109}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Finite-dimensional projection}{112}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Reduced-order kinematics}{114}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Reduced-order dynamics using Newton-Euler}{115}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Tendon and fluidic actuation}{119}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Port-Hamiltonian formulation}{119}{subsection.5.2.7}%
+\contentsline {section}{\numberline {5.3}Energy-based controller for tasks on SE(3)}{120}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Simulation studies of bio-inspired soft robots}{121}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Soft robot manipulator inspired by octopus' tentacle}{122}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Multi-link soft robot inspired by the elephant's trunk}{125}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Achieving bio-inspired motion through energy-based control}{128}{section.5.5}%
+\contentsline {section}{\numberline {5.6}On modal truncation: applying reduced-order model-based controllers to high-dimensional models of continuum soft robots}{132}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Conclusion}{136}{section.5.7}%
+\contentsline {chapter}{\numberline {6}\texttt {Sorotoki}: a MATLAB toolkit for soft robots}{139}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{140}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Problem formulation}{140}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Contribution of Sorotoki software}{143}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Related works}{144}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Getting started with \texttt {Sorotoki}}{148}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Open-source soft robots of \texttt {Sorotoki}}{148}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Software architecture}{151}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Signed Distance Function (\texttt {Sdf})}{151}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Mesh generation for finite element analysis (\texttt {Mesh})}{154}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Finite element modeling (\texttt {Fem})}{156}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Reduced-order soft beam models (\texttt {Shapes})}{165}{subsection.6.5.4}%
+\contentsline {subsection}{\numberline {6.5.5}Model composer (\texttt {Model})}{174}{subsection.6.5.5}%
+\contentsline {subsection}{\numberline {6.5.6}Fluidic control hardware (\texttt {Control})}{180}{subsection.6.5.6}%
+\contentsline {subsection}{\numberline {6.5.7}Computer vision (\texttt {Vision})}{180}{subsection.6.5.7}%
+\contentsline {section}{\numberline {6.6}Soft robotics study cases}{182}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Multi-legged soft passive walker}{182}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Computational design of bending PneuNet actuator}{186}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Dynamic manipulation of high dexterity soft gripper}{190}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Environmental impedance control of soft manipulator}{195}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}Contact robust shape sensing of elastomer soft actuator}{199}{subsection.6.6.5}%
+\contentsline {section}{\numberline {6.7}Conclusion and future work}{202}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Conclusions, recommendations, and future outlook}{203}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusions}{203}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Recommendations}{206}{section.7.2}%
+\contentsline {part}{I\hspace {1em}Appendices}{211}{part.1}%
+\contentsline {chapter}{\numberline {A}List of definitions}{213}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendices to Chapter 3}{215}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Wachspress shape functions for polygons}{215}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Element formulation for the Lagrangian strain}{217}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Piolla stress tensor and stress-strain tangent for the nearly incompressible Yeoh model}{219}{section.B.3}%
+\contentsline {chapter}{\numberline {C}Appendices to Chapter 4}{221}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Adjoint actions on $\textup {\textrm {SE}}(3)$ and $\textup {\textrm {se}}(3)$}{221}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Passivity properties of the inertia matrix}{221}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Implicit trapezoidal time integration}{222}{section.C.3}%
+\contentsline {chapter}{\numberline {D}Appendices to Chapter 5}{225}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Preliminaries on Lie group theory}{225}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}Basic definition(s)}{225}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}Exponential and logarithmic map}{226}{subsection.D.1.2}%
+\contentsline {section}{\numberline {D.2}Time-differentiation of the geometric Jacobian for continuum deformable robots}{227}{section.D.2}%
+\contentsline {section}{\numberline {D.3}Derivation of the generalized linear stiffness and damping matrix for continuum robots}{228}{section.D.3}%
+\contentsline {chapter}{\numberline {E}Appendices to Chapter 6}{231}{appendix.E}%
+\contentsline {section}{\numberline {E.1}Newmark-$\beta $ solver}{231}{section.E.1}%
+\vspace \bigskipamount 
+\contentsline {chapter}{Bibliography}{233}{section*.116}%
+\contentsline {chapter}{Acknowledgements}{253}{appendix*.118}%
+\contentsline {chapter}{List of publications}{257}{appendix*.119}%
+\contentsline {chapter}{Curriculum Vitae}{259}{appendix*.120}%
