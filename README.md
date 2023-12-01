@@ -1,4 +1,4 @@
-Design, Modeling, and Control Strategies for Soft Robots
+Design, Modeling, & Control Strategies for Soft Robots
 ========================================================
 
 <img src="figs/cover-combined.png" width="600"/>
