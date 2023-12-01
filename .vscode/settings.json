@@ -3,6 +3,7 @@
         "discretization",
         "feedforward",
         "Lyapunov",
+        "Pogromsky",
         "tensegrity"
     ],
     "spellright.language": [
