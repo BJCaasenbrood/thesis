@@ -2,10 +2,6 @@ Design, Modeling, and Control Strategies for Soft Robots
 ========================================================
 PhD dissertation, Brandon Caasenbrood, Defended on January 10, 2014. 
 
-_Mirrors:_ 
-- https://research.tue.nl/en/publications/design-modeling-and-control-strategies-for-soft-robots
-
-_License:_ CC-BY-SA 
 _Contact:_ Brandon Caasenbrood (<b.j.caasenbrood@gmail.com>)
 
 Please cite using the following BibTex entry:
@@ -21,9 +17,12 @@ Please cite using the following BibTex entry:
 }
 ```
 
----
-Abstract:
+_Mirrors:_ 
+- https://research.tue.nl/en/publications/design-modeling-and-control-strategies-for-soft-robots
 
+_License:_ CC-BY-SA 
+
+---
 In the past two decades, the field of soft robotics has sparked significant interest among many scientific disciplines. Contrary to rigid robots, soft robots explore soft materials that significantly enhance the robot's dexterity, enable a rich family of motion primitives, and enhance environmental robustness regarding contact and impact. Since its inception, soft robotics has exemplified its potential in diverse areas such as safe manipulation, adaptive grasping, exploration under environmental uncertainty, rehabilitation, and the biomimicry of many animals. By exploring the uncharted versatile nature of soft materials, soft robotics paves the way towards achieving biological performance in modern-day robotics. This thesis aims to further the advances in soft robotics by addressing some of the open multidisciplinary challenges within this young field of research.
 
 Although soft materials harbor many advantages akin to biology, which are difficult to achieve for rigid robotics, they also pose many fundamental problems. The first issue is the problem of soft robotic design. Traditional robotic design emphasizes high structural rigidity and weight minimization, a well-established practice in engineering. On the other hand, soft robotic design values minimal structural rigidity for motion, leading to complex, highly nonlinear relationships between the input and output. Additionally, distributed soft actuation, in addition to gravitational and inertial forces acting on the continuous elastic body, introduces joint mobilities that are often uncontrollable nor aligned with the control objective, *e.g.* precise grasping and manipulation. Since describing the underlying continuum mechanics and applying such mathematical theory to systematic design is challenging, a large number of soft robotic systems are still developed *ad hoc*.
