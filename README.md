@@ -1,9 +1,9 @@
 Design, Modeling, and Control Strategies for Soft Robots
 ========================================================
 
-PhD dissertation, Brandon Caasenbrood, January 2024. Defended on January 10, 2024. 
+<img src="figs/cover-combined.png" width="600"/>
 
-**Contact:** Brandon Caasenbrood (<b.j.caasenbrood@gmail.com>)
+PhD dissertation, Brandon Caasenbrood, January 2024. Defended on January 10, 2024. 
 
 Please cite using the following BibTex entry:
 
@@ -17,8 +17,9 @@ Please cite using the following BibTex entry:
   note={https://doi.org/10.6100/3fmj-dg12}
 }
 ```
-**License:** CC-BY-AS
-**DOI:** https://doi.org/10.6100/3fmj-dg12
+**License:** CC-BY-AS  
+**DOI:** https://doi.org/10.6100/3fmj-dg12  
+**Contact:** Brandon Caasenbrood (<b.j.caasenbrood@gmail.com>)  
 
 ---
 
