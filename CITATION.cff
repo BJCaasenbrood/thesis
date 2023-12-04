@@ -1,9 +1,18 @@
 cff-version: 1.0.0
-message: "If you are using SOROTOKI for your academic research, please consider citing us."
+message: "If you use thesis in your research, please cite the following."
+references:
+- type: thesis
 authors:
-  - family-names: Caasenbrood
-    given-names: Brandon
-    orcid:  https://orcid.org/0000-0002-6299-1730
-title: "Sorotoki - A Soft Robotics Toolkit for MATLAB"
-version: 1.0.0
-url: https://github.com/BJCaasenbrood/SorotokiCode
+- family-names: Caasenbrood
+given-names: Brandon
+title: "Design, Modeling, and Control Strategies for Soft Robots"
+thesis-type: PhD
+year: 2024
+department: Dept. of Mechanical Engineering
+institution:
+- name: "Eindhoven University of Technology"
+city: Eindhoven
+country: NL
+database: Research TUe
+date-published: 2024-01-10
+url: https://research.tue.nl/en/publications/design-modeling-and-control-strategies-for-soft-robots
