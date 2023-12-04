@@ -21,8 +21,10 @@ Please cite using the following BibTex entry:
 **DOI:** https://doi.org/10.6100/3fmj-dg12  
 **Contact:** Brandon Caasenbrood (<b.j.caasenbrood@gmail.com>)  
 
----
 
+
+---
+#### Abstract
 In the past two decades, the field of soft robotics has sparked significant interest among many scientific disciplines. Contrary to rigid robots, soft robots explore soft materials that significantly enhance the robot's dexterity, enable a rich family of motion primitives, and enhance environmental robustness regarding contact and impact. Since its inception, soft robotics has exemplified its potential in diverse areas such as safe manipulation, adaptive grasping, exploration under environmental uncertainty, rehabilitation, and the biomimicry of many animals. By exploring the uncharted versatile nature of soft materials, soft robotics paves the way towards achieving biological performance in modern-day robotics. This thesis aims to further the advances in soft robotics by addressing some of the open multidisciplinary challenges within this young field of research.
 
 Although soft materials harbor many advantages akin to biology, which are difficult to achieve for rigid robotics, they also pose many fundamental problems. The first issue is the problem of soft robotic design. Traditional robotic design emphasizes high structural rigidity and weight minimization, a well-established practice in engineering. On the other hand, soft robotic design values minimal structural rigidity for motion, leading to complex, highly nonlinear relationships between the input and output. Additionally, distributed soft actuation, in addition to gravitational and inertial forces acting on the continuous elastic body, introduces joint mobilities that are often uncontrollable nor aligned with the control objective, *e.g.*, precise grasping and manipulation. Since describing the underlying continuum mechanics and applying such mathematical theory to systematic design is challenging, a large number of soft robotic systems are still developed *ad hoc*.
@@ -39,3 +41,31 @@ The third part of the thesis addresses the development of model-based controller
 
 The main contribution of the thesis is a collection of multidisciplinary tools compressed into one general framework for the design, modeling, and control of a class of soft robots, ranging from the theoretical to the experimental domain.
 
+---
+#### Propositions
+
+The propositions[^1] accompanying the dissertation: "Design, Modeling, and Control Strategies for Soft Robots"
+
+1. The remarkable adaptability and functionality of biological organisms are not merely a consequence of their morphology but emerge from the interplay between structure and coordinated motor control. To mimic such features, soft robotic design must be inspired from similar principles. (This thesis)
+
+2. Regarding both the topology and material as unknown properties in the design optimization for soft robotics is essential in discovering new mechanical configurations, which may not be found when either is assumed to be known. (This thesis, Chapter 3)
+
+3. Model-based controllers for soft robots must incorporate feedback controllers that aim to preserve the intrinsic compliance of soft materials as to enable efficient "*life-like*" motion. (This thesis, Chapter 5)
+
+4. Soft robots, with their seemingly infinite degrees of freedom, can be adeptly managed by reduced-order controllers that target only a few principle modes of operation.%, focusing on the robots' inherent redundancy to cut through the complexity. (This thesis, Chapter 5 and 6)
+
+5. Any publication on soft robots would benefit from answering the "*Why soft?*" question, instead of adopting a "*Soft for soft's sake*" philosophy. (Inspired by "*Hard questions for soft robotics*" written by Hawkes et al., Science (2021))
+
+6. While fluidic actuation has been instrumental in the development of soft robotics, its dominance may limit the progress in areas such as bandwidth, scalability, and autonomy.
+
+7. For scientific disciplines to truly converge in a collaborative context, a common terminology must be prioritized first.
+
+8. Academic publishers, aiming to improve transparency, reduce the potential for fraud, and encourage replicability within the realm of data-driven research, ought to establish code and data-sharing policies that are designed to enable automated replication.
+
+9. The increasing sensationalization of the media regarding science underlines that in academic writing, "*the liveliness of the exposition is as necessary as lucidity.*" (Inspired by "Popularisation and Sensationalism" in Nature's newsletter (1924)) 
+
+10. Most of our frustrations with others stems from the fact that we have an innate inability to understand other people fully.
+
+11. The pursuit of personal achievements should not come at the expense of friendship.
+
+[^1]: Propositions (or "*stellingen*" in Dutch) are a set of statements that the PhD candidate formulates and may include alongside their dissertation. They cover both specific findings of the research and broader academic or societal issues, serving as a starting point for critical discussion during the defense ceremony.
