@@ -3,7 +3,10 @@ Design, Modeling, & Control Strategies for Soft Robots
 
 <img src="figs/cover-combined.png" width="600"/>
 
-PhD dissertation, Brandon Caasenbrood, January 2024. Defended on January 10, 2024. 
+Ph.D. dissertation, Brandon Caasenbrood, January 2024. Defended on January 10, 2024. 
+
+- To view the thesis, [please click here](https://nbviewer.org/github/BJCaasenbrood/thesis/blob/master/phd-thesis-Caasenbrood2024.pdf).
+- To view the propositions accompanying the thesis, [please click here](https://nbviewer.org/github/BJCaasenbrood/thesis/blob/master/phd-propositions-Caasenbrood2024.pdf).
 
 Please cite using the following BibTex entry:
 
