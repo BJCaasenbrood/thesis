@@ -24,7 +24,9 @@ Please cite using the following BibTex entry:
 **DOI:** https://doi.org/10.6100/3fmj-dg12  
 **Contact:** Brandon Caasenbrood (<b.j.caasenbrood@gmail.com>)  
 
-
+---
+### Public PhD defense Brandon Caasenbrood | Eindhoven University of Technology (TU/e)
+[![Defense](https://img.youtube.com/vi/ihmIj9PDeaQ/0.jpg)](https://www.youtube.com/watch?v=ihmIj9PDeaQ)
 
 ---
 #### Abstract
