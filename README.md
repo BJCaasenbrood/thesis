@@ -26,6 +26,7 @@ Please cite using the following BibTex entry:
 
 ---
 ### Public PhD defense Brandon Caasenbrood (Cum Laude)
+**Click on image for the video**
 [![Defense](https://img.youtube.com/vi/ihmIj9PDeaQ/0.jpg)](https://www.youtube.com/watch?v=ihmIj9PDeaQ)
 
 ---
